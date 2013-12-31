@@ -1,4 +1,7 @@
 #!/bin/sh
+
+git checkout HEAD .
+
 python python/site.py
 
 export UPDATEDDOCS="`find pubs/* src_docs/* -mtime -6  -type f`"
@@ -11,7 +14,8 @@ if [ ${#UPDATEDDOCS} -gt 0 ]
         done
 fi
 
-rm *.aux *.log
+rm python/*.pyc
+rm pubs/*.tex *.aux *.log
 mv *.pdf docs
 
 cp style.css ~/public_html
