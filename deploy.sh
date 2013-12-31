@@ -1,6 +1,7 @@
 #!/bin/sh
 
-git checkout HEAD .
+# Restore deleted files
+git checkout $(git ls-files -d)
 
 python python/site.py
 
