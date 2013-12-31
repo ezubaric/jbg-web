@@ -1,0 +1,521 @@
+<div id="content">
+<h1 id="header">~~PAGETITLE~~</h1>
+
+<h2>Style Guide</h2>
+
+<p>When writing a document, there are many stylistic choices that are
+relatively arbitrary.  I collect the arbitrary choices that I've made
+in the course of my writing here both for my own reference and for my
+students.  Many of these
+are <a href="http://www.latex-project.org/">LaTeX</a>-specific.</p>
+
+<p>You'll likely disagree with much of what I say here.  In fact, I disagree
+with some of it; sometimes the choices here reflect compromises done to minimize
+friction with co-authors or choices made to minimize paper length (e.g.,
+removing ISBNs from references).  Please do not point out places in papers where
+I've deviated from these.  Sometimes I have good reasons for deviating: my style
+is evolving, my co-authors wouldn't accept my conventions, or the journal
+stipulated something different.  I also realize that, as with every document on
+writing, there will be typos and mistakes here.</p>
+
+<p>Be sure to check out Neil
+Spring's <a href="http://www.cs.umd.edu/~nspring/software/style-check-readme.html">useful
+resources</a> (including a script you can use with flymake when
+editing LaTeX documents).  I disagree with the following rules:
+<ul>
+  <li> I use the British convention for quote marks (which makes more
+sense to computer scientists, as below).
+  <li> "sufficient" is a fine word (esp. for "sufficient statistics")
+  <li> "<a href="http://www.stats.ox.ac.uk/~teh/">Teh</a>" is almost never a
+  mispelling when I write it
+</ul>
+The rest is great, however, and you should use it (with the above edits).</p>
+
+<p><a href="http://www.economist.com/styleguide/introduction">The Economist
+style guide</a> is a good resource for exposing bad habits, and their
+conventions are reasonable.  However, they are a British publication, so ignore
+British-specific rules (I do have some other points of disagreement, such as
+infinitives).</p>
+
+<h3>Tense</h3>
+
+<ul>
+  <li> Almost everything should be in the present tense
+  <li> This includes related work (even super old stuff like Aristotle)
+  <li> This includes generative processes
+  <li> It's okay to use the future tense for future work
+</ul>
+
+<h3>Punctuation</h3>
+
+<ul>
+
+  <li> Put footnotes <b>immediately</b> after sentence / clause punctuation.
+
+    <pre>
+      I'm hardly ever sick at sea.\footnote{Well, hardly ever.}
+    </pre>
+
+  <li> Do not use a comma between two verb phrases (no subject) joined by a conjunction.
+
+     <pre>
+       I washed the car and mowed the lawn.
+     </pre>
+
+  <li> Do use a comma between two independent clauses (subject and verb) joined by a conjunction.
+
+     <pre>
+       I washed the car, and I mowed the lawn.
+     </pre>
+
+  <li> Use an Oxford comma to set off the penultimate element in a list.</li>
+
+    <pre>
+      I had eggs, toast, and orange juice
+    </pre>
+
+  <li> Use LaTeX hyphens (-), en dashes (--), and em dashes (---) correctly
+
+    <pre>
+      This is a low-budget trip, and pages 78--101 describe the
+      journey.  If the train is on time---which it never is---we'll
+      get there tomorrow.
+    </pre>
+
+  <li> Put punctuation outside quotes (British / Canadian style, not American).
+  Also make sure that your quotes go in the right direction; don't draft in MS
+  Word and copy paste into a TeX document.  If you do, your quotes will be
+  wrong (TeX uses different symbols for left and right quotes).
+
+    <pre>
+      In civilized cultures, this is called a ``coaster''.
+    </pre>
+
+  <li> Similarly, I use <i>M-x q</i> to word wrap paragraphs in emacs.  Like two
+  spaces after a sentence, it looks better in editing but has no impact on
+  layout (more practically, it helps you estimate text length while editing).
+
+</ul>
+
+<h3>Math</h3>
+
+   <ul>
+     <li> When in text, spell out all natural numbers less than or
+     equal to one hundred.  Also spell out "infinity" unless it's in
+     an equation or an algorithm.  Anything else should be represented
+     in decimal unless prefixed by the base (e.g., "0b00010").
+
+     <li> Do not use
+     more <a href="http://www.ligo.caltech.edu/~vsanni/ph3/SignificantFiguresAndMeasurements/SignificantFiguresAndMeasurements.pdf">significant
+     digits</a> than you need to (or should!).
+
+     <li> Make sure that all equations and math are nouns and are embedded in a sentence.
+
+     <pre>
+        The voltage is $V=IR$, where $I$ is the current.
+     </pre>
+
+     <li> Do not use phrases like "The entropy is defined as follows" when
+     introducing an equation.  "The entropy is" or "we define entropy as" work
+     better.
+
+     <li> Remind readers what variables are if you haven't used them in a while.
+
+     <li> When creating a multiline equation, use the align
+     environment, and keep the alignment to the <b>right</b> of the
+     equals sign.
+
+<pre>
+  \begin{align}
+    4 = & 2 + 2 \\
+      = & 1 + 1 \\
+        & + 1 + 1 \\
+      = & 4
+  \end{align}
+</pre>
+
+     <li> Create macros for the following and use them consistently (or ask me for
+       a preamble that defines these things)
+       <ul>
+	 <li> Underbraces for explaining complicated mathematical concepts
+<pre>
+\newcommand{\explain}[2]{\underbrace{#2}_{\mbox{\footnotesize{#1}}}}
+</pre>
+         <li> Gamma function with balanced parentheses
+<pre>
+\newcommand{\G}[1]{\Gamma \left( \textstyle #1 \right)}
+</pre>
+         <li> Log gamma function with balanced parentheses
+<pre>
+\newcommand{\LG}[1]{\log \Gamma \left( \textstyle #1 \right)}
+</pre>
+         <li> Digamma function with balanced parentheses
+<pre>
+\newcommand{\digambig}[1]{\Psi \left( #1 \right) }
+</pre>
+         <li> Digamma function with balanced parentheses but with squished fractions
+<pre>
+\newcommand{\digam}[1]{\Psi \left( \textstyle #1 \right) }
+</pre>
+         <li> Expectations
+<pre>
+\newcommand{\e}[2]{\mathbb{E}_{#1}\left[ #2 \right] }
+</pre>
+         <li> Entropies
+<pre>
+\newcommand{\h}[2]{\mathbb{H}_{#1}\left[ #2 \right] }
+</pre>
+         <li> Indicator variables
+<pre>
+\newcommand{\ind}[1]{\mathbb{I}\left[ #1 \right] }
+</pre>
+         <li> Exponential
+<pre>
+\newcommand{\ex}[1]{\mbox{exp}\left\{ #1\right\} }
+</pre>
+         <li> Partial derivatives
+<pre>
+\newcommand{\D}[2]{\frac{\partial #1}{\partial #2}}
+</pre>
+         <li> ELBO (for variational inference)
+<pre>
+\newcommand{\elbo}{\mathcal{L}}
+</pre>
+       </ul>
+    <li> Do not use italics for distributions; it helps to define a macro
+      <pre>
+	\theta \sim \mbox{Dir}(\alpha)
+      </pre>
+    <li> Don't use a pipe for given; make sure there's space around it
+      <pre>
+	p(a\, | \,b) = \frac{ \sim p(b\, | \,a) p(a)}{p(b)}
+      </pre>
+    <li> Don't use default parens for big math items; use automatically
+    resized parens
+      <pre>
+	I = \left( \frac{V}{R} \right)
+      </pre>
+    <li> Don't start sentences with a math symbol.
+   </ul>
+
+<h3>References within a document</h3>
+
+  <ul>
+    <li>Prefix the label of a reference with the type of reference it is (use
+    the first three letters of the type of thing it is: fig, tab, sec, etc.).</li>
+
+      <pre>
+	\section{Introduction}
+	\label{sec:intro}
+      </pre>
+
+    <li> Keep references short and do not include spaces in the label (use
+    hyphens if you <b>must</b> have more than one word, but this should be a
+    rarity)
+
+      <pre>
+	\label{sec:romulan-treaty}
+      </pre>
+
+    <li>When using an inline reference, make sure there's a tilde
+    between the noun and the number.  This makes sure that this
+    doesn't get split between lines (non-breaking space).</li>
+
+      <pre>
+	As we show in Section~\ref{sec:intro}, long cat is long.
+      </pre>
+
+  </ul>
+
+<h3>Stupid rules you should follow</h3>
+
+  <p>Even though they're not really true, people get twitchy when you abuse them.
+  So learn them as rules for professional writing (even though they're
+  hogwash).</p>
+
+  <ul>
+    <li> Use "fewer" when comparing discrete amounts, and use "less" when
+    comparing continuous amounts.
+
+      <pre>
+	To weigh less, he should eat fewer donuts.
+      </pre>
+
+    <li> Use "that" for restrictive clauses (no commas).  Use "which" for non-restrictive
+    clauses (use commas).
+      <pre>
+	The pizza, which everyone loves, is from Conte's.  The pizza that fell
+	on the floor is no longer edible, however.
+      </pre>
+    <li> Use "who" only with the nominative case (and "whom" in other cases).
+    <li> Only use "data" as a plural noun (with one <a href="http://en.memory-alpha.org/wiki/Data">exception</a>).
+  </ul>
+
+<h3>Anti-rules</h3>
+
+  <ul>
+    <li> There's no blanket prohibition against the passive, but don't use it to obscure agency.
+    <li> It's fine to end your sentence with a preposition.
+    <li> It's fine to boldly split an infinitive.
+    <li> It's fine (and often better) to use "they" as a singular gender-neutral pronoun.
+  </ul>
+
+<h3>Citations</h3>
+
+  <p>Below, I suggest removing valuable metadata.  This is for two
+  reasons: space and uniformity.  Unfortunately, the bibliography
+  often counts against page length, so we need to keep our
+  bibligraphies as short as possible while keeping them useful.
+  Because we often have to strip bibtex entries, it helps to
+  have <b>everything</b> be compact to preserve uniformity and having
+  to do last minute massaging.  Just make everything obey these rules
+  when you put it into your bibtex for the first time.</p>
+
+  <ul>
+    <li> Use bibtex
+
+    <li> Define journal and conference names in a different bib file from the
+    one you store your references in.  This way you can swap out long form title
+    (Proceedings of the Association for Computational Linguistics) with the
+    short form title (ACL) if you're tight for space.
+
+    <li> Put citations inside the relevant sentence but outside quotes.
+
+    <pre>
+      The rug really ``tied the room together''~\cite{dude-98}.
+    </pre>
+
+    <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
+    are all named after people), in your bibtex file in brackets to make sure
+    they get capitalized correctly
+
+      <pre>
+	title = {Latent {D}irichlet Allocation},
+      </pre>
+
+
+    <li> Do not include page numbers for conferences (nobody reads the paper versions anyway).
+
+    <li> Do not include volumes for NIPS.  People just use the year.
+
+    <li> Do not include DOIs or ISBNs
+
+    <li> For numeric citation styles (e.g. NIPS), don't use inline citations as nouns; use the name.
+      <pre>
+        Moseby~\cite{moseby-11} shows that he can pull off red boots.
+      </pre>
+
+    <li> For natbib-like citations (e.g. ACL), use citet to accomplish this.
+
+      <pre>
+        \citet{moseby-11} shows that that he can pull off red boots.
+      </pre>
+
+  </ul>
+
+<h3>Typography</h3>
+
+  <ul>
+    <li> Use small caps for acronyms (it looks better; I create a macro called
+    "abr" to make this easier), and don't put periods after the letters in
+    acronyms (the reason why: LaTeX uses smart spacing after periods, but
+    doesn't handle sentence-final acronyms; this will make your life easier).
+      <pre>
+	\textsc{tla}s are popular in the \textsc{us} government.
+      </pre>
+    <li> If you have an abbreviation mid-sentence, make sure LaTeX knows not to
+    use sentence final spacing.
+      <pre>
+        Crosby et al.\ have a very, very, very fine house.
+      </pre>
+
+        <li> Because I learned to type on monotype fonts, I will put two spaces
+  after a period that ends a sentence.  There's no good reason to do this, but
+  LaTeX knows to do the right thing in typesetting.  I continue to do it,
+  though, because I think it looks better when editing in emacs with fixed-width
+  fonts.  (You don't have to do it, but if you see me doing it, that's why; you
+  don't have to worry about it / correct it.)
+
+    <li> If it's allowed (ICML 2013 didn't, for instance), use the "times" package for serif fonts.
+    <li> Write ligatures, umlauts, and other diacritics correctly.
+
+      <pre>
+	If you want to know what a f\^ete galante looks like to a physicist, look up Schr\"odinger in the Encyclop\ae dia
+      </pre>
+
+    <li> If you have a long list of names (e.g., journal title page), use
+    non-breaking spaces between name components.
+
+    <pre>
+       Herr~Doktor~Professor~Albert~Einstein, Joe~the~Plumber
+    </pre>
+
+    <li> When presenting foreign text, use the <a href="http://www.eva.mpg.de/lingua/pdf/LGR08.02.05.pdf">Leipzig glossing rules</a>:
+      <center>
+        <img src="../images/gloss.png">
+      </center>
+
+
+
+  </ul>
+
+<h3>Word choice</h3>
+
+  <ul>
+    <li> Use "first" rather than "firstly" (same for second, third, etc.).
+    <li> Use "unlike" rather than "different from".
+    <li> Never use "utilize"; always use "use".  Corollary: prefer "usage" over
+    "utilization", unless it's a technical term.
+    <li> You can always delete "this means".
+    <li> You can always replace "in order to" with "to".
+    <li> Prefer "toward" over "towards".
+    <li> You can almost always delete "notice that".  (My dumb fingers are
+    often very guilty of writing this.)
+    <li> Use "we" rather than "this paper" or "this work".
+    <li> Use "shown" over "denoted" or "listed".
+    <li> Use "in addition" rather than "besides".
+    <li> Try not to use "hedging" language (often, probably, etc.).  Either
+    something is true or it isn't.  If it really is a mixed bag, quantify the
+    amount (e.g., three out of four dentists).
+    <li> If British and American English use different words, you should
+    typically prefer the American ("elevator", "stroller", "diaper", "truck").
+    The exception is when this could lead to confusion when one language's term
+    is ambiguous.  In those cases, use the version that removes ambiguity.  As a
+    consequence, use the British terms "trousers" (not "pants"), "crisps" (not
+    "chips"), and "cashpoint" (not "ATM"), but use the American terms
+    ("pacifier", "gasoline", "fries", and "cookies").
+  </ul>
+
+<h3>Paragraphs</h3>
+
+  <ul>
+    <li> Make sure your paragraphs
+    have <a href="http://owl.english.purdue.edu/engagement/index.php?category_id=2&sub_category_id=1&article_id=29">topic
+    sentences</a>.  Until you have mastered writing paragraphs, you shouldn't break this practice.</li>
+  </ul>
+
+<h3>Writing a paper Collaboratively</h3>
+
+  <ul>
+    <li> Often, when computer scientists work together on a paper, they will
+    discuss something using the concept of a "write token".  This concept comes
+    from a <a href="http://en.wikipedia.org/wiki/Token_ring">token-ring</a>
+    computer network.  The problem is that the computers share the same wires to
+    send messages over the network.  If two computers try to send something at
+    the same time, it will cause a problem.  The same problem comes up when
+    writing a document; if two people try to edit the document at the same time,
+    it can cause problems.
+
+    <li> Thus, before editing a file shared in some collaborative environment
+    (Dropbox, SVN, etc.), send an e-mail (or some other pre-arranged
+    notification) to your coauthors.  Something along the lines of "I'm claiming
+    the write tokens for foo.tex".  Then, edit the file to your heart's content,
+    save and commit your changes, and then send an e-mail saying "I release the
+    write tokens for foo.tex".  Bottom lines: only modify files for which you
+    have the write token, and release tokens for any file that you're not
+    actively editing.
+
+    <li> As a consequence, it helps to "input" many smaller files to create
+    the <a href="http://en.wikibooks.org/wiki/LaTeX/Modular_Documents">whole
+    document</a>.  This enables co-authors to claim tokens to specific sections
+    on a file-by-file basis.  (SVN, CVS, and git allow you to merge files after
+    agreeing to the same delineation of write tokens, but this is dangerous; I
+    discourage it.)
+
+    <li> Make sure that your text editor notifies you when the underlying file
+    changes.  If this doesn't happen, then you might unintentionally clobber
+    (overwrite) another's edits.  This happens as follows:
+      <ol>
+        <li> you edit a file (with your write tokens)
+
+        <li> you save the file, commit, and release the write tokens
+
+        <li> you leave the file open in your editor
+
+        <li> Collaborator Charlie modifies the files
+
+        <li> you update the file on your disk (but leave the file open in your editor)
+
+        <li> you then make some changes to the file (after getting the write tokens)
+
+        <li> and then you save those files, but because your editor never reflected the underlying changes, everything that Charlie did is forgotten
+
+        <li> you commit the changes, and your version control software thinks
+        that you knew that you were overwriting all of Charlie's changes
+        (because it gave you the new file), and everyone else will also miss out
+        on Charlie's changes
+
+      </ol>
+     Emacs does notify you when this happens.
+    <li> When the deadline gets really close, I like to print out a copy of the
+    paper, mark the changes with a pen, and then quickly grab all the tokens for
+    a paper to implement those changes.  (If rewrites or large text additions
+    are required, I do those in a scratch file.)  I can then very quickly
+    implement my changes while holding the tokens for a short period of time.
+
+    <li> Don't store the output of LaTeX in version control software.
+
+  </ul>
+
+<h3>Error Analysis</h3>
+
+<p>When writing a paper with an objective measure of success or
+failure, it is important to include an error analysis.  This is
+helpful for multiple reasons: it shows that you've actually looked at
+your data, that you understand what your algorithm is doing, and you
+know how your method is better (or at least different) from other
+algorithms.</p>
+
+<p>For example, let's say that you're doing a paper on word
+segmentation and you're comparing to
+the <a href="http://www.d.umn.edu/~tpederse/Pubs/pedersen-last-word-2008.pdf">Zigglebottom
+segmenter</a>.  One thing you can do is sort all of your sentences by
+the following metric: #words you got right - #words Zigglebottom got
+right.  You should look at both extremes.  Are there patterns in the
+things you get right and they get wrong?  If so, that likely reveals
+something about what your algorithm is doing.</p>
+
+<p>Otherwise, if you're writing a paper on a well-known task / method,
+you risk a reviewer reading it and saying, okay, I might do slightly
+better, but why?  Are there pitfalls I should be aware of? It also
+makes sure you understand what you're claiming better, which allows
+you to write a better paper overall.</p>
+
+<h3>Checklist before submitting something</h3>
+
+  <ul>
+    <li> Look over your citations.  Do they look uniform?  Sometimes when you
+    copy/paste a bibtex citation, junk comes with.
+    <li> Read over your section titles.  Do they tell a story?  Don't just use
+    "introduction", "background", "model", "inference", "conclusion", etc.
+    While your sections may map to those, call them something more specific.
+    <li> Do your figures stand on their own?  Make sure a bored reader /
+    reviewer can get the gist of what's going on through the figures alone.
+    <li> Is your abstract persuasive and interesting?
+    <li> Do a spellcheck!
+    <li> Make sure you've spelled your co-authors' names correctly (not always
+    obvious; perhaps they use middle initials or a different name / spelling for
+    publishing) and you have the correct affiliation (did they move since you
+    first wrote the paper)?
+  </ul>
+
+<h3>Talks</h3>
+
+<ul>
+  <li> Use Beamer and OmniGraffle
+  <li> Don't use a laser pointer (integrate any emphasis into your slides).  People have a tendency to over-use laser pointers, and they are not always usable (because of the screen, multiple screens, etc.).
+  <li> Don't read from notes.
+  <li> If you can ever use a picture instead of an equation, choose the picture (even if it takes more time).
+</ul>
+
+<h3>Posters</h3>
+
+<ul>
+  <li> Use Beamer
+  <li> Use blocks with informative titles (just like section headings)
+  <li> Do not put two images / tables in a block unless they are
+  showing <b>very</b> related information (e.g., don't put results from two
+  different datasets in the same block).
+</ul>
+
+</div>

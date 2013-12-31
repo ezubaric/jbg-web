@@ -1,0 +1,18 @@
+
+<div id="footer">
+  Page by <a href="mailto:jbg@umiacs.umd.edu">Jordan Boyd-Graber</a>.
+  Last modified: ~~TIMESTAMP~~
+</div>
+
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    $("a[href$='pdf']").each(function(index) {
+      pdfLabel = $(this).attr('href');
+      pdfOnClick = "_gaq.push(['_trackEvent', 'PDF', 'Download', '" + pdfLabel + "']);";
+      $(this).attr("onClick", pdfOnClick);
+    });
+</script>
+
+</html>

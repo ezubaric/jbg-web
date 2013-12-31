@@ -1,0 +1,234 @@
+/*
+ * By default, have black sans serif text on a gray background.
+ */
+
+body {
+    background-color: #e1ddd9;
+    font-size: 12px;
+    font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+    color: #000000;
+    margin: 0;
+}
+
+pre {
+   background-color: #f5f5f5;
+   color: #110000;
+   border: 3;
+   whitewhite-space: pre-wrap;       /* css-3 */  
+   whitewhite-space: -pre-wrap;      /* Opera 4-6 */  
+   whitewhite-space: -o-pre-wrap;    /* Opera 7 */  
+   word-wrap: break-word;       /* Internet Explorer 5+ */  
+   whitewhite-space: -moz-pre-wrap;  /* Older Versions of Mozilla */  
+}
+
+/*
+ * Paragraphs should have a little more spacing and indentation
+ */
+p {
+    margin: 0px;
+    padding: 5px 20px 5px 20px;
+    text-indent: 10px;
+    text-align: justify;
+}
+
+/*
+ * Links should normally not be underlined unless hovered over
+ */
+
+a {
+  color: #ff6666;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+ * Create special paragraphs for FAQ type pages.
+ */
+
+p.question {
+  font-weight:bold;
+}
+p.answer li.answer {
+  font-size:90%;
+}
+
+/*
+ * Create a footer that gives contrast
+ */
+
+#footer {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    background-color: #90897a;
+    padding: 5px 15px;
+    margin: 0px;
+}
+
+/*
+ * Create two columns on either side of the main body of the page.
+ * They will not occupy the full height (unless the content is very
+ * skimpy).  Thus if they have background, they should be the same
+ * as body.
+ */
+
+#left, #right {
+    position: absolute;
+    margin: 0px;
+    padding-top: 40px;
+    color: #564b47;
+    width: 190px;
+}
+
+#left {
+    left: 0px;
+}
+
+#right {
+    right: 0px;
+}
+
+
+/*
+ * Set the content to have decent padding and margins and a white
+ * background.  The bottom padding is important for the footer not
+ * encroaching on the left navigation.
+ */
+
+#content, #picture {
+    margin: 0px 195px 0px 190px;
+    border-left: 2px solid #564b47;
+    border-right: 2px solid #564b47;
+    background-color: #ffffff;
+}
+
+#content {
+    padding-bottom: 35px;
+}
+
+#picture {
+    padding-bottom: 0px;
+}
+
+/*
+ * Change the color of the headers so that they have contrast with the
+ * body text.  Give them a little extra padding and create a special class
+ * for the header.
+ */
+
+h1, h2, h3, h4, h5 {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    text-transform:uppercase;
+    color: #564b47;
+    background-color: transparent;
+}
+
+h3, h4, h5 {
+    text-align: center;
+}
+
+#header {
+    text-transform:uppercase;
+    text-align: right;
+    color: #564b47;
+    background-color: #90897a;
+}
+
+/*
+ * The button class creates buttons that look a little nicer than default links.
+ */
+
+/*
+ * Changes the font and sets the width
+ */
+
+#button {
+    width: 190px;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Lucida,
+    Geneva, Helvetica, Arial, sans-serif;
+}
+
+/*
+ * Makes the links appear as a block and gives them a border,
+ * removes underlining of links.
+ */
+#button li a {
+    display: block;
+    padding: 5px 5px 5px 0.5em;
+    border-left: 10px solid #ff0000;
+    border-right: 10px solid #ff4444;
+    background-color: #cc9999;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+li.sub {
+     border-left: 10px solid #e1ddd9;
+     border-right: 10px solid #e1ddd9;
+}
+
+a.sub {
+      border-left: 0px;
+}
+
+/*
+ * Changes the color of the link on a hover
+ */
+#button li a:hover {
+    border-left:10px solid #ff1111;
+    border-right: 10px solid #ff5555;
+    background-color: #ccaaaa;
+    color: #ffffff;
+}
+
+/*
+ * Removes padding from left hand side and hides bullets
+ */
+#button ul {
+    list-style: none;
+    padding: 0em;
+}
+
+/*
+ * Adds a border to the buttom of the buttons
+ */
+#button li {
+    border-bottom: 1px solid #90bade;
+}
+
+/*
+ * Toggles for hideable bibtex citations
+ */
+
+.hidden {
+    display: none;
+}
+.unhidden {
+    display: table;
+    position:relative;
+    width:80%;
+}
+
+/*
+ * Create a dark header for table and lighter cell for detail
+ */
+th
+{
+background-color:black;
+color:white;
+}
+td.detail {
+  background-color: #cccccc;
+}
+td {
+  font-size : 77%;
+}
