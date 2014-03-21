@@ -24,7 +24,7 @@ STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu
             "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012),
             "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016, "http://www.cs.umd.edu/~vietan/index.htm"),
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
-            "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/")
+            "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2019, "http://cs.umd.edu/~miyyer/"),
             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
 
