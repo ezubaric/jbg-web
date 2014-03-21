@@ -7,22 +7,25 @@ import time
 import os
 
 class Student:
-  def __init__(self, name, start, end):
+  def __init__(self, name, start, end, webpage = None):
     self._name = name
     self._start = start
     self._end = end
+    self._web = webpage
 
 UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
                "Refereed Conference": "\\ifumd 2.E.ii. \\fi Refereed Conferences",
                "Workshop": "\\ifumd 2.E.ii. \\fi Refereed Workshops",
                "Journal": "\\ifumd 2.B. \\fi Articles in Refereed Journals"}
 
-STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015),
-            "Yuening Hu": Student("Yuening Hu", 2010, 2015),
+STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu/~zhaike/"),
+            "Yuening Hu": Student("Yuening Hu", 2010, 2015, "http://www.cs.umd.edu/~ynhu/"),
             "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2015),
             "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012),
-            "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016),
+            "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016, "http://www.cs.umd.edu/~vietan/index.htm"),
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
+            "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/")
+            "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2019, "http://cs.umd.edu/~miyyer/"),
             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
 
 def format_name(students, name, year, latex):
@@ -36,9 +39,11 @@ def format_name(students, name, year, latex):
     s = students[name]
     if year >= s._start and year <= s._end:
       if latex:
-        return "\underline{%s}" % name
+        return "\underline{%s}" % s._name
+      elif s._web:
+        return '<a href="%s">%s</a>' % (s._web, s._name)
       else:
-        return "<u>%s</u>" % name
+        return "<u>%s</u>" % s._name
 
   if name == "Jordan Boyd-Graber":
     if latex:
