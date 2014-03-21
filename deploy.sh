@@ -5,9 +5,8 @@ git checkout $(git ls-files -d)
 
 python python/site.py
 
-export UPDATEDDOCS="`find pubs/* src_docs/* -mtime -6  -type f`"
-echo "UPDATE DOCS: $UPDATEDDOCS"
-if [ ${#UPDATEDDOCS} -gt 0 ]
+CHANGES=`git whatchanged --since="3 days ago" -p pubs/`
+if [ ${#CHANGES} -gt 0 ]
    then
         for FILE in `ls pubs/*.tex`
         do
