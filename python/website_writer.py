@@ -1,6 +1,5 @@
 
 from glob import glob
-from collections import defaultdict
 from string import capwords
 from datetime import date, datetime
 import time
@@ -55,7 +54,7 @@ def format_name(students, name, year, latex):
 
 class IndexElement:
   def __init__(self, file_contents):
-    self.fields = defaultdict(list)
+    self.fields = {"Authors": [], "Link": [], "Category": [], "Venue": []}
     for ii in [x for x in file_contents.split("~~") if x != ""]:
       key = capwords(ii.split("|")[0].strip())
       val = ii.split("|")[1].strip()
@@ -63,6 +62,8 @@ class IndexElement:
         for jj in val.split(" and "):
           print "Author: ", jj
           self.fields["Authors"].append(jj)
+      if not key in self.fields:
+        self.fields[key] = []
       self.fields[key].append(val)
 
   def author_string(self, latex):
