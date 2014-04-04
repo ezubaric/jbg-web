@@ -462,7 +462,27 @@ infinitives).</p>
     are required, I do those in a scratch file.)  I can then very quickly
     implement my changes while holding the tokens for a short period of time.
 
-    <li> Don't store the output of LaTeX in version control software.
+    <li> If you're actively editing a file, you should only
+put in the files needed to <b>generate</b> the output.  Do not store
+the intermediate or final output (pdf, log, aux, etc.).  This is not
+just to save space (every little change, no matter how small, will
+force a multi-megabyte file to be saved) but also because it can get
+in the way of other people as they're compiling the document.</li>
+
+    <li>I also prefer using pdf (vector) and png (raster) files for graphics
+(as appropriate); this is because the output of pdflatex is usually
+better/easier than that of latex.  </li>
+
+    <li> Organize the files as follows:
+      <ul>
+	<li> Keep all style files (e.g. things that could be shared between submissions) in the "style" folder
+	<li> Keep all bibliography files (e.g., bibtex source) in the "bib" folder
+	<li> Have the main body in a file called "YYYY_project.tex" and the associated data (sections, graphics, etc.) in a folder called "YYYY_project"
+	<li> This allows the Makefile to work well and reduces clutter
+      </ul>
+    </li>
+</p>
+
 
   </ul>
 
