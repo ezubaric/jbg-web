@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Data-Intensive Information Processing Applications: Assignment 2</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="left">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <span id="button">
+  <ul>
+    <li><a href="../../static/home.html">Home</a> 
+    <li><a href="../../static/downloads_and_media.html">Downloads And Media</a> 
+    <li><a href="../../static/faq.html">Faq</a> 
+    <li><a href="../../static/courses.html">Courses</a> 
+    <li><a class="sub" href="../LBSC_690_2011/index.html">Intro to IT</a>
+    <li><a class="sub" href="index.html">Cloud Computing</a>
+    <li><a href="../../dyn-publications/year.html">Publications</a> 
+  </ul>
+  </span>
+</div>
+
+<div id="right">
+
+</div>
+
+<div id="content">
+
+  <h2>Assignment 5: Cloud-based Bacon Services </h2>
+  
+  <p><b>Due:</b> Thursday 4/14 (11:59pm)</p>
+
+  <h3>Background</h3>
+
+  <p>Some folks used to play a game called
+  "<a href="http://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Six Degrees
+  of Kevin Bacon</a>."  The idea is that you were given a name of a person, and
+  you had to link that person up to Kevin Bacon based on films they both
+  appeared in.  For example, let's say you were challenged to link Kiefer
+  Sutherland.  One possible answer is: <b>Kiefer Sutherland was in <i>A Time To
+  Kill</i> with his dad, Donald Sutherland, who was in <i>JFK</i> with Kevin
+  Bacon</b>.  But this isn't the best answer, as Kevin Bacon was
+  in <i>Flatliners</i> with Kevin Bacon.</p>
+
+  <p>Algorithm-wise, this is called bidirectional search.  You have a source and
+  sink node given as input, and you need to provide the shortest path that links
+  them up.  (Yes, you could get the answer using Dijkstra's algorthim to get the
+  same answer - bidirectional search typically uses less memory and takes less
+  time).  The pseudocode goes like this:</p>
+
+<ol>
+  <li> Given <b>SOURCE</b> and <b>SINK</b>, initialize set <b>S</b> and <b>T</b> with <b>SOURCE</b> and <b>SINK</b>, respectively.
+  <li> While the intersection of <b>SOURCE</b> and <b>SINK</b> is empty:
+    <ol>
+      <li> For each <b>x</b> in <b>S</b>, add its neighbors to <b>S</b>
+      <li> For each <b>y</b> in <b>T</b>, add its neighbors to <b>T</b>
+    </ol>
+  <li> Return the shortest path that goes though the intersection of <b>S</b>
+  and <b>T</b>.
+</ol>
+
+<h3> Data </h3>
+
+<p>There is adjacency information available here:<br/>
+/umd-lin/jbg/data/movies/actor2actors/<br/>
+Each line represents an person, which is the first field (separated by a tab).
+All of the other names on the line (separated by pipes) are other people they
+have worked with on a movie.  The letters in parentheses discriminate actors
+vs. writers vs. directors.
+</p>
+
+<h3>Questions</h3>
+
+<ol>
+
+  <li> Describe your algorithm, covering how you: </li>
+    <ol>
+      <li> Represent Nodes
+      <li> Handle serialization
+      <li> Detect Termination
+      <li> Distinguish the source from the sink
+    </ol>
+
+ <li> Compute some paths! </li>
+  <ol>
+    <li> What is the path between "Hanks, Tom (a)" and "Bacon, Kevin (I) (a)"?
+  (Hint: this is super-easy and should be a sanity check.)
+  
+    <li> What is the path between "Murray, Bill (I) (a)" and "Bacon, Kevin (I) (a)"?
+    
+    <li> What is the path between "Schreck, Max (a)" (who played Nosferatu, one of
+  the first and best film vampires) and "Bacon, Kevin (I) (a)"?
+  
+    <li> What is the path between "Jun, Gianna (a)" (who played Saya, a
+  vampire-hunter in one of the worst recent vampire movies) and "Bacon, Kevin
+  (I) (a)"
+  
+    <li> What is the path between "Schreck, Max (a)" and "Jun, Gianna (a)"?
+  </ol>
+
+  <li> Can you find a longer path than any of the ones you found above? (We're not asking you to compute the diameter of the graph, just play around and demonstrate a path longer than the ones above.) </li>
+
+  <li> How would your code change if the edges were weighted?  (e.g. if
+  television counted less than movies, or if weighting was by billing) </li>
+  
+</ol>
+
+<h3>Submission Instructions</h3>
+
+<p>This assignment is due by 11:59pm, Thursday 4/14.  Please send us
+(both Jordan and Yingying) an email with "[CCC Assignment 5]" as the
+subject.  In the body of the email put answers to the questions above
+and any source code you created or modified.</p>
+
+
+<h3>Hints / Tips</h3>
+
+<ul>
+
+  <li> Dumbo does not have an easy way of accessing counters in driver programs,
+  so determing convergence in Dumbo might be difficult (if you can figure out
+  how, great, otherwise, you might want to consider the more mature Java
+  interface).</li>
+
+  <li> Before debugging on the whole dataset, first check to make sure you can
+  handle <a href="sample.txt">small data</a>.</li>
+
+  <li> Be sure to differentiate between your two types of search frontiers.</li>
+
+  <li> Don't forget that you'll need to be able to recover the actual paths you
+  discovered.</li>
+
+  <li> Be sure that you handle disconnected graphs well (think about how you'd
+  detect that your algorithm isn't making progress). </li> 
+
+  <li> Nodes might not be unique - be careful! </li>
+
+</ul>
+
+<BR/>
+
+
+<p style="padding-top: 25px"><a href="index.html">Back to main page</a></p>
+
+
+<BR/>
+
+</div>
+
+<div id="footer">
+  Page by <a href="mailto:jbg@umiacs.umd.edu">Jordan Boyd-Graber</a>.
+</div>
+</body>
+</html>
+
