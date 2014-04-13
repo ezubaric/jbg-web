@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Data-Intensive Information Processing Applications: Assignment 2</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="left">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <span id="button">
+  <ul>
+    <li><a href="../../static/home.html">Home</a> 
+    <li><a href="../../static/downloads_and_media.html">Downloads And Media</a> 
+    <li><a href="../../static/faq.html">Faq</a> 
+    <li><a href="../../static/courses.html">Courses</a> 
+    <li><a class="sub" href="../LBSC_690_2011/index.html">Intro to IT</a>
+    <li><a class="sub" href="index.html">Cloud Computing</a>
+    <li><a href="../../dyn-publications/year.html">Publications</a> 
+  </ul>
+  </span>
+</div>
+
+<div id="right">
+
+</div>
+
+<div id="content">
+
+  <h2>Assignment 3: Who Hangs Out Together on Wikipedia</h2>
+
+  
+  <p><b>Due:</b> Thursday 3/31 (11:59pm)</p>
+
+  <h3>Background</h3>
+
+  <p><a
+  href="http://en.wikipedia.org/wiki/Pointwise_mutual_information">Pointwise
+  mutual information</a> is a function of two events <i>x</i> and <i>y</i>:</p>
+
+  <CENTER><img src="hw3_pmi.png" /></CENTER>
+
+  <p>The larger the magnitude of PMI is for <i>x</i> and <i>y</i> is, the more
+  information you know about the probability of seeing <i>y</i> having just seen
+  <i>x</i> (and vice-versa; PMI is symmetrical).  If seeing <i>x</i> gives you
+  no information about seeing <i>y</i>, then <i>x</i> and <i>y</i> are
+  independent and the PMI is zero.</p>
+  
+  <p>Proper nouns are nouns that refer to distinct entities.  In English,
+  they're usually capitalized even when they don't start a sentence.  Examples
+  are
+  <ul>
+    <li> adam sandler </li>
+    <li> adam smith </li>
+    <li> big ben</li>
+    <li> big bend  </li>
+    <li> captain jack </li>
+    <li> captain james cook </li>
+    <li> captain john smith </li>
+    <li> captain kangaroo </li>
+    </ul>
+    <p>These are discovered automatically using a <a
+  href="http://en.wikipedia.org/wiki/Link_grammar">parser</a> (but you don't
+  need to worry about the specifics.</p>
+
+    <p>In this project you're going to compute the PMI for different entities
+    appearing in the same sentence.</p>
+    
+    <h3>Input Files</h3>
+    
+    <p>We created files with the proper nouns set off in angle brackets:</p>
+
+    <BLOCKQUOTE> &lang; joel norman quenneville &rang; ( born &lang; september
+    &rang; 15 , 1958 in &lang; windsor &rang; , &lang; ontario &rang; , &lang;
+    canada &rang; ) is the head coach of the &lang; chicago blackhawks &rang;
+    professional ice hockey team . <br />
+
+    a grand coalition of &lang; cdu &rang; and &lang; spd &rang; lasted from
+    1968 to 1972. a new grand coalition lasted from 1992 to 1996. since 1996 ,
+    the < cdu &rang; is cooperating with the fdp . <br />
+
+    the elementary school in " the &lang; simpsons &rang; " is based on &lang;
+    mccarthy middle school &rang; , which was &lang; chelmsford &rang; 's high
+    school before the construction of &lang; chelmsford high school &rang; in
+    1974. the town hall in the show is based on the &lang; chelmsford public
+    library &rang; ( prior to the recent reconstruction ) .
+
+    </BLOCKQUOTE>
+    
+  <p>Which can be found in "/umd-lin/jbg/data/wackypedia/np".  Note that the
+  entities are the <b>whole string</b> inside the angle brackets.  E.g. "joel
+  norman quenneville" is one entity and "mccarthy middle school" is another.</p>
+
+    <h3>Required Tasks</h3>
+    
+  <p>In this assignment, you will compute the PMI of proper nouns that
+  appear together more than 25 times among entities that appear in
+  more than 100 sentences.  (In other words, if an entity by itself
+  appears in 100 sentences or fewer, we're not interested; if two
+  entities appear together 25 sentences or fewer, we're also not
+  interested).  Write the code necessary to do this <b>and</b> at
+  least one unit test (you'll likely want to write more!).</p>
+
+  <p>When you're done answer the following questions:</p>
+    <ol>
+      <li> What strategy did you use to get the necessary information needed to
+    compute PMI?</li>
+      <li> Did you use a combiner?  If so, describe what it looked like. </li>
+      <li> Did you use a partitioner?  If so, describe what it looked like.</li>
+      <li> How many entities appear more than 100 times? </li>
+      <li> How many entity pairs appear more than 25 times? </li>
+      <li> What are the entities that have the highest PMI with: "seinfeld",
+    "maryland", and "clinton"?</li>
+      <li> What is the pair of entities with the largest PMI?</li>
+    </ol>
+
+<h3>Submission Instructions</h3>
+
+<p>This assignment is due by 11:59pm, Thursday 3/31.  Please send us
+(both Jordan and Yingying) an email with "[CCC Assignment 3]" as the
+subject.  In the body of the email put answers to the questions above
+and any source code you created or modified.</p>
+
+<h3>Hints / Tips</h3>
+
+<ul>
+
+  <li> Think out your design carefully before you begin, staring at the PMI
+  calculation.  Make sure that you'll have all the information you'll need there
+  when you need it.</li>
+
+  <li> If a sentence contains entities A, A, B; then there are not two instances
+  of A and B appearing together.  Similarly, there are not two co-occurences of
+  A and B, only one.</li>
+  
+  <li> If your design requires everything to be in a single reducer, something
+  is wrong.</li>
+  
+  <li> If the number of keys you output from mapper is not linear in the number
+  of observed pairs, then something is wrong.</li>
+  
+  <li> Remember there are other ways of getting data to reducers than just
+  key-value pairs.</li>
+  
+  <li> Remember that seeking data is expensive but streaming isn't too bad.</li>
+</ul>
+
+<BR/>
+
+<p style="padding-top: 25px"><a href="index.html">Back to main page</a></p>
+
+
+<BR/>
+
+</div>
+
+<div id="footer">
+  Page by <a href="mailto:jbg@umiacs.umd.edu">Jordan Boyd-Graber</a>.
+</div></body>
+</html>
+
