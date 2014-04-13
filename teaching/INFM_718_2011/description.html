@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Data-Intensive Information Processing Applications</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="left">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <span id="button">
+    <ul>
+        <li><a href="../../static/home.html">Home</a> 
+	<li><a href="../../static/downloads_and_media.html">Downloads And Media</a> 
+	<li><a href="../../static/faq.html">Faq</a> 
+	<li><a href="../../static/courses.html">Courses</a> 
+          <li><a class="sub" href="../LBSC_690_2011/index.html">Intro to IT</a>
+          <li><a class="sub" href="index.html">Cloud Computing</a>
+	<li><a href="../../dyn-publications/year.html">Publications</a> 
+     </ul>
+  </span>
+</div>
+
+<div id="right">
+
+</div>
+
+
+<div id="content">
+
+<h1>Data-Intensive Information Processing Applications (Spring 2011)</h1> 
+ 
+<h3>What's the course about?</h3> 
+ 
+<p>This course is about scalable approaches to processing large
+amounts of information (terabytes and even petabytes).  We focus
+mostly on MapReduce, which is presently the most accessible and
+practical means of computing at this scale, but will discuss other
+approaches as well.</p> 
+ 
+<p>MapReduce is a programming model for expressing distributed
+computations on massive amounts of information and an execution
+framework for large-scale information processing on clusters of
+commodity servers.  It was originally developed by Google and built on
+well-known principles in parallel and distributed processing dating
+back several decades.  MapReduce has since enjoyed widespread adoption
+via an open-source implementation called <a
+href="http://hadoop.apache.org/">Hadoop</a>, whose development was led
+by Yahoo.</p> 
+ 
+<p>This is the "version 4.0" of a course that was previously offered
+in <a href="http://www.umiacs.umd.edu/~jimmylin/cloud-2010-Fall/index.html">Spring
+2010</a>, <a href="http://www.umiacs.umd.edu/~jimmylin/cloud-2008-Fall/index.html">Spring
+2008</a>,
+and <a href="http://www.umiacs.umd.edu/~jimmylin/cloud-2008-Spring/index.html">Fall
+2008</a>.  Core content is similar, but organization and scope have been
+overhauled for the fourth time, particularly revamping the assignments.</p>
+ 
+<p>Course readings will be drawn from research papers available
+online, as well as the following two textbooks:</p> 
+ 
+<ul> 
+ 
+<li>Tom White, <a href="http://oreilly.com/catalog/0636920010388/">Hadoop: The
+  Definitive Guide</a> <b>SECOND EDITION</b>, O'Reilly, 2010. (The full text of this book is available to UMD students via <a href="http://proquest.safaribooksonline.com.proxy-um.researchport.umd.edu/">Safari Books Online</a>, but you may choose to purchase a paper copy for handy reference)
+</li> 
+ 
+<li>Jimmy Lin and Chris Dyer, <a href="http://www.umiacs.umd.edu/~jimmylin/book.html">Data-Intensive Text Processing with MapReduce</a>, Morgan and Claypool, 2010.</li> 
+ 
+</ul> 
+ 
+<p>In addition to the standard distributions of Hadoop, this course
+uses <a
+href="http://www.umiacs.umd.edu/~jimmylin/cloud9/docs/index.html">Cloud<sup><small>9</small></sup></a>,
+a MapReduce library for Hadoop developed at the University of Maryland.</p> 
+ 
+<h3>Pre-requisites</h3> 
+ 
+<p>No previous experience with MapReduce or parallel and distributed
+programming is necessary.  However, students taking this course should
+be competent Java programmers, since concepts taught in class will be
+reinforced through extensive programming exercises in the Hadoop
+implementation of MapReduce (which is in Java).  Note that this is a
+course on algorithms and "thinking at scale"&mdash;not about Hadoop
+programming.  Therefore, we expect you to "pick up" the details of the
+Hadoop API <b>without explicit instruction from us</b>.  Of course, we
+will assist you by providing resources and a reasonable amount of
+guidance.</p> 
+ 
+<p>In addition, students are assumed to have knowledge of basic
+probability and statistics (e.g., axioms of probability, Bayes'
+Theorem, relative frequency estimation, etc.) and also a solid
+understanding of basic computer architecture (e.g., microprocessor
+architectures, memory hierarchies, cache coherence protocols,
+etc.).</p> 
+ 
+<h3>Course Grade</h3> 
+ 
+<ul> 
+ 
+  <li><b>Exams (30%)</b>: There will be a midterm exam (15%) and a
+  final exam (15%).</li> 
+ 
+  <li><b>Final project (30%):</b> There will be group final project
+  (~3 students) on a topic of your own choosing.  More details on this
+  will be discussed later on in the semester. </li> 
+ 
+  <li><b>Class assignments (30%):</b> There will be six assignments,
+  but we will drop your lowest grade and take the average of five
+  assignment grades.  Each assignment grade is worth 5% of your course
+  grade.</li> 
+ 
+  <li><b>Class participation (10%):</b> Showing up for class, demonstrating
+  preparedness (i.e., doing the readings), and contributing to class discussions
+  (both in class and on the mailing list).</li>
+ 
+</ul> 
+ 
+<p>See <a href="schedule.html">course schedule</a> for assignment due dates
+and exams dates.</p> 
+ 
+<h3>Homework Assignments</h3> 
+ 
+<p>The homework assignments are designed to help you learn the material, and
+will be graded out of 50 points each.  It's possible to get more than 50 points
+in the case of going above and beyond the required assignment.</p>
+ 
+<h3>Policy for Late and Incomplete Work</h3> 
+ 
+<ul> 
+ 
+  <li><b>Assignment deadlines:</b> Assignments are due at the
+  beginning of class unless otherwise noted.</li> 
+ 
+  <li><b>Late assignments:</b> You have four late days that can be used for any
+  assignment in any combination so long as the total number of late days is less
+  than or equal to four (e.g. one late days for assignment 2, three late days
+  for assignment 3).  You do not need prior permission to use these default late
+  days.  Exceptions can be discussed in cases of medical excuses, family
+  emergencies, etc., but being busy is not a valid excuse.  Exceptions will only
+  be considered <i>prior</i> to the deadline, and the sooner you talk to us
+  about a problem the more likely we will be sympathetic.  There are several
+  common problems that we are unlikely to consider as valid reasons for failing
+  to get work in on time.  These include (a) failure to manage your time
+  properly, (b) discovering an assignment is harder or takes longer than you
+  expected it to be (see item a), (c) having competing priorities such as other
+  classes, job interviews, etc., and (d) losing code or data that should have
+  been backed up, unless it's someone else's fault.  Homework submitted beyond
+  the default late policy without a <b>prior</b> excuse will be graded at 50%
+  credit up to one week late.  Beyond that, homework will not be graded (you
+  will get a zero).</li>
+ 
+  <li><b>'Incomplete' as a grade:</b> We will not issue an
+  'incomplete' as a grade except for serious, valid reasons, generally
+  in the category of emergencies.  See above for some reasons unlikely
+  to be considered valid.  If you are having problems of any kind,
+  please talk to us as soon as possible. </li> 
+ 
+</ul> 
+ 
+<h3>Academic Integrity </h3> 
+ 
+<p>The University of Maryland, College Park has a nationally recognized
+Code of Academic Integrity, administered by the Student Honor Council.
+This Code sets standards for academic integrity at Maryland for all
+undergraduate and graduate students. As a student you are responsible
+for upholding these standards for this course. It is very important
+for you to be aware of the consequences of cheating, fabrication,
+facilitation, and plagiarism. Please visit
+the <a href="http://www.shc.umd.edu/">Code of Academic Integrity or
+the Student Honor Council</a> for more information.</p> 
+ 
+<h3>Students with Disabilities</h3> 
+ 
+<p>Students with disabilities needing academic accommodation should:
+(1) register with and provide documentation to
+the <a href="http://www.counseling.umd.edu/DSS/">Disability Support
+Services office</a>, and (2) discuss any necessary academic
+accommodation with me.  This should be done at the beginning of the
+semester, within the first three class sessions.</p> 
+ 
+ 
+<h3>Emergency Preparedness</h3> 
+ 
+<p>Information about the status of the campus is available
+at <a href="http://www.umd.edu/emergencypreparedness/">the campus
+emergency preparedness website</a>.  If the campus is closed, please
+make sure to stay safe. Information about possible rescheduling of
+course activities will be provided via e-mail once the campus has
+reopened.</p> 
