@@ -1,0 +1,463 @@
+
+\documentclass{beamer}
+
+% for themes, etc.
+\mode<presentation>
+{ \usetheme{boxes} }
+
+\usepackage{times}  % fonts are up to you
+\usepackage{graphicx}
+
+% these will be used later in the title page
+\title{Probability Distributions, Viterbi Decoding, and All That}
+\author{Jordan Boyd-Graber \\
+  COS/LIN 280}
+\date{October 1, 2008}
+
+% note: do NOT include a \maketitle line; also note that this title
+% material goes BEFORE the \begin{document}
+
+\begin{document}
+
+% this prints title, author etc. info from above
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Probability Distributions}
+
+
+\begin{frame}
+\frametitle{How do we estimate a probability?}
+
+\begin{itemize}
+  \item Suppose we want to estimate $P(w_n = \mbox{``dog''} | z_z = \mbox{``NN''})$.  
+  \pause
+  \begin{center}
+  \begin{tabular}{ccccc}
+    \textbf{dog} & \textbf{dog} & cat & horse & cow \\
+    cat & horse & cow & fly & mouse \\
+    fly & \textbf{dog} & cat & fly & \textbf{dog} \\
+    mouse & \textbf{dog} & fly & cat & cow 
+  \end{tabular}
+  \end{center}
+  \pause
+  \item Maximum likelihood (ML) estimate of the probability is:
+  \begin{equation}
+    \hat{\theta}_{i} = \frac{n_i}{\sum_{k} n_k}
+  \end{equation}
+  \pause
+  \item Is this reasonable?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{How do we estimate a probability?}
+
+\begin{itemize}
+   \item In computational linguistics, we often have a {\em prior} notion of what our probability distributions are going to look like (for example, non-zero, sparse, uniform, etc.).
+   \item This estimate of a probability distribution is called the maximum a posteriori (MAP) estimate:
+     \begin{equation}
+       \theta_{\mbox{MAP}} = \mbox{argmax}_{\theta} f(x|\theta)g(\theta)
+     \end{equation}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{How do we estimate a probability?}
+
+\begin{itemize}
+   \item For a multinomial distribution (i.e. a discrete distribution, like over words):
+     \begin{equation}
+       \theta_{i} = \frac{n_i + \alpha_i}{\sum_k {n_k + \alpha_k}}
+     \end{equation}
+   \item $\alpha_i$ is called a smoothing factor, a pseudocount, etc.
+     \pause
+   \item When $\alpha_i = 1$ for all $i$, it's called ``Laplace smoothing'' and corresponds to a uniform prior over all multinomial distributions.
+     \pause
+   \item To geek out, the set $\{\alpha_1, \dots, \alpha_N\}$ parameterizes a Dirichlet distribution, which is itself a distribution over distributions and is the conjugate prior of the Multinomial (don't need to know this).
+\end{itemize}
+\end{frame}
+
+
+\section{HMM Recapitulation}
+
+
+\begin{frame}
+\frametitle{HMM Definition}
+
+Assume $K$ parts of speech, a lexicon size of $V$, a series of observations $\{x_1, \dots, x_N\}$, and a series of unobserved states $\{z_1, \dots, z_N\}$.
+
+\begin{itemize}
+  \item[$\pi$] A distribution over start states (vector of length $K$): $\pi_i = p(z_1 = i)$
+  \item[$\theta$] Transition matrix (matrix of size $K$ by $K$): $\beta_{i,j} = p(z_{n} = j | z_{n-1} = i)$
+  \item[$\beta$] An emission matrix (matrix of size $K$ by $V$): $\beta_{k,v} = p(x_n = v | z_n=k)$
+\end{itemize}
+\pause 
+
+Two problems: How do we move from data to a model?  (Estimation) How do we move from a model and unlabled data to labeled data? (Inference)
+
+\end{frame}
+
+\section{HMM Estimation}
+
+\begin{frame}
+\frametitle{Training Sentences} 
+\begin{center}
+
+\begin{tabular}{cccc}
+here & come & old & flattop \\
+MOD  & V    & MOD & N \\
+& & & \\
+\end{tabular}
+
+\begin{tabular}{ccccccc}
+a & crowd & of & people & stopped & and & stared \\
+DET & N & PREP & N & V & CONJ & V \\
+& & & & &  \\
+\end{tabular}
+
+\begin{tabular}{cccccc}
+gotta & get & you & into & my & life \\
+V & V & PRO& PREP & PRO & V\\
+ & & & & &  \\
+\end{tabular}
+
+\begin{tabular}{cccc}
+and & I & love & her \\
+CONJ & PRO & V & PRO \\
+& & & \\
+\end{tabular}
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{Initial Probability $\pi$}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+POS  & Frequency & Probability \\
+\hline
+MOD  & 1.1 & 0.234 \\ 
+DET   & 1.1 & 0.234 \\ 
+CONJ  & 1.1 & 0.234 \\ 
+N  & 0.1 & 0.021 \\ 
+PREP  & 0.1 & 0.021 \\ 
+PRO  & 0.1 & 0.021 \\ 
+V  & 1.1 & 0.234 \\ 
+\hline
+\end{tabular}
+\end{center}
+
+Remember, we're taking MAP estimates, so we add 0.1 (arbitrarily chosen) to each of the counts before normalizing to create a probability distribution.  This is easy; one sentence starts with an adjective, one with a determiner, one with a verb, and one with a conjunction.
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Transition Probability $\theta$}
+
+\begin{itemize}
+\item We can ignore the words; just look at the parts of speech.  Let's compute one row, the row for verbs.
+\item We see the following transitions: V~$\rightarrow$~MOD, V~$\rightarrow$~CONJ, V~$\rightarrow$~V, V~$\rightarrow$~PRO, and V~$\rightarrow$~PRO
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+POS  & Frequency & Probability \\
+\hline
+MOD  & 1.1 & 0.193 \\ 
+DET   & 0.1 & 0.018 \\ 
+CONJ  & 1.1 & 0.193 \\ 
+N  & 0.1 & 0.018 \\ 
+PREP  & 0.1 & 0.018 \\ 
+PRO  & 2.1 & 0.368 \\ 
+V  & 1.1 & 0.193 \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\item And do the same for each part of speech ...
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Emission Probability $\beta$}
+
+Let's look at verbs \dots
+
+\begin{tabular}{c|ccccc}
+\hline
+Word & a & and & come & crowd & flattop \\
+\hline
+Frequency & 0.1 & 0.1 & 1.1 & 0.1 & 0.1 \\
+\hline
+Probability & 0.011 &  0.011 & 0.121 & 0.011 &  0.011 \\
+\hline
+\hline
+Word & get & gotta & her & here & i \\
+\hline
+Frequency & 1.1 & 1.1 & 0.1 & 0.1 & 0.1 \\
+\hline
+Probability & 0.121 & 0.121 & 0.011 &  0.011 & 0.011 \\
+\hline
+\hline
+Word & into & it & life & love & my \\
+\hline
+Frequency & 0.1 & 0.1 & 0.1 & 1.1 & 0.1 \\
+\hline
+Probability & 0.011 & 0.011 & 0.011 & 0.121 & 0.011 \\
+\hline
+\hline
+Word & of & old & people & stared & stood \\
+\hline
+Frequency & 0.1 & 0.1 & 0.1 & 1.1 & 1.1 \\
+\hline
+Probability & 0.011 & 0.011 & 0.011 & 0.121 & 0.121 \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Viterbi Algorithm}
+
+\begin{itemize}
+\item Given an unobserved sequence of length $L$, $\{x_1, \dots, x_L\}$, we want to find a sequence $\{z_1 \dots z_L\}$ with the highest probability.
+\pause
+\item It's impossible to compute $K^L$ possibilities.
+\item So, we use dynamic programming to compute best sequence for each subsequence from $0$ to $l$.
+\item Base case:
+\begin{equation}
+\delta_1(k) = \pi_k \beta_{k, x_i}
+\end{equation}
+\item Recursion:
+\begin{equation}
+\delta_n(k) = \max_{j} {\left(\delta_{n-1}(j)\theta_{j,k}\right)} \beta_{k, x_n}\end{equation}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{itemize}
+\item The complexity of this is now $K^2 L$.
+\item But just computing the max isn't enough.  We also have to remember where we came from.  (Breadcrumbs from best previous state.)
+\begin{equation}
+\Psi_{n} = \mbox{argmax}_j \delta_{n-1}(j)\theta_{j,k}
+\end{equation}
+\pause
+\item Let's do that for the sentence ``come and get it''
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+POS  & $\pi_k$ & $\beta_{k,x_1}$&  $ \log{\delta_1(k)}$ \\
+\hline
+MOD  & 0.234 & 0.024 & -5.18 \\ 
+DET   & 0.234 & 0.032 & -4.89 \\ 
+CONJ  & 0.234 & 0.024 & -5.18\\ 
+N   & 0.021 & 0.016 & -7.99 \\ 
+PREP & 0.021 & 0.024 & -7.59 \\ 
+PRO  & 0.021 & 0.016 & -7.99 \\ 
+V  & 0.234 & 0.121 & -3.56 \\ 
+\hline
+\multicolumn{4}{c}{{\bf come} and get it}
+\end{tabular}
+
+\end{center}
+
+Why logarithms?
+\begin{enumerate}
+\item More interpretable than a float with lots of zeros.
+\item Underflow is less of an issue
+\item Addition is cheaper than multiplication 
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+POS  & $ \log{\delta_1(j)}$ & \uncover<3->{$\log{\delta_1(j) \theta_{j, \mbox{CONJ}}}$} & $\log{\delta_1(\mbox{CONJ})}$ \\
+\hline
+MOD  & -5.18 & \uncover<7->{-8.48} & \\ 
+DET   &  -4.89 & \uncover<7->{-7.72} & \\ 
+CONJ  & -5.18 & \uncover<7->{-8.47}  & \color{red}{\uncover<2-8>{???}  \uncover<11>{-6.02}}\\ 
+N   & -7.99 & \uncover<6->{$\leq -7.99$} &  \\ 
+PREP & -7.59 & \uncover<6->{$\leq -7.59$} & \\ 
+PRO  & -7.99 & \uncover<6->{$\leq -7.99$} & \\ 
+V  & -3.56 & \uncover<5->{\color<8->{green}{-5.21}} & \\ 
+\hline
+\multicolumn{4}{c}{ come {\bf and} get it}
+\end{tabular}
+
+
+
+
+\end{center}
+
+\uncover<4>{
+\begin{equation}
+\log{ \left( \delta_0(\mbox{V}) \theta_{\mbox{V, CONJ}} \right)} = \log \delta_0(k) + \log \theta_{\mbox{V, CONJ}} = -3.56 + -1.65 \nonumber
+\end{equation}
+}
+
+\uncover<9-10>{
+\begin{equation}
+\log{\delta_1(k)} = -5.21 - \log{\beta_{\mbox{CONJ, and}}} = \uncover<10>{-5.21-0.81}\nonumber
+\end{equation}
+}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{center}
+\footnotesize{
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+POS  & $ \delta_1(k) $ & $\delta_2(k) $ & $b_2$ & $\delta_3(k) $ & $b_3$ & $\delta_4(k)$ & $b_4$ \\
+\hline
+MOD  & \color{gray}{-5.18} & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}} & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}} & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+DET   & \color{gray}{-4.89} & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}}  & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}} & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+CONJ  & \color{gray}{-5.18} & -6.02 & V & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}} & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+N   & \color{gray}{-7.99} & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}} & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}}  & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+PREP & \color{gray}{-7.59} & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}} & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}}   & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+PRO  & \color{gray}{-7.99} & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}} & \uncover<3->{\color{gray}{-0.00}} & \uncover<3->{\color{gray}{X}}  &  \uncover<4->{-14.6} &  \uncover<4->{V}  \\ 
+V  & -3.56 & \uncover<2->{\color{gray}{-0.00}} & \uncover<2->{\color{gray}{X}}  &  \uncover<3->{-9.03} &  \uncover<3->{CONJ} & \uncover<4->{\color{gray}{-0.00}} & \uncover<4->{\color{gray}{X}} \\ 
+\hline
+WORD & come & \multicolumn{2}{c|}{and} & \multicolumn{2}{c|}{get} & \multicolumn{2}{c|}{it} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\end{frame}
+
+\section{NLTK Taggers}
+
+\begin{frame}[fragile]
+
+\frametitle{Rule-based tagger} 
+
+First, we'll try to tell the computer explicitly how to tag words based on patterns that appear within the words.
+
+\footnotesize
+\begin{verbatim}
+import nltk
+patterns = [
+	(r'.*ing$', 'VBG'),               # gerunds
+	(r'.*ed$', 'VBD'),                # simple past
+	(r'.*es$', 'VBZ'),                # 3rd singular present
+	(r'.*ould$', 'MD'),               # modals
+	(r'.*\'s$', 'NN$'),               # possessive nouns
+	(r'.*s$', 'NNS'),                 # plural nouns
+	(r'^-?[0-9]+(.[0-9]+)?$', 'CD'),  # cardinal numbers
+	(r'.*', 'NN')                     # nouns (default)
+]
+regexp_tagger = nltk.RegexpTagger(patterns)
+sent = nltk.corpus.brown.sents(categories=['c'])[13]
+correct_sent = nltk.corpus.brown.tagged_sents(categories=['c'])[13]
+regexp_tagger.tag(sent)
+brown_c = nltk.corpus.brown.tagged_sents(categories=['c'])
+nltk.tag.accuracy(regexp_tagger, brown_c)
+\end{verbatim}
+\pause
+This doesn't do so hot; only 0.181 accuracy, but it requires no training data.
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+
+\frametitle{Unigram Tagger} 
+
+Next, we'll create unigram taggers.
+
+\footnotesize
+\begin{verbatim}
+brown_a = nltk.corpus.brown.tagged_sents(categories=['a'])
+brown_ab = nltk.corpus.brown.tagged_sents(categories=['a', 'b'])
+unigram_tagger = nltk.UnigramTagger(brown_a)
+unigram_tagger_bigger = nltk.UnigramTagger(brown_ab)
+unigram_tagger.tag(sent)
+nltk.tag.accuracy(unigram_tagger, brown_c)
+nltk.tag.accuracy(unigram_tagger_bigger, brown_c)
+\end{verbatim}
+\pause
+If we train on categories=['a','b'], then accuracy goes from 0.727 to 0.763.
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{Affix Tagger} 
+
+Now, train an affix tagger, which uses the end of words rather than the whole word.
+
+\footnotesize
+\begin{verbatim}
+affix_tagger = nltk.AffixTagger(brown_a, affix_length=-2, min_stem_length=3)
+affix_tagger.tag(sent)
+nltk.tag.accuracy(affix_tagger, brown_c)
+\end{verbatim}
+
+\pause
+Accuracy isn't so hot: 0.212
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\frametitle{Bigram Tagger} 
+
+Next is a bigram tagger, which uses pairs of words rather than single words to assign a part of speech.
+
+\footnotesize
+\begin{verbatim}
+bigram_tagger = nltk.BigramTagger(brown_a, cutoff=0)
+bigram_tagger.tag(sent)
+nltk.tag.accuracy(bigram_tagger, brown_c)
+\end{verbatim}
+
+\pause
+Accuracy is even worse: 0.087
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Combining Taggers} 
+
+Instead of using the bigram's potentially sparse data, we use the better model when we can but fall back on the simpler models when the data isn't there.
+
+\footnotesize
+\begin{verbatim}
+t0 = nltk.DefaultTagger('NN')
+t1 = nltk.UnigramTagger(brown_a, backoff=t0)
+t2 = nltk.BigramTagger(brown_a, backoff=t1)
+nltk.tag.accuracy(t2, brown_c)
+\end{verbatim}
+
+\pause
+The accuracy gets to the best we've had so far: 0.779
+\end{frame}
+
+
+\end{document}
+
