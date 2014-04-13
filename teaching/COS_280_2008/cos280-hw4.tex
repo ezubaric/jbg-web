@@ -1,0 +1,162 @@
+\documentclass[11pt,twoside]{article}
+\usepackage{alltt}
+\usepackage{comment}
+
+\textwidth=6.5in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+\topmargin=-0.1in
+\footskip=0.8in
+\parindent=0.0cm
+\parskip=0.3cm
+\textheight=8.00in
+\setcounter{tocdepth} {3}
+\setcounter{secnumdepth} {2}
+\sloppy
+
+\newcounter{lecnum}
+
+\newcommand{\answer}[1]{{\bf #1}}
+
+\newcommand{\lecture}[5]{
+   \pagestyle{myheadings} \thispagestyle{plain} \newpage
+\setcounter{lecnum}{#1} \setcounter{page}{1} \noindent
+\begin{center}
+\framebox{\vbox{
+{Homework #1 \hfill   #2} \\
+\vspace{2mm}
+{\bf Semantics}\\
+\vspace{2mm}
+{Due: #3   \hfill #4}\\
+\vspace{4mm}}}
+\end{center}
+
+\markboth{Homework #1: #3}{Homework #1: #3}\vspace*{4mm}}
+
+
+\begin{document}
+
+% Add your name in the last bracket if you use this template
+\lecture{4}{COS/LIN 280}{November 21, 2008}{}
+
+
+\section{Word Senses}
+
+\begin{enumerate}
+\item Just by introspection (don't turn to a corpus or dictionary), think up all of the meanings you can for ``break.''  Write down at least five by giving a short definition and an example.  Distinguish between polysemy and homonymy.  
+
+\item Look up the word in WordNet.  Are any of your senses more general than WordNet's?  Are any of WordNet's senses more general than yours? 
+
+\item Try to find one sentence each from a corpus (note where you got the sentence(s)) that is an example of five of your senses.
+
+\item For each of those sentences, determine how many possible senses WordNet could assign to the sentence as a whole (i.e. count every possible sense of every word in the sentence, as judged by WordNet).
+
+\end{enumerate}
+
+\section{Building Word Profiles}
+\label{sec:cv}
+
+We can compare two words based on the words that appear around them.  In order to do this, write a function that looks like this:
+
+\begin{verbatim}
+def createContextVector(corpus, word, position, window_size):    """    For all n-grams of length equal to *window_size* with *word* in    the *position* index, creates a FreqDist over all the words in    those contexts.  For example, if window_size=4 and position=1,
+    it would tally all the words that appear one token before,
+    one token after, and two tokens after the target word.    """    assert(position < window_size)
+\end{verbatim}
+
+For example, such a function should give output that looks like this:
+\begin{verbatim}
+>>> print createContextVector(brown, "fat", 1, 3)
+<FreqDist: 'the': 14, 'man': 11, ',': 6, 'The': 5, 'hell': 4, 'a': 4, 'and': 3, 
+'that': 3, 'A': 2, "''": 2, "Johnson's": 2, '.': 2, 'molecule': 2, 'with': 2, 
+'cats': 2, 'saturated': 1, 'jowls': 1, 'fellow': 1, 'as': 1, 'dietary': 1, 
+'long': 1, 'Moses': 1, "man's": 1, 'chicken': 1, 'warm': 1, '40%': 1,
+ 'from': 1, 'consumption': 1, 'handed': 1, 'bees': 1, 'neck': 1, 
+ 'when': 1, 'same': 1, 'old': 1, 'much': 1, 'too': 1, 'big': 1, 'was': 1, 
+ 'plush': 1, 'round': 1, 'body': 1, 'be': 1, 'poly-unsaturated': 1, 'I': 1, 
+ 'becomes': 1, 'thousand': 1, 'hand': 1, "driver's": 1, 'job': 1, 
+ 'couple': 1, 'five': 1, "She's": 1, 'highly': 1, 'last': 1, 'hampers': 1, 
+ 'roles': 1, '--': 1, 'of': 1, 'against': 1, 'face': 1, 'good': 1, 'her': 1, 
+ 'so': 1, 'suitcase': 1, 'or': 1>
+\end{verbatim}
+
+HINT: You'll likely find the nltk.util.ngram function useful for this.
+
+Create context vectors for words that you think fulfil the following three relationships:
+\begin{enumerate}
+\item synonyms or near-synonyms
+\item antonyms or near-antonyms
+\item hyponym and hypernym
+\end{enumerate}
+
+Build context vectors and compare them (make sure that the words you choose appear often enough in your corpus to get enough data).
+
+\section{WordNet Similarity} 
+
+\begin{enumerate}
+\item What is ``information content?''  If you interpret it as a probability, what does the probability of a synset mean?
+
+\item Examine the source for the LCS function in NLTK.  Explain, in English, how it works.  Is there anything wrong with it?  Could it be improved?
+\item Compute similarity between the following synsets:
+
+\begin{tabular}{ccccccc}
+\textsc{Sense Pairs} & Wu-Palmer & Path & Jiang-Conrath & Lin & Resnik & Profile \\
+\hline
+dog\#n\#1 - cat\#n\#1 & &  & & & & \\
+dog\#n\#2 - cat\#n\#1 & & & & & & \\
+bank\#n\#1 - escarpment\#n\#1 & & & & & & \\
+bank\#n\#2 - escarpment\#n\#1 & & & & & & \\
+bank\#n\#2 - cat\#n\#1 & & & & & & \\
+\end{tabular}
+
+Report what information content you used and whether you used NLTK or Pedersen's online interface.  For the lexical column, create context vectors using your method from problem~\ref{sec:cv}.  Compare the context vectors using this similarity metric:
+
+\begin{verbatim}
+def dict_cosine(d1, d2):    mag1 = sqrt(sum(map(lambda x:x*x, d1.values())))    mag2 = sqrt(sum(map(lambda x:x*x, d2.values())))    val = 0.0    # Do iteration over the smaller of the two    if len(d1) < len(d2):        keys = d1.keys()    else:        keys = d2.keys()    for ii in keys:        val += float(d1.get(ii, 0.0)) * float(d2.get(ii, 0.0))    if val != 0:        val /= mag1        val /= mag2    return val
+\end{verbatim}
+
+\item What are lexical chains?
+
+\item Given this information and what you learned in class, what is the ``best'' similarity metric?
+\end{enumerate}
+
+\section{Finding Hyponomy Patterns (20 Points)}
+
+\begin{enumerate}
+
+\item Using a corpus of your choice, write a function called find\_pattern\_instances(corpus, pattern) that returns  a list of pairs of words that match the pattern specified.  For example, searching for the pattern ``X and other Y'' should give you something like:
+\begin{verbatim}
+[('stocks', 'personal'), ('companies', 'corporations'), ('Dallas', 'large'), 
+('highways', 'public'), ('parochial', 'private'), ('Union', 'members'), 
+('Wagner', 'officials'), ('grillwork', 'things'), ('this', 'units'), 
+('supervisors', 'employees'), ('Board', 'county'), ..]
+\end{verbatim}
+
+Define the patterns however you like.  Regular expressions, word/tag pairs, etc.
+
+\item Write a function that given two words tests if one is an ancestor of the other (under any sense).  For instance, you should be able get results like this:
+
+\begin{verbatim}
+>>> descendant("dog", "animal")
+False
+>>> descendant("animal", "dog")
+True
+>>> descendant("dog", "food")
+False
+>>> descendant("food", "dog")
+True
+>>> descendant("woman", "door")   
+False
+>>> descendant("door", "woman")
+False
+>>> descendant("house", "bungalow")
+True
+\end{verbatim}
+
+\item Use these two functions to calculate the accuracy of a pattern designed to find hyponyms.
+
+\item Create a pattern that wasn't discussed in class and report its accuracy.
+
+\end{enumerate}
+
+\end{document}
