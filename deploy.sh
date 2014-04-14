@@ -30,7 +30,7 @@ for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING
         do
            mkdir -p ~/public_html/teaching/$CLASS
            mv teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
-	   for SUBDIR in xml_demo javascript_demo sqllite_walkthrough slides reading
+	   for SUBDIR in slides reading
 	   do
                if [ -d teaching/$CLASS/$SUBDIR ]
                    then
