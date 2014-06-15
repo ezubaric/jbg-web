@@ -349,6 +349,15 @@ infinitives).</p>
 <h3>Typography</h3>
 
   <ol>
+    <li> Put mentions of words in quotes and topics (e.g., from a
+    topic model) in underline.
+
+      <pre>
+        We wanted to understand why the \underline{research} topic has
+      high probability for ``procrastination'', but we leave that for
+      future work.  
+      </pre>
+
     <li> Use small caps for acronyms (it looks better; I create a macro called
     "abr" to make this easier), and don't put periods after the letters in
     acronyms (the reason why: LaTeX uses smart spacing after periods, but
@@ -369,7 +378,16 @@ infinitives).</p>
   fonts.  (You don't have to do it, but if you see me doing it, that's why; you
   don't have to worry about it / correct it.)
 
-    <li> If it's allowed (ICML 2013 didn't, for instance), use the "times" package for serif fonts.
+    <li> If it's allowed (ICML 2013 didn't, for instance), use the
+    "times" package for serif fonts.  
+
+    <li> For ordinals, write them out if they're less than 100.  For
+    ordinals greater than or equal to 100, use a text superscript.
+
+    <pre>
+      The Second Reich loved its 247\textsuperscript{th} pointy helmet design.
+    </pre>
+
     <li> Write ligatures, umlauts, and other diacritics correctly.
 
       <pre>
