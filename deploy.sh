@@ -26,7 +26,7 @@ for SUBDIR in docs images downloads teaching qb
 done
 
 rm -rf ~/public_html/teaching/*
-for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832
+for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832 DEEP
         do
            mkdir -p ~/public_html/teaching/$CLASS
            mv teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
