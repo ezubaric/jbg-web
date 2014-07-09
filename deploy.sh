@@ -40,4 +40,5 @@ for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING
 	   done
 done
 
+
 rm pubs/*.*
