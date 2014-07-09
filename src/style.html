@@ -22,13 +22,13 @@ writing, there will be typos and mistakes here.</p>
 Spring's <a href="http://www.cs.umd.edu/~nspring/software/style-check-readme.html">useful
 resources</a> (including a script you can use with flymake when
 editing LaTeX documents).  I disagree with the following rules:
-<ul>
+<ol>
   <li> I use the British convention for quote marks (which makes more
 sense to computer scientists, as below).
   <li> "sufficient" is a fine word (esp. for "sufficient statistics")
   <li> "<a href="http://www.stats.ox.ac.uk/~teh/">Teh</a>" is almost never a
   mispelling when I write it
-</ul>
+</ol>
 The rest is great, however, and you should use it (with the above edits).</p>
 
 <p><a href="http://www.economist.com/styleguide/introduction">The Economist
@@ -39,21 +39,21 @@ infinitives).</p>
 
 <h3>Tense</h3>
 
-<ul>
+<ol>
   <li> Almost everything should be in the present tense
   <li> This includes related work (even super old stuff like Aristotle)
   <li> This includes generative processes
   <li> It's okay to use the future tense for future work
-</ul>
+</ol>
 
 <h3>Punctuation</h3>
 
-<ul>
+<ol>
 
   <li> Put footnotes <b>immediately</b> after sentence / clause punctuation.
 
     <pre>
-      I'm hardly ever sick at sea.\footnote{Well, hardly ever.}
+      I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
 
   <li> Do not use a comma between two verb phrases (no subject) joined by a conjunction.
@@ -95,11 +95,38 @@ infinitives).</p>
   spaces after a sentence, it looks better in editing but has no impact on
   layout (more practically, it helps you estimate text length while editing).
 
-</ul>
+</ol>
+
+<h3>Figures</h3>
+
+   <ol>
+      <li> If a figure has a caption, use the top or bottom
+      positioning.  Center the actual image, and be sure to provide a
+      label.
+
+        <pre>
+	\begin{figure}[tb]
+	  \begin{center}
+	  \includegraphics[width=0.9\linewidth]{2015_hoverboard/awesome}
+	  \end{center}
+	  \caption{Jetpacks are next.}
+	  \label{fig:hoverboards}
+	\end{figure}
+	</pre>
+
+      <li> If the figure has no caption, you can use "here".
+      <li> Make sure the caption stands on its own.
+      <li> Try to use full sentences in the caption.
+      <li> Use raster / vector formats as appropriate.
+
+      <li> Don't supply file extensions; pdflatex/latex will choose
+      for you (makes it easy to switch between the two).
+
+   </ol>
 
 <h3>Math</h3>
 
-   <ul>
+   <ol>
      <li> When in text, spell out all natural numbers less than or
      equal to one hundred.  Also spell out "infinity" unless it's in
      an equation or an algorithm.  Anything else should be represented
@@ -125,10 +152,6 @@ infinitives).</p>
      environment, and keep the alignment to the <b>right</b> of the
      equals sign.
 
-     <li> Refer to equations as:
-
-       <pre>The gradient (Equation~\ref{eq:grad}) is further simplified in Equation~\ref{eq:simp-grad}.</pre>
-
 <pre>
   \begin{align}
     4 = & 2 + 2 \\
@@ -138,9 +161,17 @@ infinitives).</p>
   \end{align}
 </pre>
 
+     <li> If you use <pre>\MoveEqLeft</pre>, you're probably using
+     align incorrectly.
+
+     <li> Refer to equations as:
+
+       <pre>The gradient (Equation~\ref{eq:grad}) is further simplified in Equation~\ref{eq:simp-grad}.</pre>
+
+
      <li> Create macros for the following and use them consistently (or ask me for
        a preamble that defines these things)
-       <ul>
+       <ol type="a">
 	 <li> Underbraces for explaining complicated mathematical concepts
 <pre>
 \newcommand{\explain}[2]{\underbrace{#2}_{\mbox{\footnotesize{#1}}}}
@@ -185,7 +216,7 @@ infinitives).</p>
 <pre>
 \newcommand{\elbo}{\mathcal{L}}
 </pre>
-       </ul>
+       </ol>
     <li> Do not use italics for distributions; it helps to define a macro
       <pre>
 	\theta \sim \mbox{Dir}(\alpha)
@@ -200,11 +231,11 @@ infinitives).</p>
 	I = \left( \frac{V}{R} \right)
       </pre>
     <li> Don't start sentences with a math symbol.
-   </ul>
+   </ol>
 
 <h3>References within a document</h3>
 
-  <ul>
+  <ol>
     <li>Prefix the label of a reference with the type of reference it is (use
     the first three letters of the type of thing it is: fig, tab, sec, etc.).</li>
 
@@ -229,7 +260,7 @@ infinitives).</p>
 	As we show in Section~\ref{sec:intro}, long cat is long.
       </pre>
 
-  </ul>
+  </ol>
 
 <h3>Stupid rules you should follow</h3>
 
@@ -237,7 +268,7 @@ infinitives).</p>
   So learn them as rules for professional writing (even though they're
   hogwash).</p>
 
-  <ul>
+  <ol>
     <li> Use "fewer" when comparing discrete amounts, and use "less" when
     comparing continuous amounts.
 
@@ -254,16 +285,16 @@ infinitives).</p>
     <li> Use "who" only with the nominative case (and "whom" in other cases).
     <li> Only use "data" as a plural noun (with one <a href="http://en.memory-alpha.org/wiki/Data">exception</a>).
     <li> Likewise, only use "media" as a plural noun.
-  </ul>
+  </ol>
 
 <h3>Anti-rules</h3>
 
-  <ul>
+  <ol>
     <li> There's no blanket prohibition against the passive, but don't use it to obscure agency.
     <li> It's fine to end your sentence with a preposition.
     <li> It's fine to boldly split an infinitive.
     <li> It's fine (and often better) to use "they" as a singular gender-neutral pronoun.
-  </ul>
+  </ol>
 
 <h3>Citations</h3>
 
@@ -276,7 +307,7 @@ infinitives).</p>
   to do last minute massaging.  Just make everything obey these rules
   when you put it into your bibtex for the first time.</p>
 
-  <ul>
+  <ol>
     <li> Use bibtex
 
     <li> Define journal and conference names in a different bib file from the
@@ -299,7 +330,8 @@ infinitives).</p>
       </pre>
 
 
-    <li> Do not include page numbers for conferences (nobody reads the paper versions anyway).
+    <li> Do not include page numbers, publishers, or locations for
+    conferences (nobody reads the paper versions anyway).
 
     <li> Do not include volumes for NIPS.  People just use the year.
 
@@ -316,11 +348,20 @@ infinitives).</p>
         \citet{moseby-11} shows that that he can pull off red boots.
       </pre>
 
-  </ul>
+  </ol>
 
 <h3>Typography</h3>
 
-  <ul>
+  <ol>
+    <li> Put mentions of words in quotes and topics (e.g., from a
+    topic model) in underline.
+
+      <pre>
+        We wanted to understand why the \underline{research} topic has
+      high probability for ``procrastination'', but we leave that for
+      future work.  
+      </pre>
+
     <li> Use small caps for acronyms (it looks better; I create a macro called
     "abr" to make this easier), and don't put periods after the letters in
     acronyms (the reason why: LaTeX uses smart spacing after periods, but
@@ -341,7 +382,16 @@ infinitives).</p>
   fonts.  (You don't have to do it, but if you see me doing it, that's why; you
   don't have to worry about it / correct it.)
 
-    <li> If it's allowed (ICML 2013 didn't, for instance), use the "times" package for serif fonts.
+    <li> If it's allowed (ICML 2013 didn't, for instance), use the
+    "times" package for serif fonts.  
+
+    <li> For ordinals, write them out if they're less than 100.  For
+    ordinals greater than or equal to 100, use a text superscript.
+
+    <pre>
+      The Second Reich loved its 247\textsuperscript{th} pointy helmet design.
+    </pre>
+
     <li> Write ligatures, umlauts, and other diacritics correctly.
 
       <pre>
@@ -362,17 +412,18 @@ infinitives).</p>
 
 
 
-  </ul>
+  </ol>
 
 <h3>Word choice</h3>
 
-  <ul>
+  <ol>
     <li> Use "first" rather than "firstly" (same for second, third, etc.).
     <li> Use "unlike" rather than "different from".
     <li> Never use "utilize"; always use "use".  Corollary: prefer "usage" over
     "utilization", unless it's a technical term.
     <li> You can always delete "this means".
     <li> You can always replace "in order to" with "to".
+    <li> Use "while" rather than "whereas".
     <li> Don't say "it is well know"; either cite or just state the fact.
     <li> Prefer "toward" over "towards".
     <li> You can almost always delete "notice that".  (My dumb fingers are
@@ -380,6 +431,7 @@ infinitives).</p>
     <li> Use "we" rather than "this paper" or "this work".
     <li> Use "shown" over "denoted" or "listed".
     <li> Use "in addition" rather than "besides".
+    <li> Use "certainty" rather than "certitude".
     <li> Try not to use "hedging" language (often, probably, etc.).  Either
     something is true or it isn't.  If it really is a mixed bag, quantify the
     amount (e.g., three out of four dentists).
@@ -393,19 +445,29 @@ infinitives).</p>
     consequence, use the British terms "trousers" (not "pants"), "crisps" (not
     "chips"), and "cashpoint" (not "ATM"), but use the American terms
     ("pacifier", "gasoline", "fries", and "cookies").
-  </ul>
+
+    <li> I will default to American spelling.  If you send me a
+    nearly-complete draft using consistent British spelling, I will
+    gladly keep that convention.  If you use Indian or Canadian
+    spelling, experience has shown that I will turn it into American
+    spelling as I edit (sorry, I just can't keep the intermediate
+    cases straight).
+
+  </ol>
 
 <h3>Paragraphs</h3>
 
-  <ul>
-    <li> Make sure your paragraphs
-    have <a href="http://owl.english.purdue.edu/engagement/index.php?category_id=2&sub_category_id=1&article_id=29">topic
-    sentences</a>.  Until you have mastered writing paragraphs, you shouldn't break this practice.</li>
-  </ul>
+  <ol>
+    <li> Make sure your paragraphs have <a
+    href="http://owl.english.purdue.edu/engagement/index.php?category_id=2&sub_category_id=1&article_id=29">topic
+    sentences</a>.  Until you have mastered writing paragraphs, you
+    shouldn't break this practice.</li>
+
+  </ol>
 
 <h3>Writing a paper Collaboratively</h3>
 
-  <ul>
+  <ol>
     <li> Often, when computer scientists work together on a paper, they will
     discuss something using the concept of a "write token".  This concept comes
     from a <a href="http://en.wikipedia.org/wiki/Token_ring">token-ring</a>
@@ -474,17 +536,17 @@ in the way of other people as they're compiling the document.</li>
 better/easier than that of latex.  </li>
 
     <li> Organize the files as follows:
-      <ul>
+      <ol>
 	<li> Keep all style files (e.g. things that could be shared between submissions) in the "style" folder
 	<li> Keep all bibliography files (e.g., bibtex source) in the "bib" folder
 	<li> Have the main body in a file called "YYYY_project.tex" and the associated data (sections, graphics, etc.) in a folder called "YYYY_project"
 	<li> This allows the Makefile to work well and reduces clutter
-      </ul>
+      </ol>
     </li>
 </p>
 
 
-  </ul>
+  </ol>
 
 <h3>Error Analysis</h3>
 
@@ -546,9 +608,13 @@ than the reviewers.  (It may be helpful to compose the reponse next to
 the reviews, but don't assume that the reader will have access to that
 information.)</p>
 
+<p>In any event, once you get a set of reviews, use <a
+href="http://www.windupdreams.net/blog/my-spreadsheet-method-and-some-thoughts-on-revision/">a
+system</a> to address the issues that the reviewers found.</p>
+
 <h3>Checklist before submitting something</h3>
 
-  <ul>
+  <ol>
     <li> Look over your citations.  Do they look uniform?  Sometimes when you
     copy/paste a bibtex citation, junk comes with.
     <li> Read over your section titles.  Do they tell a story?  Don't just use
@@ -562,25 +628,25 @@ information.)</p>
     obvious; perhaps they use middle initials or a different name / spelling for
     publishing) and you have the correct affiliation (did they move since you
     first wrote the paper)?
-  </ul>
+  </ol>
 
 <h3>Talks</h3>
 
-<ul>
+<ol>
   <li> Use Beamer and OmniGraffle
   <li> Don't use a laser pointer (integrate any emphasis into your slides).  People have a tendency to over-use laser pointers, and they are not always usable (because of the screen, multiple screens, etc.).
   <li> Don't read from notes.
   <li> If you can ever use a picture instead of an equation, choose the picture (even if it takes more time).
-</ul>
+</ol>
 
 <h3>Posters</h3>
 
-<ul>
+<ol>
   <li> Use Beamer
   <li> Use blocks with informative titles (just like section headings)
   <li> Do not put two images / tables in a block unless they are
   showing <b>very</b> related information (e.g., don't put results from two
   different datasets in the same block).
-</ul>
+</ol>
 
 </div>
