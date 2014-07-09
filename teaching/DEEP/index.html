@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html> <head>
-<title>CSCI/LING 5832</title>
+<title>Theano Working Group</title>
 <link href="../../style.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript">
 function unhide(divID) {
@@ -29,7 +29,7 @@ pageTracker._trackPageview();
   <span id="button">
     <ul><li><a href="../../static/home.html">Home</a>
         <li><a href="../../static/courses.html">Courses</a>
-          <li class="sub"><a class="sub" href="./">Comp. Ling I</a>
+          <li class="sub"><a class="sub" href="./">Theano</a>
           <li><a href="../../static/downloads_and_media.html">Downloads And Media</a>
             <li><a href="../../static/faq.html">Faq</a>
               <li><a href="../../static/collaborators.html">Collaborators</a>
@@ -46,49 +46,29 @@ pageTracker._trackPageview();
 
 <div id="content">
 
-<h1>Computational Linguistics I</h1>
+<h1>Theano Working Group</h1>
 
 <h2>Logistics</h2>
 
   <center>
   <table>
     <tr>
-      <td> Location </td> <td> ECCS 1B28 </td>
+      <td> Location </td> <td> AVW 3165 </td>
     </tr>
     <tr>
-      <td> Time </td> <td> Mon/Wed  16:40 - 17:45 </td>
+      <td> Time </td> <td>MWHF 12:00 - 13:00 </td>
     </tr>
     <tr>
       <td> Webpage </td> <td>
-    <a href="http://cs.colorado.edu/~jbg/teaching/CSCI_5832/">http://cs.colorado.edu/~jbg/teaching/CSCI_5832/</a> </td>
+    <a href="http://cs.colorado.edu/~jbg/teaching/DEEP/">http://cs.colorado.edu/~jbg/teaching/DEEP/</a> </td>
     </tr>
     <tr>
       <td> Mailing List </td> <td><a
-    href="https://piazza.com/class/huk1wwctgtnmj">https://piazza.com/class/huk1wwctgtnmj</a></td>
-    <td>
-    </tr>
-    <tr>
-      <td> Text </td> <td> <a href="http://www.cs.colorado.edu/~martin/slp.html">Speech and Language Processing</a> </td>
-    </tr>
-    <tr>
-      <td> Syllabus </td> <td><a
-    href="https://docs.google.com/document/d/1pXIUnn8BOYHWSERQ9Q1AzfO71ot1WKDf1i4IPTTju88/pub">https://docs.google.com/document/d/1pXIUnn8BOYHWSERQ9Q1AzfO71ot1WKDf1i4IPTTju88/pub</a></td>
+    href="https://piazza.com/class/hwgjoavlpnq6t4">https://piazza.com/class/hwgjoavlpnq6t4</a></td>
     <td>
     </tr>
   </table>
   </center>
-
-<h2>People</h2>
-
-  <h3>Professor</h3>
-
-  <blockquote>
-  <a href="http://umiacs.umd.edu/~jbg/">Jordan Boyd-Graber</a><br>
-  ECCS 111B<br>
-  Office Hours (AVW 3219): Starting Aug 25, Monday 15:30 - 16:30 and by <a href="http://jbg.youcanbook.me/">appointment</a>
-  </blockquote>
-
-  <h3>Grader</h3>
 
 <h2>Schedule</h2>
   <CENTER>
@@ -98,150 +78,78 @@ pageTracker._trackPageview();
     </TR>
 
     <TR>
-      <TD> Mon 25. Aug </TD> <TD> Introduction to the course </TD> <TD></TD> <TD>
+      <TD> Mon 16. Jun </TD> <TD> Data Types / Basics </TD> <TD></TD> <TD>
       </TD>
     </TR>
 
     <TR>
-      <TD> Wed 27. Aug </TD> <TD> Python, Regular Expressions, and the Natural Language Toolkit </TD> <TD></TD> <TD>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+	    <li> <a href="https://drive.google.com/file/d/0B64011x02sIkdDB5MmdnRnNTbWc/edit?usp=sharing">Slides</a>
+            <li> <a href="http://deeplearning.net/software/theano/tutorial/">Theano Tutorial</a></li>
+          </ul>
+        <b>Exercises:</b>
+          <ul>
+            <li> <a
+      href="https://github.com/goodfeli/theano_exercises/tree/master/01_basics">Expressions,
+      Substitutions, and Indexing</a>
+          </ul>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 18. Jun </TD> <TD> Logistic Regression / Saving Models </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+	    <li> <a href="http://deeplearning.net/software/theano/tutorial/examples.html">Theano Examples</a> (pay attention to givens and logistic function)
+            <li> <a href="http://deeplearning.net/software/theano/tutorial/gradients.html">Gradients</a>
+	    <li> Don't read this until you've tried to do logistic regression on your own: <a href="http://deeplearning.net/tutorial/logreg.html">Logistic Regression</a>
+          </ul>
+        <b>Exercises:</b>
+          <ul>
+            <li> <a
+      href="01_logistic.py">Stub code for logistic regression</a> (<a href="01_logistic_sln.py">Solution</a>)
+          </ul>
+
       </TD>
     </TR>
 
 
     <TR>
-      <TD> Mon 1. Sep </TD> <TD> No Class: Labor Day! </TD> <TD></TD> <TD>
+      <TD> Thu 19. Jun </TD> <TD> Graph Structures / Backprop </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+	    <li> <a href="https://docs.google.com/file/d/0B64011x02sIkOVpPY1B2WmVYa3c/edit">Slides</a>
+            <li> <a href="http://deeplearning.net/software/theano/tutorial/symbolic_graphs.html">Graphs</a></li>
+            <li> <a href="http://deeplearning.net/software/theano/tutorial/gradients.html">Gradients</a></li>
+          </ul>
+        <b>Exercises:</b>
+          <ul>
+            <li> <a
+      href="https://github.com/goodfeli/theano_exercises/tree/master/02_advanced">Backprop and Debugging</a>
+          </ul>
+
       </TD>
     </TR>
 
 
     <TR>
-      <TD> Wed 3. Sep </TD> <TD> Probability Review </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 8. Sep </TD> <TD> Finite State Automata and Morphology </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 10. Sep </TD> <TD> Language Models </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 15. Sep </TD> <TD> Backoff and Smoothing </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 17. Sep </TD> <TD> Text Classification </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 22. Sep </TD> <TD> Maximum Entropy </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 24. Sep </TD> <TD> Part of Speech Tagging </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 29. Sep </TD> <TD> EM and Viterbi </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 1. Oct </TD> <TD> Dependency Parsing </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 6. Oct </TD> <TD> PCFGs </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 8. Oct </TD> <TD> Chart Parsing </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 13. Oct </TD> <TD> Shift-Reduce Parsers </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 20. Oct </TD> <TD> Lexical Semantics </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 22. Oct </TD> <TD> Word Sense Disambiguation </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 27. Oct </TD> <TD> Midterm Review </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 29. Oct </TD> <TD> Midterm </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 3. Nov </TD> <TD> Topic Modeling </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 5. Nov </TD> <TD> Gibbs Sampling </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 10. Nov </TD> <TD> Machine Translation </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 12. Nov </TD> <TD> IBM Models </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 17. Nov </TD> <TD> Phrase-Based Machine Translation </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 19. Nov </TD> <TD> Decoding for Machine Translation </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 1. Dec </TD> <TD> Averaged Perceptron and Sequence
-      Labeling </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 3. Dec </TD> <TD> Averaged Perceptron for Parsing </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Mon 8. Dec </TD> <TD> Deep Learning for Question Answering </TD> <TD></TD> <TD>
-      </TD>
-    </TR>
-
-    <TR>
-      <TD> Wed 10. Dec </TD> <TD> Project Workshop </TD> <TD></TD> <TD>
+      <TD> Fri 20. Jun </TD> <TD> Real Example </TD> <TD></TD> <TD>
       </TD>
     </TR>
 
