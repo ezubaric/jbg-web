@@ -18,8 +18,7 @@ rm python/*.pyc
 rm pubs/*.tex *.aux *.log
 mv *.pdf docs
 
-cp style.css ~/public_html
-for SUBDIR in docs images downloads teaching qb
+for SUBDIR in docs images downloads teaching qb projects style
         do
             mkdir -p ~/public_html/$SUBDIR
             cp $SUBDIR/*.* ~/public_html/$SUBDIR
@@ -29,15 +28,16 @@ rm -rf ~/public_html/teaching/*
 for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832 DEEP
         do
            mkdir -p ~/public_html/teaching/$CLASS
-           mv teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
+           cp teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
 	   for SUBDIR in slides reading
 	   do
                if [ -d teaching/$CLASS/$SUBDIR ]
                    then
                      mkdir -p ~/public_html/teaching/$CLASS/$SUBDIR
-	             mv teaching/$CLASS/$SUBDIR/*.* ~/public_html/teaching/$CLASS/$SUBDIR
+	             cp teaching/$CLASS/$SUBDIR/*.* ~/public_html/teaching/$CLASS/$SUBDIR
                fi
 	   done
 done
+
 
 rm pubs/*.*
