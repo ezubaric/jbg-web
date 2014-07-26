@@ -40,15 +40,15 @@
 
 <p>The goal of this project is to create algorithms that can “think on their feet”, i.e. to incrementally process input and to decide when enough information has been received to act on those data.  This research requires innovation in two areas: content models (to make accurate predictions, even when not all available information is available) and policies (to know when to trust the outputs of the content models---or know they won't get better---versus waiting for more information).</p>
 
- 
+
 
 <p>We are applying these models to two problems: synchronous machine translation (or "machine simultaneous interpretation") and question answering (when questions are revealed one piece at a time).</p>
 
- 
+
 
 <p>Synchronous machine translation is when a sentence is being produced one word at a time in a foreign language and we want to produce a translation in English simultaneously (i.e., with as little delay between a foreign language word and its English translation). In the machine translation setting, the content model predicts what words are going to appear in the input stream, even though they might not have been seen yet.  This is particularly important in verb-final languages like German or Japanese, where an English translation can barely begin until the verb is seen. For the simultaneous translation problem, our content model must predict unseen elements of the sentence (e.g., the main verb in German and Japanese, or relative clauses in Japanese, or post-positions in Japanese). The job of the policy is to decide when to trust the content prediction. It must learn to balance incorrect translation versus timely translations, and must use those predictions to translate the sentence.</p>
 
- 
+
 
 <p>For question answering, we use a specially designed dataset that challenges humans: a trivia game called quiz bowl.  These questions are written so that they can be interrupted by someone who knows more about the answer; that is, harder clues are at the start of the question and easier clues are at the end of the question.  The content model produces guesses of what the answer could be and the policy must decide when to accept the guess.</p>
 
@@ -127,7 +127,7 @@ Ph.D. student, Computer Science (Maryland)</td>
 
 <tr>
 <td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_stephanie.png" alt="Stephanie Hwa"/></td>
+  src="../images/head_stephanie.jpg" alt="Stephanie Hwa"/></td>
 <td style="padding: 0px; border: 0 none;"><b>Stephanie Hwa</b><br/>
 Undergraduate student, Computer Science (BS 2014, Maryland)</td>
 </tr>
@@ -147,7 +147,7 @@ Quiz Master: Crowdsourcing Incremental Classification Games</a></b>.
 <i>Empirical Methods in Natural Language Processing</i>, 2012. [<a
 href="http://www.youtube.com/watch?v=CaOloF3RHCw&list=UUIXpjlxPL5Ow8rPO_gOHISQ&index=1&feature=plcp">Presentation</a>]
 </ul>
-  
+
 <a name="software"><h2>Software</h2></a>
 
 <p>Code for annotating quiz bowl questions and matching with recursive
