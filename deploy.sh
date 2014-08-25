@@ -18,6 +18,8 @@ rm python/*.pyc
 rm pubs/*.tex *.aux *.log
 mv *.pdf docs
 
+cp style.css ~/public_html/
+
 for SUBDIR in docs images downloads teaching qb projects style
         do
             mkdir -p ~/public_html/$SUBDIR
