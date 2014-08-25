@@ -3,7 +3,7 @@
  */
 
 body {
-    background-color: #e1ddd9;
+    background-color: #d1cdc9;
     font-size: 12px;
     font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
     color: #000000;
@@ -11,7 +11,7 @@ body {
 }
 
 pre {
-   background-color: #A2A4A3;
+   background-color: #eeeeee;
    color: #110000;
    border: 3;
    whitewhite-space: pre-wrap;       /* css-3 */
@@ -127,20 +127,25 @@ h1, h2, h3, h4, h5 {
     padding-left: 15px;
     padding-right: 5px;
     padding-bottom: 1px;
-    text-transform:uppercase;
     color: #564b47;
     background-color: transparent;
 }
 
+h1 {
+    color: #ffffff;
+    font-weight: 100;
+}
+
 h3, h4, h5 {
     text-align: center;
+    text-transform:uppercase;
 }
 
 #header {
-    text-transform:uppercase;
     text-align: right;
-    color: #CFB87C;
+    color: #ffffff;
     background-color: #000000;
+    
 }
 
 /*
@@ -156,6 +161,7 @@ h3, h4, h5 {
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Lucida,
     Geneva, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
 
 /*
@@ -165,16 +171,17 @@ h3, h4, h5 {
 #button li a {
     display: block;
     padding: 5px 5px 5px 0.5em;
-    border-left: 10px solid #DFC88C;
-    border-right: 10px solid #DFC88C;
-    background-color: #BFA86C;
-    color: #ffffff;
+    border-left: 10px solid #d0b87c;
+    border-right: 10px solid #c0a86c;
+    background-color: #282828;
+    color:#d0b87c;
     text-decoration: none;
+
 }
 
 li.sub {
-     border-left: 10px solid #e1ddd9;
-     border-right: 10px solid #e1ddd9;
+     border-left: 10px solid #d0b87c;
+     border-right: 10px solid #c0a86c;
 }
 
 a.sub {
@@ -187,7 +194,7 @@ a.sub {
 #button li a:hover {
     border-left:10px solid #DFC88C;
     border-right: 10px solid #DFC88C;
-    background-color: #CFB87C;
+    background-color: #282828;
     color: #ffffff;
 }
 
@@ -203,7 +210,12 @@ a.sub {
  * Adds a border to the buttom of the buttons
  */
 #button li {
-    border-bottom: 1px solid #90bade;
+    border-bottom: 1px solid #000000;
+}
+
+#button {
+	-webkit-transition:all 200ms ease-in;
+	-o-transition:all 200ms ease-in;	
 }
 
 /*
@@ -232,4 +244,52 @@ td.detail {
 }
 td {
   font-size : 77%;
+}
+
+
+/* 
+  Copied from CU Boulder
+*/
+
+#sidebar {
+	width:320px;
+	float:left;
+	padding-top:20px;
+}
+#sidebar ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#sidebar .sidebar-widget ul {
+	list-style:disc;
+	margin: 5px 0 5px 20px;
+}
+#sidebar h3 {
+	color:#363636;
+	padding:0px;
+	font-weight:normal;
+	width:auto;
+	padding:0;
+	padding-bottom:5px;
+	margin:0;
+	font-size:130%;	
+}
+#sidebar h31 span {
+	background-repeat:no-repeat;
+	background-position:0 45%;
+	padding-left:20px;
+	display:block;
+}
+.sidebar-widget {
+	background-color:#EEE;	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:1px 2px 1px;
+	margin:2px 0;
+}
+.sidebar-widget p {
+	margin-top:0;
+	margin-bottom:.8em;
 }
