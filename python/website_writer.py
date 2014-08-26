@@ -50,6 +50,9 @@ def format_name(students, name, year, latex):
     else:
       return "<b>Jordan Boyd-Graber</b>"
 
+  if not latex:
+    name = name.replace("\'e", "&eacute;")
+  
   return name
 
 class IndexElement:
