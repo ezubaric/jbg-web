@@ -159,7 +159,7 @@ class IndexElement:
       else:
         s += ' [<a href="../%s">%s</a>]' % (url, text)
 
-    print self.fields["Title"], len(self.fields["Bibtex"]), len(self.fields["Authors"]), len(self.fields["Year"])
+		# print self.fields["Title"], len(self.fields["Bibtex"]), len(self.fields["Authors"]), len(self.fields["Year"])
     div_name = str(hash("".join("".join(x) for x in self.fields.values()) + section))
     if bibtex and len(self.fields["Bibtex"]) > 0:
       s += ' [<a href="javascript:unhide('
@@ -189,7 +189,7 @@ class IndexElement:
     """
     Create keys that can be sorted
     """
-    print "Values:", criteria, self.fields[criteria]
+    # print "Values:", criteria, self.fields[criteria]
 
     try:
       year = -int(self.fields["Year"][0])
@@ -225,14 +225,10 @@ class WebsiteWriter:
 
   def navigation(self, prefix):
     s = "<ul>"
-    keys = self._files.keys()
+    keys = [x for x in self._files.keys() if x != "Home"]
     keys += self._indexed.keys()
-    keys.sort()
-
-    assert "Home" in keys, "Home page not found"
-    keys[keys.index("Home")] = keys[0]
-    keys[0] = "Home"
-    print "Nav keys:", keys
+    keys = sorted(keys, key=lambda s: s.lower())
+    print(keys)
 
     for ii in keys:
       if ii in self._files:
@@ -283,7 +279,7 @@ class WebsiteWriter:
       lookup = {}
       for jj in self._indexed[index.lower()]:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
-        print "Contrib: ", jj, contrib
+        # print "Contrib: ", jj, contrib
         keys += contrib
         for kk in contrib:
           assert not kk in lookup, "%s already found" % str(kk)
