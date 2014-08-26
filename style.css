@@ -146,6 +146,7 @@ h3, h4, h5 {
     color: #ffffff;
     background-color: #000000;
     font-size: 200%;
+    padding: 10px 5px 10px 0.5em;
 }
 
 #header a {
