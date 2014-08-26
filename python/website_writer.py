@@ -222,14 +222,9 @@ class WebsiteWriter:
 
   def navigation(self, prefix):
     s = "<ul>"
-    keys = self._files.keys()
+    keys = [x for x in self._files.keys() if x != "Home"]
     keys += self._indexed.keys()
     keys.sort()
-
-    assert "Home" in keys, "Home page not found"
-    keys[keys.index("Home")] = keys[0]
-    keys[0] = "Home"
-    print "Nav keys:", keys
 
     for ii in keys:
       if ii in self._files:
