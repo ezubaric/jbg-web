@@ -79,11 +79,7 @@ p.answer li.answer {
  */
 
 #left, #right {
-    position: absolute;
     margin: 0px;
-    padding-top: 40px;
-    color: #564b47;
-    width: 190px;
 }
 
 #left {
@@ -91,7 +87,11 @@ p.answer li.answer {
 }
 
 #right {
+    position: absolute;
     right: 0px;
+    padding-top: 40px;
+    color: #564b47;
+    width: 170px;
 }
 
 
@@ -102,7 +102,7 @@ p.answer li.answer {
  */
 
 #content, #picture {
-    margin: 0px 195px 0px 190px;
+    margin: 0px 175px 0px 20px;
     border-left: 2px solid #564b47;
     border-right: 2px solid #564b47;
     background-color: #ffffff;
@@ -142,10 +142,22 @@ h3, h4, h5 {
 }
 
 #header {
-    text-align: right;
+    position: relative;
     color: #ffffff;
     background-color: #000000;
-    
+    font-size: 200%;
+    padding: 10px 5px 10px 0.5em;
+}
+
+#header a {
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#header span:last-child {
+  position: absolute;
+  right: 6px;
 }
 
 /*
@@ -292,4 +304,60 @@ td {
 .sidebar-widget p {
 	margin-top:0;
 	margin-bottom:.8em;
+}
+
+
+#navigation {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+	
+	
+}
+#navigation ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	height:45px;
+	border-left:1px solid #444;
+}
+#navigation ul li {
+	display:inline;
+	float:left;
+	text-decoration: none;
+}
+#navigation  ul ul {
+	display:none;	
+}
+#navigation a:link, #navigation a:visited {
+	display:block;
+	float:left;
+	color:#d0b87c;
+	text-transform:uppercase;
+	padding:0 10px;
+	font-size:15px;
+	line-height:45px;
+	height:45px;
+	border-right:1px solid #444;
+}
+#navigation a:hover {
+	color:#FFF;	
+	text-decoration: none;
+}
+#navigation li.current_page_item a:link, #navigation li.current_page_item a:visited, #navigation li.current_page_ancestor a:link, #navigation li.current_page_ancestor a:visited {
+	color:#FFF;
+}
+
+#navwrapper {
+	width:100%;
+	background-color:#282828;
+	background-repeat:repeat-x;
+	border-top:3px solid #d0b87c;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
 }
