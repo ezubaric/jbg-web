@@ -25,6 +25,7 @@ STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
             "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2019, "http://cs.umd.edu/~miyyer/"),
+            "Alvin Grissom II": Student("Avlin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
 
 def format_name(students, name, year, latex):
@@ -51,7 +52,9 @@ def format_name(students, name, year, latex):
       return "<b>Jordan Boyd-Graber</b>"
 
   if not latex:
-    name = name.replace("\'e", "&eacute;")
+    name = name.replace("\\'{e}", "&eacute;")
+    name = name.replace("\\'e", "&eacute;")    
+  print(name)
   
   return name
 
