@@ -53,7 +53,9 @@ def format_name(students, name, year, latex):
 
   if not latex:
     name = name.replace("\\'{e}", "&eacute;")
-    name = name.replace("\\'e", "&eacute;")    
+    name = name.replace("\\'e", "&eacute;")   
+    name = name.replace("{", "") 
+    name = name.replace("}", "")	
   print(name)
   
   return name
@@ -315,7 +317,7 @@ class WebsiteWriter:
             latex_out.write("\n\\end{enumerate}")
             o.write("\t</ul>")
           old = jj[0]
-          o.write("\t<h2>%s</h2>\n\t<ul>\n" % old)
+          o.write("\t<h2>%s</h2>\n\t<ul>\n" % format_name([], old, -1, False))
           out_string = old
           if old in UMD_MAPPING:
             out_string = UMD_MAPPING[old]
