@@ -8,7 +8,6 @@ python python/site.py
 CHANGES=`git whatchanged --since="3 days ago" -p pubs/`
 
 rm python/*.pyc
-rm pubs/*.tex *.aux *.log
 
 cp style.css ~/public_html/
 
@@ -29,12 +28,14 @@ done
 
 if [ ${#CHANGES} -gt 0 ]
    then
+        echo "CHANGES DETECTED!"
         for FILE in `ls pubs/*.tex`
         do
             pdflatex $FILE
         done
 fi
 mv *.pdf docs
+rm pubs/*.tex *.aux *.log
 
 for SUBDIR in docs images downloads teaching qb projects style
         do
