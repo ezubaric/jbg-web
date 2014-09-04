@@ -5,7 +5,7 @@ git checkout $(git ls-files -d)
 
 python python/site.py
 
-CHANGES=`git whatchanged --since="3 days ago" -p pubs/`
+CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/`
 
 rm python/*.pyc
 
@@ -44,3 +44,4 @@ for SUBDIR in docs images downloads teaching qb projects style
 done
 
 rm pubs/*.*
+git checkout $(git ls-files -d)
