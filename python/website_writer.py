@@ -39,7 +39,7 @@ def format_name(students, name, year, latex):
     s = students[name]
     if year >= s._start and year <= s._end:
       if latex:
-        return "\underline{%s}" % s._name
+        return "\\underline{\\href{%s}{%s}}" % (s._web, s._name)
       elif s._web:
         return '<a href="%s">%s</a>' % (s._web, s._name)
       else:
@@ -93,7 +93,7 @@ class IndexElement:
     s = """
     \\documentclass[a4paper]{article}
     \\usepackage{savetrees}
-
+    \\usepackage{hyperref}
     \\usepackage{pdfpages}
 
     \\begin{document}
@@ -120,7 +120,10 @@ class IndexElement:
   def latex(self, acceptance=True):
     s = self.author_string(True)
     if "Title" in self.fields:
-      s += '{\\bf %s}.  ' % self.fields["Title"][0]
+      if "Url" in self.fields:
+          s += '{\\bf \href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
+      else:
+          s += '{\\bf %s}.  ' % (self.fields["Title"][0])
     if "Booktitle" in self.fields:
       s += "\\emph{%s}, " % self.fields["Booktitle"][0]
     if "Journal" in self.fields:
@@ -277,8 +280,7 @@ class WebsiteWriter:
       bibtex_out = open(self._output + "/" + self.DYNAMIC_DIR +
                         "%s/%s.bib" % (index.lower(), sort_by.lower()), 'w')
 
-      latex_out.write("\\newif\\ifumd\\umdtrue\n")
-      latex_out.write("Students directly advised or co-advised \\underline{in underline}.")
+      latex_out.write("\\vspace{.1cm}\nStudents directly advised or co-advised \\underline{in underline}.\n\\vspace{.4cm}")
 
       keys = []
       lookup = {}
@@ -314,22 +316,21 @@ class WebsiteWriter:
       for jj in keys:
         if old != jj[0]:
           if old:
-            latex_out.write("\n\\end{enumerate}")
+            latex_out.write("\n\\end{enumerate}\n}")
             o.write("\t</ul>")
           old = jj[0]
           o.write("\t<h2>%s</h2>\n\t<ul>\n" % format_name([], old, -1, False))
           out_string = old
-          if old in UMD_MAPPING:
-            out_string = UMD_MAPPING[old]
-          latex_out.write("\n\\subsection{%s}\n\n" % out_string)
+          latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % out_string)
 
           latex_out.write("\n\\begin{enumerate}\n")
 
-        latex_out.write("\item " + lookup[jj].latex())
+        latex_out.write("\t \item " + lookup[jj].latex())
         bibtex_out.write(lookup[jj].bibtex())
         o.write("\t\t<li>" + lookup[jj].html(bibtex, self._url, old))
 
       latex_out.write("\n\\end{enumerate}")
+      latex_out.write("\n}")
       o.write("\t</ul>\n")
       o.write("<p>&nbsp;</p>\n")
       o.write('<center><a href="%s.txt">LaTeX Version</a>&nbsp;' % sort_by.lower())
