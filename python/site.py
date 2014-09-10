@@ -6,7 +6,7 @@ home = os.environ.get('HOME')
 print "Home: ", home
 
 writer = WebsiteWriter("src/", home + "/public_html/", "resources/_header.html", "resources/_footer.html",
-                       "Jordan Boyd-Graber", "http://umiacs.umd.edu/~jbg/")
+                       "Jordan Boyd-Graber", "http://cs.colorado.edu/~jbg/")
 writer.add_index("pubs/", "Pubs", [("Year", 0, []), ("Category", 0, []), ("Authors", 1, ["Jordan Boyd-Graber"]), ("Venue", 0, [])])
 writer.write()
 
