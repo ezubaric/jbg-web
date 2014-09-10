@@ -39,7 +39,10 @@ def format_name(students, name, year, latex):
     s = students[name]
     if year >= s._start and year <= s._end:
       if latex:
-        return "\\underline{\\href{%s}{%s}}" % (s._web, s._name)
+        if s._web:
+            return "\\underline{\\href{%s}{%s}}" % (s._web, s._name)
+        else:
+            return "\\underline{%s}" % (s._name)
       elif s._web:
         return '<a href="%s">%s</a>' % (s._web, s._name)
       else:
@@ -111,17 +114,17 @@ class IndexElement:
     \\end{document}
     """
 
-    s = s.replace("~~~citation~~~", self.latex(acceptance = False))
+    s = s.replace("~~~citation~~~", self.latex(url="", acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
     s = s.replace("~~~bibtex~~~", self.bibtex())
 
     return s
 
-  def latex(self, acceptance=True):
+  def latex(self, url="", acceptance=True):
     s = self.author_string(True)
     if "Title" in self.fields:
-      if "Url" in self.fields:
-          s += '{\\bf \href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
+      if "Url" in self.fields and url:
+          s += '{\\bf \href{%s/%s}{%s}}.  ' % (url, self.fields["Url"][0], self.fields["Title"][0])
       else:
           s += '{\\bf %s}.  ' % (self.fields["Title"][0])
     if "Booktitle" in self.fields:
@@ -325,7 +328,7 @@ class WebsiteWriter:
 
           latex_out.write("\n\\begin{enumerate}\n")
 
-        latex_out.write("\t \item " + lookup[jj].latex())
+        latex_out.write("\t \item " + lookup[jj].latex(self._url))
         bibtex_out.write(lookup[jj].bibtex())
         o.write("\t\t<li>" + lookup[jj].html(bibtex, self._url, old))
 
