@@ -31,7 +31,7 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         for FILE in `ls pubs/*.tex`
         do
-            echo pdflatex $FILE; rm $FILE
+            pdflatex $FILE; rm $FILE
         done
 fi
 rm *.aux *.log *.out; 
@@ -50,4 +50,5 @@ done
 rm */*~
 rm *~
 rm */*/*~
+rm docs/*.pdf
 git checkout $(git ls-files -d)
