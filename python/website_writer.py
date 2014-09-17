@@ -25,7 +25,7 @@ STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
             "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2019, "http://cs.umd.edu/~miyyer/"),
-            "Alvin {Grissom II}": Student("Avlin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
+            "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
 
 def format_name(students, name, year, latex):
@@ -59,7 +59,6 @@ def format_name(students, name, year, latex):
     name = name.replace("\\'e", "&eacute;")   
     name = name.replace("{", "") 
     name = name.replace("}", "")	
-  print(name)
   
   return name
 
@@ -260,7 +259,13 @@ class WebsiteWriter:
       if "~" in ii or "#" in ii or "." in ii:
         continue
       print "Indexing", ii
-      index[ii] = IndexElement(open(ii).read())
+      item = IndexElement(open(ii).read())
+      print item.fields
+      if "Nopub" in item.fields:
+		  print("Skipping %s" % ii)
+		  continue
+      else:
+		  index[ii] = item
 
       if "Url" in index[ii].fields and index[ii].fields["Url"]:
         resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
@@ -330,6 +335,7 @@ class WebsiteWriter:
 
         latex_out.write("\t \item " + lookup[jj].latex(self._url))
         bibtex_out.write(lookup[jj].bibtex())
+
         o.write("\t\t<li>" + lookup[jj].html(bibtex, self._url, old))
 
       latex_out.write("\n\\end{enumerate}")
