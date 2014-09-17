@@ -31,11 +31,14 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         for FILE in `ls pubs/*.tex`
         do
-            pdflatex $FILE
+            pdflatex $FILE; rm $FILE
         done
 fi
+rm *.aux *.log *.out; 
+rm pubs/*.*
+rm pubs/#*#
+rm pubs/*~
 mv *.pdf docs
-rm pubs/*.tex *.aux *.log
 
 for SUBDIR in docs images downloads teaching qb projects style
         do
@@ -43,5 +46,9 @@ for SUBDIR in docs images downloads teaching qb projects style
             cp $SUBDIR/*.* ~/public_html/$SUBDIR
 done
 
-rm pubs/*.*
+# Clean up cruft
+rm */*~
+rm *~
+rm */*/*~
+rm docs/*.pdf
 git checkout $(git ls-files -d)
