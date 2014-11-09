@@ -138,7 +138,7 @@ has good resources</a>.</p>
      more <a href="http://www.ligo.caltech.edu/~vsanni/ph3/SignificantFiguresAndMeasurements/SignificantFiguresAndMeasurements.pdf">significant
      digits</a> than you need to (or should!).
 
-     <li> Make sure that all equations and math are nouns and are embedded in a sentence.
+     <li> Make sure that all equations and math are nouns and are embedded in a sentence with appropriate punctuation.
 
      <pre>
         The voltage is $V=IR$, where $I$ is the current.
@@ -171,8 +171,8 @@ has good resources</a>.</p>
        <pre>The gradient (Equation~\ref{eq:grad}) is further simplified in Equation~\ref{eq:simp-grad}.</pre>
 
 
-     <li> Create macros for the following and use them consistently (or ask me for
-       a preamble that defines these things)
+     <li> Create macros for the following and use them consistently
+       (or ask me for a preamble that defines these things)
        <ol type="a">
 	 <li> Underbraces for explaining complicated mathematical concepts
 <pre>
@@ -219,7 +219,7 @@ has good resources</a>.</p>
 \newcommand{\elbo}{\mathcal{L}}
 </pre>
        </ol>
-    <li> Do not use italics for distributions; it helps to define a macro
+    <li> Do not use italics (the default in math mode) for distributions; it helps to define a macro
       <pre>
 	\theta \sim \mbox{Dir}(\alpha)
       </pre>
@@ -233,6 +233,12 @@ has good resources</a>.</p>
 	I = \left( \frac{V}{R} \right)
       </pre>
     <li> Don't start sentences with a math symbol.
+    <li> Obey <a href="http://www.ai.mit.edu/courses/6.899/papers/mermin.pdf">Mermin's rules</a>.
+      <ol>
+	<li> Number all displayed equations
+	<li> Have a name for every euqation
+	<li> Punctuate every equation as prose, treating it as a noun
+	</ol>
    </ol>
 
 <h3>References within a document</h3>
@@ -284,7 +290,15 @@ has good resources</a>.</p>
 	The pizza, which everyone loves, is from Conte's.  The pizza that fell
 	on the floor is no longer edible, however.
       </pre>
-    <li> Use "who" only with the nominative case (and "whom" in other cases).
+    <li> Use "who" only with the nominative case (and "whom" in other
+    cases).
+      <ol>
+	<li> who can use this (subject of "can use")
+	<li> for whom we designed this (object of preposition)
+	<li> who gave a lecture (subject of verb "gave")
+	<li> Caltech tenured whom? (object of verb "tenured")
+
+       </ol>
     <li> Only use "data" as a plural noun (with one <a
     href="http://en.memory-alpha.org/wiki/Data">exception</a>).
     <li> Likewise, only use "media" as a plural noun.
@@ -344,7 +358,7 @@ has good resources</a>.</p>
 
     <li> Do not include DOIs or ISBNs
 
-    <li> For numeric citation styles (e.g. NIPS), don't use inline citations as nouns; use the name.
+    <li> For numeric citation styles (e.g., NIPS), don't use inline citations as nouns; use the name.
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
@@ -435,7 +449,7 @@ has good resources</a>.</p>
     <li> You can always delete "this means".
     <li> You can always replace "in order to" with "to".
     <li> Use "while" rather than "whereas".
-    <li> Don't say "it is well know"; either cite or just state the fact.
+    <li> Don't say "it is well known"; either cite or just state the fact.
     <li> Prefer "toward" over "towards".
     <li> You can almost always delete "notice that".  (My dumb fingers are
     often very guilty of writing this.)
@@ -449,20 +463,22 @@ has good resources</a>.</p>
     <li> Avoid the phrase "it has been shown"; if you have nothing more specific
     to say about it (e.g., <b>who</b> showed it), then just remove it.  It's an
     agentless appeal to authority.
-    <li> If British and American English use different words, you should
-    typically prefer the American ("elevator", "stroller", "diaper", "truck").
-    The exception is when this could lead to confusion when one language's term
-    is ambiguous.  In those cases, use the version that removes ambiguity.  As a
-    consequence, use the British terms "trousers" (not "pants"), "crisps" (not
-    "chips"), and "cashpoint" (not "ATM"), but use the American terms
-    ("pacifier", "gasoline", "fries", and "cookies").
+    <li> If British and American English use different words, you
+    should typically prefer the American ("elevator", "stroller",
+    "diaper", "truck").  The exception is when this could lead to
+    confusion when one language's term is ambiguous.  In those cases,
+    use the version that removes ambiguity.  As a consequence, use the
+    British terms "trousers" (not "pants"), "crisps" (not "chips"),
+    and "cashpoint" (not "ATM"), but use the American terms "pacifier"
+    (not "dummy"), "gasoline" (not "petrol"), "fries" (not "chips"),
+    and "cookie" (not "biscuit").
 
     <li> I will default to American spelling.  If you send me a
     nearly-complete draft using consistent British spelling, I will
-    gladly keep that convention.  If you use Indian or Canadian
-    spelling, experience has shown that I will turn it into American
-    spelling as I edit (sorry, I just can't keep the intermediate
-    cases straight).
+    gladly keep that convention (being an Economist reader finally
+    pays off).  If you use Indian or Canadian spelling, experience has
+    shown that I will turn it into American spelling as I edit (sorry,
+    I just can't keep the intermediate cases straight).
 
   </ol>
 
@@ -528,12 +544,20 @@ has good resources</a>.</p>
         on Charlie's changes
 
       </ol>
-     Emacs does notify you when this happens.
-    <li> When the deadline gets really close, I like to print out a copy of the
-    paper, mark the changes with a pen, and then quickly grab all the tokens for
-    a paper to implement those changes.  (If rewrites or large text additions
-    are required, I do those in a scratch file.)  I can then very quickly
-    implement my changes while holding the tokens for a short period of time.
+
+     <p><b>Emacs does notify you when this happens</b>: either use
+     emacs or a text editor that does this.</p>
+
+    <li> When the deadline gets really close, I like to print out a
+    copy of the paper, mark the changes with a pen, and then quickly
+    grab all the tokens for a paper to implement those changes.  (If
+    rewrites or large text additions are required, I do those in a
+    scratch file.)  I can then very quickly implement my changes while
+    holding the tokens for a short period of time.  If time is really
+    short and there are lots of papers going in for a deadline, I may
+    hand you (physically or virtually) the marked up version to
+    implement the changes.  This is meant to save time.  If anything
+    is unclear, please <b>ask me</b>.
 
     <li> If you're actively editing a file, you should only
 put in the files needed to <b>generate</b> the output.  Do not store
@@ -550,7 +574,9 @@ better/easier than that of latex.  </li>
       <ol>
 	<li> Keep all style files (e.g. things that could be shared between submissions) in the "style" folder
 	<li> Keep all bibliography files (e.g., bibtex source) in the "bib" folder
-	<li> Have the main body in a file called "YYYY_project.tex" and the associated data (sections, graphics, etc.) in a folder called "YYYY_project"
+	<li> Have the main body in a file called
+	"YYYY_venue_project.tex" and the associated data (sections,
+	graphics, etc.) in a folder called "YYYY_venue_project"
 	<li> This allows the Makefile to work well and reduces clutter
       </ol>
     </li>
@@ -720,7 +746,7 @@ document leave a camera ready state
   <li> Use Beamer and OmniGraffle (but keep your Beamer slides
   uncluttered with navigation and sections).
   <li> Don't use a laser pointer (integrate any emphasis into your slides).  People have a tendency to over-use laser pointers, and they are not always usable (because of the screen, multiple screens, etc.).
-  <li> Don't read from notes.
+  <li> Don't read from notes (and don't use your slides as notes).  If you feel uncomfortable delivering the talk, it means you need to practice more.
   <li> If you can ever use a picture instead of an equation, choose the picture (even if it takes more time).
 </ol>
 
