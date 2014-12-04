@@ -126,6 +126,10 @@ has good resources</a>.</p>
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
 
+	<li> When you refer to a figure, don't use "see".  Just put the reference. </li>
+
+	<pre> The FancyPants algorithm can find fancy pants (Figure~\ref{fig:pants}). </pre>
+
    </ol>
 
 <h3>Math</h3>
@@ -165,7 +169,7 @@ has good resources</a>.</p>
   \end{align}
 </pre>
 
-     <li> If you use <pre>\MoveEqLeft</pre>, you're probably using
+     <li> If you use <pre>\MoveEqLeft</pre> you're probably using
      align incorrectly.
 
      <li> Refer to equations as:
@@ -431,6 +435,14 @@ has good resources</a>.</p>
     <pre>
        Herr~Doktor~Professor~Albert~Einstein, Joe~the~Plumber
     </pre>
+
+    <li> Put a non-breaking space between references, citations, and math symbols.  <b>Do not put a space before the non-breaking space;</b> this defeats the purpose.  Your word should end, be followed by a non-breaking space, followed by the reference, citation, or symbol.  This prevents a line breaking between references and the thing they're connected to.</li>
+
+    <pre>
+      Figure~\ref{fig:pony} shows a pony with a mass~$m$ calculated by Euler's method~\cite{horse-mass}.
+      </pre>
+
+      
 
     <li> When presenting foreign text, use the <a href="http://www.eva.mpg.de/lingua/pdf/LGR08.02.05.pdf">Leipzig glossing rules</a>:
       <center>
