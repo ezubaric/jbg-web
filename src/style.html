@@ -19,7 +19,7 @@ writing, there will be typos and mistakes here.</p>
 <p>Be sure to check out Neil
 Spring's <a href="http://www.cs.umd.edu/~nspring/software/style-check-readme.html">useful
 resources</a> (including a script you can use with flymake when
-editing LaTeX documents).  I disagree with the following rules:
+editing LaTeX documents).  I disagree with the following rules:</p>
 <ol>
   <li> I use the British convention for quote marks (which makes more
 sense to computer scientists, as below).
@@ -27,7 +27,7 @@ sense to computer scientists, as below).
   <li> "<a href="http://www.stats.ox.ac.uk/~teh/">Teh</a>" is almost never a
   mispelling when I write it
 </ol>
-The rest is great, however, and you should use it (with the above edits).</p>
+<p>The rest is great, however, and you should use it (with the above edits).</p>
 
 <p><a href="http://www.economist.com/styleguide/introduction">The Economist
 style guide</a> is a good resource for exposing bad habits, and their
@@ -52,10 +52,10 @@ has good resources</a>.</p>
 
 <ol>
 
-
   <li> Don't put footnotes on a number (it looks like an exponent).
-  <li> Put footnotes <b>immediately</b> after sentence / clause punctuation.
-
+  <li> Put footnotes <b>immediately</b> after sentence / clause
+  punctuation.  Do not put footnotes before final punctuation (common
+  mistake).
     <pre>
       I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
@@ -126,9 +126,15 @@ has good resources</a>.</p>
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
 
+<<<<<<< HEAD
      <li> Don't use <a
      href="http://tex.stackexchange.com/questions/88929/vertical-table-lines-are-discontinuous-with-booktabs/88939#88939">vertical
      rules in your tables</a>.  It's fine to use shading (light gray).
+=======
+	<li> When you refer to a figure, don't use "see".  Just put the reference. </li>
+
+	<pre> The FancyPants algorithm can find fancy pants (Figure~\ref{fig:pants}). </pre>
+>>>>>>> 08681b159b3a40f972850dd79f36df989d5d1ee7
 
    </ol>
 
@@ -169,7 +175,7 @@ has good resources</a>.</p>
   \end{align}
 </pre>
 
-     <li> If you use <pre>\MoveEqLeft</pre>, you're probably using
+     <li> If you use <pre>\MoveEqLeft</pre> you're probably using
      align incorrectly.
 
      <li> Refer to equations as:
@@ -210,7 +216,7 @@ has good resources</a>.</p>
 </pre>
          <li> Indicator variables
 <pre>
-\newcommand{\ind}[1]{\mathbb{I}\left[ #1 \right] }
+\newcommand{\ind}[1]{\mathbb{1}\left[ #1 \right] }
 </pre>
          <li> Exponential
 <pre>
@@ -436,6 +442,14 @@ has good resources</a>.</p>
        Herr~Doktor~Professor~Albert~Einstein, Joe~the~Plumber
     </pre>
 
+    <li> Put a non-breaking space between references, citations, and math symbols.  <b>Do not put a space before the non-breaking space;</b> this defeats the purpose.  Your word should end, be followed by a non-breaking space, followed by the reference, citation, or symbol.  This prevents a line breaking between references and the thing they're connected to.</li>
+
+    <pre>
+      Figure~\ref{fig:pony} shows a pony with a mass~$m$ calculated by Euler's method~\cite{horse-mass}.
+      </pre>
+
+
+
     <li> When presenting foreign text, use the <a href="http://www.eva.mpg.de/lingua/pdf/LGR08.02.05.pdf">Leipzig glossing rules</a>:
       <center>
         <img src="../images/gloss.png">
@@ -646,7 +660,7 @@ stands on its own as a single, coherent document.</p>
 
   <pre>
     Reviewer Three questions whether the Pope is Catholic.  We follow
-    the convention of Caption Obvious (2003), which has been the
+    the convention of Capitan Obvious (2003), which has been the
     foundation of many subsequent papers.
   </pre>
 
@@ -669,8 +683,8 @@ system</a> to address the issues that the reviewers found.</p>
     "introduction", "background", "model", "inference", "conclusion", etc.
     While your sections may map to those, call them something more specific.
     <li> Do your figures stand on their own?  Make sure a bored reader /
-    reviewer can get the gist of what's going on through the figures alone.
-    <li> Is your abstract persuasive and interesting?
+    reviewer can get the gist of what's going on through the figures alone.  So if your first figure is about the data you use, make sure that motivates the method you'll use.  If you have a figure of the graphical model, don't just say "our graphical model"; instead, point out the salient aspects of the model that makes it interesting to a reader under time pressure.  If you have a figure of results, don't just say "summary of results"; instead, point out what the results mean in the caption.  You'll say something similar in the text, so don't repeat yourself.  Likely there are different interesting trends you can point out.
+    <li> Is your abstract persuasive and interesting?  When an area chair reads it, will they send it to the reviewers that you want?
     <li> Do a spellcheck!
     <li> Make sure you've spelled your co-authors' names correctly (not always
     obvious; perhaps they use middle initials or a different name / spelling for
