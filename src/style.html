@@ -52,10 +52,10 @@ has good resources</a>.</p>
 
 <ol>
 
+  <li> Don't put footnotes on a number (it looks like an exponent).
   <li> Put footnotes <b>immediately</b> after sentence / clause
   punctuation.  Do not put footnotes before final punctuation (common
   mistake).
-
     <pre>
       I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
@@ -126,9 +126,15 @@ has good resources</a>.</p>
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
 
+<<<<<<< HEAD
+     <li> Don't use <a
+     href="http://tex.stackexchange.com/questions/88929/vertical-table-lines-are-discontinuous-with-booktabs/88939#88939">vertical
+     rules in your tables</a>.  It's fine to use shading (light gray).
+=======
 	<li> When you refer to a figure, don't use "see".  Just put the reference. </li>
 
 	<pre> The FancyPants algorithm can find fancy pants (Figure~\ref{fig:pants}). </pre>
+>>>>>>> 08681b159b3a40f972850dd79f36df989d5d1ee7
 
    </ol>
 
@@ -372,7 +378,7 @@ has good resources</a>.</p>
     <li> Don't include material that's only title, author, and year.
     That's not enough information to find it.  Make sure you include
     either a web address (ArXiV), a university (theses), or a venue (most things).
-    
+
     <li> For natbib-like citations (e.g. ACL), use citet to accomplish this.
 
       <pre>
@@ -390,7 +396,7 @@ has good resources</a>.</p>
       <pre>
         We wanted to understand why the \underline{research} topic has
       high probability for ``procrastination'', but we leave that for
-      future work.  
+      future work.
       </pre>
 
     <li> Use small caps for acronyms (it looks better; I create a macro called
@@ -414,7 +420,7 @@ has good resources</a>.</p>
   don't have to worry about it / correct it.)
 
     <li> If it's allowed (ICML 2013 didn't, for instance), use the
-    "times" package for serif fonts.  
+    "times" package for serif fonts.
 
     <li> For ordinals, write them out if they're less than 100.  For
     ordinals greater than or equal to 100, use a text superscript.
@@ -442,7 +448,7 @@ has good resources</a>.</p>
       Figure~\ref{fig:pony} shows a pony with a mass~$m$ calculated by Euler's method~\cite{horse-mass}.
       </pre>
 
-      
+
 
     <li> When presenting foreign text, use the <a href="http://www.eva.mpg.de/lingua/pdf/LGR08.02.05.pdf">Leipzig glossing rules</a>:
       <center>
@@ -459,7 +465,8 @@ has good resources</a>.</p>
     <li> Use "first" rather than "firstly" (same for second, third, etc.).
     <li> Use "unlike" rather than "different from".
     <li> Never use "utilize"; always use "use".  Corollary: prefer "usage" over
-    "utilization", unless it's a technical term.
+    "utilization", unless it's a technical term.  Same thing with "leverage" (unless there's
+    mechanical advantage involved).
     <li> You can always delete "this means".
     <li> You can always replace "in order to" with "to".
     <li> Use "while" rather than "whereas".
@@ -676,7 +683,7 @@ system</a> to address the issues that the reviewers found.</p>
     "introduction", "background", "model", "inference", "conclusion", etc.
     While your sections may map to those, call them something more specific.
     <li> Do your figures stand on their own?  Make sure a bored reader /
-    reviewer can get the gist of what's going on through the figures alone.  So if your first figure is about the data you use, make sure that motivates the method you'll use.  If you have a figure of the graphical model, don't just say "our graphical model"; instead, point out the salient aspects of the model that makes it interesting to a reader under time pressure.  If you have a figure of results, don't just say "summary of results"; instead, point out what the results mean in the caption.  You'll say something similar in the text, so don't repeat yourself.  Likely there are different interesting trends you can point out. 
+    reviewer can get the gist of what's going on through the figures alone.  So if your first figure is about the data you use, make sure that motivates the method you'll use.  If you have a figure of the graphical model, don't just say "our graphical model"; instead, point out the salient aspects of the model that makes it interesting to a reader under time pressure.  If you have a figure of results, don't just say "summary of results"; instead, point out what the results mean in the caption.  You'll say something similar in the text, so don't repeat yourself.  Likely there are different interesting trends you can point out.
     <li> Is your abstract persuasive and interesting?  When an area chair reads it, will they send it to the reviewers that you want?
     <li> Do a spellcheck!
     <li> Make sure you've spelled your co-authors' names correctly (not always
