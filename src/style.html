@@ -95,7 +95,7 @@ to use LaTeX instead of Word.</p>
   minutes.
   <li> <b>Accessibility</b>: When I communicate with blind
   researchers, they always ask if I have a LaTeX version.  They can
-  write and read LaTeX much more easily than Word or LaTeX (especially
+  write and read LaTeX much more easily than Word or PDF (especially
   when there's math; screen readers always screw up embedded equations
   in Word).
 </ul>
@@ -189,15 +189,12 @@ to use LaTeX instead of Word.</p>
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
 
-<<<<<<< HEAD
      <li> Don't use <a
      href="http://tex.stackexchange.com/questions/88929/vertical-table-lines-are-discontinuous-with-booktabs/88939#88939">vertical
      rules in your tables</a>.  It's fine to use shading (light gray).
-=======
 	<li> When you refer to a figure, don't use "see".  Just put the reference. </li>
 
 	<pre> The FancyPants algorithm can find fancy pants (Figure~\ref{fig:pants}). </pre>
->>>>>>> 08681b159b3a40f972850dd79f36df989d5d1ee7
 
    </ol>
 
@@ -311,7 +308,7 @@ to use LaTeX instead of Word.</p>
     <li> Obey <a href="http://www.ai.mit.edu/courses/6.899/papers/mermin.pdf">Mermin's rules</a>.
       <ol>
 	<li> Number all displayed equations
-	<li> Have a name for every euqation
+	<li> Have a name for every equation
 	<li> Punctuate every equation as prose, treating it as a noun
 	</ol>
    </ol>
@@ -365,8 +362,11 @@ to use LaTeX instead of Word.</p>
 	The pizza, which everyone loves, is from Conte's.  The pizza that fell
 	on the floor is no longer edible, however.
       </pre>
-    <li> Use "who" only with the nominative case (and "whom" in other
-    cases).
+
+    <li> Use "who" only with the <a
+     href="http://theoatmeal.com/comics/who_vs_whom">nominative case</a> (and
+    "whom" in other cases).
+
       <ol>
 	<li> who can use this (subject of "can use")
 	<li> for whom we designed this (object of preposition)
@@ -385,9 +385,12 @@ to use LaTeX instead of Word.</p>
 
 <h3>Anti-rules</h3>
 
+  <p>Some people don't think you should do the following, but I disagree.  Feel
+  free to completely ignore these non-rules.</p>
+
   <ol>
     <li> There's no blanket prohibition against the passive, but don't use it to obscure agency.
-    <li> It's fine to end your sentence with a preposition.
+    <li> It's fine to end your sentence with a preposition if it sounds natural.
     <li> It's fine to boldly split an infinitive.
     <li> It's fine (and often better) to use "they" as a singular gender-neutral pronoun.
   </ol>
@@ -409,7 +412,20 @@ to use LaTeX instead of Word.</p>
     <li> Define journal and conference names in a different bib file from the
     one you store your references in.  This way you can swap out long form title
     (Proceedings of the Association for Computational Linguistics) with the
-    short form title (ACL) if you're tight for space.
+    short form title (ACL) if you're tight for space.  Plus, it makes sure your
+    citations are consistent.
+
+    <pre>
+@String{cl="Computational Linguistics"}
+@String{chi="International Conference on Human Factors in Computing Systems"}
+@String{cvpr="Computer Vision and Pattern Recognition"}
+@String{coling="Proceedings of International Conference on Computational Linguistics"}
+@String{colt="Proceedings of Conference on Learning Theory"}
+@String{conll="Conference on Computational Natural Language Learning"}
+@String{eacl="Proceedings of the European Chapter of the Association for Computational Linguistics"}
+@String{ecml="Proceedings of European Conference of Machine Learning"}
+@String{emnlp="Proceedings of Emperical Methods in Natural Language Processing"}
+    </pre>
 
     <li> Put citations inside the relevant sentence but outside quotes.
 
@@ -442,7 +458,7 @@ to use LaTeX instead of Word.</p>
     That's not enough information to find it.  Make sure you include
     either a web address (ArXiV), a university (theses), or a venue (most things).
 
-    <li> For natbib-like citations (e.g. ACL), use citet to accomplish this.
+    <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish this.
 
       <pre>
         \citet{moseby-11} shows that that he can pull off red boots.
