@@ -4,6 +4,11 @@ from string import capwords
 from datetime import date, datetime
 import time
 import os
+import re
+
+kHTML = re.compile(r'<.*?>')
+kBRACKET = re.compile(r'\[.*?\]')
+kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
 
 class Student:
   def __init__(self, name, start, end, webpage = None):
@@ -118,6 +123,26 @@ class IndexElement:
     s = s.replace("~~~bibtex~~~", self.bibtex())
 
     return s
+
+  def txt(self, acceptance=True, url=''):
+    text = kHTML.sub('', self.html(False, url, ""))
+    text = kBRACKET.sub('', text)
+    if "Acceptance" in self.fields and acceptance:
+      text += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
+    text += "\n"
+    if "Url" in self.fields and url:
+      if url.endswith("/"):
+        url = "%s%s\n" % (url, self.fields["Url"][0])
+      else:
+        url = "%s/%s\n" % (url, self.fields["Url"][0])
+      text += url
+    text += "\n"
+
+    for ii in kHTML_CHARS:
+      if ii in text:
+        text = text.replace(ii, kHTML_CHARS[ii])
+
+    return text
 
   def latex(self, url="", acceptance=True):
     s = self.author_string(True)
@@ -287,6 +312,8 @@ class WebsiteWriter:
                        "%s/%s.txt" % (index.lower(), sort_by.lower()), 'w')
       bibtex_out = open(self._output + "/" + self.DYNAMIC_DIR +
                         "%s/%s.bib" % (index.lower(), sort_by.lower()), 'w')
+      text_out = open(self._output + "/" + self.DYNAMIC_DIR + 
+                      "%s/%s_raw.txt" % (index.lower(), sort_by.lower()), 'w')
 
       latex_out.write("\\vspace{.1cm}\nStudents directly advised or co-advised \\underline{in underline}.\n\\vspace{.4cm}")
 
@@ -328,6 +355,8 @@ class WebsiteWriter:
             o.write("\t</ul>")
           old = jj[0]
           o.write("\t<h2>%s</h2>\n\t<ul>\n" % format_name([], old, -1, False))
+          text_out.write(format_name([], old, -1, False))
+          text_out.write("\n-------------------------\n\n")
           out_string = old
           latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % out_string)
 
@@ -335,6 +364,7 @@ class WebsiteWriter:
 
         latex_out.write("\t \item " + lookup[jj].latex(self._url))
         bibtex_out.write(lookup[jj].bibtex())
+        text_out.write(lookup[jj].txt(url=self._url))
 
         o.write("\t\t<li>" + lookup[jj].html(bibtex, self._url, old))
 
@@ -343,7 +373,8 @@ class WebsiteWriter:
       o.write("\t</ul>\n")
       o.write("<p>&nbsp;</p>\n")
       o.write('<center><a href="%s.txt">LaTeX Version</a>&nbsp;' % sort_by.lower())
-      o.write('<a href="%s.bib">BibTex Version</a></center>' % sort_by.lower())
+      o.write('<a href="%s.bib">BibTex Version</a>&nbsp;' % sort_by.lower())
+      o.write('<a href="%s_raw.txt">Text Version</a></center>' % sort_by.lower())
 
       o.write("<p>&nbsp;</p>\n")
       o.write("</div>")
