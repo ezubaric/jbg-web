@@ -1,3 +1,17 @@
+# MPG data for CSCI 5622
+# 
+# Code to read this into python:
+# def read_mpg(filename):
+#    mpg = []
+#    features = []
+#    for ii in open(filename):
+#        if ii.startswith("#"):
+#          continue
+#        y, x = ii.split(' ', 1)
+#        mpg.append(float(y))
+#        feature_set = [float(feat.split(":")[1]) for feat in x.split()]
+#        features.append(feature_set[:-1])
+#    return array(features), array(mpg)
 18.0 1:8 2:307.0 3:130.0 4:3504. 5:12.0 6:70 7:1
 15.0 1:8 2:350.0 3:165.0 4:3693. 5:11.5 6:70 7:1
 18.0 1:8 2:318.0 3:150.0 4:3436. 5:11.0 6:70 7:1
