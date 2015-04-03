@@ -3,12 +3,14 @@
 ~~ Author | Yuening Hu and Jordan Boyd-Graber and Brianna Satinoff and Alison Smith
 ~~ Booktitle | Machine Learning
 ~~ Url | docs/mlj_2013_itm.pdf
-~~ Year | 2013
+~~ Year | 2014
 ~~ Category | Topic Models
 ~~ Category | Human-Computer Interaction
+~~ Volume | 95
+~~ Issue | 3
 ~~ Venue | Journal
 ~~ issn | 0885-6125
-~~ Pages | 1-47
+~~ Pages | 423--469
 ~~ Publisher | Springer
 ~~ Link | Journal*http://dx.doi.org/10.1007/s10994-013-5413-0
 ~~ Link | Frontend Code*http://www.cs.umd.edu/~ynhu/code/itm-release.zip
