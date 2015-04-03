@@ -3,12 +3,15 @@
 ~~ Author | Viet-An Nguyen and Jordan Boyd-Graber and Philip Resnik and Deborah Cai and Jennifer Midberry and Yuanxin Wang
 ~~ Url | docs/mlj_2013_influencer.pdf
 ~~ Booktitle | Machine Learning
-~~ Year | 2013
+~~ Year | 2014
 ~~ Category | Bayesian Non-parametrics
 ~~ Category | Sentiment and Perspective
 ~~ Venue | Journal
+~~ Volume | 95
+~~ Issue | 3
+~~ Venue | Journal
 ~~ issn | 0885-6125
-~~ Pages | 1-41
+~~ Pages | 381--421
 ~~ Publisher | Springer
 ~~ Link | Journal*http://dx.doi.org/10.1007/s10994-013-5417-9
 ~~ Link | Code*https://github.com/vietansegan/sits
