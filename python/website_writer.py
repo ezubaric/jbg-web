@@ -61,10 +61,10 @@ def format_name(students, name, year, latex):
 
   if not latex:
     name = name.replace("\\'{e}", "&eacute;")
-    name = name.replace("\\'e", "&eacute;")   
-    name = name.replace("{", "") 
-    name = name.replace("}", "")	
-  
+    name = name.replace("\\'e", "&eacute;")
+    name = name.replace("{", "")
+    name = name.replace("}", "")
+
   return name
 
 class IndexElement:
@@ -312,7 +312,7 @@ class WebsiteWriter:
                        "%s/%s.txt" % (index.lower(), sort_by.lower()), 'w')
       bibtex_out = open(self._output + "/" + self.DYNAMIC_DIR +
                         "%s/%s.bib" % (index.lower(), sort_by.lower()), 'w')
-      text_out = open(self._output + "/" + self.DYNAMIC_DIR + 
+      text_out = open(self._output + "/" + self.DYNAMIC_DIR +
                       "%s/%s_raw.txt" % (index.lower(), sort_by.lower()), 'w')
 
       latex_out.write("\\vspace{.1cm}\nStudents directly advised or co-advised \\underline{in underline}.\n\\vspace{.4cm}")
@@ -324,7 +324,7 @@ class WebsiteWriter:
         # print "Contrib: ", jj, contrib
         keys += contrib
         for kk in contrib:
-          assert not kk in lookup, "%s already found" % str(kk)
+          assert not kk in lookup, "%s already found as %s" % (str(kk), lookup[kk].txt())
           lookup[kk] = self._indexed[index.lower()][jj]
 
       primary = [x[0] for x in keys]
