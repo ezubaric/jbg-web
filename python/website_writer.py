@@ -321,7 +321,7 @@ class WebsiteWriter:
       lookup = {}
       for jj in self._indexed[index.lower()]:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
-        # print "Contrib: ", jj, contrib
+        print "Contrib (%s): " % index, jj, contrib
         keys += contrib
         for kk in contrib:
           assert not kk in lookup, "%s already found as %s" % (str(kk), lookup[kk].txt())
