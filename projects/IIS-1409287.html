@@ -28,32 +28,19 @@
 <p style="text-align: right">
 <img width="221" height="36" src="../images/umd-logo.gif"></p>
 
-<h1>Bayesian Thinking on Your Feet: Embedding Generative Models in Reinforcement Learning for Sequentially Revealed Data</h1>
+<h1>Closing the User-Model Loop for Understanding Topics in Large Document Collections</h1>
 
-<p><b>Project funded by the National Science Foundation</b> (<a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1320538">IIS-1320538</a>)<br/>
+<p><b>Project funded by the National Science Foundation</b> (<a
+      href="http://nsf.gov/awardsearch/showAward?AWD_ID=1409287">IIS-1409287</a>,
+      UMD) (ADD BYU)<br/>
 <b>PI:</b> <a href="http://cs.colorado.edu/~jbg"><b>Jordan Boyd-Graber</b></a>,
-<b>Co-PI:</b> <a href="http://www.umiacs.umd.edu/~hal/"><b>Hal Daum&eacute; III</b></a>,
+<b>Co-PI:</b> <a href="http://terpconnect.umd.edu/~leahkf/"><b>Leah Findlater</b></a>,
 <b>University of Maryland</b></p>
 
 
 <a name="overview"><h2>Overview</h2></a>
 
-<p>The goal of this project is to create algorithms that can “think on their feet”, i.e. to incrementally process input and to decide when enough information has been received to act on those data.  This research requires innovation in two areas: content models (to make accurate predictions, even when not all available information is available) and policies (to know when to trust the outputs of the content models---or know they won't get better---versus waiting for more information).</p>
-
-
-
-<p>We are applying these models to two problems: synchronous machine translation (or "machine simultaneous interpretation") and question answering (when questions are revealed one piece at a time).</p>
-
-
-
-<p>Synchronous machine translation is when a sentence is being produced one word at a time in a foreign language and we want to produce a translation in English simultaneously (i.e., with as little delay between a foreign language word and its English translation). In the machine translation setting, the content model predicts what words are going to appear in the input stream, even though they might not have been seen yet.  This is particularly important in verb-final languages like German or Japanese, where an English translation can barely begin until the verb is seen. For the simultaneous translation problem, our content model must predict unseen elements of the sentence (e.g., the main verb in German and Japanese, or relative clauses in Japanese, or post-positions in Japanese). The job of the policy is to decide when to trust the content prediction. It must learn to balance incorrect translation versus timely translations, and must use those predictions to translate the sentence.</p>
-
-
-
-<p>For question answering, we use a specially designed dataset that challenges humans: a trivia game called quiz bowl.  These questions are written so that they can be interrupted by someone who knows more about the answer; that is, harder clues are at the start of the question and easier clues are at the end of the question.  The content model produces guesses of what the answer could be and the policy must decide when to accept the guess.</p>
-
-
-<p>Quiz bowl is a fun game with excellent opportunities for outreach, but it is also related to core challenges in natural language processing: classification (sorting inputs and making predictions), discourse (using pragmatic clues to guess what will come next), and coreference resolution (knowing which entities are discussed from oblique mentions).</p>
+<p></p>
 
 <p><small>&lt;&lt; <a href="#">back to top</a></small></p>
 
@@ -65,73 +52,6 @@
 <td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~jbg/static/home.html"><b>Jordan Boyd-Graber</b></a><br/>
 Assistant Professor, Computer Science (Colorado)</td></tr>
 
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img src="../images/head_hal.jpg" alt="Hal Daume III" /></td>
-<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~hal/"><b>Hal Daum&eacute III</b></a><br/>
-Associate Professor, Computer Science (Maryland)</td></tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_alvin.png" alt="Alvin Grissom II"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~alvin/"><b>Alvin Grissom II</b></a><br/>
-Ph.D. student, Computer Science (Colorado)</td>
-</tr>
-
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_mohit.png" alt="Mohit Iyyer"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~miyyer/"><b>Mohit Iyyer</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_john.png" alt="John Morgan"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~jjm/"><b>John Morgan</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img src="../images/head_he.jpg" alt="He He"/></td>
-<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~hhe/"><b>He He</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_danny.png" alt="Danny Bouman"/></td>
-<td style="padding: 0px; border: 0 none;"><b>Danny Bouman</b><br/>
-Undergraduate student, Computer Science (BS 2014, Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_anupam.png" alt="Anupam Guha"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="https://www.cs.umd.edu/~aguha/"><b>Anupam Guha</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_leo.png" alt="Leonardo Claudino"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.cs.umd.edu/~claudino/"><b>Leonardo Claudino</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_stephanie.jpg" alt="Stephanie Hwa"/></td>
-<td style="padding: 0px; border: 0 none;"><b>Stephanie Hwa</b><br/>
-Undergraduate student, Computer Science (BS 2014, Maryland)</td>
-</tr>
-
 </table>
 
 <p><small>&lt;&lt; <a href="#">back to top</a></small></p>
@@ -139,24 +59,30 @@ Undergraduate student, Computer Science (BS 2014, Maryland)</td>
 <a name="publications"><h2>Publications (Selected)</h2></a>
 
 <ul>
-   <li><b>Jordan Boyd-Graber</b>, <u>Brianna Satinoff</u>, He He, and Hal
-Daume III.  <b><a href="../docs/qb_emnlp_2012.pdf"
-onClick="javascript:
-pageTracker._trackPageview('docs/qb_emnlp_2012.pdf'); ">Besting the
-Quiz Master: Crowdsourcing Incremental Classification Games</a></b>.
-<i>Empirical Methods in Natural Language Processing</i>, 2012. [<a
-href="http://www.youtube.com/watch?v=CaOloF3RHCw&list=UUIXpjlxPL5Ow8rPO_gOHISQ&index=1&feature=plcp">Presentation</a>]
+   <li>Paul Felt, Eric Ringger, <b>Jordan Boyd-Graber</b>, and Kevin
+   Seppi.  <b><a href="../docs/2015_conll_cslda.pdf">Making the Most of Crowdsourced Document Annotations:
+   Confused Supervised LDA</a></b>.  <i>Conference on Computational
+   Natural Language Learning</i>, 2015.
+  <li>Stephen H. Bach, Bert Huang, <b>Jordan Boyd-Graber</b>, and Lise
+   Getoor.  <b><a href="../docs/2015_icml_paired_dual.pdf"
+   onClick="javascript:
+   pageTracker._trackPageview('docs/2015_icml_paired_dual.pdf');
+   ">Paired-Dual Learning for Fast Training of Latent Variable
+   Hinge-Loss MRFs</a></b>.
+  <li><a href="http://www.cs.umd.edu/~vietan/index.htm">Viet-An Nguyen</a>, <b>Jordan Boyd-Graber</b>, Philip Resnik, and Kristina Miler.  <b><a href="../docs/2015_acl_teaparty.pdf"  onClick="javascript: pageTracker._trackPageview('docs/2015_acl_teaparty.pdf'); ">Tea Party in the House: A Hierarchical Ideal Point Topic Model and Its Application to Republican Legislators in the 112th Congress</a></b>.  <i>Association for Computational Linguistics</i>, 2015.
 </ul>
 
 <a name="software"><h2>Software</h2></a>
 
-<p>Code for annotating quiz bowl questions and matching with recursive
-neural networks soon.</p>
+<ul>
+  <li>Topical Guide
+  <li>Supervised Anchor
+</ul>
 
 <a name="datasets"><h2>Datasets</h2></a>
 
 <ul>
-  <li> <a href="../qb">Quiz bowl questions and (human) answers</a>
+  <li> Topic Labels and Quality Ratings (soon)
 </ul>
 
 <h2>Acknowledgments</h2>
