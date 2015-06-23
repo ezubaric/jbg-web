@@ -145,6 +145,7 @@ class IndexElement:
     return text
 
   def latex(self, url="", acceptance=True):
+    print(self.fields)
     s = self.author_string(True)
     if "Title" in self.fields:
       if "Url" in self.fields and url:
@@ -157,10 +158,14 @@ class IndexElement:
       s += "\\emph{%s}, " % self.fields["Journal"][0]
     if "Year" in self.fields:
       s += self.fields["Year"][0]
+    if "Numpages" in self.fields:
+        s += ", %i pages" % int(self.fields["Numpages"][0])
+
     if "Acceptance" in self.fields and acceptance:
       s += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
 
-    s += ".\n\n"
+    s += "."
+    s += "\n\n"
     return s
 
   def html(self, bibtex, url, section):
