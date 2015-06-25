@@ -407,7 +407,21 @@ to use LaTeX instead of Word.</p>
   when you put it into your bibtex for the first time.</p>
 
   <ol>
-    <li> Use bibtex
+    <li> Use bibtex correctly
+      <ol>
+        <li> Do not abbreviate names in your files.  Bibtex will will do this
+        for you, and you will be out of luck if your citation file uses full
+        names (like ACL).
+        <li> Make sure that you are using the correct citation type for
+        articles, books, chapters, etc.
+        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
+    are all named after people), in your bibtex file in brackets to make sure
+    they get capitalized correctly
+      <pre>
+	title = {Latent {D}irichlet Allocation},
+      </pre>
+
+      </ol>
 
     <li> Define journal and conference names in a different bib file from the
     one you store your references in.  This way you can swap out long form title
@@ -433,15 +447,6 @@ to use LaTeX instead of Word.</p>
       The rug really ``tied the room together''~\cite{dude-98}.
     </pre>
 
-    <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
-    are all named after people), in your bibtex file in brackets to make sure
-    they get capitalized correctly
-
-      <pre>
-	title = {Latent {D}irichlet Allocation},
-      </pre>
-
-
     <li> Do not include page numbers, publishers, or locations for
     conferences (nobody reads the paper versions anyway).
 
@@ -453,16 +458,16 @@ to use LaTeX instead of Word.</p>
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
-
-    <li> Don't include material that's only title, author, and year.
-    That's not enough information to find it.  Make sure you include
-    either a web address (ArXiV), a university (theses), or a venue (most things).
-
     <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish this.
 
       <pre>
         \citet{moseby-11} shows that that he can pull off red boots.
       </pre>
+
+    <li> Don't include material that's only title, author, and year.
+    That's not enough information to find it.  Make sure you include
+    either a web address (ArXiV), a university (theses), or a venue (most things).
+
 
   </ol>
 
