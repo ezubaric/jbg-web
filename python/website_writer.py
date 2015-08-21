@@ -96,7 +96,7 @@ class IndexElement:
       s += ".  "
     return s
 
-  def wrapper_document(self):
+  def wrapper_document(self, url=""):
     s = """
     \\documentclass[a4paper]{article}
     \\usepackage{savetrees}
@@ -113,6 +113,14 @@ class IndexElement:
     ~~~bibtex~~~
     \\end{verbatim}
 
+    ~~~note~~~
+
+    ~~~links~~~
+
+    \\vspace{3cm}
+    Downloaded from ~~~url~~~
+
+
     \\includepdf[pages={-}]{src_~~~filename~~~}
 
     \\end{document}
@@ -121,6 +129,33 @@ class IndexElement:
     s = s.replace("~~~citation~~~", self.latex(url="", acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
     s = s.replace("~~~bibtex~~~", self.bibtex())
+
+    if "Note" in self.fields:
+      s = s.replace("~~~note~~~", "{\\bf %s}\\\\"
+                    % "".join(self.fields["Note"]))
+    else:
+      s = s.replace("~~~note~~~", "")
+
+    if "Link" in self.fields and len(self.fields["Link"]) > 0:
+      link_string = "\\noindent Links:\n\\begin{itemize}\n"
+      for ii in self.fields["Link"]:
+          title, url = ii.split("*")
+          print link_string, ii
+          link_string += "\\item \\href{%s}{%s} [\url{%s}]\n" % \
+            (url, title, url)
+      link_string += "\n\\end{itemize}\\"
+      s = s.replace("~~~links~~~", link_string)
+    else:
+      s = s.replace("~~~links~~~", "")
+
+    if "Url" in self.fields:
+      target = self.fields["Url"][0]
+      if not target.startswith("http"):
+          target = "%s%s" % (url, target)
+      s = s.replace("~~~url~~~", "\\url{%s}" % target)
+    else:
+      s = s.replace("~~~links~~~", "")
+
 
     return s
 
@@ -300,7 +335,7 @@ class WebsiteWriter:
       if "Url" in index[ii].fields and index[ii].fields["Url"]:
         resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
         o = open("pubs/%s.tex" % resource, 'w')
-        o.write(index[ii].wrapper_document())
+        o.write(index[ii].wrapper_document(self._url))
 
     self._indexed[name.lower()] = index
     self._criteria[name.lower()] = criteria
