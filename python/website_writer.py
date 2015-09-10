@@ -10,6 +10,20 @@ kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
 kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
 
+def bibtex_last(name):
+  """
+  Extract last name from bibtex field, dealing with pesky Alvin and Hal
+  """
+
+  name = name.replace("\\'{e}", 'e')
+
+  if "{" in name:
+    last_name = name.split("{")[1]
+    last_name = last_name.rsplit("}")[0]
+    return last_name.replace(" ", "-")
+  else:
+    return name.split()[-1]
+
 class Student:
   def __init__(self, name, start, end, webpage = None):
     self._name = name
@@ -25,11 +39,14 @@ UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
 STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu/~zhaike/"),
             "Yuening Hu": Student("Yuening Hu", 2010, 2015, "http://www.cs.umd.edu/~ynhu/"),
             "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2015),
+            "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018),
             "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012),
+            "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/"),
+            "Shudong Hao": Student("Shudong Hao", 2015, 2020, "http://shudonghao.com/"),
             "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016, "http://www.cs.umd.edu/~vietan/index.htm"),
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
             "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-            "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2019, "http://cs.umd.edu/~miyyer/"),
+            "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/"),
             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
 
@@ -253,7 +270,7 @@ class IndexElement:
     return s
 
   def bibtex(self):
-    s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(x.split()[-1] for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
+    s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
     for ii in self.fields:
       if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN", "Abstract", "Location", "Title", "Booktitle", "Isbn", "Publisher", "Address", "Editor", "Series"]:
         s += "\t%s = {%s},\n" % (ii, self.fields[ii][0])
