@@ -292,7 +292,7 @@ class IndexElement:
               x in self.fields[criteria]]
 
 class WebsiteWriter:
-  def __init__(self, source, output, header_file, footer_file, site_title, url):
+  def __init__(self, source, output, header_file, footer_file, site_title, url, last_modified):
     self.STATIC_DIR = "static"
     self.DYNAMIC_DIR = "dyn-"
 
@@ -301,7 +301,7 @@ class WebsiteWriter:
     self._header = open(header_file).read()
     self._header = self._header.replace("~~SITETITLE~~", site_title)
 
-    d = date.fromtimestamp(time.time()).isoformat()
+    d = last_modified
     print d
     self._footer = open(footer_file).read().replace("~~TIMESTAMP~~", d)
     self._url = url

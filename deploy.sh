@@ -3,7 +3,7 @@
 # Restore deleted files
 git checkout $(git ls-files -d)
 
-python python/site.py
+python python/site.py `git show -s --format=%ci`
 
 CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/`
 
@@ -34,7 +34,7 @@ if [ ${#CHANGES} -gt 0 ]
             pdflatex $FILE; rm $FILE
         done
 fi
-rm *.aux *.log *.out; 
+rm *.aux *.log *.out;
 rm pubs/*.*
 rm pubs/#*#
 rm pubs/*~
