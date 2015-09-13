@@ -18,42 +18,46 @@
 <p style="padding-top: 150px">
 <a href="#overview">Overview</a><br/>
 <a href="#team">Project Team</a><br/>
+<!--
 <a href="#publications">Publications</a><br/>
 <a href="#software">Software</a></p>
 <a href="#Datasets">Datasets</a><br/>
-
+-->
       </header>
       <section>
 
 <p style="text-align: right">
-<img width="221" height="36" src="../images/umd-logo.gif"></p>
+<img height="75" src="../images/cu.jpg"></p>
 
-<h1>Bayesian Thinking on Your Feet: Embedding Generative Models in Reinforcement Learning for Sequentially Revealed Data</h1>
+<h1>Scaling Insight into Science: Assessing the value and effectiveness of
+machine assisted classification within a statistical system</h1>
 
-<p><b>Project funded by the National Science Foundation</b> (<a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1320538">IIS-1320538</a>)<br/>
-<b>PI:</b> <a href="http://cs.colorado.edu/~jbg"><b>Jordan Boyd-Graber</b></a>,
-<b>Co-PI:</b> <a href="http://www.umiacs.umd.edu/~hal/"><b>Hal Daum&eacute; III</b></a>,
-<b>University of Maryland</b></p>
+<p><b>Project funded by the National Science Foundation</b> (<a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=1422492">NCSE-1422492</a>)<br/>
+<b>PI:</b> <a href="http://cs.colorado.edu/~jbg"><b>Jordan Boyd-Graber</b></a></p>
 
+In collaboration with James Evans and Julia Lane.
 
 <a name="overview"><h2>Overview</h2></a>
 
-<p>The goal of this project is to create algorithms that can “think on their feet”, i.e. to incrementally process input and to decide when enough information has been received to act on those data.  This research requires innovation in two areas: content models (to make accurate predictions, even when not all available information is available) and policies (to know when to trust the outputs of the content models---or know they won't get better---versus waiting for more information).</p>
+<p>Labeling schemes such as the MESH ontology help users understand large
+corpora of specialized text. However, despite the demonstrated <i>utility</i>
+of such techniques, they represent an uncertain <i>value</i> proposition, as
+they require huge investments of resources to both create and apply
+the labels.</p>
 
+<p>For the latter question, automatic labeling of text data using
+improves the <i>value</i> proposition by reducing <i>cost</i>.
+However, the process for creating a broadly applicable, consistent,
+and generalizable label set and then applying them to a dataset is
+long and difficult.</p>
 
-
-<p>We are applying these models to two problems: synchronous machine translation (or "machine simultaneous interpretation") and question answering (when questions are revealed one piece at a time).</p>
-
-
-
-<p>Synchronous machine translation is when a sentence is being produced one word at a time in a foreign language and we want to produce a translation in English simultaneously (i.e., with as little delay between a foreign language word and its English translation). In the machine translation setting, the content model predicts what words are going to appear in the input stream, even though they might not have been seen yet.  This is particularly important in verb-final languages like German or Japanese, where an English translation can barely begin until the verb is seen. For the simultaneous translation problem, our content model must predict unseen elements of the sentence (e.g., the main verb in German and Japanese, or relative clauses in Japanese, or post-positions in Japanese). The job of the policy is to decide when to trust the content prediction. It must learn to balance incorrect translation versus timely translations, and must use those predictions to translate the sentence.</p>
-
-
-
-<p>For question answering, we use a specially designed dataset that challenges humans: a trivia game called quiz bowl.  These questions are written so that they can be interrupted by someone who knows more about the answer; that is, harder clues are at the start of the question and easier clues are at the end of the question.  The content model produces guesses of what the answer could be and the policy must decide when to accept the guess.</p>
-
-
-<p>Quiz bowl is a fun game with excellent opportunities for outreach, but it is also related to core challenges in natural language processing: classification (sorting inputs and making predictions), discourse (using pragmatic clues to guess what will come next), and coreference resolution (knowing which entities are discussed from oblique mentions).</p>
+<p>To solve the problem of label creation, we present ALTO (Active
+Learning from Topic Overviews), a user interactive tool for document
+labeling that uses topic models to help users assign appropriate
+labels to documents. We show that annotators can more quickly label
+(higher <i>value</i>, lower cost) a document collection given a topic
+modeling overview and that these efforts result in a more useful
+(in our experiments, higher <i>purity</i>) system.</p>
 
 <p><small>&lt;&lt; <a href="#">back to top</a></small></p>
 
@@ -66,75 +70,17 @@
 Assistant Professor, Computer Science (Colorado)</td></tr>
 
 <tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img src="../images/head_hal.jpg" alt="Hal Daume III" /></td>
-<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~hal/"><b>Hal Daum&eacute III</b></a><br/>
-Associate Professor, Computer Science (Maryland)</td></tr>
+<td style="padding: 0px; border: 0 none; width: 80px" align="center"><img
+  src="../images/head_forough.png" alt="Forough Poursabzi" /></td>
+<td style="padding: 0px; border: 0 none;">Forough Poursabzi<br/>
+PhD Student, Computer Science (Colorado)</td></tr>
 
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_alvin.png" alt="Alvin Grissom II"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~alvin/"><b>Alvin Grissom II</b></a><br/>
-Ph.D. student, Computer Science (Colorado)</td>
-</tr>
-
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_mohit.png" alt="Mohit Iyyer"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~miyyer/"><b>Mohit Iyyer</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_john.png" alt="John Morgan"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.umiacs.umd.edu/~jjm/"><b>John Morgan</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img src="../images/head_he.jpg" alt="He He"/></td>
-<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~hhe/"><b>He He</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_danny.png" alt="Danny Bouman"/></td>
-<td style="padding: 0px; border: 0 none;"><b>Danny Bouman</b><br/>
-Undergraduate student, Computer Science (BS 2014, Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_anupam.png" alt="Anupam Guha"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="https://www.cs.umd.edu/~aguha/"><b>Anupam Guha</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_leo.png" alt="Leonardo Claudino"/></td>
-<td style="padding: 0px; border: 0 none;"><a
-  href="http://www.cs.umd.edu/~claudino/"><b>Leonardo Claudino</b></a><br/>
-Ph.D. student, Computer Science (Maryland)</td>
-</tr>
-
-<tr>
-<td style="padding: 0px; border: 0 none;" align="center"><img
-  src="../images/head_stephanie.jpg" alt="Stephanie Hwa"/></td>
-<td style="padding: 0px; border: 0 none;"><b>Stephanie Hwa</b><br/>
-Undergraduate student, Computer Science (BS 2014, Maryland)</td>
-</tr>
 
 </table>
 
 <p><small>&lt;&lt; <a href="#">back to top</a></small></p>
+
+<!--
 
 <a name="publications"><h2>Publications (Selected)</h2></a>
 
@@ -158,7 +104,7 @@ neural networks soon.</p>
 <ul>
   <li> <a href="../qb">Quiz bowl questions and (human) answers</a>
 </ul>
-
+-->
 <h2>Acknowledgments</h2>
 
 <p>This work is supported by the National Science Foundation. Any
