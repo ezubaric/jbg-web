@@ -25,11 +25,14 @@ def bibtex_last(name):
     return name.split()[-1]
 
 class Student:
-  def __init__(self, name, start, end, webpage = None):
+  def __init__(self, name, start, end, webpage = None, kind="PhD", 
+               first_position=None):
     self._name = name
     self._start = start
     self._end = end
     self._web = webpage
+    self._fp = first_position
+    self._kind = kind
 
 UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
                "Refereed Conference": "\\ifumd 2.E.ii. \\fi Refereed Conferences",
@@ -42,8 +45,9 @@ STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu
             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/"),
             "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012),
             "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/"),
-            "Shudong Hao": Student("Shudong Hao", 2015, 2020, "http://shudonghao.com/"),
+            "Shudong Hao": Student("Shudong Hao", 2015, 2020, "https://csel.cs.colorado.edu/~shha1721/"),
             "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016, "http://www.cs.umd.edu/~vietan/index.htm"),
+            "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
             "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/"),
