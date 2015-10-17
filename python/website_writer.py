@@ -1,4 +1,3 @@
-
 from glob import glob
 from string import capwords
 from datetime import date, datetime
@@ -25,34 +24,81 @@ def bibtex_last(name):
     return name.split()[-1]
 
 class Student:
-  def __init__(self, name, start, end, webpage = None, kind="PhD", 
-               first_position=None):
+  def __init__(self, name, start, end, webpage = None, kind="PHD",
+               job=None):
     self._name = name
     self._start = start
     self._end = end
     self._web = webpage
-    self._fp = first_position
+    self._job = job
     self._kind = kind
+
+  def latex(self):
+      val = self._name
+      return val
+
+  def html(self):
+      val = self._name
+
+      if not self._web is None:
+          val = '<A HREF="%s">%s</a>' % (self._web, val)
+
+      if not self._job is None:
+          val = "%s (%s)" % (val, self._job)
+
+      return val
 
 UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
                "Refereed Conference": "\\ifumd 2.E.ii. \\fi Refereed Conferences",
                "Workshop": "\\ifumd 2.E.ii. \\fi Refereed Workshops",
                "Journal": "\\ifumd 2.B. \\fi Articles in Refereed Journals"}
 
-STUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2015, "http://www.umiacs.umd.edu/~zhaike/"),
-            "Yuening Hu": Student("Yuening Hu", 2010, 2015, "http://www.cs.umd.edu/~ynhu/"),
-            "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2015),
-            "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/"),
-            "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012),
-            "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/"),
-            "Shudong Hao": Student("Shudong Hao", 2015, 2020, "https://csel.cs.colorado.edu/~shha1721/"),
-            "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2016, "http://www.cs.umd.edu/~vietan/index.htm"),
-            "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
-            "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013),
-            "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-            "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/"),
-            "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
-            "Eric Hardisty": Student("Eric Hardisty", 2010, 2011)}
+kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
+                                job="Yahoo! Research"),
+             "Yuening Hu": Student("Yuening Hu", 2010, 2014, "http://www.cs.umd.edu/~ynhu/",
+                                   job="Yahoo! Research"),
+             "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
+             "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
+             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/"),
+             "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
+             "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/"),
+             "Shudong Hao": Student("Shudong Hao", 2015, 2020, "https://csel.cs.colorado.edu/~shha1721/"),
+             "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2015,
+                                       "http://www.cs.umd.edu/~vietan/index.htm",
+                                       job="Facebook Data Science"),
+             "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
+             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
+             "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
+             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/"),
+             "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
+             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/"),
+             "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
+             "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
+             "Alison Smith": Student("Alison Smith", 2012, 2014, kind="MS"),
+             "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
+
+kSTUDENT_DISPLAY = {}
+for ii in set(x._kind for x in kSTUDENTS.values()):
+    kSTUDENT_DISPLAY[(ii, "LATEX", "CUR")] = \
+      "\\begin{itemize}\n %s \n\\end{itemize}" % \
+      "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
+                if x._end >= datetime.now().year and x._kind == ii)
+
+    kSTUDENT_DISPLAY[(ii, "LATEX", "PAST")] = \
+      "\\begin{itemize}\n %s \n\\end{itemize}" % \
+      "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
+                if x._end < datetime.now().year and x._kind == ii)
+
+    kSTUDENT_DISPLAY[(ii, "HTML", "PAST")] = \
+      "<UL>\n %s \n</UL>" % \
+      "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
+              if x._end < datetime.now().year and x._kind == ii)
+
+    kSTUDENT_DISPLAY[(ii, "HTML", "CUR")] = \
+      "<UL>\n %s \n</UL>" % \
+      "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
+              if x._end >= datetime.now().year and x._kind == ii)
+
 
 def format_name(students, name, year, latex):
   if name in students:
@@ -106,7 +152,7 @@ class IndexElement:
     s = ""
     if "Authors" in self.fields:
       assert "Year" in self.fields
-      authors = [format_name(STUDENTS, x, self.fields["Year"][0], latex) \
+      authors = [format_name(kSTUDENTS, x, self.fields["Year"][0], latex) \
                    for x in self.fields["Authors"]]
       if len(authors) > 2:
         s += ", ".join(authors[:-1]) + ", and " + authors[-1]
@@ -348,10 +394,10 @@ class WebsiteWriter:
       item = IndexElement(open(ii).read())
       print item.fields
       if "Nopub" in item.fields:
-		  print("Skipping %s" % ii)
-		  continue
+          print("Skipping %s" % ii)
+          continue
       else:
-		  index[ii] = item
+          index[ii] = item
 
       if "Url" in index[ii].fields and index[ii].fields["Url"]:
         resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
@@ -456,10 +502,15 @@ class WebsiteWriter:
                       "../../")
 
   def write_file(self, filename, title, raw, prefix="../"):
-    contents = self._header.replace("~~PAGETITLE~~", title)
+    contents = self._header
     contents = contents.replace("~~NAVIGATION~~", self.navigation(prefix))
     contents += open(raw).read()
     contents = contents.replace("~~PATHPREFIX~~", prefix).replace("~~PAGETITLE~~", title)
+
+    for kind, form, time in kSTUDENT_DISPLAY:
+        contents = contents.replace("~~%s%s%sSTUDENTS~~" % (form, kind, time),
+                                    kSTUDENT_DISPLAY[(kind, form, time)])
+
     contents += self._footer
 
     o = open(filename, 'w')
