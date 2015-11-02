@@ -1,6 +1,7 @@
 from glob import glob
 from string import capwords
 from datetime import date, datetime
+from collections import defaultdict
 import time
 import os
 import re
@@ -8,6 +9,14 @@ import re
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
 kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
+
+global_replace = {}
+
+def remove_html_chars(text):
+    for ii in kHTML_CHARS:
+      if ii in text:
+        text = text.replace(ii, kHTML_CHARS[ii])
+    return text
 
 def bibtex_last(name):
   """
@@ -77,24 +86,23 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Alison Smith": Student("Alison Smith", 2012, 2014, kind="MS"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
-kSTUDENT_DISPLAY = {}
 for ii in set(x._kind for x in kSTUDENTS.values()):
-    kSTUDENT_DISPLAY[(ii, "LATEX", "CUR")] = \
+    global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "CUR")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
       "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
                 if x._end >= datetime.now().year and x._kind == ii)
 
-    kSTUDENT_DISPLAY[(ii, "LATEX", "PAST")] = \
+    global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "PAST")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
       "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
                 if x._end < datetime.now().year and x._kind == ii)
 
-    kSTUDENT_DISPLAY[(ii, "HTML", "PAST")] = \
+    global_replace["%s%s%sSTUDENTS" % ("HTML", ii, "PAST")] = \
       "<UL>\n %s \n</UL>" % \
       "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
               if x._end < datetime.now().year and x._kind == ii)
 
-    kSTUDENT_DISPLAY[(ii, "HTML", "CUR")] = \
+    global_replace["%s%s%sSTUDENTS" % ("HTML", ii, "CUR")] = \
       "<UL>\n %s \n</UL>" % \
       "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
               if x._end >= datetime.now().year and x._kind == ii)
@@ -136,16 +144,16 @@ def format_name(students, name, year, latex):
 
 class IndexElement:
   def __init__(self, file_contents):
-    self.fields = {"Authors": [], "Link": [], "Category": [], "Venue": []}
+    self.fields = defaultdict(list)
     for ii in [x for x in file_contents.split("~~") if x != ""]:
       key = capwords(ii.split("|")[0].strip())
+      if not key in self.fields:
+        self.fields[key] = []
       val = ii.split("|")[1].strip()
       if key == "Author":
         for jj in val.split(" and "):
           print "Author: ", jj
           self.fields["Authors"].append(jj)
-      if not key in self.fields:
-        self.fields[key] = []
       self.fields[key].append(val)
 
   def author_string(self, latex):
@@ -240,11 +248,7 @@ class IndexElement:
       text += url
     text += "\n"
 
-    for ii in kHTML_CHARS:
-      if ii in text:
-        text = text.replace(ii, kHTML_CHARS[ii])
-
-    return text
+    return remove_html_chars(text)
 
   def latex(self, url="", acceptance=True):
     print(self.fields)
@@ -302,7 +306,8 @@ class IndexElement:
         s += ' [<a href="../%s">%s</a>]' % (url, text)
 
 		# print self.fields["Title"], len(self.fields["Bibtex"]), len(self.fields["Authors"]), len(self.fields["Year"])
-    div_name = str(hash("".join("".join(x) for x in self.fields.values()) + section))
+
+    div_name = str(hash("".join("".join(x) for x in self.fields.values()) + str(section)))
     if bibtex and len(self.fields["Bibtex"]) > 0:
       s += ' [<a href="javascript:unhide('
       s += "'%s'" % div_name
@@ -346,14 +351,15 @@ class WebsiteWriter:
     self.STATIC_DIR = "static"
     self.DYNAMIC_DIR = "dyn-"
 
+    # start populating the replacement dictionary
+    global_replace["SITETITLE"] = site_title
+    global_replace["TIMESTAMP"] = last_modified
+
     self._source = source
     self._output = output
     self._header = open(header_file).read()
-    self._header = self._header.replace("~~SITETITLE~~", site_title)
+    self._footer = open(footer_file).read()
 
-    d = last_modified
-    print d
-    self._footer = open(footer_file).read().replace("~~TIMESTAMP~~", d)
     self._url = url
 
     self._files = {}
@@ -364,6 +370,13 @@ class WebsiteWriter:
       print("Adding file %s" % ii)
       name = capwords(ii.split("/")[-1].replace(".html", "").replace("_", " "))
       self._files[name] = ii
+
+  def footer(self):
+    html_out = self._footer
+    for variable in global_replace:
+        html_out = html_out.replace("~~%s~~" % variable,
+                                    global_replace[variable])
+    return html_out
 
   def navigation(self, prefix):
     s = "<ul>"
@@ -382,6 +395,10 @@ class WebsiteWriter:
     s += "</ul>\n"
     return s
 
+  def add_raw(self, path, prefix):
+      for ii in glob(path):
+          self.write_file(self._output + ii, "UNTITLED", ii, prefix,
+                          use_header=False, use_footer=False)
 
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])]):
     index = {}
@@ -410,9 +427,8 @@ class WebsiteWriter:
 
   def write_index(self, index, bibtex=True):
     print("Creating index for %s from %s" % (index, str(self._criteria.keys())))
-    for ii in self._criteria[index.lower()]:
-      print "Criteria: ", ii
-      sort_by, min_count, exclude = ii
+
+    for sort_by, min_count, exclude in self._criteria[index.lower()]:
       o = open(self._output + "/" + self.DYNAMIC_DIR +
                "%s/%s.html" % (index.lower(), sort_by.lower()), 'w')
       latex_out = open(self._output + "/" + self.DYNAMIC_DIR +
@@ -443,29 +459,47 @@ class WebsiteWriter:
       if sort_by == "Year":
         keys.reverse()
 
-      o.write(self._header.replace("~~PAGETITLE~~", \
-                                     '%s (%s)' % (index, sort_by))
-              .replace("~~NAVIGATION~~", self.navigation("../"))
-              .replace("~~PATHPREFIX~~", "../"))
-      old = None
-      o.write('<div id="content">\n')
-      o.write('<h1 id="header"> %s (%s) </h1>\n' % (index, sort_by))
+      html_out = self._header.replace("~~PAGETITLE~~", \
+                                      '%s (%s)' % (index, sort_by))
+      html_out = html_out.replace("~~NAVIGATION~~", self.navigation("../"))
+      html_out = html_out.replace("~~PATHPREFIX~~", "../")
+      html_out += '<div id="content">\n'
+      html_out += '<h1 id="header"> %s (%s) </h1>\n' % (index, sort_by)
 
-      o.write("<center>Sort by:")
+      html_out += "<center>Sort by:"
       for jj in self._criteria[index.lower()]:
-        o.write(' <a href="%s.html">%s</a>' % (jj[0].lower(), jj[0]))
-      o.write("</center>\n")
+        html_out += ' <a href="%s.html">%s</a>' % (jj[0].lower(), jj[0])
+      html_out += "</center>\n"
+
+      for variable in global_replace:
+          html_out = html_out.replace("~~%s~~" % variable,
+                                      global_replace[variable])
+      o.write(html_out)
+
+
+      html_out = ""
+      old = None
       for jj in keys:
+        print(jj)
         if old != jj[0]:
-          if old:
+          if jj != keys[0]:
             latex_out.write("\n\\end{enumerate}\n}")
-            o.write("\t</ul>")
-          old = jj[0]
-          o.write("\t<h2>%s</h2>\n\t<ul>\n" % format_name([], old, -1, False))
-          text_out.write(format_name([], old, -1, False))
+            html_out += "\t</ul>"
+            o.write(html_out)
+            html_out = ""
+          if not "*" in jj[0]:
+            latex_name = format_name([], jj[0], -1, True)
+            txt_name = format_name([], jj[0], -1, False)
+            o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
+          else:
+            o.write('\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
+                                                                jj[0].split("*")[0]))
+            txt_name = format_name([], jj[0].split("*")[0], -1, False)
+            latex_name = format_name([], jj[0].split("*")[0], -1, True)
+
+          text_out.write(remove_html_chars(txt_name))
           text_out.write("\n-------------------------\n\n")
-          out_string = old
-          latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % out_string)
+          latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
 
           latex_out.write("\n\\begin{enumerate}\n")
 
@@ -473,7 +507,10 @@ class WebsiteWriter:
         bibtex_out.write(lookup[jj].bibtex())
         text_out.write(lookup[jj].txt(url=self._url))
 
-        o.write("\t\t<li>" + lookup[jj].html(bibtex, self._url, old))
+        html_out += "\t\t<li>" + lookup[jj].html(bibtex, self._url, old)
+        global_replace["%s:%s" % (index, txt_name)] = html_out
+        old = jj[0]
+      o.write(html_out)
 
       latex_out.write("\n\\end{enumerate}")
       latex_out.write("\n}")
@@ -485,7 +522,7 @@ class WebsiteWriter:
 
       o.write("<p>&nbsp;</p>\n")
       o.write("</div>")
-      o.write(self._footer)
+      o.write(self.footer())
       o.close()
 
   def unindexed_directory(self, source_path, target_path):
@@ -501,18 +538,24 @@ class WebsiteWriter:
       self.write_file(filename, ii.split("/")[-1].replace(".html", ""), ii,
                       "../../")
 
-  def write_file(self, filename, title, raw, prefix="../"):
-    contents = self._header
-    contents = contents.replace("~~NAVIGATION~~", self.navigation(prefix))
+  def write_file(self, filename, title, raw, prefix="../", use_header=True, use_footer=True):
+    if use_header:
+        contents = self._header
+    else:
+        contents = ""
+
     contents += open(raw).read()
+
+    for variable in global_replace:
+        contents = contents.replace("~~%s~~" % variable,
+                                    global_replace[variable])
+    if use_footer:
+        contents += self.footer()
+
+    contents = contents.replace("~~NAVIGATION~~", self.navigation(prefix))
     contents = contents.replace("~~PATHPREFIX~~", prefix).replace("~~PAGETITLE~~", title)
 
-    for kind, form, time in kSTUDENT_DISPLAY:
-        contents = contents.replace("~~%s%s%sSTUDENTS~~" % (form, kind, time),
-                                    kSTUDENT_DISPLAY[(kind, form, time)])
-
-    contents += self._footer
-
+    print("Writing %s to %s" % (raw, filename))
     o = open(filename, 'w')
     o.write(contents)
     o.close()
