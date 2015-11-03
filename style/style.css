@@ -11,6 +11,10 @@ body {
 }
 
 pre {
+   padding:8px 15px;
+   border-radius:5px;
+   border:1px solid #e5e5e5;
+   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
    background-color: #eeeeee;
    color: #110000;
    border: 3;
@@ -227,7 +231,7 @@ a.sub {
 
 #button {
 	-webkit-transition:all 200ms ease-in;
-	-o-transition:all 200ms ease-in;	
+	-o-transition:all 200ms ease-in;
 }
 
 /*
@@ -259,7 +263,7 @@ td {
 }
 
 
-/* 
+/*
   Copied from CU Boulder
 */
 
@@ -285,7 +289,7 @@ td {
 	padding:0;
 	padding-bottom:5px;
 	margin:0;
-	font-size:130%;	
+	font-size:130%;
 }
 #sidebar h31 span {
 	background-repeat:no-repeat;
@@ -294,7 +298,7 @@ td {
 	display:block;
 }
 .sidebar-widget {
-	background-color:#EEE;	
+	background-color:#EEE;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -311,8 +315,8 @@ td {
 	width:960px;
 	margin:0 auto;
 	padding:0;
-	
-	
+
+
 }
 #navigation ul {
 	list-style:none;
@@ -327,7 +331,7 @@ td {
 	text-decoration: none;
 }
 #navigation  ul ul {
-	display:none;	
+	display:none;
 }
 #navigation a:link, #navigation a:visited {
 	display:block;
@@ -341,7 +345,7 @@ td {
 	border-right:1px solid #444;
 }
 #navigation a:hover {
-	color:#FFF;	
+	color:#FFF;
 	text-decoration: none;
 }
 #navigation li.current_page_item a:link, #navigation li.current_page_item a:visited, #navigation li.current_page_ancestor a:link, #navigation li.current_page_ancestor a:visited {
