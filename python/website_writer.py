@@ -158,7 +158,7 @@ class IndexElement:
 
   def author_string(self, latex):
     s = ""
-    if "Authors" in self.fields:
+    if "Authors" in self.fields and len(self.fields["Authors"]) > 0:
       assert "Year" in self.fields
       authors = [format_name(kSTUDENTS, x, self.fields["Year"][0], latex) \
                    for x in self.fields["Authors"]]
@@ -166,7 +166,7 @@ class IndexElement:
         s += ", ".join(authors[:-1]) + ", and " + authors[-1]
       elif len(authors) == 2:
         s += " and ".join(authors)
-      else:
+      elif len(authors) == 1:
         s += authors[0]
       s += ".  "
     return s
@@ -214,10 +214,10 @@ class IndexElement:
     if "Link" in self.fields and len(self.fields["Link"]) > 0:
       link_string = "\\noindent Links:\n\\begin{itemize}\n"
       for ii in self.fields["Link"]:
-          title, url = ii.split("*")
+          title, location = ii.split("*")
           print link_string, ii
           link_string += "\\item \\href{%s}{%s} [\url{%s}]\n" % \
-            (url, title, url)
+            (location, title, location)
       link_string += "\n\\end{itemize}\\"
       s = s.replace("~~~links~~~", link_string)
     else:
@@ -279,7 +279,12 @@ class IndexElement:
 
     formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;")
     if "Title" in self.fields and "Url" in self.fields:
-      s += "<b><a href=\"../%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % (self.fields["Url"][0], self.fields["Url"][0], formatted_title)
+      url = self.fields["Url"][0]
+      if url.startswith("http"):
+          s += "<b><a href=\"%s\">%s</a></b>.  " % (url, formatted_title)
+      else:
+          s += "<b><a href=\"../%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
+            (url, url, formatted_title)
     elif "Title" in self.fields:
       s += '<b>%s</b>.  ' % formatted_title
 
@@ -291,7 +296,7 @@ class IndexElement:
 
     if "Journal" in self.fields:
       s += "<i>%s</i>, " % self.fields["Journal"][0]
-    if "Year" in self.fields:
+    if "Year" in self.fields and self.fields["Year"][0].strip() != "":
       s += self.fields["Year"][0]
       s += "."
 
@@ -311,7 +316,7 @@ class IndexElement:
     if bibtex and len(self.fields["Bibtex"]) > 0:
       s += ' [<a href="javascript:unhide('
       s += "'%s'" % div_name
-      s += ');">BIBTEX</a>]\n'
+      s += ');">Bibtex</a>]\n'
       s += '<div id="'
       s += "%s" % div_name
       s += '" class="hidden">\n'
@@ -321,13 +326,15 @@ class IndexElement:
     if "Note" in self.fields:
       s += "<B>%s</B>\n" % "".join(self.fields["Note"])
 
+    if "Embed" in self.fields:
+        s += "\n<BR>" + "<CENTER>%s</CENTER>" % "".join(self.fields["Embed"])
 
     return s
 
   def bibtex(self):
     s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
     for ii in self.fields:
-      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN", "Abstract", "Location", "Title", "Booktitle", "Isbn", "Publisher", "Address", "Editor", "Series"]:
+      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN", "Abstract", "Location", "Title", "Url", "Booktitle", "Isbn", "Publisher", "Address", "Editor", "Series"]:
         s += "\t%s = {%s},\n" % (ii, self.fields[ii][0])
     s += "}\n"
     return s
@@ -482,6 +489,8 @@ class WebsiteWriter:
       for jj in keys:
         print(jj)
         if old != jj[0]:
+          if jj[0] == "":
+              continue
           if jj != keys[0]:
             latex_out.write("\n\\end{enumerate}\n}")
             html_out += "\t</ul>"
