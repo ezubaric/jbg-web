@@ -1,7 +1,7 @@
 ~~ Bibtex | article
 ~~ Title | Online Adaptor Grammars with Hybrid Inference
 ~~ Author | Ke Zhai and Jordan Boyd-Graber and Shay B. Cohen
-~~ Booktitle | Transactions of the Association for Computational Linguistics
+~~ Journal | Transactions of the Association for Computational Linguistics
 ~~ Year | 2014
 ~~ Category | Bayesian Non-parametrics
 ~~ Category | Variational Inference
@@ -11,4 +11,4 @@
 ~~ Link | Code*http://github.com/kzhai/OnlineAG
 ~~ URL | docs/2014_tacl_ag_vb_online.pdf
 ~~ NumPages | 12
-~~ NumPages | 12
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/
