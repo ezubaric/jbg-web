@@ -10,4 +10,5 @@
 ~~ Venue | Refereed Conference
 ~~ Acceptance | 31
 ~~ NumPages | 8
-~~ NumPages | 8
+~~ Note | For coverage of current state-of-the-art in cross-lingual topic models see: Yuening Hu, Ke Zhai, Vlad Eidelman, and Jordan Boyd-Graber. Polylingual Tree-Based Topic Models for Translation Domain Adaptation. Association for Computational Linguistics, 2014.
+~~ Link | More Recent Paper*docs/2014_acl_ptlda_mt.pdf

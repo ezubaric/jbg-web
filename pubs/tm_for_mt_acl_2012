@@ -11,4 +11,6 @@
 ~~ Venue | Refereed Conference
 ~~ Acceptance | 21
 ~~ NumPages | 5
-~~ NumPages | 5
+~~ Note | For a more thorough evaluation and an exploration of more advanced topic models for machine translation, see: Yuening Hu, Ke Zhai, Vlad Eidelman, and Jordan Boyd-Graber. Polylingual Tree-Based Topic Models for Translation Domain Adaptation. Association for Computational Linguistics, 2014.
+~~ Link | More Recent Paper*docs/2014_acl_ptlda_mt.pdf
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/
