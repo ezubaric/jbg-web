@@ -372,6 +372,7 @@ class WebsiteWriter:
     self._files = {}
     self._indexed = {}
     self._criteria = {}
+    self._default_sort = {}
 
     for ii in glob(source + "*.html"):
       print("Adding file %s" % ii)
@@ -397,8 +398,8 @@ class WebsiteWriter:
         s += ('\t<li><a href="%s' + self.STATIC_DIR + '/%s">%s</a>\n') % \
             (prefix, self._files[ii].split("/")[-1], ii)
       else:
-        s += ('\t<li><a href="%s' + self.DYNAMIC_DIR + '%s/year.html">%s</a>\n') % \
-            (prefix, ii, ii.title())
+        s += ('\t<li><a href="%s' + self.DYNAMIC_DIR + '%s/%s.html">%s</a>\n') % \
+            (prefix, ii, self._default_sort[ii], ii.title())
     s += "</ul>\n"
     return s
 
@@ -407,7 +408,8 @@ class WebsiteWriter:
           self.write_file(self._output + ii, "UNTITLED", ii, prefix,
                           use_header=False, use_footer=False)
 
-  def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])]):
+  def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
+                default_sort="Year"):
     index = {}
     print "Searching:", path + "*"
     for ii in glob(path + "*"):
@@ -430,6 +432,7 @@ class WebsiteWriter:
 
     self._indexed[name.lower()] = index
     self._criteria[name.lower()] = criteria
+    self._default_sort[name.lower()] = default_sort.lower()
     print("Criteria now %s" % str(self._criteria.keys()))
 
   def write_index(self, index, bibtex=True):
