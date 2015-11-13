@@ -18,7 +18,7 @@ if __name__ == "__main__":
             print pdf
         except IndexError:
             continue
-        src = "\n".join(x for x in src.split('\n') if not x.startswith("~~NumPages"))
+        src = "\n".join(x for x in src.split('\n') if not "NumPages" in x)
         pages = pageCount(pdf)
         text = "%s\n~~ NumPages | %i\n" % (src.strip(), pages)
 
