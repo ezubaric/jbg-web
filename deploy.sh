@@ -27,7 +27,7 @@ python python/site.py `git show -s --format=%ci`
 if [ ${#CHANGES} -gt 0 ]
    then
         echo "CHANGES DETECTED!"
-        cp ~/public_html/dyn-pubs/year.txt resume_src/pubs_by_year.tex
+        cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         python python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
         pdflatex resume_src/resume
         mv resume.pdf docs/resume.pdf
