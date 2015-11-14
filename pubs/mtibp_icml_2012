@@ -1,0 +1,17 @@
+~~ Bibtex | inproceedings
+~~ Title | Modeling Images using Transformed {I}ndian Buffet Processes
+~~ Author | Yuening Hu and Ke Zhai and Sinead Williamson and Jordan Boyd-Graber
+~~ Booktitle | International Conference of Machine Learning
+~~ Year | 2012
+~~ Url | docs/mtibp_icml_2012.pdf
+~~ Location | Edinburgh, Scotland
+~~ Category | Images
+~~ Category | Bayesian Non-parametrics
+~~ Category | MCMC Inference
+~~ Venue | Refereed Conference
+~~ Acceptance | 27
+~~ Link | Code*http://www.cs.umd.edu/~ynhu/code/mtibp.zip
+~~ Link | Data*http://www.cs.umd.edu/~ynhu/code/mtibp.zip
+~~ Link | Presentation*http://techtalks.tv/talks/modeling-images-using-transformed-indian-buffet-processes/57364/
+~~ NumPages | 8
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/

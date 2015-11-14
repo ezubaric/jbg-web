@@ -1,0 +1,12 @@
+~~ Bibtex | inproceedings
+~~ Title | Discovering social networks from free text
+~~ Author | Jonathan Chang and Jordan Boyd-Graber and David M. Blei
+~~ Booktitle | 3rd Annual Machine Learning Symposium
+~~ Year | 2008
+~~ Location | New York, New York
+~~ Link | Poster*docs/nyas_poster.pdf
+~~ Link | Code*http://cran.r-project.org/web/packages/lda/
+~~ Link | Discussion*http://www.youtube.com/watch?v=EHljwi9KthQ
+~~ Category | Topic Models
+~~ Category | Data Mining
+~~ Venue | Workshop
