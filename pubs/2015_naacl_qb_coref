@@ -1,0 +1,15 @@
+~~ Bibtex | inproceedings
+~~ Title | Removing the Training Wheels: A Coreference Dataset that Entertains Humans and Challenges Computers
+~~ Author | Anupam Guha and Mohit Iyyer and Danny Bouman and Jordan Boyd-Graber
+~~ Booktitle | North American Association for Computational Linguistics
+~~ Year | 2015
+~~ Location | Denver, Colorado
+~~ Category | Syntax
+~~ Category | Empirical Human Data Collection
+~~ Category | Question Answering
+~~ Venue | Refereed Conference
+~~ Link | Code/Data*http://www.cs.umd.edu/~aguha/qbcoreference
+~~ URL | docs/2015_naacl_qb_coref.pdf
+~~ Acceptance | 26
+~~ NumPages | 11
+~~ Project | Thinking on Your Feet*../projects/IIS-1320538.html
