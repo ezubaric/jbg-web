@@ -1,0 +1,17 @@
+~~ Bibtex | inproceedings
+~~ Title | {SITS}: A Hierarchical Nonparametric Model using Speaker Identity for Topic Segmentation in Multiparty Conversations
+~~ Author | Viet-An Nguyen and Jordan Boyd-Graber and Philip Resnik
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2012
+~~ Location | Jeju, South Korea
+~~ Category | Bayesian Non-parametrics
+~~ Category | Sentiment and Perspective
+~~ Link | Data*http://www.cs.umd.edu/~vietan/topicshift/crossfire.zip
+~~ Link | Code*https://github.com/vietansegan/sits
+~~ Link | Slides*http://www.cs.umd.edu/~vietan/ACL12_slides.pdf
+~~ Link | Appendix*http://www.cs.umd.edu/~vietan/topicshift/appendix.pdf
+~~ Venue | Refereed Conference
+~~ Url | docs/acl_2012_sits.pdf
+~~ Acceptance | 19
+~~ NumPages | 10
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/
