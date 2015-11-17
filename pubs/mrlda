@@ -1,0 +1,15 @@
+~~ Bibtex | inproceedings
+~~ Title | {Mr. LDA}: A Flexible Large Scale Topic Modeling Package using Variational Inference in MapReduce
+~~ Url | docs/mrlda.pdf
+~~ Author | Ke Zhai and Jordan Boyd-Graber and Nima Asadi and Mohamad Alkhouja
+~~ Booktitle | ACM International Conference on World Wide Web
+~~ Year | 2012
+~~ Location | Lyon, France
+~~ Link | Code*http://mrlda.cc
+~~ Link | Slides*docs/2012_www_slides.pdf
+~~ Category | Topic Models
+~~ Category | Data Mining
+~~ Venue | Refereed Conference
+~~ Acceptance | 12
+~~ NumPages | 10
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/

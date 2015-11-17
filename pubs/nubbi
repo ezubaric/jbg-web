@@ -1,0 +1,19 @@
+~~ Bibtex | inproceedings
+~~ Title | Connections between the Lines: Augmenting Social Networks with Text
+~~ Url | docs/kdd2009.pdf
+~~ Author | Jonathan Chang and Jordan Boyd-Graber and David M. Blei
+~~ Booktitle | Knowledge Discovery and Data Mining
+~~ Year | 2009
+~~ Location | Paris, France
+~~ Link | Browser*http://topics.cs.princeton.edu/nubbi
+~~ Link | Code*http://cran.r-project.org/web/packages/lda/
+~~ Link | Data*http://topics.cs.princeton.edu/nubbi/nubbi_data_censored.tar.gz
+~~ Link | Slides*docs/kdd_pres.pdf
+~~ Link | Video*http://videolectures.net/kdd09_chang_cbtl/
+~~ Link | Pie Fight*http://www.youtube.com/watch?v=EHljwi9KthQ
+~~ Category | Topic Models
+~~ Category | Data Mining
+~~ Category | Variational Inference
+~~ Venue | Refereed Conference
+~~ Acceptance | 9
+~~ NumPages | 9
