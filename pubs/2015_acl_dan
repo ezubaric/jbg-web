@@ -1,0 +1,18 @@
+~~ Bibtex | inproceedings
+~~ Title | Deep Unordered Composition Rivals Syntactic Methods for Text Classification
+~~ Author | Mohit Iyyer and Varun Manjunatha and Jordan Boyd-Graber and Hal {Daum\'{e} III}
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2015
+~~ Location | Beijing, China
+~~ Category | Syntax
+~~ Category | Sentiment and Perspective
+~~ Category | Question Answering
+~~ Category | Deep Learning
+~~ Venue | Refereed Conference
+~~ Acceptance | 25
+~~ URL | docs/2015_acl_dan.pdf
+~~ Link | Slides*http://cs.umd.edu/~miyyer/data/acldan_slides.pdf
+~~ Link | Code*https://github.com/miyyer/dan
+~~ Link | Talk*http://techtalks.tv/talks/deep-unordered-composition-rivals-syntactic-methods-for-text-classification/61844/
+~~ NumPages | 11
+~~ Project | Thinking on Your Feet*../projects/IIS-1320538.html

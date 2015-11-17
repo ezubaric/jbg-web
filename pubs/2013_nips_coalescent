@@ -1,0 +1,14 @@
+~~ Bibtex | inproceedings
+~~ Url | docs/2013_coalescent.pdf
+~~ Title | Binary to Bushy: Bayesian Hierarchical Clustering with the Beta Coalescent
+~~ Author | Yuening Hu and Jordan Boyd-Graber and Hal {Daum\'{e} III} and Z. Irene Ying
+~~ Booktitle | Neural Information Processing Systems
+~~ Year | 2013
+~~ Category | Bayesian Non-parametrics
+~~ Category | MCMC Inference
+~~ Category | Computational Biology
+~~ Venue | Refereed Conference
+~~ Acceptance | 25
+~~ Link | Supplement*docs/2013_coalescent-supp.pdf
+~~ NumPages | 9
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/
