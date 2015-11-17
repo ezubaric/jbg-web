@@ -1,0 +1,15 @@
+~~ Bibtex | inproceedings
+~~ Title | Political Ideology Detection Using Recursive Neural Networks
+~~ Author | Mohit Iyyer and Peter Enns and Jordan Boyd-Graber and Philip Resnik
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2014
+~~ Location | Baltimore, MD
+~~ Category | Sentiment and Perspective
+~~ Category | Deep Learning
+~~ Category | Syntax
+~~ Venue | Refereed Conference
+~~ URL | docs/2014_acl_rnn_ideology.pdf
+~~ Link | Data*http://cs.umd.edu/~miyyer/ibc/index.html
+~~ Acceptance | 26
+~~ NumPages | 10
+~~ Project | Cross-Language Bayesian Models for Web-Scale Text Analysis*http://lintool.github.io/NSF-projects/CCF-1018625/
