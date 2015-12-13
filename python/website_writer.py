@@ -571,6 +571,7 @@ class WebsiteWriter:
     o = open(filename, 'w')
     o.write(contents)
     o.close()
+    print(global_replace.keys())
 
   def write(self):
     try:
