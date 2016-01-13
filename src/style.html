@@ -27,7 +27,9 @@ sense to computer scientists, as below).
   <li> "<a href="http://www.stats.ox.ac.uk/~teh/">Teh</a>" is almost never a
   mispelling when I write it
 </ol>
-<p>The rest is great, however, and you should use it (with the above edits).</p>
+<p>The rest is great, however, and you should use it (with the above edits).
+For my students, this is included as part of the Makefile for generating papers.
+Look at the end of compilation to see the red flags that it has discovered.</p>
 
 <p><a href="http://www.economist.com/styleguide/introduction">The Economist
 style guide</a> is a good resource for exposing bad habits, and their
@@ -35,12 +37,14 @@ conventions are reasonable.  However, they are a British publication, so ignore
 British-specific rules (I do have some other points of disagreement, such as
 infinitives).</p>
 
-<p>Specifically for
- scientists, <a href="http://www.nature.com/scitable/ebooks/english-communication-for-scientists-14053993/contents">Nature
- has good resources</a>.  Specifically for
- NLP, <a href="http://www.umiacs.umd.edu/~resnik/writing_advice.html">Philip</a>
- and <a href="http://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html">Jason</a>
- have good advice.</p>
+<p>Specifically for scientists, <a
+  href="http://www.nature.com/scitable/ebooks/english-communication-for-scientists-14053993/contents">Nature
+ has good resources</a>.  Specifically for NLP, <a
+  href="http://www.umiacs.umd.edu/~resnik/writing_advice.html">Philip</a> and <a
+  href="http://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html">Jason</a>
+ have good advice.  For machine learning, there's even official <a
+  href="https://nips.cc/Conferences/2015/PaperInformation/EvaluationCriteria">NIPS
+ advice</a>.</p>
 
 <h3>Why LaTeX?</h3>
 
@@ -227,7 +231,8 @@ documents look nice</a> (but it's a lot of work).</p>
          <li> Spell out big round numbers like thousand, billion, etc.
          <li> Never start a sentence with a number represented with numerals.
          <li> It's okay to break these rules to ensure consistency in the same
-         sentence or paragraph.
+         sentence or paragraph.  E.g., "The final score was 315 to 10".
+         <li> It's okay to use numerals for Likert scales: "5-point scale".
        </ol>
 
      <li> Do not use
@@ -262,7 +267,7 @@ documents look nice</a> (but it's a lot of work).</p>
      <li> If you use <pre>\MoveEqLeft</pre> you're probably using
      align incorrectly.
 
-     <li> Refer to equations as:
+     <li> Refer to equations as parenthetical appositives or nouns:
 
        <pre>The gradient (Equation~\ref{eq:grad}) is further simplified in Equation~\ref{eq:simp-grad}.</pre>
 
@@ -442,11 +447,11 @@ documents look nice</a> (but it's a lot of work).</p>
   when you put it into your bibtex for the first time.</p>
 
   <ol>
-    <li> Use bibtex correctly
+    <li> Use bibtex and use it correctly
       <ol>
-        <li> Do not abbreviate names in your files.  Bibtex will will do this
-        for you, and you will be out of luck if your citation file uses full
-        names (like ACL).
+        <li> Do not abbreviate names (i.e., use "Thomas Stearns Elliot", not
+    "T. S. Elliot") in your files.  Bibtex will will do this for you, and you
+    will be out of luck if your citation file uses full names (like ACL).
         <li> Make sure that you are using the correct citation type for
         articles, books, chapters, etc.
         <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
@@ -493,7 +498,8 @@ documents look nice</a> (but it's a lot of work).</p>
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
-    <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish this.
+    <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish
+      this.  <b>Don't</b> use a non-breaking space in this case.
 
       <pre>
         \citet{moseby-11} shows that that he can pull off red boots.
@@ -503,6 +509,13 @@ documents look nice</a> (but it's a lot of work).</p>
     That's not enough information to find it.  Make sure you include
     either a web address (ArXiV), a university (theses), or a venue (most things).
 
+    <li> When introducing a paper with, for example, an acronym you'll use
+    throughout the paper, put the acronym in the citation brackets.
+
+    <pre>
+       We compare word-level represenations~\cite[Word2Vec]{mikolov-13}
+       against document-level representations~\cite[\abr{lda}]{blei-03}.
+    </pre>
 
   </ol>
 
@@ -549,8 +562,8 @@ documents look nice</a> (but it's a lot of work).</p>
     <li> If it's allowed (ICML 2013 didn't, for instance), use the
     "times" package for serif fonts.
 
-    <li> For ordinals, write them out if they're less than 100.  For
-    ordinals greater than or equal to 100, use a text superscript.
+    <li> For ordinals, write them out if they're less than or equal to one
+    hundred.  For ordinals greater than one hundred, use a text superscript.
 
     <pre>
       The Second Reich loved its 247\textsuperscript{th} pointy helmet design.
@@ -609,7 +622,7 @@ documents look nice</a> (but it's a lot of work).</p>
     <li> Use "while" rather than "whereas".
     <li> Don't say "it is well known"; either cite or just state the fact.
     <li> Prefer "toward" over "towards".
-    <li> You can almost always delete "notice that".  (My dumb fingers are
+    <li> You can almost always delete "notice that" or "note that".  (My dumb fingers are
     often very guilty of writing this.)
     <li> Use "we" rather than "this paper" or "this work".
     <li> Use "shown" over "denoted" or "listed".
@@ -623,6 +636,7 @@ documents look nice</a> (but it's a lot of work).</p>
     <li> Avoid the phrase "it has been shown"; if you have nothing more specific
     to say about it (e.g., <b>who</b> showed it), then just remove it.  It's an
     agentless appeal to authority.
+
     <li> If British and American English use different words, you
     should typically prefer the American ("elevator", "stroller",
     "diaper", "truck").  The exception is when this could lead to
@@ -634,7 +648,9 @@ documents look nice</a> (but it's a lot of work).</p>
     and "cookie" (not "biscuit").  Most of these examples will not be
     relevant in academic writing, but "factoid" is one notable
     example.  British speakers view it as something that
-    is <b>untrue</b>.  Try to avoid it if possible.
+    is <b>untrue</b>.  Try to avoid it if possible.  (I learned about this <a
+     href="../docs/2014_emnlp_qb_rnn.pdf">too late</a> from <a
+     href="http://www.karlmoritz.com/">KMH</a>).
 
     <li> I will default to American spelling.  If you send me a
     nearly-complete draft using consistent British spelling, I will
@@ -873,23 +889,23 @@ important for you to take ownership of the paper, make sure that your
 reputation will be safe, and to keep your advisor and funders
 happy.</p>
 
-<ol>
-<li> Immediately (within one week), do the following:
-<ol>
-<li> Have your advisor give notes on the current draft of the paper
-<li> Add acknowledgements to anyone who helped you at any point while
-working on the paper.  Read an early draft, provided data, provided
-help, had interesting discussions with, etc.
-<li> Add an appropriate acknowledgement to the grant funding you.  For
-my students, find your project on
-my <a href="projects.html">projects</a> page, ask about anyone you're
-unsure of.
-<li> Turn the reviews into todo lists and order everything starting
-with easy / obvious things and going down the list to impossible /
-difficult / things you disagree with (call the items generated from
-the first two items TODO)
-<li> Make a list of relevant papers that have come out since you
-submitted (call this list CITE)
+<ol> <li> Immediately (within one week), do the following: <ol> <li> Have your
+advisor give notes on the current draft of the paper <li> Add acknowledgements
+to anyone who helped you at any point while working on the paper.  Read an early
+draft, provided data, provided help, had interesting discussions with, etc.
+<li> Add an appropriate acknowledgement to the grant funding you (use previous
+papers as an example).  For my students, find your project on my <a
+ href="projects.html">projects</a> page, ask about anything you're unsure of.
+<li> Turn the reviews into todo lists and order everything starting with easy /
+obvious things and going down the list to impossible / difficult / things you
+disagree with (call the items generated from the first two items TODO)
+
+  <li> Make a list of relevant papers that have come out since you submitted
+(call this list CITE) </li>
+
+  <li> Move the paper to a public publications repo to make it easier for people
+to read drafts and make suggestions.</li>
+
 </ol>
 
 <li> Within two weeks, meet with your advisor to select:
