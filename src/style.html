@@ -523,7 +523,7 @@ documents look nice</a> (but it's a lot of work).</p>
 
   <ol>
     <li> Put mentions of words in quotes and topics (e.g., from a
-    topic model) in underline.
+    topic model) in underline (topic macro).
 
       <pre>
         We wanted to understand why the \underline{research} topic has
@@ -551,6 +551,14 @@ documents look nice</a> (but it's a lot of work).</p>
   fonts.  (You don't have to do it, but if you see me doing it, that's why; you
   don't have to worry about it / correct it.)
 
+    <li> Put features (for supervised learning) in monospaced fonts
+    (feat macro).
+
+    <pre>
+      We the number of words in a document (e.g., \texttt{doclen:13})
+      is the final feature.
+    </pre>
+    
     <li> If it's allowed (ICML 2013 didn't, for instance), use the
     "times" package for serif fonts.
 
@@ -594,6 +602,13 @@ documents look nice</a> (but it's a lot of work).</p>
 <h3>Word choice</h3>
 
   <ol>
+    <li> Never use the word "performance".  It's likely a stand-in for
+    something else (e.g., "accuracy", "latency", or "F1").  Say what
+    you actually mean.</li>
+    <li> Avoid "perform an X".  X is likely a noun form of a
+    verb.  Just use that verb.  Don't "perform a split" or "perform a
+    cross-validation" or "perform a song".  Just "split",
+    "cross-validate", or "sing".
     <li> Use "first" rather than "firstly" (same for second, third, etc.).
     <li> Use "unlike" rather than "different from".
     <li> Never use "utilize"; always use "use".  Corollary: prefer "usage" over
@@ -602,6 +617,8 @@ documents look nice</a> (but it's a lot of work).</p>
     <li> You can always delete "this means".
     <li> You can always delete "it turns out that".
     <li> You can always replace "in order to" with "to".
+    <li> You can always delete "we find that".
+    <li> You can always replace "to do this we" with "we".
     <li> Use "while" rather than "whereas".
     <li> Don't say "it is well known"; either cite or just state the fact.
     <li> Prefer "toward" over "towards".
@@ -620,16 +637,18 @@ documents look nice</a> (but it's a lot of work).</p>
     to say about it (e.g., <b>who</b> showed it), then just remove it.  It's an
     agentless appeal to authority.
 
-    <li> If British and American English use different words, you should
-    typically prefer the American ("elevator", "stroller", "diaper", "truck").
-    The exception is when this could lead to confusion when one language's term
-    is ambiguous.  In those cases, use the version that removes ambiguity.  As a
-    consequence, use the British terms "trousers" (not "pants"), "crisps" (not
-    "chips"), and "cashpoint" (not "ATM"), but use the American terms "pacifier"
-    (not "dummy"), "gasoline" (not "petrol"), "fries" (not "chips"), and
-    "cookie" (not "biscuit").  For example, this means you should avoid the term
-    "<i>factoid</i>" question answering, as it British English it means something
-    that is false.  (I learned about this <a
+    <li> If British and American English use different words, you
+    should typically prefer the American ("elevator", "stroller",
+    "diaper", "truck").  The exception is when this could lead to
+    confusion when one language's term is ambiguous.  In those cases,
+    use the version that removes ambiguity.  As a consequence, use the
+    British terms "trousers" (not "pants"), "crisps" (not "chips"),
+    and "cashpoint" (not "ATM"), but use the American terms "pacifier"
+    (not "dummy"), "gasoline" (not "petrol"), "fries" (not "chips"),
+    and "cookie" (not "biscuit").  Most of these examples will not be
+    relevant in academic writing, but "factoid" is one notable
+    example.  British speakers view it as something that
+    is <b>untrue</b>.  Try to avoid it if possible.  (I learned about this <a
      href="../docs/2014_emnlp_qb_rnn.pdf">too late</a> from <a
      href="http://www.karlmoritz.com/">KMH</a>).
 
@@ -639,6 +658,8 @@ documents look nice</a> (but it's a lot of work).</p>
     pays off).  If you use Indian or Canadian spelling, experience has
     shown that I will turn it into American spelling as I edit (sorry,
     I just can't keep the intermediate cases straight).
+
+    <li> In academic writing, avoid contractions.
 
   </ol>
 
@@ -775,7 +796,7 @@ you to write a better paper overall.</p>
 
 <p>Moreover, good error analysis
 can <a href="http://socleopard.blogspot.com/2014/09/error-analysis-of-week-ratnaparkhi-on.html">improve
-your performance</a>.</p>
+your model</a>.</p>
 
 <h3>Writing an Author Response Document</h3>
 
