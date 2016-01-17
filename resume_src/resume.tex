@@ -136,33 +136,53 @@
 }
 }
 
+\newcommand{\colabgrant}[8]{
+
+\headedsubsection{#1}{#2--#3 (#4)} { % title, start date, end date, source
+	\inlineheadsection{Investigators:}{#5}
+	\vspace{1.2em}
+	\inlineheadsection{Award:}{\$#6 (Share: \$#7)}
+	\vspace{1.2em}
+	\inlineheadsection{Collaboration:}{#8}
+	\vspace{1.2em}
+}
+}
+
+
 \headedsection{Active Funding}{}{
 
-% Add thyme grant
+\colabgrant{eTASC: Empirical Evidence for a Theoretical Approach to
+  Semantic Components}{12/2015}{11/2018}{\textsc{dtra}}{Martha Palmer
+  (\textsc{pi}), Laura Michaelis (\textsc{co-pi}) and Jordan
+  Boyd-Graber (\textsc{co-pi})}{1,250,000}{200,000}{Brandeis, Princeton,
+Stanford}
 
-\grant{eTASC: Empirical Evidence for a Theoretical Approach to
-  Semantic Components}{12/2015}{11/2018}{\textsc{darpa
-    lorelei}}{Jordan Boyd-Graber (\textsc{co-pi})}{750,000}{200,000}
+\colabgrant{Temporal Relation Discovery for Clinical
+  Text}{9/2015}{9/2018}{\textsc{nih}}{Martha Palmer (\textsc{pi}) and
+  Jordan Boyd-Graber (\textsc{co-pi})}{531,328}{76,896}{Harvard,
+  University of Alabama (Only Colorado portion shown)}
 
-\grant{Multilingual Interactive Topic Modeling}{8/2015}{7/2019}{\textsc{darpa lorelei}}{Jordan Boyd-Graber (\textsc{pi})}{426,654}{325,000}
-
-Collaborative grant from Rayethon BBN (prime) with University of
+\colabgrant{Multilingual Interactive Topic
+  Modeling}{8/2015}{7/2019}{\textsc{darpa lorelei}}{Jordan Boyd-Graber
+  (\textsc{pi}) and Mans Hulden (\textsc{co-pi})}{426,654}{325,000}{
+Rayethon BBN (prime) with University of
 Maryland, Johns Hopkins University, and University of Washington (only
-Colorado portion shown)
+Colorado portion shown)}
 
-\grant{Scaling Insight into Science: Assessing the value and effectiveness of machine \\ assisted classification within a statistical system}{8/2014}{7/2016}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi})}{195,000}{195,000}
+\colabgrant{Scaling Insight into Science: Assessing the value and effectiveness of machine \\ assisted classification within a statistical system}{8/2014}{7/2017}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi})}{195,000}{195,000}{
+University of Chicago and American Institutes for
+Research (only Colorado portion shown)}
 
-Collaborative grant with University of Chicago and American Institutes for
-Research (only Colorado portion shown)
+\colabgrant{Closing the User-Model Loop for Understanding Topics in
+  Large Document \\ Collections\footnote{After I moved to Colorado,
+    Leah Findlater assumed the role of PI to enable a new subcontract
+    to Colorado; the original grant as awarded is provided
+    here.}}{8/2014}{7/2018} {\textsc{nsf}}{Jordan Boyd-Graber
+  (\textsc{pi}) and Leah Findlater
+  (\textsc{co-pi})}{650,000}{325,000}{Brigham
+  Young University and University of Maryland (only Maryland portion shown)}
 
-\grant{Closing the User-Model Loop for Understanding Topics in Large Document \\ Collections\footnote{After I moved to Colorado, Leah Findlater assumed the role of PI to enable a new subcontract to Colorado; the original grant as awarded is provided here.}}{8/2014}{7/2018} {\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi}) and Leah Findlater (\textsc{co-pi})}{650,000}{325,000}
-
-Collaborative grant with Brigham Young University and University of Maryland
-(only Maryland portion shown)
-
-\grant{Bayesian Thinking on Your Feet---Embedding Generative Models in \\ Reinforcement Learning for Sequentially Revealed Data}{8/2013}{7/2016}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi}) and Hal Daum\'e III (\textsc{co-pi})}{500,000}{250,000}
-
-Grant located at University of Maryland
+\colabgrant{Bayesian Thinking on Your Feet---Embedding Generative Models in \\ Reinforcement Learning for Sequentially Revealed Data}{8/2013}{7/2016}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi}) and Hal Daum\'e III (\textsc{co-pi})}{500,000}{250,000}{Grant located at University of Maryland}
 
 }
 
@@ -482,7 +502,14 @@ Grant located at University of Maryland
 \begin{enumerate*}
 	\item {\bf Interactive Topic Modeling and The US Tea Party}: New Frontiers of Automated Content Analysis in the Social Sciences, 2015 (Zurich, CH)
 	\item {\bf Thinking on your Feet: Reinforcement Learning for Incremental
-Language Tasks}: Colorado School of Mines, 2014 (Golden, CO); Harvey Mudd College, 2014 (Claremont, CA); California Institute of Technology, 2014 (Pasadena, CA); Front Range NLP (Boulder, CO); EECS Colloquium, Colorado School of Mines, 2014 (Golden, CO); Brigham Young University, 2014 (Provo, UT); Peking University, 2014 (Beijing, PRC); Darmstadt University, 2014 (Darmstadt, Germany); Hong Kong University of Science and Technology, 2014 (Hong Kong); Cornell University, 2015 (Ithaca, NY)
+Language Tasks}: Colorado School of Mines, 2014 (Golden, CO); Harvey
+Mudd College, 2014 (Claremont, CA); California Institute of
+Technology, 2014 (Pasadena, CA); Front Range NLP (Boulder, CO); EECS
+Colloquium, Colorado School of Mines, 2014 (Golden, CO); Brigham Young
+University, 2014 (Provo, UT); Peking University, 2014 (Beijing, PRC);
+Darmstadt University, 2014 (Darmstadt, Germany); Hong Kong University
+of Science and Technology, 2014 (Hong Kong); Cornell University, 2015
+(Ithaca, NY); Yandex School of Data Science (Berlin, Germany)
 	\item {\bf Big Data Analysis with Topic Models: Human
             Interaction, Streaming Computation, and Social Science
             Applications}: University of Colorado Boulder Computer
