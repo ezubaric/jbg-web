@@ -200,7 +200,17 @@ documents look nice</a> (but it's a lot of work).</p>
       sure that if a reader does this they will get a sense of what
       the paper is about and the clear takeaway from each figure.
       <li> Try to use full sentences in the caption.
-      <li> Use raster / vector formats as appropriate.
+      <li> Use raster / vector formats as appropriate.  In general, photos
+      should be wavlet formats (jpg), hand-drawn cartoons, logos, or images with
+      alpha channels should be low-pallete rasters (png), and everything else
+      should be a vector format (pdf/eps).  This is another way that LaTeX is
+      far superior to Word, where it's much harder to inser graphics without
+      vector formats being lost.  (Omnigraffle and ggplot2 by default create
+      vector pdfs; another reason to use them!)
+
+        <CENTER>
+          <IMG SRC="../images/vector_raster.gif" ALT="Vector vs. Raster Images">
+        </CENTER>
 
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
@@ -558,7 +568,7 @@ documents look nice</a> (but it's a lot of work).</p>
       We the number of words in a document (e.g., \texttt{doclen:13})
       is the final feature.
     </pre>
-    
+
     <li> If it's allowed (ICML 2013 didn't, for instance), use the
     "times" package for serif fonts.
 
