@@ -10,7 +10,7 @@ kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
 kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
 
-global_replace = {}
+global_replace = defaultdict(str)
 
 def remove_html_chars(text):
     for ii in kHTML_CHARS:
@@ -154,7 +154,6 @@ class IndexElement:
       val = ii.split("|")[1].strip()
       if key == "Author":
         for jj in val.split(" and "):
-          print "Author: ", jj
           self.fields["Authors"].append(jj)
       self.fields[key].append(val)
 
@@ -217,7 +216,9 @@ class IndexElement:
       link_string = "\\noindent Links:\n\\begin{itemize}\n"
       for ii in self.fields["Link"]:
           title, location = ii.split("*")
-          print link_string, ii
+
+          if not location.startswith("http"):
+              location = "%s%s" % (url, location)
           link_string += "\\item \\href{%s}{%s} [\url{%s}]\n" % \
             (location, title, location)
       link_string += "\n\\end{itemize}\\"
@@ -253,7 +254,6 @@ class IndexElement:
     return remove_html_chars(text)
 
   def latex(self, url="", acceptance=True):
-    print(self.fields)
     s = self.author_string(True)
     if "Title" in self.fields:
       if "Url" in self.fields and url:
@@ -307,12 +307,10 @@ class IndexElement:
 
     for ii in self.fields["Link"]:
       text, url = ii.split("*")
-      if url.startswith("http://"):
+      if url.startswith("http"):
         s += ' [<a href="%s">%s</a>]' % (url, text)
       else:
         s += ' [<a href="../%s">%s</a>]' % (url, text)
-
-		# print self.fields["Title"], len(self.fields["Bibtex"]), len(self.fields["Authors"]), len(self.fields["Year"])
 
     div_name = str(hash("".join("".join(x) for x in self.fields.values()) + str(section)))
     if bibtex and len(self.fields["Bibtex"]) > 0:
@@ -345,7 +343,6 @@ class IndexElement:
     """
     Create keys that can be sorted
     """
-    # print "Values:", criteria, self.fields[criteria]
 
     try:
       year = -int(self.fields["Year"][0])
@@ -393,7 +390,6 @@ class WebsiteWriter:
     keys = [x for x in self._files.keys() if x != "Home"]
     keys += self._indexed.keys()
     keys = sorted(keys, key=lambda s: s.lower())
-    print(keys)
 
     for ii in keys:
       if ii in self._files:
@@ -406,9 +402,12 @@ class WebsiteWriter:
     return s
 
   def add_raw(self, path, prefix):
+      contents = []
       for ii in glob(path):
-          self.write_file(self._output + ii, "UNTITLED", ii, prefix,
-                          use_header=False, use_footer=False)
+          val = self.write_file(self._output + ii, "UNTITLED", ii, prefix,
+                                use_header=False, use_footer=False)
+          contents.append(val)
+      return contents
 
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
                 default_sort="Year"):
@@ -418,9 +417,7 @@ class WebsiteWriter:
       # Don't go through backup files
       if "~" in ii or "#" in ii or "." in ii:
         continue
-      print "Indexing", ii
       item = IndexElement(open(ii).read())
-      print item.fields
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue
@@ -435,7 +432,6 @@ class WebsiteWriter:
     self._indexed[name.lower()] = index
     self._criteria[name.lower()] = criteria
     self._default_sort[name.lower()] = default_sort.lower()
-    print("Criteria now %s" % str(self._criteria.keys()))
 
   def write_index(self, index, bibtex=True):
     print("Creating index for %s from %s" % (index, str(self._criteria.keys())))
@@ -456,7 +452,6 @@ class WebsiteWriter:
       lookup = {}
       for jj in self._indexed[index.lower()]:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
-        print "Contrib (%s): " % index, jj, contrib
         keys += contrib
         for kk in contrib:
           assert not kk in lookup, "%s already found as %s" % (str(kk), lookup[kk].txt())
@@ -492,7 +487,6 @@ class WebsiteWriter:
       html_out = ""
       old = None
       for jj in keys:
-        print(jj)
         if old != jj[0]:
           if jj[0] == "":
               continue
@@ -500,6 +494,7 @@ class WebsiteWriter:
             latex_out.write("\n\\end{enumerate}\n}")
             html_out += "\t</ul>"
             o.write(html_out)
+            global_replace["%s:%s" % (index, txt_name)] += html_out
             html_out = ""
           if not "*" in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
@@ -522,8 +517,8 @@ class WebsiteWriter:
         text_out.write(lookup[jj].txt(url=self._url))
 
         html_out += "\t\t<li>" + lookup[jj].html(bibtex, self._url, old)
-        global_replace["%s:%s" % (index, txt_name)] = html_out
         old = jj[0]
+      global_replace["%s:%s" % (index, txt_name)] += html_out
       o.write(html_out)
 
       latex_out.write("\n\\end{enumerate}")
@@ -573,7 +568,8 @@ class WebsiteWriter:
     o = open(filename, 'w')
     o.write(contents)
     o.close()
-    print(global_replace.keys())
+
+    return contents
 
   def write(self):
     try:
