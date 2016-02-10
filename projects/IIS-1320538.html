@@ -47,22 +47,48 @@ function unhide(divID) {
 
 <a name="overview"><h2>Overview</h2></a>
 
-<p>The goal of this project is to create algorithms that can “think on their feet”, i.e. to incrementally process input and to decide when enough information has been received to act on those data.  This research requires innovation in two areas: content models (to make accurate predictions, even when not all available information is available) and policies (to know when to trust the outputs of the content models---or know they won't get better---versus waiting for more information).</p>
+<p>The goal of this project is to create algorithms that can “think on their
+feet”, i.e. to incrementally process input and to decide when enough information
+has been received to act on those data.  This research requires innovation in
+two areas: content models (to make accurate predictions, even when not all
+available information is available) and policies (to know when to trust the
+outputs of the content models---or know they won't get better---versus waiting
+for more information).</p>
 
 
 
-<p>We are applying these models to two problems: synchronous machine translation (or "machine simultaneous interpretation") and question answering (when questions are revealed one piece at a time).</p>
+<p>We are applying these models to two problems: synchronous machine translation
+(or "machine simultaneous interpretation") and question answering (when
+questions are revealed one piece at a time).</p>
 
 
 
-<p>Synchronous machine translation is when a sentence is being produced one word at a time in a foreign language and we want to produce a translation in English simultaneously (i.e., with as little delay between a foreign language word and its English translation). In the machine translation setting, the content model predicts what words are going to appear in the input stream, even though they might not have been seen yet.  This is particularly important in verb-final languages like German or Japanese, where an English translation can barely begin until the verb is seen. For the simultaneous translation problem, our content model must predict unseen elements of the sentence (e.g., the main verb in German and Japanese, or relative clauses in Japanese, or post-positions in Japanese). The job of the policy is to decide when to trust the content prediction. It must learn to balance incorrect translation versus timely translations, and must use those predictions to translate the sentence.</p>
+<p>Synchronous machine translation is when a sentence is being produced one word
+at a time in a foreign language and we want to produce a translation in English
+simultaneously (i.e., with as little delay between a foreign language word and
+its English translation). In the machine translation setting, the content model
+predicts what words are going to appear in the input stream, even though they
+might not have been seen yet.  This is particularly important in verb-final
+languages like German or Japanese, where an English translation can barely begin
+until the verb is seen. For the simultaneous translation problem, our content
+model must predict unseen elements of the sentence (e.g., the main verb in
+German and Japanese, or relative clauses in Japanese, or post-positions in
+Japanese). The job of the policy is to decide when to trust the content
+prediction. It must learn to balance incorrect translation versus timely
+translations, and must use those predictions to translate the sentence.</p>
 
+<p>For question answering, we use a specially designed dataset that challenges
+humans: a trivia game called quiz bowl.  These questions are written so that
+they can be interrupted by someone who knows more about the answer; that is,
+harder clues are at the start of the question and easier clues are at the end of
+the question.  The content model produces guesses of what the answer could be
+and the policy must decide when to accept the guess.</p>
 
-
-<p>For question answering, we use a specially designed dataset that challenges humans: a trivia game called quiz bowl.  These questions are written so that they can be interrupted by someone who knows more about the answer; that is, harder clues are at the start of the question and easier clues are at the end of the question.  The content model produces guesses of what the answer could be and the policy must decide when to accept the guess.</p>
-
-
-<p>Quiz bowl is a fun game with excellent opportunities for outreach, but it is also related to core challenges in natural language processing: classification (sorting inputs and making predictions), discourse (using pragmatic clues to guess what will come next), and coreference resolution (knowing which entities are discussed from oblique mentions).</p>
+<p>Quiz bowl is a fun game with excellent opportunities for outreach, but it is
+also related to core challenges in natural language processing: classification
+(sorting inputs and making predictions), discourse (using pragmatic clues to
+guess what will come next), and coreference resolution (knowing which entities
+are discussed from oblique mentions).</p>
 
 <p><small>&lt;&lt; <a href="#">back to top</a></small></p>
 
@@ -154,9 +180,6 @@ Undergraduate student, Computer Science (BS 2014, Maryland)</td>
 <a name="software"><h2>Software</h2></a>
 
 <ul>
-
-
-
   <li> <a
   href="http://www.cs.umd.edu/~aguha/data/qbcoref.rar">Interface for
   crowdsourced coreference annotation</a>
@@ -175,16 +198,8 @@ Undergraduate student, Computer Science (BS 2014, Maryland)</td>
 
 <a name="media"><h2>Media</h2></a>
 
-<iframe width="280" height="158" src="https://www.youtube.com/embed/LqsUaprYMOw" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="280" height="158" src="https://www.youtube.com/embed/kTXJCEvCDYk" frameborder="0" allowfullscreen></iframe>
-
 <ul>
-    <li> <a href="http://www.diamondbackonline.com/news/umd-researchers-computer-beats-jeopardy-star-ken-jennings-at-trivia/article_133f05f4-75d9-11e5-9c00-8718fca7f4ec.html">UMD researchers' computer beats 'Jeopardy!' star Ken Jennings at trivia</a> (Diamondback)
-    <li> <a href="http://terp.umd.edu/what-is-a-jeopardy-worthy-computer#.Vh2ts7R_NBc">Question-Answering System Built by UMD, UC Boulder Bests Ken Jennings</a> (Terp)
-    <li> <a href="https://www.umiacs.umd.edu/about-us/news/computerized-question-answering-system-built-umd-uc-boulder-bests-%E2%80%9Cjeopardy%E2%80%9D-champion">Computerized Question-Answering System Built by UMD, UC Boulder Bests “Jeopardy!” Champion</a> (UMIACS)
-    <li> <a href="https://languagescience.umd.edu/news/question-which-language-scientists-designed-first-competitive-quiz-bowl-playing-nlp-system">Question: Which language scientists designed first competitive quiz bowl playing NLP system?</a> (UMD Language Science)
-  <li> <a href="http://www.colorado.edu/cs/2015/07/23/professor%E2%80%99s-quiz-bowl-robot-goes-head-head-humans">Writeup on CS webpage</a>
+~~Media:Thinking on Your Feet~~
 </ul>
 
 <h2>Acknowledgments</h2>
