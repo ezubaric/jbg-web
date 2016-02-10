@@ -22,6 +22,12 @@ for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING
 	   done
 done
 
+for SUBDIR in docs images downloads qb style projects
+        do
+            mkdir -p ~/public_html/$SUBDIR
+            cp $SUBDIR/*.* ~/public_html/$SUBDIR
+done
+
 python python/site.py `git show -s --format=%ci`
 
 if [ ${#CHANGES} -gt 0 ]
@@ -42,12 +48,6 @@ rm pubs/*.*
 rm pubs/#*#
 rm pubs/*~
 mv *.pdf docs
-
-for SUBDIR in docs images downloads teaching qb projects style
-        do
-            mkdir -p ~/public_html/$SUBDIR
-            cp $SUBDIR/*.* ~/public_html/$SUBDIR
-done
 
 # Clean up cruft
 rm */*~
