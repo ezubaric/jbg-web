@@ -35,7 +35,7 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         pdflatex resume_src/resume &> /dev/null
-        mv resume.pdf docs/resume.pdf
+        mv resume.pdf ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
             pdflatex $FILE &> /dev/null
