@@ -37,8 +37,15 @@ if [ ${#CHANGES} -gt 0 ]
    then
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
-        pdflatex resume_src/resume &> /dev/null
-        mv resume.pdf ~/public_html/docs
+        python python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
+        pdflatex resume_src/research &> /dev/null
+        bibtex research
+        for FILE in resume short_cv teaching service
+        do
+            echo $FILE
+            pdflatex resume_src/$FILE &> /dev/null
+        done
+        mv resume.pdf short_cv.pdf teaching.pdf service.pdf research.pdf ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
             pdflatex $FILE &> /dev/null

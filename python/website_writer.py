@@ -257,7 +257,10 @@ class IndexElement:
     s = self.author_string(True)
     if "Title" in self.fields:
       if "Url" in self.fields and url:
-          s += '{\\bf \href{%s/%s}{%s}}.  ' % (url, self.fields["Url"][0], self.fields["Title"][0])
+          if self.fields["Url"][0].startswith("http"):
+              s += '{\\bf \\href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
+          else:
+              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url, self.fields["Url"][0], self.fields["Title"][0])
       else:
           s += '{\\bf %s}.  ' % (self.fields["Title"][0])
     if "Booktitle" in self.fields:
