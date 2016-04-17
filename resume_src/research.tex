@@ -11,14 +11,20 @@
 \documentclass[11pt]{amsart}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{colortbl}
 \usepackage{wrapfig}
 \usepackage{epstopdf}
 \usepackage{nicefrac}
 \usepackage{url}
 
+
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
-\newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small #1}}}\vspace{.5cm}}
+\newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small
+        #1}}}\vspace{.5cm}}
+\providecommand{\blue}[1]{{\color{blue}{#1}}}
+\providecommand{\red}[1]{{\color{red}{#1}}}
+\providecommand{\green}[1]{{\color{green}{#1}}}
 
 \begin{document}
 
@@ -51,6 +57,10 @@ held-out likelihood were negatively correlated~\cite{chang-09b}! The topic
 modeling community (including me) had fetishized complexity at the expense of
 usability.
 
+\begin{center}
+\includegraphics[width=.5\linewidth]{images/prec_ll_4}
+\end{center}
+
 Since this humbling discovery, I've built topic models that are a collaboration
 between humans and computers.  The computer starts by proposing an organization
 of the data.  The user responds by separating confusing clusters, joining
@@ -67,6 +77,22 @@ trends, but the results were unpresentable because of a fatal flaw: one of the
 \textsc{nih} insiders~\cite{talley-11}. Our tools allow non-experts to fix such
 obvious problems (obvious to a human, that is), allowing machine learning
 algorithms to overcome the \emph{social} barriers that often hamper adoption.
+
+\begin{minipage}[b]{0.4\textwidth}
+\begin{tabular}{p{.9\textwidth}}
+	Topic Words (before) \\
+\hline
+ \red{bladder}, sci, \blue{spinal\_cord}, \blue{spinal\_cord\_injury}, \blue{spinal}, \red{urinary}, \red{urinary\_tract}, \red{urothelial},\blue{injury}, \blue{motor}, \blue{recovery}, \blue{reflex}, \blue{cervical}, \red{urothelium}, \blue{functional\_recovery} \\
+\end{tabular}
+\end{minipage}
+  \hfill
+\begin{minipage}[b]{0.4\textwidth}
+\begin{tabular}{p{.9\textwidth}}
+	Topic Words (after) \\
+\hline
+sci, \blue{spinal\_cord}, \blue{spinal\_cord\_injury}, \blue{spinal}, \blue{injury}, \blue{recovery}, \blue{motor}, \blue{reflex}, \red{urothelial}, \green{injured}, \blue{functional\_recovery}, \green{plasticity}, \green{locomotor}, \blue{cervical}, \green{locomotion}\\
+\end{tabular}
+\end{minipage}
 
 % Fix ``on the fly''
 
@@ -114,6 +140,15 @@ in the audience showed they caught on too.  (Later, when we played again against
 Ken Jennings,\footnote{\url{https://www.youtube.com/watch?v=kTXJCEvCDYk}} he sat
 in front of the dot products and our system did much better.)
 
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/boring_dot_products}
+  \end{minipage}
+  \hfill
+\begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/jennings_handshake}
+  \end{minipage}
+
+
 Advancing machine learning requires closer, more natural interactions.  However,
 we still require much of the user---reading distributions or dot
 products---rather than natural language interactions.  Document exploration
@@ -122,11 +157,11 @@ word clouds; deception detection systems should say \emph{why} a betrayal is
 imminent; and question answers should explain \emph{how} it knows Aaron Burr
 shot Alexander Hamilton. My work will complement machine learning's ubiquity
 with transparent, empathetic, and useful interactions with users.
-
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\small
+\small
 \bibliographystyle{resume_src/splncs03}
 %\bibliographystyle{unsrtnat}
 \bibliography{resume_src/journal-full,resume_src/jbg}
-
+\noindent\rule{4cm}{0.4pt}
 \end{document}
