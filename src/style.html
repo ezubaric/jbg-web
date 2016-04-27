@@ -334,7 +334,7 @@ documents look nice</a> (but it's a lot of work).</p>
       <pre>
 	\theta \sim \mbox{Dir}(\alpha)
       </pre>
-    <li> Don't use a pipe for given; make sure there's space around it
+    <li> Don't use a pipe (alone) for given; make sure there's space around it
       <pre>
 	p(a\, | \,b) = \frac{ \sim p(b\, | \,a) p(a)}{p(b)}
       </pre>
@@ -351,14 +351,21 @@ documents look nice</a> (but it's a lot of work).</p>
 	<li> Punctuate every equation as prose, treating it as a noun
 	</ol>
 
-    <li> Vector/matrix convention (stolen from Yoav Goldberg): Use bold upper
-       case letters to represent matrices and bold lower-case letters to
-       represent vectors.  Use subscripts to represent entries from those
+    <li> Vector/matrix convention (stolen from Yoav Goldberg):
+        <ol>
+          <li> Use bold upper
+       case Latin letters to represent matrices and bold lower-case Latin letters to
+       represent vectors.
+          <li> Use a semicolon to denote vector
+       concatenation.
+          <li> Use upper case un-bolded Latin letters for sets.
+          <li> Use lower case un-bolded Latin letters for scalars.
+          <li> Use lower case Greek letters for random variables (bolded or not
+        depending on whether it's a vector).
+          <li> Use subscripts to represent entries from those
        vectors and superscripts to identify different flavors (e.g., different times
        or layers).  In the rare case that you exponentiate vectors or matrices,
-       put them in parentheses first.  Use a semicolon to denote vector
-       concatenation.
-
+       put them in parentheses first.
         <!--- TODO: put in a table with examples of all of these --->
 
     </ol>
