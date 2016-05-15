@@ -2,7 +2,9 @@
 > ## Machine Learning
 > (CSCI 5622)
 > Syllabus, Fall 2015
+>
 > Jordan Boyd-Graber
+>
 http://cs.colorado.edu/~jbg/teaching/CSCI_5832/
 
 Description and Goals
