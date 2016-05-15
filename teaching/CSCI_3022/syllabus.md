@@ -5,14 +5,14 @@
 >
 > Jordan Boyd-Graber
 >
-http://cs.colorado.edu/~jbg/teaching/CSCI_5832/
+http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
 
 Description and Goals
 ========================
 
 Computers have made it possible, even easy, to collect vast amounts of data from a wide variety of sources. It is not always clear, however, how to use those data and how to extract useful information from data. This problem is faced in a tremendous range of scholarly, government, business, medical, and scientific applications.  The goal of this course is to review the principles of allowing machines to make sense of these data in a mathematically rigorous way.
 
-This course covers classification algorithms, regression algorithms, ranking algorithms, and unsupervised classification algorithms, using theoretical frameworks for proving learning bounds using VC dimension and Rademacher complexity.  Inference and solutions will focus on scalable, online frameworks such as stochastic gradient descent and perceptron learning.
+Introduces students to the tools, methods, and theory behind extracting statistical insights from data using computer science algorithms.  The course covers maximum likelihood algorithms, basic regression, implementing statistical tests on large datasets, and representing and manipulating data on a computer.
 
 Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the lab sessions (see below).
 
@@ -40,15 +40,21 @@ Preliminary Topics (Check webpage for current version)
 * Feature engineering, feature combination
 * Clustering
 * SVMs
-* Neural Networks
 
+Textbook
+-
+
+Think Stats by Allen B. Downey
+http://greenteapress.com/thinkstats2/
+
+The book is available free online.  We'll supplement this book with other readings from the web.
 
 Required Background
 ---
 
 Mathematical maturity: We will work extensively with probabilities and mathematical functions such as logarithms and differentiation.  You should be comfortable manipulating these concepts algebraically.  You should also be able to argue why mathematical statements are true through a rigorous proof.  This will be a very mathematical course.  You can satisfy this requirement by taking a proof-based math course (number theory, abstract algebra, etc.), discrete math, or a theoretical (proof-based) algorithms course.
 
-We will make extensive use of the Python programming language.  It is assumed that you know or will quickly learn how the program in Python.  Apart from a quick introduction, there will be no introduction to this skill-set (consider Ling 5200 if this is an issue).  You will need to be able to understand object oriented programming in Python.  You can satisfy this requirement by completing a programming course that uses Python and object-oriented techniques.
+We will make extensive use of the Python 3 programming language.  It is assumed that you know or will quickly learn how the program in Python.  There will be no introduction to this skill-set.  You will need to be able to understand object oriented programming in Python.  You can satisfy this requirement by completing a programming course that uses Python and object-oriented techniques.
 
 The computer-based aspects of this course will be oriented toward Unix-like operating systems (Linux, OS X).  It may be possible to complete the course using other operating systems, but you will be responsible for troubleshooting any issues you encounter.
 
