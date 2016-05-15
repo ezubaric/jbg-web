@@ -8,7 +8,7 @@ CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_s
 rm python/*.pyc
 
 rm -rf ~/public_html/teaching/*
-for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832 DEEP CSCI_5622
+for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832 DEEP CSCI_5622 CSCI_3022
         do
            mkdir -p ~/public_html/teaching/$CLASS
            cp teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
