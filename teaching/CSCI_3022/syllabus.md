@@ -7,16 +7,14 @@
 >
 http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
 
-Description and Goals
+Description and Outcomes
 ========================
 
 Computers have made it possible, even easy, to collect vast amounts of data from a wide variety of sources. It is not always clear, however, how to use those data and how to extract useful information from data. This problem is faced in a tremendous range of scholarly, government, business, medical, and scientific applications.  The goal of this course is to review the principles of allowing machines to make sense of these data in a mathematically rigorous way.
 
 Introduces students to the tools, methods, and theory behind extracting statistical insights from data using computer science algorithms.  The course covers maximum likelihood algorithms, basic regression, implementing statistical tests on large datasets, and representing and manipulating data on a computer.
 
-Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the lab sessions (see below).
-
-By the end of this course, you’ll be able to take a problem and analyze it to determine which machine learning techniques are appropriate for solving the problem, how to prepare data to use that solution, apply the solution, and to evaluate the results.  For the most common machine learning techniques, you’ll also be able to implement solutions in Python.
+By the end of this course, you’ll be able to take a problem and analyze it to determine which machine learning techniques are appropriate for solving the problem, how to prepare data to use that solution, apply the solution, and to evaluate the results.  For the most common data science techniques, you’ll also be able to implement solutions in Python.
 
 Approach
 ========================
@@ -25,7 +23,9 @@ The class will meet twice a week.  Before each class, I will post a video lectur
 
 Halfway through the course, students will complete an in-class midterm that will test high-level understanding of concepts.
 
-Preliminary Topics (Check webpage for current version)
+Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the lab sessions.
+
+Topics / Schedule (Check webpage for dates)
 -------------------
 
 * Probability basics
@@ -40,6 +40,15 @@ Preliminary Topics (Check webpage for current version)
 * Feature engineering, feature combination
 * Clustering
 * SVMs
+
+Homeworks
+-
+
+* Extracting semi-structured data and representing it on a computer
+* Estimating discrete and continuous statistical parameters from data
+* Statistical tests from data
+* Continuous Regression
+* Classification
 
 Textbook
 -
@@ -80,6 +89,8 @@ Homework assignments due are in total 30% of your final grade. Assignments are d
 Assignments are due on the class day indicated on the course web page (Thursday, 11:55 Mountain time). Late policy: each person has five free late days to be used, no questions asked, during the course (late days can only be used in increments of one day; if your assignment is three minutes or three hours late, that counts as one late day).  When turning in a late assignment, clearly mark at the top that you are using a late day.  After you use your late days, late assignments will get half credit.  Assignments more than two days late may not be graded.
 
 Assignments are not worth the same number of points: some will be more difficult than others.
+
+Assignments will be turned in through Moodle and graded on correctness and explanation.  Correctness will be graded automatically, so it is particularly important that your code follow the specifications outlined in each assignment.  Explanation will be graded by hand based on the clarity of how you describe your solution.
 
 Asking Questions about Programming Problems
 -
