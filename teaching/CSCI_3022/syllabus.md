@@ -1,14 +1,12 @@
 
-Machine Learning
-(CSCI 5622)
-Syllabus, Fall 2015
-
-
-Jordan Boyd-Graber
-ECCS 111B
-Jordan.Boyd.Graber@colorado.edu
+> ## Machine Learning
+> (CSCI 5622)
+> Syllabus, Fall 2015
+> Jordan Boyd-Graber
 http://cs.colorado.edu/~jbg/teaching/CSCI_5832/
-1. Description and Goals
+
+Description and Goals
+========================
 
 Computers have made it possible, even easy, to collect vast amounts of data from a wide variety of sources. It is not always clear, however, how to use those data and how to extract useful information from data. This problem is faced in a tremendous range of scholarly, government, business, medical, and scientific applications.  The goal of this course is to review the principles of allowing machines to make sense of these data in a mathematically rigorous way.
 
@@ -18,101 +16,104 @@ Finally, it is required that you have regular access to a computer and an Intern
 
 By the end of this course, you’ll be able to take a problem and analyze it to determine which machine learning techniques are appropriate for solving the problem, how to prepare data to use that solution, apply the solution, and to evaluate the results.  For the most common machine learning techniques, you’ll also be able to implement solutions in Python.
 
-2. Approach
+Approach
+========================
+
 The class will meet twice a week.  Before each class, I will post a video lecture introducing the material.  Students are responsible for watching the videos before class.  During the traditional class time, we will have quizzes over the material, discuss the material, and use hands-on lab sessions in groups to walk through algorithms to make sure everyone understands the techniques we are discussing.
 
 Halfway through the course, students will complete an in-class midterm that will test high-level understanding of concepts.
-2.1 Preliminary Topics (Check webpage for current version)
 
-Logistic Regression
-Feature Engineering
-PAC Learnability
-Rademacher Complexity
-VC Dimension
-Support Vector Machines
-Kernel Methods
-Boosting
-Online Algorithms
-Regression
-K-Means
-Topic Models
-Inference for Probabilistic Models
+Preliminary Topics (Check webpage for current version)
+-------------------
 
-2.2 Required Background
+* Probability basics
+* Conditional probabilities
+* Sampling from continuous distributions
+* Sampling from discrete distributions
+* Maximum likelihood estimation
+* z-tests and t-tests
+* Chi-Square Tests
+* Linear Regression
+* Logistic Regression
+* Feature engineering, feature combination
+* Clustering
+* SVMs
+* Neural Networks
+
+
+Required Background
+---
 
 Mathematical maturity: We will work extensively with probabilities and mathematical functions such as logarithms and differentiation.  You should be comfortable manipulating these concepts algebraically.  You should also be able to argue why mathematical statements are true through a rigorous proof.  This will be a very mathematical course.  You can satisfy this requirement by taking a proof-based math course (number theory, abstract algebra, etc.), discrete math, or a theoretical (proof-based) algorithms course.
 
 We will make extensive use of the Python programming language.  It is assumed that you know or will quickly learn how the program in Python.  Apart from a quick introduction, there will be no introduction to this skill-set (consider Ling 5200 if this is an issue).  You will need to be able to understand object oriented programming in Python.  You can satisfy this requirement by completing a programming course that uses Python and object-oriented techniques.
 
 The computer-based aspects of this course will be oriented toward Unix-like operating systems (Linux, OS X).  It may be possible to complete the course using other operating systems, but you will be responsible for troubleshooting any issues you encounter.
-
-3. Grading
+
+Grading
+-
+
 Components of the final grade are as follows:
 
-
 Percentage
-Homework
-30%
-Midterm
-25%
-Final
-25%
-Quizzes
-10%
-Participation
-10%
-
-
-100%
+* Homework 30%
+* Midterm 25%
+* Final 25%
+* Quizzes 10%
+* Participation 10%
 
 It is possible to earn extra credit by going above and beyond the expectations of the assignment.
 
-There are two sections of the course: a graduate and undergraduate section.  The course requirements will be the same except for the following:
-undergraduates will have a final exam, graduates will have a final project
-undergraduate final letter grades will be assigned independently
-undergraduates may participate in a final project to replace a low midterm score; graduates may take the final exam to replace a low midterm score.
-3.1 Assignments
+Assignments
+=
+
 Homework assignments due are in total 30% of your final grade. Assignments are designed to help you learn the material, so please use them for that! You are allowed to collaborate with others (as many people as you'd like), but you must turn in your own assignment. For example, you could work together in a group, but each person must write up their solutions individually.
 
-Assignments are due on the class day indicated on the course web page (Friday, 11:55 Mountain time). Late policy: each person has five free late days to be used, no questions asked, during the course (late days can only be used in increments of one day; if your assignment is three minutes or three hours late, that counts as one late day).  When turning in a late assignment, clearly mark at the top that you are using a late day.  After you use your late days, late assignments will get half credit.  Assignments more than two days late may not be graded.
-
+Assignments are due on the class day indicated on the course web page (Thursday, 11:55 Mountain time). Late policy: each person has five free late days to be used, no questions asked, during the course (late days can only be used in increments of one day; if your assignment is three minutes or three hours late, that counts as one late day).  When turning in a late assignment, clearly mark at the top that you are using a late day.  After you use your late days, late assignments will get half credit.  Assignments more than two days late may not be graded.
 
 Assignments are not worth the same number of points: some will be more difficult than others.
-3.1.1 Asking Questions about Programming Problems
-When you ask for help with programming, make sure to follow these guidelines:
-include a minimal (simple as possible) example that can replicate your problem;
-provide the inputs that replicate your problem (again, this should be as simple as possible; sending multi-megabyte files is usually not minimal);
-say exactly what you did (the exact command line / function call used);
-what you expected to see;
-what you got instead (include error messages and any output); and
-what versions of various resources you're using (python, numpy, scipy, repository version).
-3.2 Midterm
-There will be an in-class midterm. The midterm will cover material in the previous lectures and will be open notes (but closed book).
-3.3 Final Project
-The project will be in a group of three to four graduate students focusing on a shared problem.  This project will have three stages:
-an initial proposal, explaining what they want to do
-a first-step deliverable (due three quarters into the semester) to make sure students are grappling with the problem, e.g. a transformation of the data, performing a preprocessing step, or creating a baseline for comparison
-a final project report and presentation
 
-Smaller groups are strongly discouraged but not explicitly disallowed.
+Asking Questions about Programming Problems
+-
+
+When you ask for help with programming, make sure to follow these guidelines:
+* include a minimal (simple as possible) example that can replicate your problem; provide the inputs that replicate your problem (again, this should be as simple as possible; sending multi-megabyte files is usually not minimal);
+* say exactly what you did (the exact command line / function call used);
+* what you expected to see;
+* what you got instead (include error messages and any output); and
+* what versions of various resources you're using (python, numpy, scipy, repository version).
+
+Midterm
+=
+
+There will be an in-class midterm. The midterm will cover material in the previous lectures and will be open notes (but closed book).
 
 Final Exam
+-
 
 The final exam will be a take home exam similar to the midterm but comprehensive over the entire course’s content.
 
-3.5 Class Participation
-Each class is critical to your learning experience, and I expect you to come to class prepared (having read all assigned readings, ready to engage). I also expect active participation, not passive reception of the material. Your energy in contributing to class discussions and hands-on exercises will make this class an enjoyable experience for all of us.
+Class Participation
+-
 
-We will also be using the online learning platform Piazza.  You can get credit for participation by answering and asking useful questions on that platform.  Ideally you should be participating both online and in class, however.  If you are in the CAETE version of the course, you are required to ask and answer questions on Piazza to obtain participation credit.
+Each class is critical to your learning experience, and I expect you to come to class prepared (having read all assigned readings, viewed the lecture, ready to engage). I also expect active participation, not passive reception of the material. Your energy in contributing to class discussions and hands-on exercises will make this class an enjoyable experience for all of us.
 
-3.6 Quizzes
-Randomly throughout the course, there will be in-class quizzes.  These are designed to be easy and to reward doing the reading and attending class.  I realize that not everyone can attend every class, so I may elect to drop lower quiz scores.  Note that this syllabus does not mention the total number of quizzes or the number of scores that should be dropped.  You should not use information in Moodle or past iterations of the course as an attempt to guess what will happen with quizzes.  Students who have done this in the past have been sorely disappointed, as my goal is to make quizzes unpredictable.
-4. Academic Integrity
+We will also be using the online learning platform Piazza.  You can get credit for participation by answering and asking useful questions on that platform.  Ideally you should be participating both online and in class, however.
+
+Quizzes
+-
+
+Quizzes are designed to be easy and to reward doing the reading and attending class.  I may elect to drop lower quiz scores.  Note that this syllabus does not mention the total number of quizzes or the number of scores that should be dropped.  You should not use information in Moodle or past iterations of the course as an attempt to guess what will happen with quizzes.  Students who have done this in the past have been sorely disappointed, as my goal is to make quizzes unpredictable.
+
+Academic Integrity
+-
+
 All students of the University of Colorado at Boulder are responsible for knowing and adhering to the academic integrity policy of this institution. Violations of this policy may include: cheating, plagiarism, aid of academic dishonesty, fabrication, lying, bribery, and threatening behavior.  All incidents of academic misconduct shall be reported to the Honor Code Council (honor@colorado.edu; 303-735-2273). Students who are found to be in violation of the academic integrity policy will be subject to both academic sanctions from the faculty member and non-academic sanctions (including but not limited to university probation, suspension, or expulsion).
 
 Other information on the Honor Code can be found at http://www.colorado.edu/policies/honor.html  and at http://www.colorado.edu/academics/honorcode/.
 
-5. Course Policies
+Course Policies
+-
 
 If you qualify for accommodations because of a disability, please submit to your professor a letter from Disability Services in a timely manner (for exam accommodations provide your letter at least one week prior to the exam) so that your needs can be addressed. Disability Services determines accommodations based on documented disabilities. Contact Disability Services at 303-492-8671 or by e-mail at dsinfo@colorado.edu. If you have a temporary medical condition or injury, see Temporary Injuries guidelines under the Quick Links at the Disability Services website and discuss your needs with your professor. Please inform the professor of any accommodations needed relative to disabilities at the start of the semester.
 
@@ -121,5 +122,3 @@ Campus policy regarding religious observances requires that faculty make every e
 Students and faculty each have responsibility for maintaining an appropriate learning environment. Those who fail to adhere to such behavioral standards may be subject to discipline. Professional courtesy and sensitivity are especially important with respect to individuals and topics dealing with differences of race, culture, religion, politics, sexual orientation, gender, gender variance, and nationalities.  Class rosters are provided to the instructor with the student's legal name. I will gladly honor your request to address you by an alternate name or gender pronoun. Please advise me of this preference early in the semester so that I may make appropriate changes to my records.  See policies at
 http://www.colorado.edu/policies/classbehavior.html   and at
 http://www.colorado.edu/studentaffairs/judicialaffairs/code.html#student_code.
-
-All students of the University of Colorado at Boulder are responsible for knowing and adhering to the academic integrity policy of this institution. Violations of this policy may include: cheating, plagiarism, aid of academic dishonesty, fabrication, lying, bribery, and threatening behavior. All incidents of academic misconduct shall be reported to the Honor Code Council (honor@colorado.edu; 303-735-2273). Students who are found to be in violation of the academic integrity policy will be subject to both academic sanctions from the faculty member and non-academic sanctions (including but not limited to university probation, suspension, or expulsion). Additional information regarding the Honor Code policy can be found online and at the Honor Code Office.
