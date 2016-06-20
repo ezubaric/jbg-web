@@ -499,7 +499,7 @@ class WebsiteWriter:
             o.write(html_out)
             global_replace["%s:%s" % (index, txt_name)] += html_out
             html_out = ""
-          if not "*" in jj[0]:
+          if not "*" in jj[0]:              
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
             o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
@@ -509,6 +509,9 @@ class WebsiteWriter:
             txt_name = format_name([], jj[0].split("*")[0], -1, False)
             latex_name = format_name([], jj[0].split("*")[0], -1, True)
 
+          bibtex_out.write("\n\n% ")
+          bibtex_out.write(txt_name)
+          bibtex_out.write("\n\n\n")            
           text_out.write(remove_html_chars(txt_name))
           text_out.write("\n-------------------------\n\n")
           latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
