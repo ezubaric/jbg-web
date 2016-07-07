@@ -279,6 +279,12 @@ class IndexElement:
     s += "\n\n"
     return s
 
+  def year(self):
+    s = ""
+    if "Year" in self.fields and self.fields["Year"][0].strip() != "":
+      s += self.fields["Year"][0]
+    return s
+
   def html(self, bibtex, url, section):
     s = self.author_string(False)
 
@@ -352,8 +358,22 @@ class IndexElement:
     except ValueError:
       year = float("-inf")
 
-    return [(x, year, self.fields["Title"][0], name) for \
+    if "Booktitle" in self.fields and len(self.fields["Booktitle"]) > 0:
+        venue = self.fields["Booktitle"][0]
+    else:
+        venue = ""
+
+    if "Journal" in self.fields and len(self.fields["Journal"]) > 0:
+        venue += self.fields["Journal"][0]
+    else:
+        venue += ""
+
+    keys = [(x, year, venue, self.fields["Title"][0], name) for \
               x in self.fields[criteria]]
+
+    print(criteria, keys)
+
+    return keys
 
 class WebsiteWriter:
   def __init__(self, source, output, header_file, footer_file, site_title, url, last_modified):
@@ -490,6 +510,7 @@ class WebsiteWriter:
       html_out = ""
       old = None
       for jj in keys:
+        year = lookup[jj].year()
         if old != jj[0]:
           if jj[0] == "":
               continue
@@ -499,7 +520,7 @@ class WebsiteWriter:
             o.write(html_out)
             global_replace["%s:%s" % (index, txt_name)] += html_out
             html_out = ""
-          if not "*" in jj[0]:              
+          if not "*" in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
             o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
@@ -511,7 +532,7 @@ class WebsiteWriter:
 
           bibtex_out.write("\n\n% ")
           bibtex_out.write(txt_name)
-          bibtex_out.write("\n\n\n")            
+          bibtex_out.write("\n\n\n")
           text_out.write(remove_html_chars(txt_name))
           text_out.write("\n-------------------------\n\n")
           latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
@@ -522,9 +543,14 @@ class WebsiteWriter:
         bibtex_out.write(lookup[jj].bibtex())
         text_out.write(lookup[jj].txt(url=self._url))
 
-        html_out += "\t\t<li>" + lookup[jj].html(bibtex, self._url, old)
+        this_html = "\n\t\t<!--- %s --->\n" % str(jj)
+        this_html += "\t\t<li>%s</li>\n" % lookup[jj].html(bibtex, self._url, old)
+        global_replace["%s:%s:%s" % (index, txt_name, year)] += this_html
+        html_out += this_html
         old = jj[0]
+
       global_replace["%s:%s" % (index, txt_name)] += html_out
+
       o.write(html_out)
 
       latex_out.write("\n\\end{enumerate}")
