@@ -19,13 +19,13 @@ By the end of this course, you’ll be able to take a problem and analyze it to 
 Approach
 ========================
 
-The class will meet twice a week.  Before each class, I will post a video lecture introducing the material.  Students are responsible for watching the videos before class.  During the traditional class time, we will have quizzes over the material, discuss the material, and use hands-on lab sessions in groups to walk through algorithms to make sure everyone understands the techniques we are discussing.
+Classes alternate between lectures and in-class exercises.  Students are responsible for completing reading assignments before lectures and actively asking questions during lectures.  In-class exercises are organized around an in-depth, hands-on review of a concept introduced in the previous lecture.  We will have quizzes over the material, discuss the material, and use hands-on lab sessions in groups to walk through algorithms to make sure everyone understands the techniques we are discussing.
 
 Halfway through the course, students will complete an in-class midterm that will test high-level understanding of concepts.
 
-Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the lab sessions.
+Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the in-class exercises.
 
-Topics / Schedule (Check webpage for dates)
+Topics / Schedule (Check course webpage for dates)
 -------------------
 
 * Probability basics
