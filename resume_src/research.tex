@@ -96,15 +96,29 @@ sci, \blue{spinal\_cord}, \blue{spinal\_cord\_injury}, \blue{spinal}, \blue{inju
 
 % Fix ``on the fly''
 
-Our realization that humans have a lot to teach machines led us to
-\emph{simultaneous machine
-  interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}. Because verbs end
-phrases in many languages, such as German and Japanese, existing algorithms must
-wait until the end of a sentence to begin translating (since English sentences
-have verbs near the start). We learned tricks from professional human
-interpreters---passivizing sentences and guessing the verb---to translate
-sentences sooner~\cite{He-15}, letting speakers and algorithms cooperate together and
-enabling more natural cross-cultural communication.
+The machine learning tools that we developed to enable these
+interactions came from our attempt to model probabilistic
+lexicons~\cite{boyd-graber-07}.  We realized that much of the
+confusion came from words used in ambiguous contexts, and
+incorporating semantic knowledge (e.g., from WordNet) could help
+create clearer topics.  However, WordNet is not always available (or
+the right answer), so our current interactive system allows users to
+create their own personal lexicon interactively to refine the results
+of unsupervised machine learning algorithms.
+
+However, lexicons are not the only way humans can teach machines.
+\emph{Simultaneous machine
+  interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014} is another
+language-based task that requires significant human intuition,
+insight, and---for those who want to become
+interpreters---training. Because verbs end phrases in many languages,
+such as German and Japanese, existing algorithms must wait until the
+end of a sentence to begin translating (since English sentences have
+verbs near the start). We learned tricks from professional human
+interpreters---passivizing sentences and guessing the verb---to
+translate sentences sooner~\cite{He-15}, letting speakers and
+algorithms cooperate together and enabling more natural cross-cultural
+communication.
 
 The reverse of cooperation is competition; it also has much to teach
 computers. I've increasingly looked at language-based games whose clear goals
@@ -149,15 +163,20 @@ in front of the dot products and our system did much better.)
   \end{minipage}
 
 
-Advancing machine learning requires closer, more natural interactions.  However,
-we still require much of the user---reading distributions or dot
-products---rather than natural language interactions.  Document exploration
-tools should describe in words what a cluster is, not just provide inscrutable
-word clouds; deception detection systems should say \emph{why} a betrayal is
-imminent; and question answers should explain \emph{how} it knows Aaron Burr
-shot Alexander Hamilton. My work will complement machine learning's ubiquity
-with transparent, empathetic, and useful interactions with users.
-\clearpage
+Advancing machine learning requires closer, more natural interactions.
+However, we still require much of the user---reading distributions or
+dot products---rather than natural interactions.  Document
+exploration tools should describe in words what a cluster is, not just
+provide inscrutable word clouds.  Deception detection systems should
+say \emph{why} a betrayal is imminent.  Question answers should
+explain \emph{how} it knows Aaron Burr shot Alexander Hamilton: thus
+helping human players of trivia games either as a study partner or as
+a teammate at a competition. My work will complement machine
+learning's ubiquity with transparent, empathetic, and useful
+interactions with users.
+
+\vspace{2cm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \small
 \bibliographystyle{resume_src/splncs03}
