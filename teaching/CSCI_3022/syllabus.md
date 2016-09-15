@@ -110,7 +110,7 @@ There will be an in-class midterm. The midterm will cover material in the previo
 Final Exam
 -
 
-The final exam will be a take home exam similar to the midterm but comprehensive over the entire course’s content.
+The final exam will be an exam similar to the midterm's structure but comprehensive over the entire course’s content.  The exam will he held at the time specified by the University.
 
 Class Participation
 -
