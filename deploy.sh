@@ -46,6 +46,7 @@ if [ ${#CHANGES} -gt 0 ]
             pdflatex resume_src/$FILE &> /dev/null
         done
         mv resume.pdf short_cv.pdf teaching.pdf service.pdf research.pdf ~/public_html/docs
+	cp resume_src/letter.html ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
             pdflatex $FILE &> /dev/null
