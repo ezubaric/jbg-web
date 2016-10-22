@@ -122,7 +122,7 @@ We will also be using the online learning platform Piazza.  You can get credit f
 Quizzes
 -
 
-Quizzes are designed to be easy and to reward doing the reading and attending class.  I will drop your lowest quiz scores.  Note that this syllabus does not mention the total number of quizzes or the number of scores that will be dropped.  You should not use information in Moodle or past iterations of the course as an attempt to guess what will happen with quizzes.  Students who have done this in the past have been sorely disappointed, as my goal is to make quizzes unpredictable.  Quizzes are also used as a proxy for attendance.  Thus, there is no opportunity for making up quizzes (and I don't have the ability to judge what is an excusable absense or not for a large class).  Have no fear, however, as I will drop the lowest quiz grades: as long as you do well on a majority of quizzes, you'll be fine.
+Quizzes are designed to be easy and to reward doing the reading and attending class.  I will drop your lowest quiz scores.  Note that this syllabus does not mention the total number of quizzes or the number of scores that will be dropped.  You should not use information in Moodle or past iterations of the course as an attempt to guess what will happen with quizzes.  Students who have done this in the past have been sorely disappointed, as my goal is to make quizzes unpredictable.  Quizzes are also used as a proxy for attendance.  Thus, there is no opportunity for making up quizzes (and I don't have the ability to judge what is an excusable absence or not for a large class).  Have no fear, however, as I will drop the lowest quiz grades: as long as you do well on a majority of quizzes, you'll be fine.
 
 Academic Integrity
 -
