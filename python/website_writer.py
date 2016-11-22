@@ -63,7 +63,7 @@ UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
                "Journal": "\\ifumd 2.B. \\fi Articles in Refereed Journals"}
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
-                                job="Yahoo! Research"),
+                                job="Microsoft"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "http://www.cs.umd.edu/~ynhu/",
                                    job="Yahoo! Research"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
