@@ -10,36 +10,80 @@ http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
 Description and Outcomes
 ========================
 
-Computers have made it possible, even easy, to collect vast amounts of data from a wide variety of sources. It is not always clear, however, how to use those data and how to extract useful information from data. This problem is faced in a tremendous range of scholarly, government, business, medical, and scientific applications.  The goal of this course is to review the principles of allowing machines to make sense of these data in a mathematically rigorous way.
+Computers have made it possible, even easy, to collect vast amounts of
+data from a wide variety of sources. It is not always clear, however,
+how to use those data and how to extract useful information from
+data. This problem is faced in a tremendous range of scholarly,
+government, business, medical, and scientific applications.  The goal
+of this course is to review the principles of allowing machines to
+make sense of these data in a mathematically rigorous way.
 
-Introduces students to the tools, methods, and theory behind extracting statistical insights from data using computer science algorithms.  The course covers maximum likelihood algorithms, basic regression, implementing statistical tests on large datasets, and representing and manipulating data on a computer.
+Introduces students to the tools, methods, and theory behind
+extracting statistical insights from data using computer science
+algorithms.  The course covers maximum likelihood algorithms, basic
+regression, implementing statistical tests on large datasets, and
+representing and manipulating data on a computer.
 
-By the end of this course, you’ll be able to take a problem and analyze it to determine which machine learning techniques are appropriate for solving the problem, how to prepare data to use that solution, apply the solution, and to evaluate the results.  For the most common data science techniques, you’ll also be able to implement solutions in Python.
+By the end of this course, you’ll be able to take a problem and
+analyze it to determine which data science techniques are appropriate
+for solving the problem, how to prepare data to use that solution,
+apply the solution, and to evaluate the results.  For the most common
+data science techniques, you’ll also be able to implement solutions in
+Python.
 
 Approach
 ========================
 
-Classes alternate between lectures and in-class exercises.  Students are responsible for completing reading assignments before lectures and actively asking questions during lectures.  In-class exercises are organized around an in-depth, hands-on review of a concept introduced in the previous lecture.  We will have quizzes over the material, discuss the material, and use hands-on lab sessions in groups to walk through algorithms to make sure everyone understands the techniques we are discussing.
+Classes alternate between lectures and in-class exercises.  Students
+are responsible for completing reading assignments before lectures and
+actively asking questions during lectures.  In-class exercises are
+organized around an in-depth, hands-on review of a concept introduced
+in the previous lecture.  We will have quizzes over the material,
+discuss the material, and use hands-on lab sessions in groups to walk
+through algorithms to make sure everyone understands the techniques we
+are discussing.
 
-Halfway through the course, students will complete an in-class midterm that will test high-level understanding of concepts.
+Halfway through the course, students will complete an in-class midterm
+that will test high-level understanding of concepts.
 
-Finally, it is required that you have regular access to a computer and an Internet connection throughout this course. A laptop is preferable. If you have a laptop, it would be useful to bring the laptop to class, especially for the in-class exercises.
+Finally, it is required that you have regular access to a computer and
+an Internet connection throughout this course. A laptop is
+preferable. If you have a laptop, it would be useful to bring the
+laptop to class, especially for the in-class exercises.
 
-Topics / Schedule (Check course webpage for dates)
+Topic Objectives (Check course webpage for dates)
 -------------------
 
 * Probability basics
+** Recognize when a function is a valid probability distribution
+** Convert real-concepts to probability distributions
 * Conditional probabilities
-* Sampling from continuous distributions
-* Sampling from discrete distributions
+** Manipulate conditional and marginal probability distributions
+** Apply Bayes rule to invert conditional probabilities
+* Sampling from distributions
+** Describe distributions using standard parameterizations of 
+** Use a random number generator to sample from the distribution
 * Maximum likelihood estimation
-* z-tests and t-tests
-* Chi-Square Tests
+** Given data and an objective function, derive the form of the maximum likelihood parameters
+* Statistical tests
+** Identify statistical tests that correctly use data
+** Given a problem, identify which test is most appropriate
+** Given data, compute a test statistic
+** Given a test statistic, compute a p-value
 * Linear Regression
 * Logistic Regression
+** Given a parameterization of logistic regression classifiers, output a classification on an example
+** Given training examples, use stochastic gradient to update classifier parameters
 * Feature engineering, feature combination
+** Given a regression or classification model, identify data representation failures
+** Correct problems of data representation to improve classification or regression
+** Design training / test data splits that allow effective evaluation of data science algorithms
 * Clustering
+** Recognize when a problem can benefit from classification
+** Given a dataset, run k-means clustering or Gaussian mixture models
 * SVMs
+** Evaluate a margin-based classifier given a dataset whether it's effective 
+** Distinguish when a margin-based classifier needs slack variables
 
 Homeworks
 -
@@ -61,11 +105,26 @@ The book is available free online.  We'll supplement this book with other readin
 Required Background
 ---
 
-Mathematical maturity: We will work extensively with probabilities and mathematical functions such as logarithms and differentiation.  You should be comfortable manipulating these concepts algebraically.  You should also be able to argue why mathematical statements are true through a rigorous proof.  This will be a very mathematical course.  You can satisfy this requirement by taking a proof-based math course (number theory, abstract algebra, etc.), discrete math, or a theoretical (proof-based) algorithms course.
+Mathematical maturity: We will work extensively with probabilities and
+mathematical functions such as logarithms and differentiation.  You
+should be comfortable manipulating these concepts algebraically.  You
+should also be able to argue why mathematical statements are true
+through a rigorous proof.  This will be a very mathematical course.
+You can satisfy this requirement by taking a proof-based math course
+(number theory, abstract algebra, etc.), discrete math, or a
+theoretical (proof-based) algorithms course.
 
-We will make extensive use of the Python 3 programming language.  It is assumed that you know or will quickly learn how the program in Python.  There will be no introduction to this skill-set.  You will need to be able to understand object oriented programming in Python.  You can satisfy this requirement by completing a programming course that uses Python and object-oriented techniques.
+We will make extensive use of the Python 3 programming language.  It
+is assumed that you know or will quickly learn how the program in
+Python.  There will be no introduction to this skill-set.  You will
+need to be able to understand object oriented programming in Python.
+You can satisfy this requirement by completing a programming course
+that uses Python and object-oriented techniques.
 
-The computer-based aspects of this course will be oriented toward Unix-like operating systems (Linux, OS X).  It may be possible to complete the course using other operating systems, but you will be responsible for troubleshooting any issues you encounter.
+The computer-based aspects of this course will be oriented toward
+Unix-like operating systems (Linux, OS X).  It may be possible to
+complete the course using other operating systems, but you will be
+responsible for troubleshooting any issues you encounter.
 
 Grading
 -
