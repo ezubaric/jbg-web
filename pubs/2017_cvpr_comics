@@ -1,13 +1,13 @@
 ~~ Bibtex | inproceedings
-~~ Title | A Distorted Skull Lies in the Bottom Center: Identifying Paintings from Text Descriptions
-~~ Author | Anupam Guha and Mohit Iyyer and Jordan Boyd-Graber
-~~ Booktitle | NAACL Human-Computer Question Answering Workshop
-~~ Year | 2016
-~~ Location | San Diego, CA
+~~ Title | The Amazing Mysteries of the Gutter: Drawing Inferences Between Panels in Comic Book Narratives
+~~ Author | Mohit Iyyer, Varun Manjunatha, Anupam Guha, Yogarshi Vyas, Jordan Boyd-Graber, Hal {Daum\'{e} III}, Larry Davis
+~~ Booktitle | ArXiV
+~~ Year | In Preparation
 ~~ Category | Images
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Question Answering
-~~ Link | Data*http://www.cs.umd.edu/~aguha/data/paintdata.rar
-~~ Venue | Workshop
-~~ URL | docs/2016_naacl_paintings.pdf
+~~ Category | Deep Learning
+~~ Link | Code/Data*https://github.com/miyyer/comics
+~~ Venue | Preprint
+~~ URL | https://arxiv.org/abs/1611.05118
 ~~ Project | Thinking on Your Feet*../projects/IIS-1320538.html
