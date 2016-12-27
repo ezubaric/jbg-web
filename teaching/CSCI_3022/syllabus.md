@@ -1,7 +1,7 @@
 
-> ## Machine Learning
-> (CSCI 5622)
-> Syllabus, Fall 2015
+> ## Data Science
+> (CSCI 3022)
+> Syllabus, Fall 2016
 >
 > Jordan Boyd-Graber
 >
@@ -55,35 +55,35 @@ Topic Objectives (Check course webpage for dates)
 -------------------
 
 * Probability basics
-** Recognize when a function is a valid probability distribution
-** Convert real-concepts to probability distributions
+    * Recognize when a function is a valid probability distribution
+    * Convert real-concepts to probability distributions
 * Conditional probabilities
-** Manipulate conditional and marginal probability distributions
-** Apply Bayes rule to invert conditional probabilities
+    * Manipulate conditional and marginal probability distributions
+    * Apply Bayes rule to invert conditional probabilities
 * Sampling from distributions
-** Describe distributions using standard parameterizations of 
-** Use a random number generator to sample from the distribution
+    * Describe distributions using standard parameterizations of 
+    * Use a random number generator to sample from the distribution
 * Maximum likelihood estimation
-** Given data and an objective function, derive the form of the maximum likelihood parameters
+    * Given data and an objective function, derive the form of the maximum likelihood parameters
 * Statistical tests
-** Identify statistical tests that correctly use data
-** Given a problem, identify which test is most appropriate
-** Given data, compute a test statistic
-** Given a test statistic, compute a p-value
+    * Identify statistical tests that correctly use data
+    * Given a problem, identify which test is most appropriate
+    * Given data, compute a test statistic
+    * Given a test statistic, compute a p-value
 * Linear Regression
 * Logistic Regression
-** Given a parameterization of logistic regression classifiers, output a classification on an example
-** Given training examples, use stochastic gradient to update classifier parameters
+    * Given a parameterization of logistic regression classifiers, output a classification on an example
+    * Given training examples, use stochastic gradient to update classifier parameters
 * Feature engineering, feature combination
-** Given a regression or classification model, identify data representation failures
-** Correct problems of data representation to improve classification or regression
-** Design training / test data splits that allow effective evaluation of data science algorithms
+    * Given a regression or classification model, identify data representation failures
+    * Correct problems of data representation to improve classification or regression
+    * Design training / test data splits that allow effective evaluation of data science algorithms
 * Clustering
-** Recognize when a problem can benefit from classification
-** Given a dataset, run k-means clustering or Gaussian mixture models
+    * Recognize when a problem can benefit from classification
+    * Given a dataset, run k-means clustering or Gaussian mixture models
 * SVMs
-** Evaluate a margin-based classifier given a dataset whether it's effective 
-** Distinguish when a margin-based classifier needs slack variables
+    * Evaluate a margin-based classifier given a dataset whether it's effective 
+    * Distinguish when a margin-based classifier needs slack variables
 
 Homeworks
 -
