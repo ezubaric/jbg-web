@@ -477,7 +477,8 @@ class WebsiteWriter:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
         keys += contrib
         for kk in contrib:
-          assert not kk in lookup, "%s already found as %s" % (str(kk), lookup[kk].txt())
+          print(kk)
+          assert not kk in lookup, "%s already found as %s.  Look for a repeated key in the pub file (e.g., year)" % (str(kk), lookup[kk].txt())
           lookup[kk] = self._indexed[index.lower()][jj]
 
       primary = [x[0] for x in keys]
