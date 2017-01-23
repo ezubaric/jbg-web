@@ -5,7 +5,7 @@
 >
 > Jordan Boyd-Graber
 >
-http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
+http://cs.colorado.edu/~jbg/teaching/CSCI_7000/
 
 Description and Outcomes
 ========================
