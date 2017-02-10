@@ -4,28 +4,32 @@
 >
 http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
 
-Course Number and Name
+1. Course Number and Name
 ========================
 CSCI 3022: Introduction to Data Science Algorithms
 
-Credits and Contact Hours
+2. Credits and Contact Hours
 ========================
 3 Credit Hours
 
-Instructor's Name
+3. Instructor's Name
 ========================
 Professor: Jordan Boyd-Graber
 
-Textbook
+4. Textbook
 ========================
 
 Think Stats by Allen B. Downey (2014, 2nd Edition)
 http://greenteapress.com/thinkstats2/
 
-The book is available free online.  We'll supplement this book with other readings from the web as described on course webpage.
+The book is available free online.  We'll supplement this book with
+other readings from the web as described on course webpage.
 
-Description
+5. Specific course information
 ========================
+
+a. Description
+----------
 
 Computers have made it possible, even easy, to collect vast amounts of
 data from a wide variety of sources. It is not always clear, however,
@@ -40,6 +44,37 @@ extracting statistical insights from data using computer science
 algorithms.  The course covers maximum likelihood algorithms, basic
 regression, implementing statistical tests on large datasets, and
 representing and manipulating data on a computer.
+
+b. Prerequisites or co-requisites
+------------
+
+Prerequisites: CSCI 1300, MATH 2300
+
+Mathematical maturity: We will work extensively with probabilities and
+mathematical functions such as logarithms and differentiation.  You
+should be comfortable manipulating these concepts algebraically.  You
+should also be able to argue why mathematical statements are true
+through a rigorous proof.  This will be a very mathematical course.
+You can satisfy this requirement by taking a proof-based math course
+(number theory, abstract algebra, etc.), discrete math, or a
+theoretical (proof-based) algorithms course.
+
+We will make extensive use of the Python 3 programming language.  It
+is assumed that you know or will quickly learn how the program in
+Python.  There will be no introduction to this skill-set.  You will
+need to be able to understand object oriented programming in Python.
+You can satisfy this requirement by completing a programming course
+that uses Python and object-oriented techniques.
+
+The computer-based aspects of this course will be oriented toward
+Unix-like operating systems (Linux, OS X).  It may be possible to
+complete the course using other operating systems, but you will be
+responsible for troubleshooting any issues you encounter.
+
+c. Status in curriculum
+---
+
+Fulfils Probability/Statistics Requirement 
 
 Specific Goals
 ========================
@@ -87,6 +122,19 @@ Specific Outcomes (Check course webpage for dates)
     * Distinguish when a margin-based classifier needs slack variables
 
 
+Brief list of topics to be covered
+================
+
+* What are data?  How do you represent them on a computer?
+* Probability basics: independence, conditional distributions, marginalization, and Bayes’ rule 
+* Distributions: equations to represent distributions, sampling from these distributions algorithmically
+* Maximum likelihood estimation essentials, algorithmic implementation
+* Algorithmically estimating parameters of a distribution given data 
+* Hypothesis testing: z-tests, t-tests, chi-squared tests 
+* Linear regression 
+* Logistic regression 
+* Clustering algorithms 
+
 Approach
 ========================
 
@@ -117,30 +165,6 @@ Homeworks
 * Continuous Regression
 * Classification
 
-
-Required Background
----
-
-Mathematical maturity: We will work extensively with probabilities and
-mathematical functions such as logarithms and differentiation.  You
-should be comfortable manipulating these concepts algebraically.  You
-should also be able to argue why mathematical statements are true
-through a rigorous proof.  This will be a very mathematical course.
-You can satisfy this requirement by taking a proof-based math course
-(number theory, abstract algebra, etc.), discrete math, or a
-theoretical (proof-based) algorithms course.
-
-We will make extensive use of the Python 3 programming language.  It
-is assumed that you know or will quickly learn how the program in
-Python.  There will be no introduction to this skill-set.  You will
-need to be able to understand object oriented programming in Python.
-You can satisfy this requirement by completing a programming course
-that uses Python and object-oriented techniques.
-
-The computer-based aspects of this course will be oriented toward
-Unix-like operating systems (Linux, OS X).  It may be possible to
-complete the course using other operating systems, but you will be
-responsible for troubleshooting any issues you encounter.
 
 Grading
 -
@@ -183,31 +207,31 @@ Midterm
 There will be an in-class midterm. The midterm will cover material in the previous lectures and will be open notes (but closed book).
 
 Final Exam
--
+=
 
 The final exam will be an exam similar to the midterm's structure but comprehensive over the entire course’s content.  The exam will he held at the time specified by the University.
 
 Class Participation
--
+=
 
 Each class is critical to your learning experience, and I expect you to come to class prepared (having read all assigned readings, viewed the lecture, ready to engage). I also expect active participation, not passive reception of the material. Your energy in contributing to class discussions and hands-on exercises will make this class an enjoyable experience for all of us.
 
 We will also be using the online learning platform Piazza.  You can get credit for participation by answering and asking useful questions on that platform.  Ideally you should be participating both online and in class, however.
 
 Quizzes
--
+=
 
 Quizzes are designed to be easy and to reward doing the reading and attending class.  I will drop your lowest quiz scores.  Note that this syllabus does not mention the total number of quizzes or the number of scores that will be dropped.  You should not use information in Moodle or past iterations of the course as an attempt to guess what will happen with quizzes.  Students who have done this in the past have been sorely disappointed, as my goal is to make quizzes unpredictable.  Quizzes are also used as a proxy for attendance.  Thus, there is no opportunity for making up quizzes (and I don't have the ability to judge what is an excusable absence or not for a large class).  Have no fear, however, as I will drop the lowest quiz grades: as long as you do well on a majority of quizzes, you'll be fine.
 
 Academic Integrity
--
+=
 
 All students of the University of Colorado at Boulder are responsible for knowing and adhering to the academic integrity policy of this institution. Violations of this policy may include: cheating, plagiarism, aid of academic dishonesty, fabrication, lying, bribery, and threatening behavior.  All incidents of academic misconduct shall be reported to the Honor Code Council (honor@colorado.edu; 303-735-2273). Students who are found to be in violation of the academic integrity policy will be subject to both academic sanctions from the faculty member and non-academic sanctions (including but not limited to university probation, suspension, or expulsion).
 
 Other information on the Honor Code can be found at http://www.colorado.edu/policies/honor.html  and at http://www.colorado.edu/academics/honorcode/.
 
 Course Policies
--
+=
 
 If you qualify for accommodations because of a disability, please submit to your professor a letter from Disability Services in a timely manner (for exam accommodations provide your letter at least one week prior to the exam) so that your needs can be addressed. Disability Services determines accommodations based on documented disabilities. Contact Disability Services at 303-492-8671 or by e-mail at dsinfo@colorado.edu. If you have a temporary medical condition or injury, see Temporary Injuries guidelines under the Quick Links at the Disability Services website and discuss your needs with your professor. Please inform the professor of any accommodations needed relative to disabilities at the start of the semester.
 
