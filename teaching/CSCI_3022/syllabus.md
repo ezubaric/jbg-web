@@ -1,13 +1,30 @@
 
-> ## Data Science
-> (CSCI 3022)
 > Syllabus, Fall 2016
->
 > Jordan Boyd-Graber
 >
 http://cs.colorado.edu/~jbg/teaching/CSCI_3022/
 
-Description and Outcomes
+Course Number and Name
+========================
+CSCI 3022: Introduction to Data Science Algorithms
+
+Credits and Contact Hours
+========================
+3 Credit Hours
+
+Instructor's Name
+========================
+Professor: Jordan Boyd-Graber
+
+Textbook
+========================
+
+Think Stats by Allen B. Downey (2014, 2nd Edition)
+http://greenteapress.com/thinkstats2/
+
+The book is available free online.  We'll supplement this book with other readings from the web as described on course webpage.
+
+Description
 ========================
 
 Computers have made it possible, even easy, to collect vast amounts of
@@ -24,6 +41,9 @@ algorithms.  The course covers maximum likelihood algorithms, basic
 regression, implementing statistical tests on large datasets, and
 representing and manipulating data on a computer.
 
+Specific Goals
+========================
+
 By the end of this course, you’ll be able to take a problem and
 analyze it to determine which data science techniques are appropriate
 for solving the problem, how to prepare data to use that solution,
@@ -31,27 +51,8 @@ apply the solution, and to evaluate the results.  For the most common
 data science techniques, you’ll also be able to implement solutions in
 Python.
 
-Approach
-========================
 
-Classes alternate between lectures and in-class exercises.  Students
-are responsible for completing reading assignments before lectures and
-actively asking questions during lectures.  In-class exercises are
-organized around an in-depth, hands-on review of a concept introduced
-in the previous lecture.  We will have quizzes over the material,
-discuss the material, and use hands-on lab sessions in groups to walk
-through algorithms to make sure everyone understands the techniques we
-are discussing.
-
-Halfway through the course, students will complete an in-class midterm
-that will test high-level understanding of concepts.
-
-Finally, it is required that you have regular access to a computer and
-an Internet connection throughout this course. A laptop is
-preferable. If you have a laptop, it would be useful to bring the
-laptop to class, especially for the in-class exercises.
-
-Topic Objectives (Check course webpage for dates)
+Specific Outcomes (Check course webpage for dates)
 -------------------
 
 * Probability basics
@@ -85,6 +86,28 @@ Topic Objectives (Check course webpage for dates)
     * Evaluate a margin-based classifier given a dataset whether it's effective 
     * Distinguish when a margin-based classifier needs slack variables
 
+
+Approach
+========================
+
+Classes alternate between lectures and in-class exercises.  Students
+are responsible for completing reading assignments before lectures and
+actively asking questions during lectures.  In-class exercises are
+organized around an in-depth, hands-on review of a concept introduced
+in the previous lecture.  We will have quizzes over the material,
+discuss the material, and use hands-on lab sessions in groups to walk
+through algorithms to make sure everyone understands the techniques we
+are discussing.
+
+Halfway through the course, students will complete an in-class midterm
+that will test high-level understanding of concepts.
+
+Finally, it is required that you have regular access to a computer and
+an Internet connection throughout this course. A laptop is
+preferable. If you have a laptop, it would be useful to bring the
+laptop to class, especially for the in-class exercises.
+
+
 Homeworks
 -
 
@@ -94,13 +117,6 @@ Homeworks
 * Continuous Regression
 * Classification
 
-Textbook
--
-
-Think Stats by Allen B. Downey
-http://greenteapress.com/thinkstats2/
-
-The book is available free online.  We'll supplement this book with other readings from the web.
 
 Required Background
 ---
