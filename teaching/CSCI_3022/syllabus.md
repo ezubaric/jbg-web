@@ -76,7 +76,7 @@ c. Status in curriculum
 
 Fulfils Probability/Statistics Requirement 
 
-Specific Goals
+6. Specific Goals
 ========================
 
 By the end of this course, you’ll be able to take a problem and
@@ -87,7 +87,7 @@ data science techniques, you’ll also be able to implement solutions in
 Python.
 
 
-Specific Outcomes (Check course webpage for dates)
+a. Specific Outcomes (Check course webpage for dates)
 -------------------
 
 * Probability basics
@@ -121,8 +121,18 @@ Specific Outcomes (Check course webpage for dates)
     * Evaluate a margin-based classifier given a dataset whether it's effective 
     * Distinguish when a margin-based classifier needs slack variables
 
+b. ABET Student Outcomes
+-
 
-Brief list of topics to be covered
+* (a) an ability to apply knowledge of mathematics, science, and engineering
+* (b) an ability to design and conduct experiments, as well as to analyze and interpret data
+* (c) an ability to design a system, component, or process to meet desired needs within realistic constraints such as economic, environmental, social, political, ethical, health and safety, manufacturability, and sustainability
+* (e) an ability to identify, formulate, and solve engineering problems
+* (f) an understanding of professional and ethical responsibility
+* (g) an ability to communicate effectively
+
+
+7. Brief list of topics to be covered
 ================
 
 * What are data?  How do you represent them on a computer?
