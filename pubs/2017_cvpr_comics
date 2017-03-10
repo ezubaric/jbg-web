@@ -1,13 +1,13 @@
 ~~ Bibtex | inproceedings
 ~~ Title | The Amazing Mysteries of the Gutter: Drawing Inferences Between Panels in Comic Book Narratives
-~~ Author | Mohit Iyyer, Varun Manjunatha, Anupam Guha, Yogarshi Vyas, Jordan Boyd-Graber, Hal {Daum\'{e} III}, Larry Davis
-~~ Booktitle | ArXiV
-~~ Year | In Preparation
+~~ Author | Mohit Iyyer and Varun Manjunatha and Anupam Guha and Yogarshi Vyas and Jordan Boyd-Graber and Hal {Daum\'{e} III} and Larry Davis
+~~ Booktitle | Computer Vision and Pattern Recognition
+~~ Year | 2017
 ~~ Category | Images
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Question Answering
 ~~ Category | Deep Learning
 ~~ Link | Code/Data*https://github.com/miyyer/comics
-~~ Venue | Preprint
+~~ Venue | Refereed Conference
 ~~ URL | https://arxiv.org/abs/1611.05118
 ~~ Project | Thinking on Your Feet*../projects/IIS-1320538.html
