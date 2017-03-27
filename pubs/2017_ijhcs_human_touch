@@ -6,6 +6,8 @@
 ~~ Category | Empirical Human Data Collection
 ~~ Journal | International Journal of Human-Computer Studies
 ~~ Project | Closing the Loop*../projects/IIS-1409287.html
+~~ Link | Journal*http://www.sciencedirect.com/science/article/pii/S1071581917300472
 ~~ Year | 2017
 ~~ Title | The Human Touch: How Non-expert Users Perceive, Interpret, and Fix Topic Models
 ~~ abstract | Topic modeling is a common tool for understanding large bodies of text, but is typically provided as a “take it or leave it” proposition. Incorporating human knowledge in unsupervised learning is a promising approach to create high-quality topic models. Existing interactive systems and modeling algorithms support a wide range of refinement operations to express feedback. However, these systems’ interactions are primarily driven by algorithmic convenience, ignoring users who may lack expertise in topic modeling. To better understand how non-expert users understand, assess, and refine topics, we conduct two user studies—an in-person interview study and an online crowdsourced study. These studies demonstrate a disconnect between what non-expert users want and the complex, low-level operations that current interactive systems support. In particular, our findings include: (1) analysis of how non-expert users perceive topic models; (2) characterization of primary refinement operations expected by non-expert users and ordered by relative preference; (3) further evidence of the benefits of supporting users in directly refining a topic model; (4) design implications for future human-in-the-loop topic modeling interfaces. 
+~~ URL | docs/2017_ijhcs_human_touch.pdf
