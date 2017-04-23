@@ -537,7 +537,10 @@ class WebsiteWriter:
           bibtex_out.write("\n\n\n")
           text_out.write(remove_html_chars(txt_name))
           text_out.write("\n-------------------------\n\n")
-          latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
+          if latex_name in UMD_MAPPING:
+              latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % UMD_MAPPING[latex_name])
+          else:
+              latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
 
           latex_out.write("\n\\begin{enumerate}\n")
 
