@@ -58,6 +58,7 @@ class Student:
       return val
 
 UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
+               "Book": "\\ifumd 2.A.i \else Books Authored",
                "Refereed Conference": "\\ifumd 2.E.ii. \\fi Refereed Conferences",
                "Workshop": "\\ifumd 2.E.ii. \\fi Refereed Workshops",
                "Journal": "\\ifumd 2.B. \\fi Articles in Refereed Journals"}
