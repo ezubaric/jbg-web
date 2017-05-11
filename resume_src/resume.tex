@@ -1,32 +1,15 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Cies Resume/CV
-% LaTeX Template
-% Version 1.0 (10/2/14)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Cies Breijs (cies@kde.nl)
-% https://github.com/cies/resume with extensive modifications by:
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
-
-\newif\ifumd\umdtrue
 
 \ifumd
 \usepackage{graphicx}
 \fi
+
+\newcommand{\umdtext}[2]{
+\ifumd
+#1 #2
+\else
+#2
+}
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
 
@@ -59,7 +42,7 @@
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
 
 
-\roottitle{\ifumd 1.A. \fi University Appointments}
+\roottitle{ \umdtext{I.B.}{Academic Appointments}}
 
 \headedsection{\href{http://colorado.edu}{University of Colorado Boulder}}{\textsc{Boulder, CO}} {
 	\headedsubsection{Assistant Professor, Computer Science}{2014--Present}{}
@@ -73,7 +56,29 @@
 	\headedsubsection{Postdoc (Advisor: \href{http://www.umiacs.umd.edu/~resnik/}{Philip Resnik})}{2009-2010}{}
 }
 
-\roottitle{\ifumd 1.B. \fi Education}
+
+\roottitle{\umdtext{ 1.D. }{Other Employment}}
+
+
+\headedsection{Princeton University}{\textsc{Princeton, NJ}}{
+	\headedsubsection{Writing Fellow, \href{http://www.princeton.edu/writing/center/}{Princeton Writing Center}}{2007-2008}{}
+}
+
+\headedsection{Google}{\textsc{New York, NY}}{
+	\headedsubsection{Intern}{2007}{}
+}
+
+\headedsection{University of California Los Angeles}{\textsc{Los Angeles, CA}}{
+	\headedsubsection{Digital Humanities Programmer}{2004}{}
+}
+
+\headedsection{California Institute of Technology}{\textsc{Pasadena, CA}}{
+	\headedsubsection{Newsprint Researcher / Programmer, \href{http://www.einstein.caltech.edu/who/past.html}{Einstein Papers Project}}{2003-2004}{}
+	\headedsubsection{Peer Tutor, \href{https://writing.caltech.edu/}{Hixon Writing Center} }{2001-2004}{}
+	\headedsubsection{Lab Technician, \href{https://www.amt.caltech.edu/}{Caltech Digital Media Center}}{2001-2003}{}
+}
+
+\roottitle{\umdtext{ 1.E.}{Educational Background}}
 
 \headedsection{\href{http://princeton.edu}{Princeton University}}{\textsc{Princeton, NJ}} {
 	\headedsubsection{Ph.D., Computer Science}{2010}{
@@ -96,26 +101,6 @@
 %\end{comment}
 
 
-\roottitle{\ifumd 1.C. \fi (Other) Employment}
-
-
-\headedsection{Princeton University}{\textsc{Princeton, NJ}}{
-	\headedsubsection{Writing Fellow, \href{http://www.princeton.edu/writing/center/}{Princeton Writing Center}}{2007-2008}{}
-}
-
-\headedsection{Google}{\textsc{New York, NY}}{
-	\headedsubsection{Intern}{2007}{}
-}
-
-\headedsection{University of California Los Angeles}{\textsc{Los Angeles, CA}}{
-	\headedsubsection{Digital Humanities Programmer}{2004}{}
-}
-
-\headedsection{California Institute of Technology}{\textsc{Pasadena, CA}}{
-	\headedsubsection{Newsprint Researcher / Programmer, \href{http://www.einstein.caltech.edu/who/past.html}{Einstein Papers Project}}{2003-2004}{}
-	\headedsubsection{Peer Tutor, \href{https://writing.caltech.edu/}{Hixon Writing Center} }{2001-2004}{}
-	\headedsubsection{Lab Technician, \href{https://www.amt.caltech.edu/}{Caltech Digital Media Center}}{2001-2003}{}
-}
 
 
 
@@ -151,7 +136,8 @@
 \fi
 
 
-\roottitle{Publications}
+\roottitle{\umdtext{II. Research, Scholarly, Creative and/or Professional
+    Activities:}{Publications}}
 
 \input{resume_src/pubs_by_venue.tex}
 
