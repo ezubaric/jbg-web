@@ -57,11 +57,11 @@ class Student:
 
       return val
 
-UMD_MAPPING = {"Chapter": "\\ifumd 2.A.iii. \else \\fi Chapters in Books",
-               "Book": "\\ifumd 2.A.i \else Books Authored",
-               "Refereed Conference": "\\ifumd 2.E.ii. \\fi Refereed Conferences",
-               "Workshop": "\\ifumd 2.E.ii. \\fi Refereed Workshops",
-               "Journal": "\\ifumd 2.B. \\fi Articles in Refereed Journals"}
+UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
+               "Book": "\\ifumd II.A.1. \else Books Authored",
+               "Refereed Conference": "\\ifumd II.D.1. \\fi Refereed Conference Proceedings",
+               "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
+               "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
                                 job="Microsoft"),
@@ -69,6 +69,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
                                    job="Yahoo! Research"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
+             "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
              "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
              "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/",
@@ -81,13 +82,14 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Fenfei Guo": Student("Fenfei Guo", 2015, 2020, "https://csel.cs.colorado.edu/~fegu1724/"),
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/"),
+             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/", job="Assistant Professor, UMass"),
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
              "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
-                                           job="Assitant Professor, Ursinus College"),
+                                           job="Assistant Professor, Ursinus College"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2014, kind="MS"),
+             "Henrik Larson": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
