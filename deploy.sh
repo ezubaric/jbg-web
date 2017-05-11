@@ -40,12 +40,12 @@ if [ ${#CHANGES} -gt 0 ]
         python python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
         pdflatex resume_src/research &> /dev/null
         bibtex research
-        for FILE in resume short_cv teaching service research
+        for FILE in public umd short_cv teaching service research
         do
             echo $FILE
             pdflatex resume_src/$FILE &> /dev/null
+            mv $FILE.pdf ~/public_html/docs
         done
-        mv resume.pdf short_cv.pdf teaching.pdf service.pdf research.pdf ~/public_html/docs
 	cp resume_src/letter.html ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
