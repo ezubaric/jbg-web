@@ -223,7 +223,7 @@ class IndexElement:
 
           if not location.startswith("http"):
               location = "%s%s" % (url, location)
-          link_string += "\\item \\href{%s}{%s} [\url{%s}]\n" % \
+          link_string += "\\item \\href{%s}{%s} [\\url{%s}]\n" % \
             (location, title, location)
       link_string += "\n\\end{itemize}\\"
       s = s.replace("~~~links~~~", link_string)
@@ -439,10 +439,10 @@ class WebsiteWriter:
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
                 default_sort="Year"):
     index = {}
-    print "Searching:", path + "*"
+    print("Searching: " + path + "*")
     for ii in glob(path + "*"):
-      # Don't go through backup files
       if "~" in ii or "#" in ii or "." in ii:
+        # Don't go through backup files
         continue
       item = IndexElement(open(ii).read())
       if "Nopub" in item.fields:
@@ -579,11 +579,11 @@ class WebsiteWriter:
     try:
       os.mkdir(final_directory)
     except OSError:
-      print "Dir couldn't be made:", final_directory
+      print("Dir couldn't be made: " + final_directory)
 
     for ii in glob(source_path + "/*.html"):
       filename = final_directory + "/" + ii.split("/")[-1]
-      print "Writing non-indexed file", filename
+      print("Writing non-indexed file: " + filename)
       self.write_file(filename, ii.split("/")[-1].replace(".html", ""), ii,
                       "../../")
 
@@ -615,7 +615,7 @@ class WebsiteWriter:
     try:
       os.mkdir(self._output + self.STATIC_DIR)
     except OSError:
-      print "Couldn't make " + self._output + self.STATIC_DIR
+      print("Couldn't make " + self._output + self.STATIC_DIR)
     # Write the static files
     for ii in self._files:
       self.write_file(self._output + self.STATIC_DIR + "/%s.html" % ii.lower().replace(" ", "_"), ii, self._files[ii])
@@ -629,4 +629,4 @@ class WebsiteWriter:
       try:
         os.mkdir(path)
       except OSError:
-        print "Cannot make directory: ", path
+        print("Cannot make directory: " + path)
