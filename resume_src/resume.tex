@@ -70,7 +70,7 @@
 }
 
 
-\roottitle{\umdtext{ 1.D. }{Other Employment}}
+\roottitle{\umdtext{ I.D. }{Other Employment}}
 
 
 \headedsection{Princeton University}{\textsc{Princeton, NJ}}{
@@ -91,7 +91,7 @@
 	\headedsubsection{Lab Technician, \href{https://www.amt.caltech.edu/}{Caltech Digital Media Center}}{2001-2003}{}
 }
 
-\roottitle{\umdtext{ 1.E.}{Educational Background}}
+\roottitle{\umdtext{ I.E.}{Educational Background}}
 
 \headedsection{\href{http://princeton.edu}{Princeton University}}{\textsc{Princeton, NJ}} {
 	\headedsubsection{Ph.D., Computer Science}{2010}{
@@ -156,7 +156,7 @@
 
 \clearpage
 
-\roottitle{\ifumd 2.I.\fi Contracts and Grants}
+\roottitle{\umdtext{II.J.1.a.}{Sponsored Research and Programs}}
 
 \newcommand{\grant}[7]{
 
@@ -181,7 +181,7 @@
 }
 
 
-\headedsection{\ifumd 2.I.i.\fi Active Funding}{}{
+\headedsection{\ifumd II.J.1.a.\fi Active Grants}{}{
 
  \grant{CAREER: Human-Computer Cooperation for Word-by-Word Question
   Answering}{2/2017}{1/2022}{\textsc{nsf}}{Jordan Boyd-Graber \textsc{pi}}{500,000}{500,000}
@@ -224,7 +224,7 @@ Research (only Colorado portion shown)}
 
 }
 
-\headedsection{\ifumd 2.I.ii.\fi Completed Funding}{}{
+\headedsection{\ifumd II.J.1.b.\fi Completed Funding}{}{
 
 \grant{Sentiment Analysis in Social Media: Political Spin and Cultural Biases}{8/2013}{8/2014}{\textsc{casl}}{Philip Resnik \textsc{pi} and Jordan Boyd-Graber \textsc{co-pi}}{100,000}{50,000}
 
@@ -243,7 +243,7 @@ Research (only Colorado portion shown)}
 
 
 \ifumd
-\roottitle{2.J. Fellowships, Prizes, and Awards}{
+\roottitle{II.P. Fellowships, Prizes, and Awards}{
 
 \awards{}
 }
@@ -251,31 +251,8 @@ Research (only Colorado portion shown)}
 \else
 \fi
 
-\newcommand{\journalreview}[0]{
-\begin{itemize*}
-\item Reviewer for \emph{Journal of AI Research}: 2016
-\item Reviewer for \emph{International Journal on Digital Libraries}: 2016
-\item Reviewer for \emph{Machine Learning Journal}: 2014
-\item Reviewer for \emph{Transactions of the Association of
-    Computational Linguistics}: 2011,2012,2012,2013,2013,2013,2014
-\item Reviewer for \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}: 2013
-\item Reviewer for \emph{Computational Linguistics}: 2013
-\item Reviewer for \emph{Scientometrics}: 2012
-\item Reviewer for \emph{Information Visualization}: 2012
-\item Reviewer for \emph{Transactions on Knowledge Discovery from Data}: 2011
-\item Reviewer for \emph{Annals of Applied Statistics}: 2011
-\item Reviewer for \emph{Journal of Machine Learning Research}: 2011,2012
-\item Reviewer for \emph{Elsivier Computer Speech and Language}: 2007
-\end{itemize*}
-}
 
-\ifumd
-\roottitle{2.K.iii. Reviewing and Editing for Journals}{
-\journalreview{}
-}
-\fi
-
-\roottitle{\ifumd 3.\fi Teaching, Mentoring and Advising}
+\roottitle{\ifumd III.\fi Teaching, Extension, Mentoring, and Advising}
 
 
 
@@ -285,7 +262,12 @@ Research (only Colorado portion shown)}
 %\item Senior Independent Work: Spring 2005, Maria Klawe
 %\end{itemize}
 
-\headedsection{\ifumd 3.A.\fi Courses Taught}{}{
+\headedsection{\ifumd III.A.\fi Courses Taught}{}{
+
+\headedsubsection{CSCI 7000: Advanced Machine Learning for Natural
+  Language Processing}{Colorado, Spring 2017}{
+  \bodytext{24 students}
+}
 
 \headedsubsection{CSCI 3022: Introduction to Data Science Algorithms}{Colorado, Fall 2016}{
 	\bodytext{100 students}
@@ -336,7 +318,7 @@ Research (only Colorado portion shown)}
 
 }
 
-\headedsection{\if 3.B.\fi Course or Curriculum Development}{
+\headedsection{\if III.B.6. \fi Course or Curriculum Development}{
 
 \begin{itemize*}
   \item Developed new undergraduate course, \emph{CSCI 3022: Data Science
@@ -353,25 +335,8 @@ Research (only Colorado portion shown)}
 
 }
 
-\headedsection{\ifumd 3.C.\fi Guest lectures}{
 
-\begin{itemize*}
-          % Michael's course number
-          % Vilja's digital humanities course
-  \item 2017, INFO 2301: Clustering
-    \item 2016, HIST 6546: Topic Models
-        \item 2016, CSCI 7000 (Data Science Team): Topic Models as
-          Features
-        \item 2016, CSCI 6000: Machine Learning Research
-	\item 2015, CSCI 5832: Topic Models
-	\item 2012, CMSC 421: Topic Models
-	\item 2012, CMSC 726: Topic Models
-	\item 2011, LING 773: Topic Models
-	\item 2010, CMSC 726: Topic Models
-\end{itemize*}
-}
-
-\headedsection{\ifumd 3.F.i.\fi Advising: Research Direction (Undergraduate)} {
+\headedsection{\ifumd III.C.1.\fi Advising: Research Direction (Undergraduate)} {
 
 \begin{enumerate*}
   \item Henrik Larsen: Verb prediction
@@ -383,12 +348,14 @@ Research (only Colorado portion shown)}
 \end{enumerate*}
 }
 
-\headedsection{\ifumd 3.F.ii.\fi Advising: Research Direction (Masters)}{
+\headedsection{\ifumd III.C.2.\fi Advising: Research Direction (Masters)}{
 
 \headedsubsection{Chair or Co-Chair}{}{
 
 \begin{enumerate*}
-\item You Lu (CSCI, 2016--2017): Task-based Evaluation of topic models
+\item Davis Yoshida (CU APMA, 2016--2017): Domain Adaptation for
+  Question Answering
+\item You Lu (CU CSCI, 2016--2017): Task-based Evaluation of Topic Models
 \item Alison Smith (UMD CMSC, 2011--2013): Evaluating Interfaces for Interactive Topic Modeling [First position: Decisive Analytics]
 \item Brianna Satinoff (UMD CMSC, 2009--2011): Incremental Models for Text Classification [First position: Wellpoint]
 \end{enumerate*}
@@ -405,7 +372,7 @@ Research (only Colorado portion shown)}
 }
 }
 
-\headedsection{\ifumd 3.F.iii.\fi Advising: Research Direction (Doctoral)}{}{
+\headedsection{\ifumd III.C.3.\fi Advising: Research Direction (Doctoral)}{}{
 
 \headedsubsection{Chair or Co-chair}{}{
 
@@ -458,13 +425,71 @@ Research (only Colorado portion shown)}
 }
 }
 
+\headedsection{\ifumd III.H.\fi Guest lectures}{
+
+\begin{itemize*}
+          % Michael's course number
+          % Vilja's digital humanities course
+  \item 2017, INFO 2301: Clustering
+    \item 2016, HIST 6546: Topic Models
+        \item 2016, CSCI 7000 (Data Science Team): Topic Models as
+          Features
+        \item 2016, CSCI 6000: Machine Learning Research
+	\item 2015, CSCI 5832: Topic Models
+	\item 2012, CMSC 421: Topic Models
+	\item 2012, CMSC 726: Topic Models
+	\item 2011, LING 773: Topic Models
+	\item 2010, CMSC 726: Topic Models
+\end{itemize*}
+}
 
 
-\roottitle{\ifumd 4.A. \fi Professional Service}
+\roottitle{\ifumd IV.A. \fi Professional Service}
 
 
-\headedsubsection{\ifumd Offices and committee memberships in
-  professional organizations \else Conference Reviewing \fi}{}{
+\headedsubsection{\umdtext{IV.A.3.a. }{Reviewing and Editing for
+    Journals and Presses: Aricles}}{}{
+\begin{itemize*}
+\item Reviewer for \emph{Journal of AI Research}: 2016
+\item Reviewer for \emph{International Journal on Digital Libraries}: 2016
+\item Reviewer for \emph{Machine Learning Journal}: 2014
+\item Reviewer for \emph{Transactions of the Association of
+    Computational Linguistics}: 2011,2012,2012,2013,2013,2013,2014
+\item Reviewer for \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}: 2013
+\item Reviewer for \emph{Computational Linguistics}: 2013
+\item Reviewer for \emph{Scientometrics}: 2012
+\item Reviewer for \emph{Information Visualization}: 2012
+\item Reviewer for \emph{Transactions on Knowledge Discovery from Data}: 2011
+\item Reviewer for \emph{Annals of Applied Statistics}: 2011
+\item Reviewer for \emph{Journal of Machine Learning Research}: 2011,2012
+\item Reviewer for \emph{Elsivier Computer Speech and Language}: 2007
+\end{itemize*}
+}
+
+
+\headedsubsection{\umdtext{IV.A.3.b.}{Reviewing for Journals and
+    Presses: Books}}{}{
+\begin{itemize*}
+  \item Reviewer for \emph{R Programming and Data Science}, Chapman and Hall
+\end{itemize*}
+}
+
+\headedsubsection{\ifumd IV.A.4.\fi Reviewing activities for Agencies
+  and Foundations}{}{
+
+\begin{itemize*}
+\item NSF IIS Review Panel (2017)
+\item NSERC External Review (2017)
+\item NSF IIS External Review (2015)
+\item NSF IIS Review Panel (2015)
+\item NSF External Review (2014)
+\item NSF IIS Review Panel (2012)
+\item NSF BIGDATA Review Panel (2012)
+\end{itemize*}
+}
+
+
+\headedsubsection{\umdtext{IV.A.5. }{Reviewing Activities for Conferences}}{}{
 
 
 \begin{itemize*}
@@ -483,32 +508,6 @@ Research (only Colorado portion shown)}
 \item Program Committee \emph{Global WordNet Association Conference}: 2010, 2008, 2006
 \item Assistant Reviewer for \emph{UAI 2007}
 \item Reviewer, Works in Progress \emph{2006 SIGCHI}
-\end{itemize*}
-}
-
-\ifumd
-\else
-\headedsubsection{Reviewing and Editing for Journals}{}{
-  \journalreview{}
-}
-\fi
-
-\headedsubsection{Reviewing for Books}{}{
-\begin{itemize*}
-  \item Reviewer for \emph{R Programming and Data Science}, Chapman and Hall
-\end{itemize*}
-}
-
-\headedsubsection{\ifumd 4.A.ii.\fi Reviewing activities for agencies}{}{
-
-\begin{itemize*}
-\item NSF IIS Review Panel (2017)
-\item NSERC External Review (2017)
-\item NSF IIS External Review (2015)
-\item NSF IIS Review Panel (2015)
-\item NSF External Review (2014)
-\item NSF IIS Review Panel (2012)
-\item NSF BIGDATA Review Panel (2012)
 \end{itemize*}
 }
 \headedsubsection{\ifumd 4.A.iii.\fi Other unpaid services to local, state, and federal
