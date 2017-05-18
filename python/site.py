@@ -4,7 +4,7 @@ import sys
 from website_writer import WebsiteWriter, global_replace
 
 home = os.environ.get('HOME')
-print "Home: ", home
+print("Home: " + home)
 
 writer = WebsiteWriter("src/", home + "/public_html/", "resources/_header.html", "resources/_footer.html",
                        "Jordan Boyd-Graber", "http://cs.colorado.edu/~jbg/", sys.argv[1])
