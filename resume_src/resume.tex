@@ -9,6 +9,7 @@
 #1 #2
 \else
 #2
+\fi
 }
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
@@ -34,13 +35,25 @@
 \vspace{.5cm}
 \fi
 
+\ifumd
 
-\noindent\href{mailto:Jordan.Boyd.Graber@colorado.edu}{Jordan.Boyd.Graber@colorado.edu}\bull % Your email address
-\textsmaller{+}1 (920) 524-9464\bull \href{http://cs.colorado.edu/~jbg}{\url{http://cs.colorado.edu/~jbg}}\\ % Your URL
-111B ECCS \bull Computer Science \bull College of Engineering and Applied Science \bull Boulder, CO 80309
+\roottitle{ I. Personal Information }
 
+\fi
+
+\noindent\href{mailto:Jordan.Boyd.Graber@colorado.edu}{Jordan.Boyd.Graber@colorado.edu}
+\umdtext{\\}{\bull} % Your email address
+\textsmaller{+}1 (920) 524-9464
+\umdtext{\\}{\bull} \href{http://cs.colorado.edu/~jbg}{\url{http://cs.colorado.edu/~jbg}}\\ % Your URL
+\umdtext{\\Mailing Address: \\ \bull}{} 111B ECCS
+\umdtext{\\ }{\bull} Computer Science
+\umdtext{\\ }{\bull} College of Engineering and Applied Science
+\umdtext{\\ }{\bull} Boulder, CO 80309
+
+\ifumd
+\else
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
-
+\fi
 
 \roottitle{ \umdtext{I.B.}{Academic Appointments}}
 
@@ -345,6 +358,8 @@ Research (only Colorado portion shown)}
 \begin{itemize*}
           % Michael's course number
           % Vilja's digital humanities course
+  \item 2017, INFO 2301: Clustering
+    \item 2016, HIST 6546: Topic Models
         \item 2016, CSCI 7000 (Data Science Team): Topic Models as
           Features
         \item 2016, CSCI 6000: Machine Learning Research
