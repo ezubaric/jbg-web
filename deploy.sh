@@ -31,13 +31,19 @@ done
 rm -rf ~/public_html/$SUBDIR
 cp -r qb ~/public_html/$SUBDIR
 
-python3 python/site.py `git show -s --format=%ci`
+if hash python3 2>/dev/null; then
+        PYCOMMAND=python3
+else
+        PYCOMMAND=python
+fi
+
+$PYCOMMAND python/site.py `git show -s --format=%ci`
 
 if [ ${#CHANGES} -gt 0 ]
    then
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
-        python3 python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
+        $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
         pdflatex resume_src/research &> /dev/null
         bibtex research
         for FILE in public umd short_cv teaching service research
