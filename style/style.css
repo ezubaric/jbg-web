@@ -40,7 +40,7 @@ p {
  */
 
 a {
-  color: #CFB87C;
+  color: #E03A3E;
   background-color: transparent;
   text-decoration: none;
 }
@@ -148,7 +148,7 @@ h3, h4, h5 {
 #header {
     position: relative;
     color: #ffffff;
-    background-color: #000000;
+    background-color: #990000;
     font-size: 200%;
     padding: 10px 5px 10px 0.5em;
 }
@@ -187,29 +187,16 @@ h3, h4, h5 {
 #button li a {
     display: block;
     padding: 5px 5px 5px 0.5em;
-    border-left: 10px solid #d0b87c;
-    border-right: 10px solid #c0a86c;
     background-color: #282828;
-    color:#d0b87c;
     text-decoration: none;
 
 }
 
-li.sub {
-     border-left: 10px solid #d0b87c;
-     border-right: 10px solid #c0a86c;
-}
-
-a.sub {
-      border-left: 0px;
-}
 
 /*
  * Changes the color of the link on a hover
  */
 #button li a:hover {
-    border-left:10px solid #DFC88C;
-    border-right: 10px solid #DFC88C;
     background-color: #282828;
     color: #ffffff;
 }
@@ -262,55 +249,6 @@ td {
   font-size : 77%;
 }
 
-
-/*
-  Copied from CU Boulder
-*/
-
-#sidebar {
-	width:320px;
-	float:left;
-	padding-top:20px;
-}
-#sidebar ul {
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-#sidebar .sidebar-widget ul {
-	list-style:disc;
-	margin: 5px 0 5px 20px;
-}
-#sidebar h3 {
-	color:#363636;
-	padding:0px;
-	font-weight:normal;
-	width:auto;
-	padding:0;
-	padding-bottom:5px;
-	margin:0;
-	font-size:130%;
-}
-#sidebar h31 span {
-	background-repeat:no-repeat;
-	background-position:0 45%;
-	padding-left:20px;
-	display:block;
-}
-.sidebar-widget {
-	background-color:#EEE;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding:1px 2px 1px;
-	margin:2px 0;
-}
-.sidebar-widget p {
-	margin-top:0;
-	margin-bottom:.8em;
-}
-
-
 #navigation {
 	width:960px;
 	margin:0 auto;
@@ -323,7 +261,6 @@ td {
 	margin:0;
 	padding:0;
 	height:45px;
-	border-left:1px solid #444;
 }
 #navigation ul li {
 	display:inline;
@@ -336,16 +273,15 @@ td {
 #navigation a:link, #navigation a:visited {
 	display:block;
 	float:left;
-	color:#d0b87c;
+	color:#FFFFFF;
 	text-transform:uppercase;
 	padding:0 10px;
 	font-size:15px;
 	line-height:45px;
 	height:45px;
-	border-right:1px solid #444;
 }
 #navigation a:hover {
-	color:#FFF;
+	color:#FFD520;
 	text-decoration: none;
 }
 #navigation li.current_page_item a:link, #navigation li.current_page_item a:visited, #navigation li.current_page_ancestor a:link, #navigation li.current_page_ancestor a:visited {
@@ -354,9 +290,9 @@ td {
 
 #navwrapper {
 	width:100%;
-	background-color:#282828;
+	background-color:#000000; 
 	background-repeat:repeat-x;
-	border-top:3px solid #d0b87c;
+	border-top:3px solid #CD1111; 
 }
 
 .alignleft {
