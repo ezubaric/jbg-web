@@ -1,5 +1,5 @@
 ~~ Bibtex | inproceedings
-~~ Title | Robust Reinforcement Learning to Train Neural Machine Translations in the Face of Imperfect Feedback
+~~ Title | Reinforcement Learning for Bandit Neural Machine Translation with Simulated Human Feedback
 ~~ Author | Khanh Nguyen and Jordan Boyd-Graber and Hal {Daum\'{e} III}
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2017
@@ -8,3 +8,6 @@
 ~~ Category | Reinforcement Learning
 ~~ Venue | Refereed Conference
 ~~ Project | Thinking on Your Feet*../projects/IIS-1320538.html
+~~ URL | docs/2017_emnlp_bandit_mt.pdf
+~~ NumPages | 11
+~~ Link | Code*https://github.com/khanhptnk/bandit-nmt

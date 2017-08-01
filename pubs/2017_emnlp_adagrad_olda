@@ -2,6 +2,7 @@
 ~~ Title | Why ADAGRAD Fails for Online Topic Modeling
 ~~ Author | You Lu and Jeff Lund and Jordan Boyd-Graber
 ~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ URL | docs/2017_emnlp_adagrad_olda.pdf
 ~~ Year | 2017
 ~~ Location | Copenhagen, Denmark
 ~~ Category | Topic Models
@@ -9,4 +10,4 @@
 ~~ Venue | Refereed Conference
 ~~ Project | Scaling Insight*../projects/NCSE-1422492.html
 ~~ Project | Closing the Loop*../projects/IIS-1409287.html
-
+~~ NumPages | 6
