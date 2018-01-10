@@ -830,14 +830,23 @@ better/easier than that of latex.  </li>
     While they are good for people who are new to LaTeX or don't have a UNIX environment, I don't think they're a good tool for me.
       <ol>
 	<li> They are not mature; I was able to crash ShareLaTeX through creating a series folders.
-	<li> They let you gloss over annoying errors (LaTeX should be more intuitive)
+	<li> They let you gloss over annoying errors (LaTeX itself should be more intuitive, but ShareLaTeX hides the complexity and thus problems)
 	<li> I have scripts to find grammar / stylistic errors that are hard to integrate
-	<li> I prefer to search files using grep
+	<li> I prefer to search multiple files using grep
 	<li> I prefer to have my research code generate figures/data which can be added to paper repository with a single command line (makes replication easier)
-	<li> I prefer to use emacs as editor
+	<li> I prefer to use emacs as editor; ShareLaTeX has pretty high latency while typing and lacks keyboard commands for easier editing
       </ol>
 </p>
 
+<p>I'm not going to say that you can never use ShareLaTeX, but if you do and expect me to have non-trivial interaction with the paper, I will ask you to:
+  <ol>
+    <li> Organize files in <a href="https://github.com/Pinafore/publications/">the same way that I do</a></li>.  I should be able to download the source zip file and decompress it and run the Makefile to compile everything.
+    <li> Run my style scripts and address any errors before asking me to look at it (doing this is a good way of making sure it fits in my paper repository).
+    <li> Incorporate my preamble for LaTeX-based commenting (don't use ShareLaTeX commenting, as that doesn't work with offline editing).
+    <li> <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands.html">Reflow all of your text</a>
+    <li> Still obey the paper token tracking spreadsheet for exclusive editing (in case someone needs to edit offline on a plane or something).
+  </ol>
+</p>
 
   </ol>
 
