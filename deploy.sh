@@ -45,18 +45,21 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
-        pdflatex resume_src/research
+        pdflatex resume_src/research > /dev/null
         bibtex research
         for FILE in public umd short_cv teaching service research
         do
             echo $FILE
+	    echo "---------------------------"
             pdflatex resume_src/$FILE
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
-            pdflatex $FILE 
+	    echo $FILE
+	    echo "---------------------------"
+            pdflatex $FILE
             PDFFILE="${FILE/.tex/.pdf}"
             ls -lh "${PDFFILE/pubs/.}"
             mv "${PDFFILE/pubs/.}" ~/public_html/docs
