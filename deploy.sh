@@ -51,7 +51,7 @@ if [ ${#CHANGES} -gt 0 ]
         do
             echo $FILE
 	    echo "---------------------------"
-            pdflatex resume_src/$FILE
+            pdflatex resume_src/$FILE > /dev/null
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
@@ -59,7 +59,7 @@ if [ ${#CHANGES} -gt 0 ]
         do
 	    echo $FILE
 	    echo "---------------------------"
-            pdflatex $FILE
+            pdflatex $FILE > /dev/null
             PDFFILE="${FILE/.tex/.pdf}"
             ls -lh "${PDFFILE/pubs/.}"
             mv "${PDFFILE/pubs/.}" ~/public_html/docs
