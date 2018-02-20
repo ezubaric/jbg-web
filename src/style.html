@@ -262,11 +262,20 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
 
 	<pre> The FancyPants algorithm can find fancy pants (Figure~\ref{fig:pants}). </pre>
 
-     <li> Use <a href="http://ggplot2.org/">ggplot2</a> for graphics, and make
+     <li> Use <a href="http://ggplot2.org/">ggplot2</a>
+     or <a href="http://plotnine.readthedocs.io/en/stable/">plotnine</a>
+     for graphics, and make
      sure <a href="http://www.r-bloggers.com/mathematical-annotations-on-r-plots/">notation
-     is consistent with LaTeX</a>.  Store your data in the same repository as
-     your paper and have a Makefile command to regenerate figures from the
-     original data.</li>
+     is consistent with LaTeX</a>.  Store your data in the same
+     repository as your paper and have a Makefile command to
+     regenerate figures from the original data.  It's important to
+     make the data that you use to generate the plots accessible so
+     that others can run statistical tests and fairly compare to your
+     results if they're so inclined.  Keynote/Excel are not a good
+     options for this because not everyone can afford these programs,
+     and they store data in a binary format.  These do not age well as
+     versions / operating systems change voer time.  ASCII ages much
+     better.</li>
    </ol>
 
 <h3>Math</h3>
