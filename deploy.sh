@@ -3,7 +3,7 @@
 # Restore deleted files
 git checkout $(git ls-files -d)
 
-CHANGES=`git whatchanged --since="1 days ago" -p pubs/ src_docs/ media/ resume_src/`
+CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_src/`
 
 rm -f python/*.pyc
 rm -f pubs/*.tex
@@ -45,18 +45,21 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
-        pdflatex resume_src/research &> /dev/null
+        pdflatex resume_src/research > /dev/null
         bibtex research
         for FILE in public umd short_cv teaching service research
         do
             echo $FILE
-            pdflatex resume_src/$FILE &> /dev/null
+	    echo "---------------------------"
+            pdflatex resume_src/$FILE > /dev/null
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
         for FILE in `ls pubs/*.tex`
         do
-            pdflatex $FILE &> /dev/null
+	    echo $FILE
+	    echo "---------------------------"
+            pdflatex $FILE > /dev/null
             PDFFILE="${FILE/.tex/.pdf}"
             ls -lh "${PDFFILE/pubs/.}"
             mv "${PDFFILE/pubs/.}" ~/public_html/docs
