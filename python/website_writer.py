@@ -65,6 +65,7 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
                                 job="Microsoft"),
+             "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "http://www.cs.umd.edu/~ynhu/",
                                    job="Google"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
@@ -80,14 +81,14 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Michelle Yuan": Student("Michelle Yuan", 2017, 2022),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
-                                        
+
              "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2015,
                                        "http://www.cs.umd.edu/~vietan/index.htm",
                                        job="Facebook"),
              "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
              "Fenfei Guo": Student("Fenfei Guo", 2015, 2020, "https://csel.cs.colorado.edu/~fegu1724/"),
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
-                 "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),             
+                 "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
              "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/", job="Assistant Professor, UMass"),
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
@@ -97,7 +98,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
-             "Alison Smith": Student("Alison Smith", 2012, 2019),
+             "Alison Smith": Student("Alison Smith", 2012, 2019, "http://alisonmsmith.github.io/"),
              "Henrik Larson": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
