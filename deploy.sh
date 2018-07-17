@@ -9,7 +9,7 @@ rm -f python/*.pyc
 rm -f pubs/*.tex
 
 rm -rf ~/public_html/teaching/*
-for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723_2013 CSCI_5832 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414
+for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414
         do
            mkdir -p ~/public_html/teaching/$CLASS
            cp teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
