@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>RI: EAGER: Collaborative Research: Adaptive Heads-up Displays for Simultaneous Interpretation</title>
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+    <link rel="stylesheet" href="../style/jimmy.css">
+    <link rel="stylesheet" href="../style/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+<p style="padding-top: 150px">
+<a href="#overview">Overview</a><br/>
+<a href="#team">Project Team</a><br/>
+<a href="#publications">Publications</a><br/>
+<a href="#software">Software</a></p>
+<a href="#Datasets">Datasets</a><br/>
+<a href="#Media">Media</a><br/>
+
+      </header>
+      <section>
+
+<p style="text-align: right">
+<img width="221" height="36" src="../images/umd-logo.gif"></p>
+
+<h1>RI: EAGER: Collaborative Research: Adaptive Heads-up Displays for Simultaneous Interpretation</h1>
+
+<p><b>Project funded by the National Science Foundation</b> (<a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1652666">IIS-1748663</a>)<br/>
+<b>PI:</b> <a href="http://boydgraber.org"><b>Jordan Boyd-Graber</b></a>,
+<b>University of Maryland</b></p>
+
+
+<a name="overview"><h2>Overview</h2></a>
+
+<P>The major goal of the project is to examine methods for creating heads-up displays for simultaneous interpreters, providing real-time assistance with difficult-to-translate content. There are a number of goals for the project, including design, method development, and prototyping. These can be broken down into the following:</P>
+
+<OL>
+<LI> Create offline translation assistants: Create static aids that convey useful information to interpreters, automating the process of creating “cheat sheets”; given a short description of the material to be interpreted automatically build a lexicon specific to that domain. This includes discovering salient terms and finding translations for these terms.
+ 
+<LI> Create machine-in-the-loop translation assistants: Create a display that will listen to to the speaker (in the source language), helping to create fluent translations, or possibly additionally the interpreter as well. The important thing in these interfaces is that they must not overwhelm the interpreter with irrelevant material.
+ 
+<LI> Create methods for robust prediction: Noise manifests itself in the form of MT errors when using models on bilingual text, or ASR errors when using models on speech. In addition, there is incomplete input resulting from the inherently sequential process of interpretation, and models must be able to handle this.
+ 
+<LI> Learning from explicit and implicit feedback: In order to create models that learn when and how to give suggestions to interpreters, we need a training signal about which suggestions are appropriate given a particular interpretation context. In order to do so, we can ask interpreters using the system to explicitly give feedback in real-time, or examine if forms of implicit feedback, which can be gleaned from observing user behavior in a deployed system.
+ 
+<LI> Create initial design and elicit interpreter feedback: Perform participatory design sessions will consist of three components: (1) semi-structured interview questions on support needs during interpreting, (2) critique of mock-ups that explore a range of possible design elements (e.g., display type, size, and placement, type and amount of information displayed), and (3) an opportunity for participants to sketch or describe their own design enhancements.
+ 
+<LI> Evaluations of the proposed interpretation interface: Deploy the system in a real interpretation setting and collect preliminary assessments with respect to objective measures of translation quality, the users’ subjective experience in using the system, and to measure cognitive load.
+</OL>
+      
+
+<p><small>&lt;&lt; <a href="#">back to top</a></small></p>
+
+<a name="team"><h2>Project Team</h2></a>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding: 0px; border: 0 none; width: 80px" align="center"><img src="../images/head_jbg.png"  width="65" alt="Jordan Boyd-Graber" /></td>
+<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~jbg/static/home.html"><b>Jordan Boyd-Graber</b></a><br/>
+Assistant Professor, Computer Science (Maryland)</td></tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img src="../images/head_hal.jpg" width="65"  alt="Hal Daume III" /></td>
+<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~hal/"><b>Hal Daum&eacute III</b></a><br/>
+Professor, Computer Science (Maryland)</td></tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none; width: 80px" align="center"><img
+  src="../images/head_leah.png" width="65" alt="Leah Findlater" /></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="http://terpconnect.umd.edu/~leahkf/"><b>Leah Findlater</b></a><br/>
+Associate Professor, Human Centered Design and Engineering (UW)</td></tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none; width: 80px" align="center"><img
+  src="../images/head_graham.png"  width="65" alt="Graham Neubig" /></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="http://www.phontron.com/"><b>Graham Neubig</b></a><br/>
+Assistant Professor, Machine Learning (CMU)</td></tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_wenyan.png" width="65" alt="Wenyan Li"/></td>
+<td style="padding: 0px; border: 0 none;"><b>Wenyan Li</b><br/>
+MS student, Electrical Engineering (Maryland)</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_denis.png" width="65" alt="Denis Peskov"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="http://denispeskov.github.io/"><b>Denis Peskov</b></a><br/>
+Ph.D. student, Computer Science (Maryland)</td>
+</tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_jo.jpg" alt="Jo Shoemaker" width="65" /></td>
+<td style="padding: 0px; border: 0 none;"><b>Jo Shoemaker</b><br/>
+Ph.D. student, Computer Science (Maryland)</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_craig.png" width="65" alt="Craig Stewart"/></td>
+<td style="padding: 0px; border: 0 none;"><b>Craig Stewart</b><br/>
+Ph.D. student, Computer Science (CMU)</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_nikolai.png" width="65" alt="Nikolai Vogler"/></td>
+<td style="padding: 0px; border: 0 none;"><b>Nikolai Vogler</b><br/>
+Ph.D. student, Computer Science (CMU)</td>
+</tr>
+
+</table>
+
+<p><small>&lt;&lt; <a href="#">back to top</a></small></p>
+
+<a name="publications"><h2>Publications (Selected)</h2></a>
+
+
+<ul>
+~~Pubs:Adaptive Heads-up Displays for Simultaneous Interpretation~~
+</ul>
+
+
+<!---
+<a name="software"><h2>Software</h2></a>
+
+<ul>
+  <li> <a href="https://github.com/Pinafore/qb">Question Answering System</a>
+</ul>
+
+<a name="datasets"><h2>Datasets</h2></a>
+
+<ul>
+  <li> <a href="../qb">Quiz bowl questions and (human) answers</a>
+</ul>
+----->
+
+<a name="media"><h2>Media</h2></a>
+
+<ul>
+~~Media:Adaptive Heads-up Displays for Simultaneous Interpretation~~
+</ul>
+
+<!---
+<h2>Workshops Organized by Project Members</h2>
+
+<ul>
+  <li> <a
+  href="https://sites.google.com/view/hcqa/">Human-Computer
+  Question Answering</a> </li>
+</ul>
+---->
+
+<h2>Acknowledgments</h2>
+
+<p>This work is supported by the National Science Foundation. Any
+opinions, findings, and conclusions or recommendations expressed in
+this material are those of the researchers and do not necessarily
+reflect the views of the National Science Foundation.</p>
+
+</section>
+      <footer>
+
+        <p><small>Theme based on <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="../style/scale.fix.js"></script>
+  </body>
+</html>
