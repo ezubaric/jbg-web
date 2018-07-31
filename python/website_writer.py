@@ -94,7 +94,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
              "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
                                            job="Assistant Professor, Ursinus College"),
-             "Eric Wallace": Student("Eric Wallace", 2018, 2018, kind="UG"),
+             "Eric Wallace": Student("Eric Wallace", 2018, 2018, "http://www.ericswallace.com/", kind="UG"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
