@@ -94,12 +94,12 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
              "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
                                            job="Assistant Professor, Ursinus College"),
-             "Eric Wallace": Student("Eric Wallace", 2018, 2018, kind="UG"),
+             "Eric Wallace": Student("Eric Wallace", 2018, 2018, "http://www.ericswallace.com/", kind="UG"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2019, "http://alisonmsmith.github.io/"),
-             "Henrik Larson": Student("Henrik Larson", 2016, 2017, kind="UG"),
+             "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
