@@ -1,6 +1,6 @@
 ~~ Bibtex | inproceedings
-~~ Title | Pathologies of Neural Models Make Interpretation Difficult
-~~ Author | Chen Zhao and Ahmed Elgohary and Jordan Boyd-Graber
+~~ Title | Dataset and Baselines for Sequential Open-Domain Question Answering
+~~ Author | Ahmed Elgohary and Chen Zhao and Jordan Boyd-Graber
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2018
 ~~ Location | Brussels, Belgium
@@ -9,3 +9,4 @@
 ~~ Category | Deep Learning
 ~~ Venue | Refereed Conference
 ~~ NumPages | 6
+~~ url | docs/2018_emnlp_linked.pdf
