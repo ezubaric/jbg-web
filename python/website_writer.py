@@ -64,17 +64,17 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
-                                job="Microsoft"),
+                                job="Senior Research Scientist, Microsoft"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "http://www.cs.umd.edu/~ynhu/",
                                    job="Google"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
              "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
-             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/"),
+             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/", job="Postdoc, MSR"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
              "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/",
-                              job="Stanford Postdoc"),
+                              job="Assistant Professor, NYU"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2022),
@@ -100,6 +100,9 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2019, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
+             "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021),
+             "Ahmed Elgohary": Student("Ahmed Elgohary", 2018, 2020, "http://www.cs.umd.edu/~elgohary/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
