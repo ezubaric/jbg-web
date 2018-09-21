@@ -78,7 +78,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2022),
-             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022),
+             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
 
