@@ -73,6 +73,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
              "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/", job="Postdoc, MSR"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
+             "Yoshinari Fujinuma": Student("Yoshinari Fujinuma", 2015, 2020, "http://akkikiki.github.io/about/"),
              "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/",
                               job="Assistant Professor, NYU"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
