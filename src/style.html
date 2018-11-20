@@ -613,7 +613,18 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     doesn't handle sentence-final acronyms; this will make your life easier).
       <pre>
 	\textsc{tla}s are popular in the \textsc{us} government.
-      </pre>
+    </pre>
+
+    <li> Tell LaTeX when it shouldn't break lines between words.  You
+    don't want a new line to start with a number or a citation; it
+    looks bad.  So instead of having a raw space, but a tilde
+    (&#126;).  <b>Do not also put a normal space on either side of the
+    tilde: that completely removes the effect.</b>
+
+    <pre> The interpolation factor~$\lambda$ is inspired by
+     \abr{searn}~\cite{daume-06}.
+    </pre>
+    
     <li> If you have an abbreviation mid-sentence, make sure LaTeX knows not to
     use sentence final spacing.
       <pre>
