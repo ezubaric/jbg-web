@@ -598,14 +598,25 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
 <h3>Typography</h3>
 
   <ol>
-    <li> Put mentions of words in quotes and topics (e.g., from a
-    topic model) in underline (topic macro).
+    <li> For topic modeling papers, put mentions of words in quotes
+    and topics (e.g., from a topic model) in underline (topic macro).
 
       <pre>
         We wanted to understand why the \underline{research} topic has
       high probability for ``procrastination'', but we leave that for
       future work.
       </pre>
+
+    <li> For question answering papers, put question words in quotes
+    and answers in underline.
+
+      <pre>
+	If you see "phosphonium ylide", the system always responds
+	\underline{Wittig Reaction}.
+      </pre>
+
+    <li> If you are writing a question answering paper that uses topic
+    models, this bullet point will have to be updated.
 
     <li> Use small caps for acronyms (it looks better; I create a macro called
     "abr" to make this easier), and don't put periods after the letters in
