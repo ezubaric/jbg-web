@@ -598,8 +598,8 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
 <h3>Typography</h3>
 
   <ol>
-    <li> Put mentions of words in quotes and topics (e.g., from a
-    topic model) in underline (topic macro).
+    <li> For topic modeling papers, put mentions of words in quotes
+    and topics (e.g., from a topic model) in underline (topic macro).
 
       <pre>
         We wanted to understand why the \underline{research} topic has
@@ -607,13 +607,35 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
       future work.
       </pre>
 
+    <li> For question answering papers, put question words in quotes
+    and answers in underline.
+
+      <pre>
+	If you see "phosphonium ylide", the system always responds
+	\underline{Wittig Reaction}.
+      </pre>
+
+    <li> If you are writing a question answering paper that uses topic
+    models, this bullet point will have to be updated.
+
     <li> Use small caps for acronyms (it looks better; I create a macro called
     "abr" to make this easier), and don't put periods after the letters in
     acronyms (the reason why: LaTeX uses smart spacing after periods, but
     doesn't handle sentence-final acronyms; this will make your life easier).
       <pre>
 	\textsc{tla}s are popular in the \textsc{us} government.
-      </pre>
+    </pre>
+
+    <li> Tell LaTeX when it shouldn't break lines between words.  You
+    don't want a new line to start with a number or a citation; it
+    looks bad.  So instead of having a raw space, but a tilde
+    (&#126;).  <b>Do not also put a normal space on either side of the
+    tilde: that completely removes the effect.</b>
+
+    <pre> The interpolation factor~$\lambda$ is inspired by
+     \abr{searn}~\cite{daume-06}.
+    </pre>
+    
     <li> If you have an abbreviation mid-sentence, make sure LaTeX knows not to
     use sentence final spacing.
       <pre>
