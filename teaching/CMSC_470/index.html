@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CMSC/LING 723 / INST 735</title>
+<link href="../../style/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <a href="~~PATHPREFIX~~">~~SITETITLE~~</a> <br/>
+</div>
+
+<div id="navwrapper">
+  <div id="navigation">
+    <div class="menu">
+    ~~NAVIGATION~~
+    </div>
+   </div>
+</div>
+
+<div id="right">
+  <a href="../../">Jordan Boyd-Graber</a><br>
+  3155 AVW<br>
+  <i>Computer Science</i> <br>
+  <a href="mailto:jbg@boydgraber.org">jbg@boydgraber.org</a>
+</div>
+
+<div id="content">
+
+<h1 id="header">Natural Language Processing (CMSC 470)</h1>
+
+<h2>Logistics</h2>
+
+  <center>
+  <table>
+    <tr>
+      <td> Location </td> <td> Iribe 2207</td>
+    </tr>
+    <tr>
+      <td> Time </td> <td> Mon./Wed. 17:00pm - 18:15pm </td>
+    </tr>
+    <tr>
+      <td> Webpage </td> <td>
+    <a href="http://umiacs.umd.edu/~jbg/teaching/CMSC_470/">http://umiacs.umd.edu/~jbg/teaching/CMSC_470/</a> </td>
+    </tr>
+    <tr>
+      <td> Mailing List </td> <td><a
+    href="http://piazza.com/umd/spring2019/cmsc470">http://piazza.com/umd/spring2019/cmsc470</a></td>
+    <td>
+    </tr>
+    <tr>
+      <td> Text </td> <td> <a
+  href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Natural
+  Language Processing</a> </td>
+    </tr>
+    <tr>
+      <td> Syllabus </td> <td><a
+    href="https://docs.google.com/document/d/1UN3qlJttJFRXP4qtoIriZxHjYQflvsUNsulHLIFVTzQ/edit?usp=sharing">https://docs.google.com/document/d/1UN3qlJttJFRXP4qtoIriZxHjYQflvsUNsulHLIFVTzQ/edit?usp=sharing</a></td>
+    <td>
+    </tr>
+  </table>
+  </center>
+
+<h2>People</h2>
+
+  <h3>Professor</h3>
+
+  <blockquote>
+  <a href="http://umiacs.umd.edu/~jbg/">Jordan Boyd-Graber</a><br>
+  AVW 3153<br>
+  Office Hours (AVW 3155): Starting Sept. 4, Mondays 15:00 - 16:00 and by appointment
+  </blockquote>
+
+  <h3>Teaching Assistant</h3>
+
+  <blockquote>
+  <A HREF="https://pranav-goel.github.io/">Pranav Goel</A>: AVW 4103, Friday 15:00
+  </blockquote>
+
+<h2>Schedule</h2>
+  <CENTER>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TH>Date</TH>   <TH>In-Class Topic</TH>  <TH>Assignment Due </TH> <TH>Lecture</TH>
+    </TR>
+
+    <TR>
+      <TD> Mon 28. January </TD> <TD> Introduction to the course,
+      Probability, and Python </TD>
+      <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Optional Readings:</b>
+        <ul>
+            <li> Python (and programming) <a
+      href="https://www.coursera.org/course/programming1">introductory
+	    course</a>
+	    <li> You may also want to look at first couple of weeks
+    (through February)
+    of
+    <A HREF="../INST_414">INST 414</A> as review.
+            <li> <a
+    href="http://www.sjsu.edu/faculty/gerstman/StatPrimer/probability.pdf">A
+    probability primer</a>
+            <li> (Optional, if you want more detail) <a
+    href="http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/amsbook.mac.pdf">Grinstead
+    and Snell, Chapters 1-2, Chapter 4.1</a>
+            <li>  <a
+    href="http://aclweb.org/anthology/W/W09/W09-0103.pdf">How the
+	    statistical revolution changes (computational) linguistics</a>
+	    <li> On the <A HREF="http://mitp.nautil.us/article/170/last-words-computational-linguistics-and-deep-learning">deep learning revolution in NLP</A>
+          </ul>
+      </TD>
+    </TR>
+
+    </TR>
+
+    <TR>
+      <TD> Wed 30. Jan </TD> <TD> Information Retrieval / tf-idf </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> <A HREF="https://nlp.stanford.edu/IR-book/">IR Chapter</A> 1, 6
+	</ul>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 4. Feb </TD> <TD> Project Framework / Codalab </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> <A HREF="http://qanta.org">QANTA.org</A>
+	  </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Wed 6. Feb </TD> <TD> Homework Lab </TD> <TD></TD>
+      <TD> 
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Fri 8. Feb </TD> <TD> Homework Due </TD> <TD><a href="https://github.com/Pinafore/nlp-hw/blob/master/tfidf">tf-idf</a></TD> <TD>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 11. Feb </TD> <TD> Logistic Regression </TD> <TD></TD>
+      <TD>
+        [Video <a href="https://www.youtube.com/watch?v=0C-HjaibhsY&index=2&t=816s&list=PLegWUnz91WfsELyRcZ7d1GwAVifDaZmgo">A</A>
+	<a
+        href="https://www.youtube.com/watch?v=9j65OsYGlhA&list=PLegWUnz91WfsELyRcZ7d1GwAVifDaZmgo&index=3">B</a>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> SNLP Chapter 5.1-5.3
+	  </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 13. Feb </TD> <TD> Stochastic Gradient Descent </TD> <TD> </TD>
+      <TD>
+       [Video <a href="https://youtu.be/xEa78n3K4gU">A</a>]
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> SNLP Chapter 5.4-5.9
+	  </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Fri 15. Sept </TD> <TD> Homework Due </TD> <TD><a href="https://github.com/Pinafore/nlp-hw/blob/master/nnqa">NN Question Answering</a></TD> <TD>
+      </TD>
+    </TR>
+
+    
+    <TR>
+      <TD> Mon 18. Feb </TD> <TD> Distributional Semantics (Word2Vec) </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> SNLP Chapter 6
+	  </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 20. Feb </TD> <TD> Neural Networks for Language </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+            <li> SNLP 7
+	  </ul>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Fri 22. Feb </TD> <TD> Homework Due </TD> <TD><a href="https://github.com/Pinafore/nlp-hw/blob/master/lr">Logistic Regression</a></TD> <TD>
+      </TD>
+    </TR>
+
+    
+    <TR>
+      <TD> Mon 24. Feb </TD> <TD> Expo Match I (Students) </TD> <TD></TD>
+      <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> <A HREF="https://pytorch.org/tutorials/">Tutorial</A>
+	  <li> <A HREF="https://github.com/neubig/nn4nlp-code">Tons of
+      NLP Models</A>
+	  </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 26. Feb </TD> <TD> Classification and Feature Engineering </TD>
+      <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+	<ul>
+	  <li> SNLP 4
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 4. Mar </TD> <TD> Homework Lab </TD>
+      <TD></TD>
+      <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 6. Mar </TD> <TD> Neural Sequence Models  </TD>
+      <TD></TD>
+      <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+        <ul>
+	  <li> SNLP 9
+          </ul>
+     </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Fri 8. Mar </TD> <TD> Homework Due </TD> <TD><a href="https://github.com/Pinafore/nlp-hw/blob/master/dan">Deep Averaging Networks</a></TD> <TD>
+      </TD>
+    </TR>
+    
+    
+
+    <TR>
+      <TD> Mon 11. Mar </TD> <TD> Midterm Review </TD> <TD></TD>
+      <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Wed 13. Mar </TD> <TD> Midterm  </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 25. Mar </TD> <TD> Question Answering </TD> <TD></TD>
+      <TD>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+        <ul>
+	  <li> SNLP 23
+          </ul>
+     </TD>
+    </TR>
+    
+
+    <TR>
+      <TD> Wed 27. Mar </TD><TD> Homework Lab </TD> <TD></TD>
+      <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Fri 29. Mar </TD> <TD> HW Due  </TD> <TD>
+<a href="https://github.com/Pinafore/nlp-hw/blob/master/rnn">Sequence Buzzer</a>
+      </TD> <TD>
+      </TD>
+    </TR>
+    
+
+    <TR>
+      <TD> Mon 1. Apr </TD>  <TD> Expo Match II (Faculty) </TD> <TD></TD>
+      <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 2. Apr </TD> <TD> Homework Lab </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Fri 5. Apr </TD> <TD> Homework Due  </TD> <TD><A HREF="https://github.com/Pinafore/nlp-hw/tree/master/mr">Machine Reading</A></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>  Mon 8. Apr </TD> <TD> No Class: Meet to Discuss Project </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>  Wed 10. Apr </TD> <TD> Named Entities and Coreference </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Fri 12. Apr </TD> <TD> Homework Due  </TD> <TD><A HREF="https://github.com/Pinafore/nlp-hw/tree/master/project">Project Proposal Due</A></TD> <TD>
+      </TD>
+    </TR>
+
+    
+    <TR>
+      <TD> Mon 15. Apr </TD>  <TD> Topic Models </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>  Wed 17. Apr </TD>  <TD> Machine Translation </TD> <TD></TD>
+      <TD>
+	[Video: <A
+      HREF="https://www.youtube.com/watch?v=nKqyU0bUKTQ">Word-Based</A>
+      <A HREF="https://youtu.be/1Ufz75u4s24">Phrase</A> <A HREF="https://youtu.be/BrdQ9YPCT48">Neural</A>] [PDF: <A HREF="17a_intro.pdf">Word</A> <A HREF="17b_phrase.pdf">Phrase</A> <A HREF="17c_neural.pdf">Neural</A> <A HREF="17d_ex.pdf">Ex</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD>  Mon 22. Apr </TD> <TD> Parsing </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Wed 24. Apr </TD> <TD> Project Workshop </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Fri 26. Apr </TD> <TD> Homework Due  </TD> <TD><A HREF="https://github.com/Pinafore/nlp-hw/tree/master/project">First Deliverable</A></TD> <TD>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 29. Apr </TD> <TD> Linguistic Variation / Morphology </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 1. May </TD> <TD> AMA </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <a href="https://www.technologyreview.com/s/609048/the-seven-deadly-sins-of-ai-predictions/">The Seven Deadly Sins of AI Predictions</a>
+	    <li> <A HREF="https://www.theverge.com/2018/5/23/17384324/meredith-broussard-artifical-unintelligence-technology-criticism-technochauvinism">How Computers Misunderstand the World</A>
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Mon 6. May </TD> <TD> Midterm Review </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Wed 8. May </TD> <TD>  Midterm II </TD> <TD></TD> <TD>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Mon 13. May </TD> <TD> Expo Match III (Surprise) </TD> <TD></TD> <TD>
+	</TD>
+     </TR>
+
+    <TR>
+      <TD> Mon 20. May <b>16:00-18:00</b> </TD> <TD> Final Presentations </TD> <TD></TD> <TD>
+	</TD>
+     </TR>
+
+  </TABLE>
+  </CENTER>
+
+<br/>
+<br/>
+
+</div>
+
+
+<div id="footer">
+  Page by <a href="mailto:jbg@umiacs.umd.edu">Jordan Boyd-Graber</a>.
+</div>
+</body>
+</html>
