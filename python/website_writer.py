@@ -458,7 +458,11 @@ class WebsiteWriter:
       if "~" in ii or "#" in ii or "." in ii:
         # Don't go through backup files
         continue
-      item = IndexElement(open(ii).read())
+      try:
+        item = IndexElement(open(ii).read())
+      except UnicodeDecodeError:
+        print("Encode error on %s" % ii)
+        item = IndexElement(open(ii, encoding="utf-8").read())
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue
@@ -607,7 +611,7 @@ class WebsiteWriter:
     else:
         contents = ""
 
-    contents += open(raw).read()
+    contents += open(raw, encoding='utf-8').read()
 
     for variable in global_replace:
         contents = contents.replace("~~%s~~" % variable,
@@ -619,7 +623,7 @@ class WebsiteWriter:
     contents = contents.replace("~~PATHPREFIX~~", prefix).replace("~~PAGETITLE~~", title)
 
     print("Writing %s to %s" % (raw, filename))
-    o = open(filename, 'w')
+    o = open(filename, 'w', encoding='utf-8')
     o.write(contents)
     o.close()
 
