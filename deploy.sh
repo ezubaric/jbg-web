@@ -29,8 +29,8 @@ for SUBDIR in docs images downloads style projects
             cp $SUBDIR/*.* ~/public_html/$SUBDIR
 done
 
-rm -rf ~/public_html/$SUBDIR
-cp -r qb ~/public_html/$SUBDIR
+rm -rf ~/public_html/qb
+cp -r qb ~/public_html/
 
 if hash python3 2>/dev/null; then
         PYCOMMAND=python3
