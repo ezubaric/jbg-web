@@ -32,7 +32,7 @@ done
 rm -rf ~/public_html/qb
 cp -r qb ~/public_html/
 
-if hash python3 2>/dev/null; then
+if hash python3 2>log.txt; then
         PYCOMMAND=python3
 else
         PYCOMMAND=python
@@ -45,13 +45,15 @@ if [ ${#CHANGES} -gt 0 ]
         echo "CHANGES DETECTED!"
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
-        pdflatex resume_src/research > /dev/null
-        bibtex research
-        for FILE in public umd short_cv teaching service research
+	echo "Done media"
+        # pdflatex resume_src/research > log.txt
+        # bibtex research
+	# echo "Done rsearch"
+        for FILE in public umd short_cv # teaching service research
         do
             echo $FILE
 	    echo "---------------------------"
-            pdflatex resume_src/$FILE > /dev/null
+            pdflatex resume_src/$FILE > log.txt
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
@@ -59,7 +61,7 @@ if [ ${#CHANGES} -gt 0 ]
         do
 	    echo $FILE
 	    echo "---------------------------"
-            pdflatex $FILE > /dev/null
+            pdflatex $FILE > log.txt
             PDFFILE="${FILE/.tex/.pdf}"
             ls -lh "${PDFFILE/pubs/.}"
             mv "${PDFFILE/pubs/.}" ~/public_html/docs
