@@ -306,7 +306,7 @@ class IndexElement:
   def html(self, bibtex, url, section):
     s = self.author_string(False)
 
-    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;")
+    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\={o}", "&omacr;")
     if "Title" in self.fields and "Url" in self.fields:
       url = self.fields["Url"][0]
       if url.startswith("http"):
