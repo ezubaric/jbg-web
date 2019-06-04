@@ -152,7 +152,7 @@ documents look nice</a> (but it's a lot of work).</p>
      </pre>
 
   <li> Do use a comma between two independent clauses (subject and
-  verb) joined by a conjunction. 
+  verb) joined by a conjunction.
 
      <pre>
        I washed the car, and I mowed the lawn.
@@ -647,7 +647,7 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <pre> The interpolation factor~$\lambda$ is inspired by
      \abr{searn}~\cite{daume-06}.
     </pre>
-    
+
     <li> If you have an abbreviation mid-sentence, make sure LaTeX knows not to
     use sentence final spacing.
       <pre>
@@ -882,27 +882,58 @@ better/easier than that of latex.  </li>
       </ol>
     </li>
 
-    <li> What about ShareLaTeX?  I do not like to use these tools.
-    While they are good for people who are new to LaTeX or don't have a UNIX environment, I don't think they're a good tool for me.
-      <ol>
-	<li> They are not mature; I was able to crash ShareLaTeX through creating a series of folders.
-	<li> They let you gloss over annoying errors (LaTeX itself should be more intuitive, but ShareLaTeX hides the complexity and thus problems)
-	<li> I have scripts to find grammar / stylistic errors that are hard to integrate
-	<li> I prefer to search multiple files using grep
-	<li> I prefer to have my research code generate figures/data which can be added to paper repository with a single command line (makes replication easier)
-	<li> I prefer to use emacs as editor; ShareLaTeX has pretty high latency while typing and lacks keyboard commands for easier editing
-      </ol>
-</p>
+    <li> <b>What about ShareLaTeX/Overleaf</b>?  I do not like to
+    use these tools.  While they are good for people who are new to
+    LaTeX or don't have a UNIX environment, I don't think they're a
+    good tool for me.
 
-<p>I'm not going to say that you can never use ShareLaTeX, but if you do and expect me to have non-trivial interaction with the paper, I will ask you to:
+      <ol>
+	<li> They are not mature; I was able to crash ShareLaTeX
+	through creating a series of folders.
+
+	<li> They let you gloss over annoying errors (LaTeX itself
+	should be more intuitive, but ShareLaTeX hides the complexity
+	and thus problems)
+
+	<li> I have scripts to find grammar / stylistic errors that
+	are hard to integrate
+
+	<li> I prefer to search multiple files using grep
+
+	<li> I prefer to have my research code generate figures/data
+	which can be added to paper repository with a single command
+	line (makes replication easier)
+
+	<li> I prefer to use emacs as editor; ShareLaTeX has pretty
+	high latency while typing and lacks keyboard commands for
+	easier editing (it also gets quotes wrong by default)
+
+      </ol>
+
+      I'm not going to say that you can never use Overleaf, but if you do and expect me to have non-trivial interaction with the paper, I will ask you to:
   <ol>
-    <li> Organize files in <a href="https://github.com/Pinafore/publications/">the same way that I do</a></li>.  I should be able to download the source zip file and decompress it and run the Makefile to compile everything.
-    <li> Run my style scripts and address any errors before asking me to look at it (doing this is a good way of making sure it fits in my paper repository).
-    <li> Incorporate my preamble for LaTeX-based commenting (don't use ShareLaTeX commenting, as that doesn't work with offline editing).
-    <li> <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands.html">Reflow all of your text</a>
-    <li> Still obey the paper token tracking spreadsheet for exclusive editing (in case someone needs to edit offline on a plane or something).
+    <li> Organize files in <a
+  href="https://github.com/Pinafore/publications/">the same way that I
+  do</a>.  I should be able to download the source zip file and
+  decompress it and run the Makefile to compile everything.</li>
+
+    <li> Run my style scripts and address any errors before asking me
+    to look at it (doing this is a good way of making sure it fits in
+    my paper repository).
+
+    <li> Incorporate my preamble for LaTeX-based commenting (don't use
+    ShareLaTeX commenting, as that doesn't work with offline editing).
+
+    <li> <a
+    href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Fill-Commands.html">Reflow
+    all of your text</a>
+
+    <li> Still obey the paper token tracking spreadsheet for exclusive
+    editing (in case someone needs to edit offline on a plane or
+    something).
+
   </ol>
-</p>
+</li>
 
   </ol>
 
@@ -1061,7 +1092,7 @@ list
 <li> Uses the right style file (it sometimes changes between
 submission and camera ready)
 <li> Cite any recent work that's relevant and has come out (or you
-learned about) since you submitted 
+learned about) since you submitted
 <li> Has no widows or orphans
 
 <CENTER>
@@ -1097,9 +1128,18 @@ document leave a camera ready state
   href="http://arxiv.org/pdf/gr-qc/9703019v1.pdf">Robert Geroch</a> and <a href="http://www.cs.jhu.edu/~jason/advice/how-to-give-a-talk.html">Jason</a>.
   <li> Use Beamer and OmniGraffle (but keep your Beamer slides
   uncluttered with navigation and sections).
-  <li> Don't use a laser pointer (integrate any emphasis into your slides).  People have a tendency to over-use laser pointers, and they are not always usable (because of the screen, multiple screens, etc.).
-  <li> Don't read from notes (and don't use your slides as notes).  If you feel uncomfortable delivering the talk, it means you need to practice more.
-  <li> If you can ever use a picture instead of an equation, choose the picture (even if it takes more time).
+  <li> Don't use a laser pointer (integrate any emphasis into your
+  slides).  People have a tendency to over-use laser pointers, and
+  they are not always usable (because of the screen, multiple screens,
+  etc.).
+
+  <li> Don't read from notes (and don't use your slides as notes).  If
+  you feel uncomfortable delivering the talk, it means you need to
+  practice more.
+
+  <li> If you can ever use a picture instead of an equation, choose
+  the picture (even if it takes more time).
+
 </ol>
 
 <h3>Posters</h3>
@@ -1119,7 +1159,85 @@ document leave a camera ready state
 <h3>Personal Statements</h3>
 
 <ol>
-  <li>
+  <li> No sentence should be something that more than five people
+  could write.  Either it's not specific/detailed enough, or it's a
+  cliche.
+</ol>
+
+<h3>Creating a Disseration Document</h3>
+
+<ol>
+
+  <li> <b>Introduction</b>: Now, it may seem that your PhD was just
+  bouncing around between a set of different topics/projects.  But
+  there often is a reason that you moved from one project to another,
+  and with the advantage of hindsight, you can tell a story about why
+  that happened.
+
+  Think creatively about a narrative that connects all of your work
+  together.  It may not be chronological!  It's possible that later
+  work helps explain why earlier work was a good idea in the first
+  place; it's fine to order things differently, and the introduction
+  is a way for you to explain how things actually fit together.
+
+  Pretend that you're a historian piecing together your papers.  You
+  believe there was a reason this great scientist worked on X, Y, and
+  Z.  Come up with a good story about it!</li>
+
+  <li> <b>Background</b>: The background chapter is in many ways the
+  most important chapter.  Write it as if you had a time machine and
+  you were going to send back a document to yourself to speed along
+  your PhD.  What are all of the things you would need to know to get
+  it done in, say, a year.  This is what should go in the background
+  chapter: all of the stuff you wish you knew before you did all this
+  research but that you didn't learn in your undergrad.
+
+  However, this isn't just a list.  You need to figure out
+  <i>how</i> to explain it well.  Are there connections between these
+  things that you hadn't seen before?  Don't just regurgitate the
+  places you learned it from; write it in the way that makes sense for
+  your dissertation.
+
+  For example, Mohit Iyyer created a bunch of reference
+  implementations of deep learning models for text (circa 2015) and
+  created a background chapter that covered all of them with coherent,
+  consistent notation organized a sentiment analysis / political
+  polarity example.  This was both coherent and concrete.</li>
+
+  <li> <b>Copy/Paste</b>: After you get to the content chapters, you
+  may think that you're home free.  Just copy/paste the papers you've
+  written, right?  While there is a lot of content you can reuse, I'd
+  suggest the following:
+  <OL>
+    <LI> Delete your introduction and conclusion
+
+    <LI> Make all of the notation consistent between chapters
+  (corollary: make notation between papers as consistent as possible)
+
+    <LI> Remove all references to "This Paper", replace with "This
+  Chapter"
+
+    <LI> Replace references to your other papers with the appropriate
+  chapters, and provide more contrast than you would in a paper.
+
+    <LI> Your background section is tricky: most of it should be in
+  your background chapter.  If there's something that isn't in the
+  background chapter for a good reason, think carefully where it
+  should go: another chapter (e.g., it's more connected to another
+  paper) or this chapter (e.g., a section devoted just to that
+  concept).
+
+    <LI> You can never say "because of space restrictions" in a
+    thesis.  Many of the things that were in an appendix should now be
+    in the main text.  Only if they're really boring should they not
+    go in (but if they're important, try to make them interesting!).
+
+  </OL></LI>
+
+  <li> <b>Conclusion</b>: Pretend that you're starting up a new
+  research group at a university/company.  You have a five person team
+  that you need to provide with work.  What directions would you
+  extend from your research?  </LI>
 </ol>
 
 </div>

@@ -1,5 +1,5 @@
 ~~ Bibtex | inproceedings
-~~ Title | A Better Way to Diagnose Poorly-Mixed Cross-Lingual Embeddings: A Resource-Free Graph-Based Evaluation Metric
+~~ Title | A Resource-Free Evaluation Metric for Cross-Lingual Word Embeddings Based on Graph Modularity
 ~~ Author | Yoshinari Fujinuma and Michael Paul and Jordan Boyd-Graber
 ~~ Booktitle | Association for Computational Linguistics
 ~~ Year | 2019
@@ -7,5 +7,6 @@
 ~~ Category | Deep Learning
 ~~ Category | Multilingual Corpora
 ~~ Project | LORELEI*../projects/lorelei.html
-~~ Venue | Conference
+~~ Venue | Refereed Conference
 ~~ NumPages | 10
+~~ URL | docs/2019_acl_modularity.pdf
