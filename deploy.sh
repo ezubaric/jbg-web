@@ -61,12 +61,14 @@ if [ ${#CHANGES} -gt 0 ]
         do
 	    echo $FILE
 	    echo "---------------------------"
-            pdflatex $FILE > log.txt
+            pdflatex $FILE > ${FILE/.tex/.log}
             PDFFILE="${FILE/.tex/.pdf}"
             ls -lh "${PDFFILE/pubs/.}"
             mv "${PDFFILE/pubs/.}" ~/public_html/docs
         done
 fi
+
+grep "pdfpages Error" pubs/*.log
 
 rm *.aux *.log *.out;
 rm pubs/#*#
@@ -76,5 +78,6 @@ rm pubs/*~
 rm */*~
 rm *~
 rm */*/*~
+rm pubs/*.log
 rm docs/*.pdf
 git checkout $(git ls-files -d)
