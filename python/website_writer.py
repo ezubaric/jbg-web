@@ -77,7 +77,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/",
                               job="Assistant Professor, NYU"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
-             "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021),
+             "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://users.umiacs.umd.edu/~mozhi/"),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2022),
              "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
@@ -87,7 +87,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
                                        "http://www.cs.umd.edu/~vietan/index.htm",
                                        job="Facebook"),
              "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
-             "Fenfei Guo": Student("Fenfei Guo", 2015, 2020, "https://csel.cs.colorado.edu/~fegu1724/"),
+             "Fenfei Guo": Student("Fenfei Guo", 2015, 2019, "https://csel.cs.colorado.edu/~fegu1724/"),
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
                  "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
@@ -95,7 +95,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
              "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
                                            job="Assistant Professor, Ursinus College"),
-             "Eric Wallace": Student("Eric Wallace", 2018, 2018, "http://www.ericswallace.com/", kind="UG"),
+             "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="PhD Student, UC Berkeley"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
@@ -306,7 +306,7 @@ class IndexElement:
   def html(self, bibtex, url, section):
     s = self.author_string(False)
 
-    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;")
+    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\={o}", "&omacr;")
     if "Title" in self.fields and "Url" in self.fields:
       url = self.fields["Url"][0]
       if url.startswith("http"):
