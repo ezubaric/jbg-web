@@ -86,7 +86,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2015,
                                        "http://www.cs.umd.edu/~vietan/index.htm",
                                        job="Facebook"),
-             "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "http://csel.cs.colorado.edu/~pero9922"),
+             "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2020, "https://www.entilzha.io/"),
              "Fenfei Guo": Student("Fenfei Guo", 2015, 2019, "https://csel.cs.colorado.edu/~fegu1724/"),
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
