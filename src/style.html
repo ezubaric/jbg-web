@@ -541,12 +541,23 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     "T. S. Elliot") in your files.  Bibtex will will do this for you, and you
     will be out of luck if your citation file uses full names (like ACL).
         <li> Make sure that you are using the correct citation type for
-        articles, books, chapters, etc.
-        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
-    are all named after people), in your bibtex file in brackets to make sure
-    they get capitalized correctly
+          articles, books, chapters, etc.
+          <ol>
+            <li> For example, if you are citing an entry from <i>The
+            Encyclopedia of Artificial Intelligence</i>, you don't
+            cite the whole book.  You'd cite an individual chapter
+            (e.g., the chapter on "Question Answering" by Bonnie
+            Webber, pages 814-822).  The editor (Stuart Shapiro) is
+              not the author and shouldn't appear in the text.
+            <li> Theses have their own bibtex type.
+          </ol>
+        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and
+    "Pitman-Yor" are all named after people) and model/dataset names
+    (e.g., QuAC, BERT) in your bibtex file in brackets to make sure
+    they get capitalized correctly.
       <pre>
 	title = {Latent {D}irichlet Allocation},
+        title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
 
       </ol>
@@ -578,11 +589,11 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> Do not include page numbers, publishers, or locations for
     conferences (nobody reads the paper versions anyway).
 
-    <li> Do not include volumes for NIPS.  People just use the year.
+    <li> Do not include volumes for NeurIPS.  People just use the year.
 
     <li> Do not include DOIs or ISBNs
 
-    <li> For numeric citation styles (e.g., NIPS), don't use inline citations as nouns; use the name.
+    <li> For numeric citation styles (e.g., NeurIPS), don't use inline citations as nouns; use the name.
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
@@ -605,6 +616,13 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
        against document-level representations~\cite[\abr{lda}]{blei-03}.
     </pre>
 
+    <li> Many ArXiv citations actually shouldn't be.  If it has appear
+    in a real venue (or will), give that citation.  Often this changes
+    between when you submit a paper and when it's accepted.  Double
+      check all of your ArXiv citations.
+
+    <li> Don't cite both CoRR and ArXiv.  Pick one and stick with it.
+    
   </ol>
 
 <h3>Typography</h3>
