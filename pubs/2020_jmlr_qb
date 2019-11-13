@@ -1,15 +1,14 @@
 ~~ Bibtex | article
-~~ Title | Trick Me If You Can: Human-in-the-loop Generation of Adversarial Question Answering Examples
-~~ Author | Eric Wallace and Pedro Rodriguez and Shi Feng and Ikuya Yamada and Jordan Boyd-Graber
-~~ Journal | Transactions of the Association of Computational Linguistics
-~~ Year | 2019
+~~ Title |  Quizbowl: The Case for Incremental Question Answering
+~~ Author | Pedro Rodriguez and Shi Feng and Mohit Iyyer and He He and Jordan Boyd-Graber
+~~ Journal | ArXiv
+~~ Year | Preprint
 ~~ Category | Empirical Human Data Collection
-~~ Volume | 10
-~~ Url | docs/2019_tacl_trick.pdf
+~~ Category | Deep Learning
 ~~ Category | Question Answering
-~~ Venue | Journal
+~~ Url | https://arxiv.org/abs/1904.04792
+~~ Venue | Preprint
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Project | Closing the Loop*../projects/IIS-1409287.html
-~~ Link | Webpage*http://trick.qanta.org
-~~ NumPages | 14
-~~ embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/videoseries?list=PLegWUnz91WfsBdgqm4wrwdgtPV-QsndlO" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+~~ Link | Webpage*http://www.qanta.org
+~~ NumPages | 55
