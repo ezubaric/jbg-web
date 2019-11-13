@@ -155,6 +155,12 @@ def format_name(students, name, year, latex):
       return "<b>Jordan Boyd-Graber</b>"
 
   if not latex:
+    name = name.replace('\\"{a}', "&auml;")
+    name = name.replace('\\"a', "&auml;")
+    name = name.replace('\\"{o}', "&ouml;")
+    name = name.replace('\\"o', "&ouml;")
+    name = name.replace('\\"{e}', "&euml;")
+    name = name.replace('\\"e', "&euml;")
     name = name.replace("\\'{e}", "&eacute;")
     name = name.replace("\\'e", "&eacute;")
     name = name.replace("{", "")
