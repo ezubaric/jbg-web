@@ -6,6 +6,8 @@ import time
 import os
 import re
 
+import pdb
+
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
 kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
@@ -534,31 +536,36 @@ class WebsiteWriter:
           html_out = html_out.replace("~~%s~~" % variable,
                                       global_replace[variable])
       o.write(html_out)
-
-
       html_out = ""
+
       old = None
       for jj in keys:
         year = lookup[jj].year()
         if old != jj[0]:
           if jj[0] == "":
               continue
+
+          # We're starting a new section, flush the cache
           if jj != keys[0]:
             latex_out.write("\n\\end{enumerate}\n}")
             html_out += "\t</ul>"
+
             o.write(html_out)
-            global_replace["%s:%s" % (index, txt_name)] += html_out
+            global_replace["%s:%s" % (index, txt_name)] = html_out
             html_out = ""
+
+          # The asterisk if a field separator, so it has slightly different formatting
           if not "*" in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
-            o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
+            this_html = "\t<h2>%s</h2>\n\t<ul>\n" % txt_name
           else:
-            o.write('\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
-                                                                jj[0].split("*")[0]))
+            this_html = '\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
+                                                                      jj[0].split("*")[0])
             txt_name = format_name([], jj[0].split("*")[0], -1, False)
             latex_name = format_name([], jj[0].split("*")[0], -1, True)
 
+          # Write out the headers
           bibtex_out.write("\n\n% ")
           bibtex_out.write(txt_name)
           bibtex_out.write("\n\n\n")
@@ -575,15 +582,17 @@ class WebsiteWriter:
         bibtex_out.write(lookup[jj].bibtex())
         text_out.write(lookup[jj].txt(url=self._url))
 
+        # Write comment string so we know original entry in DB
         this_html = "\n\t\t<!--- %s --->\n" % str(jj)
         this_html += "\t\t<li>%s</li>\n" % lookup[jj].html(bibtex, self._url, old)
         global_replace["%s:%s:%s" % (index, txt_name, year)] += this_html
         html_out += this_html
         old = jj[0]
 
-      global_replace["%s:%s" % (index, txt_name)] += html_out
-
+      # For the last entry, we need to flush the cache
+      global_replace["%s:%s" % (index, txt_name)] = html_out
       o.write(html_out)
+      html_out = ""
 
       latex_out.write("\n\\end{enumerate}")
       latex_out.write("\n}")
@@ -620,8 +629,12 @@ class WebsiteWriter:
     contents += open(raw, encoding='utf-8').read()
 
     for variable in global_replace:
-        contents = contents.replace("~~%s~~" % variable,
-                                    global_replace[variable])
+      search = "~~%s~~" % variable
+
+      if search in contents:
+        print("Found %s in %s" % (search, filename))
+        contents = contents.replace(search, global_replace[variable])
+
     if use_footer:
         contents += self.footer()
 
@@ -640,6 +653,15 @@ class WebsiteWriter:
       os.mkdir(self._output + self.STATIC_DIR)
     except OSError:
       print("Couldn't make " + self._output + self.STATIC_DIR)
+
+    # Write dynamic files (needs to happen first to build macros)
+    for ii in self._indexed:
+      path = self._output + "/" + self.DYNAMIC_DIR + "%s" % ii
+      try:
+        os.mkdir(path)
+      except OSError:
+        print("Cannot make directory: " + path)
+
     # Write the static files
     for ii in self._files:
       self.write_file(self._output + self.STATIC_DIR + "/%s.html" % ii.lower().replace(" ", "_"), ii, self._files[ii])
@@ -647,10 +669,3 @@ class WebsiteWriter:
       # Put the main file one directory up
       if ii.lower() == "home":
         self.write_file(self._output + "/index.html", ii, self._files[ii], "")
-
-    for ii in self._indexed:
-      path = self._output + "/" + self.DYNAMIC_DIR + "%s" % ii
-      try:
-        os.mkdir(path)
-      except OSError:
-        print("Cannot make directory: " + path)
