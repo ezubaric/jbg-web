@@ -541,12 +541,23 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     "T. S. Elliot") in your files.  Bibtex will will do this for you, and you
     will be out of luck if your citation file uses full names (like ACL).
         <li> Make sure that you are using the correct citation type for
-        articles, books, chapters, etc.
-        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
-    are all named after people), in your bibtex file in brackets to make sure
-    they get capitalized correctly
+          articles, books, chapters, etc.
+          <ol>
+            <li> For example, if you are citing an entry from <i>The
+            Encyclopedia of Artificial Intelligence</i>, you don't
+            cite the whole book.  You'd cite an individual chapter
+            (e.g., the chapter on "Question Answering" by Bonnie
+            Webber, pages 814-822).  The editor (Stuart Shapiro) is
+              not the author and shouldn't appear in the text.
+            <li> Theses have their own bibtex type.
+          </ol>
+        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and
+    "Pitman-Yor" are all named after people) and model/dataset names
+    (e.g., QuAC, BERT) in your bibtex file in brackets to make sure
+    they get capitalized correctly.
       <pre>
 	title = {Latent {D}irichlet Allocation},
+        title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
 
       </ol>
@@ -578,11 +589,11 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> Do not include page numbers, publishers, or locations for
     conferences (nobody reads the paper versions anyway).
 
-    <li> Do not include volumes for NIPS.  People just use the year.
+    <li> Do not include volumes for NeurIPS.  People just use the year.
 
     <li> Do not include DOIs or ISBNs
 
-    <li> For numeric citation styles (e.g., NIPS), don't use inline citations as nouns; use the name.
+    <li> For numeric citation styles (e.g., NeurIPS), don't use inline citations as nouns; use the name.
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
@@ -605,6 +616,17 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
        against document-level representations~\cite[\abr{lda}]{blei-03}.
     </pre>
 
+    <li> Many ArXiv citations actually shouldn't be.  If it has appear
+    in a real venue (or will), give that citation.  Often this changes
+    between when you submit a paper and when it's accepted.  Double
+      check all of your ArXiv citations.
+
+    <li> Don't cite both CoRR and ArXiv.  Pick one and stick with it (ArXiv would be my suggestion).
+
+    <li> Don't do a citation dump with more than two cites together.
+    They can't all be identical.  Either cut or break apart so people
+    know why you're citing each paper.
+    
   </ol>
 
 <h3>Typography</h3>
@@ -1048,6 +1070,28 @@ also help to write a response document (more important for journals than confere
     first wrote the paper)?
   </ol>
 
+  <h3>Whew, I just submitted!  Time to forget about the paper until reviews come back ... </h3>
+
+<p>Not so fast!  You likely cut some corners in submitting the paper.
+While things are still fresh in your brain, fix things now so that you
+can be prepared when the paper is accepted or you work toward
+resubmission.  Sometimes the submission site will open back up; be
+prepared to take advantage of that.  Or you may want to post on
+ArXiV after submission/rejection; fix these problems first.</p>
+
+<ol>
+  <li> If you disobeyed the style guidelines, fix those issues now.
+  Common things that people fail to do: not have figures
+  auto-generated, explicit lists of contributions, not run the style checking script, non-vector figures, ugly tables, ugly
+  bibliographies, etc.  You'll have to do it eventually, save yourself
+    some hassle and get it done now.
+  <li> Add in error bars (e.g., multiple runs) and hyperparameter
+    sensitivities now that the cluster is free again.
+  <li> Document your code for release, make sure you can rerun all of
+    your experiments with a single push of a button.
+  <li> Address all of my remaining comments and see if there are people you should send it to for review (if nothing else, pass it around CLIP).
+</ol>
+  
 <h3>Camera Ready</h3>
 
 <p>First, congrats! It's great that your paper has been accepted. Your
