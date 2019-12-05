@@ -1,0 +1,13 @@
+~~ Bibtex | inproceedings
+~~ Venue | Refereed Conference
+~~ Title | A Multilingual Topic Model for Learning Weighted Topic Links Across Incomparable Corpora
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Year | 2019
+~~ Location | Hong Kong, China
+~~ NumPages | 6
+~~ Author | Weiwei Yang and Jordan Boyd-Graber and Philip Resnik
+~~ url | docs/2019_emnlp_mtm.pdf
+~~ Category | Topic Models
+~~ Category | Data Mining
+~~ Category | MCMC Inference
+~~ Project | LORELEI*../projects/lorelei.html
