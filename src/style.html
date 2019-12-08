@@ -128,6 +128,14 @@ documents look nice</a> (but it's a lot of work).</p>
 <li> our own approach, method, and specific findings are in past tense
 <li> general conclusions of the paper / findings are in present tense because they are still true (rather than completed and in the past) at the time the paper is written (and hopefully read!)
   </ol>
+  <li> There's also a rare exception to be made when you need to
+  distinguish how something was done in the past to how it is used
+    today.
+    <pre>
+      Retrofitting was originally introduced for refining monolingual word
+embeddings with a lexical ontology~\citep{faruqui-15}, for \abr{clwe},
+we retrofit using the training dictionary $\mathcal{D}$ as the ontology.
+    </pre>
 </ol>
 
 <h3>Punctuation</h3>
@@ -136,13 +144,23 @@ documents look nice</a> (but it's a lot of work).</p>
   list and made the font size large.</p>
 
 <ol>
-  <li> <font size="+1">Put footnotes <b>immediately</b> after sentence / clause
+  <li> <font size="+2">Put footnotes <b>immediately</b> after sentence / clause
   punctuation.  Do not put footnotes before final punctuation (common
   mistake).</font>
     <pre>
       I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
 
+    <ul>
+      <li> There's some belief that you can put a footnote before punctuation if you're following German rules.  This actually is not the case (it's more complicated, and usually our footnotes are whole sentences&mdash;we use bibliographic citations within sentences):
+        <blockquote>
+Fu&szlig;noten k&ouml;nnen ohne Schlusspunkt stehen, wenn sie nur einzelne W&ouml;rter umfassen. Man fasst sie aber besser als Auslassungssätze auf und setzt einen Punkt (besonders wenn im selben Text Fu&szlig;noten mit ganzen S&auml;tzen und Schlusspunkt vorkommen). (Duden 2016)
+        </blockquote>
+       <li> This goes for affiliations as well; put footnote after the
+       comma (this is a case where the German rules would say put
+       footnote before comma, but <b>don't do that</b>).
+    </ul>
+    
   <li> Don't put footnotes on a number (it looks like an exponent).
 
   <li> Do not use a comma between two verb phrases (no subject) joined by a conjunction.
@@ -314,6 +332,10 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
          <li> It's okay to break these rules to ensure consistency in the same
          sentence or paragraph.  E.g., "The final score was 315 to 10".
          <li> It's okay to use numerals for Likert scales: "5-point scale".
+         <li> In math mode, make sure to write numbers so there isn't an extra space after the comma:
+           <pre>
+             $11{,}568$
+           </pre>
        </ol>
 
      <li> Do not use
@@ -626,7 +648,23 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> Don't do a citation dump with more than two cites together.
     They can't all be identical.  Either cut or break apart so people
     know why you're citing each paper.
-    
+
+    <li> Be specific when you use a citation so that the reader knows
+    why you're using a citation (it also proves you've read and
+      understood the paper).  So don't do:
+      <pre>
+Thus, here we analyze the game through persuasion tactics~\cite{cialdini2004social} (\textit{italicized} this section), which has been done in cybersecurity research~\cite{oliveira2017dissecting}.
+      </pre>
+      This doesn't give enough information about what the paper did.
+      Something with cybersecurity and Cialdini.  It's not even clear
+      that this is about text (important in an NLP paper).  Instead,
+      write with specifics:
+      <pre>
+We analyze this case study using rhetorical
+tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting}
+use to dissect spear phishing e-mails and \newcite{anand-11} apply to
+persuasive blogs.
+      </pre>
   </ol>
 
 <h3>Typography</h3>
