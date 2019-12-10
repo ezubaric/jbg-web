@@ -6,6 +6,8 @@ import time
 import os
 import re
 
+import pdb
+
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
 kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
@@ -71,10 +73,10 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
              "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
-             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://csel.cs.colorado.edu/~fopo5620/", job="Postdoc, MSR"),
+             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://www.microsoft.com/en-us/research/people/fopoursa/", job="Postdoc, MSR"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
              "Yoshinari Fujinuma": Student("Yoshinari Fujinuma", 2015, 2020, "http://akkikiki.github.io/about/"),
-             "He He": Student("He He", 2012, 2016, "http://www.umiacs.umd.edu/~hhe/",
+             "He He": Student("He He", 2012, 2016, "https://hhexiy.github.io/",
                               job="Assistant Professor, NYU"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://users.umiacs.umd.edu/~mozhi/"),
@@ -91,7 +93,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "http://cs.umd.edu/~miyyer/", job="Assistant Professor, UMass"),
+             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="Assistant Professor, UMass"),
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
              "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
                                            job="Assistant Professor, Ursinus College"),
@@ -155,6 +157,12 @@ def format_name(students, name, year, latex):
       return "<b>Jordan Boyd-Graber</b>"
 
   if not latex:
+    name = name.replace('\\"{a}', "&auml;")
+    name = name.replace('\\"a', "&auml;")
+    name = name.replace('\\"{o}', "&ouml;")
+    name = name.replace('\\"o', "&ouml;")
+    name = name.replace('\\"{e}', "&euml;")
+    name = name.replace('\\"e', "&euml;")
     name = name.replace("\\'{e}", "&eacute;")
     name = name.replace("\\'e", "&eacute;")
     name = name.replace("{", "")
@@ -528,31 +536,36 @@ class WebsiteWriter:
           html_out = html_out.replace("~~%s~~" % variable,
                                       global_replace[variable])
       o.write(html_out)
-
-
       html_out = ""
+
       old = None
       for jj in keys:
         year = lookup[jj].year()
         if old != jj[0]:
           if jj[0] == "":
               continue
+
+          # We're starting a new section, flush the cache
           if jj != keys[0]:
             latex_out.write("\n\\end{enumerate}\n}")
             html_out += "\t</ul>"
+
             o.write(html_out)
-            global_replace["%s:%s" % (index, txt_name)] += html_out
+            global_replace["%s:%s" % (index, txt_name)] = html_out
             html_out = ""
+
+          # The asterisk if a field separator, so it has slightly different formatting
           if not "*" in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
-            o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
+            this_html = "\t<h2>%s</h2>\n\t<ul>\n" % txt_name
           else:
-            o.write('\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
-                                                                jj[0].split("*")[0]))
+            this_html = '\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
+                                                                      jj[0].split("*")[0])
             txt_name = format_name([], jj[0].split("*")[0], -1, False)
             latex_name = format_name([], jj[0].split("*")[0], -1, True)
 
+          # Write out the headers
           bibtex_out.write("\n\n% ")
           bibtex_out.write(txt_name)
           bibtex_out.write("\n\n\n")
@@ -569,15 +582,17 @@ class WebsiteWriter:
         bibtex_out.write(lookup[jj].bibtex())
         text_out.write(lookup[jj].txt(url=self._url))
 
+        # Write comment string so we know original entry in DB
         this_html = "\n\t\t<!--- %s --->\n" % str(jj)
         this_html += "\t\t<li>%s</li>\n" % lookup[jj].html(bibtex, self._url, old)
         global_replace["%s:%s:%s" % (index, txt_name, year)] += this_html
         html_out += this_html
         old = jj[0]
 
-      global_replace["%s:%s" % (index, txt_name)] += html_out
-
+      # For the last entry, we need to flush the cache
+      global_replace["%s:%s" % (index, txt_name)] = html_out
       o.write(html_out)
+      html_out = ""
 
       latex_out.write("\n\\end{enumerate}")
       latex_out.write("\n}")
@@ -614,8 +629,12 @@ class WebsiteWriter:
     contents += open(raw, encoding='utf-8').read()
 
     for variable in global_replace:
-        contents = contents.replace("~~%s~~" % variable,
-                                    global_replace[variable])
+      search = "~~%s~~" % variable
+
+      if search in contents:
+        print("Found %s in %s" % (search, filename))
+        contents = contents.replace(search, global_replace[variable])
+
     if use_footer:
         contents += self.footer()
 
@@ -634,6 +653,15 @@ class WebsiteWriter:
       os.mkdir(self._output + self.STATIC_DIR)
     except OSError:
       print("Couldn't make " + self._output + self.STATIC_DIR)
+
+    # Write dynamic files (needs to happen first to build macros)
+    for ii in self._indexed:
+      path = self._output + "/" + self.DYNAMIC_DIR + "%s" % ii
+      try:
+        os.mkdir(path)
+      except OSError:
+        print("Cannot make directory: " + path)
+
     # Write the static files
     for ii in self._files:
       self.write_file(self._output + self.STATIC_DIR + "/%s.html" % ii.lower().replace(" ", "_"), ii, self._files[ii])
@@ -641,10 +669,3 @@ class WebsiteWriter:
       # Put the main file one directory up
       if ii.lower() == "home":
         self.write_file(self._output + "/index.html", ii, self._files[ii], "")
-
-    for ii in self._indexed:
-      path = self._output + "/" + self.DYNAMIC_DIR + "%s" % ii
-      try:
-        os.mkdir(path)
-      except OSError:
-        print("Cannot make directory: " + path)
