@@ -57,7 +57,7 @@ LaTeX are greeted with more skepticism than papers that are (and often
 with good reason, non-LaTeX papers usually are worse than LaTeX ones
 in my reviewing experience; not a rule, but a useful heuristic).</p>
 
-<p>But these are social reasons to use LaTeX, and are not particularly
+<p>But these are social reasons to use LaTeX and are not particularly
 convincing for pragmatic reasons.  So here are some pragmatic reasons
 to use LaTeX instead of Word.</p>
 
@@ -545,6 +545,20 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> It's fine (and often better) to use "they" as a singular gender-neutral pronoun.
   </ol>
 
+<h3>Referencing Related Work</h3>
+
+  <ol>
+    <li> When you cite something, make sure the reader has enough context to know why you cited it.
+      <pre>
+	We hanalyze the messages through persuasion tactics, which have been used in cybersecurity~\cite{oliveira-17}.
+      </pre>
+      This is accurate enough, but "cybersecurity" is so broad.  Is this even looking at text?  Make it clear that you read the paper:
+      <pre>
+	We analyze this case study using persuasion tactice~\cite{cialdini-04}, which \newcite{oliveira2017dissecting} apply dissect spear phishing e-mails and \newcite{anand-11} apply to persuasive blogs.
+      </pre>
+
+  </ol>
+
 <h3>Citations</h3>
 
   <p>Below, I suggest removing valuable metadata.  This is for two
@@ -559,9 +573,10 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
   <ol>
     <li> Use bibtex and use it correctly
       <ol>
-        <li> Do not abbreviate names (i.e., use "Thomas Stearns Elliot", not
-    "T. S. Elliot") in your files.  Bibtex will will do this for you, and you
-    will be out of luck if your citation file uses full names (like ACL).
+        <li> Do not abbreviate names (i.e., use "Thomas Stearns
+    Elliot", not "T. S. Elliot") in your files.  Bibtex will will do
+    this for you, and you will be out of luck if your citation file
+    uses full names (like ACL).
         <li> Make sure that you are using the correct citation type for
           articles, books, chapters, etc.
           <ol>
@@ -619,8 +634,7 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
-    <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish
-      this.  <b>Don't</b> use a non-breaking space in this case.
+    <li> For natbib-like citations (e.g. ACL), use citet/newcite to cite as a noun.  <b>Don't</b> use a non-breaking space in this case.
 
       <pre>
         \citet{moseby-11} shows that that he can pull off red boots.
@@ -1051,7 +1065,7 @@ stands on its own as a single, coherent document.</p>
 
   <pre>
     Reviewer Three questions whether the Pope is Catholic.  We follow
-    the convention of Capitan Obvious (2003), which has been the
+    the convention of Captain Obvious (2003), which has been the
     foundation of many subsequent papers.
   </pre>
 
