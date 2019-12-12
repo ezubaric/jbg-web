@@ -101,7 +101,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
-             "Alison Smith": Student("Alison Smith", 2012, 2019, "http://alisonmsmith.github.io/"),
+             "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
              "Chen Zhao": Student("Chen Zhao", 2018, 2021),
@@ -548,20 +548,20 @@ class WebsiteWriter:
           # We're starting a new section, flush the cache
           if jj != keys[0]:
             latex_out.write("\n\\end{enumerate}\n}")
-            html_out += "\t</ul>"
-
             o.write(html_out)
+            o.write("\t</ul> <!----- Ending section: %s ------>" % str(old))
             global_replace["%s:%s" % (index, txt_name)] = html_out
+
             html_out = ""
 
           # The asterisk if a field separator, so it has slightly different formatting
           if not "*" in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
-            this_html = "\t<h2>%s</h2>\n\t<ul>\n" % txt_name
+            o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
           else:
-            this_html = '\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
-                                                                      jj[0].split("*")[0])
+            o.write('\t<h2><a href="%s">%s</a></h2>\n\t<ul>\n' % (jj[0].split("*")[1],
+                                                                  jj[0].split("*")[0]))
             txt_name = format_name([], jj[0].split("*")[0], -1, False)
             latex_name = format_name([], jj[0].split("*")[0], -1, True)
 
