@@ -57,7 +57,7 @@ LaTeX are greeted with more skepticism than papers that are (and often
 with good reason, non-LaTeX papers usually are worse than LaTeX ones
 in my reviewing experience; not a rule, but a useful heuristic).</p>
 
-<p>But these are social reasons to use LaTeX, and are not particularly
+<p>But these are social reasons to use LaTeX and are not particularly
 convincing for pragmatic reasons.  So here are some pragmatic reasons
 to use LaTeX instead of Word.</p>
 
@@ -128,6 +128,14 @@ documents look nice</a> (but it's a lot of work).</p>
 <li> our own approach, method, and specific findings are in past tense
 <li> general conclusions of the paper / findings are in present tense because they are still true (rather than completed and in the past) at the time the paper is written (and hopefully read!)
   </ol>
+  <li> There's also a rare exception to be made when you need to
+  distinguish how something was done in the past to how it is used
+    today.
+    <pre>
+      Retrofitting was originally introduced for refining monolingual word
+embeddings with a lexical ontology~\citep{faruqui-15}, for \abr{clwe},
+we retrofit using the training dictionary $\mathcal{D}$ as the ontology.
+    </pre>
 </ol>
 
 <h3>Punctuation</h3>
@@ -136,13 +144,23 @@ documents look nice</a> (but it's a lot of work).</p>
   list and made the font size large.</p>
 
 <ol>
-  <li> <font size="+1">Put footnotes <b>immediately</b> after sentence / clause
+  <li> <font size="+2">Put footnotes <b>immediately</b> after sentence / clause
   punctuation.  Do not put footnotes before final punctuation (common
   mistake).</font>
     <pre>
       I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
 
+    <ul>
+      <li> There's some belief that you can put a footnote before punctuation if you're following German rules.  This actually is not the case (it's more complicated, and usually our footnotes are whole sentences&mdash;we use bibliographic citations within sentences):
+        <blockquote>
+Fu&szlig;noten k&ouml;nnen ohne Schlusspunkt stehen, wenn sie nur einzelne W&ouml;rter umfassen. Man fasst sie aber besser als Auslassungssätze auf und setzt einen Punkt (besonders wenn im selben Text Fu&szlig;noten mit ganzen S&auml;tzen und Schlusspunkt vorkommen). (Duden 2016)
+        </blockquote>
+       <li> This goes for affiliations as well; put footnote after the
+       comma (this is a case where the German rules would say put
+       footnote before comma, but <b>don't do that</b>).
+    </ul>
+    
   <li> Don't put footnotes on a number (it looks like an exponent).
 
   <li> Do not use a comma between two verb phrases (no subject) joined by a conjunction.
@@ -314,6 +332,10 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
          <li> It's okay to break these rules to ensure consistency in the same
          sentence or paragraph.  E.g., "The final score was 315 to 10".
          <li> It's okay to use numerals for Likert scales: "5-point scale".
+         <li> In math mode, make sure to write numbers so there isn't an extra space after the comma:
+           <pre>
+             $11{,}568$
+           </pre>
        </ol>
 
      <li> Do not use
@@ -523,6 +545,20 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> It's fine (and often better) to use "they" as a singular gender-neutral pronoun.
   </ol>
 
+<h3>Referencing Related Work</h3>
+
+  <ol>
+    <li> When you cite something, make sure the reader has enough context to know why you cited it.
+      <pre>
+	We hanalyze the messages through persuasion tactics, which have been used in cybersecurity~\cite{oliveira-17}.
+      </pre>
+      This is accurate enough, but "cybersecurity" is so broad.  Is this even looking at text?  Make it clear that you read the paper:
+      <pre>
+	We analyze this case study using persuasion tactice~\cite{cialdini-04}, which \newcite{oliveira2017dissecting} apply dissect spear phishing e-mails and \newcite{anand-11} apply to persuasive blogs.
+      </pre>
+
+  </ol>
+
 <h3>Citations</h3>
 
   <p>Below, I suggest removing valuable metadata.  This is for two
@@ -537,16 +573,28 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
   <ol>
     <li> Use bibtex and use it correctly
       <ol>
-        <li> Do not abbreviate names (i.e., use "Thomas Stearns Elliot", not
-    "T. S. Elliot") in your files.  Bibtex will will do this for you, and you
-    will be out of luck if your citation file uses full names (like ACL).
+        <li> Do not abbreviate names (i.e., use "Thomas Stearns
+    Elliot", not "T. S. Elliot") in your files.  Bibtex will will do
+    this for you, and you will be out of luck if your citation file
+    uses full names (like ACL).
         <li> Make sure that you are using the correct citation type for
-        articles, books, chapters, etc.
-        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and "Pitman-Yor"
-    are all named after people), in your bibtex file in brackets to make sure
-    they get capitalized correctly
+          articles, books, chapters, etc.
+          <ol>
+            <li> For example, if you are citing an entry from <i>The
+            Encyclopedia of Artificial Intelligence</i>, you don't
+            cite the whole book.  You'd cite an individual chapter
+            (e.g., the chapter on "Question Answering" by Bonnie
+            Webber, pages 814-822).  The editor (Stuart Shapiro) is
+              not the author and shouldn't appear in the text.
+            <li> Theses have their own bibtex type.
+          </ol>
+        <li> Put proper nouns (e.g., "Dirichlet", "Bernoulli", and
+    "Pitman-Yor" are all named after people) and model/dataset names
+    (e.g., QuAC, BERT) in your bibtex file in brackets to make sure
+    they get capitalized correctly.
       <pre>
 	title = {Latent {D}irichlet Allocation},
+        title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
 
       </ol>
@@ -578,16 +626,15 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> Do not include page numbers, publishers, or locations for
     conferences (nobody reads the paper versions anyway).
 
-    <li> Do not include volumes for NIPS.  People just use the year.
+    <li> Do not include volumes for NeurIPS.  People just use the year.
 
     <li> Do not include DOIs or ISBNs
 
-    <li> For numeric citation styles (e.g., NIPS), don't use inline citations as nouns; use the name.
+    <li> For numeric citation styles (e.g., NeurIPS), don't use inline citations as nouns; use the name.
       <pre>
         Moseby~\cite{moseby-11} shows that he can pull off red boots.
       </pre>
-    <li> For natbib-like citations (e.g. ACL), use citet/newcite to accomplish
-      this.  <b>Don't</b> use a non-breaking space in this case.
+    <li> For natbib-like citations (e.g. ACL), use citet/newcite to cite as a noun.  <b>Don't</b> use a non-breaking space in this case.
 
       <pre>
         \citet{moseby-11} shows that that he can pull off red boots.
@@ -605,6 +652,33 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
        against document-level representations~\cite[\abr{lda}]{blei-03}.
     </pre>
 
+    <li> Many ArXiv citations actually shouldn't be.  If it has appear
+    in a real venue (or will), give that citation.  Often this changes
+    between when you submit a paper and when it's accepted.  Double
+      check all of your ArXiv citations.
+
+    <li> Don't cite both CoRR and ArXiv.  Pick one and stick with it (ArXiv would be my suggestion).
+
+    <li> Don't do a citation dump with more than two cites together.
+    They can't all be identical.  Either cut or break apart so people
+    know why you're citing each paper.
+
+    <li> Be specific when you use a citation so that the reader knows
+    why you're using a citation (it also proves you've read and
+      understood the paper).  So don't do:
+      <pre>
+Thus, here we analyze the game through persuasion tactics~\cite{cialdini2004social} (\textit{italicized} this section), which has been done in cybersecurity research~\cite{oliveira2017dissecting}.
+      </pre>
+      This doesn't give enough information about what the paper did.
+      Something with cybersecurity and Cialdini.  It's not even clear
+      that this is about text (important in an NLP paper).  Instead,
+      write with specifics:
+      <pre>
+We analyze this case study using rhetorical
+tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting}
+use to dissect spear phishing e-mails and \newcite{anand-11} apply to
+persuasive blogs.
+      </pre>
   </ol>
 
 <h3>Typography</h3>
@@ -967,11 +1041,12 @@ your model</a>.</p>
 
 <h3>Writing an Author Response Document</h3>
 
-<p>For some conferences and most journals, you will have the opportunity to
-respond the the reviews you've received.  This often doesn't matter.  Many times
-the reviewers all loved or hated your paper.  You don't have much of a chance to
-change their minds.  When your paper gets marginally positive reviews, a good
-response can really help.</p>
+<p>For some conferences and most journals, you will have the
+opportunity to respond the the reviews you've received.  This often
+doesn't matter.  Many times the reviewers all loved or hated your
+paper.  You don't have much of a chance to change their minds.
+However, when your paper gets marginally positive reviews or one
+outlier review, a good response can really help.</p>
 
 <p>First, be as brief and civil as possible.  If you don't have much
 to say, don't try to fill the space.  Only use as much of the allotted
@@ -987,21 +1062,35 @@ will read your response by itself.  They should be able to get the
 gist of the reviewer's opinions through your response <b>and</b>
 understand your reply without looking anywhere else.  Obviously you
 cannot include all necessary details, but make sure your response
-stands on its own as a single, coherent document.</p>
+  stands on its own as a single, coherent document.</p>
 
   <pre>
     Reviewer Three questions whether the Pope is Catholic.  We follow
-    the convention of Capitan Obvious (2003), which has been the
+    the convention of Captain Obvious (2003), which has been the
     foundation of many subsequent papers.
   </pre>
 
+<p>If you don't do this, then the AC has to go back and read the
+review to know what you're responding to.  You want the AC to spend as
+little time reading this bad review as possible!  Let them read your
+response instead (and it will be more reasonable, better written,
+nicer, etc.).</p>
+  
 <p>Don't get this wrong by writing your response as an inline e-mail.
 It's an inefficient use of space and you can better frame the issues
 than the reviewers.  (It may be helpful to compose the response next to
 the reviews, but don't assume that the reader will have access to that
 information.)</p>
 
-<p>Even if you don't get a response, once you get a set of reviews, create a
+<p>One way of structuring paragraphs in a response is:
+  <ul>
+    <li> What is the complaint / issue (and who raised it)
+    <li> Is it true and/or important?
+    <li> Give evidence for that position or why you did what you did.
+  </ul>
+</p>
+
+<p>Even if you don't get to write a response, once you get a set of reviews, create a
 spreadsheet (shared with co-authors on Google Docs) to address the issues that
 the reviewers found with the following columns:</p>
 
@@ -1024,10 +1113,11 @@ the reviewers found with the following columns:</p>
   the problem was solved.
 </ul>
 
-<p>Other than organizational fixes (which should be done first), it's often
-easier to go in increasing order of difficulty.  Lots of little fixes can
-sometimes fix bigger issues as you work your way through.  This spreadsheet will
-also help to write a response document (more important for journals than conferences).</p>
+<p>Other than organizational fixes (which should be done first), it's
+often easier to go in increasing order of difficulty.  Lots of little
+fixes can sometimes fix bigger issues as you work your way through.
+This spreadsheet will also help to write a response document (more
+important for journals than conferences).</p>
 
 
 <h3>Checklist before submitting something</h3>
@@ -1048,6 +1138,28 @@ also help to write a response document (more important for journals than confere
     first wrote the paper)?
   </ol>
 
+  <h3>Whew, I just submitted!  Time to forget about the paper until reviews come back ... </h3>
+
+<p>Not so fast!  You likely cut some corners in submitting the paper.
+While things are still fresh in your brain, fix things now so that you
+can be prepared when the paper is accepted or you work toward
+resubmission.  Sometimes the submission site will open back up; be
+prepared to take advantage of that.  Or you may want to post on
+ArXiV after submission/rejection; fix these problems first.</p>
+
+<ol>
+  <li> If you disobeyed the style guidelines, fix those issues now.
+  Common things that people fail to do: not have figures
+  auto-generated, explicit lists of contributions, not run the style checking script, non-vector figures, ugly tables, ugly
+  bibliographies, etc.  You'll have to do it eventually, save yourself
+    some hassle and get it done now.
+  <li> Add in error bars (e.g., multiple runs) and hyperparameter
+    sensitivities now that the cluster is free again.
+  <li> Document your code for release, make sure you can rerun all of
+    your experiments with a single push of a button.
+  <li> Address all of my remaining comments and see if there are people you should send it to for review (if nothing else, pass it around CLIP).
+</ol>
+  
 <h3>Camera Ready</h3>
 
 <p>First, congrats! It's great that your paper has been accepted. Your
@@ -1144,10 +1256,12 @@ document leave a camera ready state
 
 <h3>Posters</h3>
 
-	<p>Here's a video that proposes something very different from what we normally do.  I'm not sure I agree or endorse it, but it's a good way of thinking about the failure modes.  We should do better about conveying the main points and not being so cluttered.</p>
+	<p>Here's a video that proposes something very different from what we normally do.  I'm not sure I agree or endorse it, but it's a good way of thinking about the failure modes.  We should do better about conveying the main points and not being so cluttered.  It is very useful to think about what your giant takeaway message is and that should indeed probably be in giant font on your poster.</p>
+	<CENTER>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/1RwJbhkCA58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
+	</CENTER>
 <ol>
+  <li> Practice a four minute version of your talk (no more!) that gives the highlights of your paper and teases about what additional areas of detail that you can go into if people want to have a conversation.  Figure out the slides you'd want to have for that four minute version and make that the centerpiece of your poster.
   <li> Read this <a href="http://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/">General Advice</a>
   <li> Use Beamer
   <li> Use blocks with informative titles (just like section headings)
