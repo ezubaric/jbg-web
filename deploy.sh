@@ -38,6 +38,8 @@ else
         PYCOMMAND=python
 fi
 
+echo "USING $PYCOMMAND"
+
 $PYCOMMAND python/site.py `git show -s --format=%ci`
 
 if [ ${#CHANGES} -gt 0 ]
