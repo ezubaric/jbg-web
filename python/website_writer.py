@@ -53,7 +53,7 @@ class Student:
           val = '<A HREF="%s">%s</a>' % (self._web, val)
 
       if not self._job is None:
-          val = "%s (%s)" % (val, self._job)
+          val = "%s (Student %i&#8211;%i: Now at %s)" % (val, self._start, self._end, self._job)
 
       return val
 
@@ -66,7 +66,7 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
                                 job="Senior Research Scientist, Microsoft"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
-             "Yuening Hu": Student("Yuening Hu", 2010, 2014, "http://www.cs.umd.edu/~ynhu/",
+             "Yuening Hu": Student("Yuening Hu", 2010, 2014, "https://scholar.google.com/citations?user=mO_62fQAAAAJ&hl=en",
                                    job="Google"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
@@ -107,24 +107,25 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
+    sorted_students = list(sorted(kSTUDENTS.values(), key=lambda x: x._start))
     global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "CUR")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
-      "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
+      "\n".join("\item %s" % x.latex() for x in sorted_students
                 if x._end >= datetime.now().year and x._kind == ii)
 
     global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "PAST")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
-      "\n".join("\item %s" % x.latex() for x in kSTUDENTS.values()
+      "\n".join("\item %s" % x.latex() for x in sorted_students
                 if x._end < datetime.now().year and x._kind == ii)
 
     global_replace["%s%s%sSTUDENTS" % ("HTML", ii, "PAST")] = \
       "<UL>\n %s \n</UL>" % \
-      "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
+      "\n".join("<LI>%s</LI>" % x.html() for x in sorted_students
               if x._end < datetime.now().year and x._kind == ii)
 
     global_replace["%s%s%sSTUDENTS" % ("HTML", ii, "CUR")] = \
       "<UL>\n %s \n</UL>" % \
-      "\n".join("<LI>%s</LI>" % x.html() for x in kSTUDENTS.values()
+      "\n".join("<LI>%s</LI>" % x.html() for x in sorted_students
               if x._end >= datetime.now().year and x._kind == ii)
 
 
