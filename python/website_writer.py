@@ -199,7 +199,7 @@ class IndexElement:
       s += ".  "
     return s
 
-  def wrapper_document(self, url=""):
+  def wrapper_document(self, url_prefix):
     s = """
     \\documentclass[a4paper]{article}
     \\usepackage{savetrees}
@@ -229,9 +229,9 @@ class IndexElement:
     \\end{document}
     """
 
-    s = s.replace("~~~citation~~~", self.latex(url="", acceptance = False))
+    s = s.replace("~~~citation~~~", self.latex(url_prefix=url_prefix, acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
-    s = s.replace("~~~bibtex~~~", self.bibtex())
+    s = s.replace("~~~bibtex~~~", self.bibtex(url_prefix))
 
     if "Note" in self.fields:
       s = s.replace("~~~note~~~", "{\\bf %s}\\\\"
@@ -245,7 +245,7 @@ class IndexElement:
           title, location = ii.split("*")
 
           if not location.startswith("http"):
-              location = "%s%s" % (url, location)
+              location = "%s%s" % (url_prefix, location)
           link_string += "\\item \\href{%s}{%s} [\\url{%s}]\n" % \
             (location, title, location)
       link_string += "\n\\end{itemize}\\"
@@ -256,7 +256,7 @@ class IndexElement:
     if "Url" in self.fields:
       target = self.fields["Url"][0]
       if not target.startswith("http"):
-          target = "%s%s" % (url, target)
+          target = "%s%s" % (url_prefix, target)
       s = s.replace("~~~url~~~", "\\url{%s}" % target)
     else:
       s = s.replace("~~~links~~~", "")
@@ -280,14 +280,14 @@ class IndexElement:
 
     return remove_html_chars(text)
 
-  def latex(self, url="", acceptance=True):
+  def latex(self, url_prefix="", acceptance=True):
     s = self.author_string(True)
     if "Title" in self.fields:
-      if "Url" in self.fields and url:
+      if "Url" in self.fields and url_prefix:
           if self.fields["Url"][0].startswith("http"):
               s += '{\\bf \\href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
           else:
-              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url, self.fields["Url"][0], self.fields["Title"][0])
+              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url_prefix, self.fields["Url"][0], self.fields["Title"][0])
       else:
           s += '{\\bf %s}.  ' % (self.fields["Title"][0])
     if "Booktitle" in self.fields:
@@ -312,7 +312,7 @@ class IndexElement:
       s += self.fields["Year"][0]
     return s
 
-  def html(self, bibtex, url, section):
+  def html(self, bibtex, url_prefix, section):
     s = self.author_string(False)
 
     formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\={o}", "&omacr;")
@@ -356,7 +356,7 @@ class IndexElement:
       s += '<div id="'
       s += "%s" % div_name
       s += '" class="hidden">\n'
-      s += "<br><PRE>\n" + self.bibtex() + "</PRE>\n"
+      s += "<br><PRE>\n" + self.bibtex(url_prefix) + "</PRE>\n"
       s += '</div>'
 
     if "Note" in self.fields:
@@ -367,11 +367,19 @@ class IndexElement:
 
     return s
 
-  def bibtex(self):
+  def bibtex(self, url_prefix):
     s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
     for ii in self.fields:
-      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN", "Abstract", "Location", "Title", "Url", "Booktitle", "Isbn", "Publisher", "Address", "Editor", "Series"]:
+      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN",
+                "Abstract", "Location", "Title", "Series", "Booktitle", "Isbn", "Publisher",
+                "Address", "Editor"]:
         s += "\t%s = {%s},\n" % (ii, self.fields[ii][0])
+      if ii.lower() == "url":
+          assert url_prefix != self.fields[ii][0], "Badly formed URL  %s/%s" % (url_prefix, self.fields[ii][0])
+          if self.fields[ii][0].startswith("http"):
+              s += "\t%s = {%s}\n" % (ii, self.fields[ii][0])
+          else:
+              s += "\t%s = {%s/%s}\n" % (ii, url_prefix, self.fields[ii][0])
     s += "}\n"
     return s
 
@@ -397,8 +405,6 @@ class IndexElement:
 
     keys = [(x, year, venue, self.fields["Title"][0], name) for \
               x in self.fields[criteria]]
-
-    print(criteria, keys)
 
     return keys
 
@@ -508,7 +514,6 @@ class WebsiteWriter:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
         keys += contrib
         for kk in contrib:
-          print(kk)
           assert not kk in lookup, "%s already found as %s.  Look for a repeated key in the pub file (e.g., year)" % (str(kk), lookup[kk].txt())
           lookup[kk] = self._indexed[index.lower()][jj]
 
@@ -580,7 +585,7 @@ class WebsiteWriter:
           latex_out.write("\n\\begin{enumerate}\n")
 
         latex_out.write("\t \item " + lookup[jj].latex(self._url))
-        bibtex_out.write(lookup[jj].bibtex())
+        bibtex_out.write(lookup[jj].bibtex(self._url))
         text_out.write(lookup[jj].txt(url=self._url))
 
         # Write comment string so we know original entry in DB
