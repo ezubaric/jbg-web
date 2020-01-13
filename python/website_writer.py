@@ -104,7 +104,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
-             "Chen Zhao": Student("Chen Zhao", 2018, 2021),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/"),
              "Ahmed Elgohary": Student("Ahmed Elgohary", 2018, 2020, "http://www.cs.umd.edu/~elgohary/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
