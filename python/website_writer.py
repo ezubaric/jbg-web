@@ -66,21 +66,21 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
-                                job="Senior Research Scientist, Microsoft"),
+                                job="Microsoft, Senior Research Scientist"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "https://scholar.google.com/citations?user=mO_62fQAAAAJ&hl=en",
                                    job="Google"),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
-             "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
-             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://www.microsoft.com/en-us/research/people/fopoursa/", job="Postdoc, MSR"),
+             "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="TTIC, PhD Candidate"),
+             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://www.microsoft.com/en-us/research/people/fopoursa/", job="MSR, Postdoc"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
              "Yoshinari Fujinuma": Student("Yoshinari Fujinuma", 2015, 2020, "http://akkikiki.github.io/about/"),
              "He He": Student("He He", 2012, 2016, "https://hhexiy.github.io/",
-                              job="Assistant Professor, NYU"),
+                              job="NYU, Assistant Professor"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://users.umiacs.umd.edu/~mozhi/"),
-             "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2022),
+             "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2020),
              "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
@@ -93,18 +93,18 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="Assistant Professor, UMass"),
+             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="UMass, Assistant Professor"),
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
-             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
-                                           job="Assistant Professor, Ursinus College"),
-             "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="PhD Student, UC Berkeley"),
+             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "https://www.ursinus.edu/live/profiles/3125-alvin-grissom-ii",
+                                           job="Ursinus College, Assistant Professor"),
+             "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="UC Berkeley, PhD Student"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
-             "Chen Zhao": Student("Chen Zhao", 2018, 2021),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/"),
              "Ahmed Elgohary": Student("Ahmed Elgohary", 2018, 2020, "http://www.cs.umd.edu/~elgohary/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
@@ -199,7 +199,7 @@ class IndexElement:
       s += ".  "
     return s
 
-  def wrapper_document(self, url=""):
+  def wrapper_document(self, url_prefix):
     s = """
     \\documentclass[a4paper]{article}
     \\usepackage{savetrees}
@@ -229,9 +229,9 @@ class IndexElement:
     \\end{document}
     """
 
-    s = s.replace("~~~citation~~~", self.latex(url="", acceptance = False))
+    s = s.replace("~~~citation~~~", self.latex(url_prefix=url_prefix, acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
-    s = s.replace("~~~bibtex~~~", self.bibtex())
+    s = s.replace("~~~bibtex~~~", self.bibtex(url_prefix))
 
     if "Note" in self.fields:
       s = s.replace("~~~note~~~", "{\\bf %s}\\\\"
@@ -245,7 +245,7 @@ class IndexElement:
           title, location = ii.split("*")
 
           if not location.startswith("http"):
-              location = "%s%s" % (url, location)
+              location = "%s%s" % (url_prefix, location)
           link_string += "\\item \\href{%s}{%s} [\\url{%s}]\n" % \
             (location, title, location)
       link_string += "\n\\end{itemize}\\"
@@ -256,7 +256,7 @@ class IndexElement:
     if "Url" in self.fields:
       target = self.fields["Url"][0]
       if not target.startswith("http"):
-          target = "%s%s" % (url, target)
+          target = "%s%s" % (url_prefix, target)
       s = s.replace("~~~url~~~", "\\url{%s}" % target)
     else:
       s = s.replace("~~~links~~~", "")
@@ -280,14 +280,14 @@ class IndexElement:
 
     return remove_html_chars(text)
 
-  def latex(self, url="", acceptance=True):
+  def latex(self, url_prefix="", acceptance=True):
     s = self.author_string(True)
     if "Title" in self.fields:
-      if "Url" in self.fields and url:
+      if "Url" in self.fields and url_prefix:
           if self.fields["Url"][0].startswith("http"):
               s += '{\\bf \\href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
           else:
-              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url, self.fields["Url"][0], self.fields["Title"][0])
+              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url_prefix, self.fields["Url"][0], self.fields["Title"][0])
       else:
           s += '{\\bf %s}.  ' % (self.fields["Title"][0])
     if "Booktitle" in self.fields:
@@ -312,7 +312,7 @@ class IndexElement:
       s += self.fields["Year"][0]
     return s
 
-  def html(self, bibtex, url, section):
+  def html(self, bibtex, url_prefix, section):
     s = self.author_string(False)
 
     formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\={o}", "&omacr;")
@@ -356,7 +356,7 @@ class IndexElement:
       s += '<div id="'
       s += "%s" % div_name
       s += '" class="hidden">\n'
-      s += "<br><PRE>\n" + self.bibtex() + "</PRE>\n"
+      s += "<br><PRE>\n" + self.bibtex(url_prefix) + "</PRE>\n"
       s += '</div>'
 
     if "Note" in self.fields:
@@ -367,11 +367,19 @@ class IndexElement:
 
     return s
 
-  def bibtex(self):
+  def bibtex(self, url_prefix):
     s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
     for ii in self.fields:
-      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN", "Abstract", "Location", "Title", "Url", "Booktitle", "Isbn", "Publisher", "Address", "Editor", "Series"]:
+      if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN",
+                "Abstract", "Location", "Title", "Series", "Booktitle", "Isbn", "Publisher",
+                "Address", "Editor"]:
         s += "\t%s = {%s},\n" % (ii, self.fields[ii][0])
+      if ii.lower() == "url":
+          assert url_prefix != self.fields[ii][0], "Badly formed URL  %s/%s" % (url_prefix, self.fields[ii][0])
+          if self.fields[ii][0].startswith("http"):
+              s += "\t%s = {%s}\n" % (ii, self.fields[ii][0])
+          else:
+              s += "\t%s = {%s/%s}\n" % (ii, url_prefix, self.fields[ii][0])
     s += "}\n"
     return s
 
@@ -397,8 +405,6 @@ class IndexElement:
 
     keys = [(x, year, venue, self.fields["Title"][0], name) for \
               x in self.fields[criteria]]
-
-    print(criteria, keys)
 
     return keys
 
@@ -508,7 +514,6 @@ class WebsiteWriter:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
         keys += contrib
         for kk in contrib:
-          print(kk)
           assert not kk in lookup, "%s already found as %s.  Look for a repeated key in the pub file (e.g., year)" % (str(kk), lookup[kk].txt())
           lookup[kk] = self._indexed[index.lower()][jj]
 
@@ -580,7 +585,7 @@ class WebsiteWriter:
           latex_out.write("\n\\begin{enumerate}\n")
 
         latex_out.write("\t \item " + lookup[jj].latex(self._url))
-        bibtex_out.write(lookup[jj].bibtex())
+        bibtex_out.write(lookup[jj].bibtex(self._url))
         text_out.write(lookup[jj].txt(url=self._url))
 
         # Write comment string so we know original entry in DB

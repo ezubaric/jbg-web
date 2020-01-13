@@ -1,5 +1,3 @@
-
-
 \ifumd
 \usepackage{graphicx}
 \fi
@@ -13,9 +11,6 @@
 }
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
-
-
-\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
 
 \begin{document}
 
@@ -255,29 +250,6 @@ of Science and Technology, 2014 (Hong Kong); Cornell University, 2015
 
 \roottitle{\umdtext{II.J.1. }{Sponsored Research and Programs}}
 
-\newcommand{\grant}[7]{
-
-\headedsubsection{#1}{#2--#3 (#4)} { % title, start date, end date, source
-	\inlineheadsection{Investigators:}{#5}
-	\vspace{1.2em}
-	\inlineheadsection{Award:}{\$#6 (Share: \$#7)}
-	\vspace{1.2em}
-}
-}
-
-\newcommand{\colabgrant}[8]{
-
-\headedsubsection{#1}{#2--#3 (#4)} { % title, start date, end date, source
-	\inlineheadsection{Investigators:}{#5}
-	\vspace{1.2em}
-	\inlineheadsection{Award:}{\$#6 (Share: \$#7)}
-	\vspace{1.2em}
-	\inlineheadsection{Collaboration:}{#8}
-	\vspace{1.2em}
-}
-}
-
-
 \headedsection{\umdtext{ II.J.1.a. }{Active Grants}}{}{
 
 \colabgrant{\textsc{better}: Multilingual Fine-grained Decompositional Analysis}{08/2019}{02/2023}{\textsc{iarpa}}{Jordan Boyd-Graber \textsc{co-pi}}{414,884}{414,884}{Johns Hopkins}
@@ -473,14 +445,14 @@ Research (only Colorado portion shown)}
 \headedsection{\umdtext{ III.C.1. }{ Advising: Research Direction (Undergraduate)}} {
 
 \begin{enumerate*}
-  \item Eric Wallace (UMD): Generating challenging questions for
+  \item Eric Wallace (UMD, 2018--2019): Generating challenging questions for
     question answering
-  \item Sujith Vishwajith (UMD): Answer equivalence for question answering
-  \item Henrik Larsen (CU): Verb prediction
-  \item Davis Yoshida (CU): Active feature solicitation for question answering
-  \item Stephanie Hwa (UMD): Vector word representations for named entities in question answering
-  \item Danny Bouwman (UMD): Crowdsourced coreference annotation
-  \item Kenrick Kin, Joshua Lee, Lester Mackey (Princeton): Assistive vocabulary devices
+  \item Sujith Vishwajith (UMD, 2017--2018): Answer equivalence for question answering
+  \item Davis Yoshida (CU, 2015--2017): Active feature solicitation for question answering
+  \item Henrik Larsen (CU, 2015--2016): Verb prediction
+  \item Stephanie Hwa (UMD, 2013--2014): Vector word representations for named entities in question answering
+  \item Danny Bouwman (UMD, 2013--2014): Crowdsourced coreference annotation
+  \item Kenrick Kin, Joshua Lee, Lester Mackey (Princeton, 2005--2006): Assistive vocabulary devices
     for people with aphasia
 \end{enumerate*}
 }
