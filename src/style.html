@@ -596,7 +596,8 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
 	title = {Latent {D}irichlet Allocation},
         title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
-
+        <li> Do not put the entire title in brackets (will bite you later).
+        <li> Make sure all raw titles have consistent capitalization (something that looks good).
       </ol>
 
     <li> Define journal and conference names in a different bib file from the
@@ -679,11 +680,52 @@ tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting}
 use to dissect spear phishing e-mails and \newcite{anand-11} apply to
 persuasive blogs.
       </pre>
+      <li> <A HREF="https://www.ece.ucdavis.edu/~jowens/biberrors.html">John
+      Owens has more advice</a>, all of which I agree with except for
+      including page numbers.  I don't include page numbers for
+      conference cites because nobody actually reads paper versions
+      any more and it can sometimes push you over the limit when
+      references count toward lengths (I'm looking at you, AAAI).
   </ol>
 
 <h3>Typography</h3>
 
   <ol>
+    <li> <FONT size="+2">Learn how to use non-breaking spaces
+    correctly.  These replace normal whitespace between pieces of text
+    that would be confusing or would look bad if they started a line.
+    In all of these cases, if a line started with whatever is after
+    the tilde (&#126;), it would be confusing.</FONT>
+      <ol>
+	<li> Some names
+	  <pre>
+	    Pope Innocent~III was so bad at reading maps he confused
+	    Byzantine with Jerusalem.
+	  </pre>
+	<li> Sections in papers
+	  <pre>
+	    Section~\ref{sec:dandolo} argues that Enrico Dandolo
+	    should stay quiet on road trips and not claim that he
+	    knows better than the \abr{gps}.
+	  </pre>
+	 <li> Years
+	   <pre>
+	     The 1204~\abr{ad} partition treaty shows what can go
+	     wrong when you think there's an In and Out at a rest stop
+	     when there is only a Red Robin.
+	   </pre>
+	 <li> Units
+	   <pre>
+	     Alexious~V was offered 1~kg gold glasses by his
+	     father-in-law.
+	   </pre>
+	 <li> <b>Do not also put a normal space on either side of the
+	     tilde: that completely removes the effect.</b>
+	   <!--- Todo: add a bad example here --->
+       </ol>
+
+
+
     <li> For topic modeling papers, put mentions of words in quotes
     and topics (e.g., from a topic model) in underline (topic macro).
 
@@ -711,12 +753,6 @@ persuasive blogs.
       <pre>
 	\textsc{tla}s are popular in the \textsc{us} government.
     </pre>
-
-    <li> Tell LaTeX when it shouldn't break lines between words.  You
-    don't want a new line to start with a number or a citation; it
-    looks bad.  So instead of having a raw space, but a tilde
-    (&#126;).  <b>Do not also put a normal space on either side of the
-    tilde: that completely removes the effect.</b>
 
     <pre> The interpolation factor~$\lambda$ is inspired by
      \abr{searn}~\cite{daume-06}.
@@ -759,13 +795,6 @@ persuasive blogs.
 	If you want to know what a f\^ete galante looks like to a
 	physicist, look up Schr\"odinger in the Encyclop\ae dia
       </pre>
-
-    <li> If you have a long list of names (e.g., journal title page), use
-    non-breaking spaces between name components.
-
-    <pre>
-       Herr~Doktor~Professor~Albert~Einstein, Joe~the~Plumber
-    </pre>
 
     <li> Put a non-breaking space between references, citations, and math symbols.  <b>Do not put a space before the non-breaking space;</b> this defeats the purpose.  Your word should end, be followed by a non-breaking space, followed by the reference, citation, or symbol.  This prevents a line breaking between references and the thing they're connected to.</li>
 

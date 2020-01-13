@@ -74,3 +74,26 @@
 \newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]} % A custom vspace command with custom before and after spacing lengths that do not break the page
 
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}} % Defines a horizontal line with some vertical space before and after it
+
+
+\newcommand{\grant}[7]{
+
+\headedsubsection{#1}{#2--#3 (#4)} { % title, start date, end date, source
+	\inlineheadsection{Investigators:}{#5}
+	\vspace{1.2em}
+	\inlineheadsection{Award:}{\$#6 (Share: \$#7)}
+	\vspace{1.2em}
+}
+}
+
+\newcommand{\colabgrant}[8]{
+
+\headedsubsection{#1}{#2--#3 (#4)} { % title, start date, end date, source
+	\inlineheadsection{Investigators:}{#5}
+	\vspace{1.2em}
+	\inlineheadsection{Award:}{\$#6 (Share: \$#7)}
+	\vspace{1.2em}
+	\inlineheadsection{Collaboration:}{#8}
+	\vspace{1.2em}
+}
+}
