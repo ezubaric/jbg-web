@@ -36,13 +36,15 @@ def bibtex_last(name):
 
 class Student:
   def __init__(self, name, start, end, webpage = None, kind="PHD",
-               job=None):
+               job=None, thesis='', thesis_url=''):
     self._name = name
     self._start = start
     self._end = end
     self._web = webpage
     self._job = job
     self._kind = kind
+    self._thesis = thesis
+    self._thesis_url = thesis_url
 
   def latex(self):
       val = self._name
@@ -57,6 +59,12 @@ class Student:
       if not self._job is None:
           val = "%s (Student %i&#8211;%i: Now at %s)" % (val, self._start, self._end, self._job)
 
+      if self._thesis:
+        if self._thesis_url:
+          val += ' [<a href="%s">%s</a>]' % (self._thesis_url, self._thesis)
+        else:
+          val += ' [%s]' % self._thesis
+
       return val
 
 UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
@@ -69,7 +77,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
                                 job="Microsoft, Senior Research Scientist"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "https://scholar.google.com/citations?user=mO_62fQAAAAJ&hl=en",
-                                   job="Google"),
+                                   job="Google", thesis_url="https://drum.lib.umd.edu/bitstream/handle/1903/15763/Hu_umd_0117E_15485.pdf", thesis='Expressive Knowledge Resources in Probabilistic Models'),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
              "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="TTIC, PhD Candidate"),
