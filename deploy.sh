@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Restore deleted files
 git checkout $(git ls-files -d)
@@ -7,6 +7,9 @@ CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_s
 
 rm -f python/*.pyc
 rm -f pubs/*.tex
+
+mkdir -p ~/public_html/dyn-media
+mkdir -p ~/public_html/dyn-pubs
 
 rm -rf ~/public_html/teaching/*
 for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414 CMSC_470
@@ -59,7 +62,7 @@ if [ ${#CHANGES} -gt 0 ]
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
-        for FILE in `ls pubs/*.tex`
+        for FILE in `ls -r pubs/*.tex`
         do
 	    echo $FILE
 	    echo "---------------------------"

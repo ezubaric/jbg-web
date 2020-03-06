@@ -329,7 +329,8 @@ class IndexElement:
       if url.startswith("http"):
           s += "<b><a href=\"%s\">%s</a></b>.  " % (url, formatted_title)
       else:
-          s += "<b><a href=\"../%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
+          url = "%s/%s" % (url_prefix, url)
+          s += "<b><a href=\"%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
             (url, url, formatted_title)
     elif "Title" in self.fields:
       s += '<b>%s</b>.  ' % formatted_title
