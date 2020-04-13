@@ -1,12 +1,10 @@
-~~ Bibtex | article
+~~ Bibtex | inproceedings
 ~~ Title | What Question Answering can Learn from Trivia Nerds
 ~~ Author | Jordan Boyd-Graber and Benjamin B\"orschinger
-~~ Year | Preprint
-~~ Category | Empirical Human Data Collection
-~~ Volume | 10
+~~ Year | 2020
 ~~ Url | https://arxiv.org/abs/1910.14464
+~~ Location | The Cyberverse Simulacrum of Seattle
 ~~ Category | Question Answering
 ~~ Venue | Preprint
-~~ Journal | ArXiv
+~~ Booktitle | Association for Computational Linguistics
 ~~ Project | CAREER*../projects/IIS-1652666.html
-~~ NumPages | 9
