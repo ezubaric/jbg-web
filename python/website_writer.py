@@ -36,13 +36,15 @@ def bibtex_last(name):
 
 class Student:
   def __init__(self, name, start, end, webpage = None, kind="PHD",
-               job=None):
+               job=None, thesis='', thesis_url=''):
     self._name = name
     self._start = start
     self._end = end
     self._web = webpage
     self._job = job
     self._kind = kind
+    self._thesis = thesis
+    self._thesis_url = thesis_url
 
   def latex(self):
       val = self._name
@@ -57,6 +59,12 @@ class Student:
       if not self._job is None:
           val = "%s (Student %i&#8211;%i: Now at %s)" % (val, self._start, self._end, self._job)
 
+      if self._thesis:
+        if self._thesis_url:
+          val += ' [<a href="%s">%s</a>]' % (self._thesis_url, self._thesis)
+        else:
+          val += ' [%s]' % self._thesis
+
       return val
 
 UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
@@ -66,21 +74,21 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.edu/~zhaike/",
-                                job="Senior Research Scientist, Microsoft"),
+                                job="Microsoft, Senior Research Scientist"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "https://scholar.google.com/citations?user=mO_62fQAAAAJ&hl=en",
-                                   job="Google"),
+                                   job="Google", thesis_url="https://drum.lib.umd.edu/bitstream/handle/1903/15763/Hu_umd_0117E_15485.pdf", thesis='Expressive Knowledge Resources in Probabilistic Models'),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014),
              "Davis Yoshida": Student("Davis Yoshida", 2015, 2016, kind="UG"),
-             "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="PhD Candidate, TTIC"),
-             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://www.microsoft.com/en-us/research/people/fopoursa/", job="Postdoc, MSR"),
+             "Davis Yoshida": Student("Davis Yoshida", 2016, 2017, kind="MS", job="TTIC, PhD Candidate"),
+             "Forough Poursabzi-Sangdeh": Student("Forough Poursabzi-Sangdeh", 2014, 2018, "https://www.microsoft.com/en-us/research/people/fopoursa/", job="MSR, Postdoc"),
              "Brianna Satinoff": Student("Brianna Satinoff", 2010, 2012, kind="MS"),
              "Yoshinari Fujinuma": Student("Yoshinari Fujinuma", 2015, 2020, "http://akkikiki.github.io/about/"),
              "He He": Student("He He", 2012, 2016, "https://hhexiy.github.io/",
-                              job="Assistant Professor, NYU"),
+                              job="NYU, Assistant Professor"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "https://csel.cs.colorado.edu/~shha1721/"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://users.umiacs.umd.edu/~mozhi/"),
-             "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2022),
+             "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2020),
              "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
@@ -93,18 +101,18 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "http://www.umiacs.umd.ed
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/"),
-             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="Assistant Professor, UMass"),
+             "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="UMass, Assistant Professor"),
              "Manjhunath Ravi": Student("Manjhunath Ravi", 2015, 2016, kind="MS"),
-             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "http://www.umiacs.umd.edu/~alvin/",
-                                           job="Assistant Professor, Ursinus College"),
-             "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="PhD Student, UC Berkeley"),
+             "Alvin {Grissom II}": Student("Alvin Grissom II", 2013, 2017, "https://www.ursinus.edu/live/profiles/3125-alvin-grissom-ii",
+                                           job="Ursinus College, Assistant Professor"),
+             "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="UC Berkeley, PhD Student"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
              "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
-             "Chen Zhao": Student("Chen Zhao", 2018, 2021),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/"),
              "Ahmed Elgohary": Student("Ahmed Elgohary", 2018, 2020, "http://www.cs.umd.edu/~elgohary/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
@@ -321,7 +329,8 @@ class IndexElement:
       if url.startswith("http"):
           s += "<b><a href=\"%s\">%s</a></b>.  " % (url, formatted_title)
       else:
-          s += "<b><a href=\"../%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
+          url = "%s/%s" % (url_prefix, url)
+          s += "<b><a href=\"%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
             (url, url, formatted_title)
     elif "Title" in self.fields:
       s += '<b>%s</b>.  ' % formatted_title
@@ -485,7 +494,10 @@ class WebsiteWriter:
           index[ii] = item
 
       if "Url" in index[ii].fields and index[ii].fields["Url"]:
-        resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
+        try:
+          resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
+        except IndexError:
+          print("Cannot parse: %s" % index[ii].fields["Url"][0])
         o = open("pubs/%s.tex" % resource, 'w')
         o.write(index[ii].wrapper_document(self._url))
 
