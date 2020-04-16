@@ -112,6 +112,34 @@ to use LaTeX instead of Word.</p>
 least <a href="http://jeffhuang.com/better_word_papers.html">make your Word
 documents look nice</a> (but it's a lot of work).</p>
 
+<h3>Writing Clearly and Directly</h3>	
+	
+<P>While writing, it's important to write clearly.  There are whole
+books about this (mentioned above), but it might be useful to go
+through an example of what this looks like.
+<PRE>
+Follow-up work can be directed specifically at the game of Diplomacy or can be
+applied broadly to human-in-the-loop research. This task can be scoped at a
+general or a player-specific basis. In the general case, the data is trained on
+all players but a certain one. Then the actions for only that player are
+predicted. This can be made country-specific---train on data from the majority
+of users playing as Turkey and test on several held out players. This would
+ascertain whether linguistic cues or specific game actions are more likely to
+reveal an impending betrayal. Alternatively, we can use our lie-detection
+models for a human-in-the-loop approach to identifying deception. The model can
+be used creating a player interface that provides model insights to players in
+real-time to make better game decisions. Or the data can be used to create
+dialog for a Diplomacy bot, although ensuring that the language corresponds to
+an appropriate scenario is integral.
+</PRE>
+	
+<ul>
+	<li> <b>scoped at a general or player-specific basis</b>: both "basis" and "scoped" are vague and jargony.  It would be more direct to say: "When we look for lies, we can either look for what a lie looks like in general or what a specific person's lies look like."
+	<li> <b>Alternatively, we can use our lie-detection models for a human-in-the-loop approach to identifying deception</b>: "Approach" is another vague word, and introducing a new idea should connect to the first point.  Better to say: "Instead of general lie detection, you would rather know if <i>you</i> are being lied to in the moment."
+	<li> <b>The model can be used creating a player interface that provides model insights to players in real-time to make better game decisions.</b>: While there's no blanket prohibition against the passive, it can sometimes obscure agency.  "The model can be used" doesn't explain how the model can help someone.  Better to say: "Our models can identify words that find words, phrases, and situations that portend deception and warn potential victims of deception before it's too late."
+	<li> <b>Or the data can be used to create dialog for a Diplomacy bot</b>: Needs a transition from other concepts in paragraph but might be better in its own paragraph.
+</ul>
+	
 <h3>Tense</h3>
 
 <ol>
@@ -554,7 +582,10 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
       </pre>
       This is accurate enough, but "cybersecurity" is so broad.  Is this even looking at text?  Make it clear that you read the paper:
       <pre>
-	We analyze this case study using persuasion tactice~\cite{cialdini-04}, which \newcite{oliveira2017dissecting} apply dissect spear phishing e-mails and \newcite{anand-11} apply to persuasive blogs.
+	We analyze this case study using persuasion
+	tactice~\cite{cialdini-04}, which
+	\newcite{oliveira2017dissecting} apply dissect spear phishing
+	e-mails and \newcite{anand-11} apply to persuasive blogs.
       </pre>
 
   </ol>
@@ -596,7 +627,8 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
 	title = {Latent {D}irichlet Allocation},
         title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
-
+        <li> Do not put the entire title in brackets (will bite you later).
+        <li> Make sure all raw titles have consistent capitalization (something that looks good).
       </ol>
 
     <li> Define journal and conference names in a different bib file from the
@@ -667,7 +699,10 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     why you're using a citation (it also proves you've read and
       understood the paper).  So don't do:
       <pre>
-Thus, here we analyze the game through persuasion tactics~\cite{cialdini2004social} (\textit{italicized} this section), which has been done in cybersecurity research~\cite{oliveira2017dissecting}.
+Thus, here we analyze the game through persuasion
+tactics~\cite{cialdini2004social} (\textit{italicized} this section),
+which has been done in cybersecurity
+research~\cite{oliveira2017dissecting}.
       </pre>
       This doesn't give enough information about what the paper did.
       Something with cybersecurity and Cialdini.  It's not even clear
@@ -675,8 +710,8 @@ Thus, here we analyze the game through persuasion tactics~\cite{cialdini2004soci
       write with specifics:
       <pre>
 We analyze this case study using rhetorical
-tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting}
-use to dissect spear phishing e-mails and \newcite{anand-11} apply to
+tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting} use
+to dissect spear phishing e-mails and \newcite{anand-11} apply to
 persuasive blogs.
       </pre>
       <li> <A HREF="https://www.ece.ucdavis.edu/~jowens/biberrors.html">John
@@ -1280,14 +1315,46 @@ document leave a camera ready state
   <li> If you can ever use a picture instead of an equation, choose
   the picture (even if it takes more time).
 
+  <li> Think about your color pallette.  Have one to two main colors
+  and use them everywhere: figures, pictures, bullets, titles,
+  backgrounds (schools / labs likely have their own favored colors
+  ... just use those and don't think about it).
+
+  <li> You're likely going to going to adapt figures from your paper.
+  That's fine, but talks are a different medium.  Usually, you want to
+  gradually reveal aspects of the figure so you can focus attention on
+  what you're talking about.
+
 </ol>
 
 <h3>Posters</h3>
 
-	<p>Here's a video that proposes something very different from what we normally do.  I'm not sure I agree or endorse it, but it's a good way of thinking about the failure modes.  We should do better about conveying the main points and not being so cluttered.  It is very useful to think about what your giant takeaway message is and that should indeed probably be in giant font on your poster.</p>
+	<p>Here's a video that proposes something very different from
+	what we normally do.  I'm not sure I agree or endorse it, but
+	it's a good way of thinking about the failure modes.  We
+	should do better about conveying the main points and not being
+	so cluttered.  It is very useful to think about what your
+	giant takeaway message is and that should indeed probably be
+	in giant font on your poster.</p>
 	<CENTER>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/1RwJbhkCA58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</CENTER>
+	<p>Without adopting this format completely, I would suggest
+	the following: </p>
+	<ul>
+	  <li> The title (the really big text) doesn't need to match
+	  your paper's title.  Think about what's relevant to the
+	  audience and what's new about your paper (just like in the
+	  video above).
+	  <li> Optimize your poster for skimming.  Don't have too much
+	  text.  Most things should be pictures / diagrams (with big
+	  fonts).
+	  <li> Have pictures for anything that you might mention.
+	</ul>
+
+<p>More generally, optimize your poster for both the average case
+(someone standing there for four minutes) and for the tails (world
+expert who wants to drill into details).</p>
 <ol>
   <li> Practice a four minute version of your talk (no more!) that gives the highlights of your paper and teases about what additional areas of detail that you can go into if people want to have a conversation.  Figure out the slides you'd want to have for that four minute version and make that the centerpiece of your poster.
   <li> Read this <a href="http://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/">General Advice</a>
@@ -1299,6 +1366,75 @@ document leave a camera ready state
   <li> Use a color scheme consistent with your institution; look at
   previous posters from the group before you begin.
 
+</ol>
+
+<h3>Videos</h3>
+
+<p>More conferences are asking participants to make a video teaser for
+a paper.  This is a handy way to also practice a short pitch for your
+poster.</p>
+
+<ol>
+  <li> Write a script first.  It takes longer if you ad lib and screw
+  things up constantly.  Don't assume that you'll do it correctly in
+  one take: you'll record each section multiple times and take the
+  best one.
+  <li> Make sure you have a good lighting.  Try to find an east-facing
+  window in the morning or a west-facing window in the afternoon.  Put
+  the camera a little bit above eye level.  You don't want to record
+  from a laptop on a desk: good for working, but not for creating a
+  video. <br/>
+    <CENTER>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/-ozNQI8hjkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </CENTER>
+  <li> If you can, you also want to have "bounce" lighting from below.
+  You can get this by putting a white tablecloth (or sheet) on the
+  desk in front of you.
+  <li> Have an interesting but not distracting background.  Shelves
+  full of books, nature scenes, or cityscapes work well.  (You can
+  also have a blank "void" as a background, but I think a more
+  interesting background works better.)
+    <ol>
+      <li> If you don't like your background, don't use polygons to cut it out.
+      <li> If you want to remove the background, use a greenscreen
+      technique (you can do this with a green sheet fairly cheaply).
+      <li> Using polygons prevents you from being able to move around
+      or use hand gestures.
+    </ol>
+  <li> Use a higher resolution for recording so that you can have
+  different zooms to give a little bit of variety in the final edited
+  version.  Focus on who is speaking, have different levels of zoom to
+  hide cuts for content / mistakes. <br/>
+    <CENTER>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/M6kMVQXzOWY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	  
+    </CENTER>
+  <li> Have a good condenser microphone either in front of you or on
+  your lapel / collar.  Also make sure that you don't have sounds in
+  the background (construction, cat, etc.).
+  <li> Wear darker colors (orange, brown, grey) and make sure your
+  clothes have a solid pattern (no plaid, etc.).
+  <li> For research teasers, go no more than three minutes.
+  <li> Create the words first, then back up the words with images.
+  For example, if you're talking about pottery from Delft and
+  comparing it with a collection in the Forbidden City, show them!
+  <li> Don't be limited to slides, use film / animations if you can:
+  make full use of the medium!
+  <li> Look directly at the camera: be natural on the camera and make
+  sure you use the full intonation of your voice.  Practicing reading
+  books to young children helps with this. <br/>
+    <CENTER>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nLDRQYeYQJg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	  
+    </CENTER>
+  <li> Record yourself saying every sentence multiple times so you
+  have options.  Pick the one that worked best. <br/>
+    <CENTER>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/tKEF2ml_hmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </CENTER>
+  <li> Talk naturally, but with a little more energy than you would
+  normally.
+  <li> I prefer placing slides <b>over</b> the presenter rather than
+  putting the presenter(s) inside the videos with the slides.
+  
 </ol>
 
 <h3>Personal Statements</h3>
