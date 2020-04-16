@@ -508,6 +508,14 @@ class WebsiteWriter:
   def write_index(self, index, bibtex=True):
     print("Creating index for %s from %s" % (index, str(self._criteria.keys())))
 
+    final_directory = (self._output + "/" + self.DYNAMIC_DIR +
+                       index.lower())
+    try:
+      print("Making dir %s" % final_directory)                
+      os.mkdir(final_directory)
+    except OSError:
+      print("Dir couldn't be made: " + final_directory)
+    
     for sort_by, min_count, exclude in self._criteria[index.lower()]:
       o = open(self._output + "/" + self.DYNAMIC_DIR +
                "%s/%s.html" % (index.lower(), sort_by.lower()), 'w')
