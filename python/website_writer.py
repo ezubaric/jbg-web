@@ -70,6 +70,7 @@ class Student:
 UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Book": "\\ifumd II.A.1. Books Authored \\else Books \\fi ",
                "Refereed Conference": "\\ifumd II.D.1. \\fi Refereed Conference Proceedings",
+               "Preprint": "\\ifumd II.F.2  \\fi Preprints / Working Papers",
                "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
