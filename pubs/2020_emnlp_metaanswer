@@ -1,10 +1,12 @@
-~~ Bibtex | inproceedings
-~~ Title | It Takes Two to Lie: One to Lie and One to Listen
-~~ Author | Denis Peskov and Benny Cheng and Ahmed Elgohary and Joe Barrow and Cristian Danescu-Niculescu-Mizil and Jordan Boyd-Graber
-~~ Booktitle | Association for Computational Linguistics
-~~ Year | 2020
-~~ Location | The Cyberverse Simulacrum of Seattle
+~~ Bibtex | article
+~~ Title | Meta Answering for Machine Reading 
+~~ Author | Benjamin B\"orschinger and Jordan Boyd-Graber and Christian Buck and Jannis Bulian and Massimiliano Ciaramita and Michelle Chen Huebscher and Wojciech Gajewski and Yannic Kilcher and Rodrigo Nogueira and Lierni Sestorain Saralegu
+~~ Journal | ArXiv
+~~ Year | Preprint
 ~~ Category | Empirical Human Data Collection
-~~ Category | Sentiment and Perspective
-~~ Venue | Refereed Conference
-~~ Project | ASED*../projects/SIENNA.html
+~~ Category | Deep Learning
+~~ Category | Question Answering
+~~ Url | docs/2020_acl_refine.pdf
+~~ Link | Preprint*https://arxiv.org/abs/1911.04156
+~~ Venue | Preprint
+~~ NumPages | 10
