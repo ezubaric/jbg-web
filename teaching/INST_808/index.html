@@ -1,0 +1,728 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>INST 414</title>
+<link href="../../style/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <a href="~~PATHPREFIX~~">~~SITETITLE~~</a> <br/>
+</div>
+
+<div id="navwrapper">
+  <div id="navigation">
+    <div class="menu">
+    ~~NAVIGATION~~
+    </div>
+   </div>
+</div>
+
+
+<div id="right">
+  <a href="../../">Jordan Boyd-Graber</a><br>
+  3155 AVW<br>
+  <a href="mailto:jbg@boydgraber.org">jbg@boydgraber.org</a>
+</div>
+
+<div id="content">
+
+<h1 id="header">Data Science</h1>
+
+<h2>Logistics</h2>
+
+  <center>
+  <table>
+    <tr>
+      <td> Location </td> <td> Kim 1200 </td>
+    </tr>
+    <tr>
+      <td> Time </td> <td> Tue/Thu 11:00-12:15 </td>
+    </tr>
+    <tr>
+      <td> Mailing List </td> <td><a
+    href="https://piazza.com/umd/spring2018/inst414/home">https://piazza.com/umd/spring2018/inst414/home</a></td>
+    <td>
+    </tr>
+    <tr>
+      <td> Required Text </td> <td> <a
+  href="http://greenteapress.com/thinkstats2/">Think Stats</a> </td>
+    </tr>
+
+    <tr>
+      <td> Syllabus </td> <td> <a href="https://docs.google.com/document/d/1YEd5ZK0G-OzLUwK1LardjR8FNciwNPRXYQ9oQz112tA/edit?usp=sharing">https://docs.google.com/document/d/1YEd5ZK0G-OzLUwK1LardjR8FNciwNPRXYQ9oQz112tA/edit?usp=sharing</a></td>
+    <td>
+    </tr>
+     <tr>
+       <td> Grades and Submission </td> <td>ELMS</td>
+  </table>
+  </center>
+
+<h2>People</h2>
+
+  <h3>Professor</h3>
+
+  <blockquote>
+  <a href="http://umiacs.umd.edu/~jbg/">Jordan Boyd-Graber</a><br>
+  ECCS 111B<br>
+  Office Hours (AVW 3155): Starting 30. January, Tuesday
+  13:00 - 14:00 and by <a href="http://jbg.youcanbook.me">appointment</a>
+  </blockquote>
+
+  <h3>Course Staff</h3>
+
+  <ul>
+
+   <li>  <a href="mailto:snehesh@cs.umd.edu">Snehesh Shrestha</a>
+   (Office Hours: Wed 12:00-13:00, HBK 4115) </li>
+   <li>  <a href="mailto:ananyamukh6@gmail.com">Ananya Mukherjee</a>
+   (Office Hours: Thu 16:30-17:30, HBK 4115)
+  </ul>
+
+<h2>Schedule</h2>
+
+  <p>How to read this table:</p>
+  <ol>
+    <li> Do the reading <b>under</b> the corresponding
+  date.
+    <li> Homeworks are due at 11:55 PM (Eastern) the day listed on the schedule.
+  </ol>
+
+  <CENTER>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TH>Date</TH>   <TH>Topic</TH>  <TH>Assignment Due </TH> <TH>Materials</TH>
+    </TR>
+
+    <TR>
+      <TD> Thu 25. Jan </TD> <TD> Insights from Data, Course Introduction, Python Hello World </TD>
+      <TD></TD> <TD>
+        [PDF <a href="00a.pdf">A</a> <a href="00b.pdf">B</a> <a
+      href="00c.pdf">C</a> <a href="00d.pdf">D</a>] [Video <a
+      href="https://www.youtube.com/watch?v=AP02CgqS6Hc">A</a> <a
+      href="https://www.youtube.com/watch?v=I3gK1Zd7FUY">B</a> <a
+      href="https://www.youtube.com/watch?v=k2thGtrXaNQ">C</a> <a
+        href="https://www.youtube.com/watch?v=KknO2jyvU1U">D</a>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c65cbba1-c48f-47a5-8055-a8730106e8ae">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> TS 1.1-1.2
+	    <li> <a href="https://docs.python.org/3/tutorial/">Python</a> (optional)
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Tue 30. Jan </TD> <TD> Python Review, Lab </TD>
+      <TD></TD> <TD>
+	[PDF <a href="01a.pdf">A</a> <a href="01b.pdf">B</a> <a
+      href="01c.pdf">C</a> <a href="01d.pdf">D</a>] [Video <a
+      href="https://youtu.be/eGjYmuM_gfI">A</a> <a
+      href="https://youtu.be/8fC9jjDbf3I">B</a> <a
+      href="https://youtu.be/2C3EjQeJ0Q4">C</a> <a
+      href="https://youtu.be/_I1Hup9UGh4">D</a>] [<a
+        href="lab01.pdf">Lab</a>] [<a href="2012pres.csv">DATA</a>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=84c25b77-7d8f-482c-aa48-a8780107cb63">Classroom</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+	    <li> <a
+      href="https://docs.python.org/3/tutorial/">Python</a>
+	    <li> Bring laptop to class <b>WITH PYTHON 3 INSTALLED</b> (or pair up with someone)
+	    <li> Functional Programming in Python (optional, good review if you haven't seen my Python style before):
+	      <ul>
+		<li> <a href="http://www.oreilly.com/programming/free/functional-programming-python.csp">Functional Programming in Python Book</a>
+		<li> <a href="https://docs.python.org/3/howto/functional.html">Functional Programming in Python Tutorial</a>
+		<li> <a href="http://blog.dhananjaynene.com/2010/02/functional-programming-with-python-part-1/">Functional Programming in Python Blog Post</a>
+              </ul>
+
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Thu 1. Feb </TD> <TD> HW 0 Lab </TD>
+      <TD></TD> <TD>
+	[<A
+        HREF="https://www.youtube.com/watch?v=9d5-Ti6onew">Video</A>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=504d4961-f3d9-4165-acee-a87a0106dc4b">Classroom</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> TS 1.3-1.8
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="CFB87C">Mon 5. Feb</TD>
+      <TD BGCOLOR="CFB87C">Homework 0 Due: Kaggle Exploration</TD>
+      <TD>[<a href="https://www.kaggle.com/t/3602d62c7a3b499ab9ae9dbc6cfa963a">Kaggle</a>]</TD>
+      <TD>
+    </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Tue 6. Feb </TD> <TD>  Probability Refresher: Definitions, Notation </TD>
+      <TD></TD> <TD>
+        [PDF <a href="02a.pdf">A</a> <a href="02b.pdf">B</a> <a
+	href="02c.pdf">C</a> <a href="02d.pdf">D</a>]
+	[Video <a
+      href="https://www.youtube.com/watch?v=UG66-i61zQ0">AB</A> <a
+      href="https://www.youtube.com/watch?v=OCss--VKexI">C</A> <a
+	href=https://www.youtube.com/watch?v=O28U08_yaGU"">D</A>]
+        [<a href="lab02.pdf">Practice</a>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbec2a6a-4f4f-4d10-a6de-a87f01085ef0">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <a
+      href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Grinstead and
+      Snell</a>, Chapters 1-2
+	    <li> (Optional) <a
+      href="http://homepages.inf.ed.ac.uk/sgwater/teaching/general/probability.pdf">Sharon's Review</a>
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Thu 8. Feb </TD> <TD> Conditional Probability </TD>
+      <TD></TD> <TD>
+	[PDF <a href="03a.pdf">A</a> <a href="03b.pdf">B</a>]
+	[Video <a
+      href="https://www.youtube.com/watch?v=NBvs7-YOqnw&index=5&list=PLegWUnz91Wftp1CsVFQaCgZAILUslEVhF">A</a>
+	<a href="https://youtu.be/rO80BH5FI3s">B</a>]
+        [<a href="lab03.pdf">Practice</a>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=42f6df88-a3e6-4ed6-a010-a88101086809">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+	    <li> TS 2
+            <li> <a href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Grinstead and Snell</a>, Chapter 4
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Tue 13. Feb </TD> <TD> HW 1 Lab </TD>
+      <TD></TD> <TD>
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7da5ab2b-6b2d-4828-a269-a88601077899">Classroom</A>]
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Thu 15. Feb </TD> <TD>  Discrete Distributions </TD>
+      <TD></TD> <TD>
+        [PDF <a href="04a.pdf">A</a> <a href="04b.pdf">B</a> <a
+      href="04c.pdf">C</a>] [Video <A
+      HREF="https://youtu.be/TI3wuqC8ZMs">A</A> <A
+      HREF="https://youtu.be/xa2QGqIOjvw">B</A> <A
+	HREF="https://youtu.be/YnUKPC89zEI">C</A>]
+        [<a href="lab04.pdf">Practice</a>]
+        [<a href="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=09010711-c760-4a5e-ab42-a8880106d3c0">Classroom</a>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <a href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Grinstead and Snell</a>, 5.1
+	    <li> TS 3
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="CFB87C">Thu 15. Feb</TD>
+      <TD BGCOLOR="CFB87C">Homework 1 Due: Data Wrangling</TD>
+
+      <TD>
+    [<a
+	href="https://github.com/Pinafore/ds-hw/tree/master/wrangling">Github</a>
+	<A HREF="https://www.kaggle.com/c/2018-414-wrangling">Kaggle</a>]</TD>
+      <TD></TD>
+    </TR>
+
+
+    <TR>
+      <TD> Tue 20. Feb </TD> <TD> Visualization </TD>
+      <TD></TD> <TD>
+        [PDF <A HREF="07a.pdf">A</A> <A HREF="07b.pdf">B</A> <A
+      HREF="07c.pdf">C</A>] [Video <A
+      HREF="https://www.youtube.com/watch?v=gpNKr5hv4M0">A</A> <A
+      HREF="https://www.youtube.com/watch?v=-lgKvN6kGBk">B</A> <A
+      HREF="https://www.youtube.com/watch?v=rwo_dyqdno0">C</A>] [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8e076850-e9a2-4628-98cb-a88d0106c431">Classroom</A>]
+      </TD>
+    </TR>
+
+
+
+
+    <TR>
+      <TD> Thu 22. Feb </TD> <TD> HW 2 Lab </TD>
+      <TD></TD> <TD>
+
+        [<A HREF="lab05.pdf">PDF</A>]
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d8ef6a58-ae45-4de4-91b9-a88f01080d9c">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>  Tue 27. Feb </TD> <TD> Continuous Distributions</TD>
+      <TD></TD> <TD>
+		[PDF <a href="05a.pdf">A</a> <a href="05b.pdf">B</a> <a
+      href="05c.pdf">C</a>] [Video <a href="https://youtu.be/7NO5P2-vCYA">A</A> <a href="https://youtu.be/IhcL1btX9JU">B</A> <a
+      href="https://youtu.be/CEVELIz4WXM">C</A>] [<a
+      href="lab04.pdf">Practice</a>] [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2ecd4a51-b302-46d6-948f-a8940107afa9">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <a href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Grinstead and Snell</a>, 5.2
+	    <li> TS 4
+          </ul>
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Thu 1. Mar </TD> <TD> Naive Bayes  </TD>
+      <TD></TD> <TD>
+	[<A
+      HREF="https://www.youtube.com/watch?v=0C-HjaibhsY">Video</A>]
+      [PDF <A HREF="08a.pdf">A</A> <A HREF="08b.pdf">B</A>] [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1af99532-adef-47e5-ac4c-a8960108af85">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <A
+      HREF="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.11.8264&rep=rep1&type=pdf">Naive
+      (Bayes) at Forty</A>
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="CFB87C">Thu 1. Mar</TD>
+      <TD BGCOLOR="CFB87C">Homework 2 Due: Tell a Story with Data</TD>
+      <TD>
+	    [<a href="https://github.com/Pinafore/ds-hw/tree/master/story">Github</a>]
+      </TD>
+      <TD></TD>
+    </TR>
+
+    <TR>
+      <TD> Tue 6. Mar </TD> <TD> Decision Trees </TD>
+      <TD></TD> <TD>
+	[<A
+      HREF="https://www.youtube.com/watch?v=nPsTFDwPyDI">Video</A>]
+      [<A HREF="06a.pdf">PDF</A>] [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6552f70a-369c-4400-bc6b-a89b010787ec">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <A
+      HREF="http://scikit-learn.org/stable/modules/tree.html">Decision
+      Trees in Python</A>
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Thu 8. Mar </TD> <TD> Linear Regression </TD>
+      <TD></TD> <TD>
+	[<A HREF="https://youtu.be/HqB431RSOLI">Regression</A>] [PDF
+      <A HREF="09a.pdf">A</A> <A HREF="09b.pdf">B</A>] [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49c862be-c513-4924-b7d7-a89d0107eccd">Classroom</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> TS 10
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Tue 13. Mar </TD> <TD> Midterm Review </TD>
+      <TD></TD> <TD>
+        [<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=486999b6-ae39-4a0c-9639-a8a200f710fa">Classroom</a>]
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Thu 15. Mar </TD> <TD> Midterm </TD>
+      <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Tue 27. Mar </TD> <TD> <FONT COLOR="RED">Class Cancelled</FONT> </TD>
+      <TD></TD> <TD>
+	<!--
+        [PDF <A HREF="10a.pdf">A</A><A HREF="10b.pdf">B</A><A HREF="10c.pdf">C</A>] [Video <A HREF="https://www.youtube.com/watch?v=9j65OsYGlhA">A</A><A HREF="https://www.youtube.com/watch?v=_TbOO4SvRlw">B</A>]
+	-->
+	[Video <A HREF="https://www.youtube.com/watch?v=9j65OsYGlhA&list=PLegWUnz91WfsELyRcZ7d1GwAVifDaZmgo&index=3">A</A>]
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Thu 29. Mar </TD> <TD> Logistic Regression </TD>
+      <TD></TD> <TD>
+	<!--
+        [PDF <A HREF="10a.pdf">A</A><A HREF="10b.pdf">B</A><A HREF="10c.pdf">C</A>] [Video <A HREF="https://www.youtube.com/watch?v=9j65OsYGlhA">A</A><A HREF="https://www.youtube.com/watch?v=_TbOO4SvRlw">B</A>]
+	-->
+	[Video <A HREF="https://www.youtube.com/watch?v=9j65OsYGlhA&list=PLegWUnz91WfsELyRcZ7d1GwAVifDaZmgo&index=3">A</A>  <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=78e632e9-d11d-4352-ad2d-a8b200f7c8d6">Class</A>] [PDF <A HREF="10a.pdf">A</A>]
+      </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> TS 11
+          </ul>
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Tue 3. April </TD> <TD> Support Vector Machines </TD>
+      <TD></TD> <TD>
+        [PDF <A HREF="13a.pdf">A</A> <A HREF="13b.pdf">B</A> <A HREF="13c.pdf">C</A>]
+	[<A
+        HREF="https://www.youtube.com/watch?v=qCPYys3rm24">Video</a> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ca3ede19-2cd0-4691-9417-a8b700f6f138">Class</A>]
+        [<A HREF="lab13.pdf">Example</A>]
+<!---
+        [PDF <A HREF="11a.pdf">A</A><A HREF="11b.pdf">B</A><A HREF="11c.pdf">C</A><A HREF="11d.pdf">D</A><A HREF="11e.pdf">E</A>] [Video <a href="http://youtu.be/Le513tPkUL8">A</a> <a href="http://youtu.be/EQnJqgf-cyc">B</a> <a href="http://youtu.be/oYe03Y1WQaI">C</a> <a href="http://youtu.be/8rIhk42__aI">D</a>] [<a href="house_regression.py">Code</a> <a href="house_train.csv">Train</a> <a href="house_test.csv">Test</a>]
+---->
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <a
+      href="http://web.cs.iastate.edu/~honavar/hearst-svm.pdf">Support
+      Vector Machines</a>
+          </ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Thu 5. Apr </TD> <TD> Feature Engineering </TD>
+      <TD></TD> <TD>
+        [Viedo <A
+      HREF="https://youtu.be/mK7rZ39TmcI">A</A> <A
+      HREF="https://youtu.be/IzKFgigocAg">B</A> <A
+      HREF="https://youtu.be/XzYB16H_158">C</A> <A HREF="https://youtu.be/wdFaYKU5q3Y">D</A>] [PDF <A HREF="11a.pdf">A</A> <A HREF="11b.pdf">B</A> <A
+      HREF="11c.pdf">C</A> <A HREF="11d.pdf">D</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=09ed6888-e556-4f2a-a9a2-a8b900f7b939">Class</A>] [<A HREF="house_regression.py">Code</A>] [<A HREF="https://www.kaggle.com/c/digging-into-data-hw2-predict-2013-home-prices2/data">Data</A>]
+	<!---
+        [<A HREF="lab11.pdf">PDF</A>]
+	--->
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Tue 10. Apr </TD> <TD> Clustering </TD>
+      <TD></TD> <TD>
+	        [PDF <A HREF="12a.pdf">A</A> <A HREF="12b.pdf">B</A> <A
+	HREF="12c.pdf">C</A>]
+	[Video <A HREF="https://youtu.be/d34EUqJEckM">A</A>  <A HREF="https://youtu.be/vtwoNN9FdB4">B</A>  <A HREF="https://youtu.be/0NMC2NfJGqo">C</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5b8afea-3614-4bb9-95e7-a8be00f762e5">Class</A>]
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> CIML chapter <a
+      href="http://ciml.info/dl/v0_99/ciml-v0_99-ch15.pdf">15</a>.
+          </ul>
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Thu 12. Apr </TD> <TD> Project Brainstorming </TD>
+      <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+
+
+
+    <TR>
+      <TD> Tue 17. Apr </TD> <TD> HW3 Lab </TD>
+      <TD></TD> <TD>
+	[<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6bd6ccbf-753a-4e2f-8d2e-a8c500f77521">Class</A>]
+	<!--
+        [<a href="lab12.pdf">PDF</a>]
+	--->
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Thu 19. Apr </TD> <TD> Topic Models </TD>
+      <TD></TD> <TD>
+        [PDF <A HREF="../CMSC_726/16a.pdf">A</A> <A HREF="../CMSC_726/16b.pdf">B</A>]
+	[Video <A HREF="https://youtu.be/fCmIceNqVog">A</A> <A HREF="https://youtu.be/rfHCronRgQU">B</A> <A HREF="https://youtu.be/u7l5hhmdc0M">C</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=06867e18-990c-41af-b6e2-a8c700f7d78a">Class</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> Chapter 1 of <A HREF="http://www.nowpublishers.com/article/DownloadSummary/INR-030">Applications of Topic Models</A>
+          </ul>
+	  <B>Optional:</B>
+	  <UL>
+	    <LI> <A HREF="http://www.umiacs.umd.edu/~resnik/pubs/gibbs.pdf">Gibbs Sampling for the Uninitiated</A>
+	  </UL>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="CFB87C">Thu 19. Apr</TD>
+      <TD BGCOLOR="CFB87C">Homework 3 Due: Feature Engineering </TD>
+      <TD>
+	    [<A HREF="https://github.com/Pinafore/ds-hw/tree/master/regression">Github</A>]
+	    </TD>
+      <TD>
+<!---
+[<A HREF="https://github.com/Pinafore/ds-hw/blob/master/logreg/README.md">Github</A>]
+---->
+       </TD>
+    </TR>
+
+    <TR>
+      <TD BGCOLOR="CFB87C">Thu 19. Apr</TD>
+      <TD BGCOLOR="CFB87C">Project Proposal Due </TD>
+      <TD>
+        [<A HREF="https://github.com/Pinafore/ds-hw/blob/master/project/README.md">Github</A>]
+	<!---
+	    [<A HREF="https://moodle.cs.colorado.edu/mod/assign/view.php?id=4290">Moodle</A>]
+	    --->
+	    </TD>
+      <TD>
+<!---
+
+---->
+       </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Tue 24. Apr </TD> <TD> Ensemble Methods </TD>
+      <TD></TD> <TD>
+	[<A HREF="https://www.youtube.com/watch?v=40xyZVYaPNY&t=1s">Video</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=331d9ab7-5582-45cd-b951-a8cc00f7e62e">Class</A>] 
+
+        [PDF <a href="../CMSC_726/09a.pdf">A</a> <a href="../CMSC_726/09b.pdf">B</a> <a href="../CMSC_726/09d.pdf">C</a> ]
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <A HREF="https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf">The Boosting Approach</a>
+          </ul>
+
+      </TD>
+    </TR>
+
+
+
+    <TR>
+      <TD> Thu 26. Apr </TD> <TD>  Deep Learning </TD>
+      <TD></TD> <TD>
+	[Video <A HREF="https://youtu.be/-XSPumV6v00">A</A> <a href="https://youtu.be/QRUfFGfImhg">B</a> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8bb95d03-ba01-4747-b4c1-a8ce00f772fc">Class</A>]         [PDF <A HREF="../CMSC_726/12a.pdf">A</A> <A HREF="../CMSC_726/12b.pdf">B</A> <A HREF="../CMSC_726/12c.pdf">C</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <A HREF="https://towardsdatascience.com/a-gentle-introduction-to-neural-networks-series-part-1-2b90b87795bc">A Gentle Introduction to Deep Learning</a>
+          </ul>
+
+      </TD>
+    </TR>
+
+
+
+
+
+    <TR>
+      <TD> Tue 1. May </TD> <TD> Project Workshop </TD>
+      <TD></TD> <TD>
+	[<A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=223dc95c-0f9c-4ff3-8f46-a8d300f70f82">Class</A>]
+	<!---
+        [PDF <A HREF="14a.pdf">A</A> <A HREF="14b.pdf">B</A> <A HREF="14c.pdf">C</A> <A HREF="14d.pdf">D</A> <A HREF="14e.pdf">E</A>]
+	---->
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Thu 3. May </TD> <TD> Social Implications </TD>
+      <TD></TD> <TD>
+	[<A HREF="https://youtu.be/BuESxqQwgmw">Video</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=115f85d8-0679-4f61-b4e9-a8d500f7dbc1">Class</A>]
+      </TD>
+    </TR>
+
+
+
+
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Readings:</b>
+          <ul>
+            <li> <A HREF="https://rodneybrooks.com/the-seven-deadly-sins-of-predicting-the-future-of-ai/">Seven Deadly Sins of Predicting the Future of AI</A>
+          </ul>
+
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Tue 8. May </TD> <TD> Project Presentations I </TD>
+      <TD></TD> <TD>
+	[Video: <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5acfa59a-8580-4725-8cfe-a8da00f815d5">Pres</A> <A HREF="https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5acfa59a-8580-4725-8cfe-a8da00f815d5">Review</A>]
+	<!---
+        [PDF <A HREF="14a.pdf">A</A> <A HREF="14b.pdf">B</A> <A HREF="14c.pdf">C</A> <A HREF="14d.pdf">D</A> <A HREF="14e.pdf">E</A>]
+	---->
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Thu 10. May </TD> <TD> Project Presentations II / Final Review </TD>
+      <TD></TD> <TD>
+	[<A HREF="17a.pdf">PDF</A>]
+      </TD>
+    </TR>
+
+
+    <TR>
+      <TD> Sat 12. May, 8:00 (Yuck!) </TD> <TD> Final Exam
+      </TD> <TD></TD> <TD>
+
+      </TD>
+    </TR>
+
+  </TABLE>
+  </CENTER>
+
+<br/>
+<br/>
+
+</div>
+
+
+<div id="footer">
+  Page by <a href="mailto:jbg@boydgraber.org">Jordan Boyd-Graber</a>.
+  Last modified: ~~TIMESTAMP~~
+</div>
+
+</body>
+</html>
