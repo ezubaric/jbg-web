@@ -225,6 +225,8 @@ class IndexElement:
     ~~~bibtex~~~
     \\end{verbatim}
 
+    ~~~public~~~
+
     ~~~note~~~
 
     ~~~links~~~
@@ -241,6 +243,11 @@ class IndexElement:
     s = s.replace("~~~citation~~~", self.latex(url_prefix=url_prefix, acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
     s = s.replace("~~~bibtex~~~", self.bibtex(url_prefix))
+
+    if "Public" in self.fields:
+      s = s.replace("~~~public~~", "{\\bf Accessible Abstract:} %s\\\\" % "\n".join(self.fields["Public"]))
+    else:
+      s = s.replace("~~~public~~~", "")
 
     if "Note" in self.fields:
       s = s.replace("~~~note~~~", "{\\bf %s}\\\\"
