@@ -232,8 +232,9 @@ class IndexElement:
     ~~~links~~~
 
     \\vspace{3cm}
-    Downloaded from ~~~url~~~
-    \\vspace{1cm}
+    Downloaded from ~~~url~~~  \\\\
+      
+    \\vspace{2cm}
     \\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}
 
     \\includepdf[pages={-}]{src_~~~filename~~~}
