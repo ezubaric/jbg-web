@@ -277,6 +277,7 @@ class IndexElement:
     else:
       s = s.replace("~~~links~~~", "")
 
+    s += "\\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}"
 
     return s
 
