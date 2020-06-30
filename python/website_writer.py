@@ -233,7 +233,8 @@ class IndexElement:
 
     \\vspace{3cm}
     Downloaded from ~~~url~~~
-
+    \\vspace{1cm}
+    \\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}
 
     \\includepdf[pages={-}]{src_~~~filename~~~}
 
@@ -277,7 +278,6 @@ class IndexElement:
     else:
       s = s.replace("~~~links~~~", "")
 
-    s += "\\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}"
 
     return s
 
