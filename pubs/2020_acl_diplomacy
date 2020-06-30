@@ -10,6 +10,7 @@
 ~~ Url | docs/2020_acl_diplomacy.pdf
 ~~ Project | ASED*../projects/ASED.html
 ~~ Link | Video*http://youtu.be/BVAAhIUtf9U
+~~ Link | Data and Code*http://go.umd.edu/diplomacy_data
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/BVAAhIUtf9U" frameborder="0" allowfullscreen></iframe>
 ~~ Acceptance | 25.4
 ~~ Public | Machine learning techniques to detect deception in online communications requires training and evaluation data.  However, there is a dearth of data either because of uncertain gold labels or privacy concerns; we create a new, large deception-centered dataset in the online game of Diplomacy.  We gathered 17,289 messages from 12 games (each of which took over a month) involving 84 players, the majority of which were unique users.  This data was collected with a custom-made bot that allowed us to collect messages and annotations.  The user pool was created from scratch: we varied  participant demographics across gender, age, nationality, and past game experience.  Some of our participants included the former president of the Diplomacy players' association, several top ranked players in the world, a board game shop owner, and scientists.  We create machine learning models to detect lies using linguistic, context, and power-dynamic features.  Our best model had similar lie detection accuracy to humans. 
