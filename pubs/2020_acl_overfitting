@@ -14,4 +14,4 @@
 ~~ Link | Video*http://youtu.be/yVN47wGkCko
 ~~ Link | Code*https://go.umd.edu/retro_clwe
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/yVN47wGkCko" frameborder="0" allowfullscreen></iframe>
-~~ Public | Computers need to represent words in a computer-readable way.  This work talks about how slightly moving these representations to get closer to a small list of translations (like from a dictionary) after doing fancy machine learning works better on downstream tasks (e.g., guessing grammatical category of a word) but hurts on asking the algorithm for translations of unseen words.
+~~ Public | Computers need to represent words in a computer-readable way.  This work talks about how slightly moving these representations for words in different languages to be closer to a small list of translations (like from a dictionary) after doing fancy machine learning works better on downstream tasks (e.g., guessing grammatical category of a word) but hurts on asking the algorithm for translations of unseen words.
