@@ -1,13 +1,13 @@
 ~~ Bibtex | inproceedings
-~~ Authors | Mozhi Zhang and Keyulu Xu and Ken-ichi Kawarabayashi and Stefanie Jegelka and Jordan Boyd-Graber
-~~ Title | Are Girls Neko or Sh\={o}jo? Aligning Word Embeddings by Enforcing Isomorphism
+~~ Authors | Mozhi Zhang and Yoshinari Fujinuma and Michael J. Paul and Jordan Boyd-Graber
+~~ Title |   Are Girls Neko or Sh{\=o}jo? {C|ross-Lingual Alignment of Non-Isomorphic Embeddings with Iterative Normalization
 ~~ Booktitle | Association for Computational Linguistics
 ~~ Year | 2019
 ~~ Location | Florence, Italy
 ~~ Category | Deep Learning
+~~ Url | docs/2019_acl_clwe.pdf
+~~ Link | Preprint*https://arxiv.org/abs/1906.01622
 ~~ Category | Multilingual Corpora
 ~~ Project | LORELEI*../projects/lorelei.html
 ~~ Venue | Refereed Conference
-~~ NumPages | 6
-~~ URL | docs/2019_acl_clwe.pdf
-~~ Acceptance | 18
+~~ Acceptance | 18.3
