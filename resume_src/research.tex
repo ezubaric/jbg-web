@@ -68,13 +68,14 @@ problematic areas that it knows are wrong.  This is a huge improvement over the
 ``take it or leave it'' philosophy of most machine learning algorithms.
 
 This is not only a technical improvement but also an improvement to the social
-process of machine learning adoption. A program manager who used topic models to
-characterize \textsc{nih} investments uncovered interesting synergies and
-trends, but the results were unpresentable because of a fatal flaw: one of the
-700 clusters lumped urology together with the nervous system, anathema to
-\textsc{nih} insiders~\cite{talley-11}. Our tools allow non-experts to fix such
-obvious (to a human) problems, allowing machine learning
-algorithms to overcome the \emph{social} barriers that often hamper adoption.
+process of machine learning adoption. A program manager who used topic models
+to characterize \textsc{nih} (America's federal health research funding agency)
+investments uncovered interesting synergies and trends, but the results were
+unpresentable because of a fatal flaw: one of the 700 clusters lumped urology
+together with the nervous system, anathema to \textsc{nih}
+insiders~\cite{talley-11}. Our tools allow non-experts to fix such obvious (to
+a human) problems, allowing machine learning algorithms to overcome the
+\emph{social} barriers that often hamper adoption.
 
 \begin{minipage}[b]{0.4\textwidth}
 \begin{tabular}{p{.9\textwidth}}
@@ -104,7 +105,12 @@ the right answer), so our current interactive system allows users to
 create their own personal lexicon interactively to refine the results
 of unsupervised machine learning algorithms.
 
-However, lexicons are not the only way humans can teach machines.
+Another shortcoming of interactive machine learning models is that they are often too slow.  
+We developed methods that go beyond traditional proababilistic interpretations.
+We extend the geometric interpretations of admixture models developed by Arora et al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and multi-lingual topics~\cite{Yuan-18}.
+
+
+However, lexicons are not the only way humans can teach machines: reinforcement learning can capture humans' subtle strategies.
 \emph{Simultaneous machine
   interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014} is another
 language-based task that requires significant human intuition,
@@ -126,7 +132,7 @@ Alliances are fluid: friends are betrayed and enemies embraced as the game
 develops. However, users' conversations let us predict when friendships break:
 betrayers writing ostensibly friendly messages before a betrayal become more
 polite, stop talking about the future, and change how much they
-write~\cite{niculae-15}.  Diplomacy may be a nerdy game, but it is a fruitful
+write~\cite{niculae-15} in follow-on work, we develop a dataset that helps predict both when users lie to each other and when recipients of lies detect deception~\cite{Peskov-20}.  Diplomacy may be a nerdy game, but it is a fruitful
 testbed to teach computers to understand messy, emotional human interactions.
 
 A game with higher stakes is politics.  However, just like Diplomacy, the words
@@ -172,10 +178,10 @@ helping human players of trivia games either as a study partner or as
 a teammate at a competition. 
 
 Creating metrics to measure interpretability and systems that
-implement it is the subject of my recently awared \textsc{nsf career}
+implement it is the subject of my \textsc{nsf career}
 grant.  By creating teams of humans and computers working together to
-solve language problems incrementally, we can create metrics that
-measure how much machine learning systems (and their visualizations)
+solve language problems incrementally~\cite{feng-19}, we will extend these metrics to other application areas 
+to measure how much machine learning systems (and their visualizations)
 help or hurt the performance of their human teammates.  We can then
 use these metrics to guide better visualizations using reinforcement
 learning.  This complements machine learning's ubiquity with
