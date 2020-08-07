@@ -32,12 +32,12 @@
 %\institute{University of Colorado, Boulder CO 80309, USA}
 
 
-%\date{March 14, 2013}
+\date{Fall 2020}
 
 \maketitle
 
 Machine learning is ubiquitous: detecting spam e-mails, flagging fraudulent
-purchases, and providing the next movie in a Netflix binge.  But few users at
+purchases, and providing the next movie in a Netflix binge.  But few at
 the mercy of machine learning \emph{outputs} know what's happening behind the
 curtain.  My research goal is to demystify the black box for non-experts by
 creating \emph{algorithms that can inform, collaborate with, compete with, and
@@ -50,10 +50,10 @@ or humanists characterizing the oeuvre of Lope de Vega.  But topic models'
 proponents never asked what those lawyers, journalists, or humanists
 needed. Instead, they optimized \emph{held-out likelihood}. When my colleagues
 and I developed the \emph{interpretability} measure to assess whether topic
-models' users understood their outputs, we found that interpretability and
+models' users understood their outputs, interpretability and
 held-out likelihood were negatively correlated~\cite{chang-09b}! The topic
 modeling community (including me) had fetishized complexity at the expense of
-usability.
+usability\dots and topic modeling is not alone, question answering has distinct but similar issues with evalution~\cite{boyd-graber-20}.
 
 \begin{center}
 \includegraphics[width=.5\linewidth]{images/prec_ll_4}
@@ -61,19 +61,13 @@ usability.
 
 Since this humbling discovery, I've built topic models that are a collaboration
 between humans and computers.  The computer starts by proposing an organization
-of the data.  The user responds by separating confusing clusters, joining
-similar clusters together, or comparing notes with another
-user~\cite{hu-14:itm}.  The model updates and then directs the user to
-problematic areas that it knows are wrong.  This is a huge improvement over the
+of the data.  The user separates confusing clusters or joins
+similar clusters together~\cite{hu-14:itm}.  The model updates and directs the user to
+problematic areas that.  This is a huge improvement over the
 ``take it or leave it'' philosophy of most machine learning algorithms.
 
 This is not only a technical improvement but also an improvement to the social
-process of machine learning adoption. A program manager who used topic models
-to characterize \textsc{nih} (America's federal health research funding agency)
-investments uncovered interesting synergies and trends, but the results were
-unpresentable because of a fatal flaw: one of the 700 clusters lumped urology
-together with the nervous system, anathema to \textsc{nih}
-insiders~\cite{talley-11}. Our tools allow non-experts to fix such obvious (to
+process of machine learning adoption. Our tools allow non-experts to fix such obvious (to
 a human) problems, allowing machine learning algorithms to overcome the
 \emph{social} barriers that often hamper adoption.
 
@@ -95,20 +89,14 @@ sci, \blue{spinal\_cord}, \blue{spinal\_cord\_injury}, \blue{spinal}, \blue{inju
 
 % Fix ``on the fly''
 
-The machine learning tools that we developed to enable these
-interactions came from our attempt to model probabilistic
-lexicons~\cite{boyd-graber-07}.  We realized that much of the
-confusion came from words used in ambiguous contexts, and
-incorporating semantic knowledge (e.g., from WordNet) could help
-create clearer topics.  However, WordNet is not always available (or
-the right answer), so our current interactive system allows users to
-create their own personal lexicon interactively to refine the results
-of unsupervised machine learning algorithms.
-
-Another shortcoming of interactive machine learning models is that they are often too slow.  
-We developed methods that go beyond traditional proababilistic interpretations.
-We extend the geometric interpretations of admixture models developed by Arora et al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and multi-lingual topics~\cite{Yuan-18}.
-
+Another shortcoming of interactive machine learning models is that they are
+often too slow. We developed methods that go beyond traditional proababilistic
+interpretations. We extend the geometric interpretations of admixture models
+developed by Arora et al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17}
+and multi-lingual topics~\cite{Yuan-18}. We have also developed better
+understanding of projection-based multilingual representations via graph
+theory~\cite{Fujinuma-19} and the convergence of alternating
+projections~\cite{Zhang-19}.
 
 However, lexicons are not the only way humans can teach machines: reinforcement learning can capture humans' subtle strategies.
 \emph{Simultaneous machine
@@ -124,30 +112,32 @@ translate sentences sooner~\cite{He-15}, letting speakers and
 algorithms cooperate together and enabling more natural cross-cultural
 communication.
 
-The reverse of cooperation is competition; it also has much to teach
-computers. I've increasingly looked at language-based games whose clear goals
-and intrinsic fun speed research progress.  For example, in \emph{Diplomacy},
-users chat with each other while marshaling armies for world conquest.
-Alliances are fluid: friends are betrayed and enemies embraced as the game
-develops. However, users' conversations let us predict when friendships break:
-betrayers writing ostensibly friendly messages before a betrayal become more
-polite, stop talking about the future, and change how much they
-write~\cite{niculae-15} in follow-on work, we develop a dataset that helps predict both when users lie to each other and when recipients of lies detect deception~\cite{Peskov-20}.  Diplomacy may be a nerdy game, but it is a fruitful
-testbed to teach computers to understand messy, emotional human interactions.
+The reverse of cooperation is competition; it also has much to teach computers.
+I've increasingly looked at language-based games whose clear goals and
+intrinsic fun speed research progress. For example, in \emph{Diplomacy}, users
+chat with each other while marshaling armies for world conquest. Alliances are
+fluid: friends are betrayed and enemies embraced as the game develops. However,
+users' conversations let us predict when friendships break: betrayers writing
+ostensibly friendly messages before a betrayal become more polite, stop talking
+about the future, and change how much they write~\cite{niculae-15} in follow-on
+work, we develop a dataset that helps predict both when users lie to each other
+and when recipients of lies detect deception~\cite{Peskov-20}. Diplomacy may be
+a nerdy game, but it is a fruitful testbed to teach computers to understand
+messy, emotional human interactions.
 
-A game with higher stakes is politics.  However, just like Diplomacy, the words
+A game with higher stakes is politics. However, just like Diplomacy, the words
 that people use reveal their underlying goals; computational methods can help
-expose the ``moves'' political players can use.  With collaborators in political
-science, we've built models that: show when politicians in debates strategically
-change the topic to influence others~\cite{nguyen-12,Nguyen-14b}; frame topics
-to reflect political leanings~\cite{nguyen-13:shlda}; use subtle linguistic
-phrasing to express their political leaning~\cite{iyyer-14a}; or create
-political subgroups with larger political
+expose the ``moves'' political players can use. With collaborators in political
+science, we've built models that: show when politicians in debates
+strategically change the topic to influence others~\cite{nguyen-12,Nguyen-14b};
+frame topics to reflect political leanings~\cite{nguyen-13:shlda}; use subtle
+linguistic phrasing to express their political leaning~\cite{iyyer-14a}; or
+create political subgroups with larger political
 movements~\cite{Nguyen:Boyd-Graber:Resnik:Miler-2015}.
 
 Conversely, games also teach humans \emph{how computers think}.  Our
 trivia-playing robot~\cite{boyd-graber-12,iyyer-14b,iyyer-15} faced off against
-four former Jeopardy champions in front of 600 high school
+former Jeopardy champions in front of hundreds high school
 students.\footnote{\url{https://www.youtube.com/watch?v=LqsUaprYMOw}} The
 computer claimed an early lead, but we foolishly projected the computer's
 thought process for all to see.  The humans learned to read the algorithm's
@@ -166,26 +156,41 @@ in front of the dot products and our system did much better.)
     \includegraphics[width=\textwidth]{images/jennings_handshake}
   \end{minipage}
 
+Advancing machine learning requires closer, \emph{more natural interactions}.
+However, we still require much of the user---reading distributions or dot
+products---rather than natural interactions. Document exploration tools should
+describe in words what a cluster is, not just provide inscrutable word clouds.
+Deception detection systems should say \emph{why} a betrayal is imminent.
+Question answers should explain \emph{how} it knows Aaron Burr shot Alexander
+Hamilton: thus helping human players of trivia games either as a study partner
+or as a teammate at a competition. Likewise, users should be able to
+communicate correct when algorithms go wrong naturally.
 
-Advancing machine learning requires closer, more natural interactions.
-However, we still require much of the user---reading distributions or
-dot products---rather than natural interactions.  Document
-exploration tools should describe in words what a cluster is, not just
-provide inscrutable word clouds.  Deception detection systems should
-say \emph{why} a betrayal is imminent.  Question answers should
-explain \emph{how} it knows Aaron Burr shot Alexander Hamilton: thus
-helping human players of trivia games either as a study partner or as
-a teammate at a competition. 
+User interactions are still important---machine learning is not yet able to
+extract all it needs from large datsets. But the size of this data requires us
+to use the limited time and patience of user annotation. I am developing
+variants of active learning that---rather than look at whether an example
+confuses a downstream classifier---look for examples that surprise language
+models trained on webscale datea~\cite{devlin-19}. We can then ask users to
+provide feedback on the data or clusters~\cite{poursabzi-16} that language
+models cannot handle.
 
-Creating metrics to measure interpretability and systems that
-implement it is the subject of my \textsc{nsf career}
-grant.  By creating teams of humans and computers working together to
-solve language problems incrementally~\cite{feng-19}, we will extend these metrics to other application areas 
-to measure how much machine learning systems (and their visualizations)
-help or hurt the performance of their human teammates.  We can then
-use these metrics to guide better visualizations using reinforcement
-learning.  This complements machine learning's ubiquity with
-transparent, empathetic, and useful interactions with users.
+Creating metrics to measure interpretability and systems that implement it is
+the subject of my \textsc{nsf career} grant. By creating teams of humans and
+computers working together to solve language problems
+incrementally~\cite{feng-19}, we will extend these metrics to other
+applications areas to measure how much machine learning systems (and their
+visualizations) help or hurt the accuracy of their human teammates. Given a set
+of pre-defined visualizations, we can use bandit algorithms to select which
+visualizations are best in a particular context: an expert is more likely to
+use nearest-neighbor examples, a novice is more likely to be helped by an
+$n$-best list, etc. As we move beyond a set of pre-defined visualizations,
+interpretability metrics can then become the reward function for reinforcement
+learning to optimize the details of machine learning explanations. This
+complements machine learning's ubiquity with transparent, empathetic, and
+useful interactions with users.
+
+
 
 %% \vspace{12cm}
 
@@ -202,7 +207,7 @@ transparent, empathetic, and useful interactions with users.
 \bibliographystyle{resume_src/splncs03}
 
 \begin{center}
-Full list of  three book chapters, six journal publications, and fifty-five conference
+Full list of  three book chapters, eleven journal publications, and eighty-five conference
 publications at \url{http://boydgraber.org/dyn-pubs/year.html}
 \end{center}
 
