@@ -45,7 +45,7 @@ creating \emph{algorithms that can inform, collaborate with, compete with, and
 
 This is at odds with mainstream machine learning---take topic models.  Topic
 models are sold as a tool for understanding large data collections: lawyers
-scouring Enron e-mails for a smoking gun, journalists making sense of Wikileaks,
+scouring Nordstream e-mails for a smoking gun, journalists making sense of Wikileaks,
 or humanists characterizing the oeuvre of Lope de Vega.  But topic models'
 proponents never asked what those lawyers, journalists, or humanists
 needed. Instead, they optimized \emph{held-out likelihood}. When my colleagues
@@ -110,7 +110,9 @@ verbs near the start). We learned tricks from professional human
 interpreters---passivizing sentences and guessing the verb---to
 translate sentences sooner~\cite{He-15}, letting speakers and
 algorithms cooperate together and enabling more natural cross-cultural
-communication.
+communication.  We can also use reinforcement learning to learn
+machine translation feedback from noisy supervision such as star
+ratings on a webpage~\cite{nguyen-17}.
 
 The reverse of cooperation is competition; it also has much to teach computers.
 I've increasingly looked at language-based games whose clear goals and
@@ -144,9 +146,11 @@ thought process for all to see.  The humans learned to read the algorithm's
 ranked dot products and schemed to answer just before the computer. In five
 years of teaching machine learning, I've never had students catch on so quickly
 to how linear classifiers work.  The probing questions from high school students
-in the audience showed they caught on too.  (Later, when we played again against
+in the audience showed they caught on too.  Later, when we played again against
 Ken Jennings,\footnote{\url{https://www.youtube.com/watch?v=kTXJCEvCDYk}} he sat
-in front of the dot products and our system did much better.)
+in front of the dot products and our system did much better.  However,
+much of computers' advantage comes from repeated word overlaps in
+questions~\cite{wallace-19}.
 
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{images/boring_dot_products}
@@ -168,7 +172,8 @@ communicate correct when algorithms go wrong naturally.
 
 User interactions are still important---machine learning is not yet able to
 extract all it needs from large datsets. But the size of this data requires us
-to use the limited time and patience of user annotation. I am developing
+to use the limited time and patience of user annotation. With my
+student Michelle Yuan, I am developing
 variants of active learning that---rather than look at whether an example
 confuses a downstream classifier---look for examples that surprise language
 models trained on webscale datea~\cite{devlin-19}. We can then ask users to
