@@ -9,12 +9,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt]{amsart}
+\include{resume_src/structure}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
+\usepackage{mdwlist}
+\usepackage{hyperref}
 
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
-\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\newif\ifumd\umdfalse
+\newcommand{\umdtext}[2]{
+\ifumd
+#1 #2
+\else
+#2
+\fi
+}
 
 \newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small #1}}}\vspace{.5cm}}
 \newcommand{\abr}[1]{\textsc{#1}}
@@ -24,27 +35,105 @@
  \title{Teaching Statement}
 
  \author{Jordan Boyd-Graber}
-\address{University of Colorado}
+\address{University of Maryland}
 \email{jbg@boydgraber.org}
 
-\date{Fall 2016}
+\date{Fall 2020}
 
 
 \keywords{}
 
 \maketitle
 
+\headedsection{\umdtext{III.A. }{Courses Taught}}{}{
+
+\headedsubsection{CMSC 470: Natural Language Processing}{\textsc{umd}, Spring 2019}{
+  \bodytext{40 students, First Offering of Course with Permanent Number}}
+
+
+\headedsubsection{CMSC 723: Computational Linguistics I}{\textsc{umd}, Fall 2018}{
+  \bodytext{60 students}}
+
+
+\headedsubsection{CMSC 389A: Practical Deep Learning}{\textsc{umd}, Spring 2018}{
+  \bodytext{30 students, Student-led course initiative: classroom instruction by Sujith Vishwajith}}
+
+\headedsubsection{INST 414: Data Science Methods}{\textsc{umd}, Spring 2018}{
+  \bodytext{50 students}}
+
+
+\headedsubsection{CMSC 726: Machine Learning}{\textsc{umd}, Fall 2017}{
+  \bodytext{60 students}}
+
+
+\headedsubsection{CSCI 7000: Advanced Machine Learning for Natural
+  Language Processing}{Colorado, Spring 2017}{
+  \bodytext{24 students}}
+
+
+\headedsubsection{CSCI 3022: Introduction to Data Science Algorithms}{Colorado, Fall 2016}{
+	\bodytext{100 students}}
+
+\headedsubsection{CSCI 5622: Machine Learning}{Colorado, Fall 2015}{
+	\bodytext{104 students}
+}
+
+\headedsubsection{CSCI 5622: Machine Learning}{Colorado, Spring 2015}{
+	\bodytext{58 students}
+}
+
+\headedsubsection{CSCI/LING 5832: Natural Language Processing}{Colorado, Fall 2014}{
+	\bodytext{32 students}
+}
+
+\headedsubsection{INST 737: Digging into Data}{\textsc{umd}, Spring 2014}{
+	\bodytext{29 students}}
+
+\headedsubsection{CMSC/LING 723 / INST 735: Computational Linguistics I} {\textsc{umd}, Fall 2013}{
+	\bodytext{45 students}
+	}
+
+\headedsubsection{LING 848B / CMSC 828B: Bayesian Nonparametrics} {\textsc{umd}, Spring 2013}{
+	\bodytext{15 students}}
+
+\headedsubsection{INST 737: Digging into Data} {\textsc{umd}, Spring 2013}{
+	\bodytext{30 students}}
+
+\headedsubsection{LBSC 690: Introduction to Information Technology} {\textsc{umd}, Fall 2012}{
+	\bodytext{30 students}}
+
+\headedsubsection{INST728C / CMSC 773 / LING 773: Computational Linguistics II} {\textsc{umd}, Spring 2012}{
+	\bodytext{11 Students}}
+
+\headedsubsection{LBSC 690: Introduction to Information Technology} {\textsc{umd}, Fall 2011}{
+	\bodytext{30 students}}
+
+\headedsubsection{INFM 718G: Web Scale Information Processing Applications} {\textsc{umd}, Spring 2011}{
+	\bodytext{12 students}}
+
+\headedsubsection{LBSC 690: Introduction to Information Technology} {\textsc{umd}, Fall 2010}{
+	\bodytext{ 30 students}}
+
+\headedsubsection{COS/LIN 280: Computational Linguistics} {Princeton, Fall 2008}{
+	\bodytext{40 students, Taught by Christiane Fellbaum (I developed homeworks)}}
+
+}
+
+
+\section{Experience}
+
 Teaching is one of the primary reasons I am in academia; in particular, I want
 to excite students in science and technology. Here I describe how
 participation and course activities help build this excitement in students and
 how these methods help students build a career.
 
-\section{Interactive Classrooms}
+
+
+\subsection{Interactive Classrooms}
 
 I find traditional lecture dull, even when I'm the person in front of
 the class.  Thus, I usually ``flip'' my classrooms to record
-lectures---with the help of the wonderful staff at Be Boulder
-Anywhere---so students can watch at home at their leisure.  This moves
+lectures so students can watch at home at their leisure.  This moves
 discussion, working on homework, and student questions into class time
 (where before they happened at home or not at all).
 
@@ -52,7 +141,7 @@ Beyond structuring class to allow for many questions and discussion
 points, I end most classes with a difficult discussion of a key
 concept discussed in class and encouraging the class to work
 collaboratively together to arrive at a solution.  For example:
-\begin{itemize}
+\begin{itemize*}
   \item After introducing relational databases, I work together with the class to
 design a database scheme to serve the needs of a library circulation
 system.  We talk through suggestions on what data should be stored,
@@ -65,7 +154,7 @@ have.
     compute their inter-annotator agreement.  I have discovered that this, more
     than any collections of examples I can provide, effectively convinces
     students the importance of having good input data for their algorithms.
-\end{itemize}
+\end{itemize*}
 
 For technical classes with a large hands-on component, I provide
 students with ample opportunities to explore resources in a supportive
@@ -84,7 +173,7 @@ I also try to be accessible to students through a variety of methods (e.g.,
 Piazza, e-mail, office hours) to quickly answer questions and address their
 concerns so that they do not get frustrated and so that they can make progress.
 
-\section{Evaluation and Course Activities}
+\subsection{Evaluation and Course Activities}
 
 I typically structure classes with a few small, practical assignments (typically
 three to five), a midterm, and a course project.
@@ -123,19 +212,20 @@ abilities more than I could through predefined assignments.  It also
 helps build the close connection with the subject area, incubating a
 comfort with science and technology.
 
-\section{Mentoring Undergraduates}
+\subsection{Mentoring Undergraduates}
 
 Students realize that I'm passionate about research and that I'm also
-approachable so that they can explore their interests.  I've worked
-with nine undergraduate students, our work with undergraduates has
-been published in top venues like \abr{naacl} and \abr{chi}, and the
-undergraduates I've worked with have gone on to have successful
-research careers (e.g., Lester Mackey is now faculty at Stanford).
+approachable so that they can explore their interests. I've worked with nine
+undergraduate students, our work with undergraduates has been published in top
+venues like \abr{naacl} and \abr{chi}, and the undergraduates I've worked with
+have gone on to have successful research careers (e.g., Lester Mackey became
+faculty at Stanford before moving to Microsoft Research, Eric Wallace is now a
+PhD student at Berkeley).
 
-\section{Mentoring Graduate Students}
+\subsection{Mentoring Graduate Students}
 
-I've graduated four PhD students and am the chair or co-chair for
-seven current students.  I like to have a group meeting every other
+I've graduated ten PhD students and am the chair or co-chair for
+eight current students.  I like to have a group meeting every other
 week with students I'm working with (broadly construed), and
 one-on-one meetings as needed with students, typically once a week. In
 addition, everyone in my group (me included) sends a weekly e-mail to
@@ -151,19 +241,62 @@ craft a trajectory of papers that will form a foundation for the rest
 of their graduate studies.  While I'm fairly hands-on with conference
 and journal submissions, I never edit proposals or dissertations; I
 provide verbal feedback and suggestions but students must find their
-own voice in the writing process.  
+own voice in the writing process.
 
-After graduation, my students have gone on to good positions in
-industry (e.g., Viet-An Nguyen, Facebook Data Science) and academia
-(e.g., He He, Stanford postdoc; Alvin Grissom II, Assistant Professor
-at Ursinus).
+After graduation, my students have gone on to good positions in industry (e.g.,
+Viet-An Nguyen, Facebook Data Science) and academia (e.g., He He, NYU faculty;
+Mohit Iyyer, UMass faculty; Alvin Grissom II, Assistant Professor at
+Haverford).
 
-\section{Outreach to High School Students}
+\subsection{Outreach to High School Students}
 
 A major part of my research is making machine learning accessible to
 high school students.  My human-computer question answering exhibition
 matches have attracted thousands of interested high school students in
 \abr{dc}, Chicago, Dallas, and Seattle.
+
+\subsection{Pedagogical development projects}
+
+From 2011--2013, I chaired \abr{umd}'s Information Science undergraduate
+education committee. During this time, we developed a new undergraduate degree
+program to complement the university's existing strengths (and exploding
+enrollments) in computer science. I developed the initial proposal,
+articulation agreements with local community colleges, planned course
+offerings, and shepherded the proposal through college and provost approval.
+Susan Winter and Vedat Diker (and many others) took over the actual
+implementation of the program, which became the university's fastest growing
+major (958 majors in less than five years of existance).
+
+\section{Practice and Reflection}
+
+In my decade of teaching, my teaching style has evolved substantially. The
+biggest change has gone from traditional synchronous lectures to asynchronous
+recorded videos, which started in 2013. When I went back to lecturing
+synchronously, I found the experience excruciating\dots I had no idea who the
+students were, how they were doing, and getting them to ask questions was
+nearly impossible. The biggest benefit of asynchronous lecture was
+communicating often with students and seeing throughout the semester how
+students were absorbing and applying the material.
+
+\subsection{Evaluations of Teaching}
+
+Both the computer science department and the iSchool at the University of Maryland have yearly reviews of teaching.
+At the University of Colorado, I participated in the Classroom Learning Interview Process, which uses a structured interview of students in the classroom to access faculty teaching.
+
+Based on the feedback from these evaluations, in the last fiew years, I have developed new strategies to:
+\begin{itemize*}
+  \item Break online video lectures into segments of no more than fifteen minutes
+  \item Have more, smaller homeworks (when teaching support is sufficient)
+  \item Call on tables rather than individuals to spark initial conversations in flipped classrooms
+  \item Provide context to questions when answering them (e.g., ``I suspect Kim is asking this question because\dots'')
+\end{itemize*}
+
+\section{Example Sylabuses}
+
+Part of my committment to public education is to ensure that all of my course
+materials (lectures, syllabus, assignments) are publicly accessible. The most
+recent version of each of my courses is listed at
+\url{http://users.umiacs.umd.edu/~jbg/static/courses.html}.  My lectures, which have approximately half a million views, are available on YouTube at \url{https://www.youtube.com/c/JordanBoydGraber/videos}.
 
 % \section{What Students Say \dots}
 

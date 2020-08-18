@@ -1,5 +1,5 @@
 ~~ Bibtex | inproceedings
-~~ Authors | Mozhi Zhang and Yoshinari Fujinuma and Michael J. Paul and Jordan Boyd-Graber
+~~ Author | Mozhi Zhang and Yoshinari Fujinuma and Michael J. Paul and Jordan Boyd-Graber
 ~~ Title |   Why Overfitting Isn't Always Bad: Retrofitting Cross-Lingual Word Embeddings to Dictionaries
 ~~ Booktitle | Association for Computational Linguistics
 ~~ Year | 2020
@@ -11,3 +11,7 @@
 ~~ Project | BETTER*../projects/better.html
 ~~ Venue | Refereed Conference
 ~~ Acceptance | 17.6
+~~ Link | Video*http://youtu.be/yVN47wGkCko
+~~ Link | Code*https://go.umd.edu/retro_clwe
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/yVN47wGkCko" frameborder="0" allowfullscreen></iframe>
+~~ Public | Computers need to represent words in a computer-readable way.  This work talks about how slightly moving these representations for words in different languages to be closer to a small list of translations (like from a dictionary) after doing fancy machine learning works better on downstream tasks (e.g., guessing grammatical category of a word) but hurts on asking the algorithm for translations of unseen words.
