@@ -112,13 +112,15 @@ to use LaTeX instead of Word.</p>
 least <a href="http://jeffhuang.com/better_word_papers.html">make your Word
 documents look nice</a> (but it's a lot of work).</p>
 
-<!---
+
 
 <h3>Why not "Good Enough"?</h3>
 
-https://twitter.com/iraphas13/status/1262489387767480322
-
---->
+Writing scientifically is an art and <a
+href="https://twitter.com/iraphas13/status/1262489387767480322">has
+always been</a>.  While computers make life easier,
+it doesn't absolve you of the responsibility to clearly and cleanly
+expressing what you want to say.  
 
 
 <h3>Writing Clearly and Directly</h3>	
@@ -143,12 +145,56 @@ an appropriate scenario is integral.
 </PRE>
 	
 <ul>
-	<li> <b>scoped at a general or player-specific basis</b>: both "basis" and "scoped" are vague and jargony.  It would be more direct to say: "When we look for lies, we can either look for what a lie looks like in general or what a specific person's lies look like."
-	<li> <b>Alternatively, we can use our lie-detection models for a human-in-the-loop approach to identifying deception</b>: "Approach" is another vague word, and introducing a new idea should connect to the first point.  Better to say: "Instead of general lie detection, you would rather know if <i>you</i> are being lied to in the moment."
-	<li> <b>The model can be used creating a player interface that provides model insights to players in real-time to make better game decisions.</b>: While there's no blanket prohibition against the passive, it can sometimes obscure agency.  "The model can be used" doesn't explain how the model can help someone.  Better to say: "Our models can identify words that find words, phrases, and situations that portend deception and warn potential victims of deception before it's too late."
-	<li> <b>Or the data can be used to create dialog for a Diplomacy bot</b>: Needs a transition from other concepts in paragraph but might be better in its own paragraph.
+	<li> <b>scoped at a general or player-specific basis</b>: both
+	"basis" and "scoped" are vague and jargony.  It would be more
+	direct to say: "When we look for lies, we can either look for
+	what a lie looks like in general or what a specific person's
+	lies look like."
+	<li> <b>Alternatively, we can use our lie-detection models for
+	a human-in-the-loop approach to identifying deception</b>:
+	"Approach" is another vague word, and introducing a new idea
+	should connect to the first point.  Better to say: "Instead of
+	general lie detection, you would rather know if <i>you</i> are
+	being lied to in the moment.
+	<li> <b>The model can be used creating a player interface that
+	provides model insights to players in real-time to make better
+	game decisions.</b>: While there's no blanket prohibition
+	against the passive, it can sometimes obscure agency.  "The
+	model can be used" doesn't explain how the model can help
+	someone.  Better to say: "Our models can identify words that
+	find words, phrases, and situations that portend deception and
+	warn potential victims of deception before it's too late."
+	<li> <b>Or the data can be used to create dialog for a
+	Diplomacy bot</b>: Needs a transition from other concepts in
+	paragraph but might be better in its own paragraph. Let's
+	focus on transitions a little more.
 </ul>
-	
+
+<h3>Transitions</h3>
+
+<PRE>
+Famously, \abr{ibm} Watson was victorious in a match against the best
+trivia players in the world, and in this thesis I describe an
+exhibition event where my system also defeated decorated trivia
+players.  Despite my system defeating good trivia players, it was hollow since I knew that our system was nothing more than well-done pattern matching—i.e., nothing like human reasoning.
+</PRE>
+
+Let's put aside "victorious" (prefer verbs to adjectives generally).
+  There are three ideas here, but the "and" doesn't add much.  The
+  real contrast is between the second two ideas.  The final idea
+  obscures what the contrast is between with the vacuous "it", so it's
+  good to repeat "victory" here.
+
+<pre>
+Famously, \abr{ibm} Watson defeated the best trivia players.
+While the system described in this thesis likewise defeated decorated
+trivia players, this victory was hollow since our system was nothing
+more than well-done pattern matching---i.e., nothing like human
+reasoning.
+</pre>
+  
+</ul>
+
 <h3>Tense</h3>
 
 <ol>
@@ -1211,7 +1257,6 @@ important for journals than conferences).</p>
 
 
 <h3>Checklist before submitting something</h3>
-
   <ol>
     <li> Look over your citations.  Do they look uniform?  Sometimes when you
     copy/paste a bibtex citation, junk comes with.
@@ -1222,6 +1267,9 @@ important for journals than conferences).</p>
     reviewer can get the gist of what's going on through the figures alone.  So if your first figure is about the data you use, make sure that motivates the method you'll use.  If you have a figure of the graphical model, don't just say "our graphical model"; instead, point out the salient aspects of the model that makes it interesting to a reader under time pressure.  If you have a figure of results, don't just say "summary of results"; instead, point out what the results mean in the caption.  You'll say something similar in the text, so don't repeat yourself.  Likely there are different interesting trends you can point out.
     <li> Is your abstract persuasive and interesting?  When an area chair reads it, will they send it to the reviewers that you want?
     <li> Do a spellcheck!
+    <li> Double check that you're using the correct style file; put it
+  next to other submissions and make sure they look the same (same
+  numbers of lines per page, etc.).
     <li> Make sure you've spelled your co-authors' names correctly (not always
     obvious; perhaps they use middle initials or a different name / spelling for
     publishing) and you have the correct affiliation (did they move since you
@@ -1238,7 +1286,7 @@ prepared to take advantage of that.  Or you may want to post on
 ArXiV after submission/rejection; fix these problems first.</p>
 
 <ol>
-  <li> If you disobeyed the style guidelines, fix those issues now.
+  <li> If you disobeyed the style guidelines on this page, fix those issues now.
   Common things that people fail to do: not have figures
   auto-generated, explicit lists of contributions, not run the style checking script, non-vector figures, ugly tables, ugly
   bibliographies, etc.  You'll have to do it eventually, save yourself
@@ -1302,16 +1350,17 @@ list
 <li> Has everything spell-checked and typos corrected
 <li> Has everyone's name is added to author list and spelled correctly
 (if there's any doubt, ask)
+<li> Obeys the space limits  
 <li> Uses the right style file (it sometimes changes between
 submission and camera ready)
 <li> Has no widows or orphans
-<li> Obeys the space limits
 <CENTER>
   <IMG SRC="../images/widow-orphan.png">
 </CENTER>
-
-<li> More broadly, the paper should look like the published papers on my webpage (hopefully better).  Every commit should be something that can be posted immediately. <font size="+4">Do not let the paper leave a camera-ready state.</font>
+<li> More broadly, the paper should look like the published papers on my webpage (hopefully better).  Every commit should be something that can be posted immediately. <font size="+3">Do not let the paper leave a camera-ready state.</font>
 </ol>
+
+<br/><br/><br/><br/>
 
 <li>In the rest of the time left:
 <ol>
@@ -1360,7 +1409,8 @@ document leave a camera ready state
   <li> You're likely going to going to adapt figures from your paper.
   That's fine, but talks are a different medium.  Usually, you want to
   gradually reveal aspects of the figure so you can focus attention on
-  what you're talking about.
+  what you're talking about.  Usually, you'll show far <b>less</b>
+  information than you did in your paper.
 
 </ol>
 
@@ -1407,9 +1457,9 @@ expert who wants to drill into details).</p>
 
 <h3>Videos</h3>
 
-<p>More conferences are asking participants to make a video teaser for
+<p>Even before Coronavirus, conferences were asking participants to make a video teaser for
 a paper.  This is a handy way to also practice a short pitch for your
-poster.</p>
+poster.  Now, many talks are only given through videos.</p>
 
 <ol>
   <li> Write a script first.  It takes longer if you ad lib and screw
@@ -1427,7 +1477,50 @@ poster.</p>
   <li> If you can, you also want to have "bounce" lighting from below.
   You can get this by putting a white tablecloth (or sheet) on the
   desk in front of you.
-  <li> Have an interesting but not distracting background.  Shelves
+  <li> While it's good to script videos, the actual reading can be a
+  feel too scripted.  Think about the emotion of the lines as you read
+  them, and memorize enough so that you're contantly looking at the
+  camera as you read it.
+  <li> Apart from investing in a smartphone teleprompter, one way of
+  making a script is to pair up with someone else.  Thanks to editing
+  magic, you can make this more natural via the following:
+  <ol>
+    
+    <li> The idea is we'd want to do compositing so that it looks like
+    people are talking to each other in the same room (agree with your
+    conversation partner who is on the left and who is on the right
+    and on the height of the camera from ground, probably 2m-ish).
+    This can either be done by splicing or with green screen.
+    Splicing could work well for if people can agree on similar
+    backgrounds (e.g., water / mountains / blank white wall).
+
+    <CENTER>
+    <IMG SRC="../images/camera_positioning.png" ALT="Have your camera
+    (1m away) point to a point between where the two people would be if they
+    were in the same room separated by 1m.">
+    </CENTER>
+    
+    <li> Slides should be in 4:3 format so we can insert (for YouTube)
+    the slides between the people (which assumes 16:9 ratio by
+    default).
+
+    <li> I think it's better if people are standing, but only do that
+    if you're comfortable.  Have a stuffed animal or something where
+    your virtual conversation partner will be so that you can make
+    "eye contact" with them.
+
+    <li> For actual recording, you should do it offline on laptop or
+    phone (if you don't have camera and tripod).  External mics are
+    better than using built in laptop or computer.  To make sure the
+    reactions are natural, you should call the other person in
+    conversation on a *separate* device and record simultaneously.
+
+    <li> Stop every five minutes or so to make sure the recording has
+    worked okay (both video and sound).  
+
+  </ol>
+  <li> If you're not trying to merge your video with someone else's
+  else video, have an interesting but not distracting background.  Shelves
   full of books, nature scenes, or cityscapes work well.  (You can
   also have a blank "void" as a background, but I think a more
   interesting background works better.)
@@ -1447,7 +1540,9 @@ poster.</p>
     </CENTER>
   <li> Have a good condenser microphone either in front of you or on
   your lapel / collar.  Also make sure that you don't have sounds in
-  the background (construction, cat, etc.).
+  the background (construction, cat, etc.).  Sometimes they'll require
+  a battery; if so, make sure the battery is turned on and you have
+  the correct battery.
   <li> Wear darker colors (orange, brown, grey) and make sure your
   clothes have a solid pattern (no plaid, etc.).
   <li> For research teasers, go no more than three minutes.
@@ -1455,7 +1550,8 @@ poster.</p>
   For example, if you're talking about pottery from Delft and
   comparing it with a collection in the Forbidden City, show them!
   <li> Don't be limited to slides, use film / animations if you can:
-  make full use of the medium!
+  make full use of the medium!  Similarly, you can get many people to
+  make clips for your video.  You can divide up the work and add variety!
   <li> Look directly at the camera: be natural on the camera and make
   sure you use the full intonation of your voice.  Practicing reading
   books to young children helps with this. <br/>
@@ -1497,6 +1593,11 @@ poster.</p>
   work helps explain why earlier work was a good idea in the first
   place; it's fine to order things differently, and the introduction
   is a way for you to explain how things actually fit together.
+
+  Don't put too much background material in the intro chapter.  That
+  comes later.  It's good to have citations, but the traditional CS
+  citations can go in the next chapter.  Challenge yourself to cite
+  papers and people you haven't cited before.
 
   Pretend that you're a historian piecing together your papers.  You
   believe there was a reason this great scientist worked on X, Y, and
@@ -1551,7 +1652,7 @@ poster.</p>
     go in (but if they're important, try to make them interesting!).
 
   </OL></LI>
-
+  
   <li> <b>Conclusion</b>: Pretend that you're starting up a new
   research group at a university/company.  You have a five person team
   that you need to provide with work.  What directions would you
