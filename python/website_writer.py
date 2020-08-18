@@ -225,13 +225,17 @@ class IndexElement:
     ~~~bibtex~~~
     \\end{verbatim}
 
+    ~~~public~~~
+
     ~~~note~~~
 
     ~~~links~~~
 
     \\vspace{3cm}
-    Downloaded from ~~~url~~~
-
+    Downloaded from ~~~url~~~  \\\\
+      
+    \\vspace{2cm}
+    \\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}
 
     \\includepdf[pages={-}]{src_~~~filename~~~}
 
@@ -241,6 +245,11 @@ class IndexElement:
     s = s.replace("~~~citation~~~", self.latex(url_prefix=url_prefix, acceptance = False))
     s = s.replace("~~~filename~~~", self.fields["Url"][0])
     s = s.replace("~~~bibtex~~~", self.bibtex(url_prefix))
+
+    if "Public" in self.fields:
+      s = s.replace("~~~public~~", "{\\bf Accessible Abstract:} %s\\\\" % "\n".join(self.fields["Public"]))
+    else:
+      s = s.replace("~~~public~~~", "")
 
     if "Note" in self.fields:
       s = s.replace("~~~note~~~", "{\\bf %s}\\\\"
@@ -324,7 +333,7 @@ class IndexElement:
   def html(self, bibtex, url_prefix, section):
     s = self.author_string(False)
 
-    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\={o}", "&omacr;")
+    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\=o", "&omacr;")
     if "Title" in self.fields and "Url" in self.fields:
       url = self.fields["Url"][0]
       if url.startswith("http"):
@@ -387,9 +396,9 @@ class IndexElement:
       if ii.lower() == "url":
           assert url_prefix != self.fields[ii][0], "Badly formed URL  %s/%s" % (url_prefix, self.fields[ii][0])
           if self.fields[ii][0].startswith("http"):
-              s += "\t%s = {%s}\n" % (ii, self.fields[ii][0])
+              s += "\t%s = {%s},\n" % (ii, self.fields[ii][0])
           else:
-              s += "\t%s = {%s/%s}\n" % (ii, url_prefix, self.fields[ii][0])
+              s += "\t%s = {%s/%s},\n" % (ii, url_prefix, self.fields[ii][0])
     s += "}\n"
     return s
 
