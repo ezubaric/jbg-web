@@ -509,6 +509,7 @@ class WebsiteWriter:
         except IndexError:
           print("Cannot parse: %s" % index[ii].fields["Url"][0])
         o = open("pubs/%s.tex" % resource, 'w')
+        print("pubs/%s.tex" % resource)
         o.write(index[ii].wrapper_document(self._url))
 
     self._indexed[name.lower()] = index
