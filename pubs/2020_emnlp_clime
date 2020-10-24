@@ -4,6 +4,7 @@
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2020
 ~~ Location | The Cyberverse Simulacrum of Punta Cana, Dominican Republic
+~~ Url | docs/2020_emnlp_clime.pdf
 ~~ Category | Deep Learning
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Human-Computer Interaction
@@ -11,3 +12,4 @@
 ~~ Venue | Refereed Conference
 ~~ NumPages | 9
 ~~ Project | BETTER*../projects/better.html
+~~ Public | Language technologies sometimes need to be quickly deployed in low-resource languages. For example, in the 2010 Haiti earthquake, researchers used machine learning models to analyze social media and text messages to gain situational awareness. We introduce CLIME, an interactive system that can help in these scenarios: users see which words related to the task the system things are similar, corrects the model to push similar words together and disimilar words apart.  
