@@ -10,5 +10,7 @@
 ~~ NumPages | 11
 ~~ Acceptance | 19.2
 ~~ Url | docs/2020_www_delft.pdf
+~~ Link | Video*https://youtu.be/OKXHdMyu6Iw
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Project | Adaptive Heads-up Displays for Simultaneous Interpretation*../projects/IIS-1748663.html
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/OKXHdMyu6Iw" frameborder="0" allowfullscreen></iframe>
