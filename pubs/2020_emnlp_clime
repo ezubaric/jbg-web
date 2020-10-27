@@ -14,4 +14,4 @@
 ~~ NumPages | 9
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/hu_zWGQZAgQ" frameborder="0" allowfullscreen></iframe>
 ~~ Project | BETTER*../projects/better.html
-~~ Public | Language technologies sometimes need to be quickly deployed in low-resource languages. For example, in the 2010 Haiti earthquake, researchers used machine learning models to analyze social media and text messages to gain situational awareness. We introduce CLIME, an interactive system that can help in these scenarios: users see which words related to the task the system things are similar, corrects the model to push similar words together and disimilar words apart.  
+~~ Public | Language technologies sometimes need to be quickly deployed in low-resource languages. For example, in the 2010 Haiti earthquake, researchers used machine learning models to analyze social media and text messages to gain situational awareness. We introduce CLIME, an interactive system that can help in these scenarios: users see which words related to the task the system thinks are similar, corrects the model to push similar words together and dissimilar words apart.  
