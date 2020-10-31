@@ -53,7 +53,7 @@ and I developed the \emph{interpretability} measure to assess whether topic
 models' users understood their outputs, interpretability and
 held-out likelihood were negatively correlated~\cite{chang-09b}! The topic
 modeling community (including me) had fetishized complexity at the expense of
-usability\dots and topic modeling is not alone, question answering has distinct but similar issues with evalution~\cite{boyd-graber-20}.
+usability\dots and topic modeling is not alone, question answering has distinct but similar issues with evaluation~\cite{boyd-graber-20}.
 
 \begin{center}
 \includegraphics[width=.5\linewidth]{images/prec_ll_4}
@@ -152,6 +152,19 @@ in front of the dot products and our system did much better.  However,
 much of computers' advantage comes from repeated word overlaps in
 questions~\cite{wallace-19}.
 
+I recently outlined how we can improve measurement of question
+answering progress~\cite{boyd-graber-20}.  With Pedro Rodriguez, we
+are combining the question-level adversarial techniques with insights
+from item-response theory to capture: what questions humans find
+difficult, what questions computers find difficult, and what
+\emph{test} sets can most efficiently identify how well an agent can
+answer questions.  This can help spur more focused machine learning
+research to focus on important problems (for example, existing test
+sets for question answering are overwhelmingly male and American\dots
+accuracy for other groups is lower) and for humans, quickly identify
+which topics someone knows (or not), which can aid educational
+applications.
+
   \begin{minipage}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{images/boring_dot_products}
   \end{minipage}
@@ -176,7 +189,7 @@ to use the limited time and patience of user annotation. With my
 student Michelle Yuan, I am developing
 variants of active learning that---rather than look at whether an example
 confuses a downstream classifier---look for examples that surprise language
-models trained on webscale datea~\cite{devlin-19}. We can then ask users to
+models trained on webscale data~\cite{devlin-19}. We can then ask users to
 provide feedback on the data or clusters~\cite{poursabzi-16} that language
 models cannot handle.
 
