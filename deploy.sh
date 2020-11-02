@@ -51,8 +51,8 @@ if [ ${#CHANGES} -gt 0 ]
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
 	echo "Done media"
-        # pdflatex resume_src/research > log.txt
-        # bibtex research
+        pdflatex resume_src/research > log.txt
+        bibtex research
 	# echo "Done rsearch"
         for FILE in public umd short_cv teaching service research
         do
