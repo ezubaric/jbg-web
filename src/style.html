@@ -773,6 +773,37 @@ tactics~\cite{cialdini-04}, which \newcite{oliveira2017dissecting} use
 to dissect spear phishing e-mails and \newcite{anand-11} apply to
 persuasive blogs.
       </pre>
+
+      <li> Use my preamble to turn missing references into giant red
+      boxes so you don't miss them while drafting.
+
+      <pre>
+\newcommand*{\missingreference}{{\Huge \colorbox{red}{?reference?}}}
+\newcommand*{\missingcitation}{{\Huge \colorbox{red}{?citation?}}}
+\makeatletter
+\def\@setref#1#2#3{%
+  \ifx#1\relax
+    \protect\G@refundefinedtrue
+    \nfss@text{\reset@font\missingreference}%
+    \@latex@warning{Reference `#3' on page \thepage \space
+      undefined}%
+  \else
+    \expandafter#2#1\null
+  \fi}
+\def\@citex[#1]#2{\leavevmode
+  \let\@citea\@empty
+  \@cite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{,\penalty\@m\ }%
+      \edef\@citeb{\expandafter\@firstofone\@citeb\@empty}%
+      \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi
+      \@ifundefined{b@\@citeb}{\hbox{\reset@font\missingcitation}%
+        \G@refundefinedtrue
+        \@latex@warning
+        {Citation `\@citeb' on page \thepage \space undefined}}%
+      {\@cite@ofmt{\csname b@\@citeb\endcsname}}}}{#1}}
+\makeatother
+</pre>
+
       <li> <A HREF="https://www.ece.ucdavis.edu/~jowens/biberrors.html">John
       Owens has more advice</a>, all of which I agree with except for
       including page numbers.  I don't include page numbers for
