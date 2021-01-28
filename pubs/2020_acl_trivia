@@ -3,7 +3,8 @@
 ~~ Author | Jordan Boyd-Graber and Benjamin B\"orschinger
 ~~ Year | 2020
 ~~ Link | Preprint*https://arxiv.org/abs/1910.14464
-~~ Link | Preprint*sounds/2020_acl_trivia.mp3
+~~ Link | MP3 of me reading paper*sound/2020_acl_trivia.mp3
+~~ Link | Video of me reading paper*https://youtu.be/YRpPo-ntbpA
 ~~ Url | docs/2020_acl_trivia.pdf
 ~~ Location | The Cyberverse Simulacrum of Seattle
 ~~ Category | Question Answering
@@ -11,6 +12,6 @@
 ~~ Booktitle | Association for Computational Linguistics
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Acceptance | 25.4
-~~ Link | Video*http://youtu.be/_Vke0bN3MFE
+~~ Link | ACL Presentation*http://youtu.be/_Vke0bN3MFE
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/_Vke0bN3MFE" frameborder="0" allowfullscreen></iframe>
 ~~ Public | This paper reflects on the similarities between trivia competitions and computer question answering research.  Modern machine learning requires large, quality datasets.  The central thesis of this article argues that the same things that make trivia tournaments good (they're fun, fair, and consistently crown the best trivia players) can also improve question answering datasets.  Concretely, we argue that question answering datasets should clearly specify what answers are requested, have systematic policies to deal with natural ambiguity and variation, have authors look at the data (and help others do the same), make sure questions separate the best from the rest, and ensure people can have fun.  We draw on the authors' experience in the trivia community (including embarrassing episodes on Jeopardy!) to illustrate our arguments.
