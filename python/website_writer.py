@@ -108,7 +108,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/
                                            job="Haverford College, Assistant Professor"),
              "Eric Wallace": Student("Eric Wallace", 2018, 2019, "http://www.ericswallace.com/", kind="UG", job="UC Berkeley, PhD Student"),
              "Emily Gong": Student("Emily Gong", 2020, 2021, kind="MS"),
-             "Matthew Hsu": Student("Matthew Hsu", 2019, 2021, kind="UG"),
+             "Matthew Shu": Student("Matthew Shu", 2019, 2021, kind="UG"),
              "Andrew Mao": Student("Andrew Mao", 2020, 2022, kind="UG"),
              "Sander Schulhoff": Student("Sander Schulhoff", 2019, 2022, kind="UG"),
              "Chenglei Si": Student("Chenglei Si", 2020, 2022, kind="UG"),

@@ -40,6 +40,8 @@ infinitives).</p>
 <p>Specifically for scientists, <a
   href="http://www.nature.com/scitable/ebooks/english-communication-for-scientists-14053993/contents">Nature
  has good resources</a>.  Specifically for NLP, <a
+  href="https://www.overleaf.com/project/5db4fd68be57c00001336e73">Nathan
+  Schneider</a>, <a
   href="http://www.umiacs.umd.edu/~resnik/writing_advice.html">Philip</a> and <a
   href="http://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html">Jason</a>
  have good advice.  For machine learning, there's even official <a
@@ -235,6 +237,8 @@ we retrofit using the training dictionary $\mathcal{D}$ as the ontology.
     </pre>
 
     <ul>
+      <li> Use the <A HREF="https://ctan.org/pkg/fnpct?lang=en">fnpct package</a> to make the interaction between
+      footnotes and punctuation less akward.
       <li> There's some belief that you can put a footnote before punctuation if you're following German rules.  This actually is not the case (it's more complicated, and usually our footnotes are whole sentences&mdash;we use bibliographic citations within sentences):
         <blockquote>
 Fu&szlig;noten k&ouml;nnen ohne Schlusspunkt stehen, wenn sie nur einzelne W&ouml;rter umfassen. Man fasst sie aber besser als Auslassungssätze auf und setzt einen Punkt (besonders wenn im selben Text Fu&szlig;noten mit ganzen S&auml;tzen und Schlusspunkt vorkommen). (Duden 2016)
@@ -522,7 +526,7 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
     <li> Obey <a href="http://www.ai.mit.edu/courses/6.899/papers/mermin.pdf">Mermin's rules</a>.
       <ol>
 	<li> Number all displayed equations
-	<li> Have a name for every equation
+	<li> Have a name for every equation and a name for every symbol
 	<li> Punctuate every equation as prose, treating it as a noun
 	</ol>
 
@@ -1309,11 +1313,15 @@ important for journals than conferences).</p>
     copy/paste a bibtex citation, junk comes with.
     <li> Read over your section titles.  Do they tell a story?  Don't just use
     "introduction", "background", "model", "inference", "conclusion", etc.
-    While your sections may map to those, call them something more specific.
+    While your sections may map to those, call them something more
+    specific.
+    <li> Make sure your section and subsection titles have correct and
+  consistent capitalization (check the template for examples)
     <li> Do your figures stand on their own?  Make sure a bored reader /
     reviewer can get the gist of what's going on through the figures alone.  So if your first figure is about the data you use, make sure that motivates the method you'll use.  If you have a figure of the graphical model, don't just say "our graphical model"; instead, point out the salient aspects of the model that makes it interesting to a reader under time pressure.  If you have a figure of results, don't just say "summary of results"; instead, point out what the results mean in the caption.  You'll say something similar in the text, so don't repeat yourself.  Likely there are different interesting trends you can point out.
     <li> Is your abstract persuasive and interesting?  When an area chair reads it, will they send it to the reviewers that you want?
     <li> Do a spellcheck!
+    <li> If you have a subsection, you must have two
     <li> Double check that you're using the correct style file; put it
   next to other submissions and make sure they look the same (same
   numbers of lines per page, etc.).
@@ -1422,7 +1430,14 @@ document leave a camera ready state
 <ol>
 <li> Put it on your webpage and send the final PDFs to the authors
 <li> Notify your department's publication mailing list
-<li> Update your CV
+  <li> Update your CV
+  <li> Make a <a
+  href="https://tipbox.abcam.com/twitter-tips-for-academics-how-to-tweet-about-your-publication/">Tweet
+  about the paper</a> (mention me and I'll retweet)
+  <li> Make sure the final PDF is pdf/a compatible including the
+<a href="https://www.mathstat.dal.ca/~selinger/pdfa/">appropriate
+package</a> (preferred), using <a href="https://helpx.adobe.com/acrobat/using/pdf-x-pdf-a-pdf.html">Acrobat</a>, a
+web tool, or <a href="https://twitter.com/tallinzen/status/1362568292309860353">Ghostscript</a>.  
 <li> Post any associated data and code on your webpage
 </ol>
 
