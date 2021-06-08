@@ -8,5 +8,5 @@
 ~~ Category | Question Answering
 ~~ Venue | Refereed Conference
 ~~ Project | CAREER*../projects/IIS-1652666.html
-~~ url | docs/2021_acl_leaderboard.pdf
+~~ Url | docs/2021_acl_leaderboard.pdf
 ~~ Public | Modern machine learning research often depends on leaderboards to monitor progress, but beyond rankings of approaches, this does not help us better understand our problems or our systems very well.  This paper introduces probabilistic models inspired by educational testing (think year-end tests in school) to better understand how computers can answer questions and whether we are asking the right questions.
