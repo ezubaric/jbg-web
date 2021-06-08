@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cies Resume/CV
+% LaTeX Template
+% Version 1.0 (10/2/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Cies Breijs (cies@kde.nl)
+% https://github.com/cies/resume with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
+
+\include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
+
+\newcommand*{\addExperience}[4]{
+        \vspace{2mm}
+	{\bf #1} \hfill #2      \\
+	{\sl #3} \hfill \emph{ #4}\\
+}
+
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Jordan Boyd-Graber}{}  % Your name and date of birth or subtitle
+
+\noindent\href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}\bull % Your email address
+\textsmaller{+}1 (920) 524-9464\bull \href{http://umiacs.umd.edu/~jbg}{\url{http://umiacs.umd.edu/~jbg}}\\ % Your URL
+Iribe 4146 \bull Computer Science \bull iSchool \bull College Park, MD
+
+\spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Summary} % Root section title
+
+\vspace{-1.3em} % Reduce whitespace after the Summary heading and the two-column content
+
+\begin{multicols}{2}  % Start a two-column layout
+
+Jordan Boyd-Graber's research focus is in applying machine learning
+to problems that help computers better
+work with or understand humans.  His research
+applies statistical models to natural language problems in ways that
+interact with humans, learn from humans, or help researchers
+understand humans.
+
+Jordan is an expert in the application of topic models, automatic
+tools that discover structure and meaning in large, multilingual
+datasets. His work has been supported by NSF, DARPA, IARPA, and ARL.
+
+Three of his students have gone on to tenure track positions at NYU, U
+Mass Amherst, and Ursinus.
+
+His awards include a 2017 NSF CAREER, the Karen Sp\"ark Jones prize;
+``best of'' awards at NIPS, CoNLL, and NAACL; and a Computing
+Innovation Fellowship (declined).  His Erd\"os number is 2 (via Maria Klawe), and his
+Bacon number is 3 (by embarassing himself on \textit{Jeopardy!}).
+
+\end{multicols}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Positions Held} % Top level section
+
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://umiacs.umd.edu}{University of Maryland}}
+{\textsc{College Park, MD}} {
+
+\headedsubsection % Job title entry for the current employer
+{Associate Professor in Computer Science, UMIACS, and iSchool}
+{2017--Present}
+{}
+
+
+\headedsubsection % Job title entry for the current employer
+{Assistant Professor in the Institute for Advanced Computer Studies}
+{2011--2014}
+{}
+
+\headedsubsection % Job title entry for the current employer
+{Assistant Professor of Information Studies (iSchool)}
+{2010--2014}
+{}
+
+}
+
+\headedsection
+{\href{http://cs.colorado.edu/}{University of Colorado Boulder}}
+{\textsc{Boulder, CO}} {
+
+\headedsubsection % Job title entry for the current employer
+{Assistant Professor of Computer Science}
+{2014--2017}
+{}
+
+\headedsubsection % Job title entry for the current employer
+{Associate Professor of Computer Science}
+{2017}
+{}
+}
+
+
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Education} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{Princeton University}
+{\textsc{Princeton, NJ}} {
+
+\headedsubsection % Job title entry for the current employer
+{Ph.D. in Computer Science}
+{2004 -- 2010}
+{\bodytext{Advisor: David Blei; Thesis: Linguistic Extensions of Topic Models}}
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{California Institute of Technology}
+{\textsc{Pasadena, CA}} {
+
+\headedsubsection % Job title entry for the current employer
+{B.S. in Computer Science and History (dual degree)}
+{2000 -- 2004} {}
+}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Selected Publications} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Note:}
+{Students I have advised are \underline{underlined}.}
+
+\small
+
+\begin{enumerate*}
+	 \item Julian Martin Eisenschlos, Bhuwan Dhingra, Jannis Bulian, Benjamin B\"orschinger, and {\bf Jordan Boyd-Graber}.  {\bf \href{http://umiacs.umd.edu/~jbg//docs/2021_naacl_fm2.pdf}{Fool Me Twice: Entailment from Wikipedia Gamification}}.  \emph{North American Association of Computational Linguistics}, 2021, 10 pages.
+
+ 
+\item \underline{\href{http://www.ericswallace.com/}{Eric Wallace}}, \underline{\href{http://csel.cs.colorado.edu/~pero9922}{Pedro Rodriguez}}, \underline{\href{http://users.umiacs.umd.edu/~shifeng/}{Shi Feng}}, Ikuya Yamada, and {\bf Jordan Boyd-Graber}.  {\bf Trick Me If You Can: Human-in-the-loop Generation of Adversarial Question Answering Examples}.  \emph{Transactions of the Association of Computational Linguistics}, 2019.
+
+\item {\bf Jordan Boyd-Graber}, Yuening Hu, and David Mimno.  {\bf \href{http://www.nowpublishers.com/article/Details/INR-030}{Applications of Topic Models}}.  2017.
+
+\item \underline{Mohit Iyyer}, Anupam Guha, Snigdha Chaturvedi, {\bf Jordan Boyd-Graber}, and Hal {Daum\'{e} III}.  {\bf \href{http://cs.colorado.edu/~jbg//docs/2016_naacl_relationships.pdf}{Feuding Families and Former Friends: Unsupervised Learning for Dynamic Fictional Relationships}}.  \emph{North American Association for Computational Linguistics}, 2016.
+
+\item {\bf Jordan Boyd-Graber}, Sonya S. Nikolova, Karyn A. Moffatt, Kenrick
+C. Kin, Joshua Y. Lee, Lester W. Mackey, Marilyn M. Tremaine, and
+Maria M. Klawe.  {\bf Participatory design with proxies: {D}eveloping
+  a desktop-{PDA} system to support people with aphasia}.
+\emph{Computer-Human Interaction}, 2006.
+
+
+\end{enumerate*}
+
+
+\spacedhrule{1.6em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Natural languages:}
+{English \textit{(native)}, German \textit{(working)}, and Mandarin Chinese \textit{(beginner)}.}
+
+%------------------------------------------------
+
+
+\end{document}
