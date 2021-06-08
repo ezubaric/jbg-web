@@ -286,6 +286,12 @@ A note number should generally be placed at the end of a sentence or at the end 
       get there tomorrow.
     </pre>
 
+  <li> Hyphens are needed when you have a phrase with a modifier that
+  itself becomes a modifier.
+   <pre>
+    Full supervision is better than weakly-supervised training.
+   </pre>
+  
 <CENTER>
 <iframe width="280" height="176" src="https://www.youtube.com/embed/NnAaywvd1uk" frameborder="0" allowfullscreen></iframe>
 </CENTER>
@@ -332,13 +338,16 @@ A note number should generally be placed at the end of a sentence or at the end 
       should be wavlet formats (jpg), hand-drawn cartoons, logos, or images with
       alpha channels should be low-pallete rasters (png), and everything else
       should be a vector format (pdf/eps).  This is another way that LaTeX is
-      far superior to Word, where it's much harder to inser graphics without
+      far superior to Word, where it's much harder to insert graphics without
       vector formats being lost.  (Omnigraffle and ggplot2 by default create
       vector pdfs; another reason to use them!)
 
         <CENTER>
           <IMG SRC="../images/vector_raster.gif" ALT="Vector vs. Raster Images">
         </CENTER>
+
+     If you need a screenshot of a webpage, you can <A HREF="https://github.com/felixfbecker/dom-to-svg">convert a given
+     HTML DOM to an SVG</A>.
 
       <li> Don't supply file extensions; pdflatex/latex will choose
       for you (makes it easy to switch between the two).
