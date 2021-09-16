@@ -98,7 +98,7 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/
              "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2015,
                                        "http://www.cs.umd.edu/~vietan/index.htm",
                                        job="Facebook"),
-             "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2021, "https://www.entilzha.io/", job="Facebook"),
+             "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2021, "https://www.pedro.ai/", job="Facebook, Research Scientist", thesis_url="https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf", thesis="Evaluating Machine Intelligence with Question Answering"),
              "Fenfei Guo": Student("Fenfei Guo", 2015, 2022, "https://csel.cs.colorado.edu/~fegu1724/"),
              "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),

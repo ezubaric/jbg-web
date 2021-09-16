@@ -7,6 +7,7 @@
 ~~ Category | Deep Learning
 ~~ Venue | Refereed Conference
 ~~ NumPages | 6
+~~ Link | Paper Read Aloud*https://youtu.be/EC6yi5xN9pQ
 ~~ Url | docs/2021_naacl_multi_ance.pdf
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Public | For computers to answer complicated questions online, they often need to put together multiple pieces of information (Ronald Reagan was both governor of California and an actor in Bedtime for Bonzo).  However, existing approaches use the links in Wikipedia to combine these clues.  This research helps computers find connected information without using these explicit links.
