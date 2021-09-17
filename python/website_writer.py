@@ -515,7 +515,7 @@ class WebsiteWriter:
           resource = index[ii].fields["Url"][0].split("/")[1].split(".")[0]
         except IndexError:
           print("Cannot parse: %s" % index[ii].fields["Url"][0])
-        o = open("pubs/%s.tex" % resource, 'w')
+        o = open("pubs/%s.tex" % resource, 'wb')
         print("pubs/%s.tex" % resource)
         o.write(index[ii].wrapper_document(self._url))
 
