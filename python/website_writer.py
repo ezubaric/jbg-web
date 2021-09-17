@@ -286,8 +286,8 @@ class IndexElement:
     else:
       s = s.replace("~~~links~~~", "")
 
-
-    return s
+    
+    return s.encode("ascii", "ignore")
 
   def txt(self, acceptance=True, url=''):
     text = kHTML.sub('', self.html(False, url, ""))
