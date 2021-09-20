@@ -8,3 +8,4 @@
 ~~ Category | Question Answering
 ~~ Venue | Refereed Conference
 ~~ Url | docs/2021_emnlp_paradigms.pdf
+~~ Public | Why do we answer questions?  Sometimes it's to provide information, which has been the interpretation of the computer science community.  But sometimes it's to probe or test intelligence.  This paper argues we should think more about that application of question answering and its connection to the foundations of artificial intelligence: The Turing Test.
