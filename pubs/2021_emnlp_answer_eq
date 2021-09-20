@@ -1,5 +1,5 @@
 ~~ Bibtex | inproceedings
-~~ Title | What’s in a Name? Answer Equivalence For Open-Domain Question Answering
+~~ Title | What's in a Name? Answer Equivalence For Open-Domain Question Answering
 ~~ Author | Chenglei Si and Chen Zhao and Jordan Boyd-Graber
 ~~ Booktitle | Emperical Methods in Natural Language Processing
 ~~ Year | 2021
@@ -9,4 +9,5 @@
 ~~ Venue | Refereed Conference
 ~~ NumPages | 6
 ~~ Project | CAREER*../projects/IIS-1652666.html
-
+~~ Url | docs/2021_emnlp_answer_equiv.pdf
+~~ Public | Is Tim Cook the same person as Timothy Donald Cook?  You might think so, but the way we train computers to answer questions would say they aren't.  We show that keeping track of multiple names (and it's really simple) can create better question answering systems.
