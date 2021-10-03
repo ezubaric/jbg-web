@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\python",
     "\\resume_src",
-    "\\src"
+    "\\src",
+    "\\teaching",
+    "\\teaching\\CMSC_470"
   ],
-  "SelectedNode": "\\src\\faq.html",
   "PreviewInSolutionExplorer": false
 }
