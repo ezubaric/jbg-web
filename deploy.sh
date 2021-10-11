@@ -12,7 +12,7 @@ mkdir -p ~/public_html/dyn-media
 mkdir -p ~/public_html/dyn-pubs
 
 rm -rf ~/public_html/teaching/*
-for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414 INST_808 CMSC_470
+for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414 INST_808 CMSC_470 CMSC_848
         do
            mkdir -p ~/public_html/teaching/$CLASS
            cp teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
