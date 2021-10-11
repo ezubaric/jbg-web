@@ -1,0 +1,390 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>CMSC 470</title>
+<link href="../../style/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <a href="~~PATHPREFIX~~">~~SITETITLE~~</a> <br/>
+</div>
+
+<div id="navwrapper">
+  <div id="navigation">
+    <div class="menu">
+    ~~NAVIGATION~~
+    </div>
+   </div>
+</div>
+
+<div id="right">
+  <a href="../../">Jordan Boyd-Graber</a><br>
+  4146 Iribe<br>
+  <i>Computer Science</i> <br>
+  <a href="mailto:jbg@boydgraber.org">jbg@boydgraber.org</a>
+</div>
+
+<div id="content">
+
+<h1 id="header">Natural Language Processing (CMSC 470)</h1>
+
+<h2>Logistics</h2>
+
+  <center>
+  <table>
+    <tr>
+      <td> Location </td> <td> CSIC 3117</td>
+    </tr>
+    <tr>
+      <td> Time </td> <td> Mon./Wed. 14:00am - 15:15pm </td>
+    </tr>
+    <tr>
+      <td> Webpage </td> <td>
+    <a href="http://umiacs.umd.edu/~jbg/teaching/CMSC_848/">http://umiacs.umd.edu/~jbg/teaching/CMSC_848/</a> </td>
+    </tr>
+
+    <!---
+    <tr>
+      <td> Homework Submission </td> <td>
+    <a href="https://www.gradescope.com/courses/303336">https://www.gradescope.com/courses/303336</A> </td>
+    </tr>
+    
+    <tr>
+      <td> Mailing List </td> <td><a
+    href="http://piazza.com/umd/fall2021/cmsc470">http://piazza.com/umd/fall2021/cmsc470</a></td>
+    <td>
+    </tr>
+    <tr>
+      <td> Text </td> <td> <a
+  href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Natural
+  Language Processing</a> </td>
+    </tr>
+    <tr>
+      <td> Syllabus </td> <td><a
+    href="https://docs.google.com/document/d/1UN3qlJttJFRXP4qtoIriZxHjYQflvsUNsulHLIFVTzQ/edit?usp=sharing">https://docs.google.com/document/d/1UN3qlJttJFRXP4qtoIriZxHjYQflvsUNsulHLIFVTzQ/edit?usp=sharing</a></td>
+    <td>
+    </tr>
+    --->
+  </table>
+  </center>
+
+<h2>People</h2>
+
+  <h3>Professor</h3>
+
+  <blockquote>
+  <a href="http://umiacs.umd.edu/~jbg/">Jordan Boyd-Graber</a><br>
+  IRB 4146<br>
+  Office Hours (IRB 4146): By <A HREF="">appointment</A>
+  </blockquote>
+
+  <h3>Teaching Assistant</h3>
+  <!---
+    Neha Pundlik Srikanth (<A HREF="mailto:nehasrik@umd.edu">nehasrik@umd.edu</A>)
+    --->
+  <blockquote>
+
+  </blockquote>
+
+<h2>Schedule</h2>
+  <CENTER>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TH>Date</TH>   <TH>In-Class Topic</TH>  <TH>Assignment Due </TH>
+    </TR>
+
+    <TR>
+      <TD> Mon 24. Jan </TD> <TD> Introducing the Course </TD>
+      <TD></TD>
+    </TR>
+
+    <TR>
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+        <b>Lecture:</b>
+        <ul>
+          <li> Structure of the course, why QA is important
+          <li> <A HREF="https://youtu.be/AhVmt15x3k8">How to take a
+          class with me</A> [<a href="00b_howto.pdf">Slides</a>]
+          <li> <A HREF="https://youtu.be/ANfr7tlduMY">Class in the Time of Corona</a>
+        </ul>
+      </TD>
+    </TR>
+
+    </TR>
+
+    <TR>
+      <TD> Wed 26. Jan </TD> <TD> QA History / Background </TD> <TD></TD>
+    </TR>
+
+        <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">    
+	<UL>
+	  <li> <A HREF="https://youtu.be/ziX5MJ4VKY0">How question answering saved civilization</a> [<A HREF="https://docs.google.com/presentation/d/1CbmMbK71925ZztUh5W6dH58377ojHOhKMlTVNbTvVgg/edit?usp=sharing">Slides</A>, including for next lecture]
+	  <li> <A HREF="https://youtu.be/bdQIUv9FutE">The Turing Test</a> 
+	  <li> <A HREF="https://youtu.be/WCIFUJ5oeRA">Watson on Jeopardy!</A> [<A HREF="https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing">Slides</a>]
+	</UL>
+      </TD>
+   </TR>
+
+    <TR>
+      <TD> Mon 31. Jan </TD> <TD> Information Retrieval / tf-idf </TD> <TD></TD>
+    </TR>
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+	<b>Lecture:</b>
+	<ul>
+	  <li> <A HREF="https://youtu.be/U6KgqeJkhU0">What is information 
+	      retrieval?</A> [<A HREF="01a_ir.pdf">Slides</A>]
+      <li> Why is IR important for QA?
+	  <li> <A HREF="https://youtu.be/A5ounv0D_cs">TF-IDF</A> [<A HREF="01b_tfidf.pdf">Slides</A>]
+	  <li>  <A HREF="https://youtu.be/BxAzuCSvF8s">Evaluation</A>
+	    [<A HREF="01c_evaluation.pdf">Slides</A>]
+	  <li> <A HREF="tfidf_ex.pdf">Exercise</A>
+	</ul>
+	
+        <b>Readings:</b>
+	<ul>
+	  <li> <A HREF="https://nlp.stanford.edu/IR-book/">IR Chapter</A> 1, 6
+	</ul>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 2. Feb </TD> <TD> History of Computational Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+
+
+    <TR>
+      <TD> Mon 7. Feb </TD> <TD> Neural Sequence Models for Language </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+	<b>Lecture:</b>
+	<ul>
+	  <li> <A HREF="https://youtu.be/vErGaMc80WM">Distributional
+	Semantics</a> [<A HREF="06a_distsim.pdf">Slides</A>]
+	  <li> <A HREF="https://youtu.be/QyrUentbkvw">Word2Vec</A> [<A HREF="06b_word2vec.pdf">Slides</A>]
+	  <li> RNN
+	  <li> LSTM
+	  <li> <A HREF="lstm.pdf">Exercise</a>
+	</ul>
+        <b>Readings:</b>
+        <ul>
+	  <li> SNLP 9-9.3.3
+	</ul>
+	
+     </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 9. Feb </TD> <TD> Machine Reading </TD> <TD></TD>
+    </TR>
+    <TR>
+    <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+      <UL>
+      <li> <A HREF="https://youtube.com/video/ZJA3g9TxjlA">Dr. QA</A>
+	    [<A HREF="09d_drqa.pdf">Slides</A>]
+    </UL>
+     </TD>
+    </TR>
+
+    <TR>
+      <TD> Mon 14. Feb </TD> <TD> Computational Frameworks </TD> <TD></TD>
+    </TR>
+    <TR>
+
+        <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+	<b>Lecture:</b>
+	<ul>
+	  <li> <A HREF="https://youtu.be/FJQl0ujTAGw">Frameworks</A>
+	    [<A HREF="05c_compgraph.pdf">Slides</A>]
+	  <li> <A
+      HREF="https://youtu.be/AZwwDIV2vcI">Pytorch</A> [<A HREF="05d_code_ex.pdf">Slides</A>]	    
+	  <li> <A
+      HREF="https://youtu.be/losFCNJbnZY">DAN</A> [<A HREF="05e_dan.pdf">Sildes</A>]
+	</ul>
+
+      </TD>
+    </TR>
+
+    <TR>
+      <TD> Wed 16. Feb </TD> <TD> QA Datasets </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    
+        <TR>
+      <TD BGCOLOR="DDDDDD"></TD>
+      <TD COLSPAN="3" BGCOLOR="DDDDDD">
+	<b>Lecture:</b>
+	<ul>
+	  <li> <A HREF="https://youtu.be/p8tnM1_waQ8">QA Datasets</A>
+	    [<A HREF="https://docs.google.com/presentation/d/1OgijvTFAEKugndOYiHRAOQ5IZsgKACpZIIXxyf_rm2g/edit?usp=sharing">Slides</A>]
+	  <li> <A HREF="https://youtu.be/9peCcstwGtU">Cranfield
+	  vs. Manchester</A> [<A HREF="http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf&sa=D&sntz=1&usg=AFQjCNGoaFKR9CcAFOhprtBgaOxEzFFDdg">Slides</A>]
+	
+	    <li> <A HREF="09e_bidaf.pdf">Exercise</A>
+	</ul>
+        <b>Readings:</b>
+        <ul>
+	  <li> SNLP 23
+          </ul>
+     </TD>
+    </TR>
+
+        <TR>
+      <TD> Mon 21. Feb </TD> <TD> Question Answering on Knowledge Bases </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 23. Feb </TD> <TD> Question Answering through Generation </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 28. Feb </TD> <TD> Open Domain Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+<TR>
+      <TD> Wed 2. Mar </TD> <TD> Conversational Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 7. Mar </TD> <TD> Common Sense Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 9. Mar </TD> <TD> Question Answering with Audio </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 14. Mar </TD> <TD> Midterm Review </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 16. Mar </TD> <TD> Midterm </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 28. Mar </TD> <TD> Multihop Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 30. Mar </TD> <TD> Human QA Evaluation </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 4. Apr </TD> <TD> Computer QA Evaluation </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 6. Apr </TD> <TD> Entailment </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 11. Apr </TD> <TD> Adversarial Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 13. Apr </TD> <TD> Fact Checking </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 18. Apr </TD> <TD> Fairness in Question Answering </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 20. Apr </TD> <TD> Multimodal QA </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 25. Apr </TD> <TD> Multidomain QA </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 27. Apr </TD> <TD> Human-Computer Teaming </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 2. May </TD> <TD> TBD </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Wed 4. May </TD> <TD> TBD </TD> <TD></TD>
+    </TR>
+    <TR>
+
+    <TR>
+      <TD> Mon 9. May </TD> <TD> Project Reports </TD> <TD></TD>
+    </TR>
+    <TR>
+
+
+
+
+  </TABLE>
+  </CENTER>
+
+<br/>
+<br/>
+
+</div>
+
+
+<div id="footer">
+  Page by <a href="mailto:jbg@umiacs.umd.edu">Jordan Boyd-Graber</a>.
+</div>
+</body>
+</html>
