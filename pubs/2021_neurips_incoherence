@@ -1,12 +1,14 @@
-~~ Bibtex | article
+~~ Bibtex | inproceedings
 ~~ Title | Is Automated Topic Model Evaluation Broken?: The Incoherence of Coherence
-~~ Author | Alexander Hoyle and Pranav Goel and Denis Peskov and Andrew Hian-Cheong and Jordan Boyd-Graber and Philip Resnik
-~~ Journal | ArXiv
-~~ Year | Preprint
+~~ Booktitle | Neural Information Processing Systems
+~~ Location | Online
+~~ Year | 2021
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Topic Models
 ~~ Category | Interpretability
-~~ Url | https://arxiv.org/abs/2107.02173
-~~ Link | Preprint*https://arxiv.org/abs/2107.02173
-~~ Venue | Preprint
+~~ Url | docs/2021_neurips_incoherence.pdf
+~~ Link | ArXiv*https://arxiv.org/abs/2107.02173
+~~ Venue | Refereed Conference
 ~~ NumPages | 10
+~~ Link | Video*http://videolectures.net/nips09_boyd_graber_rtl/
+~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/ZQLiDh1NJK4" frameborder="0" allowfullscreen></iframe>
