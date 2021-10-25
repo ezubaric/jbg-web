@@ -1,5 +1,6 @@
 ~~ Bibtex | inproceedings
 ~~ Title | Is Automated Topic Model Evaluation Broken?: The Incoherence of Coherence
+~~ Author | Alexander Hoyle and Pranav Goel and Denis Peskov and Andrew Hian-Cheong and Jordan Boyd-Graber and Philip Resnik
 ~~ Booktitle | Neural Information Processing Systems
 ~~ Location | Online
 ~~ Year | 2021
@@ -10,5 +11,7 @@
 ~~ Link | ArXiv*https://arxiv.org/abs/2107.02173
 ~~ Venue | Refereed Conference
 ~~ NumPages | 10
-~~ Link | Video*http://videolectures.net/nips09_boyd_graber_rtl/
-~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/ZQLiDh1NJK4" frameborder="0" allowfullscreen></iframe>
+~~ Public | Topic models help historians, journalists, and analysts make sense of large text collections.  But how do you know if you have a good one?  The field has settled on using “Automatic Coherence”, but this paper argues that maybe that isn’t the right choice if you want to actually make real users happy.
+~~ Link | Research Talk*https://youtu.be/op1DkSB2VdA
+~~ Link | Code*http://hithub.com/ahoho/topics
+~~ Embed | <iframe width="280" height="150" src="https://youtu.be/op1DkSB2VdA" frameborder="0" allowfullscreen></iframe>
