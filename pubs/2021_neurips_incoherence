@@ -12,7 +12,7 @@
 ~~ Venue | Refereed Conference
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ NumPages | 10
-~~ Public | Topic models help historians, journalists, and analysts make sense of large text collections.  But how do you know if you have a good one?  The field has settled on using "Automatic Coherence", but this paper argues that maybe that isn't the right choice if you want to actually make real users happy.
+~~ Public | Topic models help historians, journalists, and analysts make sense of large text collections.  But how do you know if you have a good one?  The field has settled on using "Automatic Coherence", but this paper argues that maybe that isn't the right choice if you want to actually make real users happy.  This paper builds on our 2009 that showed perplexity was not a good evaluation of interpretability for topic models; while the field adopted automatic topic coherence as a result of that 2009 paper, this paper argues that automatic topic coherence is not a good metric for neural topic models (even though it worked for probabilistic topic models).
 ~~ Link | Research Talk*https://youtu.be/op1DkSB2VdA
 ~~ Link | Code*http://hithub.com/ahoho/topics
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/op1DkSB2VdA" frameborder="0" allowfullscreen></iframe>
