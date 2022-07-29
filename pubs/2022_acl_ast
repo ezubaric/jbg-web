@@ -1,6 +1,6 @@
-~~ Bibtex | inproceedings
+~~ Bibtex | article
 ~~ Author | Fenfei Guo and Chen Zhang and Zhirui Zhang and Qixin He and Kejun Zhang and Jun Xie and Jordan Boyd-Graber
-~~ Title | Sounds Good! Melody Guided Alignment for Automatic Song Translation
+~~ Title | Automatic Song Translation for Tonal Languages
 ~~ Booktitle | Findings of the Association for Computational Linguistics
 ~~ Year | 2022
 ~~ Location | Dublin
@@ -8,3 +8,6 @@
 ~~ Category | Empirical Human Data Collection
 ~~ Project | Adobe*../projects/adobe.html
 ~~ Venue | Refereed Conference
+~~ URL | docs/2022_acl_ast.pdf
+~~ Link | Translation Examples (with sound)*https://gagast.github.io/
+~~ Link | Code*https://github.com/GagaST/GagaST-code
