@@ -74,7 +74,9 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
-kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/",
+kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+             "Wichayaporn Wongkamjan": Student("Wichayaporn Wongkamjan", 2022, 2026),
+             "Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/",
                                 job="Microsoft, Senior Research Scientist"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/", job="Facebook"),
              "Yoo Yeon Sung": Student("Yoo Yeon Sung", 2019, 2024, "https://www.linkedin.com/in/yooyeon-sung-a81a0b131"),
@@ -122,9 +124,8 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/
              "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
              "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/", job="NYU Postdoc"),
              "Ahmed Elgohary": Student("Ahmed Elgohary Ghoneim", 2018, 2021, "http://www.cs.umd.edu/~elgohary/"),
-             "Kyle Seelman": Student("Kyle Seelman", 2022, 2025),
              "Neha Srikanth": Student("Neha Punklik Srikanth", 2021, 2026),
-             "Hyojung Han": Student("Hyojung Han", 2022, 2026),
+             "Hyojung Han": Student("Hyojung Han", 2022, 2026, "https://h-j-han.github.io/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
