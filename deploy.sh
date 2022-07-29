@@ -7,7 +7,7 @@ CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_s
 
 rm -f python/*.pyc
 rm -f pubs/*.tex
-
+b
 mkdir -p ~/public_html/dyn-media
 mkdir -p ~/public_html/dyn-pubs
 
@@ -51,8 +51,11 @@ if [ ${#CHANGES} -gt 0 ]
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
 	echo "Done media"
-        pdflatex resume_src/research > log.txt
-        bibtex research
+        for FILE in teaching research
+	do
+		    pdflatex resume_src/$FILE > log.txt
+		    bibtex research
+	done
 	# echo "Done rsearch"
         for FILE in public umd short_cv teaching service research
         do

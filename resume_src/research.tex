@@ -6,15 +6,26 @@
 %%%
 %%% Date Started: October 12, 2009
 %%% Date Completed: November 15 , 2009
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[11pt]{amsart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% [11pt]{amsart}
+
+\documentclass[11pt]{amsart}
+\input{resume_src/structure}
+
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{mfirstuc}
 \usepackage{colortbl}
 \usepackage{epstopdf}
 \usepackage{url}
 
+\newcommand{\abr}[1]{\textsc{#1}}
+\newcommand{\newcite}[2]{\capitalisewords{#1} et al.~\cite{#1-#2}}
 
-\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\newcommand{\image}[2]{  \begin{center}
+\includegraphics[width=.5\linewidth]{images/#1}
+\end{center}
+  }
 
 \newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small
         #1}}}\vspace{.5cm}}
@@ -30,44 +41,38 @@
 %\institute{University of Colorado, Boulder CO 80309, USA}
 
 
-\date{Summer 2022}
+\date{July 2022}
 
 \maketitle
 
-Artificial intelligence\footnote{I am taking a fairly broad
-  interpretation of what constitutes \abr{ai}; some of my examples
-  might be better characterized machine learning.  But rather than
-  distracting from the research statement by explicitly delinating the
-  boundaries, I'm going to embrace the all-encompassing \abr{ai} and
-  instead be as specific as possible in describing the specific tools
-  I use.} (\abr{ai}) is ubiquitous: detecting spam e-mails, flagging
-  fraudulent purchases, and providing the next movie in a Netflix
-  binge.
+Artificial intelligence\footnote{I take a broad interpretation of
+\abr{ai}; some of my examples might be better characterized machine
+learning.  But rather than distracting boundary policing, I embrace
+the general term but will be specific in describing specific tools.}
+(\abr{ai}) is ubiquitous: detecting spam e-mails, flagging fraudulent
+purchases, and providing the next movie in a Netflix binge.
 %
-But they do not exist in a vacuum: as \newcite{schneidermann-22}
-argues, \abr{ai} will need to exist in a \emph{collaboration} with
-humans.
+But they do not exist in a vacuum: as
+Shneiderman~\cite{shneiderman-21} argues, \abr{ai} must exist
+in human \emph{collaborations}.
 %
 My goal is to create metrics to measure whether \abr{ai} methods make
-sense to users, building frameworks to explicitly measure the
-effectiveness of human--computer teaming, improving computers' ability
-to surface information to humans, and to apply \abr{ai}
-to applications that help illuminate complex social science
-applications.
+sense to users, helping users craft examples to advance \abr{ai}, and
+applying \abr{ai} to applications that help illuminate complex social
+science applications.
 
 \section{Evaluating Interpretability}
 
 My journey with evaluating interpretability began over ten years ago
 with topic models.
 %
-Topic
-models are sold as a tool for understanding large data collections: lawyers
-scouring Nordstream e-mails for a smoking gun, journalists making sense of Wikileaks,
-or humanists characterizing the oeuvre of Lope de Vega.
+Topic models are sold as a tool for understanding large data
+collections: lawyers scouring Nordstream e-mails for a smoking gun,
+journalists making sense of Wikileaks, or humanists characterizing the
+oeuvre of Lope de Vega.
 %
-But topic models'
-proponents never asked what those lawyers, journalists, or humanists
-needed.
+But topic models' proponents never asked what those lawyers,
+journalists, or humanists needed.
 %
 Instead, they optimized \emph{held-out likelihood}. When my colleagues
 and I developed the \emph{interpretability} measure to assess whether topic
@@ -75,24 +80,21 @@ models' users understood their outputs, interpretability and
 held-out likelihood were negatively correlated~\cite{chang-09b}!
 %
 The topic modeling community (including me) had fetishized complexity
-at the expense of usability\dots and topic modeling is not alone,
-question answering has distinct but similar issues with
-evaluation~\cite{boyd-graber-20}.
+at the expense of usability\dots and topic modeling is not alone.
 
 \begin{center}
 \includegraphics[width=.5\linewidth]{images/prec_ll_4}
 \end{center}
 
-Since this humbling discovery, I've built topic models that are a collaboration
-between humans and computers.  The computer starts by proposing an organization
-of the data.  The user separates confusing clusters or joins
-similar clusters together~\cite{hu-14:itm}.  The model updates and directs the user to
-problematic areas that.  This is a huge improvement over the
-``take it or leave it'' philosophy of most machine learning algorithms.
+Since this humbling discovery, I've built topic models that are a
+collaboration between humans and computers.  The computer starts by
+proposing an organization of the data.  The user separates confusing
+clusters or joins similar clusters together~\cite{hu-14:itm}, and
+improvement over the ``take it or leave it'' philosophy of most
+machine learning algorithms.
 
 Focusing on collaboration also requires algorithms that are low
-latency (not just high throughput).  We developed methods that go
-beyond traditional proababilistic interpretations. We extend the
+latency (not just high throughput). We extend the
 geometric interpretations of admixture models developed by Arora et
 al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and
 multi-lingual topics~\cite{Yuan-18}. We have also developed better
@@ -100,22 +102,21 @@ understanding of projection-based multilingual representations via
 graph theory~\cite{Fujinuma-19} and the convergence of alternating
 projections~\cite{Zhang-19}.
 
-After we proposed our ``reading tea leaves'' evaluation, it's heartening that \newcite{lau-14} and their ``machine reading tea leaves''
-(which correlate with our human measures) have become a standard topic
-model evaluation.\footnote{E.g., in a survey of N modern neural topic
-  modeling papers, X\% use the tea leaves evaluation.}
+After we proposed our ``reading tea leaves'' evaluation, it's
+heartening that \newcite{lau}{14} and their ``machine reading tea
+leaves'' (which correlate with our human measures) became a standard
+topic model evaluation: a survey of forty recent topic modeling
+papers, all but four use a form of their coherence evaluation.
 %
-However, as we argue in \newcite{hoyle-21}, you cannot just use this
+However, as we argue in \newcite{hoyle}{21}, you cannot just use this
 evaluation forever and forget about humans.
+%
+In that same survey, none do a human evaluation.
 %
 As topic models evolve (e.g., incorporating
 neural components), you need to validate that these automatic metrics
 still correlate with wether it is useful for a human--computer
 collaboration.
-%
-In other words, automatic metrics are not a replacement for actually
-evaluating a human gaining understanding about a corpus (E.g., the
-label induction task we proposed in \newcite{poursabzi-17}).
 
 \section{Teaming as an Evaluation}
 
@@ -131,78 +132,9 @@ well users complete a task.
 %
 For example, for a question answering task, we measured how much the
 accuracy of the human--computer \emph{team} increases with different
-explanations.
-%
-With this, we uncovered that users' stated preferences don't always
-align with helps the most at a task: users like seeing confidence but
-this is not the most important explanation of \abr{ai} decision
-making.
-%
-Moreover, it also shows that crowdworkers need very different tools in
-a human--computer collaboration than experts~\cite{feng-19}: experts have much higher
-accuracy and can handle much more detailed explainations without being
-overloaded.
+explanations and found that explanations help all users but that
+novices are easily overwhelmed~\cite{feng-19}.
 
-\section{Question Answering and Machine Translation}
-
-However, building collaborations between humans and computers also
-sometimes requires innovation in how the underlying approaches work.
-%
-Here, I briefly describe some of the advances that we've made in 
-underlying natural processing algorithms.
-%
-Nearly all of the work here is in collaboration with my colleague Hal Daum\'e at the University of Maryland, much of it in the context of a \abr{nsf} grant where I served as \abr{pi}.
-%
-This grant  argued that an  isomorphism between the  ``gold standard''
-trivia format for question  answering and real-time translation offers
-opportunities  for  new  \abr{ai}  techniques  that  can  address  the
-word-by-word properties of both problems.
-
-Like many researchers, I had to make the transition from statistical models to neural models.
-%
-I was fortunate to have Mohit Iyyer to help drag me kicking and screaming into modernity.
-%
-As an exercise in proving to me that the nonlinearities of neural
-methods were useful, we developed the deep averaging network~\cite{}, an
-incredibly simple model that is still being used even in the age of
-transformers~\cite{}.
-
-Likewise, in quesiton answering we have proposed new evaluation
-mechanisms for knowing if an answer is correct~\cite{si-21} or to
-improve unsupervised retrieval of information to answer complicated
-questions~\cite{zhao-20}.
-%
-For these complicated questions, you also need to be able to
-incorporate feedback when the system gets it wrong, as my former
-student did in \newcite{}, building on our previous work for tabular
-question answering~\cite{} and question answering over discourse
-chains~\cite{}.
-
-We also introduced reinforcement learning to \emph{simultaneous
-  machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
-  language-based task that requires significant human intuition,
-  insight, and---for those who want to become
-  interpreters---training. Because verbs end phrases in many
-  languages, such as German and Japanese, existing algorithms must
-  wait until the end of a sentence to begin translating (since English
-  sentences have verbs near the start). We learned tricks from
-  professional human interpreters---passivizing sentences and guessing
-  the verb---to translate sentences sooner~\cite{He-15}, letting
-  speakers and algorithms cooperate together and enabling more natural
-  cross-cultural communication.  We can also use reinforcement
-  learning to learn machine translation feedback from noisy
-  supervision such as star ratings on a webpage~\cite{nguyen-17}.
-
-This framework---using reinforcement learning to capture human
-strategies---was featured in Liang Huang's \abr{acl} keynote and helps
-build metrics that can support human--computer collaborations.
-%
-While we would not trust a computer to take over a sensitive
-negotiation at the \abr{un} or the \abr{eu}, but it might well make
-sense for instead of two human interpreters who alternate active
-translation (the norm for high-stakes negotiation), we can augment a
-single interpreter with a computer assistant, cooperating to translate
-challenging text.
 
 \section{Connecting with Social Science: Pedagogy, Framing, and Deception}
 
@@ -241,7 +173,7 @@ movements~\cite{Nguyen:Boyd-Graber:Resnik:Miler-2015}.
 Because political discourse is built on a common set of commonly
 accepted facts, we have focused on developing fact checking: datasets
 for general knowledge fact checking~\cite{eisenschlos-21} and climate
-change fact checking~\cite{20-diggelmann}.
+change fact checking~\cite{Diggelmann-20}.
 %
 However, because fact checking is part of an information arms race, we
 need to build these examples as part of a human-in-the-loop
@@ -266,9 +198,9 @@ turtle a gun.\footnote{Point of personal pride: I mentored Kevin on
 another previous research project but had nothing to do with this later
 adversarial work.}
 %
-While others have attempted to create eadversarial examples for
+While others have attempted to create adversarial examples for
 language using paraphrasing, it's hard to know if the changes are
-perceptually negligable and it's hard to ``add epsilon'' to a discrete
+perceptually negligible and it's hard to ``add epsilon'' to a discrete
 word.
 
 Consistent with the theme of my research, my \abr{nsf career} grant
@@ -286,29 +218,92 @@ Meta Facebook adopted this human-in-the-loop framework with
 gusto~\cite{bartolo-20} in their Dynabench framework and the Dynamic
 Adversarial Data Collection workshop.
 
+\section{What I'm not Talking About}
+
+Many of our best-cited papers are ``traditional'' machine learning or natural language processing papers that do better on some task:
+%
+\begin{itemize*}
+\item We developed the deep averaging network~\cite[\abr{dan}]{iyyer-15}, an
+incredibly simple model that is still being used even in the age of
+transformers~\cite{ye-22}.
+
+\item In question answering we have proposed new evaluation
+mechanisms for knowing if an answer is correct~\cite{si-21} or to
+improve unsupervised retrieval of information to answer complicated
+questions~\cite{elgohary-19,zhao-20,shi-20}.
+
+\item We also introduced reinforcement learning to \emph{simultaneous
+machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
+  language-based task that requires significant human intuition,
+  insight, and---for those who want to become
+  interpreters---training.\footnote{This framework---using
+  reinforcement learning to capture human strategies---was featured in
+  Liang Huang's \abr{acl} keynote.} We learned tricks from
+  professional human interpreters---passivizing sentences and guessing
+  the verb---to translate sentences sooner~\cite{He-15}, letting
+  speakers and algorithms cooperate together and enabling more natural
+  cross-cultural communication.  We can also use reinforcement
+  learning to learn machine translation feedback from noisy
+  supervision such as star ratings on a webpage~\cite{nguyen-17}.
+\end{itemize*}
+
+This work doesn't \emph{yet} fit nicely into the human-in-the-loop
+narrative, but these more complex tasks are part of my broader vision
+for where my research will go.
+
 \section{Future Work}
 
-I recently outlined how we can improve measurement of question
-answering progress~\cite{boyd-graber-20}.
+To advance \abr{ai}, we need to ask better questions.
 %
-One critical component is going beyond raw accuracy, creating multivariate measures of when computers are doing well.
+Existing datasets are not diverse in the questions that they ask
+about: Google's Natural Questions, SQuAD, and others all are
+overwhelmingly male and either American on British~\cite{gor-21}.
 %
-\newcite{rogers-22} has a clear ontology of what skills a computer answering questions \emph{should} posess, and we have measurement tools to compare human and computer abilities at question answering~\cite{rodriguez-21}.
+More importantly \newcite{rogers}{22} outline an ontology of what skills a computer
+answering questions \emph{should} possess, and adversarial \abr{qa} generation
+systems do not probe these skills.
 %
-But we lack the appropriate datasets to effectively probe if computers possess these skills.  
+Using item response theory and skilled authors, we will probe and
+explicate just how capable modern \abr{ai} is.
 
-Thus, we are building new question answering datasets that honestly reveal a computer's skils, working with the \textit{Online Quiz League} where the competition is not to answer trivia questions but to ask challenging questions that illuminate a computer's weaknesses.
+Where computers have strengths that go beyond what a human can do, we
+will build interactive systems that help users come to a correct
+answer through a process they trust.
 %
-At the same time, we're also working to improve the representation of these datasets.
+This requires basic engineering---ensuring all of the components of
+a \abr{qa} are efficient and low latency---and user modeling, as we
+cannot assume that every user will have the same knowledge and
+capabilities.
 %
-Google's Natural Questions, SQuAD, and others all are overwhelmingly male and either American on British~\cite{gor-21}.
+Then it will require careful vetting in diverse domains to validate
+that users' skills and knowledge are actually augmented by the help of
+the computer.
 
-I am also working with educators to deploy these techniques to better
-measure students' knowledge: if our representations can capture what
-makes a question hard, it can order a \emph{curriculumn} to help a
-student learn the material.
+As these systems become more capable and usable, we can no longer
+assume that our model of the user should remain static: the user will
+learn and adapt to the system.
+%
+This makes modeling more complicated, but it also allows for employing
+these models in educational settings through examples ordered in a curriculum: expanding the frontier of what
+the user knows, reinforcing weaker knowledge, and using strategies to
+both educate and explain information from the \abr{ai}.
 
-\section{Future Work}
+But interactions with individual people are not how \abr{ai} will be a
+part of 21\textsc{st} society: it will be interactions with
+\emph{populations}.
+%
+Thus, we need to have models and systems that capture population-level
+interactions.
+%
+Helping detect misinformation online, working collaboratively with
+authors to craft effective counter-measures, and to propagate that
+within a social network.
+%
+This builds on our fake news systems, our deception detection work,
+but will require deeper collaboration with social scientists and
+journalists to develop the interfaces and the models to build
+human--computer \abr{ai} that informs and helps society as a whole.
+
 
 %% \vspace{12cm}
 
@@ -325,11 +320,10 @@ student learn the material.
 \bibliographystyle{resume_src/splncs03}
 
 \begin{center}
-Full list of  three book chapters, eleven journal publications, and eighty-five conference
+Full list of  three book chapters, eleven journal publications, and ninety-nine conference
 publications at \url{http://boydgraber.org/dyn-pubs/year.html}
 \end{center}
 
-%\bibliographystyle{unsrtnat}
 \bibliography{resume_src/journal-full,resume_src/jbg}
 \noindent\rule{4cm}{0.4pt}
 \end{document}
