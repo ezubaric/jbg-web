@@ -57,7 +57,7 @@ if [ ${#CHANGES} -gt 0 ]
 		    bibtex research
 	done
 	# echo "Done rsearch"
-        for FILE in public umd short_cv teaching service research
+        for FILE in public umd short_cv teaching service research german
         do
             echo $FILE
 	    echo "---------------------------"
