@@ -7,7 +7,7 @@ CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_s
 
 rm -f python/*.pyc
 rm -f pubs/*.tex
-b
+
 mkdir -p ~/public_html/dyn-media
 mkdir -p ~/public_html/dyn-pubs
 
