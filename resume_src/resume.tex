@@ -10,6 +10,12 @@
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
 
+\newcommand{\image}[2]{  \begin{center}
+\includegraphics[width=.5\linewidth]{images/#1}
+\end{center}
+  }
+
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -876,6 +882,36 @@ Facebook 2017 (Menlo Park, CA)
 \headedsubsection{Press Coverage}{}{
 \input{resume_src/media}
 }
+
+\ifgerman
+
+\clearpage
+\roottitle{\umdtext{II. Research, Scholarly, Creative and/or Professional
+    Activities: }{Publications}}
+
+\input{resume_src/pubs_by_venue.tex}
+
+\clearpage
+
+\roottitle{Diplomas and Certificates}
+
+
+\headedsection{BS, California Institute of Technology}{}{
+  \image{bs_diploma}{}
+}
+
+
+\headedsection{MA, Princeton University}{}{
+  \image{ms_diploma}{}
+}
+
+\headedsection{PhD, Princeton University}{}{
+  \image{phd_diploma}{}
+}
+
+\else
+
+\fi
 
 
 \end{document}
