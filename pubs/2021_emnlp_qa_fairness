@@ -13,3 +13,5 @@
 ~~ Url | docs/2021_emnlp_qa_fairness.pdf
 ~~ Public | The data used to train computer question answering systems have three times as many men as women.  This paper examines whether this is a problem for question answering accuracy. After a thorough investigation, we do not find evidence of serious accuracy discrepancies between languages.  However, an absence of evidence is not evidence of absence, and we would argue that we need more diverse datasets to better represent the world's population.
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/Hopd3oHfoYk" frameborder="0" allowfullscreen></iframe>
+~~ NumPages | 9
+~~ Acceptance | 26
