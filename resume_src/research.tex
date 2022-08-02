@@ -31,7 +31,7 @@
 
 \begin{document}
 
- \title{Humans in the Loop for Transparent, Interpretable Machine Learning}
+ \title{Research Proposal: Evaluating and Enabling Human--AI Collaboration}
 
  \author{Jordan Boyd-Graber, University of Maryland}
 %\institute{University of Colorado, Boulder CO 80309, USA}
@@ -44,7 +44,7 @@
 Artificial intelligence\footnote{I take a broad interpretation of
 \abr{ai}; some of my examples might be better characterized machine
 learning.  But rather than distracting boundary policing, I embrace
-the general term but will be specific in describing specific tools.}
+the general term but will be specific in describing particular tools/models.}
 (\abr{ai}) is ubiquitous: detecting spam e-mails, flagging fraudulent
 purchases, and providing the next movie in a Netflix binge.
 %
@@ -90,7 +90,7 @@ improvement over the ``take it or leave it'' philosophy of most
 machine learning algorithms.
 
 Focusing on collaboration also requires algorithms that are low
-latency (not just high throughput). We extend the
+latency (not just high throughput). We extended the
 geometric interpretations of admixture models developed by Arora et
 al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and
 multi-lingual topics~\cite{Yuan-18}. We have also developed better
@@ -111,15 +111,15 @@ In that same survey, none do a human evaluation.
 %
 As topic models evolve (e.g., incorporating
 neural components), you need to validate that these automatic metrics
-still correlate with wether it is useful for a human--computer
+still correlate with whether it is useful for a human--computer
 collaboration.
 
 \section{Teaming as an Evaluation}
 
 Within the \abr{hci} community, we have argued for the foundations of
 what should go into human--computer teams: computers that incorporate
-users suggestions~\cite{kumar-19}; explanations with
-accountability~\cite{smith-20}; and stabile
+users' suggestions~\cite{kumar-19}; explanations with
+accountability~\cite{smith-20}; and stable
 explanations~\cite{smith-20:adherence}.
 
 In addition to these human-centered understanding of users' needs and
@@ -139,13 +139,13 @@ The reverse of cooperation is competition; it also has much to teach computers.
 Following the pattern of looking at trivia games, I've increasingly looked at language-based games whose clear goals and
 intrinsic fun speed research progress.
 %
-For example, in \emph{Diplomacy}, users
+For example, in the board game \emph{Diplomacy}, users
 chat with each other while marshaling armies for world conquest. Alliances are
 fluid: friends are betrayed and enemies embraced as the game develops. However,
 users' conversations let us predict when friendships break: betrayers writing
 ostensibly friendly messages before a betrayal become more polite, stop talking
 about the future, and change how much they write~\cite{niculae-15} in follow-on
-work, we develop a dataset that helps predict both when users lie to each other
+work, we developed a dataset that predict both when users lie to each other
 and when recipients of lies detect deception~\cite{Peskov-20}.
 %
 Diplomacy may be
@@ -173,7 +173,9 @@ change fact checking~\cite{Diggelmann-20}.
 %
 However, because fact checking is part of an information arms race, we
 need to build these examples as part of a human-in-the-loop
-adversarial process.
+adversarial process, which I'm exploring in an ongoing collaboration
+with journalism professor Naeemul Hassan that extends my question
+answering work, which I talk about next.
 
 \section{Human-in-the-Loop Adversarial Examples}
 
@@ -190,9 +192,9 @@ No!
 
 Adversarial examples first came out of the vision community: add a
 small epsilon to an example and suddenly a object detector calls a
-turtle a gun.\footnote{Point of personal pride: I mentored Kevin on
-another previous research project but had nothing to do with this later
-adversarial work.}
+turtle a gun~\cite{athalye-18}.\footnote{Point of personal pride: I
+mentored Kevin on another previous research project~\cite{he-16} but
+had nothing to do with this later adversarial work.}
 %
 While others have attempted to create adversarial examples for
 language using paraphrasing, it's hard to know if the changes are
@@ -238,22 +240,26 @@ machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
   professional human interpreters---passivizing sentences and guessing
   the verb---to translate sentences sooner~\cite{He-15}, letting
   speakers and algorithms cooperate together and enabling more natural
-  cross-cultural communication.  We can also use reinforcement
+  cross-cultural communication.  We also use reinforcement
   learning to learn machine translation feedback from noisy
   supervision such as star ratings on a webpage~\cite{nguyen-17}.
 \end{itemize*}
 
-This work doesn't \emph{yet} fit nicely into the human-in-the-loop
-narrative, but these more complex tasks are part of my broader vision
-for where my research will go.
+This work doesn't \emph{yet} fit nicely into the human--computer
+collaboration narrative, but these more complex tasks are part of my
+broader vision for where my research will go: state-of-the-art models
+built to support human decisions, not replace them.  And that requires
+the low-latency models built to react to input ``like a human''
+described above.
 
 \section{Future Work}
 
 To advance \abr{ai}, we need to ask better questions.
 %
 Existing datasets are not diverse in the questions that they ask
-about: Google's Natural Questions, SQuAD, and others all are
-overwhelmingly male and either American on British~\cite{gor-21}.
+about: Google's Natural Questions, SQuAD, and others contain entities
+that are overwhelmingly male and either American on
+British~\cite{gor-21}.
 %
 More importantly \newcite{rogers}{22} outline an ontology of what skills a computer
 answering questions \emph{should} possess, and adversarial \abr{qa} generation
@@ -296,7 +302,7 @@ authors to craft effective counter-measures, and to propagate that
 within a social network.
 %
 This builds on our fake news systems, our deception detection work,
-but will require deeper collaboration with social scientists and
+but will also require deeper collaboration with social scientists and
 journalists to develop the interfaces and the models to build
 human--computer \abr{ai} that informs and helps society as a whole.
 
