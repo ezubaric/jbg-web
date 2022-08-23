@@ -102,12 +102,12 @@ After we proposed our ``reading tea leaves'' evaluation, it's
 heartening that \newcite{lau}{14} and their ``machine reading tea
 leaves'' (which correlate with our human measures) became a standard
 topic model evaluation: a survey of forty recent topic modeling
-papers, all but four use a form of their coherence evaluation.
+papers, {\bf all but four} use a form of their coherence evaluation.
 %
 However, as we argue in \newcite{hoyle}{21}, you cannot just use this
 evaluation forever and forget about humans.
 %
-In that same survey, none do a human evaluation.
+In that same survey, {\bf none} do a human evaluation.
 %
 As topic models evolve (e.g., incorporating
 neural components), you need to validate that these automatic metrics
@@ -136,7 +136,7 @@ novices are easily overwhelmed~\cite{feng-19}.
 
 The reverse of cooperation is competition; it also has much to teach computers.
 %
-Following the pattern of looking at trivia games, I've increasingly looked at language-based games whose clear goals and
+I've increasingly looked at language-based games whose clear goals and
 intrinsic fun speed research progress.
 %
 For example, in the board game \emph{Diplomacy}, users
@@ -202,23 +202,26 @@ perceptually negligible and it's hard to ``add epsilon'' to a discrete
 word.
 
 Consistent with the theme of my research, my \abr{nsf career} grant
-proposed to have a human in the loop.
+added a human in the loop to generate adversarial language examples
+that can provide new training examples to make \abr{ai} more robust
+and to expose what \abr{ai} cannot (yet) do.
 %
-With Eric Wallace, and undergraduate student, we built a system that
+With Eric Wallace, an undergraduate student, we built a system that
 could help an expert trivia question writer to stump a computer: as
 the author writes the question, it shows the author what the system is
 thinking~\cite{wallace-18}.
 %
-And it worked, even generalizing across types of
-models~\cite{wallace-19}.
+And it worked, even generalizing across models~\cite{wallace-19} (an
+example written with an \abr{ir} model still stumps a neural model).
 %
-Meta Facebook adopted this human-in-the-loop framework with
+The next year, Meta Facebook adopted this human-in-the-loop framework with
 gusto~\cite{bartolo-20} in their Dynabench framework and the Dynamic
 Adversarial Data Collection workshop.
 
 \section{What I'm not Talking About}
 
-Many of our best-cited papers are ``traditional'' machine learning or natural language processing papers that do better on some task:
+Many of our best-cited papers are ``traditional'' machine learning or
+natural language processing papers that do better on some task:
 %
 \begin{itemize*}
 \item We developed the deep averaging network~\cite[\abr{dan}]{iyyer-15}, an
