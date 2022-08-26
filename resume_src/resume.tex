@@ -38,15 +38,22 @@
 
 \roottitle{ I. Personal Information }
 
-\fi
+\begin{itemize*}
+\item {\bf Legal Name}: Jordan Boyd-Graber Ying
+\item {\bf E-mail}: \href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
+  \item {\bf Webpage}:  \href{http://boydgraber.org}{\url{http://boydgraber.org}}
+\end{itemize*}
+
+\else
 
 \noindent\href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
 \umdtext{\\}{\bull} \href{http://boydgraber.org}{\url{http://boydgraber.org}}\\ % Your URL
 
-\ifumd
-\else
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+
 \fi
+
 
 
 \ifgerman
@@ -304,7 +311,11 @@ Facebook 2017 (Menlo Park, CA)
 \ifgerman
 
 \else
+\ifumd
+\else
 \clearpage
+\fi
+
 \roottitle{\umdtext{II. Research, Scholarly, Creative and/or Professional
     Activities: }{Publications}}
 
@@ -317,6 +328,11 @@ Facebook 2017 (Menlo Park, CA)
 \fi
 
 
+\ifgerman
+
+\else
+\input{resume_src/funding}
+\fi
 
 
 \ifumd
