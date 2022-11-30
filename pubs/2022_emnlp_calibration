@@ -9,5 +9,7 @@
 ~~ Category | Deep Learning
 ~~ Venue | Journal
 ~~ NumPages | 9
-~~ Url | docs/2021_emnlp_calibration.pdf
-
+~~ Url | docs/2022_emnlp_calibration.pdf
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/gbwJcEgczeA" frameborder="0" allowfullscreen></iframe>
+~~ Link | Code*https://github.com/NoviScl/calibrateQA
+~~ Link | Research Talk*https://youtu.be/gbwJcEgczeA
