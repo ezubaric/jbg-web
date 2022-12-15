@@ -43,14 +43,14 @@
 
 Artificial intelligence\footnote{I take a broad interpretation of
 \abr{ai}; some of my examples might be better characterized machine
-learning.  But rather than distracting boundary policing, I embrace
+learning.  But rather than distracting boundary policing, I will embrace
 the general term but will be specific in describing particular tools/models.}
 (\abr{ai}) is ubiquitous: detecting spam e-mails, flagging fraudulent
 purchases, and providing the next movie in a Netflix binge.
 %
 But they do not exist in a vacuum: as
 Shneiderman~\cite{shneiderman-21} argues, \abr{ai} must exist
-in human \emph{collaborations}.
+alongside humans.
 %
 My goal is to create metrics to measure whether \abr{ai} methods make
 sense to users, helping users craft examples to advance \abr{ai}, and
@@ -93,8 +93,10 @@ Focusing on collaboration also requires algorithms that are low
 latency (not just high throughput). We extended the
 geometric interpretations of admixture models developed by Arora et
 al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and
-multi-lingual topics~\cite{Yuan-18}. We have also developed better
-understanding of projection-based multilingual representations via
+multi-lingual topics~\cite{Yuan-18}. These are much faster than
+traditional probabilistic topic models---they can handle millions of
+documents in seconds---but they are less understood.  Thus, we also developed better
+understanding of the projections of multilingual representations via
 graph theory~\cite{Fujinuma-19} and the convergence of alternating
 projections~\cite{Zhang-19}.
 
@@ -130,6 +132,9 @@ For example, for a question answering task, we measured how much the
 accuracy of the human--computer \emph{team} increases with different
 explanations and found that explanations help all users but that
 novices are easily overwhelmed~\cite{feng-19}.
+%
+In follow-on work, we learned how to explicitly optimize explanations
+for individual users~\cite{feng-22}.
 
 
 \section{Connecting with Social Science: Pedagogy, Framing, and Deception}
@@ -153,8 +158,21 @@ a nerdy game, but it is a fruitful testbed to teach computers to understand
 messy, emotional human interactions.
 %
 We are continuing to look into these questions with researchers from
-across the nation in a new \abr{darpa} program: \abr{shade}, which focuses
-on the game that were were first to highlight for its linguistic deception as a computational task.
+across the nation in a new \abr{darpa} program: \abr{shade}, which
+focuses on the game that were were first to highlight for its
+linguistic deception as a computational task.
+
+Recently, the use of \abr{nlp} methods in the game of Diplomacy has
+been the subject of highly-publicized papers by DeepMind in Nature
+Communications~\cite{kramar-122} and
+Meta in Science~\cite{bakhtin-22}.
+%
+The Meta paper, like our 2020 paper, used a classifier to detect
+deceptive statements.
+%
+The DeepMind paper built a game theoretic understanding of when betrayal
+should happen, building on our descriptive investigation of deception
+in human games.
 
 A game with higher stakes is politics. However, just like Diplomacy, the words
 that people use reveal their underlying goals; computational methods can help
@@ -193,8 +211,8 @@ No!
 Adversarial examples first came out of the vision community: add a
 small epsilon to an example and suddenly a object detector calls a
 turtle a gun~\cite{athalye-18}.\footnote{Point of personal pride: I
-mentored Kevin on another previous research project~\cite{he-16} but
-had nothing to do with this later adversarial work.}
+mentored Kevin on another previous research project~\cite{he-16}, but
+I myself had nothing to do with this later adversarial work.}
 %
 While others have attempted to create adversarial examples for
 language using paraphrasing, it's hard to know if the changes are
@@ -202,7 +220,7 @@ perceptually negligible and it's hard to ``add epsilon'' to a discrete
 word.
 
 Consistent with the theme of my research, my \abr{nsf career} grant
-added a human in the loop to generate adversarial language examples
+added a \emph{human in the loop} to generate novel adversarial language examples
 that can provide new training examples to make \abr{ai} more robust
 and to expose what \abr{ai} cannot (yet) do.
 %
@@ -214,11 +232,13 @@ thinking~\cite{wallace-18}.
 And it worked, even generalizing across models~\cite{wallace-19} (an
 example written with an \abr{ir} model still stumps a neural model).
 %
-The next year, Meta Facebook adopted this human-in-the-loop framework with
-gusto~\cite{bartolo-20} in their Dynabench framework and the Dynamic
-Adversarial Data Collection workshop.
+After we introduced human-in-the-loop adversarial example generation,
+Meta Facebook adopted this framework with gusto~\cite{bartolo-20} in
+their Dynabench framework and the Dynamic Adversarial Data Collection
+workshop and call for proposals (which I'm grateful is funding our
+continuing research in this area).
 
-\section{What I'm not Talking About}
+\section{But wait, there's more!}
 
 Many of our best-cited papers are ``traditional'' machine learning or
 natural language processing papers that do better on some task:
@@ -269,29 +289,39 @@ answering questions \emph{should} possess, and adversarial \abr{qa} generation
 systems do not probe these skills.
 %
 Using item response theory and skilled authors, we will probe and
-explicate just how capable modern \abr{ai} is.
+explicate just how capable modern \abr{ai} is and where it still needs
+more work.
 
 Where computers have strengths that go beyond what a human can do, we
 will build interactive systems that help users come to a correct
 answer through a process they trust.
 %
 This requires basic engineering---ensuring all of the components of
-a \abr{qa} are efficient and low latency---and user modeling, as we
+a system are efficient and low latency---and user modeling, as we
 cannot assume that every user will have the same knowledge and
 capabilities.
 %
 Then it will require careful vetting in diverse domains to validate
 that users' skills and knowledge are actually augmented by the help of
 the computer.
+%
+We aim to focus on multiple areas: question answering in a single
+language~\cite{He-22}, question answering in a language~\cite{han-22}
+or culture~\cite{peskov-21} you are unfamiliar with, and the strategic
+game of Diplomacy.
 
 As these systems become more capable and usable, we can no longer
 assume that our model of the user should remain static: the user will
 learn and adapt to the system.
 %
 This makes modeling more complicated, but it also allows for employing
-these models in educational settings through examples ordered in a curriculum: expanding the frontier of what
-the user knows, reinforcing weaker knowledge, and using strategies to
-both educate and explain information from the \abr{ai}.
+these models in educational settings through examples ordered in a
+curriculum: expanding the frontier of what the user knows, reinforcing
+weaker knowledge, and using strategies to both educate and explain
+information from the \abr{ai}.
+%
+This will require matching users' capabilities with what models can
+offer.
 
 But interactions with individual people are not how \abr{ai} will be a
 part of 21\textsc{st} society: it will be interactions with
