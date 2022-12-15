@@ -54,7 +54,7 @@ if [ ${#CHANGES} -gt 0 ]
         for FILE in teaching research
 	do
 		    pdflatex resume_src/$FILE > log.txt
-		    bibtex research
+		    bibtex $FILE
 	done
 	# echo "Done rsearch"
         for FILE in public umd short_cv teaching service research german funding_wrapper
