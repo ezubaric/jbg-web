@@ -1,7 +1,7 @@
-~~ Bibtex | inproceedings
+~~ Bibtex | article
 ~~ Title |On the Potential of Lexico-logical Alignments for Semantic Parsing to SQL Queries
 ~~ Author | Tianze Shi and Chen Zhao and Jordan Boyd-Graber and Hal {Daum\'{e} III} and Lillian Lee
-~~ Booktitle | Findings of EMNLP
+~~ Journal | Findings of EMNLP
 ~~ Year | 2020
 ~~ Category | Machine Translation
 ~~ Category | Reinforcement Learning
