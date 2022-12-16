@@ -37,7 +37,7 @@
 %\institute{University of Colorado, Boulder CO 80309, USA}
 
 
-\date{July 2022}
+\date{December 2022}
 
 \maketitle
 
@@ -70,7 +70,9 @@ oeuvre of Lope de Vega.
 But topic models' proponents never asked what those lawyers,
 journalists, or humanists needed.
 %
-Instead, they optimized \emph{held-out likelihood}. When my colleagues
+Instead, they optimized \emph{held-out likelihood}.
+
+When my colleagues
 and I developed the \emph{interpretability} measure to assess whether topic
 models' users understood their outputs, interpretability and
 held-out likelihood were negatively correlated~\cite{chang-09b}!
@@ -85,7 +87,7 @@ at the expense of usability\dots and topic modeling is not alone.
 Since this humbling discovery, I've built topic models that are a
 collaboration between humans and computers.  The computer starts by
 proposing an organization of the data.  The user separates confusing
-clusters or joins similar clusters together~\cite{hu-14:itm}, and
+clusters or joins similar clusters together~\cite{hu-14:itm}, an
 improvement over the ``take it or leave it'' philosophy of most
 machine learning algorithms.
 
@@ -93,12 +95,15 @@ Focusing on collaboration also requires algorithms that are low
 latency (not just high throughput). We extended the
 geometric interpretations of admixture models developed by Arora et
 al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and
-multi-lingual topics~\cite{Yuan-18}. These are much faster than
-traditional probabilistic topic models---they can handle millions of
-documents in seconds---but they are less understood.  Thus, we also developed better
-understanding of the projections of multilingual representations via
-graph theory~\cite{Fujinuma-19} and the convergence of alternating
-projections~\cite{Zhang-19}.
+multi-lingual topics~\cite{Yuan-18}.
+%
+These are much faster than traditional probabilistic topic
+models---they can handle millions of documents in seconds---but they
+are less well understood theoretically and less used in practice.
+%
+Thus, we also developed better understanding of the projections of
+multilingual representations via graph theory~\cite{Fujinuma-19} and
+the convergence of alternating projections~\cite{Zhang-19}.
 
 After we proposed our ``reading tea leaves'' evaluation, it's
 heartening that \newcite{lau}{14} and their ``machine reading tea
@@ -119,7 +124,7 @@ collaboration.
 \section{Teaming as an Evaluation}
 
 Within the \abr{hci} community, we have argued for the foundations of
-what should go into human--computer teams: computers that incorporate
+what should go into human--computer collaborations: computers that incorporate
 users' suggestions~\cite{kumar-19}; explanations with
 accountability~\cite{smith-20}; and stable
 explanations~\cite{smith-20:adherence}.
@@ -139,49 +144,58 @@ for individual users~\cite{feng-22}.
 
 \section{Connecting with Social Science: Pedagogy, Framing, and Deception}
 
-The reverse of cooperation is competition; it also has much to teach computers.
+The reverse of cooperation is human competition; it also has much to
+teach computers.
 %
 I've increasingly looked at language-based games whose clear goals and
 intrinsic fun speed research progress.
 %
 For example, in the board game \emph{Diplomacy}, users
 chat with each other while marshaling armies for world conquest. Alliances are
-fluid: friends are betrayed and enemies embraced as the game develops. However,
-users' conversations let us predict when friendships break: betrayers writing
-ostensibly friendly messages before a betrayal become more polite, stop talking
-about the future, and change how much they write~\cite{niculae-15} in follow-on
-work, we developed a dataset that predict both when users lie to each other
-and when recipients of lies detect deception~\cite{Peskov-20}.
+fluid: friends are betrayed and enemies embraced as the game develops.
 %
-Diplomacy may be
-a nerdy game, but it is a fruitful testbed to teach computers to understand
-messy, emotional human interactions.
+However,
+users' conversations let us predict when friendships break.
+
+Thus, we argued that Diplomacy would be an exciting testbed for
+natural language processing, and our 2015 paper is---to the best of
+our knowledge---the first \abr{nlp} research on Diplomacy.
+%
+We discovered that betrayers write ostensibly friendly messages before
+a betrayal become more polite, stop talking about the future, and
+change how \emph{much} they write~\cite{niculae-15}.
+%
+In follow-on work, we developed a dataset that predict both when users
+lie to each other and when recipients of lies detect
+deception~\cite{Peskov-20}.
+%
+Diplomacy may be a nerdy game, but it is a fruitful testbed to teach
+computers to understand messy, emotional human interactions.
 %
 We are continuing to look into these questions with researchers from
 across the nation in a new \abr{darpa} program: \abr{shade}, which
-focuses on the game that were were first to highlight for its
-linguistic deception as a computational task.
+focuses on Diplomacy as a testbed for understanding deception.
 
 Recently, the use of \abr{nlp} methods in the game of Diplomacy has
 been the subject of highly-publicized papers by DeepMind in Nature
-Communications~\cite{kramar-22} and
-Meta in Science~\cite{bakhtin-22}.
+Communications~\cite{kramar-22} and Meta in Science~\cite{bakhtin-22}.
 %
 The Meta paper, like our 2020 paper, used a classifier to detect
 deceptive statements.
 %
-The DeepMind paper built a game theoretic understanding of when betrayal
-should happen, building on our descriptive investigation of deception
-in human games.
+The DeepMind paper built a game theoretic understanding of when
+betrayal should happen, building on our descriptive investigation of
+deception in human games.
 
-A game with higher stakes is politics. However, just like Diplomacy, the words
-that people use reveal their underlying goals; computational methods can help
-expose the ``moves'' political players can use. With collaborators in political
-science, we've built models that: show when politicians in debates
-strategically change the topic to influence others~\cite{nguyen-12,Nguyen-14b};
-frame topics to reflect political leanings~\cite{nguyen-13:shlda}; use subtle
-linguistic phrasing to express their political leaning~\cite{iyyer-14a}; or
-create political subgroups with larger political
+A game with higher stakes is politics. However, just like Diplomacy,
+the words that people use reveal their underlying goals; computational
+methods can help expose the ``moves'' political players can use. With
+collaborators in political science, we've built models that: show when
+politicians in debates strategically change the topic to influence
+others~\cite{nguyen-12,Nguyen-14b}; frame topics to reflect political
+leanings~\cite{nguyen-13:shlda}; use subtle linguistic phrasing to
+express their political leaning~\cite{iyyer-14a}; or create political
+subgroups with larger political
 movements~\cite{Nguyen:Boyd-Graber:Resnik:Miler-2015}.
 
 Because political discourse is built on a common set of commonly
@@ -199,9 +213,11 @@ answering work, which I talk about next.
 
 One of the most fun aspects of my research has been building
 trivia-playing robots~\cite{boyd-graber-12,iyyer-14b,iyyer-15}; in
-addition to the research, it has faced off against
-former Jeopardy champions in front of hundreds high school
-students.\footnote{\url{https://www.youtube.com/watch?v=LqsUaprYMOw}}
+addition to the research, it has faced off against former Jeopardy
+champions in front of hundreds high school
+students\footnote{\url{https://www.youtube.com/watch?v=LqsUaprYMOw}}
+and against researchers at NeurIPS 2015 (which won the best
+demonstration award).
 %
 But after defeating some of the smartest trivia players, did I
 actually believe that our system was better at question answering?
@@ -216,13 +232,14 @@ I myself had nothing to do with this later adversarial work.}
 %
 While others have attempted to create adversarial examples for
 language using paraphrasing, it's hard to know if the changes are
-perceptually negligible and it's hard to ``add epsilon'' to a discrete
-word.
+perceptually negligible (``who wrote the invisible man'' is
+fundamentally different from ``who wrote the man you can't see'') and
+it's hard to ``add epsilon'' to a discrete word.
 
 Consistent with the theme of my research, my \abr{nsf career} grant
-added a \emph{human in the loop} to generate novel adversarial language examples
-that can provide new training examples to make \abr{ai} more robust
-and to expose what \abr{ai} cannot (yet) do.
+added a \emph{human in the loop} to generate novel adversarial
+language examples that can provide new training examples to make
+\abr{ai} more robust and to expose what \abr{ai} cannot (yet) do.
 %
 With Eric Wallace, an undergraduate student, we built a system that
 could help an expert trivia question writer to stump a computer: as
@@ -240,18 +257,18 @@ continuing research in this area).
 
 \section{But wait, there's more!}
 
-Many of our best-cited papers are ``traditional'' machine learning or
-natural language processing papers that do better on some task:
+Many of our best-cited papers are ``traditional'' papers that do
+better on some task:
 %
 \begin{itemize*}
 \item We developed the deep averaging network~\cite[\abr{dan}]{iyyer-15}, an
 incredibly simple model that is still being used even in the age of
 transformers~\cite{ye-22}.
 
-\item In question answering we have proposed new evaluation
-mechanisms for knowing if an answer is correct~\cite{si-21} or to
-improve unsupervised retrieval of information to answer complicated
-questions~\cite{elgohary-19,zhao-20,shi-20}.
+\item In question answering we have proposed new evaluation mechanisms
+  for knowing if an answer is correct~\cite{si-21} or to improve
+  unsupervised retrieval of information to answer complicated
+  questions~\cite{elgohary-19,zhao-20,shi-20}.
 
 \item We also introduced reinforcement learning to \emph{simultaneous
 machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
@@ -284,9 +301,9 @@ about: Google's Natural Questions, SQuAD, and others contain entities
 that are overwhelmingly male and either American on
 British~\cite{gor-21}.
 %
-More importantly \newcite{rogers}{22} outline an ontology of what skills a computer
-answering questions \emph{should} possess, and adversarial \abr{qa} generation
-systems do not probe these skills.
+More importantly \newcite{rogers}{22} outline an ontology of what
+skills a computer answering questions \emph{should} possess, and
+adversarial \abr{qa} generation systems do not probe these skills.
 %
 Using item response theory and skilled authors, we will probe and
 explicate just how capable modern \abr{ai} is and where it still needs
@@ -355,7 +372,7 @@ human--computer \abr{ai} that informs and helps society as a whole.
 \bibliographystyle{resume_src/splncs03}
 
 \begin{center}
-Full list of  three book chapters, eleven journal publications, and ninety-nine conference
+Full list of my three book chapters, seventeen journal publications, and ninety-nine conference
 publications at \url{http://boydgraber.org/dyn-pubs/year.html}
 \end{center}
 
