@@ -1,7 +1,7 @@
-~~ Bibtex | inproceedings
+~~ Bibtex | article
 ~~ Title | An Attentive Recurrent Model for Incremental Prediction of Sentence-final Verbs
 ~~ Author | Wenyan Li and Alvin {Grissom II} and Jordan Boyd-Graber
-~~ Booktitle | Findings of EMNLP
+~~ Journal | Findings of EMNLP
 ~~ Year | 2020
 ~~ Category | Machine Translation
 ~~ Category | Reinforcement Learning
