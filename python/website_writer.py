@@ -115,7 +115,7 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Matthew Shu": Student("Matthew Shu", 2019, 2021, kind="UG"),
              "Andrew Mao": Student("Andrew Mao", 2020, 2022, kind="MS"),
              "Sander Schulhoff": Student("Sander Schulhoff", 2019, 2022, kind="UG"),
-             "Chenglei Si": Student("Chenglei Si", 2020, 2023, kind="UG"),
+             "Chenglei Si": Student("Chenglei Si", 2020, 2023, "https://noviscl.github.io/", kind="UG"),
              "Arjun Akkiraju": Student("Arjun Akkiraju", 2020, 2021, kind="UG"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
@@ -395,6 +395,9 @@ class IndexElement:
 
     if "Embed" in self.fields:
         s += "\n<BR>" + "<CENTER>%s</CENTER>" % "".join(self.fields["Embed"])
+
+    if "Public" in self.fields:
+      s += "\n<BLOCKQUOTE><B>Accessible Abstract:</B> %s</BLOCKQUOTE>\n" % self.fields["Public"][0]
 
     return s
 

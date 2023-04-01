@@ -14,5 +14,6 @@
 ~~ Venue | Refereed Conference
 ~~ Note | Jonathan Chang and I shared a NIPS student award honorable mention for this paper (5 out of 1105)
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/ZQLiDh1NJK4" frameborder="0" allowfullscreen></iframe>
+~~ Public | Topic models are a tool that historians and social sciences use to explore large text corpora.  But how do you know if you have a good topic model?  Before this paper, the consensus was to use held-out likelihood to evaluate if you had a good model.  This paper argues that this does not fit how people actually use topic models and proposes new human-centered metrics for evaluating topic models.  This method inspired a rethinking of model evaluation and showed that the complexity of a model does not always correspond to what a user might want.
 ~~ Acceptance | 24
 ~~ NumPages | 9
