@@ -11,6 +11,7 @@
 ~~ Acceptance | 25
 ~~ URL | docs/2015_acl_teaparty.pdf
 ~~ NumPages | 11
+~~ Public | In the mid 2010s, the Republican party in the United States diverged: mainstream conservatives split from the so-called "tea party" caucus.  However, the primary statistical tool for analyzing political factions in legislative bodies (ideal point models) fail to account for these changes.  This is because the schism is not fully reflected in voting patterns but rather in how politicians present themselves: thus we need to extend these models to capture not just how politicians vote but also how they frame particular issues.  This paper proposes a new model to capture framing differences within a voting block to start explaining the new subcoalitions of the republican caucus.
 ~~ Project | Closing the Loop*../projects/IIS-1409287.html
 ~~ Link | Talk*http://techtalks.tv/talks/tea-party-in-the-house-a-hierarchical-ideal-pointtopic-model-and-its-application-to-republican-legislators-in-the-112th-congress/61794/
 ~~ Link | Code*https://github.com/vietansegan/herbal/
