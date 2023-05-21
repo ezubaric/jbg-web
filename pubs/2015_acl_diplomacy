@@ -8,6 +8,7 @@
 ~~ Category | Sentiment and Perspective
 ~~ Venue | Refereed Conference
 ~~ Acceptance | 25
+~~ Public | This paper introduces the application of natural language processing techniques to understand the relationships (and their dissolution) in the game of Diplomacy.  This popular board game simulates Europe at the eve of World War I and forces players to work with each other to forge alliances and make plans together.  However, the game's setup also encourages players to turn against each other.  This paper analyzes whether we can predict these betrayals (we can!) and the linguistic and social phenomena (demands, politeness, and planning) that can predict when a betrayal will happen.  
 ~~ URL | docs/2015_acl_diplomacy.pdf
 ~~ Link | Code/Data*http://vene.ro/betrayal/
 ~~ NumPages | 10
