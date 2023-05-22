@@ -299,19 +299,15 @@ need to measure how well it works (and plays) \emph{with} humans.
 This is a problem that requires solutions in the form of new data, algorithms, and evalutions, and I
 hope to advance in all three areas.
 
-\paragraph{Data.}
+{\bf Data.}
 %
-In terms of datasets, existing datasets are not diverse and thus do
+Existing datasets are not diverse and do
 not reflect the kinds of interactions people from diverse backgrounds
 have with \abr{ai} systems.
 %
 In question answering, Google's Natural Questions, SQuAD, and other
 datasets contain entities that are overwhelmingly male and either
 American on British~\cite{gor-21}.
-%
-More importantly \newcite{rogers}{22} outline an ontology of what
-skills a computer answering questions \emph{should} possess, and
-adversarial \abr{qa} generation systems do not probe these skills.
 %
 In newly funded \abr{nih} research, we're working with answering
 questions specifically in complicated, code-switched environments with
@@ -328,7 +324,7 @@ are answered differently in Ghana than in the \abr{us} or topics that
 only people in Bhutan care about (and would be neglected by
 \abr{us}-centric datasets).
 
-\paragraph{Algorithms.} In research recently funded by Meta, we're capitalizing on
+{\bf Algorithms.} In research recently funded by Meta, we're capitalizing on
 the realization that the best way to get good datasets that reflect
 the strengths and weaknesses of current \abr{ai} is to have users in the loop to generate adversarial data.
 %
@@ -365,10 +361,10 @@ negotiation in bad faith) and in the information seeking question
 answering context (where a question can be posed imperfectly,
 revealing a false assumption or a lack of background information).
 %
-By reverse engineering the causal mechanism of why a particual theme
-or topic was broached in an interaction, the \abr{ai} interlocutor can
-better frame their reply, probing underlying assumptions or
-developing an effective ``counter''.
+% By reverse engineering the causal mechanism of why a particual theme
+% or topic was broached in an interaction, the \abr{ai} interlocutor can
+% better frame their reply, probing underlying assumptions or
+% developing an effective ``counter''.
 
 While eventually we will need to connect to expensive, difficult to
 compute neural models, many user updates can be approximated by fast
@@ -376,13 +372,13 @@ spectral or probabilistic algorithms.
 %
 We will design fast, browser-based Javascript approximations of these
 complicated neural models, to allow users to quickly interact with the
-models, get a result, and continue.
+models, get a result, and continue before reconciling the solution later.
 %
-However, because these approximations are only approximations, we need
-to reconcile the approximate solution with the ``gold standard'' model
-on a \abr{gpu}-powered server.
+% However, because these approximations are only approximations, we need
+% to reconcile the approximate solution with the ``gold standard'' model
+% on a \abr{gpu}-powered server.
 
-\paragraph{Evaluation}
+{\bf Evaluation.}
 %
 Where computers have strengths that go beyond what a human can do, we
 need to know if it would be wise to build evaluations that can we
@@ -395,13 +391,13 @@ a system are efficient and low latency---and user modeling, as we
 cannot assume that every user will have the same knowledge and
 capabilities.
 %
-The next step requires careful vetting in diverse domains to validate
-that users' skills and knowledge are actually augmented by the help of
-the computer.
+% The next step requires careful vetting in diverse domains to validate
+% that users' skills and knowledge are actually augmented by the help of
+% the computer.
 %
-We aim to focus on multiple areas: question answering in a single
-language~\cite{He-22}, question answering across
-languages~\cite{han-22}, and the strategic game of Diplomacy.
+% We aim to focus on multiple areas: question answering in a single
+% language~\cite{He-22}, question answering across
+% languages~\cite{han-22}, and the strategic game of Diplomacy.
 
 As these systems become more capable and usable, we can no longer
 assume that our model of the user should remain static: the user will
@@ -413,8 +409,8 @@ curriculum: expanding the frontier of what the user knows, reinforcing
 weaker knowledge, and using strategies to both educate and explain
 information from the \abr{ai}.
 %
-This will require matching users' capabilities with what models can
-offer.
+% This will require matching users' capabilities with what models can
+% offer.
 
 But interactions with individual people are not how \abr{ai} will be a
 part of 21\textsuperscript{st} society: it will be interactions with
@@ -427,7 +423,7 @@ Helping detect misinformation online, working collaboratively with
 authors to craft effective counter-measures, and to propagate that
 within a social network.
 %
-This builds on our fake news systems, our deception detection work,
+This builds on our fake news systems and our deception detection work,
 but will also require deeper collaboration with social scientists and
 journalists to develop the interfaces and the models to build
 human--computer \abr{ai} that informs and helps society as a whole.
