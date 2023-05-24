@@ -20,9 +20,6 @@
 \usepackage{multicol}
 \usepackage{url}
 
-\usepackage[square,numbers]{natbib}
-\bibliographystyle{abbrvnat}
-
 \newcommand{\abr}[1]{\textsc{#1}}
 \newcommand{\newcite}[2]{\capitalisewords{#1} et al.~\cite{#1-#2}}
 
@@ -59,8 +56,8 @@ Shneiderman~\cite{shneiderman-21} argues, \abr{ai} must exist
 alongside humans.
 %
 My goal is to create metrics to measure whether \abr{ai} methods make
-sense to users, helping users craft examples to advance \abr{ai}, and
-applying \abr{ai} to applications that help illuminate complex social
+sense to users, help users craft examples to advance \abr{ai}, and
+applying \abr{ai} to illuminate complex social
 science applications.
 
 \section{Evaluating Interpretability}
@@ -108,7 +105,7 @@ multi-lingual topics~\cite{Yuan-18}, models that can handle millions of document
 After our ``reading tea leaves'' evaluation, it's
 heartening that \newcite{lau}{14} and their ``machine reading tea
 leaves'' (which correlate with our human measures) became a standard
-topic model evaluation: a survey of forty recent topic modeling
+topic model evaluation: in a survey of forty recent topic modeling
 papers, {\bf all but four} use a form of their coherence evaluation.
 %
 However, as we argue in \newcite{hoyle}{21}, you cannot just use this
@@ -123,7 +120,7 @@ collaboration.
 
 \section{Teaming as an Evaluation}
 
-Within the \abr{hci} community, we have argued for the foundations of
+Within the \abr{hci}, we have argued for 
 what should go into human--computer collaborations: computers that incorporate
 users' suggestions~\cite{kumar-19}; explanations with
 accountability~\cite{smith-20}; and stable
@@ -161,9 +158,7 @@ Thus, we argued that Diplomacy would be an exciting testbed for
 natural language processing, and our 2015 paper is---to the best of
 our knowledge---the first \abr{nlp} research on Diplomacy.
 %
-Betrayers write ostensibly friendly messages before
-a betrayal become more polite, stop talking about the future, and
-change how \emph{much} they write~\cite{niculae-15}.
+Before a betrayal, betrayers write ostensibly friendly messages and become more polite, stop talking about the future, and change how \emph{much} they write~\cite{niculae-15}.
 %
 In follow-on work, we developed a dataset that predict both when users
 lie to each other and when recipients of lies detect
@@ -209,8 +204,7 @@ Communications~\cite{kramar-22} and Meta in Science~\cite{bakhtin-22}.
 \section{Human-in-the-Loop Adversarial Examples}
 
 One of the most fun aspects of my research has been building
-trivia-playing robots~\cite{boyd-graber-12,iyyer-14b,iyyer-15}; in
-addition to the research, it has faced off against former Jeopardy
+trivia-playing robots~\cite{boyd-graber-12,iyyer-14b,iyyer-15}; beyond research papers, our system has faced off against former Jeopardy
 champions in front of hundreds high school
 students\footnote{\url{https://www.youtube.com/watch?v=LqsUaprYMOw}}
 and against researchers at NeurIPS 2015 (which won the best
@@ -229,9 +223,9 @@ I myself had nothing to do with this later adversarial work.}
 %
 While others have attempted to create adversarial examples for
 language using paraphrasing, it's hard to know if the changes are
-perceptually negligible (``who wrote the invisible man'' is
-fundamentally different from ``who wrote the man you can't see'' as is
-``who wrote the book invisible man'') and
+perceptually negligible (``who wrote the invisible man''---a question with the answer H.G. Wells---is
+fundamentally different from ``who wrote the man you can't see''---an ill-formed questions---as is
+``who wrote the book invisible man''---a question with the answer Ralph Ellison) and
 it's hard to ``add epsilon'' to a discrete word.
 
 Consistent with the theme of my research, my \abr{nsf career} grant
@@ -259,15 +253,14 @@ Many of our best-cited papers are ``traditional'' papers that do
 better on some task:
 %
 \begin{itemize*}
-\item We developed the deep averaging network~\cite[\abr{dan}]{iyyer-15}, an
-incredibly simple model that is still being used even in the age of
-transformers~\cite{ye-22}.
+\item We developed deep averaging networks~\cite[\abr{dan}]{iyyer-15}, a simple model still used in the 
+transformer age~\cite{ye-22}.
 
-\item In question answering we have proposed new evaluation mechanisms
-  for knowing if an answer is correct~\cite{si-21} or to improve
-  unsupervised retrieval of information to answer complicated
+\item In question answering, we proposed new evaluation mechanisms
+  for knowing if an answer is correct~\cite{si-21} and improved
+  information retrieval to answer complicated
   questions~\cite{elgohary-19,zhao-20,shi-20}.
-
+  
 \item We also introduced reinforcement learning to \emph{simultaneous
 machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
   language-based task that requires significant human intuition,
@@ -300,19 +293,18 @@ hope to advance in all three areas.
 
 {\bf Data.}
 %
-In newly funded \abr{nih} research, we're working with answering
-questions specifically in complicated, code-switched environments with
-less educated users trying to navigate the healthcare landscape.
+In new a \abr{nih} grant, we're working with answering
+questions in complicated, code-switched environments with
+less educated users navigating \abr{us} healthcare.
 %
 These linguistically, acoustically, and socio-economically diverse
-samples will help provide more realistic data for question answering
-applications, replete with false presuppositions, ambiguity, and
-shifting information needs.
+samples will provide more realistic data, replete with false presuppositions, ambiguity, and
+shifting information needs; we are building pragmatically grounded tools to engage with users, correct wrong assumptions, and answer their questions.
 %
-We are also working with \abr{nist} to develop datasets that better
-reflect a specific \emph{cultural} context: detecting when questions
+We are also working with \abr{nist} to develop data that 
+reflect \emph{cultural} contexts: detecting when questions
 are answered differently in Ghana than in the \abr{us} or topics that
-only people in Bhutan care about (and would be neglected by
+only people in Bhutan care about (and thus absent in
 \abr{us}-centric datasets).
 
 {\bf Algorithms.} In research recently funded by Meta, we are \emph{learning} how to help users best
@@ -324,7 +316,7 @@ is a known answer.
 %
 For \emph{unsupervised} tasks like understanding the themes in a
 document collection, we need algorithms
-that are not just transparent but that are \emph{low latechy}: the primary
+that are not just transparent but that are \emph{low latency}: the primary
 goal is exploration of the dataset, and the user needs to be able to
 quickly provide feedback to the algorithm.
 %
@@ -371,7 +363,9 @@ human--computer \abr{ai} that informs and helps society as a whole.
 
 \section{Teaching}
 
-{\bf Flipped Classrooms}
+I have taught courses on natural language processing at the graduate and undergraduate level, a graduate seminar on question answering, a graduate seminar on Bayesian nonparametrics, a graduate course on distributed computation, graduate machine learning, an undergraduate practical course on deep learning frameworks, an undergraduate introduction to data science, and basic computer literacy.\footnote{A full \href{http://users.umiacs.umd.edu/~jbg/static/courses.html}{list of the courses}, the most recent with lectures.}
+
+{\bf Flipped Classrooms.}
 %
 In 2012, I began teaching with flipped classrooms: you
 record the lectures, students watch them before class, and then you
@@ -431,7 +425,7 @@ classroom, I would know so many fewer students.
 %
 It has also helped me get to know the community; many students have come up to me at conferences to tell me that my videos helped them learn concepts; my videos have over a million views on YouTube and over ten thousand subscribers.
 
-{\bf Projects}
+{\bf Projects.}
 %
 I want to make sure that my students can actually use their skills
 once they're done with the class.  Thus, I typically end courses with
@@ -443,7 +437,7 @@ they build trivia-playing robots to take on former \textit{Jeopardy!} Champions
 or Victoria Groce from the American version of \textit{The
   Chase}.\footnote{\href{https://www.youtube.com/watch?v=dyaR7zT_KKg}{https://www.youtube.com/watch?v=dyaR7zT\_KKg}}
 
-{\bf Mentoring}
+{\bf Mentoring.}
 %
 I'm proud of the successes of my diverse former students.
 %
@@ -508,37 +502,37 @@ undergraduate students who compete against other schools in academic
 competitions by answering questions.
 
 At the University of Colorado, I built an organization
-from the group up: the University of Colorado had previously not
+from the ground up: the University of Colorado had previously not
 competed in these events.
 %
-I organized three local high school tournaments to raise funds for so that
-students could have the funds to travel to national competitions, which
+I organized three local high school tournaments to raise funds for 
+students to travel to national competitions, which
 they did for the first time in 2016 (after winning their region).
 
 At Maryland, I advise an existing academic team that
 consistently is in the top ten nationally.
-%
-I help advise the club leadership, provide institutional memory, and
-connect the club with external organizations (e.g., setting up
-cross-university scrimmages between \abr{umd} and Howard).
 
 \noindent\rule{4cm}{0.4pt}
 
 
-\begin{multicols}{2}
-  \footnotesize
-
-    \parbox{\linewidth}{I have read the following and certify that this
+    \parbox{\linewidth}{I have written this document and certify that this
   personal statement is a current and accurate statement of my
   professional record to the best of my
   knowledge \flushright  \includegraphics[width=.2\linewidth]{resume_src/signature} \\
-\flushright  (\today{})}
+  \flushright  (\today{})}
+
+\clearpage
+
+\begin{multicols}{2}
+  \footnotesize
+
 
   
 \begin{center}
 Full list of my publications at \url{http://boydgraber.org/dyn-pubs/year.html}
 \end{center}
 
+\bibliographystyle{resume_src/splncs03}
 \bibliography{resume_src/journal-full,resume_src/jbg}
 \end{multicols}
 
