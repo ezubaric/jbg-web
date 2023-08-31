@@ -16,3 +16,4 @@
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/DathPL3fRTI" frameborder="0" allowfullscreen></iframe>
 ~~ Link | Research Talk*https://youtu.be/DathPL3fRTI
 ~~ Url | docs/2022_emnlp_cheaters.pdf
+~~ Public | When the Covid pandemic it, trivia games moved online.  With it came cheating: people tried to quickly Google answers.  This is bad for sportsmanship, but a good source of training data for helping teach computers how to find answers.  We built an interface to harvest this training data from trivia players, fed these into retrieval-based QA systems, showing that these queries were better than the automatically generated queries used by the current state of the art.
