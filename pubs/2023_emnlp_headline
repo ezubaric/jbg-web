@@ -4,10 +4,9 @@
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2023
 ~~ Location | Singapore
-~~ Project | CAREER*../projects/IIS-1652666.html
+~~ Project | DADC*projects/DADC.html
 ~~ Category | Question Answering
 ~~ Category | Machine Translation
 ~~ Venue | Refereed Conference
 ~~ NumPages | 9
-~~ Url | docs/2023_emnlp_explicitation.pdf
-~~ Public | Sometimes when you a translating from one language to another, a literal translation is not enough.  Sometimes to actually understand what is being said, you need additional context.  Professional translators know this, and the process that they use to help a listener is called "explicitation" to capturing cultural differences between source and target audiences. We introduce techniques for automatically generating explicitations, motivated by WikiExpl(a dataset collected from Wikipedia and annotate with human translators), and evaluate the explicitation.
+~~ Public | Misinformation online is not all text-based.  More information is being consumed in video form, and both social media companies and external monitors need to know when misleading videos are being shared online.  We create a new dataset of misleading videos and describe what makes the problem so challenging.
