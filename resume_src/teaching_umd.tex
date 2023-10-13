@@ -1,0 +1,214 @@
+
+\documentclass{article}
+
+\include{resume_src/structure}
+
+\usepackage{blindtext}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{mdwlist}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{mfirstuc}
+\usepackage{hyperref}
+
+\newcommand{\abr}[1]{\textsc{#1}}
+\newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small #1}}}\vspace{.5cm}}
+\newcommand{\newcite}[2]{\capitalisewords{#1} et al.~\cite{#1-#2}}
+
+\newcommand{\image}[2]{  \begin{center}
+\includegraphics[width=.5\linewidth]{images/#1}
+\end{center}
+  }
+
+
+\title{Teaching Portfolio}
+\author{Jordan Boyd-Graber}
+\date{ \today}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Teaching Philosophy}
+
+\input{resume_src/teaching_statement}
+
+\clearpage
+
+\section{Placements}
+
+\subsection{PhD Students}
+
+\input{resume_src/placement_phd}
+
+\subsection{MS Students}
+
+\input{resume_src/placement_ms}
+
+\subsection{BS Students}
+
+\input{resume_src/placement_bs}
+
+\clearpage
+
+\section{Sections Taught from the Last Five Years}
+
+\begin{tabular}{ccccccccccccccccccccc}
+\toprule \multirow{2}{*}{ Course } & \multirow{2}{*}{\begin{tabular}{c}
+2016 \\
+F \\
+\end{tabular}} & \multicolumn{2}{c}{2017} & \multicolumn{2}{c}{2018} & \multicolumn{3}{c}{2019} & \multicolumn{3}{c}{2020} & \multicolumn{3}{c}{2021} & \multicolumn{3}{c}{2022} & \multicolumn{2}{c}{2023} & \multirow{2}{*}{ Totals } \\
+& & S & F & S & F & S & I & F & S & I & F & S & I & F & S & I & F & S & F & \\
+\midrule CMSC389A & & & & 28 & & & & & & & & & & & & & & & & 28 \\
+INST414 & & & & 36 & & & & & & & & & & & & & & & & 36 \\
+$\mathrm{CMSC} 470$ & & & & & & 38 & & & & & & & & 47 & & & & 70 & & 155 \\
+CMSC499A & & & & 1 & & 1 & & & & & 3 & 1 & & 3 & & & & & 2 & 11 \\
+CMSC723 & & & & & 53 & & & & & & & 66 & & & & & 65 & & & 184 \\
+LING723 & & & & & & & & & & & & 1 & & & & & 1 & & & 2 \\
+CMSC726 & & & 58 & & & & & & & & & & & & & & & & & 58 \\
+INST735 & & & & & 8 & & & & & & & 4 & & & & & 3 & & & 15 \\
+CMSC798 & & & & 1 & 2 & & & 1 & & & & & & 3 & 2 & & 3 & 1 & 2 & 15 \\
+INST808 & & & & & & & & & & & 8 & & & & & & & & & 8 \\
+CMSC848Q & & & & & & & & & & & & & & & 47 & & & & 21 & 68 \\
+CMSC898 & & & 3 & 5 & 7 & 9 & 1 & 5 & 4 & 1 & 5 & 1 & & 2 & 1 & 1 & 2 & 2 & 4 & 53 \\
+CMSC899 & 1 & 1 & & & 1 & 1 & & 2 & 3 & 2 & 3 & 7 & 5 & 4 & 2 & 1 & & & & $\mathbf{33}$ \\
+  \midrule
+Totals  & 1 & 1 & 61 & 71 & 71 & 49 & 1 & 8 & 7 & 3 & 19 & 80 & 5 & 59 & 52 & 2 & 74 & 73 & 29 & 666 \\
+\bottomrule
+\end{tabular}
+
+\subsection{CMSC 398A: Practical Deep Learning}
+
+\paragraph{Description}
+``Deep Learning'' systems, typified by deep neural networks, are increasingly taking over all AI tasks, ranging from language understanding, and speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is quickly transitioning into a prerequisite in many advanced academic/research settings, and a large advantage in the industrial job market.
+
+This course provides a comprehensive, practical introduction to modern deep learning networks and their applications to AI tasks. Specifically, the course will cover basic concepts in optimization, neural networks,.
+
+\paragraph{Learning Outcomes} By the end of the course, it is expected that students will be able to describe and implement convolutional neural networks (CNN), and recurrent neural networks (RNN), understand the basic concepts of gradient-based optimization, and be able to design and develop deep learning models for tasks that they care about.
+
+Full schedule and topics: \url{https://umd-cs-stics.gitbooks.io/cmsc389a-practical-deep-learning/content/}
+
+\subsection{INST 414: Advanced Data Science}
+
+\begin{itemize*}
+\item Sample Lecture: \href{https://www.youtube.com/watch?v=O28U08_yaGU}{Expectations and Entropy}
+\item \url{http://users.umiacs.umd.edu/~jbg/teaching/INST_414/}{Full Schedule and Topics}
+\end{itemize*}
+
+\paragraph{Description}
+This course explores the application of data science techniques to unstructured, real-world datasets including social media and open data sources. The course will focus on techniques and approaches that allow the extraction of information relevant for experts and non-experts in a wide range of areas including smart cities, transportation or public safety.
+
+This course will explore approaches to extract insights from large-scale datasets. The course will cover the complete analytical funnel from data extraction and cleaning to data analysis and insights interpretation and visualization. The data analysis component will focus on techniques in both supervised and unsupervised learning to extract information from datasets. Topics will include clustering, classification, and regression techniques.  Through homework assignments, a project, exams and in-class activities, students will practice working with these techniques and tools to extract relevant information from structured and unstructured data.
+
+
+\paragraph{Learning Objectives}
+
+\begin{itemize*}
+\item Collect and clean large-scale datasets
+\item Recognize when a function is a valid probability distribution
+\item Manipulate conditional and marginal probability distributions
+\item Apply Bayes rule to invert conditional probabilities
+\item Describe distributions using standard parameterizations of
+\item Use a random number generator to sample from the distribution
+\item Given data and an objective function, derive the form of the maximum likelihood parameters for logistic and linear regression
+\item Given a parameterization of logistic regression classifiers, output a classification on an example
+\item Given training examples, use stochastic gradient to update classifier parameters
+\item Correct problems of data representation to improve classification or regression
+\item Design training / test data splits that allow effective evaluation of data science algorithms
+\item Recognize when a problem can benefit from classification
+\item Given a dataset, run k-means clustering or Gaussian mixture models
+\item Critically evaluate the accuracy of different algorithms and the appropriateness of a given approach
+  \end{itemize*}
+
+  \subsection{CMSC 470: Natural Language Processing}
+
+  \begin{itemize*}
+  \item Sample Lecture: \href{https://www.youtube.com/watch?v=A5ounv0D_cs}{tf-idf}
+    \item \href{https://users.umiacs.umd.edu/~jbg/teaching/CMSC_470/}{Full Schedule and Topics}
+    \end{itemize*}
+  
+  \paragraph{Description}
+Introduction to fundamental techniques for automatically processing and generating natural language with computers. Machine learning techniques, models, and algorithms that enable computers to deal with the ambiguity and implicit structure of natural language. Application of these techniques in a series of assignments designed to address a core application such as question answering or machine translation.
+
+  \paragraph{Learning Objectives}
+  Students will understand the modern NLP neural pipeline, starting from stochastic gradient descent on classifiers with sparse representations to transformer models.  Students will implement representations of text using tf-idf, word vectors, and transformers and apply those representations to language modeling for next word prediction and providing useful answers to user input.
+
+  
+
+  
+
+\subsection{LING/CMSC 723/INST 735: Graduate Natural Language Processing (formerly Computational Linguistics)}
+
+\begin{itemize*}
+\item Sample Lecture: \href{https://www.youtube.com/watch?v=u7l5hhmdc0M}{Gibbs Sampling Inference for Topic Models}
+  \item \href{http://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/}{Full schedule, lectures, and materials}
+\end{itemize*}
+
+\paragraph{Description}
+Computational linguistics has two main areas: how to build technology that does useful things with human language (this area is usually referred to as "natural language processing", NLP, or sometimes "human language technology"), and how to improve our scientific understanding of how language works using computational methods and models. We will be looking at both, with an emphasis on conceptual understanding, looking at data, and understanding the ways in which the computational study of language differs from other areas in which computational approaches are being used.
+
+\paragraph{Learning Objectives}
+By the end of the course, students should understand and implement the typical annotations of the natural language processing pipeline: segmenting characters into words or word pieces, inferring the latent structure of sentences via finite state automata or context free grammars, and classifying text according to a label set.  Moreover, students should have the foundation to implement new algorithms and approaches for natural language processing tasks.
+
+
+\subsection{CMSC 726: Machine Learning}
+
+\begin{itemize*}
+  \item Sample Lecture: \href{https://www.youtube.com/watch?v=Ju2z_WjrIOY}{Structured Predictions}
+  \item \href{http://users.umiacs.umd.edu/~jbg/teaching/CMSC_726/}{Full schedule, lectures, and material}
+\end{itemize*}
+
+\paragraph{Description}
+This course covers classification algorithms, regression algorithms, unsupervised classification algorithms, and multi-layer representation learning, using theoretical frameworks for proving learning bounds using VC dimension and Rademacher complexity.  Inference and solutions will focus on scalable, online frameworks such as stochastic gradient descent.
+
+\paragraph{Learning Objectives} By the end of this course, you’ll be able to take a problem and analyze it to determine which machine learning techniques are appropriate for solving the problem, how to prepare data to use that solution, apply the solution, and to evaluate the results.  For the most common machine learning techniques, you’ll also be able to implement solutions in Python.
+
+
+
+\subsection{INST 808: Quantitative Methods}
+
+\begin{itemize*}
+\item Sample Lecture: \href{https://www.youtube.com/watch?v=-lgKvN6kGBk}{Recreating a Classic Visualization from Menard}
+  \item \href{http://users.umiacs.umd.edu/~jbg/teaching/INST_808/}{Full schedule, lectures, and materials}
+  \end{itemize*}
+
+
+\paragraph{Description}
+Understanding information often requires the application of quantitative methods.  After reviewing essential foundational skills for quantitative analysis: hypothesis testing, manipulating data on a computer, and validating experiments computationally.  We focus on computational quantitative methods instantiated through models that allow you to cluster data for understanding large datasets, label data automatically, and answer questions from information.  These models will be implemented via linear and nonlinear models within a common deep learning framework.
+
+\paragraph{Learning Objectives}
+The goal of this course is to provide information science researchers with the quantitative tools necessary to conduct research: to know when a statistical test is appropriate for data analysis, run the appropriate test, and interpret the results; to cluster and analyze continuous and discrete datasets; to beautifully plot data; and to use toolkits for classification and regression.
+
+\subsection{CMSC 848Q: }
+
+\paragraph{Course Description}
+Computers have made it possible, even easy, to collect vast amounts of text from a wide variety of sources. It is not always clear, however, how to use those data and how to extract useful information from data. This problem is faced in a tremendous range of scholarly, government, business, medical, and scientific applications. The purpose of this course is to teach some of the best and most general approaches to understand how humans and computers can answer questions with this information.
+
+
+\paragraph{Learning Objectives}
+Students will understand the three major paradigms for question answering systems---retrieval-based systems, generation-based systems, and knowledge-based systems---and implement a QA system on text data.  Students will be able to think critically about the goals of QA datasets for either satisfying information needs or probing knowledge.  The final goal of the course is to conduct novel research in the QA domain.
+
+\begin{itemize*}
+\item Sample Lecture: \href{https://www.youtube.com/watch?v=WCIFUJ5oeRA}{Why Watson on Jepardy! was Rigged}
+  \item \href{http://users.umiacs.umd.edu/~jbg/teaching/CMSC_848/}{Full Schedule and Topics}
+  \end{itemize*}
+
+\includepdf[pages=1,pagecommand={\section{Statistics and Comments from YouTube}}]{resume_src/youtube}
+\includepdf[pages=2-]{resume_src/youtube}
+
+\clearpage
+
+\bibliographystyle{resume_src/splncs03}
+
+\bibliography{resume_src/journal-full,resume_src/jbg}
+\noindent\rule{4cm}{0.4pt}
+
+\end{document}
+
