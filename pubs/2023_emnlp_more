@@ -1,10 +1,10 @@
 ~~ Bibtex | article
 ~~ Title | Getting \underline{MoRE} out of \underline{M}ixture \underline{o}f Language Model \underline{R}easoning \underline{E}xperts
-~~ Author | Chenglei Si 
+~~ Author | Chenglei Si and Weijia Shi and Chen Zhao and Luke Zettlemoyer and Jordan Lee Boyd-Graber 
 ~~ Journal | Findings of Empirical Methods in Natural Language Processing
 ~~ Year | 2023
 ~~ Location | Singapore
-~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Large Language Models (or and more correctly and <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ Venue | Refereed Conference
 ~~ Project | DADC*projects/DADC.html
 ~~ Public | There are many ways for a computer to answer a question: a general knowledge question, a common sense question, or a math question.  Each of these types of questions can be answered by a particular kind of expert.  This paper investigates if we can automatically detect what kind of expert is best suited to answer a question and route the question to the correct expert.
