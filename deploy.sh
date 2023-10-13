@@ -51,13 +51,13 @@ if [ ${#CHANGES} -gt 0 ]
         cp ~/public_html/dyn-pubs/venue.txt resume_src/pubs_by_venue.tex
         $PYCOMMAND python/extract_media_coverage.py ~/public_html/dyn-media/category.txt resume_src/media.tex
 	echo "Done media"
-        for FILE in teaching umd_research research
+        for FILE in teaching umd_research research teaching_umd
 	do
 		    pdflatex resume_src/$FILE > log.txt
 		    bibtex $FILE
 	done
 	# echo "Done rsearch"
-        for FILE in public umd short_cv teaching service diversity research german funding_wrapper publications_wrapper funding_wrapper umd_research
+        for FILE in public umd short_cv teaching teaching_umd service diversity research german funding_wrapper publications_wrapper funding_wrapper umd_research
         do
             echo $FILE
 	    echo "---------------------------"
