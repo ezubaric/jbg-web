@@ -1,0 +1,13 @@
+~~ Bibtex | inproceedings
+~~ Title | Not all Fake News is Written: A Dataset and Analysis of Misleading Video Headlines
+~~ Author | YooYeon Sung and Naeemul Hassan and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Year | 2023
+~~ Location | Singapore
+~~ Project | CAREER*../projects/IIS-1652666.html
+~~ Category | Question Answering
+~~ Category | Machine Translation
+~~ Venue | Refereed Conference
+~~ NumPages | 9
+~~ Url | docs/2023_emnlp_explicitation.pdf
+~~ Public | Sometimes when you a translating from one language to another, a literal translation is not enough.  Sometimes to actually understand what is being said, you need additional context.  Professional translators know this, and the process that they use to help a listener is called "explicitation" to capturing cultural differences between source and target audiences. We introduce techniques for automatically generating explicitations, motivated by WikiExpl(a dataset collected from Wikipedia and annotate with human translators), and evaluate the explicitation.
