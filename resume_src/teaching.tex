@@ -2,7 +2,7 @@
 %%%
 %%% Research Summary
 %%%
-%%% Author - Steve Hurder
+%%% Author - Steve Hurder.te
 %%%
 %%% Date Started: October 12, 2009
 %%% Date Completed: November 15 , 2009
@@ -17,7 +17,7 @@
 \usepackage{mdwlist}
 \usepackage{hyperref}
 
-\newcommand{\abr}[1]{\textsc{#1}}
+
 
 %\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
@@ -36,6 +36,7 @@
 \end{center}
   }
 
+\newcommand{\abr}[1]{\textsc{#1}}
 \newcommand{\student}[1]{\vspace{.5cm}\fbox{\parbox{0.95\linewidth}{{\small #1}}}\vspace{.5cm}}
 \newcommand{\newcite}[2]{\capitalisewords{#1} et al.~\cite{#1-#2}}
 
@@ -47,297 +48,12 @@
 \address{University of Maryland}
 \email{jbg@boydgraber.org}
 
-\date{Updated December 2022}
+
+\date{Updated October 2023}
 
 \maketitle
 
-When the pandemic started, I was on sabbatical.  So I didn't need to
-dramatically change the way I taught overnight, thank heavens.
-%
-Moreover, unlike many of my peers, I
-already had a large library of recorded lectures because I've been
-doing a flipped classroom for a decade (below is my very first lecture
-from 2013).
-%
-Nevertheless, I still had to change the way I taught.
-%
-Let me tell you how and why it took me so long to realize it.
-
-\image{first_video_lecture}{}
-
-\section{Flipped Classroom}
-
-If you haven't heard the term before, a flipped classroom is where you
-record the lectures, students watch them before class, and then you
-use the normal class time to answer questions, work through exercises,
-or to talk about tricky issues on homeworks.
-%
-Following the
-suggestions of \newcite{Zappe}{09}, I keep my videos short (around 30
-minutes total, edited for concision and broken into 5--15 minute
-chunks).
-
-For example, when I talk about topic models, I have videos where I:
-  \begin{enumerate}
-  \item \href{https://youtu.be/qvr5J9m7Gmw}{discuss with an interlocutor why
-    topic modeling is important}
-  \item \href{https://www.youtube.com/watch?v=fCmIceNqVog}{introduce what
-    topic modeling is;}
-  \item \href{https://youtu.be/-tKmyHoVZ-g}{walk through Gibbs sampling to fit
-  a topic model from text data;}
-  \item \href{https://youtu.be/-tKmyHoVZ-g}{discuss variational inference in
-    general; and}
-  \item \href{https://youtu.be/smfWKhDcaoA}{then walk through the derivation
-    of variational inference for topic models.}
-  \end{enumerate}
-%
-The technical quality of the videos have
-improved considerably over the years: I've moved from just a screen
-capture to a multiple camera setup with green screen.
-
-Then in class, I answer any questions students have and then we go
-through an exercise.
-%
-For instance, we walk through Gibbs sampling
-works for a toy example.
-%
-Students calculate---by hand---the sampling
-equation and go through the process to get the answer.
-
-% A lot of teachers do not like the flipped classroom, and I can
-% understand why.
-%
-% First, it's a lot of work, and it requires planning.
-% When I co-taught a flipped classroom with an uninitiated professor, he
-% ended up cursing my name for convincing him to take part.
-
-\subsection{Building Bonds}
-
-There's research to suggest that the flipped classroom can help
-students engage and retain information~\cite{Zuber-16}, but that's not
-the real reason that I do it.
-%
-I do it because it helps me get to know the students better.  Computer
-science is the biggest major at Maryland (over three thousand undergrads), and
-\abr{ai}-adjacent fields are even more popular within that major, so my
-classes are getting pretty darn big.
-%
-If I didn't do a flipped
-classroom, I would know so many fewer students.
-
-And the flipped classroom also helps form bonds between students.
-%
-When I was an undergrad, I wanted to take organic chemistry even
-though I was a history / \abr{cs} major.
-%
-That failed because studying for
-that class was pretty social, and I was not a chemistry major, so I
-didn't have an existing support network coming in.
-%
-Now that I'm a
-professor, one of the reasons I like the flipped classroom is that it
-forces people to talk to each other to figure out what questions they
-want to ask, work together to solve practice problems, etc.
-%
-Those
-groups and those connections often carry over to homework groups and
-project groups.
-
-And this helps me serve the few iSchool, Linguistics, and other ``oddball''
-students who are exploring something unfamiliar and---like 2003 Jordan trying out
-organic chemistry---don't have an established buddy group (which many of the
-CS students have).  The flipped classroom helps them get to know the people
-who can help them survive and thrive in the course.
-
-When I once I fell off the wagon and went back to a ``normal'' lecture
-mode in 2016 because it was my first time teaching a class, it had a
-hundred people, and I had no TA.  I was told that students coming in
-would know Python.  But it turned out that a big contingent had only
-played around with the language for a week or two and were unprepared!
-Because I didn't flip the classroom, I only found out when they were turning in the first homework! This wouldn't have happened in a flipped classroom where
-I could see that the struggle was real in front of my own eyes.
-
-So back to March 2020. To make sure that I did not miss out on
-creating educational content, I started creating a weekly pub quiz to
-replace quiz canceled by our usual haunt, closed of course by the
-pandemic.  And as the pandemic dragged on and on, I learned how to
-create interactive, fun environments that got small groups to discuss
-problems, come to a solution, and then share it with the group---the
-same thing that I'd need to move the interactive portion of flipped
-classes online.  And I
-learned how to broadcast with a green screen in real-time and share
-multimedia with the group.  (All outlined in \href{https://docs.google.com/document/d/1YesfpZ_-b2mT3BkTrlOLD5epZxz4uF1DqUkHZHrn344/edit?usp=sharing}{this document} that formed
-the foundation for pandemic-era pub quizzes.)  I used the same
-format and technology for \href{https://sites.google.com/view/qanta/past-events/neurips-2020-efficient-qa}{Google's Efficient QA competition} that I
-hosted in December 2020.
-
-\image{efficient_qa}{}
-
-\section{Hybrid Classrooms}
-
-Given all of this, I thought that when we (mostly) returned into hybrid
-classrooms (i.e., some students in the classroom some were on Zoom), I'd be
-all set for the new world of teaching.  After all, I had already mastered
-asynchronous videos, and I had practiced online-only interactions.  I was not
-ready, however.  In a real classroom, I could tell when a student was lost or
-disengaged.  This is not true when many students are on Zoom.  A hybrid
-classroom has a particularly pernicious failure mode: a student doesn't watch
-the videos, joins online, gets lost in the discussion, and then silently
-disengages.
-
-To make matters worse, many of the improved learning outcomes in
-flipped classrooms come from regular quizzes~\cite{tune-13}, which if
-nothing else would have diagnosed students disengaging. In an attempt
-to make classroom management easier and to lighten the burden on
-students, I suspended quizzes.  Another mistake!
-
-And this isn't transitory.  Although it emerged under unpleasant
-circumstances, I think the hybrid classroom is going to be with us for
-a while for good reasons.  Even after we returned to classrooms,
-students were struggling with visa issues, health issues beyond COVID,
-were attending conferences, were at home for a wedding, or were snowed
-in.  It makes the classroom more equitable and flexible.
-
-And like many faculty, I'm still developing best practice on how to do
-this.  I encourage people to keep their cameras on and I make a big
-deal of the 10\% participation grade.  This creates some
-annoyances\dots for example, students asking questions for the sake of
-hitting the participation quota rather than actually wanting
-information, but it's a small price to pay.  I'm proud that after a
-shaky start and uncooperative \abr{av}, I'm getting good engagement
-from both in-person and Zoom students.
-
-\section{Assignments}
-
-But teaching is not just about lectures.  My courses typically have a
-few small, practical assignments (typically three to five), a midterm,
-and a course project.
-
-The assignments give continuity to the class and allow students to
-practice skills introduced in the class; I encourage students to work
-together to solve homework problems.
-%
-For example, students put together a logistic regression classifier to
-determine if an answer to a question is correct or not.  In my mind,
-an ideal homework assignment has an easy to achieve initial goal but
-leaves room for exploration.  Returning to the logistic regression
-example, just implementing stochastic gradient descent challenges some
-students (and they stop there), but for students who want to explore
-further, they can try out different step sizes and updating schedules
-for extra credit.
-
-The midterm serves as a reality check for both my students and me.  I
-design exams with five to six free response questions (of which
-students must answer a subset) that synthesize disparate concepts from
-the course in a problem context (e.g., for a machine learning course,
-proving the \abr{vc} complexity of a simple hypothesis class).  Based
-on the results of the midterm, I can identify students that might need
-extra help or what areas I need to cover in more detail.
-
-\section{Projects}
-
-I want to make sure that my students can actually use their skills
-once they're done with the class.  Thus, I typically end courses with
-a project.  It reinforces key concepts from the course, connects those
-concepts to the rest of their curriculum and research, and often
-serves as a launching point to things that are useful in the real
-world.  For undergraduate classes, this is more directed: in one class
-they build trivia-playing robots to take on former \textit{Jeopardy!} Champions
-or Victoria Groce from the American version of \textit{The
-  Chase}.\footnote{\href{https://www.youtube.com/watch?v=dyaR7zT_KKg}{https://www.youtube.com/watch?v=dyaR7zT\_KKg}}  For
-graduate courses, projects are more open-ended.  Projects in my
-courses have become a comedy troupe's website, have unearthed
-previously unknown primary sources on local history, helped students
-advance in the workplace, and resulted in academic publications.  As a
-testament to the effectiveness of these relationships, after one
-graduate course I taught (Computational Linguistics II, UMD CMSC 773),
-I ended up publishing papers with four of the eight students.
-
-%% The projects help individuals calibrate the course to their own needs
-%% and abilities; because the project is directed toward things they care
-%% about, the teams working on the projects typically stretch their
-%% abilities more than I could through predefined assignments.
-
-\section{Outreach}
-
-And I like to think that my teaching style has helped learners outside
-the University of Maryland make progress toward learning about the
-interaction between science and society.  The videos on my YouTube
-channel have been viewed a million times and my most popular videos
-about fifty thousand times.  This has offered me new connections:
-e.g., people who come up to me at conferences to say that they learned
-variational inference or TV producers wanting to make a Human
-vs. Computer game show.
-
-A major part of my research is making machine learning accessible to
-high school students.
-%
-My human-computer question answering exhibition matches have attracted
-thousands of interested high school students in \abr{dc}, Chicago,
-Dallas, Atlanta, and Seattle.
-%
-I've also served as a mentor as a part of Maryland's Bitcamp and
-Technica hackathon programs on projects of women and underrepresented
-minorities to build \abr{qa} systems.
-
-\image{atlanta_hsnct}{}
-
-Thus, I'm glad that I had to up my game because of the pandemic,
-starting with an \textit{ad hoc} trivia game in mid March 2020.  I
-think it's a good example of how with technology we can better serve
-those who want to learn, whether they're our students or not.  And
-while some innovations are a matter of necessity rather than of
-careful deliberation and insight, we should still embrace them if they
-help students learn better.
-
-\section{Mentoring}
-
-\subsection{Mentoring Undergraduates}
-
-Like everything else, the pandemic has changed the way I work with
-undergraduate researchers.
-%
-I began a ``anyone welcome'' summer virtual internship for
-undergraduate students to work on small, bite-sized projects that fit
-into a larger research program (usually directed by a mid-career grad
-student).
-%
-Our work with undergraduates has been published in top venues like
-\abr{naacl} and \abr{chi}, and the undergraduates I've worked with
-have gone on to have successful research careers (e.g., Lester Mackey
-became faculty at Stanford before moving to Microsoft Research, Eric
-Wallace is now a PhD student at Berkeley).
-%
-My current star undergraduate student, Chenglei Si (class of 2024) already
-has six publications in top venues.
-
-\subsection{Mentoring Graduate Students}
-
-I've graduated seventeen PhD students and am the chair or co-chair for
-eight current students.  I like to have a group meeting every other
-week with students I'm working with (broadly construed), and
-one-on-one meetings as needed with students, typically once a week. In
-addition, everyone in my group (me included) sends a weekly e-mail to
-the group saying: what they worked on that week; what they plan to work
-on next week; anything that's holding them up or blocking their
-progress. I use an Internet chat program (Slack) to communicate with remote
-students and for lower-latency conversations than e-mail.
-
-In their first year, students typically work on a starter project that
-builds on a senior student's work; this often becomes a paper with the
-new student as a first author.  From there, I work with the student to
-craft a trajectory of papers that will form a foundation for the rest
-of their graduate studies.
-%% While I'm fairly hands-on with conference
-%% and journal submissions, I never edit proposals or dissertations; I
-%% provide verbal feedback and suggestions but students must find their
-%% own voice in the writing process.
-
-After graduation, my students have gone on to good positions in
-industry (e.g., Forough Poursabzi and Ahmed Elgohary at Microsoft
-Research; Pedro Rodriguez at \abr{fair}) and academia (e.g., Alvin
-Grissom II, Assistant Professor at Haverford; He He, Assistant
-Professor at NYU; Mohit Iyyer, Assistant Professor at UMass Amherst).
+\input{teaching_statement}
 
 \section{Example Sylabuses}
 
@@ -347,40 +63,6 @@ accessible. The most recent version of each of my courses is listed at
 \url{http://users.umiacs.umd.edu/~jbg/static/courses.html}.  My
 video lectures are available on
 YouTube at \url{https://www.youtube.com/c/JordanBoydGraber/videos}.
-
-% \section{What Students Say \dots}
-
-% Below are cherry-picked comments from students either sent as an unsolicited
-% e-mail (anonymized and presented with permission) or taken from anonymous course
-% evaluations.
-
-% \student{ I just started a new job on Monday as a Librarian at [awesome place].
-%   I was hired to catalog a special project with the archives and never thought
-%   I'd need anything from [introduction to information technology] \dots And then
-%   on the first day we started talking about the database of objects.  When we
-%   finally got access to the database, I realized it was entirely a SQL database
-%   and had to use everything you taught us last semester to help think of how to
-%   run the queries and ask the designer what it is capable of.  }
-
-
-% \student{
-% I actually had a job interview for a professional librarian job this week and it
-% was about digital libraries.  They asked me questions about what do I know about
-% IP validation, HTML, servers, etc.  Thankfully, fresh out of your class, I was
-% able to say ``actually, I know a TON about this stuff! There was a question on
-% our midterm about IP validations and everything!''
-
-% I wanted to write to let you know that the things I learned in your class this semester are already having a huge impact on my career.
-% }
-
-% \student{I showed the \dots app I made for my final project to my boss, and she
-%   ran downstairs to [important person]. He came upstairs to see my app and to
-%   talk to me about it. Turns out he has a team researching vendors who could
-%   provide our library with a mobile presence much like the one I made for my
-%   final project in your class. He was excited to see what I'm capable of and
-%   will be putting me in touch with the people on the project. This is a big deal
-%   for an entry-level librarian like me.}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
