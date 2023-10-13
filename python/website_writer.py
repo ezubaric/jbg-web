@@ -346,6 +346,11 @@ class IndexElement:
     s = self.author_string(False)
 
     formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\=o", "&omacr;")
+    for latex_format, tag_start, tag_end in [("\\underline{", "<U>", "</U>")]:
+      while latex_format in formatted_title:
+        start, end = formatted_title.split(latex_format, 1)
+        middle, end = end.split("}", 1)
+        formatted_title = start + tag_start + middle + tag_end + end
     if "Title" in self.fields and "Url" in self.fields:
       url = self.fields["Url"][0]
       if url.startswith("http"):
