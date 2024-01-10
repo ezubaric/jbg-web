@@ -1,6 +1,6 @@
 ~~ Bibtex | inproceedings
 ~~ Title | Not all Fake News is Written: A Dataset and Analysis of Misleading Video Headlines
-~~ Author | YooYeon Sung and Naeemul Hassan and Jordan Boyd-Graber
+~~ Author | Yoo Yeon Sung and Naeemul Hassan and Jordan Boyd-Graber
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2023
 ~~ Location | Singapore
@@ -8,6 +8,7 @@
 ~~ Category | Question Answering
 ~~ Category | Machine Translation
 ~~ Venue | Refereed Conference
+~~ Acceptance | 23
 ~~ NumPages | 9
 ~~ URL | docs/2023_emnlp_videoheadline.pdf
 ~~ Link | Video*https://www.youtube.com/watch?v=8N-jH03Fsws
