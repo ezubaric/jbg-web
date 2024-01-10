@@ -8,3 +8,6 @@
 ~~ Venue | Journal
 ~~ Project | DADC*projects/DADC.html
 ~~ Public | There are many ways for a computer to answer a question: a general knowledge question, a common sense question, or a math question.  Each of these types of questions can be answered by a particular kind of expert.  This paper investigates if we can automatically detect what kind of expert is best suited to answer a question and route the question to the correct expert.
+~~ URL | docs/2023_findings_more.pdf
+~~ Link | Video*https://www.youtube.com/watch?v=yw2WYmK-jUk
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/yw2WYmK-jUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
