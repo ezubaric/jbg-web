@@ -11,6 +11,9 @@
 ~~ NumPages | 9
 ~~ Public | As more AI services online are provided by prompted language models, we need to be aware of the weaknesses and exploits of the models.  We present the HackAPrompt competition to help elicit a broad array of exploits that get around large langauge models.
 ~~ Link | Prerecorded Video*https://www.youtube.com/watch?v=tmKgL0eELKM
+~~ Link | Data*http://paper.hackaprompt.com
+~~ Acceptance | 23
+~~ Note | This paper was selected as the Best Theme Paper at EMNLP 2023 (1 of 4909)
 ~~ Link | Award Video*https://www.youtube.com/watch?v=cmge3fFfZMc
 ~~ URL | docs/2023_emnlp_hackaprompt.pdf
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/cmge3fFfZMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
