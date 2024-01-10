@@ -10,3 +10,6 @@
 ~~ Venue | Refereed Conference
 ~~ NumPages | 9
 ~~ Public | Sometimes when you a translating from one language to another, a literal translation is not enough.  Sometimes to actually understand what is being said, you need additional context.  Professional translators know this, and the process that they use to help a listener is called "explicitation" to capturing cultural differences between source and target audiences. We introduce techniques for automatically generating explicitations, motivated by WikiExpl(a dataset collected from Wikipedia and annotate with human translators), and evaluate the explicitation.
+~~ URL | docs/2023_emnlp_explicitation.pdf
+~~ Link | Video*https://www.youtube.com/watch?v=6R5WVhx9Fsw
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/6R5WVhx9Fsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
