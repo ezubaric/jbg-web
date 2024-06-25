@@ -9,8 +9,8 @@ import json
 class Course:
     def __init__(self):
 
-        self.templates = {}
-        self.templates["class"] = """
+        self._template = {}
+        self._template["class"] = """
         <TR>
            <TD> ~~~DATE~~~ </TD> <TD> ~~~SUBJECT~~~ </TD>
            <TD></TD>
@@ -24,13 +24,13 @@ class Course:
         </TR>
         """
         
-        self.templates["hw"] = """
+        self._template["homework"] = """
         <TR>
             <TD> ~~~DATE~~~ </TD> <TD> Homework Due </TD> <TD> <A HREF="~~~CONTENT~~~">~~~SUBJECT~~~</TD> <TD></TD>
         </TR>
         """
 
-        self.templates["holiday"] = """
+        self._template["holiday"] = """
         <TR>
           <TD> ~~~DATE~~~ </TD> <TD BGCOLOR="#FF0000"> ~~~SUBJECT~~~ </TD> <TD>   <TD>
         </TD>
@@ -88,13 +88,13 @@ class Course:
 
         for day, homework in zip(homework_days, self._hw_sequence):
             if homework is not None:
-                day_lookup[day]["HW"] = homework
+                day_lookup[day]["homework"] = homework
 
         for day, lecture_material in zip(instruction_days, self._class_sequence):
-            day_lookup[day]["INST"] = lecture_material
+            day_lookup[day]["class"] = lecture_material
 
         for day in noclass:
-            day_lookup[day]["HOL"] = self._noclass[day]
+            day_lookup[day]["holiday"] = self._noclass[day]
         
         return day_lookup
         
@@ -103,26 +103,29 @@ class Course:
 
         days = self.class_dates()
         
-        day_keys = days.keys()
+        day_keys = list(days.keys())
         day_keys.sort()
 
+        html = ""
         for day in day_keys:
-            for element_type in days:
-                formatted_date = XXX
-                
-                subject, content = days[element_type]
+            for element_type in days[day]:
+                formatted_date = day.strftime("%d %B, %Y")
 
-                html = self._template[element_type].replace("~~~SUBJECT~~~", subject)
-                html = html.replace("~~~DATE~~~", formatted_date)
-                html = html.replace("~~~CONTENT~~~", content)                                
+                print(days[day][element_type])
+                if days[day][element_type] == "":
+                    continue
 
-                
-                if element_type == "INST":
-                    html += ""
-                elif element_type == "HW":
-                    html += ""
-                elif element_type == "HOL":
-                    html += ""
+                try:
+                    subject, content = days[day][element_type]
+                except ValueError:
+                    subject = days[day][element_type]
+                    content = ""
+
+                contribution = self._template[element_type].replace("~~~SUBJECT~~~", subject)
+                contribution = contribution.replace("~~~DATE~~~", formatted_date)
+                contribution = contribution.replace("~~~CONTENT~~~", content)
+
+                html += contribution
         return html
 
 if __name__ == "__main__":
