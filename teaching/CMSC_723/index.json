@@ -3,19 +3,19 @@
 	       "end": "2024-12-09",
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
-    "topics": {"intro": {"Readings": "Speech and Language Processing Chapter 1",
+    "topics": {"intro": {"Readings": ["Speech and Language Processing Chapter 1"],
                          "Topics": ["What is the course about? (jbg)", "Structure of the course (nhf)", "Discussion of co-teaching / pedagogy / delivery (jbg)", "Linguistic Background (nhf)", "Programming Background (jbg)", "Math Background (nhf)"],
 			 "Optional Readings (Background)": [["Python (and programming) introductory course", "https://www.coursera.org/course/programming1"],
 							    ["Statistics review (first few weeks)", "../INST_414"],
 							    ["Probability primer", "http://www.sjsu.edu/faculty/gerstman/StatPrimer/probability.pdf"],
 							    ["How the statistical revolution changed (computational) linguistics", "http://aclweb.org/anthology/W/W09/W09-0103.pdf"],
-							    ["Deep learning revolution", "http://mitp.nautil.us/article/170/last-words-computational-linguistics-and-deep-learning"]]
+							    ["Deep learning revolution", "http://mitp.nautil.us/article/170/last-words-computational-linguistics-and-deep-learning"]],
 			 "Math Review": [["Functions", "https://youtu.be/MjeXZ7Ea89g"],
 					 ["Distributions", "https://youtu.be/qc5QewourIU"],
 					 ["Vectors", "https://youtu.be/kXLGnrzw1zk"],
 					 ["Matrix math", "https://youtu.be/LEJpb8v_RQQ"],
 					 ["Gradients and Optimization", "https://youtu.be/TG6PIKulK0Q"]]}
-	      }
+	      },
     "class_sequence": [["What the class is about", "intro"],
 		       ["What's a sentence, morepheme, type, token, word, etc.", "ling_prelim"],
 		       ["Classical language models", "lm"],

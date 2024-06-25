@@ -65,7 +65,8 @@ class Course:
                 else:
                     html += '\t\t\t<LI> %s\n' % name
 
-            html += "\t\t<\UL>\n"
+            html += '\t\t</UL>\n'
+
         return html
                 
         
