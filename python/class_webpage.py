@@ -43,6 +43,31 @@ class Course:
         with open(path, 'r') as infile:
             self._noclass = json.loads(infile.read())
         self._noclass = dict((datetime.strptime(x[0], "%Y-%m-%d").date(), x[1]) for x in self._noclass)
+
+    def render_topic(self, topic):
+        if topic not in self._topics:
+            return ""
+
+        html = ""
+        for category in self._topics[topic]:
+            html += "\t\t<B>%s</B>\n" % category
+            html += "\t\t<UL>\n"
+
+            for resource in self._topics[topic][category]:
+                try:
+                    name, link = resource
+                except ValueError:
+                    name = resource
+                    link = ""
+
+                if link:
+                    html += '\t\t\t<LI> <A HREF="%s">%s</A>\n' % (link, name)
+                else:
+                    html += '\t\t\t<LI> %s\n' % name
+
+            html += "\t\t<\UL>\n"
+        return html
+                
         
     def load_json(self, path):
         with open(path, 'r') as infile:
@@ -121,6 +146,9 @@ class Course:
                     subject = days[day][element_type]
                     content = ""
 
+                if element_type == "class":
+                    content = self.render_topic(content)
+
                 contribution = self._template[element_type].replace("~~~SUBJECT~~~", subject)
                 contribution = contribution.replace("~~~DATE~~~", formatted_date)
                 contribution = contribution.replace("~~~CONTENT~~~", content)
@@ -131,8 +159,9 @@ class Course:
 if __name__ == "__main__":
     c = Course()
     c.load_holidays("teaching/holidays.json")
-    c.load_json("teaching/GRAD_IND/index.json")
+    for course in ["teaching/GRAD_IND/index.json", "teaching/CMSC_723/index.json"]:
+        c.load_json(course)
+        
+        print(c.class_dates())
 
-    print(c.class_dates())
-
-    print(c.render())
+        print(c.render())
