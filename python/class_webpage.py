@@ -8,7 +8,36 @@ import json
 
 class Course:
     def __init__(self):
-        None
+
+        self.templates = {}
+        self.templates["class"] = """
+        <TR>
+           <TD> ~~~DATE~~~ </TD> <TD> ~~~SUBJECT~~~ </TD>
+           <TD></TD>
+        </TR>
+
+        <TR>
+          <TD BGCOLOR="DDDDDD"></TD>
+          <TD COLSPAN="3" BGCOLOR="DDDDDD">
+              ~~~CONTENT~~~
+          </TD>
+        </TR>
+        """
+        
+        self.templates["hw"] = """
+        <TR>
+            <TD> ~~~DATE~~~ </TD> <TD> Homework Due </TD> <TD> <A HREF="~~~CONTENT~~~">~~~SUBJECT~~~</TD> <TD></TD>
+        </TR>
+        """
+
+        self.templates["holiday"] = """
+        <TR>
+          <TD> ~~~DATE~~~ </TD> <TD BGCOLOR="#FF0000"> ~~~SUBJECT~~~ </TD> <TD>   <TD>
+        </TD>
+        </TR>  
+
+        """
+
 
     def load_holidays(self, path):
         with open(path, 'r') as infile:
@@ -47,9 +76,11 @@ class Course:
         homework_days = self.date_range(self.start, self.end, self.hw_day)
         homework_days = [x for x in homework_days if x not in self._noclass]
 
-        days = [(x, "INST") for x in instruction_days] + \
-               [(x, "HOL") for x in noclass] + \
-               [(x, "HW") for x in homework_days]
+        days = [(x, "class") for x in instruction_days] + \
+               [(x, "holiday") for x in noclass] + \
+               [(x, "homework") for x in homework_days]
+
+        days += [(datetime.strptime(x, "%Y-%m-%d").date(), "special") for x in self._specials]
             
         days.sort()
 
@@ -67,7 +98,7 @@ class Course:
         
         return day_lookup
         
-    def render(self, class_template, hw_template, hol_template):
+    def render(self):
         html = ""
 
         days = self.class_dates()
@@ -77,6 +108,15 @@ class Course:
 
         for day in day_keys:
             for element_type in days:
+                formatted_date = XXX
+                
+                subject, content = days[element_type]
+
+                html = self._template[element_type].replace("~~~SUBJECT~~~", subject)
+                html = html.replace("~~~DATE~~~", formatted_date)
+                html = html.replace("~~~CONTENT~~~", content)                                
+
+                
                 if element_type == "INST":
                     html += ""
                 elif element_type == "HW":
@@ -91,3 +131,5 @@ if __name__ == "__main__":
     c.load_json("teaching/GRAD_IND/index.json")
 
     print(c.class_dates())
+
+    print(c.render())
