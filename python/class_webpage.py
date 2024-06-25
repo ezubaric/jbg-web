@@ -93,7 +93,8 @@ class Course:
         instruction_days = []
 
         for day in self.class_days:
-            instruction_days += self.date_range(self.start, self.end, day)
+            contribution = self.date_range(self.start, self.end, day)
+            instruction_days += contribution
 
         print(instruction_days, self._noclass)
         noclass = [x for x in instruction_days if x in self._noclass]
@@ -102,9 +103,9 @@ class Course:
         homework_days = self.date_range(self.start, self.end, self.hw_day)
         homework_days = [x for x in homework_days if x not in self._noclass]
 
-        days = [(x, "class") for x in instruction_days] + \
-               [(x, "holiday") for x in noclass] + \
-               [(x, "homework") for x in homework_days]
+        days = [(x, "class") for x in sorted(instruction_days)] + \
+               [(x, "holiday") for x in sorted(noclass)] + \
+               [(x, "homework") for x in sorted(homework_days)]
 
         days += [(datetime.strptime(x, "%Y-%m-%d").date(), "special") for x in self._specials]
             
@@ -159,7 +160,8 @@ class Course:
 
 if __name__ == "__main__":
     c = Course()
-    c.load_holidays("teaching/holidays.json")
+    c.load_holidays("teaching/holidays.json")    
+    
     for course in ["teaching/GRAD_IND/index.json", "teaching/CMSC_723/index.json"]:
         c.load_json(course)
         
