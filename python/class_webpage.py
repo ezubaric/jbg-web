@@ -103,9 +103,9 @@ class Course:
         homework_days = self.date_range(self.start, self.end, self.hw_day)
         homework_days = [x for x in homework_days if x not in self._noclass]
 
-        days = [(x, "class") for x in sorted(instruction_days)] + \
-               [(x, "holiday") for x in sorted(noclass)] + \
-               [(x, "homework") for x in sorted(homework_days)]
+        days = [(x, "class") for x in instruction_days] + \
+               [(x, "holiday") for x in noclass] + \
+               [(x, "homework") for x in homework_days]
 
         days += [(datetime.strptime(x, "%Y-%m-%d").date(), "special") for x in self._specials]
             
@@ -117,7 +117,7 @@ class Course:
             if homework is not None:
                 day_lookup[day]["homework"] = homework
 
-        for day, lecture_material in zip(instruction_days, self._class_sequence):
+        for day, lecture_material in zip(sorted(instruction_days), self._class_sequence):
             day_lookup[day]["class"] = lecture_material
 
         for day in noclass:
