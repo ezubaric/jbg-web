@@ -1,3 +1,4 @@
+from pyluach import dates
 
 from datetime import datetime
 import pandas as pd
@@ -124,7 +125,24 @@ class Course:
             day_lookup[day]["holiday"] = self._noclass[day]
         
         return day_lookup
+
+    def pretty_date(self, day):
+        """
+        Create 
+        """
         
+        hebrew = dates.HebrewDate.from_pydate(day)        
+        jewish_holiday = hebrew.holiday()
+
+        hebrew_fmt = hebrew.hebrew_date_string()
+        gregorian_fmt = day.strftime("%A, %d. %B %Y")
+        
+        if jewish_holiday:
+            template = '<div title="%s">%s [%s]</div>' % (hebrew_fmt, gregorian_fmt, jewish_holiday)
+        else:
+            template = '<div title="%s">%s</div>' % (hebrew_fmt, gregorian_fmt)
+        return template
+    
     def render(self):
         html = ""
 
@@ -136,7 +154,7 @@ class Course:
         html = ""
         for day in day_keys:
             for element_type in days[day]:
-                formatted_date = day.strftime("%d %B, %Y")
+                formatted_date = self.pretty_date(day)
 
                 print(days[day][element_type])
                 if days[day][element_type] == "":
