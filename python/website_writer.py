@@ -1,3 +1,5 @@
+from class_webpage import Course
+
 from glob import glob
 from string import capwords
 from datetime import date, datetime
@@ -505,6 +507,16 @@ class WebsiteWriter:
           contents.append(val)
       return contents
 
+  def add_teaching(self, path):
+      self.courses = Course()
+      self.courses.load_holidays("teaching/holidays.json")
+      
+      for ii in glob(path):
+          self.courses.load_json(ii)
+          course = ii.split("/")[-2]
+
+          global_replace[course] = self.courses.render()
+  
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
                 default_sort="Year"):
     index = {}
