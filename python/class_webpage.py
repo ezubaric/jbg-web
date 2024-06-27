@@ -177,11 +177,13 @@ class Course:
         return html
 
 if __name__ == "__main__":
-    c = Course()
-    c.load_holidays("teaching/holidays.json")    
+    from glob import glob
     
-    for course in ["teaching/GRAD_IND/index.json", "teaching/CMSC_723/index.json"]:
-        c.load_json(course)
+    c = Course()
+    c.load_holidays("teaching/holidays.json")
+    
+    for ii in glob("teaching/*/index.json"):
+        c.load_json(ii)
         
         print(c.class_dates())
 
