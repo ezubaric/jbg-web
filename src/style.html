@@ -1307,11 +1307,15 @@ better/easier than that of latex.  </li>
   <ol>
     <li> One month before the deadline: send the paper to people you respect and trust to see if they
     have comments
-    <li> Three weeks before the deadline: clean up your code and replicate your results (undoing any
+    <li> 10 days before the deadline:
+      <ul>
+	<li> clean up your code and replicate your results (undoing any
     last-minute hacks)
-    <li> Two weeks before the deadline: Look through other papers to see if there are new
-    things to cite, remind all authors of the submission and how to contribute.
-    <li> One week before the deadline: incorporate all coauthor comments.
+	<li> 10 days before the deadline: before the deadline: Look through other papers to see if there are new
+    things to cite, remind all authors of the submission and how to
+	  contribute.
+      </ul>
+    <li> Five days before the deadline: incorporate all coauthor comments.
     <li> One day before the deadline, make sure you have a conforming
     submission, you have filled out all of the metadata, and you have
     everything ready to submit.  If the conference allows you to
@@ -1392,16 +1396,27 @@ Work on any of the more difficult TODOs
 	 <li> Once you submit the camera ready:
 	    <ul>
 	      <li> Put it on your webpage and send the final PDFs to
-	      the authors
-	      <li> Make a pull request on <A
-    HREF="https://github.com/ezubaric/jbg-web/tree/master/pubs">my
-    webpage</A> to add an entry, look at other examples to see what's
-	      needed: the relevant project, links to code, and an
-    accessible abstract.
-	      <li> Notify your department's publication mailing list
+		the authors
+	      <li> Add it to my webpage.  This happens through a <A
+    HREF="https://github.com/ezubaric/jbg-web/pulls">pull request</A>:
+		<ul>
+		  <li> Add a new file in the <A HREF="">pubs directory</A>,
+		  with the filename YEAR_VENUE_WORD where WORD is the most
+		  memorable word from your title (see the other filenames for
+		    examples).  This file should (see other files for examples):
+		    <ul>
+		      <li> Link the project that funds you via the webpage
+		      <li> Include an accessible to the public abstract
+		      <li> Link to the data on DRUM and/or Github
+		    </ul>
+		  <li> Upload the final PDF to the src_docs folder.
+		  <li> Later on, when we get the acceptance rate, make sure to
+		  update that (again with a pull request).
+		</ul>
 	      <li> Update your CV
 	      <li> Post any associated data and code on your webpage
-	      <li> Move the paper to our publications repo
+	      <li> Move the paper to our <A HREF="">publications repo</A>
+	      <li> Upload your data to <A HREF="https://www.lib.umd.edu/research/oss/publishing-and-digital-projects/repository-services/drum">DRUM</A>
 	    </ul>
   </ol>
   
