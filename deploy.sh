@@ -2,6 +2,7 @@
 
 # Restore deleted files
 git checkout $(git ls-files -d)
+git pull
 
 CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_src/`
 
