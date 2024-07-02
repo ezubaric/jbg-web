@@ -17,7 +17,7 @@
 					 ["Gradients and Optimization", "https://youtu.be/TG6PIKulK0Q"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
-		       ["What's a sentence, morepheme, type, token, word, etc. (nhf)", "ling_prelim"],
+		       ["What's a sentence, morpheme, type, token, word, etc. (nhf)", "ling_prelim"],
 		       ["Speech representation (nhf)", "speech"],
 		       ["Classical language models (jbg)", "lm"],		       
 		       ["Classification and evaluation (nhf)", "classification"],
