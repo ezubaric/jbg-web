@@ -1,7 +1,10 @@
 #!/bin/bash
 cd ~/repositories/jbg-web/
 
-# Restore deleted files
+# if run on UMIACS, cd into right directory
+cd /nfshomes/jbg/repositories/jbg-web
+
+# Restore deleted files, update repo
 git checkout $(git ls-files -d)
 git pull
 
