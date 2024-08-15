@@ -44,7 +44,7 @@
 		       ["Annotation (nhf)", "annotation"],
 		       ["Writing a Paper (jbg)", "writing"],
 		       ["Computational Social Science (jbg)", "css"],
-		       ["Dialog (nhf)", "dialog"],
+		       ["Low-resource Settings (nhf)", "lowresource"],
 		       ["Careers in NLP / AUA", "careers"],
 		       ["Poster Day", ""]],
     "hw_sequence": [["Limerick", ""],
