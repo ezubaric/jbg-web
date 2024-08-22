@@ -20,7 +20,7 @@
 							 ["Prediction and Entropy of Printed English", "https://languagelog.ldc.upenn.edu/myl/Shannon1950.pdf"],
 							 ["A Bayesian Interpretation of Interpolated Kneser-Ney", "https://www.stats.ox.ac.uk/~teh/research/compling/hpylm.pdf"]],
 		      "Topics": ["Entropy", "Cross-Entropy", "Bigram Language Models", "Chinese Restaurant Processes"],
-		      "Videos": [["Perplexity", "https://www.youtube.com/watch?v=kdaX9p6Uc9k"]},							 
+		      "Videos": [["Perplexity", "https://www.youtube.com/watch?v=kdaX9p6Uc9k"]]}							 
 	      },
     "class_sequence": [["What the class is about", "intro"],
 		       ["What's a sentence, morpheme, type, token, word, etc. (nhf)", "ling_prelim"],
