@@ -97,8 +97,10 @@ class Course:
             contribution = self.date_range(self.start, self.end, day)
             instruction_days += contribution
 
-        print(instruction_days, self._noclass)
         noclass = [x for x in instruction_days if x in self._noclass]
+        instruction_days = [x for x in instruction_days if x not in self._noclass]
+        
+        print(instruction_days, self._noclass)        
         print("NOCLASS", noclass)
 
         homework_days = self.date_range(self.start, self.end, self.hw_day)
