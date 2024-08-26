@@ -24,7 +24,7 @@
 							 ["A Bayesian Interpretation of Interpolated Kneser-Ney", "https://www.stats.ox.ac.uk/~teh/research/compling/hpylm.pdf"]],
 		      "Topics": ["Entropy", "Cross-Entropy", "Bigram Language Models", "Chinese Restaurant Processes"],
 		      "Videos": [["Perplexity", "https://www.youtube.com/watch?v=kdaX9p6Uc9k"]]},							 
-	       "speech": {"Readings": [["Speech and Language Processing Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
+	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
 			 "Topics": ["Waveforms", "Spectrograms", "Formants", "MFCCs"],
 	       	         "Resources": [["IPA chart", "https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/"]]}
