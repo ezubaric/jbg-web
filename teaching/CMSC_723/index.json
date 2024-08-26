@@ -15,6 +15,8 @@
 					 ["Vectors", "https://youtu.be/kXLGnrzw1zk"],
 					 ["Matrix math", "https://youtu.be/LEJpb8v_RQQ"],
 					 ["Gradients and Optimization", "https://youtu.be/TG6PIKulK0Q"]]},
+	       "ling_prelim": {"Readings": [["Jackendoff Patterns in the Mind Chapter 6", "https://drive.google.com/file/d/1gczrF1tDyErmvcanDj_iw1fLMeYhILwJ/view?usp=sharing"], ["Language Files Chapter 4", "https://drive.google.com/file/d/1NhJrY062aZ0nv2BpozZlKJV5geFuAAhs/view?usp=drive_link"], ["Language Files Chapter 6.6", "https://drive.google.com/file/d/12OazqK-bV1ss59JjS4siNJpnDle0EJPs/view?usp=drive_link"]],
+			 "Topics": ["Linguistic analysis", "Syntax", "Morphology", "Words"]},
 	       "speech": {"Readings": [["Speech and Language Processing Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
 			 "Topics": ["Waveforms", "Spectrograms", "Formants", "MFCCs"],
