@@ -4,7 +4,7 @@
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
     "topics": {"intro": {"Readings": ["Speech and Language Processing Chapter 1"],
-                         "Topics": [["What is the course about?", "intro_grad_nlp.pdf"], "Structure of the course (nhf)", ["Discussion of co-teaching / pedagogy / delivery (jbg)", "intro_howto.pdf"], "Linguistic Background (nhf)", ["Programming Background (jbg)", "intro_python.pdf"], ["Math Background (jbg)", "intro_math.pdf"], "Math Background (nhf)"],
+                         "Topics": [["What is the course about?", "intro_grad_nlp.pdf"], "Structure of the course (nhf)", ["Discussion of co-teaching / pedagogy / delivery (jbg)", "intro_howto.pdf"], "Linguistic Background (nhf)", ["Programming Background (jbg)", "intro_python.pdf"], ["Math Background (jbg)", "intro_math.pdf"]],
 			 "Optional Readings (Background)": [["Python (and programming) introductory course", "https://www.coursera.org/course/programming1"],
 							    ["Statistics review (first few weeks)", "../INST_414"],
 							    ["Probability primer", "http://www.sjsu.edu/faculty/gerstman/StatPrimer/probability.pdf"],
