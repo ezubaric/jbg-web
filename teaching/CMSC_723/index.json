@@ -16,6 +16,7 @@
 					 ["Matrix math", "https://youtu.be/LEJpb8v_RQQ"],
 					 ["Gradients and Optimization", "https://youtu.be/TG6PIKulK0Q"]]},
 	       "ling_prelim": {"Readings": [["Jackendoff Patterns in the Mind Chapter 6", "https://drive.google.com/file/d/1gczrF1tDyErmvcanDj_iw1fLMeYhILwJ/view?usp=sharing"], ["Language Files Chapter 4", "https://drive.google.com/file/d/1NhJrY062aZ0nv2BpozZlKJV5geFuAAhs/view?usp=drive_link"], ["Language Files Chapter 6.6", "https://drive.google.com/file/d/12OazqK-bV1ss59JjS4siNJpnDle0EJPs/view?usp=drive_link"]],
+		         "Optional Readings (Reference)": [["Bender Linguistic Fundamentals for Natural Language Processing", "https://drive.google.com/file/d/1X_oc4E9asNjA5lxpiroA2c7dLgnyh4eD/view?usp=sharing"]],
 			 "Topics": ["Linguistic analysis", "Syntax", "Morphology", "Words"]},
 	       "lm": {"Readings": [["SLP3 Chapter 3", "https://web.stanford.edu/~jurafsky/slp3/3.pdf"]],
 		      "Optional Readings (Background)": [["An Empirical Study of Smoothing Techniques for Language Modeling", "https://aclanthology.org/P96-1041/"],
