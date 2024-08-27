@@ -60,7 +60,7 @@
 			["Poster day", ""]],
     "hw_sequence": [["Limerick", "https://github.com/Pinafore/cl1-hw/tree/master/limerick"],
 		     "",
-		    ["Bigram Language Model", ""],
+		    ["Bigram Language Model", "https://github.com/Pinafore/cl1-hw/tree/master/bigram_lm"],
 		    ["Classification", ""],
 		    ["Feature Engineering", ""],
 		    ["DAN", ""],
