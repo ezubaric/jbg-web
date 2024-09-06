@@ -27,7 +27,8 @@
 	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
 			 "Topics": ["Waveforms", "Spectrograms", "Formants", "MFCCs"],
-	       	         "Resources": [["IPA chart", "https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/"]]}
+	       	         "Resources": [["IPA chart", "https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/"]]},
+	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
 		       ["What's a sentence, morpheme, type, token, word, etc. (nhf)", "ling_prelim"],
