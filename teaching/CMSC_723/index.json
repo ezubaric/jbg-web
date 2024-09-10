@@ -62,7 +62,7 @@
     "hw_sequence": [["Limerick", "https://github.com/Pinafore/cl1-hw/tree/master/limerick"],
 		     "",
 		    ["Bigram Language Model", "https://github.com/Pinafore/cl1-hw/tree/master/bigram_lm"],
-		    ["Classification", ""],
+		    ["Classification", "https://github.com/Pinafore/cl1-hw/tree/master/lr_speech"],
 		    ["Feature Engineering", ""],
 		    ["DAN", ""],
 		    ["Fine Tuning", ""],
