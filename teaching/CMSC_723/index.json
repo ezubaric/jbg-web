@@ -22,10 +22,6 @@
 		      "Optional Readings (Background)": [["An Empirical Study of Smoothing Techniques for Language Modeling", "https://aclanthology.org/P96-1041/"],
 							 ["Prediction and Entropy of Printed English", "https://languagelog.ldc.upenn.edu/myl/Shannon1950.pdf"],
 							 ["A Bayesian Interpretation of Interpolated Kneser-Ney", "https://www.stats.ox.ac.uk/~teh/research/compling/hpylm.pdf"]],
-<<<<<<< HEAD
-		      "Topics": [["Bigram Language Models", "lm_bigram.pdf"], ["Evaluation", "lm_eval.pdf"], ["Chinese Restaurant Processes", "lm_crp.pdf"]],
-		      "Videos": [["Bigram Language Models", "https://www.youtube.com/watch?v=rO80BH5FI3s"], ["Shannon Game", "https://www.youtube.com/watch?v=0shft1gokac"], ["Perplexity", "https://www.youtube.com/watch?v=kdaX9p6Uc9k"], ["Chinese Restaurant Process", "https://www.youtube.com/watch?v=4wa2WyDrgMA"]]},
-=======
 		      "Topics": [["Bigram Language Models", "lm_bigram.pdf"],
 				 ["Evaluation", "lm_perplexity.pdf"],
 				 ["Backoff", "lm_crp.pdf"]],
@@ -33,8 +29,21 @@
 				 ["Shannon Game", "https://www.youtube.com/watch?v=0shft1gokac"],
 				 ["Perplexity", "https://www.youtube.com/watch?v=kdaX9p6Uc9k"],
 				 ["Backoff", "https://www.youtube.com/watch?v=4wa2WyDrgMA"]
-				]},							 
->>>>>>> d8b6733e (??)
+				]},
+	       "pytorch": {"Readings": [["SLP3 Chapter 7", "https://web.stanford.edu/~jurafsky/slp3/7.pdf"],
+					["Pytorch Tutorial", "https://pytorch.org/tutorials/beginner/basics/intro.html"]],
+			   "Topics": [["Deep Learning", "deep_intro.pdf"],
+				      ["XOR", "deep_xor_ex.pdf"],				      
+				      ["Backprop", "deep_backprop.pdf"],
+				      ["Pytorch", "deep_compgraph.pdf"],
+				      ["DAN in Pytorch", "deep_dan.pdf"]
+				     ],
+			   "Videos": [["Deep Learning", "https://www.youtube.com/watch?v=-XSPumV6v00"],
+				      ["Backprop", "https://www.youtube.com/watch?v=QRUfFGfImhg"],
+				      ["Frameworks", "https://youtu.be/FJQl0ujTAGw"],
+				      ["Pytorch", "https://youtu.be/AZwwDIV2vcI"],
+				      ["DAN", "https://youtu.be/losFCNJbnZY"]
+				     ]},
 	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
 			 "Topics": [["Waveforms", "https://drive.google.com/file/d/1Gi3T3vhGH3mDBn7Om7azpMlmLrAtCMKd/view?usp=sharing"], "Spectrograms", "Formants", "MFCCs"],
