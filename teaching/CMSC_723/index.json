@@ -45,8 +45,7 @@
 				      ["DAN", "https://youtu.be/losFCNJbnZY"]
 				     ]},
 	       "word2vec": {"Readings": [["SLP 6", "https://web.stanford.edu/~jurafsky/slp3/6.pdf"]],
-			    "Optional Readings": [["Neural Word Embedding
-as Implicit Matrix Factorization", "https://proceedings.neurips.cc/paper_files/paper/2014/file/feab05aa91085b7a8012516bc3533958-Paper.pdf"],
+			    "Optional Readings": [["Neural Word Embedding as Implicit Matrix Factorization", "https://proceedings.neurips.cc/paper_files/paper/2014/file/feab05aa91085b7a8012516bc3533958-Paper.pdf"],
 						  ["GloVe", "https://nlp.stanford.edu/projects/glove/"]],
 			    "Videos": [["Distributed/Distributional Representations", "https://youtu.be/vErGaMc80WM"],
 				       ["word2vec algorithm", "https://youtu.be/QyrUentbkvw"],
