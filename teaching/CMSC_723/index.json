@@ -49,7 +49,7 @@
 						  ["GloVe", "https://nlp.stanford.edu/projects/glove/"]],
 			    "Videos": [["Distributed/Distributional Representations", "https://youtu.be/vErGaMc80WM"],
 				       ["word2vec algorithm", "https://youtu.be/QyrUentbkvw"],
-				       ["tf-idf", "https://youtu.be/A5ounv0D_cs"],
+				       ["tf-idf", "https://youtu.be/A5ounv0D_cs"]
 				       ]},
 	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
