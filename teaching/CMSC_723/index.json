@@ -34,8 +34,8 @@
 					["Pytorch Tutorial", "https://pytorch.org/tutorials/beginner/basics/intro.html"]],
 			   "Topics": [["Deep Learning", "deep_intro.pdf"],
 				      ["XOR", "deep_xor_ex.pdf"],				      
-				      ["Backprop", "deep_backprop.pdf"],
 				      ["Pytorch", "deep_compgraph.pdf"],
+				      ["Logreg", "deep_logreg.pdf"],
 				      ["DAN in Pytorch", "deep_dan.pdf"]
 				     ],
 			   "Videos": [["Deep Learning", "https://www.youtube.com/watch?v=-XSPumV6v00"],
