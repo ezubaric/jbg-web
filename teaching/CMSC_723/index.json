@@ -50,7 +50,7 @@
 			    "Topics": [["Distributional and Distributed Representations", "dist_intro.pdf"],
 				       ["Sparse Representations", "dist_sparse.pdf"],
 				       ["Word2Vec", "dist_word2vec.pdf"],
-				       ["Training Distributional Models", "dist_train.pdf"]]
+				       ["Training Distributional Models", "dist_train.pdf"]],
 			    "Videos": [["Distributed/Distributional Representations", "https://youtu.be/vErGaMc80WM"],
 				       ["word2vec algorithm", "https://youtu.be/QyrUentbkvw"],
 				       ["tf-idf", "https://youtu.be/A5ounv0D_cs"]
