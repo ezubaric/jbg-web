@@ -58,7 +58,7 @@
 	       "rnn": {"Readings": [["SLP 8", "https://web.stanford.edu/~jurafsky/slp3/8.pdf"]],
 		       "Optional Readings": [["Backpack Language Models", "https://arxiv.org/abs/2305.16765"]]},
 	       "transformer": {"Readings": [["SLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]],
-			       "Optional Readings": [["Annotated Transformer": "https://nlp.seas.harvard.edu/annotated-transformer/"],
+			       "Optional Readings": [["Annotated Transformer", "https://nlp.seas.harvard.edu/annotated-transformer/"],
 						     ["Illustrated Transformer", "https://jalammar.github.io/illustrated-transformer/"]]},
 	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
