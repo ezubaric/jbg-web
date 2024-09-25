@@ -74,6 +74,7 @@
 			 "Optional Readings (Background)": [["Phonetics", "https://web.stanford.edu/~jurafsky/slp3/H.pdf"]],
 			 "Topics": [["Waveforms", "https://drive.google.com/file/d/1Gi3T3vhGH3mDBn7Om7azpMlmLrAtCMKd/view?usp=sharing"], "Spectrograms", "Formants", "MFCCs"],
 	       	         "Resources": [["IPA chart", "https://www.internationalphoneticalphabet.org/ipa-sounds/ipa-chart-with-sounds/"]]},
+	   	 "llm": {"Readings": [["SLP3 Chapter 10", "https://web.stanford.edu/~jurafsky/slp3/10.pdf"]]},
 	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]],
 			"Topics": [["Logistic regression", "https://drive.google.com/file/d/1qYeKKRAGbrBsSARR7VNe3U3sELmN0N4G/view?usp=drive_link"], "Training and test data", "Loss functions", "Gradient descent"]}
 	      },
