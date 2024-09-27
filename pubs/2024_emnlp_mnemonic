@@ -1,8 +1,10 @@
-~~ Bibtex | article
+~~ Bibtex | inproceedings
 ~~ Title | A SMART Mnemonic Sounds like "Glue Tonic": Mixing LLMs with Student Feedback to Make Mnemonic Learning Stick
 ~~ Author | Nishant Balepur and Matthew Shu and Alexander Hoyle and Alison Robey and Shi Feng and Seraphina Goldfarb-Tarrant and Jordan Boyd-Graber
-~~ Journal | ArXiv
-~~ Year | Preprint
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Venue | Refereed Conference
+~~ Year | 2024
+~~ Location | Miami
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ Category | Education / Human Learning
