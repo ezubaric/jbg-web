@@ -529,12 +529,12 @@ class WebsiteWriter:
         item = IndexElement(open(ii).read())
       except UnicodeDecodeError:
         print("Encode error on %s" % ii)
-        try:
-          item = IndexElement(open(ii).read())
-        except UnicodeDecodeError:
-          print("Skipping unicode error %s" % ii)
-          time.sleep(60)
-          continue
+        time.sleep(60)
+        continue
+      except IndexError:
+        print("Parse error on %s in %s" % (ii, path))
+        time.sleep(60)
+        continue          
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue

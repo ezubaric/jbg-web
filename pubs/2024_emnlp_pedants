@@ -1,8 +1,10 @@
 ~~ Bibtex | article
 ~~ Title | PEDANTS (Precise Evaluations of Diverse Answer Nominee Text for Skinflints): Use Evaluation Metrics Wisely---Efficient Evaluation Analysis and Benchmarking for Open-Domain Question Answering
 ~~ Author | Zongxia Li and Ishani Mondal and Huy Nghiem and Yijun Liang and Jordan Lee Boyd-Graber
-~~ Journal | ArXiv
-~~ Year | Preprint
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Venue | Refereed Conference
+~~ Location | Miami
+~~ Year | 2024
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ Category | Question Answering
 ~~ Category | Empirical Human Data Collection
