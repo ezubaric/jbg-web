@@ -77,6 +77,7 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+             "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
              "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
              "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
              "Wichayaporn Wongkamjan": Student("Wichayaporn Wongkamjan", 2022, 2026),
