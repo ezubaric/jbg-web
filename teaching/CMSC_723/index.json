@@ -93,9 +93,8 @@
                                 },
                "prompting and tuning": {"Readings": [["Prompting Survey", "https://arxiv.org/abs/2406.06608"],
                                                      ["LoRA", "https://arxiv.org/pdf/2106.09685"]],
-                                        "Topics": [["Fine-Tuning and LoRA", ""],
-                                                   ["LoRA", ""],
-                                                   ["Prompt Optimization", ""],
+                                        "Topics": [["Fine-Tuning and LoRA", "finetune_lora.pdf"],
+                                                   ["Prompt Optimization", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"],
                                                    ["Why Muppet Models", "https://docs.google.com/presentation/d/1fV5EbqDUmqmNs9NoFt21jNypo3qhUa0pxWmTSncefyk/edit?usp=sharing"]]
                                        },
 	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]],
