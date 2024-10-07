@@ -76,7 +76,11 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
-kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+kSTUDENTS = {"Zongxia Li": Student("Zongxia Li", 2023, 2028),
+             "Maharshi Gor": Student("Maharshi Gor", 2024, 2028),
+             "Neha Pundlik Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
+             "Ishani Mondal": Student("Ishani Mondal", 2023, 2028, "https://ishani-mondal.github.io/"),
+             "Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
              "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
              "Wichayaporn Wongkamjan": Student("Wichayaporn Wongkamjan", 2022, 2026),
