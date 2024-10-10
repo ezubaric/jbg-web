@@ -101,6 +101,10 @@
 						"Optional Readings": [["Geometric analysis", "https://drive.google.com/file/d/1GklXeso8CPbCy10ctpCb-zTFX6VilxrA/view?usp=sharing"]],
 						"Topics": ["Convolutional layers", "Self-supervised models", "CTC loss", "Representational geometry"]
 				},
+		"pcfg": {"Readings": [["SLP3 Chapter 17", "https://web.stanford.edu/~jurafsky/slp3/17.pdf"], ["SLP3 Chapter 18", "https://web.stanford.edu/~jurafsky/slp3/18.pdf"]]},
+		"dep": {"Readings": [["SLP3 Chapter 19", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]]},
+		"semantics": {"Readings": [["SLP Chapter 21", "https://web.stanford.edu/~jurafsky/slp3/21.pdf"]],
+			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]]},
 	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]],
 			"Topics": [["Logistic regression", "https://drive.google.com/file/d/1qYeKKRAGbrBsSARR7VNe3U3sELmN0N4G/view?usp=drive_link"], "Training and test data", "Loss functions", "Gradient descent"]}
 	      },
@@ -126,7 +130,7 @@
 		       ["Question Answering (jbg)", "qa"],
 		       ["Writing a Paper (jbg)", "writing"],
 		       ["Midterm Review (TA)", ""],
-		       ["Midterm (TA)", ""],
+		       ["Midterm (nhf)", ""],
 		       ["Modeling human Sentence Processing (nhf)", "cog-sentence"],
 		       ["Modeling human Speech Perception (nhf)", "cog-speech"],
 		       ["Multimodal (jbg)", "multimodal"],
