@@ -109,7 +109,7 @@
                                             ["Probabilistic Grammars", "https://www.youtube.com/watch?v=itJXYgkHwUo"],
                                             ["CYK Algorithm", "https://www.youtube.com/watch?v=O-x3krZ3A-Q"]]},
 	       "dep": {"Readings": [["SLP3 Chapter 19", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]],
-                       "Jordan's Videos": [["", ""],
+                       "Jordan's Videos": [["", ""]
                                           ]},
 		"semantics": {"Readings": [["SLP Chapter 21", "https://web.stanford.edu/~jurafsky/slp3/21.pdf"]],
 			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]]},
@@ -126,7 +126,7 @@
                                  ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
                                  ["Datasets", "https://youtu.be/p8tnM1_waQ8"],
                                  ["Cranfield vs. Manchester", "https://youtu.be/9peCcstwGtU"],
-                                 ["Dense Retrieval" "https://www.youtube.com/watch?v=w9eylxli07U"],
+                                 ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
                                  ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
