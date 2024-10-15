@@ -73,8 +73,7 @@
                                "Topics": [["Muppet Models", "https://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/18a_nlm.pdf"],
                                ["Attention w/ Backpacks", "nlm_backpack_attention.pdf"],
                                           ["Transformers", "https://docs.google.com/presentation/d/1Wmte5rM9qgN-JHq34LFX8y3G2HebHKWRV9iu-p_fC2k/edit?usp=sharing"]],
-                               "Videos": [["Muppet Models", "https://www.youtube.com/watch?v=KHpM3UXdMxM&t"],
-                                          ["Encoder", "https://youtu.be/9Z7mN7ebWDA"],
+                               "Videos": [["Encoder", "https://youtu.be/9Z7mN7ebWDA"],
                                           ["BERTology", "https://youtu.be/YgfE-9N7Rio"],
                                           ["Decoder", "https://youtu.be/ORzGEnHTSfk"]                                         ]},
 	       "speech": {"Readings": [["SLP3 Chapter 16 p. 1-11", "https://web.stanford.edu/~jurafsky/slp3/16.pdf"]],
@@ -95,7 +94,8 @@
                                                      ["LoRA", "https://arxiv.org/pdf/2106.09685"]],
                                         "Topics": [["Fine-Tuning and LoRA", "finetune_lora.pdf"],
                                                    ["Prompt Optimization", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"],
-                                                   ["Why Muppet Models", "https://docs.google.com/presentation/d/1fV5EbqDUmqmNs9NoFt21jNypo3qhUa0pxWmTSncefyk/edit?usp=sharing"]]
+                                                   ["Why Muppet Models", "https://docs.google.com/presentation/d/1fV5EbqDUmqmNs9NoFt21jNypo3qhUa0pxWmTSncefyk/edit?usp=sharing"]],
+					"Videos": [["Muppet Models", "https://www.youtube.com/watch?v=KHpM3UXdMxM&t"]]
                                        },
 		"neuralasr": {"Readings": [["Connectionist temporal classification", "https://drive.google.com/file/d/171peJ6IGCNdD6I2Ukb1n8p99Bc5594Rp/view?usp=drive_link"], ["Convolutional networks", "https://www.deeplearningbook.org/contents/convnets.html"]],
 						"Optional Readings": [["Geometric analysis", "https://drive.google.com/file/d/1GklXeso8CPbCy10ctpCb-zTFX6VilxrA/view?usp=sharing"]],
