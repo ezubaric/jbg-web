@@ -99,7 +99,7 @@
                                        },
 		"neuralasr": {"Readings": [["Connectionist temporal classification", "https://drive.google.com/file/d/171peJ6IGCNdD6I2Ukb1n8p99Bc5594Rp/view?usp=drive_link"], ["Convolutional networks", "https://www.deeplearningbook.org/contents/convnets.html"]],
 						"Optional Readings": [["Geometric analysis", "https://drive.google.com/file/d/1GklXeso8CPbCy10ctpCb-zTFX6VilxrA/view?usp=sharing"]],
-						"Topics": [["Convolutional layers", https://drive.google.com/file/d/1mZbat3Xiq6iWoZEGzjOs5kTkhdXFtq7R/view?usp=sharing], "Self-supervised models", "CTC loss", "Representational geometry"]
+						"Topics": [["Convolutional layers", "https://drive.google.com/file/d/1mZbat3Xiq6iWoZEGzjOs5kTkhdXFtq7R/view?usp=sharing"], "Self-supervised models", "CTC loss", "Representational geometry"]
 				},
 	       "pcfg": {"Readings": [["SLP3 Chapter 17", "https://web.stanford.edu/~jurafsky/slp3/17.pdf"], ["SLP3 Chapter 18", "https://web.stanford.edu/~jurafsky/slp3/18.pdf"]],
 			"Topics": [["HMMs", "https://drive.google.com/file/d/1k5yao7BABsi1JBIDqVqq0EjBfOCu5Glv/view?usp=sharing"], "PCFGs", "Dynamic programming", "Parsing", "Expectation maximization"],
