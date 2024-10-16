@@ -124,7 +124,7 @@
                                             ["Probabilistic Grammars", "https://www.youtube.com/watch?v=itJXYgkHwUo"],
                                             ["CYK Algorithm", "https://www.youtube.com/watch?v=O-x3krZ3A-Q"]]},
 	       "dep": {"Readings": [["SLP3 Chapter 19", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]],
-		       "Topics":, [["Dependency grammars", "https://drive.google.com/file/d/1E1XZlR3t0IYBCYFl6U-O9ecEOz2mvBO1/view?usp=sharing"], 
+		       "Topics": [["Dependency grammars", "https://drive.google.com/file/d/1E1XZlR3t0IYBCYFl6U-O9ecEOz2mvBO1/view?usp=sharing"], 
 			       		"Shift-reduce parsing"]},
 		"semantics": {"Readings": [["SLP Chapter 21", "https://web.stanford.edu/~jurafsky/slp3/21.pdf"]],
 			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]]},
