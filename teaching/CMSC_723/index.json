@@ -129,8 +129,7 @@
 		"semantics": {"Readings": [["SLP Chapter 21", "https://web.stanford.edu/~jurafsky/slp3/21.pdf"]],
 			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]]},
 	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]],
-			          "Topics": [["Logistic regression", "https://drive.google.com/file/d/1qYeKKRAGbrBsSARR7VNe3U3sELmN0N4G/view?usp=drive_link"],
-					  "Training and test data", "Loss functions", "Gradient descent"]},
+				  "Topics": [["Logistic regression", "https://drive.google.com/file/d/1qYeKKRAGbrBsSARR7VNe3U3sELmN0N4G/view?usp=drive_link"], "Training and test data", "Loss functions", "Gradient descent"]},
                "mt": {"Readings": [["SLP Chapter 13", "https://web.stanford.edu/~jurafsky/slp3/13.pdf"]],
                       "Videos": [["Why MT is Hard", "https://youtu.be/XLBUsH-ImyI"],
                                  ["Model 1", "https://youtu.be/seFL2wjOmRw"],
@@ -143,7 +142,8 @@
                                  ["Datasets", "https://youtu.be/p8tnM1_waQ8"],
                                  ["Cranfield vs. Manchester", "https://youtu.be/9peCcstwGtU"],
                                  ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
-                                 ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"]]}
+                                 ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"]]},
+	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
 		       ["What's a sentence, morpheme, type, token, word, etc. (nhf)", "ling_prelim"],
@@ -181,12 +181,12 @@
 		    "",
 		    ["Feature Engineering", "https://github.com/Pinafore/cl1-hw/tree/master/feateng"],
 		    ["Project Proposal", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"],
-		    ["DAN", "https://github.com/Pinafore/cl1-hw/tree/master/dan"],
-		    ["Neural ASR", ""],
-		    ["Syntax", ""],
-		    ["Paper Review", ""],
 		    "",
-		    ["Project Deliverable", ""],
-		    ["Poster", ""]],
+		    ["DAN", "https://github.com/Pinafore/cl1-hw/tree/master/dan"],
+		    ["Syntax", "https://github.com/Pinafore/cl1-hw/tree/master/dependency"],		    
+		    ["Finetuning", "https://github.com/Pinafore/cl1-hw/tree/master/finetune"],
+		    ["Paper Review", "https://github.com/Pinafore/cl1-hw/tree/master/review"],
+		    ["Project Deliverable", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"],
+		    ["Poster", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"]],
     "specials": ""
 }
