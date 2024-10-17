@@ -186,7 +186,7 @@
 		    ["DAN", "https://github.com/Pinafore/cl1-hw/tree/master/dan"],
 		    ["Syntax", "https://github.com/Pinafore/cl1-hw/tree/master/dependency"],		    
 		    ["Finetuning", "https://github.com/Pinafore/cl1-hw/tree/master/finetune"],
-		    ["Paper Review", "https://github.com/Pinafore/cl1-hw/tree/master/review"],
+		    "",
 		    ["Project Deliverable", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"],
 		    ["Poster", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"]],
     "specials": ""
