@@ -149,7 +149,13 @@
                                  ["Datasets", "https://youtu.be/p8tnM1_waQ8"],
                                  ["Cranfield vs. Manchester", "https://youtu.be/9peCcstwGtU"],
                                  ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
-                                 ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"]]},
+                                 ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"]],
+		      "Topics": [["How QA Saved Civilization / The Turing Test", "https://docs.google.com/presentation/d/1CbmMbK71925ZztUh5W6dH58377ojHOhKMlTVNbTvVgg/edit?usp=sharing"],
+				 ["Manchester vs. Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?usp=sharing"],
+				 ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"],
+				 ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"]
+				]
+				},
 	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
