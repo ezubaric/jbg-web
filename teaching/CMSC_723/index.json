@@ -156,7 +156,7 @@
 				 ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"]
 				]
 				},
-	    	"coref": {"Readings": [["SLP3 Chapter 23", https://web.stanford.edu/~jurafsky/slp3/23.pdf]]},
+	    	"coref": {"Readings": [["SLP3 Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"]]},
 	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
