@@ -129,7 +129,9 @@
 			       	  "Shift-reduce parsing"],
 		       "Jordan's Videos": [["Dependency Grammars", "https://www.youtube.com/watch?v=ZT1Et5wd1SQ"], ["Shift-Reduce", "https://www.youtube.com/watch?v=f5-hTA9hA3s"]]},
 		"semantics": {"Readings": [["SLP Chapter 21", "https://web.stanford.edu/~jurafsky/slp3/21.pdf"]],
-			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]]},
+			 "Optional Readings (Background)": [["Semantics", "https://web.stanford.edu/~jurafsky/slp3/F.pdf"]],
+			"Topics": [["Compositional semantics", "https://drive.google.com/file/d/11Y91AtRbYlx_CjuH57i8_-dkkM847vxr/view?usp=drive_link"], 
+				"Lambda calculus", "Combinatory categorial grammar", "Representations of time", "Semantic role labeling"]},
 	       "classification": {"Readings": [["SLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]],
 				  "Topics": [["Logistic regression", "https://drive.google.com/file/d/1qYeKKRAGbrBsSARR7VNe3U3sELmN0N4G/view?usp=drive_link"], "Training and test data", "Loss functions", "Gradient descent"]},
                "mt": {"Readings": [["SLP Chapter 13", "https://web.stanford.edu/~jurafsky/slp3/13.pdf"]],
@@ -156,7 +158,9 @@
 				 ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"]
 				]
 				},
-	    	"coref": {"Readings": [["SLP3 Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"]]},
+	    	"coref": {"Readings": [["SLP3 Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"]], 
+			"Topics": [["Mentions", "https://drive.google.com/file/d/1T4DKSMhNV8ZNmItcTJGpZQfF22vm1r2M/view?usp=drive_link"], 
+			"Entities", "The problem of coreference", "Rule-based systems and features", "Neural end-to-end systems"]},
 	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]}
 	      },
     "class_sequence": [["What the class is about", "intro"],
