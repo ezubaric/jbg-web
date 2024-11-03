@@ -176,6 +176,10 @@
 	    ["How to review a paper", "https://www.youtube.com/watch?v=gVTHnRD4emg"],
 	    ["Virtual presentations", "https://www.youtube.com/watch?v=IQAXiR6R9sI&feature=youtu.be"]],
 			  },
+	    "careers": {"topics": [["Landscape of the Field", "landscape_of_the_fields.pdf"]],
+		        "videos": [["Primary Venues", "https://youtu.be/35AO0dU3m40"],
+				   ["Jobs", "https://youtu.be/3e6TchIg55k"],
+				   ["Impact", "https://youtu.be/5bz7IVDQR6w"]]},
 	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]}
 	      },
     "careers": {"Optional Readings": [["How JMLR Works", "https://www.google.com/url?q=https%3A%2F%2Fblogs.harvard.edu%2Fpamphlet%2F2012%2F03%2F06%2Fan-efficient-journal%2F&sa=D&sntz=1&usg=AOvVaw3NgrHrgrLmyg2EIIr3JVVI"]]},
