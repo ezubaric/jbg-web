@@ -1,7 +1,8 @@
-~~ Bibtex | inproceedings
+~~ Bibtex | article
 ~~ Title | AUTOHALLUSION: Automatic Generation of Hallucination Benchmarks for Vision-Language Models
-~~ Author | Xiyang Wu and Tianrui Guan and Dianqi Li and Shuaiyi Huang and Xiaoyu Liu and Xijun Wang and Ruiqi Xian and Abhinav Shrivastava and Furong Huang and Jordan Lee Boyd-Graber and Tianyi Zhou and Dinesh Manocha
-~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Author | Xiyang Wu and Tianrui Guan and Dianqi Li and Shuaiyi Huang and Xiaoyu Liu and Xijun Wang and Ruiqi Xian and Abhinav Shrivastava and Furong Huang and Jordan Boyd-Graber and Tianyi Zhou and Dinesh Manocha
+~~ Journal | Findings of the Empirical Methods in Natural Language Processing
+~~ Venue | Journal
 ~~ Year | 2024
 ~~ Location | Miami
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
@@ -9,6 +10,5 @@
 ~~ Category | Deep Learning
 ~~ Category | Question Answering
 ~~ Category | Adversarial Examples
-~~ Venue | Refereed Conference
 ~~ Url | https://arxiv.org/abs/2406.10900
 ~~ Project | Personalization*../projects/IIS-2403436.html
