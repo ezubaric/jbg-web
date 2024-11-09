@@ -5,10 +5,12 @@
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2021
 ~~ Category | Empirical Human Data Collection
+~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Category | Question Answering
 ~~ Venue | Refereed Conference
-~~ Pages | 5
+~~ NumPages | 5
 ~~ Link | Research Talk*https://youtu.be/NZdKG3loB0M
 ~~ Url | docs/2021_emnlp_paradigms.pdf
-~~ Public | Why do we answer questions?  Sometimes it's to provide information, which has been the interpretation of the computer science community.  But sometimes it's to probe or test intelligence.  This paper argues we should think more about that application of question answering and its connection to the foundations of artificial intelligence: The Turing Test.
+~~ Public | Why do we answer questions?  Sometimes it's to provide information, which has been the interpretation of the computer science community.  But sometimes it's to probe or test intelligence.  This paper argues we should think more about that application of question answering and its connection to the foundations of artificial intelligence: The Turing Test.  We thus argue that in addition to the long-standing Cranfield paradigm popularized by information retrieval, this paper proposes an alternative "Manchester paradigm" closer to the Turing test, trivia games, and education.
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/NZdKG3loB0M" frameborder="0" allowfullscreen></iframe>
+~~ Acceptance | 18

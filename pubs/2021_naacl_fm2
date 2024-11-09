@@ -1,11 +1,10 @@
 ~~ Bibtex | inproceedings
 ~~ Title | Fool Me Twice: Entailment from Wikipedia Gamification
 ~~ Author | Julian Martin Eisenschlos and Bhuwan Dhingra and Jannis Bulian and Benjamin B\"orschinger and Jordan Boyd-Graber
-~~ Booktitle | North American Association of Computational Linguistics
+~~ Booktitle | North American Association for Computational Linguistics
 ~~ Year | 2021
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Fact Checking
-~~ Category | Question Answering
 ~~ Url | docs/2021_naacl_fm2.pdf
 ~~ Link | Preprint*https://arxiv.org/abs/2104.04725
 ~~ Link | Research Talk*https://youtu.be/JSI1zTsCFTo
@@ -15,5 +14,6 @@
 ~~ Venue | Refereed Conference
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ NumPages | 10
-~~ Public | Democracy and the free press depends on being able to recognize when facts online are true or not.  For machine learning to help this critical problem, it needs good data identifying which statements are backed up by tursted sources and which are not.  This research creates a game people can play online to craft difficult claims that can train computers to spot disinformation online.
+~~ Public | Democracy and the free press depends on being able to recognize when facts online are true or not.  For machine learning to help this critical problem, it needs good data identifying which statements are backed up by trusted sources and which are not.  This research creates a game people can play online to craft difficult claims that can train computers to spot disinformation online.
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/JSI1zTsCFTo" frameborder="0" allowfullscreen></iframe>
+~~ Acceptance | 28

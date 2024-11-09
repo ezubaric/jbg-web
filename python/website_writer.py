@@ -1,3 +1,5 @@
+from class_webpage import Course
+
 from glob import glob
 from string import capwords
 from datetime import date, datetime
@@ -74,10 +76,20 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
-kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/",
+kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+             "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
+             "Zongxia Li": Student("Zongxia Li", 2023, 2028),
+             "Sander Schulhoff": Student("Sander Schulhoff", 2022, 2024, "https://trigaten.github.io/", kind="UG"),
+             "Maharshi Gor": Student("Maharshi Gor", 2024, 2028, "https://www.mgor.info/"),
+             "Neha Pundlik Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
+             "Ishani Mondal": Student("Ishani Mondal", 2023, 2028, "https://ishani-mondal.github.io/"),
+             "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
+             "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
+             "Wichayaporn Wongkamjan": Student("Wichayaporn Wongkamjan", 2022, 2026),
+             "Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/",
                                 job="Microsoft, Senior Research Scientist"),
              "Weiwei Yang": Student("Weiwei Yang", 2014, 2019, "http://www.cs.umd.edu/~wwyang/", job="Facebook"),
-             "Yoo Yeon Sung": Student("Yoo Yeon Sung", 2019, 2024, "https://www.linkedin.com/in/yooyeon-sung-a81a0b131"),
+             "Yoo Yeon Sung": Student("Yoo Yeon Sung", 2019, 2025, "http://yysung.github.io/"),
              "Yuening Hu": Student("Yuening Hu", 2010, 2014, "https://scholar.google.com/citations?user=mO_62fQAAAAJ&hl=en",
                                    job="Google", thesis_url="https://drum.lib.umd.edu/bitstream/handle/1903/15763/Hu_umd_0117E_15485.pdf", thesis='Expressive Knowledge Resources in Probabilistic Models'),
              "Kimberly Glasgow": Student("Kimberly Glasgow", 2010, 2014, job="Johns Hopkins Applied Physics Laboratory, Senior Research Scientist"),
@@ -91,16 +103,17 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "http://shudong-hao.com/", job="Bard College, Assistant Professor"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://www.mozhi.umiacs.io"),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2020),
-             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
+             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "https://forest-snow.github.io/", job="Amazon AWS, Applied Scientist", 
+                                      thesis_url="https://drum.lib.umd.edu/handle/1903/29333", thesis="Transfer Learning in Natural Language Processing through Interactive Feedback"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
-             "Naveen Raman": Student("Naveen Raman", 2019, 2021, "http://naveenraman.com/"),
+             "Naveen Raman": Student("Naveen Raman", 2019, 2021, "http://naveenraman.com/", kind="UG"),
              "Viet-An Nguyen": Student("Viet-An Nguyen", 2011, 2015,
                                        "http://www.cs.umd.edu/~vietan/index.htm",
                                        job="Facebook"),
              "Pedro Rodriguez": Student("Pedro Rodriguez", 2015, 2021, "https://www.pedro.ai/", job="Facebook, Research Scientist", thesis_url="https://www.pedro.ai/static/publications/pedro_rodriguez_phd_thesis.pdf", thesis="Evaluating Machine Intelligence with Question Answering"),
              "Fenfei Guo": Student("Fenfei Guo", 2015, 2022, "https://csel.cs.colorado.edu/~fegu1724/"),
-             "Mohamad Alkhouja": Student("Mohamad Alkhouja", 2011, 2013, kind="MS"),
+             "Mohamad Alkhouja": Student("Mohamad (Jude) Alkhouja", 2011, 2013, kind="MS"),
              "Wenyan Li": Student("Wenyan Li", 2017, 2018, kind="MS"),
              "Thang Nguyen": Student("Thang Nguyen", 2014, 2019, "http://www.umiacs.umd.edu/~daithang/", job="CGI Federal, Data Scientist"),
              "Mohit Iyyer": Student("Mohit Iyyer", 2014, 2017, "https://people.cs.umass.edu/~miyyer/", job="UMass, Assistant Professor"),
@@ -119,9 +132,11 @@ kSTUDENTS = {"Ke Zhai": Student("Ke Zhai", 2010, 2014, "https://kzhai.github.io/
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
-             "Shi Feng": Student("Shi Feng", 2017, 2021, "http://www.shifeng.umiacs.io"),
-             "Chen Zhao": Student("Chen Zhao", 2018, 2022, "http://www.chenz.umiacs.io"),
+             "Shi Feng": Student("Shi Feng", 2017, 2021, "https://ihsgnef.github.io/", job="GWU Asst Prof"),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/", job="NYU Shanghai Asst Prof"),
              "Ahmed Elgohary": Student("Ahmed Elgohary Ghoneim", 2018, 2021, "http://www.cs.umd.edu/~elgohary/"),
+             "Neha Srikanth": Student("Neha Punklik Srikanth", 2021, 2026),
+             "Hyojung Han": Student("Hyojung Han", 2022, 2026, "https://h-j-han.github.io/"),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
@@ -341,6 +356,11 @@ class IndexElement:
     s = self.author_string(False)
 
     formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\=o", "&omacr;")
+    for latex_format, tag_start, tag_end in [("\\underline{", "<U>", "</U>")]:
+      while latex_format in formatted_title:
+        start, end = formatted_title.split(latex_format, 1)
+        middle, end = end.split("}", 1)
+        formatted_title = start + tag_start + middle + tag_end + end
     if "Title" in self.fields and "Url" in self.fields:
       url = self.fields["Url"][0]
       if url.startswith("http"):
@@ -390,6 +410,9 @@ class IndexElement:
 
     if "Embed" in self.fields:
         s += "\n<BR>" + "<CENTER>%s</CENTER>" % "".join(self.fields["Embed"])
+
+    if "Public" in self.fields:
+      s += "\n<BLOCKQUOTE><B>Accessible Abstract:</B> %s</BLOCKQUOTE>\n" % self.fields["Public"][0]
 
     return s
 
@@ -491,6 +514,16 @@ class WebsiteWriter:
           contents.append(val)
       return contents
 
+  def add_teaching(self, path):
+      self.courses = Course()
+      self.courses.load_holidays("teaching/holidays.json")
+      
+      for ii in glob(path):
+          self.courses.load_json(ii)
+          course = ii.split("/")[-2]
+
+          global_replace[course] = self.courses.render()
+  
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
                 default_sort="Year"):
     index = {}
@@ -503,12 +536,12 @@ class WebsiteWriter:
         item = IndexElement(open(ii).read())
       except UnicodeDecodeError:
         print("Encode error on %s" % ii)
-        try:
-          item = IndexElement(open(ii, encoding="utf-8").read())
-        except UnicodeDecodeError:
-          print("Skipping unicode error %s" % ii)
-          time.sleep(60)
-          continue
+        time.sleep(60)
+        continue
+      except IndexError:
+        print("Parse error on %s in %s" % (ii, path))
+        time.sleep(60)
+        continue          
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue
@@ -557,7 +590,7 @@ class WebsiteWriter:
         contrib = self._indexed[index.lower()][jj].keys(jj, sort_by)
         keys += contrib
         for kk in contrib:
-          assert not kk in lookup, "%s already found as %s.  Look for a repeated key in the pub file (e.g., year)" % (str(kk), lookup[kk].txt())
+          # assert not kk in lookup, "%s already found as %s in %s.  Look for a repeated key in the pub file (e.g., year)" % (str(kk), lookup[kk].txt(), list(lookup.keys())[:5])
           lookup[kk] = self._indexed[index.lower()][jj]
 
       primary = [x[0] for x in keys]
@@ -675,7 +708,7 @@ class WebsiteWriter:
     else:
         contents = ""
 
-    contents += open(raw, encoding='utf-8').read()
+    contents += open(raw).read()
 
     for variable in global_replace:
       search = "~~%s~~" % variable
@@ -691,7 +724,7 @@ class WebsiteWriter:
     contents = contents.replace("~~PATHPREFIX~~", prefix).replace("~~PAGETITLE~~", title)
 
     print("Writing %s to %s" % (raw, filename))
-    o = open(filename, 'w', encoding='utf-8')
+    o = open(filename, 'w')
     o.write(contents)
     o.close()
 

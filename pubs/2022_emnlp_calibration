@@ -1,0 +1,16 @@
+~~ Bibtex | article
+~~ Title | Re-Examining Calibration: The Case of Question Answering
+~~ Author | Chenglei Si and Chen Zhao and Sewon Min and Jordan Boyd-Graber
+~~ Journal | Findings of Empirical Methods in Natural Language Processing
+~~ Year | 2022
+~~ Location | Abu Dhabi
+~~ Project | CAREER*../projects/IIS-1652666.html
+~~ Category | Question Answering
+~~ Category | Deep Learning
+~~ Venue | Journal
+~~ NumPages | 9
+~~ Url | docs/2022_emnlp_calibration.pdf
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/gbwJcEgczeA" frameborder="0" allowfullscreen></iframe>
+~~ Link | Code*https://github.com/NoviScl/calibrateQA
+~~ Link | Research Talk*https://youtu.be/gbwJcEgczeA
+~~ Public | Calibration is an important problem in question answering: if a search engine or virtual assistant doesn't know the answer to a question, you should probably abstain from showing an answer (to save embarassment, as when Google said a horse had six legs).  This EMNLP Findings paper shows that existing metrics to test how good a QA calibration push calibrated confidence toward the average confidence.  We proposed an alternate method both for evaluation and to generate better calibration by looking how models change as they learn.

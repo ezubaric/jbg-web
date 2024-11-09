@@ -1,0 +1,14 @@
+~~ Bibtex | inproceedings
+~~ Title | More Victories, Less Cooperation: Assessing Cicero’s Diplomacy Play
+~~ Authors | Wichayaporn Wongkamjan and Feng Gu and Yanze Wang and Ulf Hermjakob and Jonathan May and Brandon M. Stewart and Jonathan K. Kummerfeld and Denis Peskoff and Jordan Lee Boyd-Graber
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2024
+~~ Location | Bangkok, Thailand
+~~ Category | Empirical Human Data Collection
+~~ Category | Sentiment and Perspective
+~~ Venue | Refereed Conference
+~~ Url | docs/2024_acl_cicero.pdf
+~~ Project | SHADE*../projects/SHADE.html
+~~ Project | FACT*../projects/FACT.html
+~~ Public | Meta's recent AI, Cicero, grabbed headlines by its ability to beat humans at the game of Diplomacy: notable because players of the game not just need to make the right moves but also need to negotiate with each other in natural language.  This paper investigates why it wins so many games, measuring its ability to persuade and trick other players.  While Cicero wins just about every game, this is because of superhuman strategy, not superhuman communication, suggesting there is still further room for developing Diplomacy-playing AIs.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/fKaiumkZjL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

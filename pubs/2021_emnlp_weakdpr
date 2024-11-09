@@ -14,3 +14,5 @@
 ~~ Public | Answering questions sometimes requires tying multiple pieces of information together.  Previous datasets have required annotators to explicitly build these reasoning chains (e.g., to answer "where do I know the cop from Die Hard from", you need to figure out that the actor's name is "Reginald VelJohnson" and then find out that he's best known as the dad on Family Matters.).  By exploring search queries that get to the right answer, we're able to answer these questions without expensive annotation.
 ~~ Url | docs/2021_emnlp_weak_dpr.pdf
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/XWTpEQdoRqs" frameborder="0" allowfullscreen></iframe>
+~~ NumPages | 9
+~~ Acceptance | 26
