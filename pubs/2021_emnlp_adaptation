@@ -1,13 +1,16 @@
-~~ Bibtex | inproceedings
+~~ Bibtex | article
 ~~ Title | Adapting Entities across Languages and Cultures
 ~~ Author | Denis Peskov and Viktor Hangya and Jordan Boyd-Graber and Alexander Fraser
-~~ Booktitle | Findings of Empirical Methods in Natural Language Processing
+~~ Journal | Findings of Empirical Methods in Natural Language Processing
 ~~ Year | 2021
 ~~ Location | Punta Cana
 ~~ Category | Empirical Human Data Collection
 ~~ Public | If you ask who Germany's "Christian Drosten" is, a simple answer is that he's their "Anthony Fauci".  We create a system to automatically generate these adaptations, which can help improve cross-cultural understanding and create new training data for tasks like question answering.
 ~~ Category | Machine Translation
-~~ Venue | Refereed Conference
+~~ Venue | Journal
 ~~ Url | docs/2021_emnlp_adaptation.pdf
 ~~ Link | Research Talk*https://youtu.be/bethha4r9oE
+~~ Link | Code*https://github.com/DenisPeskov/2021_emnlp_adaptation
 ~~ Embed | <iframe width="280" height="150" src="https://www.youtube.com/embed/bethha4r9oE" frameborder="0" allowfullscreen></iframe>
+~~ NumPages | 5
+~~ Acceptance | 37

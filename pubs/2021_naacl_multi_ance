@@ -1,7 +1,7 @@
 ~~ Bibtex | inproceedings
 ~~ Title | Multi-Step Reasoning Over Unstructured Text with Beam Dense Retrieval
 ~~ Author | Chen Zhao and Chenyan Xiong and Hal {Daum\'{e} III} and Jordan Boyd-Graber
-~~ Booktitle | North American Association of Computational Linguistics
+~~ Booktitle | North American Association for Computational Linguistics
 ~~ Year | 2021
 ~~ Category | Question Answering
 ~~ Category | Deep Learning
@@ -11,3 +11,4 @@
 ~~ Url | docs/2021_naacl_multi_ance.pdf
 ~~ Project | CAREER*../projects/IIS-1652666.html
 ~~ Public | For computers to answer complicated questions online, they often need to put together multiple pieces of information (Ronald Reagan was both governor of California and an actor in Bedtime for Bonzo).  However, existing approaches use the links in Wikipedia to combine these clues.  This research helps computers find connected information without using these explicit links.
+~~ Acceptance | 23

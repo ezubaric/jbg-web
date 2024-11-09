@@ -1,6 +1,4 @@
-\ifumd
 \usepackage{graphicx}
-\fi
 
 \newcommand{\umdtext}[2]{
 \ifumd
@@ -11,6 +9,12 @@
 }
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
+
+\newcommand{\image}[2]{  \begin{center}
+\includegraphics[width=.5\linewidth]{images/#1}
+\end{center}
+  }
+
 
 \begin{document}
 
@@ -34,16 +38,48 @@
 
 \roottitle{ I. Personal Information }
 
-\fi
+\begin{itemize*}
+\item {\bf Legal Name}: Jordan Boyd-Graber Ying
+\item {\bf E-mail}: \href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
+  \item {\bf Webpage}:  \href{http://boydgraber.org}{\url{http://boydgraber.org}}
+\end{itemize*}
+
+\else
 
 \noindent\href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
-\umdtext{\\}{\bull} % Your email address
 \umdtext{\\}{\bull} \href{http://boydgraber.org}{\url{http://boydgraber.org}}\\ % Your URL
 
-\ifumd
-\else
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+
 \fi
+
+
+
+\ifgerman
+\vspace{.5cm}
+
+\roottitle{Personal Information}
+
+	\begin{minipage}{0.8\linewidth}
+		\centering
+\begin{tabular}{lp{9cm}}
+  Birthdate & May 1982 \\
+  Marital Status & Married \\
+  Children & One Daughter (born 2015) \\
+  Citizenship & \textsc{usa} \\
+  Languages & English (native), German (proficient), Mandarin
+              (beginner) \\
+\end{tabular}
+	\end{minipage}\hfill
+	\begin{minipage}{0.2\linewidth}
+		\includegraphics[width=1\linewidth]{images/jbg.png}
+	\end{minipage}
+
+
+\fi
+
+
 
 \roottitle{ \umdtext{I.B. }{Academic Appointments}}
 
@@ -54,9 +90,12 @@
         \headedsubsection{Associate Professor without tenure, Computer Science
           (tenure home)}{2017--2018}{}
         \headedsubsection{Associate Professor, Institute for Advanced Computer Studies}{2017--present}{}
+        \headedsubsection{Associate Professor, Language Science
+          Center}{2017--present}{}
+        \headedsubsection{Affiliate Professor, College of Information
+          Studies}{2022--present}{}                
         \headedsubsection{Associate Professor, College of Information
-          Studies}{2017--present}{}
-        \headedsubsection{Associate Professor, Language Science Center}{2017--present}{}
+          Studies}{2017--2022}{}        
 	\headedsubsection{Affiliate Assistant Professor, Computer Science}{2011-2017}{}
 	\headedsubsection{Assistant Professor, Institute for Advanced Computer Studies}{2011-2014}{}
 	\headedsubsection{Assistant Professor, College of Information Studies}{2010--2014}{}
@@ -99,7 +138,7 @@
 
 \headedsection{Berlin-Brandenburg Akademie der
   Wissenschaften}{\textsc{Berlin, Germany}}{
-	\headedsubsection{Praktikant, \href{http://www.dwds.de}{Digitale W\"orterbuch der Deutschen Sprache}}{2002}{}
+	\headedsubsection{Praktikant, \href{http://www.dwds.de}{Digitales W\"orterbuch der Deutschen Sprache}}{2002}{}
 }
 
 \roottitle{\umdtext{I.E. }{Educational Background}}
@@ -125,22 +164,24 @@
 %\end{comment}
 
 
-
-
-
 \ifumd
 \else
+\ifgerman
+\else
 \vspace{.5cm}
-{\bf Immigration status}: U.S. citizen (born in Eagle County, Colorado)
+{\bf Immigration status}: U.S. citizen (born in Eagle County,
+Colorado)
+\fi
 \fi
 
 \newcommand{\awards}[0]{
-\begin{itemize*}
+  \begin{itemize*}
+  \item Best Theme Paper Award: EMNLP, 2023
   \item Best Student Paper Honorable Mention (Alison Smith): IUI, 2018
   \item NSF CAREER Award 2017
   \item Quora Top Writer: 2016, 2017, 2018
-  \item Best Paper Award, NAACL 2016
-  \item Best Demonstration Award: NIPS 2015
+  \item Best Paper Award: NAACL 2016
+  \item Best Demonstration Award: NeurIPS 2015
   \item Karen Sp\"ark Jones Award: 2015
   \item Best Paper Award: CoNLL 2015
   \item Honorable Mention, Best Student Paper: NIPS 2009
@@ -155,6 +196,10 @@
 
 \headedsection{\umdtext{II.E.1. }{Keynotes}}{}{
   \begin{enumerate*}
+    \item Open Data Science Conference East 2023: If We Want AI to be
+      Interpretable, We Need to Measure Interpretability
+      \item KnowledgeNLP workshop at AAAI 2023: Raw Knowledge
+        vs. Understanding: What Adversarial QA Reveals about the Limits of AI
     \item School Science and Mathematics Association 2020: Question
       Answering isn't a Game Show (but maybe it should be)
         \item Frontiers of Engineering (National Academies of
@@ -169,11 +214,28 @@
 \headedsection{\umdtext{II.E.2. }{Invited Talks}}{}{
 
   \begin{enumerate*}
+    \item {\bf The questions that computers still cannot answer: how to find
+    them, why they’re fun, and what they mean for AI}: Max
+    Planck-Cornell-Maryland Summer School, 2023
+    \item {\bf The State of Generative AI in 2023}: Computer \& Communications
+    Industry Association \textsc{ai} Informational Event for Congressional Staffers
+    \item {\bf The Benefits of Unnatural Data: Adversarial Examples for
+Question Answers, Fact Checking, and Detecting Deception}: Northwestern
+University, 2023
+    \item {\bf If We Want AI to be Interpretable, We Need to Measure
+        Interpretability}: University of Toronto, 2022; Ruhr
+      Universit\"at Bochum, 2022; University of Chicago, 2022;
+      University of Illinois at Urbana-Champaign, 2022; Northwestern
+        University, 2023
+    \item {\bf Manchester vs. Cranfield: Why do we do question answering and
+how can we do it better?}: ByteDance Research, 2021; University of
+Pennsylvania, 2022; UMD Search Mastery Series, 2022; NAACL Dynamic
+Adversarial Datasect Collection Workshop (invited talk and panel)
     \item {\bf Active Learning and Refining Representations for NLP}:
-      HLT CoE Tech Exchange
+      HLT CoE Tech Exchange, 2021
 \item {\bf Cooperative and Competitive Machine Learning through
     Question Answering}: MBZUAI Distinguished Colloquium, 2021;
-  University of W\"urtzburg, 2021; NLP Zurich, 2020; TTI Chicago, 2018; DC Data Science (Washington, DC), 2018; Georgetown Computer Science (Washington, DC),
+  University of W\"urzburg, 2021; NLP Zurich, 2020; TTI Chicago, 2018; DC Data Science (Washington, DC), 2018; Georgetown Computer Science (Washington, DC),
   2017; New York Text as Data (New York City, NY), 2017
   \item {\bf Question
       Answering isn't a Game Show (but maybe it should be)}: UMass CS
@@ -267,97 +329,31 @@ Facebook 2017 (Menlo Park, CA)
 }
 \fi
 
+\ifgerman
+\else
+\ifumd
+\else
+%\vspace{1cm}
+%\clearpage
+\fi
 
 \roottitle{\umdtext{II. Research, Scholarly, Creative and/or Professional
     Activities: }{Publications}}
 
 \input{resume_src/pubs_by_venue.tex}
 
+\fi
+
 \ifumd
 \talks{}
 \fi
 
-\clearpage
 
-\roottitle{\umdtext{II.J.1. }{Sponsored Research and Programs}}
+\ifgerman
 
-\headedsection{\umdtext{ II.J.1.a. }{Active Grants}}{}{
-
-\colabgrant{\textsc{better}: Multilingual Fine-grained Decompositional Analysis}{08/2019}{02/2023}{\textsc{iarpa}}{Jordan Boyd-Graber \textsc{co-pi}}{414,884}{414,884}{Johns Hopkins}
-
- \grant{Collaborative Research: Interactive, Multilingual
-   Representation Learning}{9/2017}{8/2019}{\textsc{hlt c}o\textsc{e}}{Jordan Boyd-Graber \textsc{co-pi}}{400,000}{175,000}
-
- \grant{CAREER: Human-Computer Cooperation for Word-by-Word Question
-  Answering}{2/2017}{1/2022}{\textsc{nsf}}{Jordan Boyd-Graber \textsc{pi}}{500,000}{500,000}
-
-
-}
-
-\headedsection{\umdtext{ II.J.1.b. }{Completed Funding}}{}{
-
-  \grant{Strategies for Investigating and Eliciting INformation from Nuanced Attackers (SIENNA)}{10/2018}{03/2020}{\textsc{darpa ased} via \textsc{bbn}}{Jordan Boyd-Graber \textsc{pi}}{164,660}{164,660}
-
-\colabgrant{RI: EAGER: Collaborative Research: Adaptive Heads-up
-  Displays for Simultaneous
-  Interpretation}{10/2017}{2/2019}{\textsc{nsf}}{Jordan Boyd-Graber
-  \textsc{co-pi}}{150,000}{75,000}{Carnegie Mellon, University of
-  Washington (only UMD portion shown)}
-
-
-\grant{CHS: Medium: Hyperlocal and Hypertemporal Information in Mass Emergencies Events: Next Generation Crisis Informatics Data Collection \& Analytics}{8/2016}{8/2020}{\textsc{nsf}}{Ken Anderson \textsc{pi}, Leysia Palen \textsc{co-pi}, and Jordan Boyd-Graber \textsc{co-pi}}{1,200,000}{300,000}
-
-\colabgrant{Multilingual Interactive Topic
-  Modeling}{8/2015}{7/2019}{\textsc{darpa lorelei}}{Jordan Boyd-Graber
-  (\textsc{pi}) and Mans Hulden (\textsc{co-pi})}{426,654}{325,000}{
-Rayethon BBN (prime) with University of
-Maryland, Johns Hopkins University, and University of Washington (only
-Colorado portion shown)}
-\colabgrant{Closing the User-Model Loop for Understanding Topics in
-  Large Document \\ Collections\footnote{After I moved to Colorado,
-    Leah Findlater assumed the role of PI to enable a new subcontract
-    to Colorado.  Then, amusingly enough, Leah left for University of
-    Washington and I returned to UMD; I again became PI.  The original
-    grant as awarded is provided here to minimize
-    confusion.}}{8/2014}{7/2018} {\textsc{nsf}}{Jordan Boyd-Graber
-    (\textsc{pi}) and Leah Findlater
-    (\textsc{co-pi})}{650,000}{325,000}{Brigham Young University and
-    University of Maryland (only Maryland portion shown)}
-  
-\colabgrant{eTASC: Empirical Evidence for a Theoretical Approach to
-  Semantic Components}{12/2015}{11/2018}{\textsc{dtra}}{Martha Palmer
-  (\textsc{pi}), Laura Michaelis (\textsc{co-pi}) and Jordan
-  Boyd-Graber (\textsc{co-pi})}{1,250,000}{200,000}{Brandeis, Princeton,
-Stanford}
-
-\colabgrant{Temporal Relation Discovery for Clinical
-  Text}{9/2015}{9/2018}{\textsc{nih}}{Martha Palmer (\textsc{pi}) and
-  Jordan Boyd-Graber (\textsc{co-pi})}{531,328}{76,896}{Harvard,
-  University of Alabama (Only Colorado portion shown)}
-
-
-\colabgrant{Scaling Insight into Science: Assessing the value and effectiveness of machine \\ assisted classification within a statistical system}{8/2014}{7/2017}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi})}{195,000}{195,000}{
-University of Chicago and American Institutes for
-Research (only Colorado portion shown)}
-
-
-\colabgrant{Bayesian Thinking on Your Feet---Embedding Generative Models in \\ Reinforcement Learning for Sequentially Revealed Data}{8/2013}{7/2016}{\textsc{nsf}}{Jordan Boyd-Graber (\textsc{pi}) and Hal Daum\'e III (\textsc{co-pi})}{500,000}{250,000}{Grant located at University of Maryland}
-
-
-\grant{Sentiment Analysis in Social Media: Political Spin and Cultural Biases}{8/2013}{8/2014}{\textsc{casl}}{Philip Resnik \textsc{pi} and Jordan Boyd-Graber \textsc{co-pi}}{100,000}{50,000}
-
-\grant{Cross-Language Bayesian Models for Web-Scale Text Analysis}{9/2009}{8/2014}{\textsc{nsf}}{Jimmy Lin (\textsc{pi}), Philip Resnik (\textsc{co-pi}), Jordan Boyd-Graber\footnote{I wrote this grant while a postdoc working with Philip Resnik; the vast majority of the text and the entirety of the scientific ideas were my own.  However, I could not serve as \textsc{pi} while still a postdoc.  I was added to the grant as \textsc{pi} after it was awarded and served as sole research advisor to the students funded by the grand while the other \textsc{pi}s were both on sabbatical.} (\textsc{co-pi})}{350,000}{175,000}
-
-\grant{Language Evidence for Social Goals}{8/2009}{10/2012}{\textsc{iarpa}}{Philip Resnik (\textsc{pi}), Pranav Anand (\textsc{co-pi}), Jordan Boyd-Graber (\textsc{co-pi}), Deborah Cai (\textsc{co-pi}), Craig Martell (\textsc{co-pi}), Doug Oard (\textsc{co-pi}), Marilyn Walker (\textsc{co-pi})}{1,454,439}{100,000}
-
-\grant{Center for Language and Cultural Analysis}{9/2009}{8/2012}{\textsc{arl}}{Amy Weinberg (\textsc{pi}), Jordan Boyd-Graber (\textsc{co-pi}), Michele Gelfand (\textsc{co-pi}), Philip Resnik (\textsc{co-pi}, later \textsc{pi})}{ 735,050}{100,000}
-
-
-\grant{Advanced Open Source Exploitation Models}{4/2011}{12/2011}{Lockheed Martin}{Philip Resnik (\textsc{pi}), Jordan Boyd-Graber (\textsc{co-pi})}{60,000}{30,000}
-
-
-\grant{Social Media Scanning}{5/2011}{12/2011}{Optimal Solutions Group}{Philip Resnik (\textsc{pi}), Jordan Boyd-Graber (\textsc{co-pi})}{29,849}{14,925}
-}
+\else
+\input{resume_src/funding}
+\fi
 
 
 \ifumd
@@ -382,13 +378,28 @@ Research (only Colorado portion shown)}
 
 \headedsection{\umdtext{III.A. }{Courses Taught}}{}{
 
+\headedsubsection{CMSC 848Q: How and Why Artificial Intelligence Answers Questions}{\textsc{umd}, Fall 2023}{
+  \bodytext{30 students}}
+  
+\headedsubsection{CMSC 470: Natural Language Processing}{\textsc{umd}, Spring 2023}{
+  \bodytext{70 students}}
+  
+\headedsubsection{CMSC 723: Graduate Natural Language Processing}{\textsc{umd}, Fall 2022}{
+  \bodytext{80 students}}
+  
+\headedsubsection{CMSC 848Q: How and Why Artificial Intelligence Answers Questions}{\textsc{umd}, Spring 2022}{
+  \bodytext{60 students}}
+
+\headedsubsection{CMSC 470: Natural Language Processing}{\textsc{umd}, Fall 2021}{
+  \bodytext{40 students}}
+
 \headedsubsection{CMSC 723: Computational Linguistics I}{\textsc{umd}, Spring 2021}{
   \bodytext{65 students}}
-  
+
 \headedsubsection{INST 808: Quantitative Methods (Deep Learning)}{\textsc{umd}, Fall 2020}{
   \bodytext{8 students}}
 
-  
+
 \headedsubsection{CMSC 470: Natural Language Processing}{\textsc{umd}, Spring 2019}{
   \bodytext{40 students, First Offering of Course with Permanent Number}}
 
@@ -463,7 +474,10 @@ Research (only Colorado portion shown)}
 
 \headedsection{\umdtext{III.B.6. }{Course or Curriculum Development}}{
 
-\begin{itemize*}
+  \begin{itemize*}
+  \item Developed new course, \emph{CMSC 848Q: How and Why Artificial
+      Intelligence Answers Questions} with new lectures and homeworks
+  \item First online offering of \emph{CMSC 723: Computational Linguistics}
   \item First offering of \emph{CMSC 470: Natural Language Processing} with permanent course number
   \item Developed new undergraduate course, \emph{INST 414: Data Science Methods}
   \item Developed new undergraduate course, \emph{CSCI 3022: Data Science
@@ -480,43 +494,30 @@ Research (only Colorado portion shown)}
 
 }
 
-
-\headedsection{\umdtext{ III.C.1. }{ Advising: Research Direction (Undergraduate)}} {
-
+\headedsection{\umdtext{ III.C.1. }{ Guest lectures}}{
+\headedsubsection{Current Students}{}{
+  
   \begin{enumerate*}
-    \item Arjun Akkiraju (UMD, 2020--): Generating Adversarial QA Examples
-    \item Chenglei Si (UMD, 2020--): Answer Equivalence
-    \item Andrew Mao (UMD, 2020--): Interactive Information Retrieval
-      for Online Academic Competitions
-    \item Naveen Raman (UMD, 2020--): Active Learning for Coreference
-    \item Sander Schulhoff (UMD, 2020--): Interactive Deception
-    \item Matthew Shu (Yale CS, 2019--): Representation Learning
+        \item Matthew Shu (Yale CS, 2019--2022): Representation Learning
       for Spaced Repetition
-  \item Eric Wallace (UMD, 2018--2019): Generating challenging questions for
-    question answering
-  \item Sujith Vishwajith (UMD, 2017--2018): Answer equivalence for question answering
-  \item Davis Yoshida (CU, 2015--2017): Active feature solicitation for question answering
-  \item Henrik Larsen (CU, 2015--2016): Verb prediction
-  \item Stephanie Hwa (UMD, 2013--2014): Vector word representations for named entities in question answering
-  \item Danny Bouwman (UMD, 2013--2014): Crowdsourced coreference annotation
-  \item Kenrick Kin, Joshua Lee, Lester Mackey (Princeton, 2005--2006): Assistive vocabulary devices
-    for people with aphasia
-\end{enumerate*}
+    \item Konstantine Kahadze (UMD, 2022--): Creating Lies in
+      Diplomacy
+    \item Sander Schulhoff (UMD, 2020--): Interactive Deception       
+    \end{enumerate*}
+  }
+  \headedsubsection{Former Students}{}{
+
+    \input{resume_src/placement_bs}
 }
+
+}
+
 
 \headedsection{\umdtext{III.C.2. }{ Advising: Research Direction (Masters)}}{
 
-\headedsubsection{Chair or Co-Chair}{}{
+\headedsubsection{Chair or Co-Chair (former)}{}{
 
-\begin{enumerate*}
-\item Davis Yoshida (CU APMA, 2016--2017): Domain Adaptation for
-  Question Answering [First position: PhD student, TTI-Chicago]
-\item You Lu (CU CSCI, 2016--2017): Task-based Evaluation of Topic
-  Models [First position: PhD student, Virginia Tech]
-\item Alison Smith (UMD CMSC, 2011--2013): Evaluating Interfaces for Interactive Topic Modeling [First position: Decisive Analytics]
-\item Brianna Satinoff (UMD CMSC, 2009--2011): Incremental Models for Text Classification [First position: Wellpoint]
-\end{enumerate*}
-
+\input{resume_src/placement_ms}
 }
 
 \headedsubsection{On Committee}{}{
@@ -525,54 +526,77 @@ Research (only Colorado portion shown)}
 \item Thomas Diggelmann (CS, 2020 ETH)
 \item Varini Francesco Saverio (CS, 2020 ETH)
 \item Jordan Hoskins (German, 2015 Colorado)
-\item Bradley Skaggs (CMSC, 2011 UMD) [First position: US Government]
+\item Bradley Skaggs (CMSC, 2011 UMD) 
 \end{enumerate*}
 
 }
+}
+
+
+
+\headedsection{\umdtext{III.H. }{ Guest lectures}}{
+
+  \begin{itemize*}
+    \item 2018 CMSC 828P: Topic Models
+  \item 2017, PSYC 6200: Topic Models
+  \item 2017, INFO 2301: Clustering
+    \item 2016, HIST 6546: Topic Models
+        \item 2016, CSCI 7000 (Data Science Team): Topic Models as
+          Features
+        \item 2016, CSCI 6000: Machine Learning Research
+	\item 2015, CSCI 5832: Topic Models
+	\item 2012, CMSC 421: Topic Models
+	\item 2012, CMSC 726: Topic Models
+	\item 2011, LING 773: Topic Models
+	\item 2010, CMSC 726: Topic Models
+\end{itemize*}
 }
 
 \headedsection{\umdtext{III.C.3. }{Advising: Research Direction (Doctoral)}}{}{
 
-\headedsubsection{Chair or Co-chair}{}{
+\headedsubsection{Chair or Co-chair (current)}{}{
 
-\begin{enumerate*}
-\item Michelle Yuan (UMD CMSC, 2018--): Multilingual Interactive Topic
-  Modeling
+  \begin{enumerate*}
+    \item Nishant Balepur (UMD CMSC, 2023--): NLP for Education
+    \item Ishani Mondal (UMD CMSC, 2022--): Interactive Information
+      Extraction
+      \item Neha Srikanth (UMD CMSC, 2022--): Pragmatic Assumptions of
+        Question Answering
+    \item Zongxia Li (UMD CMSC, 2023--): Combining LLM and Human
+      Expertise 
+    \item Hyojung Han (UMD CMSC, 2022--): Multilingual Question
+      Answering
+      \item Kyle Seelman (UMD CMSC, 2022--): Interactive Neural Topic Models
+    \item Wichayaporn Wongkamjan (UMD CMSC, 2022--): Reinforcement
+      Learning for Negotiation
+       \item YooYeon Sung (iSchool, 2021--): Adversarial Examples for
+         Question Answering and Disinformation
 \item Mozhi Zhang (UMD CMSC, 2017--): Multilingual Classification for
   Low Resource Languages
 \item Fenfei Guo (UMD CMSC, 2017--): Interactive Embedding Learning
-\item Pedro Rodriguez (UMD CMSC, 2017--2021): Evaluating Machine Intelligence with Question Answering
-\item Shi Feng (UMD CMSC, 2017--2021): User Modeling of Knowledge and Ability for Question Answering
-\item Ahmed Elgohary (UMD CMSC, 2018-2021): Human Feedback for Question Answering
-\item Shudong Hao\footnote{Later advised by Michael Paul} (CU CSCI, 2015--2017): Interactive Multilingual
-  Topic Modeling [first tenure-track position: Bard College]
-  \item Alison Renner-Smith\footnote{Originally advised by Leah Findlater} (UMD CMSC, 2017--2019): Interactive Topic Modeling
-\item Weiwei Yang (UMD CSCI, 2014--2019; co-advised by Philip Resnik): Linked Topic Models
-\item Forough Poursabzi-Sangdeh (CU CSCI, 2014--2018): Active Labeling with Topic Models
-\item Kim Glasgow\footnote{Now advised by Yla Tausczik} (UMD iSchool 2011--2014): Social Action in Social Media
-\item Thang Nguyen (UMD CMSC, 2012--2018): Anchor-Based
-  Topic Inference
-\item Alvin Grissom II (CU CSCI, 2012--2017):
-  Reinforcement Learning for Feature-wise Language Tasks [First
-  position: Ursinus College, Assistant Professor]
-\item Mohit Iyyer (UMD CMSC, 2012--2017; co-advised by Hal Daum\'e): Deep Learning for Question
-  Answering [First tenure-track position: University of Massachussetts Amherst,
-  Assistant Professor]
-\item He He (UMD CMSC: 2011--2016; co-advised by Hal Daum\'e): Algorithms that Trade-Off Speed and Accuracy [First
-  tenure-track position: New York University]
-\item Viet-An Nguyen (UMD CMSC, 2010--2015; co-advised by Philip Resnik): Detecting Influence in Text [First position: Facebook Data Science]
-\item Ke Zhai (UMD CMSC, 2009--2014): Large Scale Bayesian Inference [First position: Yahoo! Research]
-\item Yuening Hu (UMD CMSC: 2009--2014): Interactive Topic Modeling [First position: Yahoo! Research]
 \end{enumerate*}
+}
 
+\headedsubsection{Chair or Co-chair (former)}{}{
+  \input{resume_src/placement_phd}
 }
 
 \headedsubsection{On committee}{}{
 
   \begin{enumerate*}
-    \item Xin Qian (INST)
-    \item Joeseph Barrow (CMSC)
-    \item Varun Suryan (CMSC)
+  \item Chujun Song (CMSC)
+    \item Alexander Hoyle (CMSC)
+  \item Pranav Goel (CMSC)
+  \item Xin Qian (INST)
+  \item Shraey Bhatia (Melbourne, Computer Science 2024)
+    \item Martin Faj\v{c}ik (Brno, Computer Science 2024)    
+  \item Suraj Nair (CMSC, 2023)
+  \item Noel Warford (CMSC, 2023)
+  \item Sweta Argawal (CMSC, 2023)
+    \item Jason Fan (CMSC, 2023)    
+  \item Joeseph Barrow (CMSC, 2022)
+  \item Varun Suryan (CMSC, 2022)
+    \item Sunandita Patra (CMSC, 2020)
 \item Xing Niu (CMSC, 2019)
 \item Yogarshi Vyas (CMSC, 2019)
 \item Varun Manjunatha (CMSC, 2018)
@@ -603,33 +627,17 @@ Research (only Colorado portion shown)}
 }
 }
 
-\headedsection{\umdtext{III.H. }{ Guest lectures}}{
-
-  \begin{itemize*}
-    \item 2018 CMSC 828P: Topic Models
-  \item 2017, PSYC 6200: Topic Models
-  \item 2017, INFO 2301: Clustering
-    \item 2016, HIST 6546: Topic Models
-        \item 2016, CSCI 7000 (Data Science Team): Topic Models as
-          Features
-        \item 2016, CSCI 6000: Machine Learning Research
-	\item 2015, CSCI 5832: Topic Models
-	\item 2012, CMSC 421: Topic Models
-	\item 2012, CMSC 726: Topic Models
-	\item 2011, LING 773: Topic Models
-	\item 2010, CMSC 726: Topic Models
-\end{itemize*}
-}
-
 
 \roottitle{\umdtext{IV.A. }{Service and Outreach}}
 
 
 \headedsubsection{\umdtext{IV.A.3.a. }{Reviewing and Editing for
     Journals and Presses: Articles}}{}{
-\begin{itemize*}
-\item Reviewer for \emph{Computational \& Mathematical Organization Theory}: 2021
-\item Reviewer for \emph{Journal of Machine Learning Research}: 2011, 2012, 2019
+  \begin{itemize*}
+    \item Reviewer for \emph{Science}: 2022
+\item Reviewer for \emph{Journal of Machine Learning Research}: 2011,
+  2012, 2019, 2021, 2022
+\item Reviewer for \emph{Computational \& Mathematical Organization Theory}: 2021  
 \item Reviewer for \emph{Machine Learning}: 2019
 \item Action Editor for \emph{Transactions of the Association for Computational Linguistics}: 2017--2019
 \item Reviewer for \emph{Journal of AI Research}: 2016
@@ -659,8 +667,13 @@ Research (only Colorado portion shown)}
   and Foundations}}{}{
 
 \begin{itemize*}
+    \item NSF IIS Review Panel (2023)
+  \item NSF IIS Review Panel (2022)
+\item Hasler Stiftung: Expertengutachten (2021)
+\item NSF External Review (2021)
 \item NSF III Review Panel (2021)
 \item NSF IIS Review Panel (2021)
+\item NSF External Review (2020)
 \item NSF III Review Panel (2018)
 \item NSF IIS Review Panel (2017)
 \item NSERC External Review (2017)
@@ -677,12 +690,13 @@ Research (only Colorado portion shown)}
 
 
   \begin{itemize*}
+    \item Program Committee \emph{LREC}: 2023
     \item Program Committee \emph{International Conference on Learning
         Representations}: 2021
 \item Program Committee \emph{Association for Computational
     Linguistics}: 2020, 2019, 2014, 2012, 2011, 2010
 \item Program Committee \emph{Empirical Methods in Natural Language
-    Processing}: 2019, 2014, 2013, 2012, 2011, 2008    
+    Processing}: 2019, 2014, 2013, 2012, 2011, 2008
 \item Best Paper Committee, \emph{ACL 2018}
 \item Program Committee \emph{2014 Workshop on Language Technologies and Computational Social Science}
 \item Program Committee \emph{Neural Information Processing Systems}: 2014, 2013, 2012, 2011, 2010, 2009
@@ -704,7 +718,10 @@ Research (only Colorado portion shown)}
 
 
 \headedsubsection{\ifumd IV.B.1.a. \fi Departmental Service}{Computer Science, Maryland}{
-	\begin{itemize*}
+  \begin{itemize*}
+    \item Chair, Instructional Faculty Search Committee (2024)
+    \item Faculty Teaching Review Committee (2020-2023)
+    \item Faculty Mentor, Technica Research Bitcamp (2021)
 \item Faculty Mentor, Exploration Trail Research Bitcamp for
   Underrepresented Minorities (2021)
                 \item Teaching Review Committee (2020--2021)
@@ -715,18 +732,30 @@ Research (only Colorado portion shown)}
 \headedsubsection{\ifumd IV.B.1.b. \fi Departmental Service}{Institute for Advanced Computer Studies, \textsc{umd}}{
 
   \begin{itemize*}
-    \item Computer Science Liason (Graduate Admissions, 2020--2021)
+    \item Merit Review Committee (2022)
+    \item Computer Science Liaison (Graduate Admissions, 2020--2022)
 \item APT Member (2017--2018, 2020--2021)
-          \item Director: Computational Linguistics and Information Processing Lab (2017--2018)
-        \item Hardware Czar: Computational Linguistics and Information Processing Lab (2017--2018)
+          \item Director: Computational Linguistics and Information
+            Processing Lab (2017--2018,2021--2022)
+        \item Hardware Czar: Computational Linguistics and Information Processing Lab (2017--2018,2021)
 	\item Member: Appointments and Promotion (2012--2013,
           2017--2018)
-        \item Data Czar: Computational Linguistics and Information Processling Lab (2011--2014)          
+        \item Data Czar: Computational Linguistics and Information Processling Lab (2011--2014)
 	\item Coordinator: Computational Linguistics and Information Processing Lab Colloquium (2010--2012)
 \end{itemize*}
 }
 
-\headedsubsection{\ifumd IV.B.2.b. \fi College Service}{College of information Studies,
+
+\headedsubsection{\ifumd IV.B.2.b. \fi College Service}{College of
+  Computer, Mathematical, and Natural Sciences
+  \textsc{umd}}{
+
+\begin{itemize*}
+        \item Member: Rankings and Reputation Committee (2022--2024)
+\end{itemize*}
+}
+
+\headedsubsection{\ifumd IV.B.2.b. \fi College Service}{College of Information Studies,
   \textsc{umd}}{
 
 \begin{itemize*}
@@ -747,17 +776,23 @@ Research (only Colorado portion shown)}
     \item Member: Language Science Undergraduate Committee (2021--)
     \item Member: Language Science Executive Council (2017--)
         \item Faculty Advisor: Maryland Academic Quiz Team
+          (2010--2014, 2017--)
           \begin{itemize}
             \item National Champion, 2019 Division II Intercollegiate
               Championship Tournament
             \item 5\textsuperscript{th} place, 2019 Division I Intercollegiate
-              Championship Tournament          
+              Championship Tournament
             \item 8\textsuperscript{th} place, 2018 Division I Intercollegiate
-              Championship Tournament         
-          \end{itemize}
-	\item Faculty Advisor: Maryland Academic Quiz Team (2010-2014;
-          5\textsuperscript{th} place, 2014 Division I Intercollegiate
+              Championship Tournament
+            \item Champion, 2017 Academic Competition Federation
+            \item 4\textsuperscript{th} place, 2017 Division I Intercollegiate
+              Championship Tournament)  
+            \item 4\textsuperscript{th} place, 2014 Division I Intercollegiate
               Championship Tournament)
+            \item 4\textsuperscript{th} place, 2012 Division I
+              Intercollegiate Championship Tournament  
+          \end{itemize}
+
 \end{itemize*}
 }
 
@@ -796,6 +831,12 @@ Research (only Colorado portion shown)}
 
 
   \begin{itemize*}
+    \item {\bf Area Chair} for Large Language Models and the Future of
+      \textsc{nlp} \emph{EMNLP 2023}
+  \item {\bf Program Chair} \emph{ACL 2023}
+    \item {\bf Poster Chair} \emph{EMNLP 2022}
+    \item {\bf Area Chair} for Question Answering \emph{EMNLP 2022}    
+    \item {\bf Senior Area Chair} for Question Answering \emph{NAACL 2022}
     \item {\bf Area Chair} for Question Answering \emph{EMNLP 2021}
     \item {\bf Area Chair} for Question Answering \emph{ACL 2021}
     \item {\bf Area Chair} for Question Answering \emph{NAACL 2021}
@@ -825,6 +866,9 @@ Research (only Colorado portion shown)}
 
 
 \begin{itemize*}
+  \item Panelist for \emph{Under the Hood: A Deeper Dive Into How AI
+      Technology Works}, organized by Computer and Communications
+    Industry Association for Congressional Staffers (2023)
 \item Consultant for \emph{Interactive Topic Modeling}, National Institutes for Health (2010)
 \item Collaboration on \emph{Dirichlet Process Protein Clustering}, National Institues for Health (2012)
 \item Collaboration on \emph{Nonparametric Beta Coalescent
@@ -877,6 +921,31 @@ Research (only Colorado portion shown)}
 \headedsubsection{Press Coverage}{}{
 \input{resume_src/media}
 }
+
+\ifgerman
+
+
+\clearpage
+
+\roottitle{Diplomas and Certificates}
+
+
+\headedsection{BS, California Institute of Technology}{}{
+  \image{bs_diploma}{}
+}
+
+
+\headedsection{MA, Princeton University}{}{
+  \image{ms_diploma}{}
+}
+
+\headedsection{PhD, Princeton University}{}{
+  \image{phd_diploma}{}
+}
+
+\else
+
+\fi
 
 
 \end{document}

@@ -1,0 +1,10 @@
+~~ Bibtex | inproceedings
+~~ Title | Prompting GPT-3 To Be Reliable
+~~ Author | Chenglei Si and Zhe Gan and Zhengyuan Yang and Shuohang Wang and Jianfeng Wang and Jordan Boyd-Graber and Lijuan Wang
+~~ Booktitle | International Conference on Learning Representations
+~~ Year | 2023
+~~ Url | docs/2023_iclr_reliable.pdf
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Venue | Refereed Conference
+~~ Link | Code*https://github.com/NoviScl/GPT3-Reliability
+~~ Project | DADC*../projects/DADC.html

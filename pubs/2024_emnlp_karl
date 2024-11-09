@@ -1,0 +1,12 @@
+~~ Bibtex | inproceedings
+~~ Title | KARL: Knowledge-Aware Retrieval and Representations aid Retention and Learning in Students
+~~ Author | Matthew Shu and Nishant Balepur and Shi Feng and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Venue | Refereed Conference
+~~ Location | Miami
+~~ Year | 2024
+~~ Category | Empirical Human Data Collection
+~~ Category | Education / Human Learning
+~~ Venue | Preprint
+~~ Url | https://arxiv.org/abs/2402.12291
+~~ Public | Flashcard schedulers help students study by predicting the best times and flashcards for review. However, current systems do not consider the actual text of the flashcards to make these predictions. This paper introduces KARL, a new flashcard scheduler that uses language models to encode the text of flashcards. We host KARL in our own flashcard app for 500+ learners and show that students using KARL learn more efficiently than traditional systems.

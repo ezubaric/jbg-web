@@ -1,0 +1,17 @@
+~~ Bibtex | inproceedings
+~~ Title | Learning to Explain Selectively: A Case Study on Question Answering
+~~ Author | Shi Feng and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Year | 2022
+~~ Location | Abu Dhabi
+~~ Project | CAREER*../projects/IIS-1652666.html
+~~ Category | Question Answering
+~~ Category | Empirical Human Data Collection
+~~ Category | Interpretability
+~~ Venue | Refereed Conference
+~~ NumPages | 9
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/27BsqhJajWs" frameborder="0" allowfullscreen></iframe>
+~~ Link | Research Teaser*https://youtu.be/27BsqhJajWs
+~~ Link | Code and Data*https://bit.ly/selective_explanation
+~~ Url | docs/2022_emnlp_augment.pdf
+~~ Public | Many AI methods are a black box: input goes in, predictions come out.  While there are many AI explanation tools that you can add to these predictions, how do you know if they are any good.  In this work presented at EMNLP, if you put a human in front of a AI that's trying to answer questions, our hypothesis is that you can measure how good the underlying explanations are by how much the human's score goes up.  This 2022 EMNLP publication not just measures which combinations of explanations are most effective for an individual.  We use bandit exploration to quickly figure out what set of explanations best help a specific user.

@@ -1,0 +1,23 @@
+{
+    "config": {"start": "2024-08-26",
+	       "end": "2024-12-09",
+	       "days": ["W-MON"],
+	       "hw_day": "W-FRI"},
+    "topics": [],
+    "class_sequence": [],
+    "hw_sequence": [["Set Goals / Targets", ""],
+		    "",
+		    "",
+		    ["Paper Draft without Experiments", ""],
+		    "",
+		    "",
+		    "",
+		    "",
+		    ["Paper Draft with Experiments", ""],
+		    "",
+		    "",
+		    "",
+		    "",
+		    ["Paper Draft Revision", ""]],
+    "specials": ""
+}

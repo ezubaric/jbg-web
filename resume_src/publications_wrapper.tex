@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
+
+\include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
+\newif\ifumd\umdfalse
+\newcommand{\umdtext}[2]{
+\ifumd
+#1 #2
+\else
+#2
+\fi
+}
+
+
+\begin{document}
+
+
+\maintitle{Jordan Boyd-Graber Publications}{}  % Your name and date of birth or subtitle
+
+\input{resume_src/pubs_by_venue.tex}
+
+
+\end{document}

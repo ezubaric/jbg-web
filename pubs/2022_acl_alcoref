@@ -1,0 +1,14 @@
+~~ Bibtex | inproceedings
+~~ Author | Michelle Yuan and Patrick Xia and Chandler May and Benjamin Van Durme and Jordan Boyd-Graber
+~~ Title | Adapting Coreference Resolution Models through Active Learning
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2022
+~~ Location | Dublin
+~~ Category | Deep Learning
+~~ Category | Empirical Human Data Collection
+~~ Project | Adobe*../projects/adobe.html
+~~ Venue | Refereed Conference
+~~ URL | docs/2022_acl_alcoref.pdf
+~~ Link | Code*https://github.com/forest-snow/incremental-coref
+~~ Acceptance | 21
+~~ NumPages | 9

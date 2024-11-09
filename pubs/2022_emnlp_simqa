@@ -1,0 +1,16 @@
+~~ Bibtex | inproceedings
+~~ Title | SimQA: Detecting Simultaneous MT Errors through Word-by-Word Question Answering
+~~ Author | HyoJung Han and Marine Carpuat and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Year | 2022
+~~ Location | Abu Dhabi
+~~ Project | CAREER*../projects/IIS-1652666.html
+~~ Category | Question Answering
+~~ Category | Machine Translation
+~~ Venue | Refereed Conference
+~~ NumPages | 9
+~~ Url | docs/2022_emnlp_simqa.pdf
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/rorRvvECvL4" frameborder="0" allowfullscreen></iframe>
+~~ Link | Code*https://go.umd.edu/simqa
+~~ Link | Research Talk*https://youtu.be/rorRvvECvL4
+~~ Public | Simultaneous interpretation (where a translation happens word by word before the source sentence is finished) is difficult to evaluate.  We created a new evaluation framework based on the following scenario: imagine that you're thrown into a trivia gameshow where you don't know the language.  Specifically, it's a game format where you interrupt the question word by word as soon as possible.  Our hypothesis is that a monolingual player (who doesn't speak the source language) will be able to do better in the game with a better simultaneous translation system.  In this 2022 EMNLP publication, we show that this evaluation is not only cheaper (you just need to translate the answer) but can also detect hallucinations and undertranslations better than existing evaluation methods.

@@ -1,0 +1,15 @@
+~~ Bibtex | inproceedings
+~~ Title | A SMART Mnemonic Sounds like "Glue Tonic": Mixing LLMs with Student Feedback to Make Mnemonic Learning Stick
+~~ Author | Nishant Balepur and Matthew Shu and Alexander Hoyle and Alison Robey and Shi Feng and Seraphina Goldfarb-Tarrant and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Venue | Refereed Conference
+~~ Year | 2024
+~~ Location | Miami
+~~ Category | Empirical Human Data Collection
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Education / Human Learning
+~~ Venue | Preprint
+~~ Url | https://arxiv.org/abs/2406.15352
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Project | Adobe*../projects/adobe.html
+~~ Public | Learning vocabulary (e.g., benevolent) can be tedious, but using mnemonics (e.g., benevolent sounds like "benefits," and a kind boss gives benefits) makes it more engaging and effective. In this paper, we introduce SMART, a large language model trained to produce mnemonics based on feedback from flashcard learners. We find that students struggle to predict which mnemonics will help them most. Still, by training SMART on both student preferences and learning outcomes, we can generate mnemonics as effectively as GPT-4, but at a much lower cost.
