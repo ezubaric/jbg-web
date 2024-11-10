@@ -15,3 +15,4 @@
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Project | Adobe*../projects/adobe.html
 ~~ Public | Learning vocabulary (e.g., benevolent) can be tedious, but using mnemonics (e.g., benevolent sounds like "benefits," and a kind boss gives benefits) makes it more engaging and effective. In this paper, we introduce SMART, a large language model trained to produce mnemonics based on feedback from flashcard learners. We find that students struggle to predict which mnemonics will help them most. Still, by training SMART on both student preferences and learning outcomes, we can generate mnemonics as effectively as GPT-4, but at a much lower cost.
+~~ Embed | <iframe width="280" height="158" src="https://youtu.be/9_u697whJns" frameborder="0" allowfullscreen></iframe>
