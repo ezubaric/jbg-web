@@ -180,6 +180,8 @@
 		    ["Modeling neural temporal dynamics", "https://users.umiacs.umd.edu/~nhf/papers/Gwilliams.pdf"]], 
 		    "Topics": ["Cross-linguistic differences in speech perception", "Infants' perceptual changes", "Neural representations of speech"]},
 	       "annotation": {"Optional Readings": [["Analyzing Dataset Annotation Annotation Quality Management in the Wild", "https://aclanthology.org/2024.cl-3.1.pdf"]]},
+               "multimodal": {"Optional Readings": [["The Revolution of Multimodal Large Language Models: A Survey", "https://aclanthology.org/2024.findings-acl.807.pdf"]],
+                              "Topics": ["Learning Consistent Representations", "Visual Question Answering", "Visual Generation"]},
 	"cog-sentence": {"Optional Readings": [["LLM correlations with reading times", "https://drive.google.com/file/d/1dEPF1JENlcY0fumNku9fDkqyRkRYQ-36/view?usp=sharing"], 
 		["Syntactic ambiguity processing benchmark", "https://drive.google.com/file/d/1bHcNGSgdD1Fp6WoD0NYQLRocstu8Y-DM/view?usp=sharing"], 
 		["Attention in agreement attraction","https://drive.google.com/file/d/1nW9jaJuIeY9gEGy7_SGiWVguTuTKf_BW/view?usp=sharing"], 
