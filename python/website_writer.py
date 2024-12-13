@@ -1,14 +1,13 @@
-from class_webpage import Course
-
+import os
+import pdb
+import re
+import time
+from collections import defaultdict
+from datetime import date, datetime
 from glob import glob
 from string import capwords
-from datetime import date, datetime
-from collections import defaultdict
-import time
-import os
-import re
 
-import pdb
+from class_webpage import Course
 
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
@@ -55,10 +54,10 @@ class Student:
   def html(self):
       val = self._name
 
-      if not self._web is None:
+      if self._web is not None:
           val = '<A HREF="%s">%s</a>' % (self._web, val)
 
-      if not self._job is None:
+      if self._job is not None:
           val = "%s (Student %i&#8211;%i: Now at %s)" % (val, self._start, self._end, self._job)
 
       if self._thesis:
@@ -69,7 +68,7 @@ class Student:
 
       return val
 
-UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
+UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \\else \\fi Chapters in Books",
                "Book": "\\ifumd II.A.1. Books Authored \\else Books \\fi ",
                "Refereed Conference": "\\ifumd II.D.1. \\fi Refereed Conference Proceedings",
                "Preprint": "\\ifumd II.F.2  \\fi Preprints / Working Papers",
@@ -80,8 +79,8 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
              "Zongxia Li": Student("Zongxia Li", 2023, 2028),
              "Sander Schulhoff": Student("Sander Schulhoff", 2022, 2024, "https://trigaten.github.io/", kind="UG"),
-             "Maharshi Gor": Student("Maharshi Gor", 2024, 2028, "https://www.mgor.info/"),
-             "Neha Srikanth": Student("Neha Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
+             "Maharshi Gor": Student("Maharshi Gor", 2024, 2028, "https://mgor.info/"),
+             "Neha Pundlik Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
              "Ishani Mondal": Student("Ishani Mondal", 2023, 2028, "https://ishani-mondal.github.io/"),
              "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
              "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
@@ -103,7 +102,7 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "http://shudong-hao.com/", job="Bard College, Assistant Professor"),
              "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://www.mozhi.umiacs.io"),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2020),
-             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "https://forest-snow.github.io/", job="Amazon AWS, Applied Scientist", 
+             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "https://forest-snow.github.io/", job="Amazon AWS, Applied Scientist",
                                       thesis_url="https://drum.lib.umd.edu/handle/1903/29333", thesis="Transfer Learning in Natural Language Processing through Interactive Feedback"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
@@ -139,15 +138,15 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Eric Hardisty": Student("Eric Hardisty", 2010, 2011, kind="MS")}
 
 for ii in set(x._kind for x in kSTUDENTS.values()):
-    sorted_students = list(sorted(kSTUDENTS.values(), key=lambda x: x._start))
+    sorted_students = sorted(kSTUDENTS.values(), key=lambda x: x._start)
     global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "CUR")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
-      "\n".join("\item %s" % x.latex() for x in sorted_students
+      "\n".join(r"\item %s" % x.latex() for x in sorted_students
                 if x._end >= datetime.now().year and x._kind == ii)
 
     global_replace["%s%s%sSTUDENTS" % ("LATEX", ii, "PAST")] = \
       "\\begin{itemize}\n %s \n\\end{itemize}" % \
-      "\n".join("\item %s" % x.latex() for x in sorted_students
+      "\n".join(r"\item %s" % x.latex() for x in sorted_students
                 if x._end < datetime.now().year and x._kind == ii)
 
     global_replace["%s%s%sSTUDENTS" % ("HTML", ii, "PAST")] = \
@@ -207,7 +206,7 @@ class IndexElement:
     self.fields = defaultdict(list)
     for ii in [x for x in file_contents.split("~~") if x != ""]:
       key = capwords(ii.split("|")[0].strip())
-      if not key in self.fields:
+      if key not in self.fields:
         self.fields[key] = []
       val = ii.split("|")[1].strip()
       if key == "Author":
@@ -301,7 +300,7 @@ class IndexElement:
     else:
       s = s.replace("~~~links~~~", "")
 
-    
+
     return s.encode("ascii", "ignore")
 
   def txt(self, acceptance=True, url=''):
@@ -355,7 +354,7 @@ class IndexElement:
   def html(self, bibtex, url_prefix, section):
     s = self.author_string(False)
 
-    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace("\dots", "&hellip;").replace("~", "&nbsp;").replace("\=o", "&omacr;")
+    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace(r"\dots", "&hellip;").replace("~", "&nbsp;").replace(r"\=o", "&omacr;")
     for latex_format, tag_start, tag_end in [("\\underline{", "<U>", "</U>")]:
       while latex_format in formatted_title:
         start, end = formatted_title.split(latex_format, 1)
@@ -440,7 +439,7 @@ class IndexElement:
     try:
       year = -int(self.fields["Year"][0])
     except ValueError:
-      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))      
+      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))
       year = float("-inf")
     except IndexError:
       print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))
@@ -521,13 +520,13 @@ class WebsiteWriter:
   def add_teaching(self, path):
       self.courses = Course()
       self.courses.load_holidays("teaching/holidays.json")
-      
+
       for ii in glob(path):
           self.courses.load_json(ii)
           course = ii.split("/")[-2]
 
           global_replace[course] = self.courses.render()
-  
+
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [], True)],
                 default_sort="Year"):
     index = {}
@@ -545,7 +544,7 @@ class WebsiteWriter:
       except IndexError:
         print("Parse error on %s in %s" % (ii, path))
         time.sleep(60)
-        continue          
+        continue
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue
@@ -571,11 +570,11 @@ class WebsiteWriter:
     final_directory = (self._output + "/" + self.DYNAMIC_DIR +
                        index.lower())
     try:
-      print("Making dir %s" % final_directory)                
+      print("Making dir %s" % final_directory)
       os.mkdir(final_directory)
     except OSError:
       print("Dir couldn't be made: " + final_directory)
-    
+
     for sort_by, min_count, exclude, filter_author in self._criteria[index.lower()]:
       o = open(self._output + "/" + self.DYNAMIC_DIR +
                "%s/%s.html" % (index.lower(), sort_by.lower()), 'w')
@@ -600,7 +599,7 @@ class WebsiteWriter:
       primary = [x[0] for x in keys]
       primary = [x for x in primary if \
                    len([y for y in primary if y==x]) > min_count and \
-                   not x in exclude]
+                   x not in exclude]
       keys = [x for x in keys if x[0] in primary]
       keys.sort()
       if sort_by == "Year":
@@ -642,7 +641,7 @@ class WebsiteWriter:
             html_out = ""
 
           # The asterisk if a field separator, so it has slightly different formatting
-          if not "*" in jj[0]:
+          if "*" not in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
             o.write("\t<h2>%s</h2>\n\t<ul>\n" % txt_name)
@@ -664,18 +663,18 @@ class WebsiteWriter:
               latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
 
           latex_out.write("\n\\begin{enumerate}\n")
-          
+
         # Write comment string so we know original entry in DB
         this_html = "\n\t\t<!--- %s --->\n" % str(jj)
         this_html += "\t\t<li>%s</li>\n" % lookup[jj].html(bibtex, self._url, old)
         global_replace["%s:%s:%s" % (index, txt_name, year)] += this_html
 
         if not filter_author or ("boyd-graber" in lookup[jj].txt().lower()):
-          
-          latex_out.write("\t \item " + lookup[jj].latex(self._url))
+
+          latex_out.write("\t \\item " + lookup[jj].latex(self._url))
           bibtex_out.write(lookup[jj].bibtex(self._url))
           text_out.write(lookup[jj].txt(url=self._url))
-        
+
           html_out += this_html
           old = jj[0]
 
