@@ -106,8 +106,35 @@ they should be involved from the start, and the first point of contact
 
 <p class="answer">A good problem should have the folloing features:
   <ul>
-    <li> Easy to understand the setup: you shouldn't need more than a paragraph or two to set up the problem.
-    <li> Easy to understand if the solution succeeded: 
+    <li> Easy to understand the setup: you shouldn't need more than a
+    paragraph or two to set up the problem.
+    <li> Easy to understand if the solution succeeded: the person
+    doing the project should have a good signal that they're on the
+    right track and your validation that they did it right should
+    similarly be trivial.  This means that tryout projects can't
+    depend on complicated training algorithms or analysis of model
+    output.
+    <li> The project shouldn't depend on understanding the internals
+    of large external libraries.  So while it would be okay to have a
+    tryout project to implement a new activation function in Pytorch
+    (a large library, but just using a well documented API), a tryout
+    project wouldn't be implementing tensor math for a new GPU
+      architechture.
+    <li> The tryout should test the skills needed for the "real"
+    follow-on projects.  E.g., if the student will be building an
+    interface, the tryout needs to test the ability to create a web
+      interface.
+    <li> The tryout should be connected to the real project: e.g., use
+    the real data whenever possible, use the real metrics, etc.
+    Sometimes this goes against the simplicity constraints above, but
+      whenever possible, it should be as real as possible.
+    <li> Even if the problem is a little contrived, it should feed
+    into the real work.  In other words, thy tryout project shouldn't
+    be wasted, it should feed into the real work.
+    <li> The ammount of work should take the grad student creating the
+    problem an afternoon at most (disregarding any computer training
+    time).  Thus, a well-prepared grad student shouldn't need more
+    than a weekend to complete it.
     </ul>
 </p>
 
@@ -193,9 +220,14 @@ admissions).  As a result, it is my policy only to work with people who either
 complete a tryout project or are directly recommended to me by a professor or
 researcher <b>with whom I already have a relationship</b>.</p>
 
-<p class="answer">Tryouts usually happen once a year and only then.  If you
-  are interested, send me an e-mail, and I will add your name to the list of
-  people I'll send a tryout project when I have the bandwidth to support new interns.</p>
+<p class="answer">Thus, if you are not introduced through a peer, then
+  you have to do a tryout project (these are the same projects
+  discussed elsewhere in this FAQ that I do with prospective undergrad
+  researchers at UMD, although the bar is slightly higher for students
+  outside Maryland).  Tryouts usually happen once a year and only
+  then.  If you are interested, send me an e-mail, and I will add your
+  name to the list of people I'll send a tryout project when I have
+  the bandwidth to support new interns.</p>
 
 <p class="question">Will I get admitted?  Why was I rejected?</p>
 
