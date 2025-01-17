@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~/repositories/jbg-web/deploy.sh
 
 # Restore deleted files
 git checkout $(git ls-files -d)
@@ -86,3 +87,7 @@ rm */*/*~
 rm pubs/*.log
 rm docs/*.pdf
 git checkout $(git ls-files -d)
+
+# Reset permissions
+cd ~/public_html
+chmod 755 -R *
