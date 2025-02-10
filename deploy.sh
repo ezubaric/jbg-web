@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/repositories/jbg-web/deploy.sh
+cd ~/repositories/jbg-web/
 
 # Restore deleted files
 git checkout $(git ls-files -d)
