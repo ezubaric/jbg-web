@@ -12,7 +12,7 @@ import pdb
 
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
-kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
+kHTML_CHARS = {"&eacute;": "e", "\\%": "%"}
 
 global_replace = defaultdict(str)
 
@@ -308,7 +308,7 @@ class IndexElement:
     text = kHTML.sub('', self.html(False, url, ""))
     text = kBRACKET.sub('', text)
     if "Acceptance" in self.fields and acceptance:
-      text += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
+      text += " (" + self.fields["Acceptance"][0] + "\\% Acceptance Rate)"
     text += "\n"
     if "Url" in self.fields and url:
       if url.endswith("/"):
@@ -340,7 +340,7 @@ class IndexElement:
         s += ", %i pages" % int(self.fields["Numpages"][0])
 
     if "Acceptance" in self.fields and acceptance:
-      s += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
+      s += " (" + self.fields["Acceptance"][0] + "\\% Acceptance Rate)"
 
     s += "."
     s += "\n\n"
