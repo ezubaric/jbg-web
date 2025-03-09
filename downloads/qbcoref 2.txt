@@ -1,0 +1,4 @@
+
+instructions for loading embeddings given a vocabulary: download 300d common crawl glove vectors (http://www-lp.stanford.edu/data/glove.6B.300d.txt.gz) and run load_embeddings.py
+
+mentionlist converts the conll fines into the wabbit format used by the classifier
