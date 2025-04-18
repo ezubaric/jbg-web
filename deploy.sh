@@ -2,7 +2,7 @@
 cd ~/repositories/jbg-web/
 
 # if run on UMIACS, cd into right directory
-cd /nfshomes/jbg/repositories/jbg-web
+cd /nfshomes/ying/repositories/jbg-web
 
 # Restore deleted files, update repo
 git checkout $(git ls-files -d)
