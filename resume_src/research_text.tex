@@ -18,13 +18,13 @@
 
 \begin{document}
 
- \title{Personal Statement on my Research: \\ Evaluating and Enabling Human--AI Collaboration}
+ \title{Research Statement: Evaluating and Enabling Human--AI Collaboration}
 
  \author{Jordan Boyd-Graber, University of Maryland}
 %\institute{University of Colorado, Boulder CO 80309, USA}
 
 
-\date{Updated May 2023}
+\date{Updated April 2025}
 
 \maketitle
 
@@ -57,7 +57,7 @@ science applications.
 
 \section{Evaluating Interpretability}
 
-My journey with evaluating interpretability began over ten years ago
+My journey with evaluating interpretability began fifteen years ago
 with topic models.
 %
 Topic models are sold as a tool for understanding large data
@@ -79,7 +79,7 @@ The topic modeling community (including me) had fetishized complexity
 at the expense of usability\dots and topic modeling is not alone.
 
 \begin{center}
-\includegraphics[width=.5\linewidth]{images/prec_ll_4}
+\includegraphics[width=.5\linewidth]{../images/prec_ll_4}
 \end{center}
 
 Since this humbling discovery, I've built topic models that are a
@@ -88,20 +88,10 @@ proposing an organization of the data.  The user separates confusing
 clusters or joins similar clusters together~\cite{hu-14:itm}, an
 improvement over the ``take it or leave it'' philosophy of most
 machine learning algorithms.
-
-Focusing on collaboration also requires algorithms that are low
-latency (not just high throughput). We extended the
-geometric interpretations of admixture models developed by Arora et
-al.~\cite{arora-12} to multi-anchor topics~\cite{lund-17} and
-multi-lingual topics~\cite{Yuan-18}.
 %
-These are much faster than traditional probabilistic topic
-models---they can handle millions of documents in seconds---but they
-are less well understood theoretically and less used in practice.
-%
-Thus, we also developed better understanding of the projections of
-multilingual representations via graph theory~\cite{Fujinuma-19} and
-the convergence of alternating projections~\cite{Zhang-19}.
+Focusing on collaboration with as many people as possible also requires algorithms that are low
+latency~\cite{lund-17} and
+multi-lingual~\cite{Yuan-18}.
 
 After we proposed our ``reading tea leaves'' evaluation, it's
 heartening that \newcite{lau}{14} and their ``machine reading tea
@@ -117,7 +107,7 @@ In that same survey, {\bf none} of those papers do a human evaluation.
 As topic models evolve (e.g., incorporating
 neural components), you need to validate that these automatic metrics
 still correlate with whether it is useful for a human--computer
-collaboration.
+collaboration~\cite{Li:Mao:Stephens:Goel:Walpole:Fung:Dima:Boyd-Graber-2024}.
 
 \section{Teaming as an Evaluation}
 
@@ -137,7 +127,7 @@ explanations and found that explanations help all users but that
 novices are easily overwhelmed~\cite{feng-19}.
 %
 In follow-on work, we learned how to explicitly optimize explanations
-for individual users~\cite{feng-22}.
+for individual users~\cite{feng-22} or to help users in negotiations~\cite{Gu:Wongkamjan:Kummerfeld:Peskoff:May:Boyd-Graber-2025}.
 
 
 \section{Connecting with Social Science: Pedagogy, Framing, and Deception}
@@ -159,51 +149,49 @@ Thus, we argued that Diplomacy would be an exciting testbed for
 natural language processing, and our 2015 paper is---to the best of
 our knowledge---the first \abr{nlp} research on Diplomacy.
 %
-Before a betrayal, betrayers write ostensibly friendly messages and become more polite, stop talking about the future, and change how \emph{much} they write~\cite{niculae-15}.
+Before a betrayal, betrayers write ostensibly friendly messages and become more polite, stop talking about the future, and limit how \emph{much} they write~\cite{niculae-15}.
 %
-In follow-on work, we developed a dataset that predict both when users
+In follow-on work, we developed a dataset that predicts both when users
 lie to each other and when recipients of lies detect
 deception~\cite{Peskov-20}.
 %
 Diplomacy may be a nerdy game, but it is a fruitful testbed to teach
 computers to understand messy, emotional human interactions.
-%
-We are continuing to look into these questions with researchers from
-across the nation in a new \abr{darpa} program: \abr{shade}, which
-focuses on Diplomacy as a testbed for understanding deception.
+
 
 Recently, the use of \abr{nlp} methods in the game of Diplomacy has
 been the subject of highly-publicized papers by DeepMind in Nature
 Communications~\cite{kramar-22} and Meta in Science~\cite{bakhtin-22}.
 %
-The Meta paper, like our 2020 paper, used a classifier to detect
-deceptive statements.
-%
 The DeepMind paper built a game theoretic understanding of when
 betrayal should happen, building on our descriptive investigation of
 deception in human games.
+%
+The Meta paper, like our 2020 paper, used a classifier to detect
+deceptive statements but went far beyond our work by building an AI to play Diplomacy.
+%
+In our most recent work, we showed that even though Meta's \textit{tour de force} agent can consistently beat humans, it is viewed as less trustworthy than human players: humans lie to AI more than other humans and humans view it as lying more (even though it lies less).
+%
+Moreover, it was less persuasive---i.e., able to change people's minds---than humans despite its strategic supremacy~\cite{Wongkamjan-2024}.
 
-A game with higher stakes is politics. However, just like Diplomacy,
-the words that people use reveal their underlying goals; computational
-methods can help expose the ``moves'' political players can use. With
-collaborators in political science, we've built models that: show when
-politicians in debates strategically change the topic to influence
-others~\cite{nguyen-12,Nguyen-14b}; frame topics to reflect political
-leanings~\cite{nguyen-13:shlda}; use subtle linguistic phrasing to
-express their political leaning~\cite{iyyer-14a}; or create political
-subgroups with larger political
-movements~\cite{Nguyen:Boyd-Graber:Resnik:Miler-2015}.
+%A game with higher stakes is politics. However, just like Diplomacy,
+%the words that people use reveal their underlying goals; computational
+%methods can help expose the ``moves'' political players can use. With
+%collaborators in political science, we've built models that: show when
+%politicians in debates strategically change the topic to influence
+%others~\cite{nguyen-12,Nguyen-14b}; frame topics to reflect political
+%leanings~\cite{nguyen-13:shlda}; use subtle linguistic phrasing to
+%express their political leaning~\cite{iyyer-14a}; or create political
+%subgroups with larger political
+%movements~\cite{Nguyen:Boyd-Graber:Resnik:Miler-2015}.
 
-Because political discourse is built on a common set of commonly
-accepted facts, we have focused on developing fact checking: datasets
+Persuasion online is not just arguments and interpersonal relations; it's often about \emph{mis}information.
+%
+Thus, we have focused on developing fact checking: datasets
 for general knowledge fact checking~\cite{eisenschlos-21} and climate
 change fact checking~\cite{Diggelmann-20}.
 %
-However, because fact checking is part of an information arms race, we
-need to build these examples as part of a human-in-the-loop
-adversarial process, which I'm exploring in an ongoing collaboration
-with journalism professor Naeemul Hassan that extends my question
-answering work, which I talk about next.
+However, not all misinformation is written so I'm also exploring multimodal misleading information with journalism professor Naeemul Hassan~\cite{Sung:Hassan:Boyd-Graber-2023}.
 
 \section{Human-in-the-Loop Adversarial Examples}
 
@@ -242,14 +230,20 @@ could help an expert trivia question writer to stump a computer: as
 the author writes the question, it shows the author what the system is
 thinking~\cite{wallace-18}.
 %
-And it worked, even generalizing across models~\cite{wallace-19} (an
-example written with an \abr{ir} model still stumps a neural model).
+And it worked, even generalizing across models~\cite{wallace-19} (many
+examples written with an \abr{ir} model still stump a neural model).
 %
 After we introduced human-in-the-loop adversarial example generation,
 Meta/Facebook adopted this framework with gusto~\cite{bartolo-20} in
 their Dynabench framework, the Dynamic Adversarial Data Collection
-workshop and call for proposals (which I'm grateful is funding our
+workshop and call for proposals (which I'm grateful funded our
 continuing research in this area).
+
+Adversarial examples have become known as ``jailbreaks'' in the computer security community, and we have also built a dataset with human-in-the-loop adversarial examples that revealed new attach methods such as context filling~\cite{Schulhoff:Pinto:Khan:Bouchard:Si:Boyd-Graber:Anati:Tagliabue:Kost:Carnahan-2023} (this paper won the outstanding Theme Paper award at EMNLP 2023).
+%
+However, because models are improving so quickly, it is difficult to know how ``adversarial'' an example is and whether what is adversarial on Monday will remain adversarial on Thursday.
+%
+Thus, we developed a new metric (AdvScore) based on item response theory to empirically measure how difficult examples are for both humans and humans~\cite{Sung:Gor:Fleisig:Mondal:Boyd-Graber-2025}: adversarial examples are naturally those with the biggest gap between human and computer difficulty.
 
 \section{But wait, there's more!}
 
@@ -277,6 +271,8 @@ machine interpretation}~\cite{Grissom:He:Boyd-Graber:Morgan-2014}, a
   cross-cultural communication.  We also use reinforcement
   learning to learn machine translation feedback from noisy
   supervision such as star ratings on a webpage~\cite{nguyen-17}.
+  
+  \item We deployed a chatbot to assist new and expectant mothers~\cite{Srikanth:Sarkar:Y.:M.:C.:Rudinger:Boyd-Graber-2024}, focusing on techniques to detect questions with incorrect pragmatic assumptions (i.e., a mother asking ``when can I resume breastfeeding after a cold'' suggests the mother believes they should \emph{stop} breastfeeding during a cold, when that's the only way infants can get the appropriate antibodies).  Many modern language models just accept those false assumptions rather than correct them.  We are evaluating the efficacy of this support in a randomized control trial with partners in public health~\cite{Y.:Amara:Ximena:Michelle:Xiaohe:Srikanth:Sourabh:Abby:Ann:Pragat:Xin:Boyd-Graber:M.:C.-2023}.
 \end{itemize*}
 
 This work doesn't \emph{yet} fit nicely into the human--computer
@@ -288,13 +284,26 @@ described above.
 
 \section{Future Work}
 
-I hope that I've convinced you that to get more effective \abr{ai}, we
-need to measure how well it works (and plays) \emph{with} humans.
+\textbf{Multimodal.}
 %
-This is a problem that requires solutions in the form of new data, algorithms, and evalutions, and I
-hope to advance in all three areas.
+Our adversarial work with language models is nearing an end: it's getting harder and harder to stump them.
+%
+However, models still struggle with low frequency words when answering spoken questions, understanding abstract representational art, or mapping a schematic to the real world.
+%
+These leaps of understanding are still a core component of human intelligence, so we will continue to craft adversarial domains but in new modalities to better understand AI limits and highlight human skills that have yet to be mastered.
 
-{\bf Data.}
+\textbf{Backpropagating Cooperation.}
+%
+While we have built metrics that reveal when AIs are effectively cooperating with humans (i.e., raising their skill at a task), most AI models are trained with preference data.
+%
+My student Nishant Balepur has built a sequence of work showing that what users like isn't always what helps them: for example, students don't always prefer the study aids that best improves retention~\cite{Balepur:Shu:Hoyle:Robey:Feng:Goldfarb-Tarrant:Boyd-Graber-2024}.
+%
+The next step is to actually backpropagate that signal into the internals of a model to see what it looks like when the first priority of a model training is to cooperate with users.
+%
+However, because distinct individuals need different support, this also requires greater personalization.
+
+
+\textbf{Data Diversity.}
 %
 Existing datasets are not diverse and do
 not reflect the kinds of interactions people from diverse backgrounds
@@ -304,65 +313,16 @@ In question answering, Google's Natural Questions, SQuAD, and other
 datasets contain entities that are overwhelmingly male and either
 American or British~\cite{gor-21}.
 %
-In newly funded \abr{nih} research, we're working with answering
-questions specifically in complicated, code-switched environments with
-less educated users trying to navigate the healthcare landscape.
-%
-These linguistically, acoustically, and socio-economically diverse
-samples will help provide more realistic data for question answering
-applications, replete with false presuppositions, ambiguity, and
-shifting information needs.
-%
-We are also working with \abr{nist} to develop datasets that better
+In newly funded \abr{nsf} research, we're working with surfacing questions that
 reflect a specific \emph{cultural} context: detecting when questions
 are answered differently in Ghana than in the \abr{us} or topics that
 only people in Bhutan care about (and would be neglected by
 \abr{us}-centric datasets).
 
-{\bf Algorithms.} In research recently funded by Meta, we're capitalizing on
-the realization that the best way to get good datasets that reflect
-the strengths and weaknesses of current \abr{ai} is to have users in the loop to generate adversarial data.
+\textbf{Proxy Models.}
 %
-While our previous adversarial datasets focused on a single
-system---find a question \emph{this} neural system cannot answer---we
-are expanding our search to \emph{learn} how to help users best
-engineer adversarial examples, a natural extension of our work using
-bandit algorithms to improve explanations.
-%
-While our goal in that work was to get the human--computer team to
-answer a question correctly, we flip the script to create explanations
-that help the user craft examples the computer cannot answer.
-
-However, those algorithms are for \emph{supervised} tasks where there
-is a known answer.
-%
-For \emph{unsupervised} tasks like understanding the themes in a
-document collection, we need algorithms
-that are not just transparent but that are \emph{fast}: the primary
-goal is exploration of the dataset, and the user needs to be able to
-quickly provide feedback to the algorithm.
-%
-The algorithm then needs to update quickly given that feedback.
-
-To develop more robust algorithms, we are building training approaches
-that---as a conversation develops---explicitly build representations that
-capture the theory of mind of conversation participants and the
-current ``question under discussion''.
-%
-We plan to apply this both in our Diplomacy game that captures
-strategic negotiations (detecting when a negotiation partner is
-angling for a particular resolution implicitly or when they are
-negotiation in bad faith) and in the information seeking question
-answering context (where a question can be posed imperfectly,
-revealing a false assumption or a lack of background information).
-%
-% By reverse engineering the causal mechanism of why a particual theme
-% or topic was broached in an interaction, the \abr{ai} interlocutor can
-% better frame their reply, probing underlying assumptions or
-% developing an effective ``counter''.
-
 While eventually we will need to connect to expensive, difficult to
-compute neural models, many user updates can be approximated by fast
+compute neural models for our Human--AI interactions, many user updates can be approximated by fast
 spectral or probabilistic algorithms.
 %
 We will design fast, browser-based Javascript approximations of these
@@ -373,55 +333,7 @@ models, get a result, and continue before reconciling the solution later.
 % to reconcile the approximate solution with the ``gold standard'' model
 % on a \abr{gpu}-powered server.
 
-{\bf Evaluation.}
-%
-Where computers have strengths that go beyond what a human can do, we
-need to know if it would be wise to build evaluations that can we
-will build interactive systems that help users come to a correct
-answer through a process they trust, measure that process, and
-optimize to encourage this cooperation.
-%
-This requires basic engineering---ensuring all of the components of
-a system are efficient and low latency---and user modeling, as we
-cannot assume that every user will have the same knowledge and
-capabilities.
-%
-% The next step requires careful vetting in diverse domains to validate
-% that users' skills and knowledge are actually augmented by the help of
-% the computer.
-%
-% We aim to focus on multiple areas: question answering in a single
-% language~\cite{He-22}, question answering across
-% languages~\cite{han-22}, and the strategic game of Diplomacy.
-
-As these systems become more capable and usable, we can no longer
-assume that our model of the user should remain static: the user will
-learn and adapt to the system.
-%
-This makes modeling more complicated, but it also allows for employing
-these models in educational settings through examples ordered in a
-curriculum: expanding the frontier of what the user knows, reinforcing
-weaker knowledge, and using strategies to both educate and explain
-information from the \abr{ai}.
-%
-% This will require matching users' capabilities with what models can
-% offer.
-
-But interactions with individual people are not how \abr{ai} will be a
-part of 21\textsuperscript{st} society: it will be interactions with
-\emph{populations}.
-%
-Thus, we need to have models and systems that capture population-level
-interactions.
-%
-Helping detect misinformation online, working collaboratively with
-authors to craft effective counter-measures, and to propagate that
-within a social network.
-%
-This builds on our fake news systems and our deception detection work,
-but will also require deeper collaboration with social scientists and
-journalists to develop the interfaces and the models to build
-human--computer \abr{ai} that informs and helps society as a whole.
+At a high level, the goal of my research is to build the future I want for my children: an ecosystem not where AI is replacing humans but where it is put in a position to effectively augment their abilities, no matter their skill level or background.
 
 
 %% \vspace{12cm}
