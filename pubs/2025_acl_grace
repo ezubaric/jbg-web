@@ -1,11 +1,11 @@
-~~ Bibtex | article
+~~ Bibtex | inproceedings
 ~~ Title |  GRACE: A Granular Benchmark for Evaluating Model Calibration against Human Calibration
 ~~ Author | Yoo Yeon Sung and Eve Fleisig and Yu Hope and Ishan Upadhyay and Jordan Lee Boyd-Graber
-~~ Journal | ArXiv
-~~ Year | Preprint
+~~ Booktitle | Association for Computational Linguistics
+~~ Year | 2025
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Deep Learning
 ~~ Category | Question Answering
 ~~ Category | Calibration
-~~ Venue | Preprint
+~~ Venue | Refereed Conference
 ~~ Url | https://arxiv.org/pdf/2502.19684
