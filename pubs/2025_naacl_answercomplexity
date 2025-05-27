@@ -1,0 +1,13 @@
+~~ Bibtex | inproceedings
+~~ Title | No Simple Answer to Data Complexity: An Examination of Instance-Level Complexity Metrics for Classification Tasks
+~~ Author | Ryan A Cook and John P Lalor and Ahmed Abbasi
+~~ Booktitle | Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics
+~~ Venue | Refereed Conference
+~~ Year | 2025
+~~ Location | Albuquerque
+~~ Category | Instance Complexity
+~~ Category | Item Response Theory
+~~ URL | docs/2025_naacl_answercomplexity.pdf
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Public | Instance-level complexity scores can be used for tasks such as filtering out noisy observations and subsampling informative examples. However, there exists a diverse taxonomy of complexity metrics that can be used for a classification task, making metric selection itself difficult. We examine the relationship between these metrics and find that simply storing training loss provides similar complexity rankings as other more computationally intensive techniques. Metric similarity allows us to subsample data with higher aggregate complexity along several metrics using a single a priori available meta-feature. 
+
