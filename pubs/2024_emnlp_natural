@@ -10,7 +10,6 @@
 ~~ Link | ArXiv*https://arxiv.org/abs/2402.11161
 ~~ Link | Research Talk*https://youtu.be/gbBraiobisY
 ~~ Link | Code*https://github.com/Pinafore/qb2nq
-~~ Project | IIS-2403436
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Url | docs/2024_emnlp_natural.pdf
 ~~ Public | Many of the questions for training AIs how to answer questions come from the queries users type into search engines (like Google's Natural Questions).  Is there a cheaper---perhaps even better---way?  We propose a "naturalization" technique to turn high-quality, rigorously edited trivia questions into examples that resembles Natural Questions.  Training on our naturalized questions and testing on natural questions comes close to the results with using Natural Questions, and we can improve results on MMLU (a standard modern evaluation set) by using our data.

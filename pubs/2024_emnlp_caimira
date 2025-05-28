@@ -14,7 +14,6 @@
 ~~ Link | Talk*https://youtu.be/joeNRMM5abI
 ~~ Link | Code*https://github.com/maharshi95/neural-irt
 ~~ Link | Data*https://huggingface.co/collections/mgor/quizbowl-66f8541f46d413c380669551
-~~ Project | IIS-2403436
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Public | CAIMIRA discovers the skills that humans and AIs use to answer questions.  By scraping websites where trivia nerds answer really difficult questions and posing those questions to AI models like GPT-4 and LLaMA-3-70B, while humans excel in knowledge-based abductive reasoning, AI outperforms on fact-based historical recall. This research suggests future challenges should focus on more complex reasoning and nuanced language tasks to better align AI development with human cognitive strengths.
 ~~ Embed | <iframe width="280" height="158" src="https://www.youtube.com/embed/joeNRMM5abI" frameborder="0" allowfullscreen></iframe>
