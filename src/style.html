@@ -115,7 +115,7 @@ least <a href="http://jeffhuang.com/better_word_papers.html">make your Word
 documents look nice</a> (but it's a lot of work).</p>
 
 <p>If you're new to LaTeX, <A
-HREF="https://typeset.io/resources/learn-latex-beginners-step-by-step-guide/#what-is-latex?msID=d7b509d1-09d7-4959-9dd5-7793be776767">Typeset.io</a>
+HREF="https://scispace.com/resources/learn-latex-beginners-step-by-step-guide/?msID=4c8efd38-95f3-41a2-8031-ce11212e6fe3">SciSpace</a>
 has a great introduction to how to get started.
 
 <h3>Why not settle for "Good Enough"?</h3>
@@ -357,7 +357,17 @@ A note number should generally be placed at the end of a sentence or at the end 
 
   <li> Similarly, I use <i>M-x q</i> to word wrap paragraphs in emacs.  Like two
   spaces after a sentence, it looks better in editing but has no impact on
-  layout (more practically, it helps you estimate text length while editing).
+  layout (more practically, it helps you estimate text length while
+  editing).
+
+  <li> If you use a paragraph command, if the paragraph is not
+  integrated into the next sentence put a period at the end.
+
+  <pre>
+\paragraph{Answer Consistency.} To measure how consistent users' answers are to the same question, we
+compute the pairwise similarity using the cosine similarity of
+transformer embeddings for each pair of answers. 
+  </pre>
 
 </ol>
 
@@ -406,7 +416,7 @@ A note number should generally be placed at the end of a sentence or at the end 
      href="http://tex.stackexchange.com/questions/88929/vertical-table-lines-are-discontinuous-with-booktabs/88939#88939">vertical
      rules in your tables</a>.  It's fine to use shading (light gray)
      when you have text (like lists of topic words) that makes it hard to see when
-     one row starts and another ends.
+     one row starts and another ends.  Check out a <A HREF="https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf">full guide to making tables</A>.
 
      <PRE>
 \rowcolors{2}{gray!25}{white}
@@ -1196,7 +1206,7 @@ in the way of other people as they're compiling the document.</li>
 
     <li>I also prefer using pdf (vector) and png (raster) files for graphics
 (as appropriate); this is because the output of pdflatex is usually
-better/easier than that of latex.  </li>
+better/easier than that of latex.  This also makes Overleaf compile times faster. </li>
 
     <li> Organize the files as follows:
       <ol>
@@ -1210,7 +1220,7 @@ better/easier than that of latex.  </li>
     </li>
 
     <li> <b>What about ShareLaTeX/Overleaf</b>?  I do not like to
-    use these tools.  While they are good for people who are new to
+    depend on these tools.  While they are good for people who are new to
     LaTeX or don't have a UNIX environment, I don't think they're a
     good tool for me.
 
@@ -1219,7 +1229,7 @@ better/easier than that of latex.  </li>
 	through creating a series of folders.
 
 	<li> They let you gloss over annoying errors (LaTeX itself
-	should be more intuitive, but ShareLaTeX hides the complexity
+	should be more intuitive, but Overleaf hides the complexity
 	and thus problems)
 
 	<li> I have scripts to find grammar / stylistic errors that
@@ -1230,8 +1240,7 @@ better/easier than that of latex.  </li>
 	<li> I prefer to have my research code generate figures/data
 	which can be added to paper repository with a single command
 	line (makes replication easier)
-
-	<li> I prefer to use emacs as editor; ShareLaTeX has pretty
+	<li> I prefer to use emacs as editor; Overleaf has pretty
 	high latency while typing and lacks keyboard commands for
 	easier editing (it also gets quotes wrong by default)
 
@@ -1246,7 +1255,9 @@ better/easier than that of latex.  </li>
 
     <li> Run my style scripts and address any errors before asking me
     to look at it (doing this is a good way of making sure it fits in
-    my paper repository).
+      my paper repository).
+
+    <li> Sync with a <A HREF="https://github.com/Pinafore/papers">git / Github repository</a>.
 
     <li> Incorporate my preamble for LaTeX-based commenting (don't use
     ShareLaTeX commenting, as that doesn't work with offline editing).
@@ -1307,11 +1318,15 @@ better/easier than that of latex.  </li>
   <ol>
     <li> One month before the deadline: send the paper to people you respect and trust to see if they
     have comments
-    <li> Three weeks before the deadline: clean up your code and replicate your results (undoing any
+    <li> 10 days before the deadline:
+      <ul>
+	<li> clean up your code and replicate your results (undoing any
     last-minute hacks)
-    <li> Two weeks before the deadline: Look through other papers to see if there are new
-    things to cite, remind all authors of the submission and how to contribute.
-    <li> One week before the deadline: incorporate all coauthor comments.
+	<li> 10 days before the deadline: before the deadline: Look through other papers to see if there are new
+    things to cite, remind all authors of the submission and how to
+	  contribute.
+      </ul>
+    <li> Five days before the deadline: incorporate all coauthor comments.
     <li> One day before the deadline, make sure you have a conforming
     submission, you have filled out all of the metadata, and you have
     everything ready to submit.  If the conference allows you to
@@ -1392,16 +1407,27 @@ Work on any of the more difficult TODOs
 	 <li> Once you submit the camera ready:
 	    <ul>
 	      <li> Put it on your webpage and send the final PDFs to
-	      the authors
-	      <li> Make a pull request on <A
-    HREF="https://github.com/ezubaric/jbg-web/tree/master/pubs">my
-    webpage</A> to add an entry, look at other examples to see what's
-	      needed: the relevant project, links to code, and an
-    accessible abstract.
-	      <li> Notify your department's publication mailing list
+		the authors
+	      <li> Add it to my webpage.  This happens through a <A
+    HREF="https://github.com/ezubaric/jbg-web/pulls">pull request</A>:
+		<ul>
+		  <li> Add a new file in the <A HREF="">pubs directory</A>,
+		  with the filename YEAR_VENUE_WORD where WORD is the most
+		  memorable word from your title (see the other filenames for
+		    examples).  This file should (see other files for examples):
+		    <ul>
+		      <li> Link the project that funds you via the webpage
+		      <li> Include an accessible to the public abstract
+		      <li> Link to the data on DRUM and/or Github
+		    </ul>
+		  <li> Upload the final PDF to the src_docs folder.
+		  <li> Later on, when we get the acceptance rate, make sure to
+		  update that (again with a pull request).
+		</ul>
 	      <li> Update your CV
 	      <li> Post any associated data and code on your webpage
-	      <li> Move the paper to our publications repo
+	      <li> Move the paper to our <A HREF="">publications repo</A>
+	      <li> Upload your data to <A HREF="https://www.lib.umd.edu/research/oss/publishing-and-digital-projects/repository-services/drum">DRUM</A>
 	    </ul>
   </ol>
   
@@ -1541,6 +1567,8 @@ information.)</p>
   </ul>
 </p>
 
+<p>For subjective criticisms, never say your paper is "bad" (i.e., confusing, incremental, etc.).  You can agree with the reviewer by saying things like "we appreciate the opportunity to help explain our approach further here in the response and will do X in the revision".</p>
+		  
 <p>Even if you don't get to write a response, once you get a set of reviews, create a
 spreadsheet (shared with co-authors on Google Docs) to address the issues that
 the reviewers found with the following columns:</p>

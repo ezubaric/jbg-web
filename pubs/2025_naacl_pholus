@@ -1,0 +1,12 @@
+~~ Bibtex | inproceedings
+~~ Title | Personalized Help for Optimizing Low-Skilled Users' Strategy
+~~ Author | Feng Gu and Wichayaporn Wongkamjan and Jonathan K. Kummerfeld and Denis Peskoff and Jonathan May and Jordan Boyd-Graber
+~~ Booktitle | Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics
+~~ Year | 2025
+~~ Location | Albuquerque
+~~ Category | Empirical Human Data Collection
+~~ Venue | Refereed Conference
+~~ Url | docs/2024_arr_chiron-advisor.pdf
+~~ Project | FACT*../projects/FACT.html
+~~ Public | AIs can beat humans in game environments; however, how helpful those agents are to human remains understudied. We augment CICERO, a natural language agent that demonstrates superhuman performance in Diplomacy, to generate both move and message advice based on player intentions. A dozen Diplomacy games with novice and experienced players, with varying advice settings, show that some of the generated advice is beneficial. It helps novices compete with experienced players and in some instances even surpass them. The mere presence of advice can be advantageous, even if players do not follow it. 
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/V-1CO_wceQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

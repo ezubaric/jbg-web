@@ -1,9 +1,10 @@
 ~~ Bibtex | article
 ~~ Title | Trick Me If You Can: Human-in-the-loop Generation of Adversarial Question Answering Examples
 ~~ Author | Eric Wallace and Pedro Rodriguez and Shi Feng and Ikuya Yamada and Jordan Boyd-Graber
-~~ Booktitle | Transactions of the Association for Computational Linguistics
+~~ Journal | Transactions of the Association for Computational Linguistics
 ~~ Year | 2019
 ~~ Category | Empirical Human Data Collection
+~~ Category | Adversarial Examples
 ~~ Volume | 10
 ~~ Url | docs/2019_tacl_trick.pdf
 ~~ Category | Question Answering

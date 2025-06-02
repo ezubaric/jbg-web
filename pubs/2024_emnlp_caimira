@@ -1,0 +1,19 @@
+~~ Bibtex | inproceedings
+~~ Title | Do great minds think alike? Investigating Human-AI Complementarity in Question Answering with CAIMIRA
+~~ Author | Maharshi Gor and Hal {Daum\'{e} III} Tianyi Zhou and Jordan Boyd-Graber
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Year | 2024
+~~ Location | Miami
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Deep Learning
+~~ Category | Question Answering
+~~ Category | Item Response Theory
+~~ Category | Adversarial Examples
+~~ Venue | Refereed Conference
+~~ Url | docs/2024_emnlp_caimira.pdf
+~~ Link | Talk*https://youtu.be/joeNRMM5abI
+~~ Link | Code*https://github.com/maharshi95/neural-irt
+~~ Link | Data*https://huggingface.co/collections/mgor/quizbowl-66f8541f46d413c380669551
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Public | CAIMIRA discovers the skills that humans and AIs use to answer questions.  By scraping websites where trivia nerds answer really difficult questions and posing those questions to AI models like GPT-4 and LLaMA-3-70B, while humans excel in knowledge-based abductive reasoning, AI outperforms on fact-based historical recall. This research suggests future challenges should focus on more complex reasoning and nuanced language tasks to better align AI development with human cognitive strengths.
+~~ Embed | <iframe width="280" height="158" src="https://www.youtube.com/embed/joeNRMM5abI" frameborder="0" allowfullscreen></iframe>

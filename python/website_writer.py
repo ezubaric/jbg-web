@@ -1,3 +1,5 @@
+from class_webpage import Course
+
 from glob import glob
 from string import capwords
 from datetime import date, datetime
@@ -10,7 +12,7 @@ import pdb
 
 kHTML = re.compile(r'<.*?>')
 kBRACKET = re.compile(r'\[.*?\]')
-kHTML_CHARS = {"&eacute;": "e", "\%": "%"}
+kHTML_CHARS = {"&eacute;": "e", "\\%": "%"}
 
 global_replace = defaultdict(str)
 
@@ -75,6 +77,12 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+             "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
+             "Zongxia Li": Student("Zongxia Li", 2023, 2028),
+             "Sander Schulhoff": Student("Sander Schulhoff", 2022, 2024, "https://trigaten.github.io/", kind="UG"),
+             "Maharshi Gor": Student("Maharshi Gor", 2024, 2028, "https://www.mgor.info/"),
+             "Neha Pundlik Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
+             "Ishani Mondal": Student("Ishani Mondal", 2023, 2028, "https://ishani-mondal.github.io/"),
              "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
              "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
              "Wichayaporn Wongkamjan": Student("Wichayaporn Wongkamjan", 2022, 2026),
@@ -93,9 +101,10 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "He He": Student("He He", 2012, 2016, "https://hhexiy.github.io/",
                               job="NYU, Assistant Professor"),
              "Shudong Hao": Student("Shudong Hao", 2015, 2017, "http://shudong-hao.com/", job="Bard College, Assistant Professor"),
-             "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://users.umiacs.umd.edu/~mozhi/"),
+             "Mozhi Zhang": Student("Mozhi Zhang", 2016, 2021, "http://www.mozhi.umiacs.io"),
              "Jo Shoemaker": Student("Jo Shoemaker", 2017, 2020),
-             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "http://www.cs.umd.edu/~myuan/"),
+             "Michelle Yuan": Student("Michelle Yuan", 2017, 2022, "https://forest-snow.github.io/", job="Amazon AWS, Applied Scientist", 
+                                      thesis_url="https://drum.lib.umd.edu/handle/1903/29333", thesis="Transfer Learning in Natural Language Processing through Interactive Feedback"),
              "Denis Peskov": Student("Denis Peskov", 2016, 2021,
                                         "http://denispeskov.github.io/"),
              "Naveen Raman": Student("Naveen Raman", 2019, 2021, "http://naveenraman.com/", kind="UG"),
@@ -116,15 +125,15 @@ kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Matthew Shu": Student("Matthew Shu", 2019, 2021, kind="UG"),
              "Andrew Mao": Student("Andrew Mao", 2020, 2022, kind="MS"),
              "Sander Schulhoff": Student("Sander Schulhoff", 2019, 2022, kind="UG"),
-             "Chenglei Si": Student("Chenglei Si", 2020, 2023, "https://noviscl.github.io/", kind="UG"),
-             "Arjun Akkiraju": Student("Arjun Akkiraju", 2020, 2021, kind="UG"),
+             "Chenglei Si": Student("Chenglei Si", 2020, 2023, "https://noviscl.github.io", kind="UG"),
+             "Arjun Akkiraju": Student("Arjun Akkiraju", 2020, 2022, kind="UG"),
              "Shravan Sanjiv": Student("Shravan Sanjiv", 2017, 2018, kind="UG"),
              "Danny Bouman": Student("Danny Bouman", 2013, 2014, kind="UG"),
              "Stephanie Hwa": Student("Stephanie Hwa", 2013, 2014, kind="UG"),
              "Alison Smith": Student("Alison Smith", 2012, 2020, "http://alisonmsmith.github.io/"),
              "Henrik Larsen": Student("Henrik Larson", 2016, 2017, kind="UG"),
-             "Shi Feng": Student("Shi Feng", 2017, 2021, "http://users.umiacs.umd.edu/~shifeng/"),
-             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "http://users.umiacs.umd.edu/~chenz/", job="NYU Postdoc"),
+             "Shi Feng": Student("Shi Feng", 2017, 2021, "https://ihsgnef.github.io/", job="GWU Asst Prof"),
+             "Chen Zhao": Student("Chen Zhao", 2018, 2021, "https://henryzhao5852.github.io/", job="NYU Shanghai Asst Prof"),
              "Ahmed Elgohary": Student("Ahmed Elgohary Ghoneim", 2018, 2021, "http://www.cs.umd.edu/~elgohary/"),
              "Neha Srikanth": Student("Neha Punklik Srikanth", 2021, 2026),
              "Hyojung Han": Student("Hyojung Han", 2022, 2026, "https://h-j-han.github.io/"),
@@ -299,7 +308,7 @@ class IndexElement:
     text = kHTML.sub('', self.html(False, url, ""))
     text = kBRACKET.sub('', text)
     if "Acceptance" in self.fields and acceptance:
-      text += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
+      text += " (" + self.fields["Acceptance"][0] + "\\% Acceptance Rate)"
     text += "\n"
     if "Url" in self.fields and url:
       if url.endswith("/"):
@@ -331,7 +340,7 @@ class IndexElement:
         s += ", %i pages" % int(self.fields["Numpages"][0])
 
     if "Acceptance" in self.fields and acceptance:
-      s += " (" + self.fields["Acceptance"][0] + "\% Acceptance Rate)"
+      s += " (" + self.fields["Acceptance"][0] + "\\% Acceptance Rate)"
 
     s += "."
     s += "\n\n"
@@ -505,6 +514,16 @@ class WebsiteWriter:
           contents.append(val)
       return contents
 
+  def add_teaching(self, path):
+      self.courses = Course()
+      self.courses.load_holidays("teaching/holidays.json")
+      
+      for ii in glob(path):
+          self.courses.load_json(ii)
+          course = ii.split("/")[-2]
+
+          global_replace[course] = self.courses.render()
+  
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
                 default_sort="Year"):
     index = {}
@@ -517,12 +536,12 @@ class WebsiteWriter:
         item = IndexElement(open(ii).read())
       except UnicodeDecodeError:
         print("Encode error on %s" % ii)
-        try:
-          item = IndexElement(open(ii).read())
-        except UnicodeDecodeError:
-          print("Skipping unicode error %s" % ii)
-          time.sleep(60)
-          continue
+        time.sleep(60)
+        continue
+      except IndexError:
+        print("Parse error on %s in %s" % (ii, path))
+        time.sleep(60)
+        continue          
       if "Nopub" in item.fields:
           print("Skipping %s" % ii)
           continue

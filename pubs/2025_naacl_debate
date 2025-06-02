@@ -1,0 +1,12 @@
+~~ Bibtex | inproceedings
+~~ Title | MoDS: Moderating a Mixture of Document Speakers to Summarize Debatable Queries in Document Collections
+~~ Author | Nishant Balepur and Alexa Siu and Nedim Lipka and Franck Dernoncourt and Tong Sun and Jordan Lee Boyd-Graber and Puneet Mathur
+~~ Booktitle | Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics
+~~ Year | 2025
+~~ Location | Albuquerque
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Question Answering
+~~ Venue | Refereed Conference
+~~ URL | docs/2025_naacl_mods.pdf
+~~ Project | Adobe*../projects/adobe.html
+~~ Public | When you ask ChatGPT for advice on questions with multiple perspectives (e.g. "Is pineapple good on pizza?"), you likely want a response that fairly represents all viewpoints. We formulate this task, collect a dataset to test it, and develop MoDS—a system where multiple ChatGPT's debate like a panel discussion—to generate balanced answers for questions based on multiple sources.

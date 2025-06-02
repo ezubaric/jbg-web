@@ -1,0 +1,14 @@
+~~ Bibtex | inproceedings
+~~ Title | Reverse Question Answering: Can an LLM Write a Question so Hard (or Bad) that it Can't Answer?
+~~ Author | Nishant Balepur and Feng Gu and Abhilasha Ravichander and Shi Feng and Jordan Boyd-Graber and Rachel Rudinger
+~~ Booktitle | Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics
+~~ Venue | Refereed Conference
+~~ Year | 2025
+~~ Location | Albuquerque
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Question Answering
+~~ URL | docs/2025_naacl_reverseqa.pdf
+~~ Project | Adobe*../projects/adobe.html
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Public | Language models like ChatGPT are pretty good at answering questions (e.g. "What is 12 * 12?"), but we show they can surprisingly struggle when asked to do the reverse task: generating questions for answers (e.g. "Give me a question with the answer 144"). We study when these errors happen, what might be causing them, and how they can be addressed.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/TT4Tim2UeRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

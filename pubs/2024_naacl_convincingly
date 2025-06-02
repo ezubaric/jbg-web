@@ -1,6 +1,6 @@
 ~~ Bibtex | inproceedings
 ~~ Title | Large Language Models Help Humans Verify Truthfulness---Except When They Are Convincingly Wrong
-~~ Author | Chenglei Si and Navita Goyal and Tongshuang Wu and Chen Zhao and Shi Feng and Hal Daum\'{e} {III} and Jordan Lee Boyd-Graber
+~~ Author | Chenglei Si and Navita Goyal and Tongshuang Wu and Chen Zhao and Shi Feng and Hal Daum\'{e} {III} and Jordan Boyd-Graber
 ~~ Booktitle | North American Association for Computational Linguistics
 ~~ Year | 2024
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
@@ -8,3 +8,4 @@
 ~~ Category | Fact Checking
 ~~ Venue | Refereed Conference
 ~~ Project | FACT*../projects/FACT.html
+~~ Url | docs/2024_naacl_convincingly.pdf

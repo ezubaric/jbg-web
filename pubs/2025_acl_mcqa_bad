@@ -1,0 +1,14 @@
+~~ Bibtex | inproceedings
+~~ Title | Which of These Best Describes Multiple Choice Evaluation with LLMs? A) Forced B) Flawed C) Fixable D) All of the Above
+~~ Author | Nishant Balepur and Rachel Rudinger and Jordan Lee Boyd-Graber
+~~ Booktitle | Association for Computational Linguistics
+~~ Location | Vienna, Austria
+~~ Venue | Refereed Conference
+~~ Year | 2025
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Evaluation
+~~ Category | Question Answering
+~~ Project | Adobe*../projects/adobe.html
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ URL | docs/2025_acl_mcqa_bad.pdf
+~~ Public | Most people dislike taking multiple-choice tests, so why are they the default way we evaluate NLP systems? This position paper argues that, despite its simplicity and popularity, multiple-choice evaluation is flawed, both in its format and the datasets it relies on. Drawing from educational testing theory, we propose practical fixes for these issues, helping us build evaluations that better test knowledge and reflect how humans use NLP systems.

@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Hard Data to the Model: Personalized, Diverse Preferences for Language Models</title>
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+    <link rel="stylesheet" href="../style/jimmy.css">
+    <link rel="stylesheet" href="../style/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+<p style="padding-top: 150px">
+<a href="#overview">Overview</a><br/>
+<a href="#team">Project Team</a><br/>
+<a href="#publications">Publications</a><br/>
+<a href="#software">Software</a></p>
+<a href="#Datasets">Datasets</a><br/>
+<a href="#Media">Media</a><br/>
+
+      </header>
+      <section>
+
+<p style="text-align: right">
+<img width="221" height="36" src="../images/umd-logo.gif"></p>
+
+<h1>Hard Data to the Model: Personalized, Diverse Preferences for Language Models</h1>
+
+<p><b>Project funded by the National Science Foundation</b> (<a href="http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=2403436">IIS-2403436</a>)<br/>
+<b>PI:</b> <a href="http://boydgraber.org"><b>Jordan Boyd-Graber</b></a>,
+
+
+<a name="overview"><h2>Overview</h2></a>
+
+<p>Tens of millions of Americans interact with AI tools to find information, answer questions, or help them solve problems. One key drawback of these systems is lack of personalization: since modern AI systems do not know whom they are talking to, they can only give generic answers to user questions. But the answer to the question “why is the sky blue?” should be different if the person asking the question is a college student or a young child. This project aims to enable an AI model to provide more appropriate responses to users depending on their unique backgrounds, experiences, and needs. It will first gather a diverse dataset in order to characterize what kinds of responses are preferred by different people. The project will then use these data to develop AI systems that can tailor their answers to individual users, as well as evaluate how well the AI systems personalize responses. To achieve this personalization, the AI systems will learn to explicitly represent the kind of person they are talking to, based on their background or previous interactions, and then use this representation to generate an appropriate response. This project will result in AIs that can provide personalized, specific responses based on the person asking the question as well as resources that will help other personalize AIs.  These resources will include datasets of personalized questions and answers, interfaces and visualizations to understand why AI provides specific responses over others; interviews and discussions with community members to understand their needs; and code and models that will allow others to build, train, and deploy personalized AI systems.</p>
+
+
+<p>While large language models (LLMs) trained on massive datasets have shown impressive performance on a variety of tasks, they still exhibit biases and struggle to be equally useful for everyone.  While initially pre-trained on a language modeling objective, most LLMs are further fine-tuned to align their outputs with human preferences.  However, existing techniques assume a “one size fits all” approach, ignoring diversity in user needs. This project will first construct probes to detect cases where models fail to adapt to the diverse needs of different users. Then, this project will develop Personalized Feedback for Diverse Populations (PFDP) to identify when models should be sensitive to the unique needs, knowledge, and background of users by examining the training trajectory of models and comparing models' answers to human preferences. PFDP will enable the development of models that can detect examples that are difficult for computers but not for humans, explain why such disparities in difficulty exist, and represent users’ needs and preferences within the model. To correct those shortcomings in the data, we focus on data curation: we propose techniques to automatically create new examples that ask questions about under-represented groups or require targeted responses to create adversarial prompt and response pairs with a human in the loop.  Finally, with these new data, we develop techniques to allow modern architectures to make the most of these difficult (but few) examples.  These techniques will allow for fine-tuning LLMs with a small curated subset of data that is robust to variations in prompts and will lead to the generation of acceptable answers for a diverse population of users.</p>
+
+
+<p><small>&lt;&lt; <a href="#">back to top</a></small></p>
+
+<a name="team"><h2>Project Team</h2></a>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding: 0px; border: 0 none; width: 80px" align="center"><img src="../images/head_jbg.png" alt="Jordan Boyd-Graber" /></td>
+<td style="padding: 0px; border: 0 none;"><a href="http://www.umiacs.umd.edu/~jbg/static/home.html"><b>Jordan Boyd-Graber</b></a><br/>
+Assistant Professor, Computer Science (Maryland)</td></tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_alvin.png" alt="Alvin Grissom II"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://agrissom.sites.haverford.edu/"><b>Alvin Grissom II</b></a><br/>
+Associate Professor, Haverford College</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_robinjia.jpg" alt="Robin Jia"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://robinjia.github.io/"><b>Robin Jia</b></a><br/>
+Assistant Professor, University of Southern California</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_lalor.jpg" alt="John P. Lalor"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://www.johnlalor.net/"><b>John P. Lalor</b></a><br/>
+Assistant Professor, University of Notre Dame</td>
+</tr>
+  
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_swabha.png" alt="Swabha Swayamdipta"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://swabhs.com/"><b>Swabha Swayamdipta</b></a><br/>
+Assistant Professor, University of Southern California</td>
+</tr>
+
+
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_nishant.png" alt="Nishant Balepur"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://nbalepur.github.io/"><b>Nishant Balepur</b></a><br/>
+PhD Student, University of Maryland</td>
+</tr>
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_maharshi.png" alt="Maharshi Gor"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://mgor.info/"><b>Maharshi Gor</b></a><br/>
+PhD Student, University of Maryland</td>
+</tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_kanu.jpg" alt="John Kanu"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://jdkanu.github.io/"><b>John Kanu</b></a><br/>
+PhD Student, University of Maryland</td>
+</tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_yooyeon.png" alt="Yoo Yeon Sung"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://yysung.github.io/"><b>Yoo Yeon Sung</b></a><br/>
+PhD Student, University of Maryland</td>
+</tr>
+
+
+<tr>
+<td style="padding: 0px; border: 0 none;" align="center"><img
+  src="../images/head_ryancook.jpeg" alt="Ryan Cook"/></td>
+<td style="padding: 0px; border: 0 none;"><a
+  href="https://mendoza.nd.edu/mendoza-directory/profile/ryan-cook/"><b>Ryan Cook</b></a><br/>
+PhD Student, University of Notre Dame</td>
+</tr>
+
+
+
+</table>
+
+<p><small>&lt;&lt; <a href="#">back to top</a></small></p>
+
+<a name="publications"><h2>Publications (Selected)</h2></a>
+
+<ul>
+~~Pubs:Personalization~~
+</ul>
+
+<!--
+<a name="software"><h2>Software</h2></a>
+
+<ul>
+  <li> <A
+  HREF="https://github.com/nd-hal/instance-complexity-metrics">Instance
+  Complexity Metrics</A>
+</ul>
+
+<a name="media"><h2>Media</h2></a>
+
+<ul>
+~~Media:Personalization~~
+</ul>
+
+<h2>Workshops Organized by Project Members</h2>
+
+<ul>
+  <li> TBD
+</ul>
+
+-->
+
+<a name="datasets"><h2>Datasets</h2></a>
+
+<ul>
+  <li> <A HREF="https://github.com/Pinafore/qb2nq">You Make me Feel Like a Natural Question</A>
+</ul>
+
+
+
+<h2>Acknowledgments</h2>
+
+<p>This work is supported by the National Science Foundation. Any
+opinions, findings, and conclusions or recommendations expressed in
+this material are those of the researchers and do not necessarily
+reflect the views of the National Science Foundation.</p>
+
+</section>
+      <footer>
+
+        <p><small>Theme based on <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="../style/scale.fix.js"></script>
+  </body>
+</html>

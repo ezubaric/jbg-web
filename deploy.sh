@@ -1,7 +1,9 @@
 #!/bin/bash
+cd ~/repositories/jbg-web/
 
 # Restore deleted files
 git checkout $(git ls-files -d)
+git pull
 
 CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_src/`
 
@@ -12,7 +14,7 @@ mkdir -p ~/public_html/dyn-media
 mkdir -p ~/public_html/dyn-pubs
 
 rm -rf ~/public_html/teaching/*
-for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414 INST_808 CMSC_470 CMSC_848
+for CLASS in LBSC_690_2012 INFM_718_2011 COS_280_2008 CMSC_773_2012 DATA_DIGGING CMSC_723 DEEP CSCI_5622 CSCI_3022 CSCI_7000 CMSC_726 INST_414 INST_808 CMSC_470 CMSC_848 GRAD_IND UG_IND
         do
            mkdir -p ~/public_html/teaching/$CLASS
            cp teaching/$CLASS/*.* ~/public_html/teaching/$CLASS
@@ -35,11 +37,7 @@ done
 rm -rf ~/public_html/qb
 cp -r qb ~/public_html/
 
-if hash python3 2>log.txt; then
-        PYCOMMAND=python3
-else
-        PYCOMMAND=python
-fi
+PYCOMMAND=./venv/bin/python3
 
 echo "USING $PYCOMMAND"
 
@@ -89,3 +87,7 @@ rm */*/*~
 rm pubs/*.log
 rm docs/*.pdf
 git checkout $(git ls-files -d)
+
+# Reset permissions
+cd ~/public_html
+chmod 755 -R *
