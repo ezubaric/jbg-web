@@ -203,7 +203,8 @@ def format_name(students, name, year, latex):
   return name
 
 class IndexElement:
-  def __init__(self, file_contents):
+  def __init__(self, file_contents, filename=""):
+    self.filename = filename
     self.fields = defaultdict(list)
     for ii in [x for x in file_contents.split("~~") if x != ""]:
       key = capwords(ii.split("|")[0].strip())
@@ -440,6 +441,10 @@ class IndexElement:
     try:
       year = -int(self.fields["Year"][0])
     except ValueError:
+      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))      
+      year = float("-inf")
+    except IndexError:
+      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))
       year = float("-inf")
 
     if "Booktitle" in self.fields and len(self.fields["Booktitle"]) > 0:
@@ -533,7 +538,7 @@ class WebsiteWriter:
         # Don't go through backup files
         continue
       try:
-        item = IndexElement(open(ii).read())
+        item = IndexElement(open(ii).read(), ii)
       except UnicodeDecodeError:
         print("Encode error on %s" % ii)
         time.sleep(60)
