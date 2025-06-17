@@ -7,5 +7,7 @@
 ~~ Category | Question Answering
 ~~ Year | 2025
 ~~ Venue | Refereed Conference
-~~ Year | 2025
+~~ URL | docs/2025_acl_badq.pdf
 ~~ Project | Rosie*../projects/Rosie.html
+~~ Link | Code/Data*https://github.com/nehasrikn/poorly-posed-questions
+~~ Public | Often, the questions users ask search engines or chatbots aren't perfect: they have errors, are vague, or lack context.  Humans are able to deftly navigate these issues, but computers still struggle.  We analyze the differences in how humans and computers repair imperfect questions to suggest how to improve AI's question answering abilities.
