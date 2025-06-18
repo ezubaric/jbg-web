@@ -623,8 +623,7 @@ class WebsiteWriter:
           html_out = html_out.replace("~~%s~~" % variable,
                                       global_replace[variable])
 
-      if not filter_author or "boyd-graber" in html_out.lower():
-        o.write(html_out)
+      o.write(html_out)
       html_out = ""
 
       old = None
@@ -666,18 +665,20 @@ class WebsiteWriter:
               latex_out.write("\n\\headedsection{{\\bf %s}}{}{\n\n" % latex_name)
 
           latex_out.write("\n\\begin{enumerate}\n")
-
-        if not filter_author or "boyd-graber" in lookup[jj].txt().lower():
-          latex_out.write("\t \item " + lookup[jj].latex(self._url))
-          bibtex_out.write(lookup[jj].bibtex(self._url))
-          text_out.write(lookup[jj].txt(url=self._url))
-
+          
         # Write comment string so we know original entry in DB
         this_html = "\n\t\t<!--- %s --->\n" % str(jj)
         this_html += "\t\t<li>%s</li>\n" % lookup[jj].html(bibtex, self._url, old)
         global_replace["%s:%s:%s" % (index, txt_name, year)] += this_html
-        html_out += this_html
-        old = jj[0]
+
+        if not filter_author or ("boyd-graber" in lookup[jj].txt().lower()):
+          
+          latex_out.write("\t \item " + lookup[jj].latex(self._url))
+          bibtex_out.write(lookup[jj].bibtex(self._url))
+          text_out.write(lookup[jj].txt(url=self._url))
+        
+          html_out += this_html
+          old = jj[0]
 
       # For the last entry, we need to flush the cache
       global_replace["%s:%s" % (index, txt_name)] = html_out
