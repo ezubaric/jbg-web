@@ -529,7 +529,7 @@ class WebsiteWriter:
 
           global_replace[course] = self.courses.render()
   
-  def add_index(self, path, name = "Documents", criteria=[("Year", 0, [])],
+  def add_index(self, path, name = "Documents", criteria=[("Year", 0, [], True)],
                 default_sort="Year"):
     index = {}
     print("Searching: " + path + "*")
@@ -577,7 +577,7 @@ class WebsiteWriter:
     except OSError:
       print("Dir couldn't be made: " + final_directory)
     
-    for sort_by, min_count, exclude in self._criteria[index.lower()]:
+    for sort_by, min_count, exclude, filter_author in self._criteria[index.lower()]:
       o = open(self._output + "/" + self.DYNAMIC_DIR +
                "%s/%s.html" % (index.lower(), sort_by.lower()), 'w')
       latex_out = open(self._output + "/" + self.DYNAMIC_DIR +
@@ -622,7 +622,9 @@ class WebsiteWriter:
       for variable in global_replace:
           html_out = html_out.replace("~~%s~~" % variable,
                                       global_replace[variable])
-      o.write(html_out)
+
+      if not filter_author or "boyd-graber" in html_out.lower():
+        o.write(html_out)
       html_out = ""
 
       old = None
@@ -665,9 +667,10 @@ class WebsiteWriter:
 
           latex_out.write("\n\\begin{enumerate}\n")
 
-        latex_out.write("\t \item " + lookup[jj].latex(self._url))
-        bibtex_out.write(lookup[jj].bibtex(self._url))
-        text_out.write(lookup[jj].txt(url=self._url))
+        if not filter_author or "boyd-graber" in lookup[jj].txt().lower():
+          latex_out.write("\t \item " + lookup[jj].latex(self._url))
+          bibtex_out.write(lookup[jj].bibtex(self._url))
+          text_out.write(lookup[jj].txt(url=self._url))
 
         # Write comment string so we know original entry in DB
         this_html = "\n\t\t<!--- %s --->\n" % str(jj)
