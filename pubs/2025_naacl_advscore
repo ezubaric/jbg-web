@@ -9,6 +9,7 @@
 ~~ Category | Adversarial Examples
 ~~ Venue | Refereed Conference
 ~~ URL | docs/2025_naacl_advscore.pdf
+~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Note | This was one of ten papers selected as an Outstanding Paper at NAACL 2025
 ~~ Public | Adversarial datasets should validate AI robustness by presenting samples that humans handle well but models struggle with. However, as models advance, these datasets risk becoming obsolete. Assessing whether a dataset remains adversarial is challenging due to the absence of a standardized metric for adversarialness. To address this, we introduce AdvScore, a human-grounded evaluation metric that quantifies a dataset's adversarial nature by accounting for the differing abilities of models and humans while also identifying low-quality examples.
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/FHeFVNXeTyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
