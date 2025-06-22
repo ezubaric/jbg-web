@@ -1,0 +1,15 @@
+~~ Bibtex | inproceedings
+~~ Title | When Parts are Greater Than Sums: Individual LLM Components Can Outperform Full Models
+~~ Author | Ting-Yun Chang and Jesse Thomason and Robin Jia
+~~ Booktitle | Empirical Methods in Natural Language Processing
+~~ Venue | Refereed Conference
+~~ Location | Miami
+~~ Year | 2024
+~~ Category | Large Language Models 
+~~ Link | ArXiv*https://arxiv.org/abs/2406.13131
+~~ Link | Blog*https://terarachang.github.io/projects/llm-decomp.html
+~~ Link | Code*https://github.com/terarachang/LLMDecomp
+~~ Project | IIS-2403436
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Url | docs/2024_emnlp_parts.pdf
+~~ Public | Language models can learn to do new tasks by being shown a few demonstrations, also known as in-context learning. In this paper, we analyze how different internal components of these models contribute to in-context learning. We find that for any given task, a small subset of model components is consistently responsible for good performance, and can even surpass the accuracy of the full model. By quickly identifying which components are useful for a new task, we improve the accuracy of in-context learning across a range of different natural language processing datasets.
