@@ -1,0 +1,12 @@
+~~ Bibtex | article
+~~ Title |  Hierarchical Deep Document Model 
+~~ Author | Yi Yang and John P Lalor and Ahmed Abbasi and Daniel Dajun Zeng
+~~ Journal | IEEE Transactions on Knowledge and Data Engineering
+~~ Year | 2025
+~~ Category | Topic Modeling
+~~ Category | Hierarchical Modeling
+~~ Category | Deep Learning
+~~ URL | https://doi.org/10.1109/TKDE.2024.3487523
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Public | Topic modeling is a commonly used text analysis tool for discovering latent topics in a text corpus. However, while topics in a text corpus often exhibit a hierarchical structure (e.g., cellphone is a sub-topic of electronics), most topic modeling methods assume a flat topic structure that ignores the hierarchical dependency among topics, or utilize a predefined topic hierarchy. In this work, we present a novel Hierarchical Deep Document Model (HDDM) to learn topic hierarchies using a variational autoencoder framework. We conduct experiments on four real-world text datasets to evaluate the topic modeling capability of the proposed HDDM method compared to state-of-the-art hierarchical topic modeling benchmarks. HDDM achieves considerable improvement over benchmarks and is capable of learning meaningful topics and topic hierarchies. We also apply HDDM to a real-world medical notes dataset for clinical prediction and show that HDDM can better summarize topics in medical notes, resulting in more accurate clinical predictions.
+
