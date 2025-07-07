@@ -1,10 +1,11 @@
 ~~ Bibtex | article
 ~~ Title | Should I Trust You? Detecting Deception in Negotiations using Counterfactual RL
-~~ Author | Feng Gu and Wichayaporn Wongkamjan and Jonathan K. Kummerfeld and Denis Peskoff and Jonathan May and Jordan Boyd-Graber
+~~ Author | Wichayaporn Wongkamjan and Yanze Wang and Feng Gu and Denis Peskoff and Jonathan K. Kummerfeld and Jonathan May and Jordan Boyd-Graber
 ~~ Journal | Findings of the Association for Computational Linguistics
 ~~ Year | 2025
 ~~ Category | Computational Social Science
 ~~ Venue | Journal
 ~~ Url | docs/2025_acl_ctrld.pdf
+~~ Link | Code/Data*https://github.com/ALLAN-DIP/diplomacy_cicero/tree/deception_friction_value/fairdiplomacy_external/friction
 ~~ Project | FACT*../projects/FACT.html
-~~ Public | When determining when an offer sounds "too good to be true", it helps to consider what the person sending the message has to gain.  When we provide this information to classifiers tasked with determining if a message is deceptive in the online game of Diplomacy, it dramatically improves ability to detect deception.
+~~ Public | When determining an offer that sounds "too good to be true", we should consider what the person sending the message could gain and what the recipient could lose.  When we provide these information to a classifier determining if a message is deceptive in the online game of Diplomacy, it dramatically improves ability to detect deception, more precise than humans by 70%.
