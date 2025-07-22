@@ -10,7 +10,6 @@
 ~~ Category | Calibration
 ~~ Venue | Refereed Conference
 ~~ Url | docs/2025_acl_grace.pdf
-~~ Link | Code/Data*
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Public | As AI use becomes more common, it's important to measure not just whether the systems are correct but whether they know when they're incorrect.  We propose a new metric to measure this mismatch between correctness and confidence, compare computer ability with human ability, and show that computers have a long way to go before they're well-calibrated.
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/NJKd-IAbm1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
