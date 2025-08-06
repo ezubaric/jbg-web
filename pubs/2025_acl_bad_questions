@@ -11,3 +11,4 @@
 ~~ Project | Rosie*../projects/Rosie.html
 ~~ Link | Code/Data*https://github.com/nehasrikn/poorly-posed-questions
 ~~ Public | Often, the questions users ask search engines or chatbots aren't perfect: they have errors, are vague, or lack context.  Humans are able to deftly navigate these issues, but computers still struggle.  We analyze the differences in how humans and computers repair imperfect questions to suggest how to improve AI's question answering abilities.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/yY9yX5RC5Jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

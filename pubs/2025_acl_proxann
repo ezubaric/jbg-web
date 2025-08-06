@@ -13,3 +13,4 @@
 ~~ Project | NIST*../projects/NIST.html
 ~~ Project | TRAILS*https://www.trails.umd.edu/
 ~~ Public | Topic models are tools to help people navigate large document collections.  However, testing whether a topic model is good or not is notoriously hard, as it's subjective and requires asking real people about whether the outputs make sense.  We show that you can ask a language model to recreate the answers of humans, correlating better with ground truth than previous evaluations.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/87OBxEM8a9E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
