@@ -185,6 +185,7 @@ if __name__ == "__main__":
     c.load_holidays("teaching/holidays.json")
     
     for ii in glob("teaching/*/index.json"):
+        print("*******\n%s\n*******\n" % ii)
         c.load_json(ii)
         
         print(c.class_dates())

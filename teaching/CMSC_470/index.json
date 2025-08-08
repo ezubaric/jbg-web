@@ -1,5 +1,5 @@
 {
-    "config": {"start": "2025-09-01",
+    "config": {"start": "2025-09-02",
 	       "end": "2025-12-12",
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
@@ -34,5 +34,6 @@
 		    "",
 		    ["Project Deliverable", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"],
 		    ["Poster", "https://github.com/Pinafore/cl1-hw/blob/master/project/project.md"]],
-    "specials": ""
+    "specials": "",
+    "topics": []    
 }
