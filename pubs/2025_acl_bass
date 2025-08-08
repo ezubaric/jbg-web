@@ -13,4 +13,4 @@
 ~~ Project | TRAILS*https://www.trails.umd.edu/
 ~~ Project | NIST*../projects/NIST.html
 ~~ Public | Understanding large document collections has been the domain of old fashioned models called topic models for decades.  There are new models based on LLMs that claim to be better... are they?  We propose a new evaluation based on how much people learn from interacting with models to categorize a dataset to compare traditional and LLM models: traditional models are not bad, new models hallucinate, and a human in the loop model that we call BASS has the best outcomes.
-~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/yY9yX5RC5Jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/N8TFhaAygrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
