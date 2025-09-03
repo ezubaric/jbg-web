@@ -4,8 +4,8 @@
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
     "class_sequence": [["What the class is about?", "intro"],
-		       ["AI vs. NLP", "ai_nlp"],
-		       ["Information Retrieval", "tfidf"],		       
+		       ["AI vs. NLP", "ai_nlp"],		       
+		       ["Information Retrieval", "tfidf"],
 		       ["Logistic Regression", "lr"],
 		       ["Syntax", "dependency"],		       		       
 		       "Workshop: Evaluation / Development",
@@ -31,11 +31,11 @@
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"]],
     "hw_sequence": [["Warmup (5 points)", "https://github.com/Pinafore/nlp-hw/tree/master/presidents"],
-		    ["Tokenization (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/bpe"],
-		    ["IR (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf"],
+		    ["Tokenization and tf-idf (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf"],
+		    ["IR (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf_guesser"],
 		    ["Logistic Regression (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/sgd"],
 		    ["Adam (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/adam"],		    
-		    ["Feature Engineering (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
+		    ["Feature Engineering (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
 		    ["DAN (20 points)", "https://github.com/Pinafore/cl1-hw/tree/master/dan"],
 		    ["LM (20 points)", "https://github.com/Pinafore/nlp-hw/tree/master/backpack"],
 		    "",
@@ -62,7 +62,7 @@
     ],
     "Readings:": [["Linguistic Fundamentals for Natural Language Processing: 100 Essentials from Morphology and Syntax (Chapters 1 and 2)",
         "https://www.morganclaypool.com/doi/abs/10.2200/S00493ED1V01Y201303HLT020"],
-		 ["Alternate Link", "https://drive.google.com/file/d/1X_oc4E9asNjA5lxpiroA2c7dLgnyh4eD/view?usp=sharing"]
+		  ["Alternate Link", "https://drive.google.com/file/d/1X_oc4E9asNjA5lxpiroA2c7dLgnyh4eD/view?usp=sharing"]
       ],
     "Optional Readings:": [
       ["Python (and programming) introductory course", "https://www.coursera.org/course/programming1"],
@@ -100,10 +100,12 @@
       ["The Cranfield Paradigm", "https://www.youtube.com/watch?v=L5cUjzjc_YE"],
       ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
       ["TF-IDF", "https://youtu.be/A5ounv0D_cs"],
-      ["Evaluation", "https://youtu.be/BxAzuCSvF8s"]
+	["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
+	["RAG"]
     ],
     "Readings:": [
-      ["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
+	["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
+	["SLP 2"],
       ["Evolution of Cranfield (Optional)", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"]
     ]
   },
@@ -112,7 +114,8 @@
     "Videos:": [
       ["Regression", "https://www.youtube.com/watch?v=wy4ViG7uB1g"],
       ["Logistic Regression", "https://www.youtube.com/watch?v=9BcxOiwE4Ds"],
-      ["Stochastic Gradient Descent", "https://www.youtube.com/watch?v=8M-n8u2w2u8"],
+	["Stochastic Gradient Descent", "https://www.youtube.com/watch?v=8M-n8u2w2u8"],
+	["ADAM"],
       ["Feature Engineering in the Age of Deep Learning", "https://youtu.be/4-se75AuETA"],
       ["Feature Engineering for Quiz Bowl", "https://www.youtube.com/watch?v=IzKFgigocAg"]
     ],
@@ -148,18 +151,20 @@
     ]
   },
 
-  "dependency": {
+  "syntax": {
     "Videos:": [
       ["What's a part of speech, and why is it a joint problem?", "https://youtu.be/3Aklvuq514M"],
-      ["Hidden Markov Modeling", "https://youtu.be/0gu1BDj5_Kg"],
-      ["Inferring a Hidden Markov Model from Labeled Data", "https://youtu.be/vjT4ywHDZ-0"],
-      ["Dependency parsing", "https://youtu.be/ZT1Et5wd1SQ"]
+	["Hidden Markov Modeling", "https://youtu.be/0gu1BDj5_Kg"],
+	["Constituency grammars", "https://www.youtube.com/watch?v=xNHWhQrHeMU"],
+	["Dependency parsing", "https://youtu.be/ZT1Et5wd1SQ"]
     ],
     "Readings:": [
       ["SNLP Chapter 8 (more important), 18 (less important)"]
     ],
     "optional_lectures": [
-      ["Viterbi Algorithm", "https://youtu.be/cGjWlHO1x6U"],
+	["Viterbi Algorithm", "https://youtu.be/cGjWlHO1x6U"],
+	["PCFGs", "https://www.youtube.com/watch?v=itJXYgkHwUo"],
+	["CYK Parsing", ""],
       ["Shift-Reduce Parser", "https://www.youtube.com/watch?v=f5-hTA9hA3s"]
     ]
   },
@@ -210,7 +215,8 @@
       ["RL Review", "https://drive.google.com/file/d/1uPY1vfnu9r23By5GtYwQTe2mmSNp_QEY/view?usp=drive_link"],
       ["Alignment", "https://drive.google.com/file/d/1DoBLaaUG9lug4I0R1lbBEzMgQlZ-JvcV/view?usp=drive_link"],
       ["Policy Gradient", "https://drive.google.com/file/d/1ns1WWRz2bd1pCKmduU9nMtMCkpoyVJeu/view?usp=drive_link"],
-      ["RLHF", "https://drive.google.com/file/d/18sEC9c4Aj_yx-pCHRa6TnLAzjxsnI712/view?usp=drive_link"]
+	["RLHF", "https://drive.google.com/file/d/18sEC9c4Aj_yx-pCHRa6TnLAzjxsnI712/view?usp=drive_link"],
+	["DSPY"]
     ],
     "Readings:": [
       ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
