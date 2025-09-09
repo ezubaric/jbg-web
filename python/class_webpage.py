@@ -171,9 +171,12 @@ class Course:
                 if element_type == "class":
                     content = self.render_topic(content)
 
-                contribution = self._template[element_type].replace("~~~SUBJECT~~~", subject)
-                contribution = contribution.replace("~~~DATE~~~", formatted_date)
-                contribution = contribution.replace("~~~CONTENT~~~", content)
+                try:
+                    contribution = self._template[element_type].replace("~~~SUBJECT~~~", subject)
+                    contribution = contribution.replace("~~~DATE~~~", formatted_date)
+                    contribution = contribution.replace("~~~CONTENT~~~", content)
+                except:
+                    print("Contribution got messed up:\n\tSubject: %s\n\tDate: %s\n\t Content: %s" % (subject, formatted_date, content))
 
                 html += contribution
         return html
@@ -185,6 +188,7 @@ if __name__ == "__main__":
     c.load_holidays("teaching/holidays.json")
     
     for ii in glob("teaching/*/index.json"):
+        print("*******\n%s\n*******\n" % ii)
         c.load_json(ii)
         
         print(c.class_dates())

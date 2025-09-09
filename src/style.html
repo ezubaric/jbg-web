@@ -240,44 +240,6 @@ we retrofit using the training dictionary $\mathcal{D}$ as the ontology.
       I'm never ever sick at sea.\footnote{Well, hardly ever.}
     </pre>
 
-<!---
-
-  Em dash: —
-This is the longest dash. It was named for being the exact width of a capital M in the same font; that's no longer always true, but the em is still a unit used in typography (you may have used it, or its friend the root em [rem], in CSS).
-You make it by typing option+shift+hyphen on Mac. Windows doesn't have any easy keyboard shortcut, but you can do alt+0151 (has to be on the number pad) if you're adventurous. Depending on your settings, a double hyphen may autocorrect to it. It's never typographically correct to use a double hyphen as an em dash substitute.
-An em dash separates thoughts in an abrupt manner—like this. That also includes pure cutoff, when someone doesn't finish their—
-The em dash is an alternative to commas and parentheses in setting off an appositive—which is an explanatory aside in the middle of a sentence—and is occasionally used in salutations in letters:
-Cat —
-We are pleased to inform you that you've won the lottery.
-"The em dash is used to attribute quotations." —Jonah Greenthal
-In old-timey books and other publications, em dashes—sometimes several in a row—are used to censor or redact proper names for a variety of reasons. Here's the first sentence of the Pevear/Volokhonsky translation of Crime and Punishment:
-At the beginning of July, during an extremely hot spell, towards evening, a young man left the closet he rented from tenants in S——y Lane, walked out to the street, and slowly, as if indecisively, headed for the K——n Bridge.
-I think the idea is that someone familiar with the St. Petersburg of the time (including contemporaneous readers) would know what was meant, but omitting the actual name was a sign of respect and avoided certain legal issues. I think this is also what's theoretically going on when you see people write "Thank G-d", but using an em dash there would look stupid because it's only replacing one letter. Also those people probably aren't thinking hard about typography.
-En dash: –
-This is of middle length and is named for being the exact width of a capital N in the same font. I think that still usually applies, even though the em etymology doesn't. The en is a typographical unit too, but it's not used as much as the em.
-You make it by typing option+hyphen on Mac. Windows doesn't have any easy keyboard shortcut, but you can do alt+0150 (has to be on the number pad) if you're adventurous. I don't think any autocorrection is conventionally available.
-An en dash separates ranges. This includes numeric ranges (I use en dashes 5–10 times a day), ranges that involve numbers but are not strictly numeric ("I charge $20–$40 per en dash in the 12:00–2:00 hours"), ranges that only partly involve numbers ("I haven't died yet" —Jonah Greenthal, 1989–present), and ranges that don't involve numbers ("Make sure you use correct dashes Monday–Friday").
-The en dash is often used for separating numbers in other contexts ("The Cubs won 8–7") or other related things of the same type ("I'm driving Chicago–Milwaukee", "the Einstein–Podolsky–Rosen paradox is my favorite triply eponymous thought experiment").
-Conceptually, a minus sign and a negative sign are separate from the en dash and from each other, but you use the same symbol for all of them (i.e., an en dash). When I say they're conceptually different, I mean they carry different semantic value, just as # can mean a number of pounds, a key on a phone, or a hashtag. Also, e.g., 5–10 could mean either "five to ten" or "five minus ten" despite using the same symbol, but you gotta know the territory.
-Hyphen: -
-This is the shortest common dash. It is named for the Greek ηυφεν*, meaning "hyphen". You type it by pressing the hyphen key.
-*I made that up
-The hyphen is the hardest of these to use correctly. One rule would be "If you want to use a dash of some kind and it's not one of the situations I covered above, use a hyphen." But that doesn't tell when to use a hyphen vs. a space vs. nothing. Unfortunately, I don't actually know all the rules. I have somehow developed a really good intuitive sense of when to use punctuation (weird flex), which makes it hard to teach. So here are some of the common rules I found when researching:
-The hyphen is used in compound modifiers (two words that effectively form one adjective). For example, it would be correct to write "No-headache home repair." But you don't use a hyphen after an adverb ending in "-ly" or "very" so you'd say "those are very beautifully placed spaces between those words." I think one general rule is that if the compound wouldn't make sense with a word removed, you need a hyphen. ("No home repair" and "headache home repair" don't make sense, but they still convey enough of an idea to be poor slogans.)
-Speaking of which, you often use hyphens for prefixes and suffixes. Except sometimes you use nothing ("correct hyphen use is a precondition of your employment"); I don't think there's a hard-and-fast rule for that. (Hey, that's a compound modifier.) The same is true of compound words: they can have a space, hyphen, or nothing depending on common style, and you just have to know or check. Moreover, usage tends to change toward "no space or hyphen": "e-mail" used to be common but now people mostly write "email"; "policeman" was once hyphenated too.
-Guess what character is used to hyphen-
-ate words when a line wraps?
-You use a hyphen for numbers between twenty-one and ninety-nine when writing them out (which you probably shouldn't do anyway, but).
-In general, use a hyphen to show that two words are more closely
-connected than other pairs of adjacent words. "Jayme threw Jonah out
-of the second floor window" is weird because what is a "floor window"?
-Oh, you meant "Jayme threw Jonah out of the second-floor window."
-(This is also a compound modifier example.)
-
--Jonah Greenthal
-
-
-  --->
   
     <ul>
       <li> Use the <A HREF="https://ctan.org/pkg/fnpct?lang=en">fnpct package</a> to make the interaction between
@@ -321,7 +283,8 @@ A note number should generally be placed at the end of a sentence or at the end 
   a verb in what follows.  If you don't, you shouldn't have a comma
   there.
 
-  <li> Use LaTeX hyphens (-), en dashes (--), and em dashes (---) correctly
+  <li> Use LaTeX hyphens (-), en dashes (--), and em dashes (---)
+  correctly.  (I have copied the explanations and examples from Jonah Greenthal.)
   
     <pre>
       This is a low-budget trip, and pages 78--101 describe the
@@ -329,6 +292,77 @@ A note number should generally be placed at the end of a sentence or at the end 
       get there tomorrow.
     </pre>
 
+  <ol>
+    <li> <b>em dash (&emdash;)</b> </li>
+    <ol>
+      <li> This is the longest dash. It was named for being the exact width of a capital M in the same font; that's no longer always true, but the em is still a unit used in typography (you may have used it, or its friend the root em [rem], in CSS).
+      <li> You make it by typing option+shift+hyphen on Mac. Windows doesn't have any easy keyboard shortcut, but you can do alt+0151 (has to be on the number pad) if you're adventurous. Depending on your settings, a double hyphen may autocorrect to it. It's never typographically correct to use a double hyphen as an em dash substitute.
+      <li> An em dash separates thoughts in an abrupt manner—like this. That also includes pure cutoff, when someone doesn't finish their—
+The em dash is an alternative to commas and parentheses in setting off an appositive—which is an explanatory aside in the middle of a sentence—and is occasionally used in salutations in letters:
+      <quote>
+      Cat —
+      </quote>
+      <li> We are pleased to inform you that you've won the lottery.
+      <li> "The em dash is used to attribute quotations." —Jonah Greenthal
+      <li> In old-timey books and other publications, em
+    dashes—sometimes several in a row—are used to censor or redact
+    proper names for a variety of reasons. Here's the first sentence
+    of the Pevear/Volokhonsky translation of Crime and Punishment:
+      <quote>
+At the beginning of July, during an extremely hot spell, towards
+    evening, a young man left the closet he rented from tenants in
+    S——y Lane, walked out to the street, and slowly, as if
+    indecisively, headed for the K——n Bridge.
+      </quote>
+    </ol>
+    <li> <b>en dash (&endash;)</b> </li>
+    <ol>
+      <li> This is of middle length and is named for being the exact width of a capital N in the same font. I think that still usually applies, even though the em etymology doesn't. The en is a typographical unit too, but it's not used as much as the em.
+      <li> You make it by typing option+hyphen on Mac. Windows doesn't have any easy keyboard shortcut, but you can do alt+0150 (has to be on the number pad) if you're adventurous. I don't think any autocorrection is conventionally available.
+      <li> An en dash separates ranges. This includes numeric ranges (I use en dashes 5–10 times a day), ranges that involve numbers but are not strictly numeric ("I charge $20–$40 per en dash in the 12:00–2:00 hours"), ranges that only partly involve numbers ("I haven't died yet" —Jonah Greenthal, 1989–present), and ranges that don't involve numbers ("Make sure you use correct dashes Monday–Friday").
+      <li> The en dash is often used for separating numbers in other contexts ("The Cubs won 8–7") or other related things of the same type ("I'm driving Chicago–Milwaukee", "the Einstein–Podolsky–Rosen paradox is my favorite triply eponymous thought experiment").
+      <li> Conceptually, a minus sign and a negative sign are separate
+    from the en dash and from each other, but you use the same symbol
+    for all of them (i.e., an en dash). When I say they're
+    conceptually different, I mean they carry different semantic
+    value, just as # can mean a number of pounds, a key on a phone, or
+    a hashtag. Also, e.g., 5–10 could mean either "five to ten" or
+    "five minus ten" despite using the same symbol, but you gotta know
+    the territory.  In LaTeX, however, one would be in math mode and
+    the other not, so they'd be distinguished.
+    </ol>
+    <li> <b>hyphen</b> </li>
+    <ol>
+      <li> The hyphen is the hardest of these to use correctly. One rule would be "If you want to use a dash of some kind and it's not one of the situations I covered above, use a hyphen." But that doesn't tell when to use a hyphen vs. a space vs. nothing. Unfortunately, I don't actually know all the rules. I have somehow developed a really good intuitive sense of when to use punctuation (weird flex), which makes it hard to teach. So here are some of the common rules I found when researching:
+      <li> The hyphen is used in compound modifiers (two words that
+    effectively form one adjective). For example, it would be correct
+    to write "No-headache home repair." But you don't use a hyphen
+    after an adverb ending in "-ly" or "very" so you'd say "those are
+    very beautifully placed spaces between those words." I think one
+    general rule is that if the compound wouldn't make sense with a
+    word removed, you need a hyphen. ("No home repair" and "headache
+    home repair" don't make sense, but they still convey enough of an
+    idea to be poor slogans.)
+      <li> Speaking of which, you often use hyphens for prefixes and
+    suffixes. Except sometimes you use nothing ("correct hyphen use is
+    a precondition of your employment"); I don't think there's a
+    hard-and-fast rule for that. (Hey, that's a compound modifier.)
+    The same is true of compound words: they can have a space, hyphen,
+    or nothing depending on common style, and you just have to know or
+    check. Moreover, usage tends to change toward "no space or
+    hyphen": "e-mail" used to be common but now people mostly write
+    "email"; "policeman" was once hyphenated too.
+      <li> You use a hyphen for numbers between twenty-one and
+    ninety-nine when writing them out.
+      <li> In general, use a hyphen to show that two words are more closely
+connected than other pairs of adjacent words. "Jayme threw Jonah out
+of the second floor window" is weird because what is a "floor window"?
+Oh, you meant "Jayme threw Jonah out of the second-floor window."
+(This is also a compound modifier example.)
+    </ol>
+    <li> This ends the section stolen from Jonah Greenthal
+  </ol>
+  
 <blockquote class="twitter-tweet" data-lang="de" data-theme="dark"><p lang="en" dir="ltr">when you love the em-dash <a href="https://t.co/0XO8JfD7sG">pic.twitter.com/0XO8JfD7sG</a></p>&mdash; Alexis Gay (@yayalexisgay) <a href="https://twitter.com/yayalexisgay/status/1465776683819094018?ref_src=twsrc%5Etfw">30. November 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   
   <li> Hyphens are needed when you have a phrase with a modifier that
@@ -371,6 +405,21 @@ transformer embeddings for each pair of answers.
   </pre>
 
 </ol>
+
+<h3>Acronyms and Initialisms</h3>
+
+  <ol>
+    <li> You can leave unimportant words out of an acronym, but
+    not important ones.  For example: <b>Gra</b>nular, Human-grounded
+Benchmark for Model <b>C</b>alibration <b>E</b>valuation.  It's fine
+    to leave out "for", but "Human" is important.  "Granular
+    Registering of Anthropic--Computer Calibration Evaluation" makes
+    "Human" or something that means "Human" part of the acronym.
+    <li> Do not use multiple letters from one word or any letters that
+    are not the first letter of a word.  For examples, using
+    <b>gra</b>nular makes it hard to remember what's being talked about.
+  </ol>
+   
 
 <h3>Figures</h3>
 

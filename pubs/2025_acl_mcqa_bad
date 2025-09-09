@@ -12,3 +12,4 @@
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ URL | docs/2025_acl_mcqa_bad.pdf
 ~~ Public | Most people dislike taking multiple-choice tests, so why are they the default way we evaluate NLP systems? This position paper argues that, despite its simplicity and popularity, multiple-choice evaluation is flawed, both in its format and the datasets it relies on. Drawing from educational testing theory, we propose practical fixes for these issues, helping us build evaluations that better test knowledge and reflect how humans use NLP systems.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/XrA0jGuLIVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

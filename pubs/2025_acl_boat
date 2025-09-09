@@ -14,3 +14,4 @@
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ URL | docs/2025_acl_boat.pdf
 ~~ Public | Language models are optimized to learn which responses you prefer, but they don't learn why you preferred a particular response. This limits their ability to tailor to personalized requests (e.g., "What should I eat for dinner? I'm vegetarian"), so we introduce a simple fix: have models infer personas that explain why users could prefer responses. We show training on these inferred personas leads to responses that are significantly more personalized for user needs.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/wuEIeydhamA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

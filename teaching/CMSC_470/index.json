@@ -1,0 +1,281 @@
+{
+    "config": {"start": "2025-09-02",
+	       "end": "2025-12-12",
+	       "days": ["W-MON", "W-WED"],
+	       "hw_day": "W-FRI"},
+    "class_sequence": [["What the class is about?", "intro"],
+		       ["AI vs. NLP", "ai_nlp"],		       
+		       ["Information Retrieval", "tfidf"],
+		       ["Logistic Regression", "lr"],
+		       ["Word representations", "word2vec"],                                     
+		       ["Pytorch", "pytorch"],		       
+		       ["Linear neural language models", "rnn"],
+		       ["Syntax  (Last content on Midterm I)", "syntax"],		       	       
+		       ["Homework Framework", "code"],		       
+		       "Workshop: Feature Engineering",		       
+		       ["Transformers", "transformer"],
+		       ["Decoding", "decoding"],
+		       ["Finetuning", "finetuning"],
+		       ["Alignment", "alignment"],
+		       "Slack/Sick Day I",		       
+		       "Slack/Sick Day II",		    
+		       ["Midterm Review", "review"],
+		       "Midterm I",		       		       		       		       
+		       ["Question Answering Approaches", "qa_approach"],
+		       ["Question Answering Datasets and Evaluation", "qa_data"],
+		       ["Item Response Theory", "irt"],
+		       ["Adversarial Examples / Red Teaming", "adversarial"],
+		       ["Machine translation", "mt"],
+		       ["Computational Social Science", "css"],
+		       "Midterm II",
+		       ["Expo Match", "expo"],
+		       ["Ask Me Anything", "ama"]],
+    "hw_sequence": [["Warmup (5 points)", "https://github.com/Pinafore/nlp-hw/tree/master/presidents"],
+		    ["Tokenization and tf-idf (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf"],
+		    ["Logistic Regression (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/sgd"],
+		    ["Adam (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/adam"],		    
+		    ["Feature Engineering (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
+		    ["Sparse Retrieval (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf_guesser"],		    
+		    ["DAN (20 points)", "https://github.com/Pinafore/cl1-hw/tree/master/dan"],
+		    ["LM (20 points)", "https://github.com/Pinafore/nlp-hw/tree/master/backpack"],
+		    "",
+		    ["Transformer (20 points)", "https://github.com/Pinafore/cl1-hw/tree/master/transformer"],
+		    ["Finetuning (15 points)", "https://github.com/Pinafore/cl1-hw/tree/master/finetune"],
+		    ["Alignment (20 points)", "https://github.com/Pinafore/cl1-hw/tree/master/alignment"],
+		    ["Adversarial Authoring (15 points)", "https://github.com/Pinafore/cl1-hw/tree/master/adversarial"],
+		    ["Prompt Optimization (15 points)", "https://github.com/Pinafore/cl1-hw/tree/master/dspy"]],
+    "specials": ["2025-12-15"],
+    "topics": {
+  "intro": {
+    "Content:": [
+      ["Welcome to NLP", "https://youtu.be/2_2ttm1GHs4"],
+      ["What's a word?", "https://youtu.be/ZqFqd9qUQM4"],
+	["What's a language?", "https://youtu.be/YKfKfIXunyI"],
+	["Tokenization", "https://drive.google.com/file/d/187kvqZt7v0_DotWMnto4G_RHJ7n3h2CL/view?usp=sharing"],
+	["BPE", "https://drive.google.com/file/d/1Mya9fPiHv5ng-x-k10nES31LYC_sxNeS/view?usp=sharing"]],
+      "Administrivia:": [
+      ["How to read this webpage", "https://youtu.be/5Og91_Cishs"],
+      ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
+      ["More on the Flipped Classroom", "https://youtu.be/7JMOsWPmlMk"],
+      ["Hybrid classes", "https://youtu.be/9oyZ3Wtcwtk"],
+      ["Grader Expectations", "https://youtu.be/YEFMhYKOHmE"]
+    ],
+      "Readings:": [["SLP2", "https://web.stanford.edu/~jurafsky/slp3/2.pdf"],
+		    ["Linguistic Fundamentals for Natural Language Processing: 100 Essentials from Morphology and Syntax (Chapters 1 and 2)",
+        "https://www.morganclaypool.com/doi/abs/10.2200/S00493ED1V01Y201303HLT020"],
+		  ["Alternate Link", "https://drive.google.com/file/d/1X_oc4E9asNjA5lxpiroA2c7dLgnyh4eD/view?usp=sharing"]
+      ],
+    "Optional Readings:": [
+      ["Python (and programming) introductory course", "https://www.coursera.org/course/programming1"],
+      ["Jon Hewitt's Math Notes", "https://www.cs.columbia.edu/~johnhew/coms4705/lectures/lec0.html"],
+      ["First weeks of INST 414 as review", "../INST_414"],
+      ["A probability primer", "http://www.sjsu.edu/faculty/gerstman/StatPrimer/probability.pdf"],
+      ["Grinstead and Snell, Chapters 1-2, Chapter 4.1", "https://math.dartmouth.edu/~prob/prob/prob.pdf"],
+      ["How the statistical revolution changes (computational) linguistics", "http://aclweb.org/anthology/W/W09/W09-0103.pdf"],
+      ["The deep learning revolution in NLP", "https://aclanthology.org/J15-4006.pdf"]
+    ]
+  },
+
+  "ai_nlp": {
+    "Videos:": [
+      ["What's the difference between NLP, AI, and ChatGPT?", "https://youtu.be/4fek8n-xMZ4"],
+      ["What made generative AI possible", "https://youtu.be/3qKYqtCzJMk"],
+      ["What to call these models?", "https://www.youtube.com/watch?v=u0DgoRVLTE8&t=1s"],
+      ["Shannon Game", "https://youtu.be/0shft1gokac"],
+      ["Evaluating Language Models", "https://youtu.be/kdaX9p6Uc9k"],
+      ["The Turing Test", "https://www.youtube.com/watch?v=bdQIUv9FutE"]
+    ],
+    "Optional Review:": [
+      ["What are expectations and entropy?", "https://www.youtube.com/watch?v=O28U08_yaGU"]
+    ],
+    "administrivia": [
+      ["Why you shouldn't use generative AI to cheat in my class", "https://youtu.be/a3w0ZquNFVs"]
+    ],
+    "Readings:": [
+	["Language Models: A Guide for the Perplexed", "https://arxiv.org/abs/2311.17301"],
+	["SLP3", "https://web.stanford.edu/~jurafsky/slp3/3.pdf"]
+    ]
+  },
+
+  "tfidf": {
+    "Videos:": [
+      ["The Cranfield Paradigm", "https://www.youtube.com/watch?v=L5cUjzjc_YE"],
+      ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
+      ["TF-IDF", "https://youtu.be/A5ounv0D_cs"],
+	["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
+	["RAG", "https://drive.google.com/file/d/18gc27y9dSul2vdJ3Y3ujQ76rV8CQ03wI/view?usp=drive_link"]
+    ],
+    "Readings:": [
+	["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
+	["SLP 11.1", "https://web.stanford.edu/~jurafsky/slp3/11.pdf"],
+      ["Evolution of Cranfield (Optional)", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"]
+    ]
+  },
+
+  "lr": {
+    "Videos:": [
+      ["Regression", "https://www.youtube.com/watch?v=wy4ViG7uB1g"],
+      ["Logistic Regression", "https://www.youtube.com/watch?v=9BcxOiwE4Ds"],
+	["Stochastic Gradient Descent", "https://www.youtube.com/watch?v=8M-n8u2w2u8"],
+	["ADAM"],
+      ["Feature Engineering in the Age of Deep Learning", "https://youtu.be/4-se75AuETA"],
+      ["Feature Engineering for Quiz Bowl", "https://www.youtube.com/watch?v=IzKFgigocAg"]
+    ],
+    "Readings:": [
+	["SNLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
+    ]
+  },
+
+  "code": {
+    "Videos:": [
+      ["Advice / Overview", "https://share.descript.com/view/R4u9z3RyOuR?transcript=true"],
+      ["How to stump a computer", "https://www.youtube.com/watch?v=6oZCIOBiSaI"],
+      ["Good questions", "https://www.youtube.com/watch?v=uVcPlJu-JCM"],
+      ["Bad questions", "https://youtu.be/LKQVJgj5ffg"]
+    ],
+    "optional_videos": [
+      ["IRT", "https://www.youtube.com/watch?v=n4W4Gwwkbqg"]
+    ],
+    "optional_past_finals": [
+      ["2019 Finals", "https://www.youtube.com/watch?v=vH8cUGFOwPk"],
+      ["2022 Finals", "https://www.youtube.com/watch?v=dyaR7zT_KKg"]
+    ]
+  },
+
+  "word2vec": {
+    "Videos:": [
+      ["Distributional Semantics", "https://youtu.be/vErGaMc80WM"],
+      ["Word2Vec", "https://youtu.be/QyrUentbkvw"],
+      ["Evaluation", "https://www.youtube.com/watch?v=Jid_EVBoVLU"]
+    ],
+    "Readings:": [
+      ["SNLP Chapter 6"]
+    ]
+  },
+
+  "syntax": {
+    "Videos:": [
+      ["What's a part of speech, and why is it a joint problem?", "https://youtu.be/3Aklvuq514M"],
+	["Hidden Markov Modeling", "https://youtu.be/0gu1BDj5_Kg"],
+	["Constituency grammars", "https://www.youtube.com/watch?v=xNHWhQrHeMU"],
+	["Dependency parsing", "https://youtu.be/ZT1Et5wd1SQ"]
+    ],
+    "Readings:": [
+      ["SNLP Chapter 8 (more important), 18 (less important)"]
+    ],
+    "optional_lectures": [
+	["Viterbi Algorithm", "https://youtu.be/cGjWlHO1x6U"],
+	["PCFGs", "https://www.youtube.com/watch?v=itJXYgkHwUo"],
+	["CYK Parsing", ""],
+      ["Shift-Reduce Parser", "https://www.youtube.com/watch?v=f5-hTA9hA3s"]
+    ]
+  },
+
+  "pytorch": {
+    "Videos:": [
+      ["Deep", "https://www.youtube.com/watch?v=-XSPumV6v00"],
+      ["Backprop", "https://www.youtube.com/watch?v=QRUfFGfImhg"],
+      ["Frameworks", "https://youtu.be/FJQl0ujTAGw"],
+      ["Pytorch", "https://youtu.be/AZwwDIV2vcI"],
+      ["DAN", "https://youtu.be/losFCNJbnZY"]
+    ],
+    "Readings:": [
+      ["SNLP Chapter 7", "https://web.stanford.edu/~jurafsky/slp3/7.pdf"]
+    ]
+  },
+
+  "rnn": {
+    "Videos:": [
+      ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
+      ["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
+      ["LSTM", "https://www.youtube.com/watch?v=nIVO2e9lZ84"],
+      ["Sequence models in Pytorch", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=348d7b77-21c8-421e-a068-b1410008fcbb"]
+    ],
+    "Readings:": [
+      ["SNLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]
+    ]
+  },
+
+  "transformer": {
+    "Videos:": [
+      ["Contextual Neural Language Models Overview", "https://www.youtube.com/watch?v=KHpM3UXdMxM&t"],
+      ["Transformer Encoder", "https://youtu.be/9Z7mN7ebWDA"],
+      ["BERTology", "https://youtu.be/YgfE-9N7Rio"],
+      ["Decoder", "https://youtu.be/ORzGEnHTSfk"],
+      ["Implementation Details", "https://youtu.be/RTuW3r83c5E"]
+    ],
+    "Readings:": [
+      ["SNLP 7"],
+      ["The Annotated Transformer", "http://nlp.seas.harvard.edu/annotated-transformer/"],
+      ["SNLP 9-9.3.3"]
+    ]
+  },
+
+  "alignment": {
+    "Videos:": [
+      ["Fine-tuning, prompting, and how they relate to NLP", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"],
+      ["RL Review", "https://drive.google.com/file/d/1uPY1vfnu9r23By5GtYwQTe2mmSNp_QEY/view?usp=drive_link"],
+      ["Alignment", "https://drive.google.com/file/d/1DoBLaaUG9lug4I0R1lbBEzMgQlZ-JvcV/view?usp=drive_link"],
+      ["Policy Gradient", "https://drive.google.com/file/d/1ns1WWRz2bd1pCKmduU9nMtMCkpoyVJeu/view?usp=drive_link"],
+	["RLHF", "https://drive.google.com/file/d/18sEC9c4Aj_yx-pCHRa6TnLAzjxsnI712/view?usp=drive_link"],
+	["DSPY"]
+    ],
+    "Readings:": [
+      ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
+    ],
+    "optional_videos": [
+      ["UG Research at UMD on Prompting", "https://www.youtube.com/watch?v=cmge3fFfZMc"]
+    ]
+  },
+
+  "qa_data": {
+    "Videos:": [
+      ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
+      ["The Turing Test", "https://youtu.be/bdQIUv9FutE"],
+      ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
+      ["QA Datasets", "https://youtu.be/p8tnM1_waQ8"],
+      ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
+    ],
+    "Readings:": [
+      ["SNLP 23"]
+    ]
+  },
+
+  "qa_approach": {
+    "Videos:": [
+      ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
+      ["BERT for MRQA", "https://youtu.be/b38opGM9R2w"],
+      ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"],
+      ["Generation for QA", "https://www.youtube.com/watch?v=au7uABXMBNg"],
+      ["Conversational QA", "https://youtu.be/HO-w0LYZDho"],
+      ["Long QA", "https://youtu.be/MeaJ3ADmbPo"]
+    ],
+    "Readings:": [
+      ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
+    ]
+  },
+
+  "mt": {
+    "Videos:": [
+      ["Translation is Hard", "https://youtu.be/XLBUsH-ImyI"],
+      ["Word-based Translation", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9b99224f-2d32-4d65-a09e-b165018af378"],
+      ["Phrase-based Translation", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=46588f0f-2db9-4fa4-8c30-b16600011c61"],
+      ["Neural Machine Translation", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9498283a-e541-4ef0-8eef-b166000403b0"],
+      ["Decoding", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e585d97e-3959-4a18-98f1-b1660006375c"],
+      ["Evaluation", "https://youtu.be/BhOL5ztG1-Y"]
+    ],
+    "Readings:": [
+      ["NMT Book (Chapter 5)", "http://mt-class.org/jhu/assets/nmt-book.pdf"]
+    ]
+  },
+
+  "ama": {
+    "Videos:": [
+      ["Course Evals", "https://www.youtube.com/watch?v=_4UX8ep97NU"],
+      ["You got a PhD in Computational Linguistics ... what now?", "https://youtu.be/3e6TchIg55k"],
+      ["Optimizing ML for Society", "https://www.youtube.com/watch?v=BuESxqQwgmw"],
+      ["How far off were my predictions? and p(Doom)", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d94941e1-ccf3-4f5b-91e6-b1680025409b"]
+    ]
+  }
+}
+}
