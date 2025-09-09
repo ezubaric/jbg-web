@@ -60,7 +60,8 @@
       ["Hybrid classes", "https://youtu.be/9oyZ3Wtcwtk"],
       ["Grader Expectations", "https://youtu.be/YEFMhYKOHmE"]
     ],
-    "Readings:": [["Linguistic Fundamentals for Natural Language Processing: 100 Essentials from Morphology and Syntax (Chapters 1 and 2)",
+      "Readings:": [["SLP2", "https://web.stanford.edu/~jurafsky/slp3/2.pdf"],
+		    ["Linguistic Fundamentals for Natural Language Processing: 100 Essentials from Morphology and Syntax (Chapters 1 and 2)",
         "https://www.morganclaypool.com/doi/abs/10.2200/S00493ED1V01Y201303HLT020"],
 		  ["Alternate Link", "https://drive.google.com/file/d/1X_oc4E9asNjA5lxpiroA2c7dLgnyh4eD/view?usp=sharing"]
       ],
@@ -91,7 +92,8 @@
       ["Why you shouldn't use generative AI to cheat in my class", "https://youtu.be/a3w0ZquNFVs"]
     ],
     "Readings:": [
-      ["Language Models: A Guide for the Perplexed", "https://arxiv.org/abs/2311.17301"]
+	["Language Models: A Guide for the Perplexed", "https://arxiv.org/abs/2311.17301"],
+	["SLP3", "https://web.stanford.edu/~jurafsky/slp3/3.pdf"]
     ]
   },
 
@@ -101,11 +103,11 @@
       ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
       ["TF-IDF", "https://youtu.be/A5ounv0D_cs"],
 	["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
-	["RAG"]
+	["RAG", "https://drive.google.com/file/d/18gc27y9dSul2vdJ3Y3ujQ76rV8CQ03wI/view?usp=drive_link"]
     ],
     "Readings:": [
 	["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
-	["SLP 2"],
+	["SLP 11.1", "https://web.stanford.edu/~jurafsky/slp3/11.pdf"],
       ["Evolution of Cranfield (Optional)", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"]
     ]
   },
@@ -120,7 +122,7 @@
       ["Feature Engineering for Quiz Bowl", "https://www.youtube.com/watch?v=IzKFgigocAg"]
     ],
     "Readings:": [
-      ["SNLP Chapter 5"]
+	["SNLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
     ]
   },
 
