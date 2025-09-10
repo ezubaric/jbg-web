@@ -103,7 +103,11 @@
       ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
       ["TF-IDF", "https://youtu.be/A5ounv0D_cs"],
 	["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
+<<<<<<< HEAD
 	["RAG", "https://drive.google.com/file/d/18gc27y9dSul2vdJ3Y3ujQ76rV8CQ03wI/view?usp=drive_link"]
+=======
+	["RAG", "https://drive.google.com/file/d/18gc27y9dSul2vdJ3Y3ujQ76rV8CQ03wI/view?usp=sharing"]
+>>>>>>> 44c4d0a9 (exercise)
     ],
     "Readings:": [
 	["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
