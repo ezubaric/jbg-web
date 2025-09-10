@@ -108,13 +108,13 @@
     "Readings:": [
 	["IR Chapter 1, 6", "https://nlp.stanford.edu/IR-book/"],
 	["SLP 11.1", "https://web.stanford.edu/~jurafsky/slp3/11.pdf"],
-	["Evolution of Cranfield (Optional)", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"],
-	"Slides": [
-	    ["Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?slide=id.p#slide=id.p"]
+	["Evolution of Cranfield (Optional)", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"]],
+    "Slides:": 
+	    [["Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?slide=id.p#slide=id.p"],
 	    ["IR Intro", "01a_ir.pdf"],
 	    ["IR tf-idf", "01b_tfidf.pdf"],
-	    ["IR eval", "01c_evaluation.pdf"]]
-    ]
+	     ["IR eval", "01c_evaluation.pdf"],
+	     ["IR exercise", "tfidf_ex.pdf"]]
   },
 
   "lr": {
