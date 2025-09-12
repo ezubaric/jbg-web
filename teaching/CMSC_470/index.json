@@ -32,7 +32,7 @@
 		       ["Ask Me Anything", "ama"]],
     "hw_sequence": [["Warmup (5 points)", "https://github.com/Pinafore/nlp-hw/tree/master/presidents"],
 		    ["Tokenization and tf-idf (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf"],
-		    ["Logistic Regression (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/sgd"],
+		    ["Logistic Regression (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/lr_sgd_qb"],
 		    ["Adam (10 points)", "https://github.com/Pinafore/nlp-hw/tree/master/adam"],		    
 		    ["Feature Engineering (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
 		    ["Sparse Retrieval (15 points)", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf_guesser"],		    
