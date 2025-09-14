@@ -127,7 +127,7 @@
       "Slides:": [
 	  ["Logistic Regression w/ SGD", "lr_sgd.pdf"],
 	  ["Example", "lr_ex.pdf"]
-	  ]
+      ],
     "Readings:": [
 	["SNLP Chapter 4", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
     ]
