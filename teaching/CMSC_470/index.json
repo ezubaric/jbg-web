@@ -121,12 +121,15 @@
       ["Regression", "https://www.youtube.com/watch?v=wy4ViG7uB1g"],
       ["Logistic Regression", "https://www.youtube.com/watch?v=9BcxOiwE4Ds"],
 	["Stochastic Gradient Descent", "https://www.youtube.com/watch?v=8M-n8u2w2u8"],
-	["ADAM"],
       ["Feature Engineering in the Age of Deep Learning", "https://youtu.be/4-se75AuETA"],
       ["Feature Engineering for Quiz Bowl", "https://www.youtube.com/watch?v=IzKFgigocAg"]
     ],
+      "Slides:": [
+	  ["Logistic Regression w/ SGD", "lr_sgd.pdf"],
+	  ["Example", "lr_ex.pdf"]
+	  ]
     "Readings:": [
-	["SNLP Chapter 5", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
+	["SNLP Chapter 4", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
     ]
   },
 
@@ -181,7 +184,8 @@
       ["Backprop", "https://www.youtube.com/watch?v=QRUfFGfImhg"],
       ["Frameworks", "https://youtu.be/FJQl0ujTAGw"],
       ["Pytorch", "https://youtu.be/AZwwDIV2vcI"],
-      ["DAN", "https://youtu.be/losFCNJbnZY"]
+	["DAN", "https://youtu.be/losFCNJbnZY"],
+		["ADAM"]
     ],
     "Readings:": [
       ["SNLP Chapter 7", "https://web.stanford.edu/~jurafsky/slp3/7.pdf"]
