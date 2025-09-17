@@ -190,7 +190,7 @@
 		["ADAM"]
     ],
     "Readings:": [
-      ["SNLP Chapter 7", "https://web.stanford.edu/~jurafsky/slp3/7.pdf"]
+      ["SNLP Chapter 6 (Was 6)", "https://web.stanford.edu/~jurafsky/slp3/6.pdf"]
     ]
   },
 
@@ -202,7 +202,7 @@
       ["Sequence models in Pytorch", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=348d7b77-21c8-421e-a068-b1410008fcbb"]
     ],
     "Readings:": [
-      ["SNLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]
+      ["SNLP 19 (Was 9)", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]
     ]
   },
 
@@ -215,9 +215,9 @@
       ["Implementation Details", "https://youtu.be/RTuW3r83c5E"]
     ],
     "Readings:": [
-      ["SNLP 7"],
+      ["SNLP 8", "https://web.stanford.edu/~jurafsky/slp3/8.pdf"],
       ["The Annotated Transformer", "http://nlp.seas.harvard.edu/annotated-transformer/"],
-      ["SNLP 9-9.3.3"]
+      ["SNLP 7-7.3", "https://web.stanford.edu/~jurafsky/slp3/8.pdf"]
     ]
   },
 
@@ -231,6 +231,7 @@
 	["DSPY"]
     ],
     "Readings:": [
+	  ["SLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"],
       ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
     ],
     "optional_videos": [
@@ -247,7 +248,7 @@
       ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
     ],
     "Readings:": [
-      ["SNLP 23"]
+      ["Questioning Answers"]
     ]
   },
 
