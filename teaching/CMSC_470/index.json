@@ -7,6 +7,7 @@
 		       ["AI vs. NLP", "ai_nlp"],		       
 		       ["Information Retrieval", "tfidf"],
 		       ["Logistic Regression", "lr"],
+		       "Continuing Logistic Regression / Homework Workshop",
 		       ["Word representations", "word2vec"],                                     
 		       ["Pytorch", "pytorch"],		       
 		       ["Homework Framework", "code"],		       
@@ -16,8 +17,7 @@
 		       ["Transformers", "transformer"],
 		       ["Decoding", "decoding"],
 		       ["Finetuning", "finetuning"],
-		       ["Alignment", "alignment"],
-		       "Slack/Sick Day I",		       
+		       ["Alignment", "alignment"],		       
 		       "Slack/Sick Day II",		    
 		       ["Midterm Review", "review"],
 		       "Midterm I",		       		       		       		       
@@ -156,7 +156,7 @@
       ["Evaluation", "https://www.youtube.com/watch?v=Jid_EVBoVLU"]
     ],
     "Readings:": [
-      ["SNLP Chapter 6"]
+      ["SNLP Chapter 5 (formerly 6)", "https://web.stanford.edu/~jurafsky/slp3/5.pdf"]
     ]
   },
 
@@ -168,12 +168,14 @@
 	["Dependency parsing", "https://youtu.be/ZT1Et5wd1SQ"]
     ],
     "Readings:": [
-      ["SNLP Chapter 8 (more important), 18 (less important)"]
+      ["SNLP Chapters 17.1 and 17.2", "https://web.stanford.edu/~jurafsky/slp3/17.pdf"],
+	  ["SNLP Chapter 18.1 - 18.3", "https://web.stanford.edu/~jurafsky/slp3/18.pdf"],
+	  ["SNLP Chapter 19.1 - 19.2", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]
     ],
     "optional_lectures": [
 	["Viterbi Algorithm", "https://youtu.be/cGjWlHO1x6U"],
 	["PCFGs", "https://www.youtube.com/watch?v=itJXYgkHwUo"],
-	["CYK Parsing", ""],
+	["CYK Parsing", "https://www.youtube.com/watch?v=O-x3krZ3A-Q"],
       ["Shift-Reduce Parser", "https://www.youtube.com/watch?v=f5-hTA9hA3s"]
     ]
   },
