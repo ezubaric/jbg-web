@@ -1,13 +1,11 @@
 ~~ Bibtex | inproceedings
 ~~ Title | A Good Plan is Hard to Find: Aligning Models with Preferences is Misaligned with What Helps Users
-~~ Author | Nishant Balepur
-~Nishant_Balepur1
-, Matthew Shu, Yoo Yeon Sung, Seraphina Goldfarb-Tarrant, Shi Feng, Fumeng Yang, Rachel Rudinger, Jordan Lee Boyd-Graber
+~~ Author | Nishant Balepur and Matthew Shu and Yoo Yeon Sung and Seraphina Goldfarb-Tarrant and Shi Feng and Fumeng Yang and Rachel Rudinger and Jordan Boyd-Graber
 ~~ Booktitle | Empirical Methods in Natural Language Processing
-~~ Location | Suzhou, China
+~~ Location | Suzhou and China
 ~~ Year | 2025
 ~~ Category | Question Answering
-~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Large Language Models (or and more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ Category | Empirical Human Data Collection
 ~~ Venue | Refereed Conference
 ~~ Project | Personalization*../projects/IIS-2403436.html
