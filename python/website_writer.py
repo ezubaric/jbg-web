@@ -76,11 +76,14 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \\else \\fi Chapters in Books",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
 kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+             "Feng Gu~3": Student("Feng Gu", 2025, 2028),
+             "Feng Gu~2": Student("Feng Gu", 2024, 2025, kind="MS"),
+             "Feng Gu~1": Student("Feng Gu", 2020, 2024, kind="UG"),             
              "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
-             "Zongxia Li": Student("Zongxia Li", 2023, 2028),
+             "Zongxia Li": Student("Zongxia Li", 2023, 2028, "https://zli12321.github.io/"),
              "Sander Schulhoff": Student("Sander Schulhoff", 2022, 2024, "https://trigaten.github.io/", kind="UG"),
              "Maharshi Gor": Student("Maharshi Gor", 2024, 2028, "https://mgor.info/"),
-             "Neha Pundlik Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
+             "Neha Srikanth": Student("Neha Pundlik Srikanth", 2023, 2028, "https://nehasrikn.github.io/"),
              "Ishani Mondal": Student("Ishani Mondal", 2023, 2028, "https://ishani-mondal.github.io/"),
              "HyoJung Han": Student("HyoJung Han", 2022, 2027, "https://h-j-han.github.io/"),
              "Tin Nguyen": Student("Tin Nguyen", 2022, 2023),
@@ -161,26 +164,39 @@ for ii in set(x._kind for x in kSTUDENTS.values()):
 
 
 def format_name(students, name, year, latex):
-  if name in students:
+  # Get the year
+  try:
+    year = int(year)
+  except ValueError:
+    year = datetime.now().year
 
-    try:
-      year = int(year)
-    except ValueError:
-      year = datetime.now().year
+  # Get ambiguous names
+  student_keys = defaultdict(list)
+  for student_key in students:
+    student_keys[student_key.split("~", 1)[0]].append(student_key)
 
-    s = students[name]
-    if year >= s._start and year <= s._end:
-      if latex:
-        if s._web:
+  # Try to find a match, we currently assume we can never have two
+  # students of the same name concurrently.
+  if name in student_keys:
+    for candidate in student_keys[name]:
+
+      s = students[candidate]
+      if year >= s._start and year <= s._end:
+        if latex:
+          if s._web:
             return "\\underline{\\href{%s}{%s}}" % (s._web, s._name)
-        else:
+          else:
             return "\\underline{%s}" % (s._name)
-      elif s._web:
-        return '<a href="%s">%s</a>' % (s._web, s._name)
-      else:
-        return "<u>%s</u>" % s._name
+        elif s._web:
+          return '<a href="%s">%s</a>' % (s._web, s._name)
+        else:
+          return "<u>%s</u>" % s._name
 
-  if name == "Jordan Boyd-Graber":
+  if name.lower() in ["jordan boyd-graber",
+                      "jordan lee boyd-graber",
+                      "jordan ying",
+                      "jordan boyd-graber ying",
+                      "jordan lee boyd-graber ying"]:
     if latex:
       return "{\\bf Jordan Boyd-Graber}"
     else:
