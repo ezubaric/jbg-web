@@ -1,7 +1,7 @@
 {
     "config": {"start": "2025-09-02",
 	       "end": "2025-12-12",
-	       "days": ["W-MON", "W-WED"],
+	       "days": ["W-MON"],
 	       "hw_day": "W-FRI"},
     "topics": [],
     "class_sequence": [],

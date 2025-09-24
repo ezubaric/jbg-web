@@ -99,8 +99,9 @@ class Course:
 
         noclass = [x for x in instruction_days if x in self._noclass]
         instruction_days = [x for x in instruction_days if x not in self._noclass]
+        instruction_days += [datetime.strptime(x, "%Y-%m-%d").date() for x in self._specials]
         
-        print(instruction_days, self._noclass)        
+        print(instruction_days)        
         print("NOCLASS", noclass)
 
         homework_days = self.date_range(self.start, self.end, self.hw_day)
@@ -110,7 +111,7 @@ class Course:
                [(x, "holiday") for x in noclass] + \
                [(x, "homework") for x in homework_days]
 
-        days += [(datetime.strptime(x, "%Y-%m-%d").date(), "special") for x in self._specials]
+        
             
         days.sort()
 
