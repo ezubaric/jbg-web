@@ -224,12 +224,12 @@
       ["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
         ["LSTM", "https://www.youtube.com/watch?v=nIVO2e9lZ84"],
         ["Backpack", "https://share.descript.com/view/4NlyC8fMhYg"],
-	["Sequence models in Pytorch", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=348d7b77-21c8-421e-a068-b1410008fcbb"],
+	["Sequence models in Pytorch", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=348d7b77-21c8-421e-a068-b1410008fcbb"]
     ],
     "Readings:": [
       ["SNLP 19 (Was 9)", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"]
     ],
-      "Optional Readings:",
+      "Optional Readings:":
       [
           ["Backpack LM", "https://arxiv.org/abs/2305.16765"]
       ]
