@@ -78,7 +78,7 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \\else \\fi Chapters in Books",
 kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Feng Gu~3": Student("Feng Gu", 2025, 2028),
              "Feng Gu~2": Student("Feng Gu", 2024, 2025, kind="MS"),
-             "Feng Gu~1": Student("Feng Gu", 2020, 2024, kind="UG"),             
+             "Feng Gu~1": Student("Feng Gu", 2020, 2024, kind="UG"),
              "Nishant Balepur": Student("Nishant Balepur", 2023, 2028, "https://nbalepur.github.io/"),
              "Zongxia Li": Student("Zongxia Li", 2023, 2028, "https://zli12321.github.io/"),
              "Sander Schulhoff": Student("Sander Schulhoff", 2022, 2024, "https://trigaten.github.io/", kind="UG"),
@@ -270,7 +270,7 @@ class IndexElement:
 
     \\vspace{3cm}
     Downloaded from ~~~url~~~  \\\\
-      
+
     \\vspace{2cm}
     \\textit{Contact Jordan Boyd-Graber (jbg@boydgraber.org) for questions about this paper.}
 
