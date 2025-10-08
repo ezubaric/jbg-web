@@ -15,8 +15,8 @@
 		       ["Linear neural language models (Last content on Midterm I)", "rnn"],
 		       "Homework Workshop",
 		       ["Transformers", "transformer"],
-		       ["Decoding", "decoding"],
-		       ["Finetuning", "finetuning"],
+		       ["Decoding and Efficiency", "decoding"],
+		       ["Finetuning", "finetune"],
 		       ["Alignment", "alignment"],
 		       "Slack/Sick Day II",
 		       ["Midterm Review", "review"],
@@ -306,7 +306,14 @@
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
     ]
   },
-
+        "decoding": {
+            "Videos:": ["Speculative Decoding", "Mixture of Experts", "KV Caching", "Qantization"],
+            "Slides:": ["Speculative Decoding", "Mixture of Experts", "KV Caching", "Qantization"]
+        },
+                "finetune": {
+                    "Videos:": ["Pytorch", "What does Fine Tuning Do?", "DSPY Concept", "DSPY Example"],
+                    "Slides:": [["Alignment / DSPy", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"]]
+                },
   "mt": {
     "Videos:": [
       ["Translation is Hard", "https://youtu.be/XLBUsH-ImyI"],
