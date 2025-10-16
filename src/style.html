@@ -815,7 +815,34 @@ Chesney Ghost Volumnia Christmas Tulkinghorn
         title = {A qualitative comparison of {CoQA}, {SQuAD 2.0}, and {QuAC}},
       </pre>
         <li> Do not put the entire title in brackets (will bite you later).
-        <li> Make sure all raw titles have consistent capitalization (something that looks good).
+        <li> Make sure all raw titles have consistent capitalization
+    (something that looks good).
+	 <li> Be careful that Bibtex knows what the surname is.  If
+    you cite "Xi Jinping", this will get screwed up by default (thanks
+    to LaTeX Western imperialism).  So instead cite:
+	  <pre>
+               author      = {{Xi Jinping}},
+               shortauthor = {Xi}, 
+          </pre>
+	<li> At the start of press releases, there will often be a
+    location.
+	  <quote>
+BURBANK AND HOLLYWOOD, Calif., Feb. 17, 2004 – The Walt Disney Company (NYSE: DIS) and The Jim Henson Company today announced that they have entered into an agreement under which Disney will acquire the beloved “Muppets” and “Bear in the Big Blue House” properties from Henson.
+	  </quote>
+	  Do not list "Burbank and Hollywood" as the author, list it as location
+	  <pre>
+              location = {Burbank and {H}ollywood}
+          </pre>
+	<li> Anything you cite should have an author, a title, a
+    "source" (Journal / Publisher), and a year.  If it doesn't have
+    that, something has gone wrong.
+	  <li> All else being equal, prefer documents with an
+    identified author.
+	  <li> Sometimes things will have implicit authors (e.g., an
+    exhibition at a museum will have a "coordinator").  List them as
+    the author.
+	  <li> If something has an editor (a newspaper or a museum
+    exhibit) make sure to list it.
       </ol>
 
     <li> Define journal and conference names in a different bib file from the
