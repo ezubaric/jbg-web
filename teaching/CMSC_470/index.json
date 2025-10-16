@@ -307,8 +307,8 @@
     ]
   },
         "decoding": {
-            "Videos:": ["Speculative Decoding", "Mixture of Experts", "KV Caching", "Qantization"],
-            "Slides:": ["Speculative Decoding", "Mixture of Experts", "KV Caching", "Qantization"]
+            "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
+            "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]]
         },
                 "finetune": {
                     "Videos:": ["Pytorch", "What does Fine Tuning Do?", "DSPY Concept", "DSPY Example"],
