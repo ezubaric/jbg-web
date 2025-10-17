@@ -308,7 +308,8 @@
   },
         "decoding": {
             "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
-            "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]]
+            "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
+	    "Reading:": [["Efficient Large Language Models: A Survey (LoRA bit is relevant for later class)", "https://arxiv.org/pdf/2312.03863"]]
         },
                 "finetune": {
                     "Videos:": ["Pytorch", "What does Fine Tuning Do?", "DSPY Concept", "DSPY Example"],
