@@ -277,9 +277,6 @@
     "Readings:": [
 	  ["SLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"],
       ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
-    ],
-    "optional_videos": [
-      ["UG Research at UMD on Prompting", "https://www.youtube.com/watch?v=cmge3fFfZMc"]
     ]
   },
 
@@ -316,7 +313,10 @@
         },
                 "finetune": {
                     "Videos:": ["Pytorch", "What does Fine Tuning Do?", "DSPY Concept", "DSPY Example"],
-                    "Slides:": [["Alignment / DSPy", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"]]
+                    "Slides:": [["Alignment / DSPy", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"]],
+    "optional_videos": [
+      ["UG Research at UMD on Prompting", "https://www.youtube.com/watch?v=cmge3fFfZMc"]
+    ]
                 },
   "mt": {
     "Videos:": [
