@@ -266,7 +266,8 @@
     "Slides:": [
 		["Alignment + RLHF", "https://docs.google.com/presentation/d/1stZij7ztz5bXAk4hNqbLK_F-ufFxu6heVznBoyHs6Mo/edit?usp=sharing"],
       ["RL Review", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=84c5e59c-d803-4cf8-8d0a-b37b01596539"],
-	["Policy Gradient", "../CMSC_848/rl_policy_gradient.pdf"]
+	["Policy Gradient", "../CMSC_848/rl_policy_gradient.pdf"],
+	["Gricean Exercise", "alignment_grice.pdf"]
     ],	    
     "Videos:": [
 		["Alignment", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=39553dee-1346-4150-bec6-b37b0163ed2b"],
@@ -312,8 +313,8 @@
 	    "Reading:": [["Efficient Large Language Models: A Survey (LoRA bit is relevant for later class)", "https://arxiv.org/pdf/2312.03863"]]
         },
                 "finetune": {
-                    "Videos:": ["Pytorch", "What does Fine Tuning Do?", "DSPY Concept", "DSPY Example"],
-                    "Slides:": [["Alignment / DSPy", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"]],
+                    "Videos:": [["Prompting: What is it good for?", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd5bc8c5-8aec-4f60-abe9-b37f013452e5"], ["DSPY Example", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=257b45bd-7e65-4ac8-8ecc-b37f013452fc"], ["QLoRA", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89d2400d-1fa8-442c-8146-b37f013452e9"]],
+                    "Slides:": [["Prompting", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"], ["DSPy Example", "finetune_dspy.pdf"], ["QLoRA", "finetune_lora.pdf"]],
     "optional_videos": [
       ["UG Research at UMD on Prompting", "https://www.youtube.com/watch?v=cmge3fFfZMc"]
     ]
