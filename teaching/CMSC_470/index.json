@@ -70,8 +70,9 @@
       ["First weeks of INST 414 as review", "../INST_414"],
       ["A probability primer", "http://www.sjsu.edu/faculty/gerstman/StatPrimer/probability.pdf"],
       ["Grinstead and Snell, Chapters 1-2, Chapter 4.1", "https://math.dartmouth.edu/~prob/prob/prob.pdf"],
-      ["How the statistical revolution changes (computational) linguistics", "http://aclweb.org/anthology/W/W09/W09-0103.pdf"],
-      ["The deep learning revolution in NLP", "https://aclanthology.org/J15-4006.pdf"]
+	["How the statistical revolution changes (computational) linguistics", "http://aclweb.org/anthology/W/W09/W09-0103.pdf"],
+	["The deep learning revolution in NLP", "https://aclanthology.org/J15-4006.pdf"],
+	["How Much is Enough? The Diminishing Returns of Tokenization Training Data", "https://arxiv.org/abs/2502.20273"]
     ]
   },
 
@@ -313,7 +314,7 @@
         },
                 "finetune": {
                     "Videos:": [["Prompting: What is it good for?", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd5bc8c5-8aec-4f60-abe9-b37f013452e5"], ["DSPY Example", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=257b45bd-7e65-4ac8-8ecc-b37f013452fc"], ["QLoRA", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89d2400d-1fa8-442c-8146-b37f013452e9"]],
-                    "Slides:": [["Promespting", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"], ["DSPy Example", "finetune_dspy.pdf"], ["QLoRA", "finetune_lora.pdf"]],
+                    "Slides:": [["Promespting", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"], ["DSPy Example", "finetune_dspy.pdf"], ["QLoRA", "finetune_lora.pdf"], ["LoRA Ex", "lora.pdf"]],
 		    "Reading:" [["SIMBA", "https://blog.mariusvach.com/posts/dspy-simba"]],
     "optional_videos": [
       ["UG Research at UMD on Prompting", "https://www.youtube.com/watch?v=cmge3fFfZMc"]
