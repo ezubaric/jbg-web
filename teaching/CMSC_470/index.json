@@ -329,6 +329,13 @@
       ["Decoding", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cee39581-431a-4cc4-92fc-b384000409e8"],
       ["Evaluation", "https://youtu.be/BhOL5ztG1-Y"]
     ],
+"Lectures": [["What is MT, why is it hard, how is it evaluated?", "https://docs.google.com/presentation/d/1iqYBCI23a8SeSFAgX_R328dn2vioY717Zg9hyA0w4vk/edit?usp=sharing"],
+                                   ["Word-based Models", "mt_model1.pdf"],
+                                   ["Phrase-based Models", "mt_phrase.pdf"],
+                                   ["Neural", "mt_neural.pdf"],
+             ["Decoding", "mt_decoding.pdf"],
+	     ["Nucleus Sampling Exercise", "nucleus_sampling.pdf"]
+      ],
     "Readings:": [
       ["NMT Book (Chapter 5)", "http://mt-class.org/jhu/assets/nmt-book.pdf"]
     ]
