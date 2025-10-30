@@ -17,7 +17,7 @@
 		       ["Transformers", "transformer"],
 		       ["Decoding and Efficiency", "decoding"],
 		       ["Alignment", "alignment"],
-		       ["Finetuning", "finetune"],		       
+		       ["Finetuning", "finetune"],
 		       ["Machine translation", "mt"],
 		       ["Midterm Review", "review"],
 		       "Midterm I",
@@ -36,7 +36,7 @@
 		    ["Logistic Regression", "https://github.com/Pinafore/nlp-hw/tree/master/lr_sgd_qb"],
 		    ["Feature Engineering", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
 		    ["Sparse Retrieval", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf_guesser"],
-		    ["Pytorch LR + Adam", "https://github.com/Pinafore/nlp-hw/tree/master/lr_pytorch"],    
+		    ["Pytorch LR + Adam", "https://github.com/Pinafore/nlp-hw/tree/master/lr_pytorch"],
 		    "",
 		    ["DAN", "https://github.com/Pinafore/nlp-hw/tree/master/dan"],
 		    ["Transformer LM (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/transformer"],
@@ -50,8 +50,8 @@
       ["Welcome to NLP", "https://youtu.be/2_2ttm1GHs4"],
       ["What's a word?", "https://youtu.be/ZqFqd9qUQM4"],
 	["What's a language?", "https://youtu.be/YKfKfIXunyI"],
-	["Tokenization", "https://drive.google.com/file/d/187kvqZt7v0_DotWMnto4G_RHJ7n3h2CL/view?usp=sharing"],
-	["BPE", "https://drive.google.com/file/d/1Mya9fPiHv5ng-x-k10nES31LYC_sxNeS/view?usp=sharing"]],
+	["Tokenization", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5af696a5-bbf9-4e34-a71f-b38600e34f60"],
+	["BPE", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db1400c3-1217-4c97-953e-b38600e34f67"]],
       "Administrivia:": [
       ["How to read this webpage", "https://youtu.be/5Og91_Cishs"],
       ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
@@ -203,7 +203,7 @@
       ["Frameworks", "https://youtu.be/FJQl0ujTAGw"],
       ["Pytorch", "https://youtu.be/AZwwDIV2vcI"],
 	["DAN", "https://youtu.be/losFCNJbnZY"],
-	["ADAM", "https://drive.google.com/file/d/1et4RrRLZYUjBCRV9lilkS37NKVTpswN-/view?usp=sharing"]
+	["ADAM", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1b853d3d-d0cf-4f50-a6e4-b38600dda88a"]
     ],
     "Readings:":
       [["SNLP Chapter 6 (Was 6)", "https://web.stanford.edu/~jurafsky/slp3/6.pdf"]],
@@ -268,7 +268,7 @@
       ["RL Review", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=84c5e59c-d803-4cf8-8d0a-b37b01596539"],
 	["Policy Gradient", "../CMSC_848/rl_policy_gradient.pdf"],
 	["Gricean Exercise", "alignment_grice.pdf"]
-    ],	    
+    ],
     "Videos:": [
 		["Alignment", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=39553dee-1346-4150-bec6-b37b0163ed2b"],
       ["RL Review", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=84c5e59c-d803-4cf8-8d0a-b37b01596539"],
