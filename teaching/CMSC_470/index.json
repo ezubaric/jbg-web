@@ -41,8 +41,8 @@
 		    ["DAN", "https://github.com/Pinafore/nlp-hw/tree/master/dan"],
 		    ["Transformer LM (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/transformer"],
 		    "",
-		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/optimization"],
-		    ["Adversarial Authoring (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/adversarial"]],
+		    ["Adversarial Authoring (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/adversarial"],
+		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/optimization"]],
     "specials": ["2025-12-15"],
     "topics": {
   "intro": {
