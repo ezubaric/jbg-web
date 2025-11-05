@@ -21,9 +21,9 @@
 		       ["Machine translation", "mt"],
 		       ["Midterm Review", "review"],
 		       "Midterm I",
-           "No Class: Makeup Midterms"
-		       ["Question Answering Approaches", "qa_approach"],
-		       ["Question Answering Datasets and Evaluation", "qa_data"],
+           "No Class: Makeup Midterm",
+           "Zongxia Guest Lecture: Running Jobs on Nexus",
+		       ["Question Answering Approaches, Datasets, and Eval", "qa"],
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
 		       ["Computational Social Science", "css"],
@@ -281,30 +281,17 @@
     ]
   },
 
-  "qa_data": {
-    "Videos:": [
-      ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
-      ["The Turing Test", "https://youtu.be/bdQIUv9FutE"],
-      ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
-      ["QA Datasets", "https://youtu.be/p8tnM1_waQ8"],
-      ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
-    ],
-    "Readings:": [
-      ["Questioning Answers"]
-    ]
-  },
-
-  "qa_approach": {
+  "qa": {
     "Videos:": [
       ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
       ["BERT for MRQA", "https://youtu.be/b38opGM9R2w"],
       ["Multihop", "https://www.youtube.com/watch?v=YwdEK2NowNM"],
-      ["Generation for QA", "https://www.youtube.com/watch?v=au7uABXMBNg"],
-      ["Conversational QA", "https://youtu.be/HO-w0LYZDho"],
-      ["Long QA", "https://youtu.be/MeaJ3ADmbPo"]
+      ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
+      ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
     ],
     "Readings:": [
-      ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
+      ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"],
+      ["Questioning Answers"]
     ]
   },
         "decoding": {
