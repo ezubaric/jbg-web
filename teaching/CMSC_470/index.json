@@ -42,7 +42,7 @@
 		    ["Transformer LM (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/transformer"],
 		    "",
 		    ["Adversarial Authoring (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/adversarial"],
-		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/optimization"]],
+		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/llm_opt"]],
     "specials": ["2025-12-15"],
     "topics": {
   "intro": {
