@@ -26,7 +26,7 @@
 		       ["Question Answering Approaches, Datasets, and Eval", "qa"],
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
-		       ["Computational Social Science", "css"],
+		       "Midterm Review",
 		       "Midterm II",
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"],
@@ -289,11 +289,31 @@
       ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
       ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
     ],
+      "Slides": [
+	  ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"],
+	  ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"],
+	  ["Watson", "https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing"],
+	  ["Manchester vs. Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?usp=sharing"]
+      ],
     "Readings:": [
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"],
-      ["Questioning Answers"]
+	["SLP (old edition) --- Ignore IR review", "https://web.stanford.edu/~jurafsky/slp3/old_dec21/23.pdf"]
     ]
   },
+	"irt": {"Videos:": [
+		["Standardized Tests", "https://youtu.be/_pjXLtF4k18"],
+		["IRT", "https://youtu.be/n4W4Gwwkbqg"],
+	    ["IRT for Leaderboards", "https://youtu.be/Mg-WHxUWZxc"],
+	    ["Multiple Choice", "https://www.youtube.com/watch?v=DnMOZ7DAZA8"]],
+		"Slides:": [["Multiple Choice", "https://docs.google.com/presentation/d/1RrjTVAyJyvSHc0HDFO2gIr87KHAy67kNbpbEvawi8IQ/edit?usp=sharing"],
+			    ["Standardized + IRT", "https://docs.google.com/presentation/d/1G__eKLOwbV7MtOAh0FH1SxSIIO0HoRuCT8sNHBcdCyU/edit?usp=sharing"]],
+		"Readings:":
+		[["A visual guide to IRT", "https://www.stat.cmu.edu/~brian/PIER-methods/For%202013-02-28/Readings/Interactive%20pdf%20on%20Item%20Response%20Theory.pdf"]],
+		"Optional Readings:":
+		[["IRT Tutorial (Useful for reference list)", "https://aclanthology.org/2024.eacl-tutorials.2.pdf"]]
+	       }
+
+    },
         "decoding": {
             "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
             "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
@@ -336,5 +356,4 @@
       ["How far off were my predictions? and p(Doom)", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d94941e1-ccf3-4f5b-91e6-b1680025409b"]
     ]
   }
-}
 }
