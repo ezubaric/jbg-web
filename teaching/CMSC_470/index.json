@@ -15,7 +15,7 @@
 		       ["Linear neural language models (Last content on Midterm I)", "rnn"],
 		       "Homework Workshop",
 		       ["Transformers", "transformer"],
-		       ["Decoding and Efficiency", "decoding"],
+		       ["Decoding and Efficiency", "decoding-eff"],
 		       ["Alignment", "alignment"],
 		       ["Finetuning", "finetune"],
 		       ["Machine translation", "mt"],
@@ -217,7 +217,6 @@
        ["Exercise", "https://docs.google.com/presentation/d/1IcW5iMPa-sYc0wgLGZWByQ5L1Kg1nt_ti34Jspfzqo4/edit?usp=sharing"]
       ]
   },
-
   "rnn": {
     "Videos:": [
       ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
@@ -240,7 +239,6 @@
           ["RNN Exercise", "nlm_rnn_hand.pdf"]
       ]
   },
-
   "transformer": {
     "Videos:": [
       ["Contextual Neural Language Models Overview", "https://www.youtube.com/watch?v=KHpM3UXdMxM&t"],
@@ -261,7 +259,6 @@
                                           ["Transformers", "https://docs.google.com/presentation/d/1Wmte5rM9qgN-JHq34LFX8y3G2HebHKWRV9iu-p_fC2k/edit?usp=sharing"],
                                           ["Induction Head Exercise", "induction_head.pdf"]]
   },
-
 	"alignment": {
     "Slides:": [
 		["Alignment + RLHF", "https://docs.google.com/presentation/d/1stZij7ztz5bXAk4hNqbLK_F-ufFxu6heVznBoyHs6Mo/edit?usp=sharing"],
@@ -280,7 +277,6 @@
       ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
     ]
   },
-
   "qa": {
     "Videos:": [
       ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
@@ -311,10 +307,8 @@
 		[["A visual guide to IRT", "https://www.stat.cmu.edu/~brian/PIER-methods/For%202013-02-28/Readings/Interactive%20pdf%20on%20Item%20Response%20Theory.pdf"]],
 		"Optional Readings:":
 		[["IRT Tutorial (Useful for reference list)", "https://aclanthology.org/2024.eacl-tutorials.2.pdf"]]
-	       }
-
-    },
-        "decoding": {
+	       },
+	        "decoding-eff": {
             "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
             "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
 	    "Reading:": [["Efficient Large Language Models: A Survey (LoRA bit is relevant for later class)", "https://arxiv.org/pdf/2312.03863"]]
@@ -347,7 +341,6 @@
       ["NMT Book (Chapter 5)", "http://mt-class.org/jhu/assets/nmt-book.pdf"]
     ]
   },
-
   "ama": {
     "Videos:": [
       ["Course Evals", "https://www.youtube.com/watch?v=_4UX8ep97NU"],
@@ -356,4 +349,5 @@
       ["How far off were my predictions? and p(Doom)", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d94941e1-ccf3-4f5b-91e6-b1680025409b"]
     ]
   }
+}
 }
