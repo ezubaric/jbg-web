@@ -15,7 +15,7 @@
 		       ["Linear neural language models (Last content on Midterm I)", "rnn"],
 		       "Homework Workshop",
 		       ["Transformers", "transformer"],
-		       ["Decoding and Efficiency", "decoding"],
+		       ["Decoding and Efficiency", "decoding-eff"],
 		       ["Alignment", "alignment"],
 		       ["Finetuning", "finetune"],
 		       ["Machine translation", "mt"],
@@ -26,7 +26,7 @@
 		       ["Question Answering Approaches, Datasets, and Eval", "qa"],
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
-		       ["Computational Social Science", "css"],
+		       "Midterm Review",
 		       "Midterm II",
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"],
@@ -42,7 +42,7 @@
 		    ["Transformer LM (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/transformer"],
 		    "",
 		    ["Adversarial Authoring (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/adversarial"],
-		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/optimization"]],
+		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/llm_opt"]],
     "specials": ["2025-12-15"],
     "topics": {
   "intro": {
@@ -217,7 +217,6 @@
        ["Exercise", "https://docs.google.com/presentation/d/1IcW5iMPa-sYc0wgLGZWByQ5L1Kg1nt_ti34Jspfzqo4/edit?usp=sharing"]
       ]
   },
-
   "rnn": {
     "Videos:": [
       ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
@@ -240,7 +239,6 @@
           ["RNN Exercise", "nlm_rnn_hand.pdf"]
       ]
   },
-
   "transformer": {
     "Videos:": [
       ["Contextual Neural Language Models Overview", "https://www.youtube.com/watch?v=KHpM3UXdMxM&t"],
@@ -261,7 +259,6 @@
                                           ["Transformers", "https://docs.google.com/presentation/d/1Wmte5rM9qgN-JHq34LFX8y3G2HebHKWRV9iu-p_fC2k/edit?usp=sharing"],
                                           ["Induction Head Exercise", "induction_head.pdf"]]
   },
-
 	"alignment": {
     "Slides:": [
 		["Alignment + RLHF", "https://docs.google.com/presentation/d/1stZij7ztz5bXAk4hNqbLK_F-ufFxu6heVznBoyHs6Mo/edit?usp=sharing"],
@@ -280,7 +277,6 @@
       ["Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback", "https://liralab.usc.edu/pdfs/publications/casper2023open.pdf"]
     ]
   },
-
   "qa": {
     "Videos:": [
       ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
@@ -289,12 +285,30 @@
       ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
       ["Cranfield vs. Manchester", "http://www.google.com/url?q=http%3A%2F%2Fusers.umiacs.umd.edu%2F~jbg%2Fteaching%2FCMSC_723%2Fqa_cm.pdf"]
     ],
+      "Slides": [
+	  ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"],
+	  ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"],
+	  ["Watson", "https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing"],
+	  ["Manchester vs. Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?usp=sharing"]
+      ],
     "Readings:": [
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"],
-      ["Questioning Answers"]
+	["SLP (old edition) --- Ignore IR review", "https://web.stanford.edu/~jurafsky/slp3/old_dec21/23.pdf"]
     ]
   },
-        "decoding": {
+	"irt": {"Videos:": [
+		["Standardized Tests", "https://youtu.be/_pjXLtF4k18"],
+		["IRT", "https://youtu.be/n4W4Gwwkbqg"],
+	    ["IRT for Leaderboards", "https://youtu.be/Mg-WHxUWZxc"],
+	    ["Multiple Choice", "https://www.youtube.com/watch?v=DnMOZ7DAZA8"]],
+		"Slides:": [["Multiple Choice", "https://docs.google.com/presentation/d/1RrjTVAyJyvSHc0HDFO2gIr87KHAy67kNbpbEvawi8IQ/edit?usp=sharing"],
+			    ["Standardized + IRT", "https://docs.google.com/presentation/d/1G__eKLOwbV7MtOAh0FH1SxSIIO0HoRuCT8sNHBcdCyU/edit?usp=sharing"]],
+		"Readings:":
+		[["A visual guide to IRT", "https://www.stat.cmu.edu/~brian/PIER-methods/For%202013-02-28/Readings/Interactive%20pdf%20on%20Item%20Response%20Theory.pdf"]],
+		"Optional Readings:":
+		[["IRT Tutorial (Useful for reference list)", "https://aclanthology.org/2024.eacl-tutorials.2.pdf"]]
+	       },
+	        "decoding-eff": {
             "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
             "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
 	    "Reading:": [["Efficient Large Language Models: A Survey (LoRA bit is relevant for later class)", "https://arxiv.org/pdf/2312.03863"]]
@@ -327,7 +341,6 @@
       ["NMT Book (Chapter 5)", "http://mt-class.org/jhu/assets/nmt-book.pdf"]
     ]
   },
-
   "ama": {
     "Videos:": [
       ["Course Evals", "https://www.youtube.com/watch?v=_4UX8ep97NU"],
