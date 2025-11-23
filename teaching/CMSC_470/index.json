@@ -97,12 +97,12 @@
     ]
   },
 	"adversarial": {
-	    "There’s no preparation needed for class on Monday, but please make sure to come with a device (and perhaps a pen and paper). We’ll be trying to answer each others’ adversarial questions.": [],
+	    "There's no preparation needed for class on Monday, but please make sure to come with a device (and perhaps a pen and paper). We'll be trying to answer each others' adversarial questions.": [],
 	    "Why it's important to come:":
 	    [
 		"This will be a practice for our final project",
 		"This will count as 10 points on the adversarial HW",
-		"You’ll get a better intuition for how the final project works"
+		"You'll get a better intuition for how the final project works"
 	    ]
 
 	},
@@ -227,8 +227,10 @@
       ]
   },
   "rnn": {
-    "Videos:": [
+      "Videos:": [
+	  "Continuous BOW for Sentiment",
       ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
+<<<<<<< HEAD
       ["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
         ["LSTM", "https://www.youtube.com/watch?v=nIVO2e9lZ84"],
         ["Backpack", "https://share.descript.com/view/4NlyC8fMhYg"],
@@ -247,6 +249,17 @@
           ["LSTM", "lstm.pdf"],
           ["RNN Exercise", "nlm_rnn_hand.pdf"]
       ]
+=======
+	  ["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
+	  "Backpack Models",
+	  ["Sequence models in Pytorch", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=348d7b77-21c8-421e-a068-b1410008fcbb"]
+    ],
+    "Readings:": [
+      ["SNLP 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]
+    ],
+      "Optional Videos:",
+      [      ["LSTM", "https://www.youtube.com/watch?v=nIVO2e9lZ84"] ]
+>>>>>>> dab95553 (??)
   },
   "transformer": {
     "Videos:": [
