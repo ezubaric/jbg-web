@@ -1,5 +1,5 @@
 ~~ Bibtex | inproceedings
-~~ Author | Lorena Calvo-Bartolom\'{e} and Val\'{e}rie Aldana and Karla Cantarero and Alonso Madroñal de Mesa and Jer\'{o}nimo Arenas-Garc\'{i}a and Jordan Boyd-Graber
+~~ Author | Lorena Calvo-Bartolom\'{e} and Val\'{e}rie Aldana and Karla Cantarero and Alonso Madro\~nal de Mesa and Jer\'{o}nimo Arenas-Garc\'{i}a and Jordan Boyd-Graber
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Title | Discrepancy Detection at the Data Level: Toward Consistent Multilingual Question Answering
 ~~ Location | Suzhou, China
@@ -8,4 +8,6 @@
 ~~ Category | Topic Models
 ~~ Category | Interpretability
 ~~ Venue | Refereed Conference
+~~ Url | docs/2025_emnlp_mind.pdf
+~~ Link | code+data*http://github.com/lcalvobartolome/mind
 ~~ Project | Rosie*../projects/Rosie.html

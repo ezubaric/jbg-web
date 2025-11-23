@@ -9,4 +9,8 @@
 ~~ Category | Empirical Human Data Collection
 ~~ Venue | Refereed Conference
 ~~ Project | Personalization*../projects/IIS-2403436.html
-~~ Public | One of the ways that AI can help users with a task is by developing a plan: a set of steps to solve a problem or complete a task.  Through a user study with human--AI teams, we show that AIs are poor judges of what plan is going to be more helpful to more helpful to a user trying to answer math questions or questions that require multiple steps of research (e.g., what's the tallest building in the most populous city in Germany).  
+~~ Url | docs/2025_emnlp_planorama.pdf
+~~ Link | code+data*https://github.com/Pinafore/plan-helpfulness
+~~ Link | video*https://www.youtube.com/watch?v=A8mVOYfJg5w
+~~ Public | One of the ways that AI can help users with a task is by developing a plan: a set of steps to solve a problem or complete a task.  Through a user study with human--AI teams, we show that AIs are poor judges of what plan is going to be more helpful to more helpful to a user trying to answer math questions or questions that require multiple steps of research (e.g., what's the tallest building in the most populous city in Germany).
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/A8mVOYfJg5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

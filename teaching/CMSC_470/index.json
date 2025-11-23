@@ -284,7 +284,7 @@
 	"alignment": {
     "Slides:": [
 		["Alignment + RLHF", "https://docs.google.com/presentation/d/1stZij7ztz5bXAk4hNqbLK_F-ufFxu6heVznBoyHs6Mo/edit?usp=sharing"],
-      ["RL Review", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=84c5e59c-d803-4cf8-8d0a-b37b01596539"],
+      ["RL Review", "***"],
 	["Policy Gradient", "../CMSC_848/rl_policy_gradient.pdf"],
 	["Gricean Exercise", "alignment_grice.pdf"]
     ],
@@ -311,7 +311,8 @@
 	  ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"],
 	  ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"],
 	  ["Watson", "https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing"],
-	  ["Manchester vs. Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?usp=sharing"]
+	  ["Manchester vs. Cranfield", "https://docs.google.com/presentation/d/1cDnQ6dWvXqjYj2vrxn3S4yqq75TsPbfbT1YiYX4eBYI/edit?usp=sharing"],
+	  ["Exercise", "qa.pdf"]
       ],
     "Readings:": [
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"],
@@ -324,7 +325,8 @@
 	    ["IRT for Leaderboards", "https://youtu.be/Mg-WHxUWZxc"],
 	    ["Multiple Choice", "https://www.youtube.com/watch?v=DnMOZ7DAZA8"]],
 		"Slides:": [["Multiple Choice", "https://docs.google.com/presentation/d/1RrjTVAyJyvSHc0HDFO2gIr87KHAy67kNbpbEvawi8IQ/edit?usp=sharing"],
-			    ["Standardized + IRT", "https://docs.google.com/presentation/d/1G__eKLOwbV7MtOAh0FH1SxSIIO0HoRuCT8sNHBcdCyU/edit?usp=sharing"]],
+			    ["Standardized + IRT", "https://docs.google.com/presentation/d/1G__eKLOwbV7MtOAh0FH1SxSIIO0HoRuCT8sNHBcdCyU/edit?usp=sharing"],
+			    ["Exercise", "irt_ex.pdf"]],
 		"Readings:":
 		[["A visual guide to IRT", "https://www.stat.cmu.edu/~brian/PIER-methods/For%202013-02-28/Readings/Interactive%20pdf%20on%20Item%20Response%20Theory.pdf"]],
 		"Optional Readings:":
@@ -368,7 +370,7 @@
       ["Course Evals", "https://www.youtube.com/watch?v=_4UX8ep97NU"],
       ["You got a PhD in Computational Linguistics ... what now?", "https://youtu.be/3e6TchIg55k"],
       ["Optimizing ML for Society", "https://www.youtube.com/watch?v=BuESxqQwgmw"],
-      ["How far off were my predictions? and p(Doom)", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d94941e1-ccf3-4f5b-91e6-b1680025409b"]
+      ["How far off were my predictions? and p(Doom)", "https://www.youtube.com/watch?v=5AoB-00u7-c"]
     ]
   },
 	"final": {
