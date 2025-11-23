@@ -211,6 +211,12 @@ def format_name(students, name, year, latex):
     name = name.replace('\\"e', "&euml;")
     name = name.replace("\\'{e}", "&eacute;")
     name = name.replace("\\'e", "&eacute;")
+    name = name.replace("\\'{o}", "&oacute;")
+    name = name.replace("\\'o", "&oacute;")
+    name = name.replace("\\'{i}", "&iacute;")
+    name = name.replace("\\'i", "&iacute;")
+    name = name.replace("\\~{n}", "&ntilde;")
+    name = name.replace("\\~n", "&ntilde;")            
     name = name.replace("{", "")
     name = name.replace("}", "")
 

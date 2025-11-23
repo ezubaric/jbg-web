@@ -11,3 +11,5 @@
 ~~ Url | docs/2025_emnlp_mind.pdf
 ~~ Link | code+data*http://github.com/lcalvobartolome/mind
 ~~ Project | Rosie*../projects/Rosie.html
+~~ Public | Imagine asking an AI chatbot for health advice and getting conflicting guidance—or turning to a chatbot in a crisis only to receive unclear instructions. Confusing or inconsistent AI
+isn’t just frustrating; it can put people’s health and safety at risk.  To address this our system proactively identifies discrepancies across languages before they appear in AI-generated answers. Dubbed MIND (Multilingual Inconsistent Notion Detection), the system aligns documents from different languages in a shared conceptual space, compares interpretations, and flags factual or culturally divergent information. For example, guidance on childbirth practices can vary by region, and MIND highlights these differences so users can trust the information.
