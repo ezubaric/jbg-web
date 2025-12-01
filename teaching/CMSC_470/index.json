@@ -27,7 +27,7 @@
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
 		       "Midterm Review",
-		       "Midterm II",
+		       "Midterm II": "midterm2",
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"],
 		       ["Final Exam (for computers): 1:30pm - 3:30pm", "final"]],
@@ -104,7 +104,6 @@
 		"This will count as 10 points on the adversarial HW",
 		"You'll get a better intuition for how the final project works"
 	    ]
-
 	},
   "tfidf": {
     "Videos:": [
@@ -142,7 +141,6 @@
 	["SNLP Chapter 4", "https://web.stanford.edu/~jurafsky/slp3/4.pdf"]
     ]
   },
-
   "code": {
     "Videos:": [
       ["Advice / Overview", "https://share.descript.com/view/R4u9z3RyOuR?transcript=true"],
