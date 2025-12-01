@@ -26,8 +26,8 @@
 		       ["Question Answering Approaches, Datasets, and Eval", "qa"],
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
-		       "Midterm Review",
-		       ["Midterm II", "midterm"],
+		       ["Midterm Review", "review"],
+		       "Midterm II",
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"],
 		       ["Final Exam (for computers): 1:30pm - 3:30pm", "final"]],
@@ -202,7 +202,12 @@
       ["Shift-Reduce Parser", "https://www.youtube.com/watch?v=f5-hTA9hA3s"]
     ]
   },
-
+	"review": {
+	    "Slides": [
+		["Midterm I", "midterm_1_review.pdf"],
+		["Midterm II", "llm_midterm_review.pdf"]
+		]
+	},
   "pytorch": {
     "Videos:": [
       ["Deep", "https://www.youtube.com/watch?v=-XSPumV6v00"],
