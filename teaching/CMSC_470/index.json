@@ -321,12 +321,16 @@
 		[["IRT Tutorial (Useful for reference list)", "https://aclanthology.org/2024.eacl-tutorials.2.pdf"]]
 	       },
 	        "decoding-eff": {
-            "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], "Qantization", "Mixture of Experts", "Speculative Decoding", "KV Caching"],
+		    "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], ["Qantization", "https://youtu.be/FUaYrAe5CGg"], "Mixture of Experts",
+				["Speculative Decoding", "https://youtu.be/VnvhD8_E7AQ"],
+				["KV Caching", "https://youtu.be/_quDGLpNols"]],
             "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
 	    "Reading:": [["Efficient Large Language Models: A Survey (LoRA bit is relevant for later class)", "https://arxiv.org/pdf/2312.03863"]]
         },
                 "finetune": {
-                    "Videos:": [["Prompting: What is it good for?", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd5bc8c5-8aec-4f60-abe9-b37f013452e5"], ["DSPY Example", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=257b45bd-7e65-4ac8-8ecc-b37f013452fc"], ["QLoRA", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89d2400d-1fa8-442c-8146-b37f013452e9"]],
+                    "Videos:": [["Prompting: What is it good for?", "https://youtu.be/hyUeko4GLxo"],
+				["DSPY Example", "https://youtu.be/sG3Tz0-Vw58"],
+				["QLoRA", "https://youtu.be/UXa6Uf8TluU"]],
                     "Slides:": [["Promespting", "https://docs.google.com/presentation/d/1BFLbysrNj1281ERzVU7EOmT3IwnujN3-twxPzvSMwjU/edit?usp=sharing"], ["DSPy Example", "finetune_dspy.pdf"], ["QLoRA", "finetune_lora.pdf"], ["LoRA Ex", "lora.pdf"]],
 		    "Optional Reading:": [["SIMBA", "https://blog.mariusvach.com/posts/dspy-simba"]],
     "optional_videos": [
