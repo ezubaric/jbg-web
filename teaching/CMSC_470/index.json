@@ -27,7 +27,7 @@
 		       ["Item Response Theory", "irt"],
 		       ["Adversarial Examples / Red Teaming", "adversarial"],
 		       "Midterm Review",
-		       "Midterm II": "midterm2",
+		       ["Midterm II", "midterm"],
 		       ["Expo Match", "expo"],
 		       ["Ask Me Anything", "ama"],
 		       ["Final Exam (for computers): 1:30pm - 3:30pm", "final"]],
