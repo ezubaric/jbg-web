@@ -45,6 +45,10 @@
 		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/llm_opt"]],
     "specials": ["2025-12-15"],
     "topics": {
+	"review": {
+	    "Slides": [["Midterm I Review", "midterm_1_review.pdf"],
+		       ["Midterm II Review", "llm_midterm_review.pdf"]]
+	},
   "intro": {
     "Content:": [
       ["Welcome to NLP", "https://youtu.be/2_2ttm1GHs4"],
@@ -249,6 +253,7 @@
           ["RNN sentiment", "nlm_rnn_sentiment.pdf"],
           ["RNN LM", "nlm_rnn_lm.pdf"],
           ["LSTM", "lstm.pdf"],
+	  ["Backpack", "nlm_backpack_sentiment.pdf"],
           ["RNN Exercise", "nlm_rnn_hand.pdf"]
       ],
       "Optional Videos:":
@@ -326,7 +331,9 @@
 		[["IRT Tutorial (Useful for reference list)", "https://aclanthology.org/2024.eacl-tutorials.2.pdf"]]
 	       },
 	        "decoding-eff": {
-		    "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"], ["Qantization", "https://youtu.be/FUaYrAe5CGg"], "Mixture of Experts",
+		    "Videos:": [["All Videos (Descript)", "https://share.descript.com/view/rUNTEGXn4xN"],
+				["Qantization", "https://youtu.be/FUaYrAe5CGg"],
+				"Mixture of Experts",
 				["Speculative Decoding", "https://youtu.be/VnvhD8_E7AQ"],
 				["KV Caching", "https://youtu.be/_quDGLpNols"]],
             "Slides:": [["Qantization", "opt_quantization.pdf"], ["Mixture of Experts", "opt_moe.pdf"], ["Speculative Decoding", "opt_speculative.pdf"], ["KV Caching", "https://docs.google.com/presentation/d/1I40CPUt2Wn-UXzwAEOyMzSkPG6KvFUEnrwGtLXcFoHA/edit?usp=sharing"]],
