@@ -254,6 +254,7 @@
           ["RNN LM", "nlm_rnn_lm.pdf"],
           ["LSTM", "lstm.pdf"],
 	  ["Backpack", "nlm_backpack_sentiment.pdf"],
+	  ["Backpack attention", "nlm_backpack_attention.pdf"],
           ["RNN Exercise", "nlm_rnn_hand.pdf"]
       ],
       "Optional Videos:":
