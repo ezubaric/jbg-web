@@ -21,7 +21,6 @@
 %end of header, beginning of document
 
 \begin{document}
-
 My research develops deep learning systems that can be \emph{reliably evaluated} and
 \emph{meaningfully interact with humans}.
 As \textsc{ai} systems increasingly intertwine in scientific, social, and organizational
@@ -44,17 +43,22 @@ A central theme of my research is that standard evaluation metrics often fail to
 reflect whether AI systems are helpful to humans.
 Early in my career, I demonstrated that commonly used likelihood-based metrics
 could be negatively correlated with human judgments of model interpretability,
-motivating a shift toward \emph{human-grounded evaluation}.
+motivating a shift toward \emph{human-grounded evaluation}
+\cite{chang-09b}.
 
 Building on this foundation, my recent work focuses on calibration,
 hallucination, and robustness in modern language and multimodal models.
 I have developed empirical frameworks to compare model uncertainty directly
 against human uncertainty (CalSore), revealing systematic overconfidence even in
-state-of-the-art systems. 
+state-of-the-art systems
+\cite{Sung:Fleisig:Hope:Upadhyay:Boyd-Graber-2025,
+Si:Goyal:Wu:Zhao:Feng:III:Boyd-Graber-2024}.
 
 I have extended these ideas to multimodal models, where hallucinations are
 particularly difficult to detect, designing synthetic and task-based benchmarks
-that enable controlled, reproducible analysis.
+that enable controlled, reproducible analysis
+\cite{Wu:Guan:Li:Huang:Liu:Wang:Xian:Shrivastava:Huang:Boyd-Graber:Zhou:Manocha-2024,
+Li:Wu:Shi:Qin:Du:Zhou:Manocha:Boyd-Graber-2025}.
 
 \vspace{0.3em}
 \subsection*{Agentic and Interactive Deep Learning Systems}
@@ -62,42 +66,57 @@ that enable controlled, reproducible analysis.
 Many real-world AI systems must act as \emph{agents}: they interact with users over
 time, adapt to feedback, and influence human beliefs and decisions.
 Long before the recent resurgence of interest in agentic AI, my work focused on
-\emph{interactive learning systems} where human input directly shapes the model and its behavior.
+\emph{interactive learning systems} where human input directly shapes the model and its behavior
+\cite{hu-14:itm}.
 
 I was among the early developers of \emph{Interactive Topic Modeling}, which enabled
 users to guide latent representations during learning, reframing modeling as a
-collaborative process.  This work led to \emph{ALTO}, which cast topic modeling as an
-active learning problem, and \emph{BASS}, which integrated \textsc{llm}-guided sensemaking into a process that resembles grounded theory.
+collaborative process.
+This work led to \emph{ALTO}, which cast topic modeling as an
+active learning problem \cite{lund-17}, and \emph{BASS}, which integrated
+\textsc{llm}-guided sensemaking into a process that resembles grounded theory
+\cite{Yuan-18}.
 %
-Together, these systems established a human--computer collaboration methodologies and evaluations that check whether the \emph{process} answers important questions from datasets.
+Together, these systems established human--computer collaboration methodologies and evaluations that check whether the \emph{process} answers important questions from datasets.
 
 More recently, I have studied agentic behavior in strategic and social environments.
 Using language-based games such as \textit{Diplomacy} as testbeds, my collaborators and I showed
 that agents optimized solely for game-theoretic objectives fail to capture essential
-social and linguistic nuance.  We developed models and evaluations that incorporate
+social and linguistic nuance \cite{niculae-15,Peskov-20}.
+We developed models and evaluations that incorporate
 social signaling and deception, demonstrating that strategically dominant agents can
-nevertheless be perceived as less trustworthy and less persuasive than humans.
+nevertheless be perceived as less trustworthy and less persuasive than humans
+\cite{Wongkamjan:Gu:Wang:Hermjakob:May:Stewart:Kummerfeld:Peskoff:Boyd-Graber-2024,
+Wongkamjan-2024}.
 
 Across these projects, I emphasize \emph{interactive evaluation}:
 human-in-the-loop, adversarial, and continual settings that reveal how models adapt
-under non-stationary feedback.  This line of work connects agentic AI, continual
-learning, and the algorithmic foundations of human--AI interaction.
+under non-stationary feedback.
+This line of work connects agentic AI, continual learning, and the algorithmic
+foundations of human--AI interaction.
 
 \vspace{0.3em}
 \subsection*{Personalization and Individual Knowledge Acquisition}
 
 Generic AI systems often fail to account for individual goals, preferences, and
-knowledge states.  My research treats personalization as a modeling and evaluation
+knowledge states.
+My research treats personalization as a modeling and evaluation
 problem rather than a surface-level interface feature.
 
 I have developed methods for persona induction and preference modeling that enable
-language models to adapt responses via abductive reasoning.  Complementary work
+language models to adapt responses via abductive reasoning
+\cite{Balepur:Padmakumar:Yang:Feng:Rudinger:Boyd-Graber-2025,
+Mondal:Stokes:Jauhar:Yang:Wan:Xu:Song:Boyd-Graber:Neville-2025}.
+Complementary work
 demonstrates that optimizing for stated user preferences can be misaligned with
 what actually improves learning or task performance, exposing risks of sycophancy
-in preference-tuned models.
+in preference-tuned models
+\cite{Balepur:Shu:Sung:Goldfarb-Tarrant:Feng:Yang:Rudinger:Boyd-Graber-2025}.
 
 In parallel, I have built systems that explicitly measure individual learning
-outcomes, including spaced-repetition platforms and mnemonic scaffolding tools.
+outcomes, including spaced-repetition platforms and mnemonic scaffolding tools
+\cite{Balepur:Shu:Hoyle:Robey:Feng:Goldfarb-Tarrant:Boyd-Graber-2024,
+Shu:Balepur:Feng:Boyd-Graber-2024}.
 These systems connect personalization to quantifiable knowledge acquisition,
 providing principled ways to study human--AI complementarity rather than replacement.
 
@@ -107,7 +126,10 @@ providing principled ways to study human--AI complementarity rather than replace
 My research is inherently interdisciplinary, with collaborations spanning political
 science (negotiation and framing), journalism (misinformation), ethics (values
 inference), public health (randomized controlled trials of AI assistance), and the
-life sciences.  Across domains, a unifying theme is responsible deployment:
+life sciences
+\cite{Diggelmann-20,Eisenschlos-21,Sung:Hassan:Boyd-Graber-2023,
+Srikanth:Sarkar:Y.:M.:C.:Rudinger:Boyd-Graber-2024}.
+Across domains, a unifying theme is responsible deployment:
 communicating uncertainty, surfacing limitations, and evaluating real-world impact.
 
 This work aligns naturally with initiatives focused on responsible and socially
@@ -116,54 +138,51 @@ embedded AI, grounding technical advances in empirical validation and human outc
 \vspace{0.3em}
 \subsection*{Future Directions}
 
-
 \textbf{Multimodal.}
 %
 Our adversarial work with language models is nearing an end: it's getting harder and harder to stump them.
 %
-However, models still struggle with low frequency words when answering spoken questions, understanding abstract representational art, or mapping a schematic to the real world.
+However, models still struggle with low-frequency words in speech, understanding abstract representational art, or mapping schematics to the real world
+\cite{Wu:Guan:Li:Huang:Liu:Wang:Xian:Shrivastava:Huang:Boyd-Graber:Zhou:Manocha-2024}.
 %
-These leaps of understanding are still a core component of human intelligence, so we will continue to craft adversarial domains but in new modalities to better understand AI limits and highlight human skills that have yet to be mastered.
+These forms of abstraction remain central to human intelligence, motivating new adversarial benchmarks in underexplored modalities.
 
 \textbf{Backpropagating Cooperation.}
 %
-While we have built metrics that reveal when AIs are effectively cooperating with humans (i.e., raising their skill at a task), most AI models are trained with preference data.
+While we have built metrics that reveal when AIs effectively cooperate with humans,
+most models are trained on preference data.
 %
-My student Nishant Balepur has built a sequence of work showing that what users like isn't always what helps them: for example, students don't always prefer the study aids that best improves retention~\cite{Balepur:Shu:Hoyle:Robey:Feng:Goldfarb-Tarrant:Boyd-Graber-2024}.
+My student Nishant Balepur has shown that what users prefer is not always what helps them,
+for example in learning and retention settings
+\cite{Balepur:Shu:Hoyle:Robey:Feng:Goldfarb-Tarrant:Boyd-Graber-2024}.
 %
-The next step is to actually backpropagate that signal into the internals of a model to see what it looks like when the first priority of a model training is to cooperate with users.
-%
-However, because distinct individuals need different support, this also requires greater personalization.
-
+The next step is to backpropagate cooperative signals directly into model internals,
+while accounting for individual differences through personalization.
 
 \textbf{Data Diversity.}
 %
-Existing datasets are not diverse and do
-not reflect the kinds of interactions people from diverse backgrounds
-have with \textsc{ai} systems.
+Existing datasets underrepresent the cultural and social diversity of real users.
+Major QA benchmarks overwhelmingly center American and British entities
+\cite{gor-21}.
 %
-In question answering, Google's Natural Questions, SQuAD, and other
-datasets contain entities that are overwhelmingly male and either
-American or British~\cite{gor-21}.
-%
-In newly funded \textsc{nsf} research, we're working with surfacing questions that
-reflect a specific \emph{cultural} context: detecting when questions
-are answered differently in Ghana than in the \textsc{us} or topics that
-only people in Bhutan care about (and would be neglected by
-\textsc{us}-centric datasets).
+In newly funded \textsc{nsf} research, we surface culturally grounded questions,
+including contexts where answers differ across regions such as Ghana, Bhutan,
+and the \textsc{us}.
 
 \textbf{Proxy Models.}
 %
-While eventually we will need to connect to expensive, difficult to
-compute neural models for our Human--AI interactions, many user updates can be approximated by fast
-spectral or probabilistic algorithms.
-%
-We will design fast, browser-based Javascript approximations of these
-complicated neural models, to allow users to quickly interact with the
-models, get a result, and continue before reconciling the solution later.
-%
-% However, because these approximations are only approximations, we need
-% to reconcile the approximate solution with the ``gold standard'' model
-% on a \textsc{gpu}-powered server.
+To support interactive human--AI systems, we will develop fast spectral and probabilistic
+approximations of expensive neural models.
+These browser-based proxy models enable rapid interaction and feedback,
+with later reconciliation against full \textsc{gpu}-scale models.
+
+\bibliographystyle{resume_src/splncs03}
+
+\begin{center}
+Full list of my publications at \url{http://boydgraber.org/dyn-pubs/year.html}
+\end{center}
+
+\bibliography{resume_src/journal-full,resume_src/jbg}
+
 
 \end{document}
