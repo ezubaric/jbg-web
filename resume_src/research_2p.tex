@@ -1,6 +1,24 @@
 \documentclass[11pt, amssymb, a4paper, one column]{article}
 \usepackage{times, amsmath, amssymb, cancel, changepage, url, gensymb, graphicx, mathrsfs, amsthm, lipsum, fancyhdr}
-\usepackage[margin=.75in]{geometry}
+\usepackage[margin=.5in]{geometry}
+\usepackage{multicol}
+
+
+\usepackage[
+  backend=bibtex,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99,
+  url=false,
+  doi=false,
+  isbn=false,
+  eprint=false
+  ]{biblatex}
+
+  \renewcommand*{\bibfont}{\footnotesize}
+
+\addbibresource{resume_src/journal-full.bib}
+\addbibresource{resume_src/jbg}
 
 \newcommand{\ihat}{\mathbf {\hat \imath}}
 \newcommand{\jhat}{\mathbf {\hat \jmath}}
@@ -23,7 +41,7 @@
 \begin{document}
 My research develops deep learning systems that can be \emph{reliably evaluated} and
 \emph{meaningfully interact with humans}.
-As \textsc{ai} systems increasingly intertwine in scientific, social, and organizational
+As \textsc{ai} systems increasingly integrate into scientific, social, and organizational
 decision-making, raw predictive accuracy is an inadequate standalone metric.
 %
 Instead, effective systems
@@ -36,44 +54,42 @@ post-hoc analyses.  While much of my work uses language and multimodal models as
 testbeds, the underlying goal is to develop general principles for trustworthy,
 interactive, and agentic deep learning systems.
 
-\vspace{0.3em}
 \subsection*{Uncertainty, Evaluation, and Trustworthy AI}
 
 A central theme of my research is that standard evaluation metrics often fail to
 reflect whether AI systems are helpful to humans.
 Early in my career, I demonstrated that commonly used likelihood-based metrics
 could be negatively correlated with human judgments of model interpretability,
-motivating a shift toward \emph{human-grounded evaluation}
-\cite{chang-09b}.
+motivating a shift toward \emph{human-grounded evaluation}~\cite{chang-09b}.
 
 Building on this foundation, my recent work focuses on calibration,
 hallucination, and robustness in modern language and multimodal models.
 I have developed empirical frameworks to compare model uncertainty directly
-against human uncertainty (CalSore), revealing systematic overconfidence even in
-state-of-the-art systems
-\cite{Sung:Fleisig:Hope:Upadhyay:Boyd-Graber-2025,
-Si:Goyal:Wu:Zhao:Feng:III:Boyd-Graber-2024}.
+against human uncertainty
+\cite[CalSore]{Sung:Fleisig:Hope:Upadhyay:Boyd-Graber-2025}, revealing
+systematic overconfidence on wrong answers and underconfidence on
+correct answers even in
+state-of-the-art systems.
 
 I have extended these ideas to multimodal models, where hallucinations are
 particularly difficult to detect, designing synthetic and task-based benchmarks
-that enable controlled, reproducible analysis
-\cite{Wu:Guan:Li:Huang:Liu:Wang:Xian:Shrivastava:Huang:Boyd-Graber:Zhou:Manocha-2024,
+that enable controlled, reproducible analysis~\cite{Wu:Guan:Li:Huang:Liu:Wang:Xian:Shrivastava:Huang:Boyd-Graber:Zhou:Manocha-2024,
 Li:Wu:Shi:Qin:Du:Zhou:Manocha:Boyd-Graber-2025}.
 
-\vspace{0.3em}
 \subsection*{Agentic and Interactive Deep Learning Systems}
 
 Many real-world AI systems must act as \emph{agents}: they interact with users over
 time, adapt to feedback, and influence human beliefs and decisions.
 Long before the recent resurgence of interest in agentic AI, my work focused on
-\emph{interactive learning systems} where human input directly shapes the model and its behavior
-\cite{hu-14:itm}.
+\emph{interactive models} where human input can take computer
+overviews of large document collections, get feedback from users, and
+then update models' representation of dataset to better reflect users'
+needs~\cite[Interactive Topic Models]{hu-14:itm}.
 
-I was among the early developers of \emph{Interactive Topic Modeling}, which enabled
-users to guide latent representations during learning, reframing modeling as a
-collaborative process.
-This work led to \emph{ALTO}, which cast topic modeling as an
-active learning problem \cite{lund-17}, and \emph{BASS}, which integrated
+%Si:Goyal:Wu:Zhao:Feng:III:Boyd-Graber-2024
+
+That work led to \emph{ALTO}~\cite{}, which cast topic modeling as an
+active learning problem \cite{poursabzi-16}, and \emph{BASS}, which integrated
 \textsc{llm}-guided sensemaking into a process that resembles grounded theory
 \cite{Yuan-18}.
 %
@@ -176,13 +192,12 @@ approximations of expensive neural models.
 These browser-based proxy models enable rapid interaction and feedback,
 with later reconciliation against full \textsc{gpu}-scale models.
 
-\bibliographystyle{resume_src/splncs03}
 
-\begin{center}
-Full list of my publications at \url{http://boydgraber.org/dyn-pubs/year.html}
-\end{center}
+\begin{multicols}{2}
 
-\bibliography{resume_src/journal-full,resume_src/jbg}
+\printbibliography
+
+\end{multicols}
 
 
 \end{document}
