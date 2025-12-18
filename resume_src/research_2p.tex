@@ -15,7 +15,8 @@
   eprint=false
   ]{biblatex}
 
-  \renewcommand*{\bibfont}{\footnotesize}
+  \renewcommand*{\bibfont}{\scriptsize}
+  \setlength\bibitemsep{0.5\itemsep}
 
 \addbibresource{resume_src/journal-full.bib}
 \addbibresource{resume_src/jbg}
@@ -30,7 +31,7 @@
 
 \pagestyle{fancy}
 \lhead{Jordan Boyd-Graber, University of Maryland}
-\rhead{\large Natural Language Processing Shouldn't be a Black Box \normalsize}
+\rhead{\large Human-Centered Deep Learning \normalsize}
 %note how I use "\#" to denote "#." This is because # is reserved (for something). Similarly, % is reserved for comments, so to use it you need \%.
 %other such things include { }.
 
@@ -60,7 +61,9 @@ A central theme of my research is that standard evaluation metrics often fail to
 reflect whether AI systems are helpful to humans.
 Early in my career, I demonstrated that commonly used likelihood-based metrics
 could be negatively correlated with human judgments of model interpretability,
-motivating a shift toward \emph{human-grounded evaluation}~\cite{chang-09b}.
+motivating a shift toward \emph{human-grounded
+  evaluation}~\cite{chang-09b} (rather than perplexity-based) and introducing human-in-the-loop
+adversarial examples~\cite{wallace-09}.
 
 Building on this foundation, my recent work focuses on calibration,
 hallucination, and robustness in modern language and multimodal models.
@@ -88,22 +91,41 @@ needs~\cite[Interactive Topic Models]{hu-14:itm}.
 
 %Si:Goyal:Wu:Zhao:Feng:III:Boyd-Graber-2024
 
-That work led to \emph{ALTO}~\cite{}, which cast topic modeling as an
-active learning problem \cite{poursabzi-16}, and \emph{BASS}, which integrated
-\textsc{llm}-guided sensemaking into a process that resembles grounded theory
-\cite{Yuan-18}.
+That work led to \emph{ALTO}~\cite{poursabzi-16}, which cast topic modeling as an
+active learning problem, and
+\emph{BASS}~\cite{Li:Calvo-Bartolome:Hoyle:Xu:Stephens:Fung:Dima:Boyd-Graber-2025},
+which integrated \textsc{llm}-guided sensemaking into a process that
+resembles grounded theory: an LLM and the user work together to sort
+documents into groups that share the same user-interpretable label.
 %
-Together, these systems established human--computer collaboration methodologies and evaluations that check whether the \emph{process} answers important questions from datasets.
+When it is obvious which label should be applied to a document, it is
+applied automatically; but when it is less clear, the user needs to
+either review a suggestion from an LLM or use their own judgement.
+%
+At a more theoretical level, this requires understanding the world
+knowledge of large language models: active learning should direct
+attention to the most surprising parts of the latent space~\cite{Yuan:Lin:Boyd-Graber-2020}
+%
+Together, these systems established human--computer collaboration
+methodologies and evaluations that check whether the \emph{process}
+answers important questions from datasets.
 
 More recently, I have studied agentic behavior in strategic and social environments.
-Using language-based games such as \textit{Diplomacy} as testbeds, my collaborators and I showed
-that agents optimized solely for game-theoretic objectives fail to capture essential
-social and linguistic nuance \cite{niculae-15,Peskov-20}.
-We developed models and evaluations that incorporate
-social signaling and deception, demonstrating that strategically dominant agents can
-nevertheless be perceived as less trustworthy and less persuasive than humans
-\cite{Wongkamjan:Gu:Wang:Hermjakob:May:Stewart:Kummerfeld:Peskoff:Boyd-Graber-2024,
-Wongkamjan-2024}.
+Using language-based games such as \textit{Diplomacy} as testbeds, a
+testbed we have been aruing for in the NLP context for over a
+decade~\cite{niculae-15}.
+%
+My collaborators and I showed that agents optimized solely for
+game-theoretic objectives (i.e., Meta's \textit{tour de force} Cicero)
+fail to capture essential social and linguistic nuance
+\cite{Wongkamjan:Gu:Wang:Hermjakob:May:Stewart:Kummerfeld:Peskoff:Boyd-Graber-2024}.
+We developed models and evaluations that incorporate social signaling
+and deception, demonstrating that strategically dominant agents can
+nevertheless be perceived as less trustworthy and less persuasive than
+humans.
+%
+However, using the reward of well-trained RL agents can more
+effectively detect deception using counterfactual reasoning~\cite{Wongkamjan-2024}.
 
 Across these projects, I emphasize \emph{interactive evaluation}:
 human-in-the-loop, adversarial, and continual settings that reveal how models adapt
@@ -111,7 +133,6 @@ under non-stationary feedback.
 This line of work connects agentic AI, continual learning, and the algorithmic
 foundations of human--AI interaction.
 
-\vspace{0.3em}
 \subsection*{Personalization and Individual Knowledge Acquisition}
 
 Generic AI systems often fail to account for individual goals, preferences, and
@@ -121,8 +142,7 @@ problem rather than a surface-level interface feature.
 
 I have developed methods for persona induction and preference modeling that enable
 language models to adapt responses via abductive reasoning
-\cite{Balepur:Padmakumar:Yang:Feng:Rudinger:Boyd-Graber-2025,
-Mondal:Stokes:Jauhar:Yang:Wan:Xu:Song:Boyd-Graber:Neville-2025}.
+\cite{Balepur:Padmakumar:Yang:Feng:Rudinger:Boyd-Graber-2025}.
 Complementary work
 demonstrates that optimizing for stated user preferences can be misaligned with
 what actually improves learning or task performance, exposing risks of sycophancy
@@ -136,7 +156,6 @@ Shu:Balepur:Feng:Boyd-Graber-2024}.
 These systems connect personalization to quantifiable knowledge acquisition,
 providing principled ways to study human--AI complementarity rather than replacement.
 
-\vspace{0.3em}
 \subsection*{Interdisciplinary Impact and Responsible AI}
 
 My research is inherently interdisciplinary, with collaborations spanning political
@@ -151,7 +170,6 @@ communicating uncertainty, surfacing limitations, and evaluating real-world impa
 This work aligns naturally with initiatives focused on responsible and socially
 embedded AI, grounding technical advances in empirical validation and human outcomes.
 
-\vspace{0.3em}
 \subsection*{Future Directions}
 
 \textbf{Multimodal.}
@@ -162,6 +180,7 @@ However, models still struggle with low-frequency words in speech, understanding
 \cite{Wu:Guan:Li:Huang:Liu:Wang:Xian:Shrivastava:Huang:Boyd-Graber:Zhou:Manocha-2024}.
 %
 These forms of abstraction remain central to human intelligence, motivating new adversarial benchmarks in underexplored modalities.
+
 
 \textbf{Backpropagating Cooperation.}
 %
@@ -175,6 +194,7 @@ for example in learning and retention settings
 The next step is to backpropagate cooperative signals directly into model internals,
 while accounting for individual differences through personalization.
 
+
 \textbf{Data Diversity.}
 %
 Existing datasets underrepresent the cultural and social diversity of real users.
@@ -184,6 +204,7 @@ Major QA benchmarks overwhelmingly center American and British entities
 In newly funded \textsc{nsf} research, we surface culturally grounded questions,
 including contexts where answers differ across regions such as Ghana, Bhutan,
 and the \textsc{us}.
+
 
 \textbf{Proxy Models.}
 %
