@@ -1,6 +1,6 @@
 {
-    "config": {"start": "2025-09-02",
-	       "end": "2025-12-12",
+    "config": {"start": "2026-01-26",
+	       "end": "2026-05-08",
 	       "days": ["W-MON"],
 	       "hw_day": "W-FRI"},
     "topics": [],
