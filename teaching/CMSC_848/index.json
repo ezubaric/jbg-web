@@ -4,53 +4,55 @@
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
     "class_sequence": [["What the class is about?", "intro"],
-		       ["AI vs. NLP", "ai_nlp"],
-		       ["Information Retrieval", "tfidf"],
-		       ["Logistic Regression", "lr"],
-		       "Continuing Logistic Regression / Homework Workshop",
-		       ["Word representations", "word2vec"],
-		       ["Pytorch", "pytorch"],
-		       ["Homework Framework", "code"],
-		       ["Syntax", "syntax"],
-		       ["Linear neural language models (Last content on Midterm I)", "rnn"],
-		       "Homework Workshop",
-		       ["Transformers", "transformer"],
-		       ["Decoding and Efficiency", "decoding-eff"],
-		       ["Alignment", "alignment"],
-		       ["Finetuning", "finetune"],
-		       ["Machine translation", "mt"],
-		       ["Midterm Review", "review"],
-		       "Midterm I",
-           "No Class: Makeup Midterm",
-           "Zongxia Guest Lecture: Running Jobs on Nexus",
-		       ["Question Answering Approaches, Datasets, and Eval", "qa"],
-		       ["Item Response Theory", "irt"],
-		       ["Adversarial Examples / Red Teaming", "adversarial"],
-		       ["Midterm Review", "review"],
-		       "Midterm II",
-		       ["Expo Match", "expo"],
+		       ["Question Answering in Society", "background"],
+		       ["Giving a Presentation of a Paper", "presentation"],		       
+		       ["Information Retrieval", "ir"],
+		       ["Good Old Fashioned QA", "historical"],
+		       ["LLMs", "llms"],
+		       ["QA Datasets", "data"],
+		       ["Extractive QA", "neuralqa"],
+		       ["RAG", "rag"],		       
+		       ["Fact Checking", "factcheck"],
+		       ["Long Form QA", "longqa"],
+		       ["Conversational QA", "conversational"],
+		       ["Writing a Paper", "paper"],
+		       ["IRT and Leaderboards", "irt"],
+		       "Midterm Review",
+		       "Midterm",
+		       ["Adversarial", "adversarial"],
+		       ["Thinking / Reasoning Models", "reasoning"],		       
+		       ["Evaluation Pitfalls: Equivalence, MCQA, Bad Questions", "bad"],
+		       ["Collaboration", "collaboration"],
+		       ["Multilingual / Multicultural", "multilingual"],		       
+		       ["Visual QA", "visual"],
+		       ["KB and Tabular QA", "tabular"],		       
+		       ["Audio QA", "audio"],
+		       ["Personalization", "personalization"],
+		       ["Other Formats", "other"],
+		       ["Paper Clinic", "clinic"],
 		       ["Ask Me Anything", "ama"],
-		       ["Final Exam (for computers): 1:30pm - 3:30pm", "final"]],
-    "hw_sequence": [["Warmup", "https://github.com/Pinafore/nlp-hw/tree/master/presidents"],
-		    ["Tokenization and tf-idf", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf"],
-		    ["Logistic Regression", "https://github.com/Pinafore/nlp-hw/tree/master/lr_sgd_qb"],
-		    ["Feature Engineering", "https://github.com/Pinafore/nlp-hw/tree/master/feateng"],
-		    ["Sparse Retrieval", "https://github.com/Pinafore/nlp-hw/tree/master/tfidf_guesser"],
-		    ["Pytorch LR + Adam", "https://github.com/Pinafore/nlp-hw/tree/master/lr_pytorch"],
-		    "",
-		    ["DAN", "https://github.com/Pinafore/nlp-hw/tree/master/dan"],
-		    ["Transformer LM (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/transformer"],
-		    "",
-		    ["Adversarial Authoring (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/adversarial"],
-		    ["LM Optimization (Group)", "https://github.com/Pinafore/nlp-hw/tree/master/llm_opt"]],
-    "specials": ["2025-12-15"],
+		       ["Project Poster Session: 13:30-15:30", "final"]],
+    "hw_sequence": [["Warmup: Threshold", ""],
+		    ["Presentation", ""],
+		    ["Prompting and Fine Tuning", ""],
+		    ["RL", ""],
+		    ["Project Proposal", ""],
+		    "",		    
+		    ["Literature Review", ""],
+		    "",		    
+		    ["Baseline", ""],
+		    ["Abstract / Intro", ""],
+		    ["Methods", ""],
+		    ["Figures", ""],
+		    ["Complete Draft", ""]
+		   ],
+    "specials": ["2026-05-11"],
     "topics": {
-"Introducing the Course": {
+"intro": {
     "videos": [
       ["Structure of the course, why QA is important", "https://www.youtube.com/watch?v=rvnoNgYuyzc"],
       ["Homework Structure", "https://www.youtube.com/watch?v=XnDUmHrj1TM"],
       ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
-      ["Hybrid classes", "https://youtu.be/9oyZ3Wtcwtk"],
       ["Flipped Classrooms", "https://www.youtube.com/watch?v=7JMOsWPmlMk"],
       ["Grader Expectations", "https://youtu.be/YEFMhYKOHmE"]
     ],
@@ -68,7 +70,7 @@
     ]
   },
 
-  "QA History / Background": {
+  "background": {
     "videos": [
       ["How to read the course webpage", "https://www.youtube.com/watch?v=5Og91_Cishs"],
       ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
@@ -94,7 +96,7 @@
     ]
   },
 
-  "Information Retrieval / tf-idf": {
+  "ir": {
     "videos": [
       ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
       ["TF-IDF", "https://www.youtube.com/watch?v=A5ounv0D_cs"],
@@ -114,7 +116,7 @@
     ]
   },
 
-  "History of Computational Question Answering": {
+  "historical": {
     "videos": [
       ["GOFAI Approaches for QA", "https://youtu.be/0butNAOBO0U"],
       ["Statistical QA / Watson", "https://youtu.be/8BDjw1f5Jb4"],
@@ -130,7 +132,7 @@
       ["Question Answering for the Curated Web, Chapter 3", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"]
     ]
   },
-	  "Neural Sequence Models for Language I": {
+	  "neurallm1": {
     "videos": [
       ["Distributional Semantics", "https://youtu.be/vErGaMc80WM"],
       ["Word2Vec", "https://youtu.be/QyrUentbkvw"],
@@ -150,7 +152,7 @@
     ]
   },
 
-  "Neural Sequence Models for Language II": {
+  "neurallm2": {
     "videos": [
       ["Neural Language Models", "https://youtu.be/KHpM3UXdMxM"],
       ["What to call these models?", "https://www.youtube.com/watch?v=u0DgoRVLTE8&t=1s"],
@@ -170,7 +172,7 @@
     ]
   },
 
-  "Reading and Presenting a Paper": {
+  "presentation": {
     "videos": [
       ["How I Record Videos", "https://drive.google.com/file/d/1EZ0I4RVPuRRmHYQdO0U2MsS5BBXf51KA/view?usp=sharing"],
       ["Lost Opportunity of Conference Videos", "https://www.youtube.com/watch?v=IQAXiR6R9sI"],
@@ -185,7 +187,7 @@
     ]
   },
 
-  "QA Datasets": {
+  "data": {
     "videos": [
       ["QA Datasets", "https://youtu.be/p8tnM1_waQ8"],
       ["Cranfield vs. Manchester", "https://youtu.be/9peCcstwGtU"],
@@ -204,7 +206,7 @@
     ]
   },
 
-  "Neural Models for QA": {
+  "neuralqa": {
     "videos": [
       ["Dr. QA", "https://youtube.com/video/ZJA3g9TxjlA"],
       ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
@@ -225,8 +227,9 @@
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
     ]
   },
-	  "Computational Frameworks": {
-    "videos": [
+	  "toolkits": {
+	      "videos": [
+		  "DSPy", "Prompting",
       ["Frameworks", "https://youtu.be/FJQl0ujTAGw"],
       ["Pytorch", "https://youtu.be/AZwwDIV2vcI"],
       ["DAN", "https://youtu.be/losFCNJbnZY"],
@@ -242,7 +245,7 @@
     ]
   },
 
-  "Entailment and Fact Checking": {
+  "factcheck": {
     "videos": [
       ["NLI", "https://youtu.be/a5NfaNS_ObE"],
       ["Fact Checking", "https://youtu.be/t9zKbcLPTm8"]
@@ -256,9 +259,8 @@
     ]
   },
 
-  "Beyond Factoid QA: Generation and Long-form QA": {
+  "longqa": {
     "videos": [
-      ["Evaluating Open-Domain Question Answering in the Era of Large Language Models", "https://drive.google.com/file/d/1RwggMT0VZ4IxpyBZfunfvDg75ER-MO44/view?usp=sharing"],
       ["Generation for QA", "https://www.youtube.com/watch?v=au7uABXMBNg"],
       ["Long QA", "https://youtu.be/MeaJ3ADmbPo"]
     ],
@@ -271,9 +273,8 @@
     ]
   },
 
-  "Beyond Factoid QA: Conversational": {
+  "conversational": {
     "videos": [
-      ["Ditch the Gold Standard: Re-evaluating Conversational Question Answering", "https://drive.google.com/file/d/1J3tbNUfyJn6Z4Wakt-1AkHgXX-rmGz0R/view?usp=sharing"],
       ["Conversational QA", "https://youtu.be/HO-w0LYZDho"]
     ],
     "slides": [],
@@ -283,7 +284,7 @@
     ]
   },
 
-  "How to Write a Paper I": {
+  "paper1": {
     "videos": [
       ["Why writing well is important", "https://youtu.be/p_6_LLm9Ryg"],
       ["How to structure sentences and paragraphs", "https://youtu.be/I21kWU-OdHM"],
@@ -297,7 +298,7 @@
     ]
   },
 
-  "Evaluation: Leaderboards and IRT": {
+  "leaderboards": {
     "videos": [
       ["History of Standardized Tests", "https://youtu.be/_pjXLtF4k18"],
       ["IRT", "https://youtu.be/n4W4Gwwkbqg"],
@@ -311,19 +312,8 @@
     ]
   },
 
-  "Chain of Thought": {
-    "videos": [
-      ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", "https://drive.google.com/file/d/1gBo4-R2uPUCQ_QYkVni_kFaLUayL5Ozr/view?usp=drive_link"],
-      ["Answering Questions by Meta-Reasoning over Multiple Chains of Thought", "https://drive.google.com/file/d/1r9rIS9qvfjpmhlXZfqyAnbZ-cD-ahngF/view?usp=sharing."]
-    ],
-    "slides": [],
-    "readings": [
-      ["Answering Questions by Meta-Reasoning over Multiple Chains of Thought", "https://arxiv.org/abs/2304.13007"],
-      ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models", "https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf"]
-    ]
-  },
 
-  "How to Write a Paper II": {
+  "paper2": {
     "videos": [
       ["Writing with LaTeX", "https://youtu.be/fBS9jPz-Gu8"],
       ["Writing for Multiple Audiences", "https://www.youtube.com/watch?v=nEFahEyC-wE"],
@@ -337,9 +327,8 @@
     ]
   },
 
-  "Explainable, Cooperative, and Adversarial QA": {
+  "hitl": {
     "videos": [
-      ["Red Teaming Language Models with Language Models", "https://drive.google.com/file/d/1OWWbfepseeqvNde2sGGC0Pxu6DcrZkJT/view?usp=drive_link"],
       ["What makes for an explanation", "https://youtu.be/B3pu8J6AtXc"],
       ["QA Explanation", "https://youtu.be/1-AHgE-IXDs"],
       ["Cooperative QA", "https://www.youtube.com/watch?v=PQGcya_pxhE"],
@@ -353,7 +342,7 @@
     ]
   },
 
-  "Multimodal QA: Audio, Video": {
+  "multimodal": {
     "videos": [
       ["An Empirical Study on Leveraging Scene Graphs for Visual Question Answering", "https://youtu.be/KJ7WSe9qFLQ"],
       ["Speech", "https://youtu.be/prEJX8R0ryU"],
@@ -369,9 +358,8 @@
     ]
   },
 
-  "QA Memory and Personalization": {
+  "personalization": {
     "videos": [
-      ["Episodic Memory Question Answering", "https://drive.google.com/file/d/1ABAcIn_SQ8yHNBPRk-N0_EvY_0OeJ9Or/view?usp=sharing"],
       ["Personalized QA", "https://youtu.be/yVnWKVp2v6Q"]
     ],
     "slides": [],
@@ -381,7 +369,7 @@
     ]
   },
 
-  "Other QA Formats: MC, Crosswords": {
+  "other": {
     "videos": [
       ["International QA Formats", "https://youtu.be/Fx3Xr5HYDEw"],
       ["Crosswords", "https://www.youtube.com/watch?v=AyAyQCfHp5M"],
