@@ -63,10 +63,10 @@
     "readings": [
       ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
       ["Question Answering for the Curated Web (Alternate)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
-      ["Questioning Artificial Intelligence, Chapter 1", "textbook.pdf"],
-      ["About", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
-      ["Author", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
-      ["Structure", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"]
+      ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
+      ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
+      ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
+      ["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"]
     ]
   },
 
