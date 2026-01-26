@@ -3,8 +3,7 @@
 	       "end": "2026-05-08",
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
-    "class_sequence": [["What the class is about?", "intro"],
-		       ["Question Answering in Society", "background"],
+    "class_sequence": [["Question Answering in Society", "background"],
 		       ["Giving a Presentation of a Paper", "presentation"],		       
 		       ["Information Retrieval", "ir"],
 		       ["Good Old Fashioned QA", "historical"],
@@ -32,12 +31,12 @@
 		       ["Paper Clinic", "clinic"],
 		       ["Ask Me Anything", "ama"],
 		       ["Project Poster Session: 13:30-15:30", "final"]],
-    "hw_sequence": [["Warmup: Threshold", ""],
+    "hw_sequence": ["",
+		    ["Warmup: Threshold", ""],
 		    ["Presentation", ""],
 		    ["Prompting and Fine Tuning", ""],
 		    ["RL", ""],
 		    ["Project Proposal", ""],
-		    "",		    
 		    ["Literature Review", ""],
 		    "",		    
 		    ["Baseline", ""],
@@ -50,28 +49,18 @@
     "topics": {
 "intro": {
     "videos": [
+    ],
+    "slides": [
+    ],
+    "readings": [
+    ]
+  },
+  "background": {
+      "videos": [
       ["Structure of the course, why QA is important", "https://www.youtube.com/watch?v=rvnoNgYuyzc"],
       ["Homework Structure", "https://www.youtube.com/watch?v=XnDUmHrj1TM"],
       ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
-      ["Flipped Classrooms", "https://www.youtube.com/watch?v=7JMOsWPmlMk"],
-      ["Grader Expectations", "https://youtu.be/YEFMhYKOHmE"]
-    ],
-    "slides": [
-      ["Structure of the course, why QA is important", "https://docs.google.com/presentation/d/1_hXBscEXJmzmj-hiGPU0cjDF-B6fAgOVFi2F2g66TZA/edit?usp=sharing"],
-      ["How to take a class with me", "../CMSC_470/00b_howto.pdf"]
-    ],
-    "readings": [
-      ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
-      ["Question Answering for the Curated Web (Alternate)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
-      ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
-      ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
-      ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
-      ["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"]
-    ]
-  },
-
-  "background": {
-    "videos": [
+      ["Flipped Classrooms", "https://www.youtube.com/watch?v=7JMOsWPmlMk"],	  
       ["How to read the course webpage", "https://www.youtube.com/watch?v=5Og91_Cishs"],
       ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
       ["What AI Researchers can Learn from Trivia Nerds", "https://www.youtube.com/watch?v=_Vke0bN3MFE"],
@@ -79,7 +68,9 @@
       ["The Turing Test", "https://youtu.be/bdQIUv9FutE"],
       ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"]
     ],
-    "slides": [
+      "slides": [
+      ["Structure of the course, why QA is important", "https://docs.google.com/presentation/d/1_hXBscEXJmzmj-hiGPU0cjDF-B6fAgOVFi2F2g66TZA/edit?usp=sharing"],
+	  ["How to take a class with me", "../CMSC_470/00b_howto.pdf"],	  
       ["How question answering saved civilization", "https://docs.google.com/presentation/d/1CbmMbK71925ZztUh5W6dH58377ojHOhKMlTVNbTvVgg/edit?usp=sharing"],
       ["What AI Researchers can Learn from Trivia Nerds", "https://docs.google.com/presentation/d/1pY2ZVt7Avy0zro9nsLmDUbsgN8VXTKbW/edit?usp=sharing"],
       ["A history of recreational question answering", "https://docs.google.com/presentation/d/1RgcYxyHFdlrVHaZ_o7vXaZ_GjyVz0AQBOE-Y0EsVNSM/edit?usp=sharing"],
@@ -88,7 +79,13 @@
     "readings": [
       ["Introduction to Braniac", "https://www.ken-jennings.com/brainiacexcerpt1"],
       ["Turing's Two Tests for Intelligence", "https://soar.wichita.edu/bitstream/handle/10057/10701/10701_Turing_Two_Tests.pdf"],
-      ["The Watson Project", "https://ojs.aaai.org/index.php/aimagazine/article/view/2303"],
+	["The Watson Project", "https://ojs.aaai.org/index.php/aimagazine/article/view/2303"],
+      ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
+      ["Question Answering for the Curated Web (Alternate)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
+      ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
+      ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
+      ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
+	["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"],	
       ["Questioning Artificial Intelligence, Chapters 2–4", "textbook.pdf"],
       ["Myth", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/110-epic.tex"],
       ["Civilization", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"],
