@@ -68,8 +68,6 @@
     ],
     "readings": [
       ["Introduction to Braniac", "https://www.ken-jennings.com/brainiacexcerpt1"],
-      ["Turing's Two Tests for Intelligence", "https://soar.wichita.edu/bitstream/handle/10057/10701/10701_Turing_Two_Tests.pdf"],
-	["The Watson Project", "https://ojs.aaai.org/index.php/aimagazine/article/view/2303"],
       ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
       ["Question Answering for the Curated Web (Alternate)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
       ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
@@ -114,8 +112,10 @@
       ["GOFAI Approaches for QA", "https://docs.google.com/presentation/d/12T-1hoCewPbzgnrRzId8QLm-secYyMKiRudtuz0d-pU/edit?usp=sharing"]
     ],
     "readings": [
-      ["NLQA: The View from Here", "http://staffwww.dcs.shef.ac.uk/people/R.Gaizauskas/research/papers/jnle-qa.pdf"],
+	["NLQA: The View from Here", "http://staffwww.dcs.shef.ac.uk/people/R.Gaizauskas/research/papers/jnle-qa.pdf"],
+	["The Watson Project", "https://ojs.aaai.org/index.php/aimagazine/article/view/2303"],	
 	["Question Answering for the Curated Web, Chapter 3", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
+      ["Turing's Two Tests for Intelligence", "https://soar.wichita.edu/bitstream/handle/10057/10701/10701_Turing_Two_Tests.pdf"],	
 	["Textbook 3", "textbook-3.pdf"],
 	["Textbook 4", "textbook-4.pdf"]
     ]
