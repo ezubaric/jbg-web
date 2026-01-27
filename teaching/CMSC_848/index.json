@@ -32,9 +32,9 @@
 		       ["Ask Me Anything", "ama"],
 		       ["Project Poster Session: 13:30-15:30", "final"]],
     "hw_sequence": ["",
-		    ["Warmup: Threshold", ""],
-		    ["Presentation", ""],
-		    ["Prompting and Fine Tuning", ""],
+		    ["Warmup: Threshold", "https://github.com/Pinafore/848Q/tree/main/threshold"],
+		    ["Presentation", "https://github.com/Pinafore/848Q/tree/main/paper-presentation"],
+		    ["Prompting and Fine Tuning", "https://github.com/Pinafore/848Q/tree/main/prompt-ft"],
 		    ["RL", ""],
 		    ["Project Proposal", ""],
 		    ["Literature Review", ""],
@@ -47,14 +47,6 @@
 		   ],
     "specials": ["2026-05-11"],
     "topics": {
-"intro": {
-    "videos": [
-    ],
-    "slides": [
-    ],
-    "readings": [
-    ]
-  },
   "background": {
       "videos": [
       ["Structure of the course, why QA is important", "https://www.youtube.com/watch?v=rvnoNgYuyzc"],
@@ -64,9 +56,7 @@
       ["How to read the course webpage", "https://www.youtube.com/watch?v=5Og91_Cishs"],
       ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
       ["What AI Researchers can Learn from Trivia Nerds", "https://www.youtube.com/watch?v=_Vke0bN3MFE"],
-      ["A history of recreational question answering", "https://youtu.be/oRm2OuNl3UI"],
-      ["The Turing Test", "https://youtu.be/bdQIUv9FutE"],
-      ["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"]
+      ["A history of recreational question answering", "https://youtu.be/oRm2OuNl3UI"]
     ],
       "slides": [
       ["Structure of the course, why QA is important", "https://docs.google.com/presentation/d/1_hXBscEXJmzmj-hiGPU0cjDF-B6fAgOVFi2F2g66TZA/edit?usp=sharing"],
@@ -86,10 +76,8 @@
       ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
       ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
 	["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"],	
-      ["Questioning Artificial Intelligence, Chapters 2–4", "textbook.pdf"],
-      ["Myth", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/110-epic.tex"],
-      ["Civilization", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"],
-      ["Turing", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/130-turing.tex"]
+      ["Questioning Artificial Intelligence, Chapters 2", "textbook-2.pdf"],
+      ["Civilization (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"]
     ]
   },
 
@@ -109,15 +97,16 @@
     "readings": [
       ["IR Book Chapters 1, 6", "https://nlp.stanford.edu/IR-book/"],
       ["Evolution of Cranfield", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"],
-      ["Evolution of Cranfield (Alternate)", "https://drive.google.com/file/d/1xbT8HCh4-JxuSVxu2eacT2-C0MJy7Qka/view?usp=sharing"]
-    ]
+	["Evolution of Cranfield (Alternate)", "https://drive.google.com/file/d/1xbT8HCh4-JxuSVxu2eacT2-C0MJy7Qka/view?usp=sharing"],
+	["Textbook 3", "textbook-4.pdf"]
   },
-
   "historical": {
     "videos": [
       ["GOFAI Approaches for QA", "https://youtu.be/0butNAOBO0U"],
-      ["Statistical QA / Watson", "https://youtu.be/8BDjw1f5Jb4"],
-      ["KB QA", "https://youtu.be/NiJ7xLyscDs"],
+	["Statistical QA / Watson", "https://youtu.be/8BDjw1f5Jb4"],
+	["Watson on Jeopardy!", "https://youtu.be/WCIFUJ5oeRA"],
+	["KB QA", "https://youtu.be/NiJ7xLyscDs"],
+	      ["The Turing Test", "https://youtu.be/bdQIUv9FutE"],
       ["Feature Engineering in the Age of Deep Learning", "https://youtu.be/4-se75AuETA"],
       ["Feature Engineering for Quiz Bowl", "https://www.youtube.com/watch?v=IzKFgigocAg"]
     ],
@@ -126,7 +115,9 @@
     ],
     "readings": [
       ["NLQA: The View from Here", "http://staffwww.dcs.shef.ac.uk/people/R.Gaizauskas/research/papers/jnle-qa.pdf"],
-      ["Question Answering for the Curated Web, Chapter 3", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"]
+	["Question Answering for the Curated Web, Chapter 3", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
+	["Textbook 3", "textbook-3.pdf"],
+	["Textbook 4", "textbook-4.pdf"]
     ]
   },
 	  "neurallm1": {
