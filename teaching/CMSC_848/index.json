@@ -3,7 +3,7 @@
 	       "end": "2026-05-08",
 	       "days": ["W-MON", "W-WED"],
 	       "hw_day": "W-FRI"},
-    "class_sequence": [["Question Answering in Society", "background"],
+    "class_sequence": [["Question Answering in Society (And thanks to Snow Days, also IR)", "background"],
 		       ["Giving a Presentation of a Paper", "presentation"],		       
 		       ["Information Retrieval", "ir"],
 		       ["Good Old Fashioned QA", "historical"],
@@ -48,15 +48,21 @@
     "specials": ["2026-05-11"],
     "topics": {
   "background": {
-      "videos": [
+      "Videos (Overview)": [
       ["Structure of the course, why QA is important", "https://www.youtube.com/watch?v=rvnoNgYuyzc"],
       ["Homework Structure", "https://www.youtube.com/watch?v=XnDUmHrj1TM"],
       ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
       ["Flipped Classrooms", "https://www.youtube.com/watch?v=7JMOsWPmlMk"],	  
-      ["How to read the course webpage", "https://www.youtube.com/watch?v=5Og91_Cishs"],
+	  ["How to read the course webpage", "https://www.youtube.com/watch?v=5Og91_Cishs"]],
+      "Videos (General take on QA, setting up course topics)": [
       ["How question answering saved civilization", "https://youtu.be/ziX5MJ4VKY0"],
       ["What AI Researchers can Learn from Trivia Nerds", "https://www.youtube.com/watch?v=_Vke0bN3MFE"],
-      ["A history of recreational question answering", "https://youtu.be/oRm2OuNl3UI"]
+	  ["A history of recreational question answering", "https://youtu.be/oRm2OuNl3UI"]],
+      "Videos (Information Retrieval)": [
+      ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
+      ["TF-IDF", "https://www.youtube.com/watch?v=A5ounv0D_cs"],
+      ["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
+      ["The Cranfield Paradigm", "https://www.youtube.com/watch?v=L5cUjzjc_YE"]	  
     ],
       "slides": [
       ["Structure of the course, why QA is important", "https://docs.google.com/presentation/d/1_hXBscEXJmzmj-hiGPU0cjDF-B6fAgOVFi2F2g66TZA/edit?usp=sharing"],
@@ -64,39 +70,30 @@
       ["How question answering saved civilization", "https://docs.google.com/presentation/d/1CbmMbK71925ZztUh5W6dH58377ojHOhKMlTVNbTvVgg/edit?usp=sharing"],
       ["What AI Researchers can Learn from Trivia Nerds", "https://docs.google.com/presentation/d/1pY2ZVt7Avy0zro9nsLmDUbsgN8VXTKbW/edit?usp=sharing"],
       ["A history of recreational question answering", "https://docs.google.com/presentation/d/1RgcYxyHFdlrVHaZ_o7vXaZ_GjyVz0AQBOE-Y0EsVNSM/edit?usp=sharing"],
-      ["Watson on Jeopardy!", "https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing"]
-    ],
-    "readings": [
-      ["Introduction to Braniac", "https://www.ken-jennings.com/brainiacexcerpt1"],
-      ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
-      ["Question Answering for the Curated Web (Alternate)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
-      ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
-      ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
-      ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
-	["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"],	
-      ["Questioning Artificial Intelligence, Chapters 2", "textbook-2.pdf"],
-      ["Civilization (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"]
-    ]
-  },
-
-  "ir": {
-    "videos": [
-      ["What is information retrieval?", "https://youtu.be/U6KgqeJkhU0"],
-      ["TF-IDF", "https://www.youtube.com/watch?v=A5ounv0D_cs"],
-      ["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
-      ["The Cranfield Paradigm", "https://www.youtube.com/watch?v=L5cUjzjc_YE"]
-    ],
-    "slides": [
+	  ["Watson on Jeopardy!", "https://docs.google.com/presentation/d/13Cb7Bxz2NUGOPlO9ydAlpX1Y-zTcCo6k-wBvISPiruM/edit?usp=sharing"],
       ["What is information retrieval?", "../CMSC_470/01a_ir.pdf"],
       ["TF-IDF", "../CMSC_470/01b_tfidf.pdf"],
       ["Evaluation", "../CMSC_470/01c_evaluation.pdf"],
-      ["The Cranfield Paradigm", "https://docs.google.com/presentation/d/1RgcYxyHFdlrVHaZ_o7vXaZ_GjyVz0AQBOE-Y0EsVNSM/edit?usp=sharing"]
+      ["The Cranfield Paradigm", "https://docs.google.com/presentation/d/1RgcYxyHFdlrVHaZ_o7vXaZ_GjyVz0AQBOE-Y0EsVNSM/edit?usp=sharing"]	  
     ],
-    "readings": [
-      ["IR Book Chapters 1, 6", "https://nlp.stanford.edu/IR-book/"],
-      ["Evolution of Cranfield", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"],
-	["Evolution of Cranfield (Alternate)", "https://drive.google.com/file/d/1xbT8HCh4-JxuSVxu2eacT2-C0MJy7Qka/view?usp=sharing"],
-	["Textbook 3", "textbook-4.pdf"]]
+    "External Readings": [
+	["Introduction to Braniac", "https://www.ken-jennings.com/brainiacexcerpt1"],
+      ["Question Answering for the Curated Web, Chapter 1", "https://www.morganclaypool.com/doi/abs/10.2200/S0113ED1V01Y202109ICR076"],
+	["Question Answering for the Curated Web (Alternate Link)", "https://drive.google.com/file/d/17EWPu363knpUSSk7YL_lV_hU8iwLxCRh/view?usp=sharing"],
+          ["Evolution of Cranfield", "https://link.springer.com/chapter/10.1007/978-3-030-22948-1_2"],
+	["Evolution of Cranfield (Alternate)", "https://drive.google.com/file/d/1xbT8HCh4-JxuSVxu2eacT2-C0MJy7Qka/view?usp=sharing"]
+    ],
+      "Textbook": [
+      ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
+	  ["Questioning Artificial Intelligence, Chapter 2", "textbook-2.pdf"],
+	  ["Textbook 4", "textbook-4.pdf"]],
+      "Textbook Source (for corrections / comments)": [
+	  	  ["IR Book Chapters 1, 6", "https://nlp.stanford.edu/IR-book/"],
+      ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
+      ["Author (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/003-structure.tex"],
+	["Structure (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/004-structure.tex"],		  
+	["Civilization (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"]
+]
   },
   "historical": {
     "videos": [
