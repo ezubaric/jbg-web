@@ -8,3 +8,4 @@
 ~~ Category | Sentiment and Perspective
 ~~ Category | Deep Learning
 ~~ Venue | Workshop
+~~ Public | CLIMATE-FEVER introduces a publicly available dataset of real-world climate change claims paired with expert-annotated evidence, addressing the gap between synthetic fact-checking benchmarks and the complexity of real online misinformation. Claims are collected from both scientifically informed and climate-skeptical sources, vetted by climate scientists for verifiability, and linked to evidence from Wikipedia labeled as supporting, refuting, or insufficient. Unlike earlier datasets, CLIMATE-FEVER includes ambiguous and disputed claims, reflecting genuine uncertainty and expert disagreement. Baseline AI fact-checking models perform near chance on this dataset, demonstrating that real-world climate claims pose substantially harder reasoning challenges than existing benchmarks capture.
