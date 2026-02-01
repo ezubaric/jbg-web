@@ -17,7 +17,7 @@
 		       ["Writing a Paper", "paper"],
 		       ["IRT and Leaderboards", "irt"],
 		       "Midterm Review",
-		       "Midterm",
+		       "Midterm",  
 		       ["Adversarial", "adversarial"],
 		       ["Thinking / Reasoning Models", "reasoning"],		       
 		       ["Evaluation Pitfalls: Equivalence, MCQA, Bad Questions", "bad"],
@@ -86,7 +86,7 @@
       "Textbook": [
       ["Questioning Artificial Intelligence, Chapter 1", "textbook-1.pdf"],
 	  ["Questioning Artificial Intelligence, Chapter 2", "textbook-2.pdf"],
-	  ["Textbook 4", "textbook-4.pdf"]],
+	  ["Questioning Artificial Intelligence, Chapter 4 (first half)", "textbook-4.pdf"]],
       "Textbook Source (for corrections / comments)": [
 	  	  ["IR Book Chapters 1, 6", "https://nlp.stanford.edu/IR-book/"],
       ["About (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/002-about.tex"],
