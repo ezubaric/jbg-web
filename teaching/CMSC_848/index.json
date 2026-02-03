@@ -5,7 +5,6 @@
 	       "hw_day": "W-FRI"},
     "class_sequence": [["Question Answering in Society (And thanks to Snow Days, also IR)", "background"],
 		       ["Giving a Presentation of a Paper", "presentation"],		       
-		       ["Information Retrieval", "ir"],
 		       ["Good Old Fashioned QA", "historical"],
 		       ["LLMs", "llms"],
 		       ["QA Datasets", "data"],
@@ -50,7 +49,6 @@
   "background": {
       "Class Recording": ["Panopto (Requires sign in)", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ef07cec6-01a7-4a4d-87ad-b3e500df98e8"],
       "Videos (Overview)": [
-      ["Structure of the course, why QA is important", "https://www.youtube.com/watch?v=rvnoNgYuyzc"],
       ["Homework Structure", "https://www.youtube.com/watch?v=XnDUmHrj1TM"],
       ["How to take a class with me", "https://youtu.be/AhVmt15x3k8"],
       ["Flipped Classrooms", "https://www.youtube.com/watch?v=7JMOsWPmlMk"],	  
@@ -120,27 +118,22 @@
     ]
   },
 	  "neurallm1": {
-    "videos": [
-      ["Distributional Semantics", "https://youtu.be/vErGaMc80WM"],
-      ["Word2Vec", "https://youtu.be/QyrUentbkvw"],
-      ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
-      ["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
-      ["LSTM", "https://www.youtube.com/watch?v=nIVO2e9lZ84"]
-    ],
-    "slides": [
-      ["Distributional Semantics", "../CMSC_470/06a_distsim.pdf"],
-      ["Word2Vec", "../CMSC_470/06b_word2vec.pdf"],
-      ["RNN for Sentiment", "../CMSC_470/nlm_rnn_sentiment.pdf"],
-      ["RNN for LM", "../CMSC_470/nlm_rnn_lm.pdf"],
-      ["LSTM", "../CMSC_470/08b_lstm.pdf"]
-    ],
+
+
     "readings": [
       ["SNLP Chapter 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]
     ]
   },
-
-  "neurallm2": {
-    "videos": [
+	"llms": {
+    "Representation Learning Videos": [
+      ["Distributional Semantics", "https://youtu.be/vErGaMc80WM"],
+      ["Word2Vec", "https://youtu.be/QyrUentbkvw"],
+      ["RNN for Sentiment", "https://youtu.be/h4yA7f8o1fM"],
+	["RNN for LM", "https://youtu.be/KfaA5BC0Fus"],
+	"Sequence Models in Pytorch",
+	"Backpack Models"
+    ],	    
+    "Muppet Model Videos": [
       ["Neural Language Models", "https://youtu.be/KHpM3UXdMxM"],
       ["What to call these models?", "https://www.youtube.com/watch?v=u0DgoRVLTE8&t=1s"],
       ["Follow-up (Optional)", "https://youtu.be/40WCA7CIlDo"],
@@ -149,12 +142,19 @@
       ["Decoder", "https://youtu.be/ORzGEnHTSfk"],
       ["Implementation Details", "https://youtu.be/RTuW3r83c5E"]
     ],
-    "slides": [
+    "Representation Learning Slides": [
+      ["Distributional Semantics", "../CMSC_470/06a_distsim.pdf"],
+      ["Word2Vec", "../CMSC_470/06b_word2vec.pdf"],
+      ["RNN for Sentiment", "../CMSC_470/nlm_rnn_sentiment.pdf"],
+      ["RNN for LM", "../CMSC_470/nlm_rnn_lm.pdf"],
+      ["LSTM", "../CMSC_470/08b_lstm.pdf"]
+    ],	    
+    "Muppet Model Slides": [
       ["Neural Language Models", "http://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/18a_nlm.pdf"],
       ["Transformer Encoder / BERTology", "https://docs.google.com/presentation/d/1Wmte5rM9qgN-JHq34LFX8y3G2HebHKWRV9iu-p_fC2k/edit?usp=sharing"]
     ],
-    "readings": [
-      ["SNLP Chapter 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"],
+    "Readings:": [
+      ["SNLP 19 (Was 9)", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"],
       ["The Annotated Transformer", "https://nlp.seas.harvard.edu/2018/04/03/attention.html#background"]
     ]
   },
@@ -165,7 +165,8 @@
       ["Lost Opportunity of Conference Videos", "https://www.youtube.com/watch?v=IQAXiR6R9sI"],
       ["Why Virtual Conferences will Continue to Suck", "https://www.youtube.com/watch?v=KaexVZYZOMk"],
       ["How to Read a Paper", "https://drive.google.com/file/d/1ef3u0SBPzDPImLsYBH34N5bm2r8c_gcT/view?usp=sharing"],
-      ["How to Make a Good Presentation", "https://www.youtube.com/watch?v=K-AqbhLJMgU"],
+	["How to Make a Good Presentation", "https://www.youtube.com/watch?v=K-AqbhLJMgU"],
+	["The best presentations of ACL 2023", "https://www.youtube.com/watch?v=BhtDkEKSZog"],
       ["Letitia's recording setup (Optional)", "https://www.youtube.com/watch?v=y1fatu3Dh2E&t=307s"]
     ],
     "slides": [],
