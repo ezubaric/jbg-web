@@ -9,17 +9,17 @@
 		       ["LLMs", "llms"],
 		       ["QA Datasets", "data"],
 		       ["Extractive QA", "neuralqa"],
-		       ["RAG", "rag"],		       
+		       ["Generation", "generation"],		       
 		       ["Fact Checking", "factcheck"],
-		       ["Long Form QA", "longqa"],
 		       ["Conversational QA", "conversational"],
 		       ["Writing a Paper", "paper"],
-		       ["IRT and Leaderboards", "irt"],
+		       ["IRT and Leaderboards", "irt"],		       
 		       "Midterm Review",
 		       "Midterm",  
 		       ["Adversarial", "adversarial"],
 		       ["Thinking / Reasoning Models", "reasoning"],		       
-		       ["Evaluation Pitfalls: Equivalence, MCQA, Bad Questions", "bad"],
+		       ["Evaluation Pitfalls: Bad Questions", "bad"],
+		       ["Evaluation Pitfalls: MCQA", "bad"],	 		       
 		       ["Collaboration", "collaboration"],
 		       ["Multilingual / Multicultural", "multilingual"],		       
 		       ["Visual QA", "visual"],
@@ -179,14 +179,12 @@
     "videos": [
       ["QA Datasets", "https://youtu.be/p8tnM1_waQ8"],
       ["Cranfield vs. Manchester", "https://youtu.be/9peCcstwGtU"],
-      ["Multihop", "https://youtu.be/nEvf9Vzkvls"],
       ["Natural Questions Five Years Later", "https://youtu.be/ZUN0GkaekHw"],
       ["Do iid questions even Exist?", "https://youtu.be/yhgJ1pPY_oA"]
     ],
     "slides": [
       ["QA Datasets", "https://docs.google.com/presentation/d/1OgijvTFAEKugndOYiHRAOQ5IZsgKACpZIIXxyf_rm2g/edit?usp=sharing"],
-      ["Cranfield vs. Manchester", "http://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/qa_cm.pdf"],
-      ["Multihop", "https://docs.google.com/presentation/d/1f8et7rYOD9WvDiVLNN2W1THK54YWdiC5gQPrxddfVSQ/edit?usp=sharing"]
+      ["Cranfield vs. Manchester", "http://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/qa_cm.pdf"]
     ],
     "readings": [
       ["SNLP Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"],
@@ -198,11 +196,7 @@
     "videos": [
       ["Dr. QA", "https://youtube.com/video/ZJA3g9TxjlA"],
       ["Dense Retrieval", "https://www.youtube.com/watch?v=w9eylxli07U"],
-      ["BERT for MRQA", "https://youtu.be/b38opGM9R2w"],
-      ["RL Review", "https://drive.google.com/file/d/1uPY1vfnu9r23By5GtYwQTe2mmSNp_QEY/view?usp=drive_link"],
-      ["Alignment", "https://drive.google.com/file/d/1DoBLaaUG9lug4I0R1lbBEzMgQlZ-JvcV/view?usp=drive_link"],
-      ["Policy Gradient", "https://drive.google.com/file/d/1ns1WWRz2bd1pCKmduU9nMtMCkpoyVJeu/view?usp=drive_link"],
-      ["RLHF", "https://drive.google.com/file/d/18sEC9c4Aj_yx-pCHRa6TnLAzjxsnI712/view?usp=drive_link"]
+      ["BERT for MRQA", "https://youtu.be/b38opGM9R2w"]
     ],
     "slides": [
       ["Dr. QA", "../CMSC_470/09d_drqa.pdf"],
@@ -247,8 +241,12 @@
     ]
   },
 
-  "longqa": {
-    "videos": [
+  "generation": {
+      "videos": [
+      ["RL Review", "https://drive.google.com/file/d/1uPY1vfnu9r23By5GtYwQTe2mmSNp_QEY/view?usp=drive_link"],
+      ["Alignment", "https://drive.google.com/file/d/1DoBLaaUG9lug4I0R1lbBEzMgQlZ-JvcV/view?usp=drive_link"],
+      ["Policy Gradient", "https://drive.google.com/file/d/1ns1WWRz2bd1pCKmduU9nMtMCkpoyVJeu/view?usp=drive_link"],
+	  ["RLHF", "https://drive.google.com/file/d/18sEC9c4Aj_yx-pCHRa6TnLAzjxsnI712/view?usp=drive_link"],	  
       ["Generation for QA", "https://www.youtube.com/watch?v=au7uABXMBNg"],
       ["Long QA", "https://youtu.be/MeaJ3ADmbPo"]
     ],
