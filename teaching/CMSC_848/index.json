@@ -12,20 +12,20 @@
 		       ["Generation", "generation"],		       
 		       ["Fact Checking", "factcheck"],
 		       ["Conversational QA", "conversational"],
-		       ["Writing a Paper", "paper"],
+		       ["Writing a Paper", "writing"],
 		       ["IRT and Leaderboards", "irt"],		       
 		       "Midterm Review",
 		       "Midterm",  
-		       ["Adversarial", "adversarial"],
+		       ["Human in the Loop", "hitl"],
 		       ["Thinking / Reasoning Models", "reasoning"],		       
-		       ["Evaluation Pitfalls: Bad Questions", "bad"],
-		       ["Evaluation Pitfalls: MCQA", "bad"],	 		       
-		       ["Collaboration", "collaboration"],
+		       ["Evaluation Pitfalls: Counterfactuals", "counterfactuals"],
+		       ["Evaluation Pitfalls: MCQA", "mcqa"],	 		       
+		       ["Collaboration", "cooperation"],
 		       ["Multilingual / Multicultural", "multilingual"],		       
-		       ["Visual QA", "visual"],
-		       ["KB and Tabular QA", "tabular"],		       
-		       ["Audio QA", "audio"],
-		       ["Personalization", "personalization"],
+		       ["Multimodal QA", "multimodal"],
+		       ["Explanation", "explanation"],		       
+		       ["Calibration", "calibration"],
+		       ["Evaluation", "evaluation"],
 		       ["Other Formats", "other"],
 		       ["Paper Clinic", "clinic"],
 		       ["Ask Me Anything", "ama"],
@@ -62,7 +62,7 @@
       ["TF-IDF", "https://www.youtube.com/watch?v=A5ounv0D_cs"],
       ["Evaluation", "https://youtu.be/BxAzuCSvF8s"],
       ["The Cranfield Paradigm", "https://www.youtube.com/watch?v=L5cUjzjc_YE"]	  
-    ],
+      ],
       "slides": [
       ["Structure of the course, why QA is important", "https://docs.google.com/presentation/d/1_hXBscEXJmzmj-hiGPU0cjDF-B6fAgOVFi2F2g66TZA/edit?usp=sharing"],
 	  ["How to take a class with me", "../CMSC_470/00b_howto.pdf"],	  
@@ -94,6 +94,28 @@
 	["Civilization (link for pull requests)", "https://github.com/Pinafore/questioning-aritifical-intelligence/blob/main/chapters/120-civilization.tex"]
 ]
   },
+	"reasoning": {
+	    "Videos": [["Hierarchical Reasoning Model", "https://drive.google.com/file/d/1joiJyQjVSh49eiaQwvt9nb9zBiwCStRQ/view?usp=sharing"],
+		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://arxiv.org/abs/2510.04871"]
+		      ],
+    "Readings": [["Hierarchical Reasoning Model", "https://arxiv.org/abs/2506.21734"],
+		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://drive.google.com/file/d/1HIZAszFbGVU6eT3Rh2G9XNnLbb0BtISZ"]]
+},
+	"counterfactuals": {
+	    "videos": [["Competition: Intro", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=70b7975e-9678-4c7a-8f3a-b3f40100a688"],
+		      ["Competition: Results", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a8f99b34-dbf0-4a75-87df-b3f40100a2bf"],
+		       ["Competition: Discussion", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e7a0d3d1-46b6-4351-8f28-b3f401009d59"],
+		       ["Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence", "https://youtu.be/65yCP0qPBLA"]],
+	    "readings": [["Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals", "https://arxiv.org/pdf/2402.11655"],
+			 ["Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence", "https://arxiv.org/abs/2601.11886"]]
+	},
+	"explanation": {
+	    "Videos": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://www.youtube.com/watch?v=Tx55_Rgyb6Y"]],
+	    "Readings": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://arxiv.org/abs/2512.15674"], ""]
+	},
+	      "clinic": {
+    "Videos": [["What's a Paper Clinic?", "https://www.youtube.com/watch?v=eHs6WC72GWA"]]
+},
   "historical": {
     "videos": [
       ["GOFAI Approaches for QA", "https://youtu.be/0butNAOBO0U"],
@@ -124,7 +146,11 @@
     "readings": [
       ["SNLP Chapter 9", "https://web.stanford.edu/~jurafsky/slp3/9.pdf"]
     ]
-  },
+	  },
+	"evaluation": {
+    "Videos": [["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://youtu.be/q2tLilaoqSM?si=4gIHJKsuzeCYjnet"]],
+    "Readings": [["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://arxiv.org/abs/2508.13144"]]
+},
 	"llms": {
     "Representation Learning Videos": [
       ["Distributional Semantics", "https://youtu.be/vErGaMc80WM"],
@@ -158,8 +184,11 @@
       ["SNLP 19 (Was 9)", "https://web.stanford.edu/~jurafsky/slp3/19.pdf"],
       ["The Annotated Transformer", "https://nlp.seas.harvard.edu/2018/04/03/attention.html#background"]
     ]
-  },
-
+	},
+	"abstention" : {
+    "Videos": [["LLMs Encode Harmfulness and Refusal Separately", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=445a32fc-8b06-4f2a-9b7c-b3f401021c93"]],
+    "Readings": [["LLMs Encode Harmfulness and Refusal Separately", "https://www.arxiv.org/abs/2507.11878"]]
+},
   "presentation": {
     "videos": [
       ["How I Record Videos", "https://youtu.be/oLlrpro0zQE"],
@@ -174,7 +203,11 @@
       ["Role-playing seminar", "https://colinraffel.com/blog/role-playing-seminar.html"]
     ]
   },
-
+	"multilingual": {
+	    "videos": [      ["International QA Formats", "https://youtu.be/Fx3Xr5HYDEw"],
+			     ["The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities", "https://youtu.be/OKHzKfdP_Ug"]],
+	    "readings": [["The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities", "https://arxiv.org/abs/2508.05525"]]
+	},
   "data": {
     "videos": [
       ["QA Datasets", "https://youtu.be/p8tnM1_waQ8"],
@@ -200,10 +233,7 @@
     ],
     "slides": [
       ["Dr. QA", "../CMSC_470/09d_drqa.pdf"],
-      ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"],
-      ["RL Review", "rl_intro.pdf"],
-      ["Alignment", "https://docs.google.com/presentation/d/1stZij7ztz5bXAk4hNqbLK_F-ufFxu6heVznBoyHs6Mo/edit?usp=sharing"],
-      ["Policy Gradient", "rl_policy_gradient.pdf"]
+      ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"]
     ],
     "readings": [
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
@@ -230,14 +260,17 @@
   "factcheck": {
     "videos": [
       ["NLI", "https://youtu.be/a5NfaNS_ObE"],
-      ["Fact Checking", "https://youtu.be/t9zKbcLPTm8"]
+	["Fact Checking", "https://youtu.be/t9zKbcLPTm8"],
+	["Complex Claim Verification with Evidence Retrieved in the Wild", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=42c8f36a-c4f6-40f9-a7d1-b3f40101ee6f"]
+	
     ],
     "slides": [
       ["NLI Slides", "https://docs.google.com/presentation/d/1x_4h8YXPGTUZ7le9aixeKbJ9nmZ-ozw0t_zhtOmC8AQ/edit?usp=sharing"]
     ],
     "readings": [
       ["NLI", "https://aclanthology.org/2020.eval4nlp-1.10.pdf"],
-      ["Automated Fact Checking", "https://arxiv.org/pdf/2108.11896.pdf"]
+	["Automated Fact Checking", "https://arxiv.org/pdf/2108.11896.pdf"],
+	["Complex Claim Verification with Evidence Retrieved in the Wild", "https://arxiv.org/pdf/2305.11859.pdf"]
     ]
   },
 
@@ -260,36 +293,47 @@
   },
 
   "conversational": {
-    "videos": [
-      ["Conversational QA", "https://youtu.be/HO-w0LYZDho"]
+      "videos": [
+	  ["Teaching Models to Balance Resisting and Accepting Persuasion", "https://drive.google.com/drive/folders/1rKFln50Kegw3mjMy42QAutkdexfv-ER1?usp=drive_link"],
+	  ["Personalized QA", "https://youtu.be/yVnWKVp2v6Q"],
+	  ["Conversational QA", "https://youtu.be/HO-w0LYZDho"]
     ],
     "slides": [],
     "readings": [
-      ["Conversational Information Seeking (Chapters 2,7)", "https://arxiv.org/pdf/2201.08808.pdf"],
-      ["Ditch the Gold Standard: Re-evaluating Conversational Question Answering", "https://arxiv.org/pdf/2112.08812.pdf"]
+	["Teaching Models to Balance Resisting and Accepting Persuasion", "https://arxiv.org/pdf/2410.14596"],
+	["Conversational Information Seeking (Chapters 2,7)", "https://arxiv.org/pdf/2201.08808.pdf"],
+	["Ditch the Gold Standard: Re-evaluating Conversational Question Answering", "https://arxiv.org/pdf/2112.08812.pdf"]
     ]
   },
 
-  "paper1": {
+  "writing": {
     "videos": [
       ["Why writing well is important", "https://youtu.be/p_6_LLm9Ryg"],
       ["How to structure sentences and paragraphs", "https://youtu.be/I21kWU-OdHM"],
       ["What a good paper looks like", "https://youtu.be/JRg5bx_iecQ"],
       ["How to write an effective abstract", "https://youtu.be/0h8woOdNSN4"],
-      ["Citation mistakes", "https://youtu.be/B8_aCjhSjjM"]
+	["Citation mistakes", "https://youtu.be/B8_aCjhSjjM"],
+      ["Writing with LaTeX", "https://youtu.be/fBS9jPz-Gu8"],
+      ["Writing for Multiple Audiences", "https://www.youtube.com/watch?v=nEFahEyC-wE"],
+      ["How to Review a Paper", "https://www.youtube.com/watch?v=gVTHnRD4emg"]
     ],
-    "slides": [],
     "readings": [
       ["On Writing Well (Part I)", "https://www.google.com/url?q=https%3A%2F%2Fceulearning.ceu.edu%2Fpluginfile.php%2F100337%2Fmod_forum%2Fattachment%2F9319%2FZinsser%2520On%2520Writing%2520Well%2520pt1.pdf"]
     ]
   },
-
-  "leaderboards": {
+"ama": {
+    "Videos": [["Course Evals", "https://www.youtube.com/watch?v=_4UX8ep97NU"],
+	       ["QA as Gameshow", "https://youtu.be/oHD_l4X8ag0"],
+      ["You got a PhD in Computational Linguistics ... what now?", "https://youtu.be/3e6TchIg55k"],
+      ["Optimizing ML for Society", "https://www.youtube.com/watch?v=BuESxqQwgmw"],
+      ["How far off were my predictions? and p(Doom)", "https://www.youtube.com/watch?v=5AoB-00u7-c"]],
+    "Readings": [["", ""], ""]
+},
+  "irt": {
     "videos": [
       ["History of Standardized Tests", "https://youtu.be/_pjXLtF4k18"],
       ["IRT", "https://youtu.be/n4W4Gwwkbqg"],
-      ["IRT for QA Eval", "https://youtu.be/Mg-WHxUWZxc"],
-      ["QA as Gameshow", "https://youtu.be/oHD_l4X8ag0"]
+      ["IRT for QA Eval", "https://youtu.be/Mg-WHxUWZxc"]
     ],
     "slides": [],
     "readings": [
@@ -297,23 +341,18 @@
       ["Introduction to IRT for NLP", "https://aclanthology.org/D16-1062.pdf"]
     ]
   },
-
-
-  "paper2": {
+  "hitl": {
     "videos": [
-      ["Writing with LaTeX", "https://youtu.be/fBS9jPz-Gu8"],
-      ["Writing for Multiple Audiences", "https://www.youtube.com/watch?v=nEFahEyC-wE"],
-      ["How to Review a Paper", "https://www.youtube.com/watch?v=gVTHnRD4emg"],
-      ["Taking advantage of virtual presentations", "https://www.youtube.com/watch?v=IQAXiR6R9sI&feature=youtu.be"]
+      ["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://www.dropbox.com/scl/fi/hx0vj7efto5jwhtha0i6l/848Q.mp4?rlkey=kn86v5tfaprrz2vaa99o8ekdg&st=fkeen4s2&dl=0"]
     ],
     "slides": [],
     "readings": [
-      ["A Beginner's Guide to LaTeX", "https://www.cs.princeton.edu/courses/archive/spr10/cos433/Latex/latex-guide.pdf"],
-      ["How to Review Conference Submissions", "https://journals.sagepub.com/stoken/default+domain/6HHM3JZBNIANJXWIWRSK/full"]
+      ["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://clinicalml.org/publication/mozannar-2023-exact/"]
     ]
   },
 
-  "hitl": {
+	
+  "cooperation": {
     "videos": [
       ["What makes for an explanation", "https://youtu.be/B3pu8J6AtXc"],
       ["QA Explanation", "https://youtu.be/1-AHgE-IXDs"],
@@ -322,15 +361,12 @@
     ],
     "slides": [],
     "readings": [
-      ["Red Teaming Language Models with Language Models", "https://aclanthology.org/2022.emnlp-main.225/"],
-      ["Toward a Rigorous Science of Interpretable Machine Learning", "https://arxiv.org/abs/1702.08608"],
-      ["Mythos of Interpretability", "https://arxiv.org/abs/1606.03490"]
+      ["Toward a Rigorous Science of Interpretable Machine Learning", "https://arxiv.org/abs/1702.08608"]
     ]
   },
 
   "multimodal": {
     "videos": [
-      ["An Empirical Study on Leveraging Scene Graphs for Visual Question Answering", "https://youtu.be/KJ7WSe9qFLQ"],
       ["Speech", "https://youtu.be/prEJX8R0ryU"],
       ["Images", "https://youtu.be/yo9ayWIDwk4"],
       ["Manchester Multimedia Questions", "https://youtu.be/EOYLjMrrS-E"]
@@ -339,15 +375,10 @@
       ["Speech Slides", "https://docs.google.com/presentation/d/1nCebsx_sELbCxs9wboTRaxJGsPHe6LSQisHzspkG5sM/edit?usp=sharing"]
     ],
     "readings": [
-      ["An Empirical Study on Leveraging Scene Graphs for Visual Question Answering", "https://arxiv.org/pdf/1907.12133.pdf"],
       ["A Survey on VQA: Datasets and Approaches", "https://arxiv.org/pdf/2105.00421.pdf"]
     ]
   },
 
-  "personalization": {
-    "videos": [
-      ["Personalized QA", "https://youtu.be/yVnWKVp2v6Q"]
-    ],
     "slides": [],
     "readings": [
       ["Episodic Memory Question Answering", "https://arxiv.org/abs/2205.01652"],
@@ -356,13 +387,14 @@
   },
 
   "other": {
-    "videos": [
-      ["International QA Formats", "https://youtu.be/Fx3Xr5HYDEw"],
+      "videos": [
+	  "Factual Inconsistencies in Multilingual Wikipedia Tables",	  
       ["Crosswords", "https://www.youtube.com/watch?v=AyAyQCfHp5M"],
       ["Multiple Choice", "https://www.youtube.com/watch?v=DnMOZ7DAZA8"]
     ],
     "slides": [],
-    "readings": [
+      "readings": [
+	  ["Factual Inconsistencies in Multilingual Wikipedia Tables", "https://arxiv.org/abs/2507.18406"],
       ["Dr. Fill", "https://www.jair.org/index.php/jair/article/view/10741/25656"]
     ]
   }
