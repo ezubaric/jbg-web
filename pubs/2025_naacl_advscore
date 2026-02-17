@@ -1,7 +1,7 @@
 ~~ Bibtex | inproceedings
 ~~ Title |  ADVSCORE: A Metric for the Evaluation and Creation of Adversarial Benchmarks
 ~~ Author | Yoo Yeon Sung and Maharshi Gor and Eve Fleisig and Ishani Mondal and Jordan Lee Boyd-Graber
-~~ Journal | North American Association for Computational Linguistics
+~~ Booktitle | North American Association for Computational Linguistics
 ~~ Year | 2025
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Deep Learning

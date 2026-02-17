@@ -13,18 +13,18 @@
 		       ["Fact Checking", "factcheck"],
 		       ["Conversational QA", "conversational"],
 		       ["Writing a Paper", "writing"],
-		       ["IRT and Leaderboards", "irt"],		       
+		       ["IRT and Leaderboards", "irt"],
+		       ["QA Variants", "variants"],
+		       ["Calibration", "calibration"],
+		       ["Collaboration", "cooperation"],		       
 		       "Midterm Review",
 		       "Midterm",  
 		       ["Human in the Loop", "hitl"],
 		       ["Thinking / Reasoning Models", "reasoning"],		       
 		       ["Evaluation Pitfalls: Counterfactuals", "counterfactuals"],
-		       ["Evaluation Pitfalls: MCQA", "mcqa"],	 		       
-		       ["Collaboration", "cooperation"],
 		       ["Multilingual / Multicultural", "multilingual"],		       
 		       ["Multimodal QA", "multimodal"],
 		       ["Explanation", "explanation"],		       
-		       ["Calibration", "calibration"],
 		       ["Evaluation", "evaluation"],
 		       ["Other Formats", "other"],
 		       ["Paper Clinic", "clinic"],
@@ -106,7 +106,8 @@
 		      ["Competition: Results", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a8f99b34-dbf0-4a75-87df-b3f40100a2bf"],
 		       ["Competition: Discussion", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e7a0d3d1-46b6-4351-8f28-b3f401009d59"],
 		       ["Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence", "https://youtu.be/65yCP0qPBLA"]],
-	    "readings": [["Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals", "https://arxiv.org/pdf/2402.11655"],
+	    "readings": ["Textbook 11",
+			 ["Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals", "https://arxiv.org/pdf/2402.11655"],
 			 ["Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence", "https://arxiv.org/abs/2601.11886"]]
 	},
 	"explanation": {
@@ -148,8 +149,19 @@
     ]
 	  },
 	"evaluation": {
-    "Videos": [["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://youtu.be/q2tLilaoqSM?si=4gIHJKsuzeCYjnet"]],
-    "Readings": [["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://arxiv.org/abs/2508.13144"]]
+	    "Videos": [["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://youtu.be/q2tLilaoqSM?si=4gIHJKsuzeCYjnet"],
+		       ["What's in a Name? Answer Equivalence For Open-Domain Question Answering", "https://youtu.be/YdOmmhFKkf0"]],
+	    "Readings": [["What's in a Name? Answer Equivalence For Open-Domain Question Answering", "http://cs.umd.edu/~jbg//docs/2021_emnlp_answer_equiv.pdf"],
+			 ["Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation", "https://arxiv.org/abs/2508.13144"]]
+	},
+	"variants": {
+	    "Videos": [["MCQA", "https://www.youtube.com/watch?v=DnMOZ7DAZA8"],
+		       ["MCQA Bad", "https://youtu.be/XrA0jGuLIVQ"],
+		       ["Multihop", "https://youtu.be/nEvf9Vzkvls"],
+		       ["MQuAKE: Assessing Knowledge Editing in Language Models via Multi-Hop Questions", "https://youtu.be/kTOjoNEDUzI"]],
+	    "Readings": ["Textbook 8",
+			 ["MQuAKE: Assessing Knowledge Editing in Language Models via Multi-Hop Questions", "https://arxiv.org/pdf/2305.14795.pdf"],
+			 ["Which of These Best Describes Multiple Choice Evaluation with LLMs? A) Forced B) Flawed C) Fixable D) All of the Above", "http://cs.umd.edu/~jbg//docs/2025_acl_mcqa_bad.pdf"]]
 },
 	"llms": {
     "Representation Learning Videos": [
@@ -185,7 +197,7 @@
       ["The Annotated Transformer", "https://nlp.seas.harvard.edu/2018/04/03/attention.html#background"]
     ]
 	},
-	"abstention" : {
+	"calibration" : {
     "Videos": [["LLMs Encode Harmfulness and Refusal Separately", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=445a32fc-8b06-4f2a-9b7c-b3f401021c93"]],
     "Readings": [["LLMs Encode Harmfulness and Refusal Separately", "https://www.arxiv.org/abs/2507.11878"]]
 },
@@ -196,7 +208,8 @@
       ["Why Virtual Conferences will Continue to Suck", "https://www.youtube.com/watch?v=KaexVZYZOMk"],
       ["How to Read a Paper", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5de5a4a-7be0-434b-8363-b3e6017d1bfc"],
 	["How to Make a Good Presentation", "https://www.youtube.com/watch?v=K-AqbhLJMgU"],
-	["The best presentations of ACL 2023", "https://www.youtube.com/watch?v=BhtDkEKSZog"],
+		["How to Present a Figure", "https://www.youtube.com/watch?v=pbrxGnL3tvQ"],
+	["The best presentations of ACL 2023 (Optional)", "https://www.youtube.com/watch?v=BhtDkEKSZog"],
       ["Letitia's recording setup (Optional)", "https://www.youtube.com/watch?v=y1fatu3Dh2E&t=307s"]
     ],
     "readings": [
@@ -219,9 +232,10 @@
       ["QA Datasets", "https://docs.google.com/presentation/d/1OgijvTFAEKugndOYiHRAOQ5IZsgKACpZIIXxyf_rm2g/edit?usp=sharing"],
       ["Cranfield vs. Manchester", "http://users.umiacs.umd.edu/~jbg/teaching/CMSC_723/qa_cm.pdf"]
     ],
-    "readings": [
-      ["SNLP Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"],
-      ["Taxonomy of NLP QA (Optional)", "https://arxiv.org/pdf/2107.12708.pdf"]
+      "readings": [
+	  "Textbook 5",
+	  ["SNLP Chapter 23", "https://web.stanford.edu/~jurafsky/slp3/23.pdf"],
+	  ["Taxonomy of NLP QA (Optional)", "https://arxiv.org/pdf/2107.12708.pdf"]
     ]
   },
 
@@ -235,7 +249,8 @@
       ["Dr. QA", "../CMSC_470/09d_drqa.pdf"],
       ["Dense Retrieval", "https://docs.google.com/presentation/d/17g-FG5jqvhQVGSkLI1BH3d7T2prTGTHcd3CeG7EDeVA/edit?usp=sharing"]
     ],
-    "readings": [
+      "readings": [
+	  "Textbook 9",
       ["MRC Literature Review", "https://www.cambridge.org/core/journals/natural-language-engineering/article/survey-on-machine-reading-comprehension-systems/23FBCE30CB4325538E7DD08A7924315F"]
     ]
   },
@@ -315,7 +330,11 @@
 	["Citation mistakes", "https://youtu.be/B8_aCjhSjjM"],
       ["Writing with LaTeX", "https://youtu.be/fBS9jPz-Gu8"],
       ["Writing for Multiple Audiences", "https://www.youtube.com/watch?v=nEFahEyC-wE"],
-      ["How to Review a Paper", "https://www.youtube.com/watch?v=gVTHnRD4emg"]
+	["How to Review a Paper", "https://www.youtube.com/watch?v=gVTHnRD4emg"],
+	["The Grammar of Graphics", "https://youtu.be/48y3-ITKWFI"],
+	["Introducing Plotnine", "https://www.youtube.com/watch?v=gpNKr5hv4M0"],
+	["Napoleon in Russia", "https://www.youtube.com/watch?v=-lgKvN6kGBk"],
+      ["How not to visualize something", "https://www.youtube.com/watch?v=rwo_dyqdno0"]
     ],
     "readings": [
       ["On Writing Well (Part I)", "https://www.google.com/url?q=https%3A%2F%2Fceulearning.ceu.edu%2Fpluginfile.php%2F100337%2Fmod_forum%2Fattachment%2F9319%2FZinsser%2520On%2520Writing%2520Well%2520pt1.pdf"]
@@ -326,19 +345,22 @@
 	       ["QA as Gameshow", "https://youtu.be/oHD_l4X8ag0"],
       ["You got a PhD in Computational Linguistics ... what now?", "https://youtu.be/3e6TchIg55k"],
       ["Optimizing ML for Society", "https://www.youtube.com/watch?v=BuESxqQwgmw"],
-      ["How far off were my predictions? and p(Doom)", "https://www.youtube.com/watch?v=5AoB-00u7-c"]],
-    "Readings": [["", ""], ""]
+	       ["How far off were my predictions? and p(Doom)", "https://www.youtube.com/watch?v=5AoB-00u7-c"]],
+    "Reading": ["Textbook 12", "Textbook 13"]
 },
   "irt": {
-    "videos": [
+      "videos": [
+	  ["Connection between ELO, BT, and IRT", "https://www.youtube.com/watch?v=vMmEY3H63EQ"],
       ["History of Standardized Tests", "https://youtu.be/_pjXLtF4k18"],
       ["IRT", "https://youtu.be/n4W4Gwwkbqg"],
       ["IRT for QA Eval", "https://youtu.be/Mg-WHxUWZxc"]
     ],
     "slides": [],
-    "readings": [
+      "readings": [
+	  "Textbook 10",
       ["Recent Developments in Item Response Theory with Implications for Teacher Certification", "https://www.jstor.org/stable/1167313?seq=1"],
-      ["Introduction to IRT for NLP", "https://aclanthology.org/D16-1062.pdf"]
+	  ["Introduction to IRT for NLP", "https://aclanthology.org/D16-1062.pdf"],
+	  ["Fluid Benchmarking", "https://buff.ly/vAfamAd"]
     ]
   },
   "hitl": {
@@ -374,17 +396,12 @@
     "slides": [
       ["Speech Slides", "https://docs.google.com/presentation/d/1nCebsx_sELbCxs9wboTRaxJGsPHe6LSQisHzspkG5sM/edit?usp=sharing"]
     ],
-    "readings": [
-      ["A Survey on VQA: Datasets and Approaches", "https://arxiv.org/pdf/2105.00421.pdf"]
+      "readings": [
+	  "Textbook 7",
+	  ["A Survey on VQA: Datasets and Approaches", "https://arxiv.org/pdf/2105.00421.pdf"]
     ]
   },
 
-    "slides": [],
-    "readings": [
-      ["Episodic Memory Question Answering", "https://arxiv.org/abs/2205.01652"],
-      ["Situated QA", "https://arxiv.org/abs/2109.06157"]
-    ]
-  },
 
   "other": {
       "videos": [
@@ -398,5 +415,5 @@
       ["Dr. Fill", "https://www.jair.org/index.php/jair/article/view/10741/25656"]
     ]
   }
-    }
+}
 }
