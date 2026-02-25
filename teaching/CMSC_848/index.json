@@ -16,7 +16,6 @@
 		       ["IRT and Leaderboards", "irt"],
 		       ["QA Variants", "variants"],
 		       ["Calibration", "calibration"],
-		       ["Collaboration", "cooperation"],		       
 		       "Midterm Review",
 		       "Midterm",  
 		       ["Human in the Loop", "hitl"],
@@ -35,14 +34,14 @@
 		    ["Presentation", "https://github.com/Pinafore/848Q/tree/main/paper-presentation"],
 		    ["Prompting and Fine Tuning", "https://github.com/Pinafore/848Q/tree/main/prompt-ft"],
 		    ["RL", "https://github.com/Pinafore/848Q/tree/main/rl-ft"],
-		    ["Project Proposal", ""],
-		    ["Literature Review", ""],
+		    ["Project Proposal", "https://github.com/Pinafore/848Q/tree/main/project"],
+		    ["Literature Review", "https://github.com/Pinafore/848Q/tree/main/project"],
 		    "",		    
-		    ["Baseline", ""],
-		    ["Abstract / Intro", ""],
-		    ["Methods", ""],
-		    ["Figures", ""],
-		    ["Complete Draft", ""]
+		    ["Baseline", "https://github.com/Pinafore/848Q/tree/main/project"],
+		    ["Abstract / Intro", "https://github.com/Pinafore/848Q/tree/main/project"],
+		    ["Methods", "https://github.com/Pinafore/848Q/tree/main/project"],
+		    ["Figures", "https://github.com/Pinafore/848Q/tree/main/project"],
+		    ["Complete Draft", "https://github.com/Pinafore/848Q/tree/main/project"]
 		   ],
     "specials": ["2026-05-11"],
     "topics": {
@@ -364,28 +363,23 @@
     ]
   },
   "hitl": {
-    "videos": [
-      ["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://www.dropbox.com/scl/fi/hx0vj7efto5jwhtha0i6l/848Q.mp4?rlkey=kn86v5tfaprrz2vaa99o8ekdg&st=fkeen4s2&dl=0"]
+      "videos": [
+	  ["What makes for an explanation", "https://youtu.be/B3pu8J6AtXc"],
+	  ["QA Explanation", "https://youtu.be/1-AHgE-IXDs"],
+	  ["Cooperative QA", "https://www.youtube.com/watch?v=PQGcya_pxhE"],
+	  ["Adversarial QA", "https://www.youtube.com/watch?v=ipLDqWhobN8"],	  
+	  ["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://www.dropbox.com/scl/fi/hx0vj7efto5jwhtha0i6l/848Q.mp4?rlkey=kn86v5tfaprrz2vaa99o8ekdg&st=fkeen4s2&dl=0"]
     ],
     "slides": [],
     "readings": [
-      ["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://clinicalml.org/publication/mozannar-2023-exact/"]
+	["Who Should Predict? Exact Algorithms For Learning to Defer to Humans", "https://clinicalml.org/publication/mozannar-2023-exact/"],
+	["Toward a Rigorous Science of Interpretable Machine Learning", "https://arxiv.org/abs/1702.08608"]
     ]
+
+
+     
   },
 
-	
-  "cooperation": {
-    "videos": [
-      ["What makes for an explanation", "https://youtu.be/B3pu8J6AtXc"],
-      ["QA Explanation", "https://youtu.be/1-AHgE-IXDs"],
-      ["Cooperative QA", "https://www.youtube.com/watch?v=PQGcya_pxhE"],
-      ["Adversarial QA", "https://www.youtube.com/watch?v=ipLDqWhobN8"]
-    ],
-    "slides": [],
-    "readings": [
-      ["Toward a Rigorous Science of Interpretable Machine Learning", "https://arxiv.org/abs/1702.08608"]
-    ]
-  },
 
   "multimodal": {
     "videos": [
