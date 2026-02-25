@@ -110,8 +110,10 @@
 			 ["Faithfulness vs. Safety: Evaluating LLM Behavior Under Counterfactual Medical Evidence", "https://arxiv.org/abs/2601.11886"]]
 	},
 	"explanation": {
-	    "Videos": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://www.youtube.com/watch?v=Tx55_Rgyb6Y"]],
-	    "Readings": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://arxiv.org/abs/2512.15674"], ""]
+	    "Videos": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://www.youtube.com/watch?v=Tx55_Rgyb6Y"],
+		       ["Demystifying Long Chain-of-Thought Reasoning in LLMs", "https://drive.google.com/file/d/1tD4cymhrI96tAM-0pmB18-Pth_EXBecG/view?usp=sharing"]],
+	    "Readings": [["Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers", "https://arxiv.org/abs/2512.15674"],
+					       ["Demystifying Long Chain-of-Thought Reasoning in LLMs", "https://arxiv.org/pdf/2502.03373"]]
 	},
 	      "clinic": {
     "Videos": [["What's a Paper Clinic?", "https://www.youtube.com/watch?v=eHs6WC72GWA"]]
