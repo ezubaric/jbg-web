@@ -356,7 +356,7 @@
       ["IRT", "https://youtu.be/n4W4Gwwkbqg"],
       ["IRT for QA Eval", "https://youtu.be/Mg-WHxUWZxc"]
     ],
-      "slides": ["Ex", "https://users.umiacs.umd.edu/~ying/teaching/CMSC_470/irt_ex.pdf"],
+      "slides": [["Ex", "https://users.umiacs.umd.edu/~ying/teaching/CMSC_470/irt_ex.pdf"]],
       "readings": [
 	  "Textbook 10",
       ["Recent Developments in Item Response Theory with Implications for Teacher Certification", "https://www.jstor.org/stable/1167313?seq=1"],
