@@ -5,3 +5,11 @@
 ~~ Year | 2026
 ~~ Venue | Refereed Conference
 ~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Evaluation
+~~ Category | Question Answering
+~~ Category | Personalization
+~~ Category | Empirical Human Data Collection
+~~ Category | Human-Computer Interaction
+~~ URL | docs/2026_acl_dr_personalization.pdf
+~~ Public | Deep Research systems help scientists discover more relevant research papers, but existing tools have no understanding of their users. We design MyScholarQA, the first personalized deep research system that learns from a researcher's interests to suggest more relevant papers. We evaluate our system with a mix of offline evaluations with LLMs simulating users and online interviews, ultimately finding that LLMs cannot replace the insights gained from talking with real users.
