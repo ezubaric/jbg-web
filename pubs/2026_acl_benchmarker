@@ -5,3 +5,10 @@
 ~~ Year | 2026
 ~~ Venue | Refereed Conference
 ~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
+~~ Category | Evaluation
+~~ Category | Education / Human Learning
+~~ Category | Question Answering
+~~ Category | Item Response Theory
+~~ URL | docs/2026_acl_benchmarker.pdf
+~~ Public | Multiple-choice questions are a standard way to evaluate NLP systems, but they are riddled with flaws that limit their validity. Extending our previous position paper, we draw on educational testing theory to design BenchMarker, a toolkit that detects faulty MCQs that exist on the Internet, have guessable shortcuts, and writing issues that confuse students and LLMs. We show how BenchMarker can detect and fix MCQA flaws in NLP benchmarks.
