@@ -226,22 +226,43 @@ class IndexElement:
   def __init__(self, file_contents, filename=""):
     self.filename = filename
     self.fields = defaultdict(list)
-    for ii in [x for x in file_contents.split("~~") if x != ""]:
-      key = capwords(ii.split("|")[0].strip())
+    for ii in [x for x in file_contents.split("~~") if x.strip() != ""]:
+      if "|" not in ii:
+        print("Skipping malformed field in %s: %s" % (filename, ii.strip()))
+        continue
+      key, val = ii.split("|", 1)
+      key = capwords(key.strip())
+      val = val.strip()
       if key not in self.fields:
         self.fields[key] = []
-      val = ii.split("|")[1].strip()
-      if key == "Author":
+      if key == "Author" and val:
         for jj in val.split(" and "):
           self.fields["Authors"].append(jj)
       self.fields[key].append(val)
 
+  def values(self, key):
+    return self.fields.get(key, [])
+
+  def first(self, key, default=""):
+    values = self.values(key)
+    if values:
+      return values[0]
+    return default
+
+  def has(self, key):
+    return len(self.values(key)) > 0
+
+  def title_suffix(self, title):
+    if title.rstrip().endswith((".", "?", "!", ":", ";")):
+      return "  "
+    return ".  "
+
   def author_string(self, latex):
     s = ""
-    if "Authors" in self.fields and len(self.fields["Authors"]) > 0:
-      assert "Year" in self.fields
-      authors = [format_name(kSTUDENTS, x, self.fields["Year"][0], latex) \
-                   for x in self.fields["Authors"]]
+    authors = self.values("Authors")
+    if authors:
+      year = self.first("Year", "")
+      authors = [format_name(kSTUDENTS, x, year, latex) for x in authors]
       if len(authors) > 2:
         s += ", ".join(authors[:-1]) + ", and " + authors[-1]
       elif len(authors) == 2:
@@ -286,11 +307,11 @@ class IndexElement:
     """
 
     s = s.replace("~~~citation~~~", self.latex(url_prefix=url_prefix, acceptance = False))
-    s = s.replace("~~~filename~~~", self.fields["Url"][0])
+    s = s.replace("~~~filename~~~", self.first("Url"))
     s = s.replace("~~~bibtex~~~", self.bibtex(url_prefix))
 
     if "Public" in self.fields:
-      s = s.replace("~~~public~~", "{\\bf Accessible Abstract:} %s\\\\" % "\n".join(self.fields["Public"]))
+      s = s.replace("~~~public~~~", "{\\bf Accessible Abstract:} %s\\\\" % "\n".join(self.fields["Public"]))
     else:
       s = s.replace("~~~public~~~", "")
 
@@ -343,22 +364,24 @@ class IndexElement:
 
   def latex(self, url_prefix="", acceptance=True):
     s = self.author_string(True)
-    if "Title" in self.fields:
-      if "Url" in self.fields and url_prefix:
-          if self.fields["Url"][0].startswith("http"):
-              s += '{\\bf \\href{%s}{%s}}.  ' % (self.fields["Url"][0], self.fields["Title"][0])
+    if self.has("Title"):
+      title = self.first("Title")
+      suffix = self.title_suffix(title)
+      if self.has("Url") and url_prefix:
+          if self.first("Url").startswith("http"):
+              s += '{\\bf \\href{%s}{%s}}%s' % (self.first("Url"), title, suffix)
           else:
-              s += '{\\bf \\href{%s/%s}{%s}}.  ' % (url_prefix, self.fields["Url"][0], self.fields["Title"][0])
+              s += '{\\bf \\href{%s/%s}{%s}}%s' % (url_prefix, self.first("Url"), title, suffix)
       else:
-          s += '{\\bf %s}.  ' % (self.fields["Title"][0])
-    if "Booktitle" in self.fields:
-      s += "\\emph{%s}, " % self.fields["Booktitle"][0]
-    if "Journal" in self.fields:
-      s += "\\emph{%s}, " % self.fields["Journal"][0]
-    if "Year" in self.fields:
-      s += self.fields["Year"][0]
-    if "Numpages" in self.fields:
-        s += ", %i pages" % int(self.fields["Numpages"][0])
+          s += '{\\bf %s}%s' % (title, suffix)
+    if self.has("Booktitle"):
+      s += "\\emph{%s}, " % self.first("Booktitle")
+    if self.has("Journal"):
+      s += "\\emph{%s}, " % self.first("Journal")
+    if self.has("Year"):
+      s += self.first("Year")
+    if self.has("Numpages"):
+        s += ", %i pages" % int(self.first("Numpages"))
 
     if "Acceptance" in self.fields and acceptance:
       s += " (" + self.fields["Acceptance"][0] + "\\% Acceptance Rate)"
@@ -369,40 +392,41 @@ class IndexElement:
 
   def year(self):
     s = ""
-    if "Year" in self.fields and self.fields["Year"][0].strip() != "":
-      s += self.fields["Year"][0]
+    if self.has("Year") and self.first("Year").strip() != "":
+      s += self.first("Year")
     return s
 
   def html(self, bibtex, url_prefix, section):
     s = self.author_string(False)
 
-    formatted_title = self.fields["Title"][0].replace("``", "&quot;").replace(r"\dots", "&hellip;").replace("~", "&nbsp;").replace(r"\=o", "&omacr;")
+    formatted_title = self.first("Title", self.filename.split("/")[-1]).replace("``", "&quot;").replace(r"\dots", "&hellip;").replace("~", "&nbsp;").replace(r"\=o", "&omacr;")
+    title_suffix = self.title_suffix(formatted_title)
     for latex_format, tag_start, tag_end in [("\\underline{", "<U>", "</U>")]:
       while latex_format in formatted_title:
         start, end = formatted_title.split(latex_format, 1)
         middle, end = end.split("}", 1)
         formatted_title = start + tag_start + middle + tag_end + end
-    if "Title" in self.fields and "Url" in self.fields:
-      url = self.fields["Url"][0]
+    if self.has("Title") and self.has("Url"):
+      url = self.first("Url")
       if url.startswith("http"):
-          s += "<b><a href=\"%s\">%s</a></b>.  " % (url, formatted_title)
+          s += "<b><a href=\"%s\">%s</a></b>%s" % (url, formatted_title, title_suffix)
       else:
           url = "%s/%s" % (url_prefix, url)
-          s += "<b><a href=\"%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>.  " % \
-            (url, url, formatted_title)
-    elif "Title" in self.fields:
-      s += '<b>%s</b>.  ' % formatted_title
+          s += "<b><a href=\"%s\"  onClick=\"javascript: pageTracker._trackPageview('%s'); \">%s</a></b>%s" % \
+            (url, url, formatted_title, title_suffix)
+    elif self.has("Title"):
+      s += '<b>%s</b>%s' % (formatted_title, title_suffix)
 
-    if "Booktitle" in self.fields:
-      s += "<i>%s</i>, " % self.fields["Booktitle"][0]
+    if self.has("Booktitle"):
+      s += "<i>%s</i>, " % self.first("Booktitle")
 
-    if "School" in self.fields:
-      s += "<i>Ph.D. thesis, %s</i>, " % self.fields["School"][0]
+    if self.has("School"):
+      s += "<i>Ph.D. thesis, %s</i>, " % self.first("School")
 
-    if "Journal" in self.fields:
-      s += "<i>%s</i>, " % self.fields["Journal"][0]
-    if "Year" in self.fields and self.fields["Year"][0].strip() != "":
-      s += self.fields["Year"][0]
+    if self.has("Journal"):
+      s += "<i>%s</i>, " % self.first("Journal")
+    if self.has("Year") and self.first("Year").strip() != "":
+      s += self.first("Year")
       s += "."
 
     s = s.replace("{", "")
@@ -416,7 +440,7 @@ class IndexElement:
         s += ' [<a href="../%s">%s</a>]' % (url, text)
 
     div_name = str(hash("".join("".join(x) for x in self.fields.values()) + str(section)))
-    if bibtex and len(self.fields["Bibtex"]) > 0:
+    if bibtex and self.has("Bibtex") and self.bibtex(url_prefix):
       s += ' [<a href="javascript:unhide('
       s += "'%s'" % div_name
       s += ');">Bibtex</a>]\n'
@@ -438,7 +462,10 @@ class IndexElement:
     return s
 
   def bibtex(self, url_prefix):
-    s = "@%s{%s,\n" % (self.fields["Bibtex"][0], ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.fields["Year"][0])
+    if not (self.has("Bibtex") and self.has("Authors") and self.has("Year")):
+      return ""
+
+    s = "@%s{%s,\n" % (self.first("Bibtex"), ":".join(bibtex_last(x) for x in self.fields["Authors"]) + "-" + self.first("Year"))
     for ii in self.fields:
       if ii in ["Author", "School", "Journal", "Pages", "Volume", "Year", "Number", "ISSN",
                 "Abstract", "Location", "Title", "Series", "Booktitle", "Isbn", "Publisher",
@@ -459,26 +486,26 @@ class IndexElement:
     """
 
     try:
-      year = -int(self.fields["Year"][0])
+      year = -int(self.first("Year"))
     except ValueError:
-      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))
+      print("Bad year: %s [%s]" % (self.values("Year"), self.filename))
       year = float("-inf")
     except IndexError:
-      print("Bad year: %s [%s]" % (self.fields["Year"], self.filename))
+      print("Bad year: %s [%s]" % (self.values("Year"), self.filename))
       year = float("-inf")
 
-    if "Booktitle" in self.fields and len(self.fields["Booktitle"]) > 0:
-        venue = self.fields["Booktitle"][0]
+    if self.has("Booktitle"):
+        venue = self.first("Booktitle")
     else:
         venue = ""
 
-    if "Journal" in self.fields and len(self.fields["Journal"]) > 0:
-        venue += self.fields["Journal"][0]
+    if self.has("Journal"):
+        venue += self.first("Journal")
     else:
         venue += ""
 
-    keys = [(x, year, venue, self.fields["Title"][0], name) for \
-              x in self.fields[criteria]]
+    title = self.first("Title", self.filename.split("/")[-1])
+    keys = [(x, year, venue, title, name) for x in self.values(criteria)]
 
     return keys
 
@@ -647,6 +674,7 @@ class WebsiteWriter:
       html_out = ""
 
       old = None
+      txt_name = None
       for jj in keys:
         year = lookup[jj].year()
         if old != jj[0]:
@@ -701,13 +729,15 @@ class WebsiteWriter:
           old = jj[0]
 
       # For the last entry, we need to flush the cache
-      global_replace["%s:%s" % (index, txt_name)] = html_out
+      if txt_name is not None:
+        global_replace["%s:%s" % (index, txt_name)] = html_out
       o.write(html_out)
       html_out = ""
 
-      latex_out.write("\n\\end{enumerate}")
-      latex_out.write("\n}")
-      o.write("\t</ul>\n")
+      if old is not None:
+        latex_out.write("\n\\end{enumerate}")
+        latex_out.write("\n}")
+        o.write("\t</ul>\n")
       o.write("<p>&nbsp;</p>\n")
       o.write('<center><a href="%s.txt">LaTeX Version</a>&nbsp;' % sort_by.lower())
       o.write('<a href="%s.bib">BibTex Version</a>&nbsp;' % sort_by.lower())

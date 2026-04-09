@@ -95,10 +95,10 @@
   },
 	"reasoning": {
 	    "Videos": [["Hierarchical Reasoning Model", "https://drive.google.com/file/d/1joiJyQjVSh49eiaQwvt9nb9zBiwCStRQ/view?usp=sharing"],
-		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://arxiv.org/abs/2510.04871"]
+		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://drive.google.com/file/d/1HIZAszFbGVU6eT3Rh2G9XNnLbb0BtISZ"]
 		      ],
     "Readings": [["Hierarchical Reasoning Model", "https://arxiv.org/abs/2506.21734"],
-		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://drive.google.com/file/d/1HIZAszFbGVU6eT3Rh2G9XNnLbb0BtISZ"]]
+		       ["Less is More: Recursive Reasoning with Tiny Networks", "https://arxiv.org/abs/2510.04871"]]
 },
 	"counterfactuals": {
 	    "videos": [["Competition: Intro", "https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=70b7975e-9678-4c7a-8f3a-b3f40100a688"],
