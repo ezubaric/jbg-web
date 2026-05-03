@@ -912,6 +912,30 @@ least there needs to be a frank conversation between me and the
 internship host (it's not fair for you to have to manage these
 conflicting relationships/priorities).</p>
 
+<p class="question">What should I do over summers?</p>
+
+<p class="answer">Usually, you should try to do an internship.  Right before
+graduation, that is often a bad idea, but any other summer, the
+advantages are clear.  You'll meet more people, go to a cooler place
+(in terms of temperature if nothing else), and get more computational
+resources than are available in academia.</p>
+
+<p class="answer">But, landing an internship is a fraught with
+randomness.  So while you should try to one every year, that doesn't
+mean that you necessarily will.  Sometimes it doesn't make sense to
+don an internship: there's a project that needs coverage, you have
+personal reasons for staying around campus, etc. But most of the time,
+it makes sense to <i>try</i> for an internship, then we can discuss on
+a case by case basis what makes sense.</p>
+
+<p class="answer">On a more practical level, you make more money on an
+internship, and I don't have to pay you.  You have to be around during
+the school year (with complicated exceptions), so you need an RA or TA
+then, but during the summer, if you can make more money, do fun stuff,
+and I don't have to pay you during the summer, that's usually best for
+everyone. (But not every internship is a good one, let's talk through
+the options before you accept one!)</p>
+
 <p class="question">Why is it important to cite related work?  Can't
 you just add the citations for me?</p>
 
@@ -1070,6 +1094,24 @@ think it would have been better for me as a growth opportunity.</p>
 <P CLASS="answer">But in any event, everything takes longer than you
 expect it will, so start your sabbatical planning as soon as possible.</P>
 
+<p class="question">Why is it worthwhile to prototype generative models with
+synthetic data?</p>
+
+<p class="answer">Synthetic data allows you to not just check the
+final result but every step in the process that created the data (up
+to things like exchangeability).</p>
+
+<p class="answer">Thus, your evaluation should not just look at the
+final prediction accuracy but whether you can reconstruct every step
+of the generative process.  This is an excellent tool for checking the
+inference for bugs or conceptual flaws.</p>
+
+<p class="answer">Importantly, your synthetic generation process
+should not diverge from your model.  It should mirror it exactly.
+Likewise, you should capture the important aspects of your data.  For
+many of our applications text is critical, thus your generative
+process should include not just the dense embeddings but the
+realization of that in text.</p>
 
 <p class="question">Is topic modeling dead?  Should we all be doing
 deep learning?</p>
