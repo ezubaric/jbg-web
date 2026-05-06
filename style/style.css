@@ -40,14 +40,14 @@ p {
  */
 
 a {
-  color: #E03A3E;
+  color: #1B75BC;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color:#FFD520; 
+    color:#0054A6;
 }
 
 /*
@@ -70,7 +70,7 @@ p.answer li.answer {
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
-    background-color: #000000;
+    background-color: #D71440;
     color: #ffffff;
     padding: 5px 15px;
     margin: 0px;
@@ -149,7 +149,7 @@ h3, h4, h5 {
 #header {
     position: relative;
     color: #ffffff;
-    background-color: #990000;
+    background-color: #181C62;
     font-size: 200%;
     padding: 10px 5px 10px 0.5em;
 }
@@ -291,9 +291,9 @@ td {
 
 #navwrapper {
 	width:100%;
-	background-color:#000000; 
+	background-color:#000000;
 	background-repeat:repeat-x;
-	border-top:3px solid #CD1111; 
+	border-top:3px solid #CD1111;
 }
 
 .alignleft {
