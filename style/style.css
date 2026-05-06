@@ -1,4 +1,9 @@
 /*
+ * https://www3.ntu.edu.sg/CorpComms2/NTU%20Quick%20Brand%20Guide%202018.pdf
+ */
+
+
+/*
  * By default, have black sans serif text on a gray background.
  */
 
@@ -132,7 +137,7 @@ h1, h2, h3, h4, h5 {
     padding-left: 15px;
     padding-right: 5px;
     padding-bottom: 1px;
-    color: #564b47;
+    color: #D71440;
     background-color: transparent;
 }
 
