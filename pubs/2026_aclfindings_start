@@ -7,3 +7,5 @@
 ~~ Project | START*../projects/START.html
 ~~ Project | Adobe*../projects/Adobe.html
 ~~ URL  | docs/2026_aclfindings_start.pdf
+~~ Public | Event annotation is important for identifying, monitoring, and understanding sociological trends. Although expert annotators set the gold standard, they are expensive and inefficient. While state-of-the-art NLP models are an attractive alternative, they are often evaluated on standalone subtasks rather than entire workflows. Thus, we evaluate a holistic workflow that summarizes news with event coreference resolution and argument extraction in three modes: AI-only, AI assistance, and human only. Although AI's recall is seven times higher than the tf-idf baseline at coreference resolution, it is far from replacing experts. However, experts adopt AI-extracted arguments 60% of the time, reducing extraction time by 25%.
+~~ Link | Arxiv*https://arxiv.org/abs/2503.06778
