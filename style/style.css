@@ -193,14 +193,14 @@ h3, h4, h5 {
 #button li a {
     display: block;
     padding: 5px 5px 5px 0.5em;
-    background-color: #D71440;
+    background-color: #ffffff;
     text-decoration: none;
 
 }
 
 
 /*
- * Changes the color of the link on a hover
+ * Changes the color of the link on a hover 
  */
 #button li a:hover {
     background-color: #7C223F;
@@ -279,7 +279,7 @@ td {
 #navigation a:link, #navigation a:visited {
 	display:block;
 	float:left;
-	color:#D71440;
+	color:#ffffff;
 	text-transform:uppercase;
 	padding:0 10px;
 	font-size:15px;
@@ -296,7 +296,7 @@ td {
 
 #navwrapper {
 	width:100%;
-	background-color:#000000;
+	background-color:#D71440;
 	background-repeat:repeat-x;
 	border-top:3px solid #CD1111;
 }
