@@ -1,4 +1,9 @@
 /*
+ * https://www3.ntu.edu.sg/CorpComms2/NTU%20Quick%20Brand%20Guide%202018.pdf
+ */
+
+
+/*
  * By default, have black sans serif text on a gray background.
  */
 
@@ -40,14 +45,14 @@ p {
  */
 
 a {
-  color: #E03A3E;
+  color: #1B75BC;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color:#FFD520; 
+    color:#0054A6;
 }
 
 /*
@@ -70,7 +75,7 @@ p.answer li.answer {
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
-    background-color: #000000;
+    background-color: #D71440;
     color: #ffffff;
     padding: 5px 15px;
     margin: 0px;
@@ -132,7 +137,7 @@ h1, h2, h3, h4, h5 {
     padding-left: 15px;
     padding-right: 5px;
     padding-bottom: 1px;
-    color: #564b47;
+    color: #D71440;
     background-color: transparent;
 }
 
@@ -149,7 +154,7 @@ h3, h4, h5 {
 #header {
     position: relative;
     color: #ffffff;
-    background-color: #990000;
+    background-color: #181C62;
     font-size: 200%;
     padding: 10px 5px 10px 0.5em;
 }
@@ -188,18 +193,18 @@ h3, h4, h5 {
 #button li a {
     display: block;
     padding: 5px 5px 5px 0.5em;
-    background-color: #282828;
+    background-color: #ffffff;
     text-decoration: none;
 
 }
 
 
 /*
- * Changes the color of the link on a hover
+ * Changes the color of the link on a hover 
  */
 #button li a:hover {
-    background-color: #282828;
-    color: #ffffff;
+    background-color: #7C223F;
+    color: #E6E6E6;
 }
 
 /*
@@ -214,7 +219,7 @@ h3, h4, h5 {
  * Adds a border to the buttom of the buttons
  */
 #button li {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #A72244;
 }
 
 #button {
@@ -274,7 +279,7 @@ td {
 #navigation a:link, #navigation a:visited {
 	display:block;
 	float:left;
-	color:#FFFFFF;
+	color:#ffffff;
 	text-transform:uppercase;
 	padding:0 10px;
 	font-size:15px;
@@ -291,9 +296,9 @@ td {
 
 #navwrapper {
 	width:100%;
-	background-color:#000000; 
+	background-color:#D71440;
 	background-repeat:repeat-x;
-	border-top:3px solid #CD1111; 
+	border-top:3px solid #CD1111;
 }
 
 .alignleft {
