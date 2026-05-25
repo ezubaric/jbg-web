@@ -9,6 +9,7 @@
 ~~ Category | Empirical Human Data Collection
 ~~ Venue | Journal
 ~~ Url | https://arxiv.org/abs/2402.11161
-~~ Link | Code*https://github.com/zli12321/PEDANTS-LLM-Evaluation
+~~ Link | Code*https://github.com/zli12321/qa_metrics
+~~ Website Demo | https://qanta-equivalence-checker.umiacs.umd.edu
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Public | It's often hard to know when an answer is correct.  What people often do is either too simplistic (checking if the string is exactly the same) or too expensive (running a frontier LLM).  We propose a simple Goldilocks alternative: PEDANTS.  Precise Evaluations of Diverse Answer Nominee Text for Skinflints is fast, cheap, and almost as good as much more expensive options.  It also shows how important this is to LLM training.
