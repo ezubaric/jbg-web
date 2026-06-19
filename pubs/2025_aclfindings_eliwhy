@@ -1,0 +1,13 @@
+~~ Bibtex | article
+~~ Title | ELI-Why: Evaluating the Pedagogical Utility of LLM Explanations
+~~ Author | Brihi Joshi, Keyu He, Sahana Ramnath, Sadra Sabouri, Kaitlyn Zhou, Souti Chattopadhyay, Swabha Swayamdipta, and Xiang Ren
+~~ Journal | Findings of the Association for Computational Linguistics
+~~ Year | 2025
+~~ Venue | Journal
+~~ Project | IIS-2403436
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Category | Large Language Models
+~~ Category | Evaluation
+~~ Category | Question Answering
+~~ URL | docs/2025_aclfindings_eliwhy.pdf
+~~ Public | We investigated the ability of language models to tailor responses for learners with varied informational needs and knowledge backgrounds. This research introduced ELI-Why, a benchmark of 13.4K "Why" questions to evaluate the pedagogical capabilities of language models. We conducted two extensive human studies to assess the utility of language model-generated explanatory answers (explanations) on our benchmark, tailored to three distinct educational grades: elementary, high-school and graduate school. We find that GPT-4-generated explanations match their intended educational background about half the time. Across all educational backgrounds, users deemed GPT-4-generated explanations less suited on average to their informational needs, when compared to explanations curated by lay people.
