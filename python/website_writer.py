@@ -75,7 +75,9 @@ UMD_MAPPING = {"Chapter": "\\ifumd II.B.1. \\else \\fi Chapters in Books",
                "Workshop": "\\ifumd II.E.4. \\fi Refereed Workshops",
                "Journal": "\\ifumd II.C.1 \\fi Refereed Journal Articles"}
 
-kSTUDENTS = {"Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
+kSTUDENTS = {"Tasnim Kabir": Student("Tasnim Kabir", 2024, 2027),
+             "John Kanu": Student("John Kanu", 2024, 2027),
+             "Kyle Seelman": Student("Kyle Seelman", 2022, 2026),
              "Feng Gu~3": Student("Feng Gu", 2025, 2028),
              "Feng Gu~2": Student("Feng Gu", 2024, 2025, kind="MS"),
              "Feng Gu~1": Student("Feng Gu", 2020, 2024, kind="UG"),
