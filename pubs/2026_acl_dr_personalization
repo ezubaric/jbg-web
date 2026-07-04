@@ -13,3 +13,4 @@
 ~~ Category | Human-Computer Interaction
 ~~ URL | docs/2026_acl_dr_personalization.pdf
 ~~ Public | Deep Research systems help scientists discover more relevant research papers, but existing tools have no understanding of their users. We design MyScholarQA, the first personalized deep research system that learns from a researcher's interests to suggest more relevant papers. We evaluate our system with a mix of offline evaluations, using LLMs that simulate users, and online interviews, ultimately showing that LLMs cannot replace the insights gained from speaking with real humans.
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/66dO7y7suTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
