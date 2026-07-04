@@ -545,10 +545,14 @@ class WebsiteWriter:
       self.courses = Course()
       self.courses.load_holidays("teaching/holidays.json")
 
+      delimiter = "/"
       for ii in glob(path):
           self.courses.load_json(ii)
+
+          if "/" not in ii and "\\" in ii:
+              delimiter = "\\"
           try:
-              course = ii.split("/")[-2]
+              course = ii.split(delimiter)[-2]
               global_replace[course] = self.courses.render()
           except IndexError:
               print("Bad course %s" % ii)
