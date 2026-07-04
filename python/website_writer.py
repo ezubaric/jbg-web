@@ -670,7 +670,8 @@ class WebsiteWriter:
 
             html_out = ""
 
-          # The asterisk if a field separator, so it has slightly different formatting
+          # The asterisk is a field separator, so it has slightly
+          # different formatting
           if "*" not in jj[0]:
             latex_name = format_name([], jj[0], -1, True)
             txt_name = format_name([], jj[0], -1, False)
@@ -706,7 +707,7 @@ class WebsiteWriter:
           text_out.write(lookup[jj].txt(url=self._url))
 
           html_out += this_html
-          old = jj[0]
+        old = jj[0]
 
       # For the last entry, we need to flush the cache
       global_replace["%s:%s" % (index, txt_name)] = html_out
