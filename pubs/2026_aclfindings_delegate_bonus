@@ -5,3 +5,8 @@
 ~~ Year | 2026
 ~~ Venue | Journal
 ~~ Project | TRAILS*../projects/TRAILS.html
+~~ Public | We made a trivia game that has humans and computers cooperate: humans could let AIs buzz in for them to answer trivia questions (complete delegation) and then they worked with computers to answer other trivia questions collaboratively.  We measure who worked best with computers, what drove that trust, and what causes the problems in the collaboration.
+~~ URL | docs/2026_aclfindings_delegate_bonus.pdf
+~~ Link | Dataset*https://huggingface.co/datasets/qanta-challenge/qanta25-gamedata
+~~ Link | Gameplay Platform*https://github.com/qanta-org/qb-tournament-runner
+~~ Link | Analysis*https://github.com/qanta-org/qanta25-analysis
