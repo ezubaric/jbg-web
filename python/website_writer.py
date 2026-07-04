@@ -547,9 +547,11 @@ class WebsiteWriter:
 
       for ii in glob(path):
           self.courses.load_json(ii)
-          course = ii.split("/")[-2]
-
-          global_replace[course] = self.courses.render()
+          try:
+              course = ii.split("/")[-2]
+              global_replace[course] = self.courses.render()
+          except IndexError:
+              print("Bad course %s" % ii)
 
   def add_index(self, path, name = "Documents", criteria=[("Year", 0, [], True)],
                 default_sort="Year"):
