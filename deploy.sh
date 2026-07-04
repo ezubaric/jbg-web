@@ -66,7 +66,7 @@ if [ ${#CHANGES} -gt 0 ]
             mv $FILE.pdf ~/public_html/docs
         done
 	cp resume_src/letter.html ~/public_html/docs
-        for FILE in `ls -r pubs/*.tex`
+        for FILE in `ls -r pubs/[01234567890]*.tex pubs/[abcdefghijklmnopqrstuvwxyz]*.tex`
         do
 	    echo $FILE
 	    echo "---------------------------"
