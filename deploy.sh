@@ -8,7 +8,7 @@ cd /nfshomes/ying/repositories/jbg-web
 git checkout $(git ls-files -d)
 git pull
 
-CHANGES=`git whatchanged --since="3 days ago" -p pubs/ src_docs/ media/ resume_src/`
+CHANGES=`git log --raw --no-merges --since="3 days ago" -p pubs/ src_docs/ media/ resume_src/`
 
 rm -f python/*.pyc
 rm -f pubs/*.tex
