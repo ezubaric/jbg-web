@@ -745,7 +745,7 @@ class WebsiteWriter:
     else:
         contents = ""
 
-    contents += open(raw).read()
+    contents += open(raw, encoding='utf8').read()
 
     for variable in global_replace:
       search = "~~%s~~" % variable
@@ -761,7 +761,7 @@ class WebsiteWriter:
     contents = contents.replace("~~PATHPREFIX~~", prefix).replace("~~PAGETITLE~~", title)
 
     print("Writing %s to %s" % (raw, filename))
-    o = open(filename, 'w')
+    o = open(filename, 'w', encoding='utf8')
     o.write(contents)
     o.close()
 

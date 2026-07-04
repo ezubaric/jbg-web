@@ -5,7 +5,7 @@ from website_writer import WebsiteWriter, global_replace
 
 home = os.environ.get('HOME')
 if home is None:
-    home = "D:/Wepage"
+    home = "D:/Webpage"
 print("Home: " + home)
 
 if __name__ == "__main__":
