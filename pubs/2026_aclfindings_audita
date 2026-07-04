@@ -9,4 +9,7 @@
 ~~ Category | Question Answering
 ~~ Category | Item Response Theory
 ~~ URL | docs/2026_aclfindings_audita.pdf
-~~ Public | We do a lot of evaluation of how well AI can answer questions, but what about if they have to listen to the question.  While there are other datasets out there that measure this, these often are overly simplistic.  They don't measure reasoning or what humans care about.  Our new dataset AUDITA, harvests questions that are difficult from the web.  We then ask humans to answer both existing Audio QA questions and our new questions: this new dataset is much harder, and existing audio models struggle on them.
+~~ Public | We do a lot of evaluation of how well AI can answer questions, but what about if they have to listen to the question?  While there are other datasets out there that measure this, these often are overly simplistic.  They don't measure reasoning or what humans care about.  Our new dataset AUDITA, harvests questions that are difficult from the web.  We then ask humans to answer both existing Audio QA questions and our new questions: this new dataset is much harder, and existing audio models struggle on them.
+~~ Link | Data*https://huggingface.co/datasets/TasnimKabir12/audita-audio
+~~ Link | Code*https://github.com/Pinafore/audio_data
+~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/hrZ5pNh81H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
