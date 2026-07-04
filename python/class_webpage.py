@@ -7,6 +7,12 @@ from collections import defaultdict
 
 import json
 
+def check_link(address):
+    import httplib2
+    h = httplib2.Http()
+    resp = h.request(address, 'HEAD')
+    return int(resp[0]['status']) < 400
+
 class Course:
     def __init__(self):
 

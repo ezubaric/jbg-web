@@ -9,3 +9,4 @@
 ~~ Venue | Refereed Conference
 ~~ Project | FACT*../projects/FACT.html
 ~~ Url | docs/2024_naacl_convincingly.pdf
+~~ Public | Large language models can help people verify factual claims, comparing LLM-generated explanations with traditional search results in controlled human experiments. LLM explanations help users verify claims much faster than search, with similar overall accuracy—but users dangerously over-trust explanations when the model is wrong, leading to worse-than-baseline performance. Presenting contrastive explanations (arguments for and against a claim) reduces over-reliance, but does not outperform simply showing retrieved evidence. Overall, the results show that fluent explanations are not a reliable substitute for primary sources in high-stakes reasoning tasks, highlighting the need for better trust calibration and evaluation of AI-assisted reasoning tools.

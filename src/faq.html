@@ -275,6 +275,23 @@ about too.</p>
 
 <h3>Current Students</h3>
 
+<p class="question">What goes into the statement of mutual expectations?</p>
+
+<p class="answer"> They're all explained below, but: sending weekly
+snippets, being in lab at least one full day a week, being in lab
+before any big paper deadlines, weekly meetings, using the paper token
+tracker and proposal tracker for drafts (and completing the associated pre-deadline checkpoints). </p>
+
+<p class="question">Why do you make all of your students TA at least once?</p>
+
+<p class="answer">The best way to think about being a grad student is
+as an apprentice to a professor.  You're building up the tools how to
+do research independently.  But there's more to being a professor than
+just research, you're also expected to teach.  Thus, I want to make
+sure that all students TA at least once so that they: A) can write an
+informed teaching statement if they're applying to academic jobs B)
+know what it takes to put together a good lecture and homework.</p>
+
 <p class="question">Can you sign off on my scholarly paper for the MS?</p>
 
 <p class="answer">The bottom line for a scholarly paper is that for me
@@ -586,6 +603,27 @@ graduated.  But you're always welcome to send a snippet even in these
 cases if (for instance) you're blocked on something or if you need to
 coordinate for a paper submission.</p>
 
+<p class="question">Why do I need to send a snippet?</p>
+
+
+<p class="answer">Let's be honest.  You not sending a snippet any
+particular week isn't (usually) important.  But the <b>culture</b> of sending
+snippets is important.  It's important because you need to make
+progress on your goals every week.  It also helps everyone in the
+group know what's going on, which is important. </p>
+
+<p class="answer">But sometimes it is crucially important.  Sometimes
+we have a big push that we're making: a paper, an expo, a grant
+deliverable.  Your snippet is a sanity check that you're committed to
+working on that goal for the week.  If we're bad about sending
+snippets, I may think that it's on your radar and you're ready to help
+out and do your part.  And then things really suffer if that's not the
+case.  But that requires a lab culture of weekly, consistent snippets.</p>
+
+<p class="answer">And it's really important for grant reporting.
+If you ever want to be an RA, you need to be reliable about sending
+snippets.</p>
+
 <p class="question">How should I decide the right mode of communication?</p>
 
 <p class="answer">The big questions for which communication mode to
@@ -793,6 +831,30 @@ you'll have fellowship funding your entire time as a PhD student, you
 should make sure your professor would take you on as an RA in a
 heartbeat if needed.</p>
 
+<p class="question">Why should I contribute to a project when I'm not
+an RA?  Isn't it unfair that others are getting paid
+while I'm not?</p>
+
+<p class="answer">If you're in a PhD program, your goal should be to
+be producing research.  Working in concert with others is often the
+best way to learn how to do research when you're new to it.  So I
+often have new students start working in the context of a grant: it
+helps them learn how research works, they have a support structure to
+answer questions, and there is a clear plan for the research.</p>
+
+<p class="answer">Not everyone can be an RA on a grant.  There are
+limited slots, sometimes you have to serve as a TA (even if money
+isn't tight, I require all students to TA at least once).  Sometimes
+students are on a fellowship.</p>
+
+<p class="answer">Also, not everyone is ready to be an RA.  We submit
+annual reports for grants, and it looks really bad for us if funded
+students are not contributing to publications. Students need to be
+able to demonstrate they can make realistic goals and stick to them
+(sending weekly snippets), work on a paper collaboratively, etc.  Once
+they've shown that, then if you're already working in the context of a
+grant, that's a good opportunity to become funded.</p>
+
 <p class="question">How often should I be publishing?</p>
 
 <p class="answer">You should always have an idea that you're actively
@@ -859,6 +921,30 @@ then I either need to be involved or you need to give it up.  At the very
 least there needs to be a frank conversation between me and the
 internship host (it's not fair for you to have to manage these
 conflicting relationships/priorities).</p>
+
+<p class="question">What should I do over summers?</p>
+
+<p class="answer">Usually, you should try to do an internship.  Right before
+graduation, that is often a bad idea, but any other summer, the
+advantages are clear.  You'll meet more people, go to a cooler place
+(in terms of temperature if nothing else), and get more computational
+resources than are available in academia.</p>
+
+<p class="answer">But, landing an internship is fraught with
+randomness.  So while you should try to one every year, that doesn't
+mean that you necessarily will.  Sometimes it doesn't make sense to
+don an internship: there's a project that needs coverage, you have
+personal reasons for staying around campus, etc. But most of the time,
+it makes sense to <i>try</i> for an internship, then we can discuss on
+a case by case basis what makes sense.</p>
+
+<p class="answer">On a more practical level, you make more money on an
+internship, and I don't have to pay you.  You have to be around during
+the school year (with complicated exceptions), so you need an RA or TA
+then, but during the summer, if you can make more money, do fun stuff,
+and I don't have to pay you during the summer, that's usually best for
+everyone. (But not every internship is a good one, let's talk through
+the options before you accept one!)</p>
 
 <p class="question">Why is it important to cite related work?  Can't
 you just add the citations for me?</p>
@@ -1018,6 +1104,24 @@ think it would have been better for me as a growth opportunity.</p>
 <P CLASS="answer">But in any event, everything takes longer than you
 expect it will, so start your sabbatical planning as soon as possible.</P>
 
+<p class="question">Why is it worthwhile to prototype generative models with
+synthetic data?</p>
+
+<p class="answer">Synthetic data allows you to not just check the
+final result but every step in the process that created the data (up
+to things like exchangeability).</p>
+
+<p class="answer">Thus, your evaluation should not just look at the
+final prediction accuracy but whether you can reconstruct every step
+of the generative process.  This is an excellent tool for checking the
+inference for bugs or conceptual flaws.</p>
+
+<p class="answer">Importantly, your synthetic generation process
+should not diverge from your model.  It should mirror it exactly.
+Likewise, you should capture the important aspects of your data.  For
+many of our applications text is critical, thus your generative
+process should include not just the dense embeddings but the
+realization of that in text.</p>
 
 <p class="question">Is topic modeling dead?  Should we all be doing
 deep learning?</p>

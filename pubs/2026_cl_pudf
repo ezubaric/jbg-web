@@ -1,0 +1,11 @@
+~~ Bibtex | article
+~~ Title | A Psychology-based Unified Dynamic Framework for Curriculum Learning
+~~ Author | Guangyu Meng and Qinkai Zeng and John P Lalor and Hong Yu
+~~ Journal | Computational Linguistics
+~~ Venue | Journal
+~~ Year | 2026
+~~ Category | Curriculum Learning
+~~ Category | Item Response Theory
+~~ URL | docs/2026_cl_pudf.pdf
+~~ Project | Personalization*../projects/IIS-2403436.html
+~~ Public | Directly learning from examples of varying difficulty levels is often challenging for both humans and machine learning models. A more effective strategy involves exposing learners to examples in a progressive order from easy to difficult. We present a novel curriculum learning framework that uses Item Response Theory to estimate the difficulty of training data and determine the appropriate amount of data to input at each training step. This theory-driven IRT approach leads to model-independent and interpretable difficulty values, aligned training data selection, higher accuracy, and faster convergence compared to the other CL methods on a suite of benchmark datasets compared to standard fine-tuning and state-of-the-art CL methods.
