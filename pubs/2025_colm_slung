@@ -6,5 +6,5 @@
 ~~ Venue | Refereed Conference
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Category | Large Language Models
-~~ URL | docs/2025_colm_slung.pdf
+~~ URL | https://arxiv.org/abs/2505.03052
 ~~ Public | Language models are pre-trained on large text corpora which are filtered to remove undesired content that we do not want the models to generate. However, filtering can come with a cost: models will not learn to understand the topics that are filtered out. We propose a new method, SLUNG, which enables models to learn to understand some pieces of training data without learning to emulate it during generation. This enables models to acquire more diverse, wide-ranging knowledge while still controlling its behavior; for example, language models can learn to detect when a statement is toxic, but never generate toxic speech itself.

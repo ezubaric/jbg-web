@@ -9,5 +9,5 @@
 ~~ Category | Large Language Models
 ~~ Category | Evaluation
 ~~ Category | Question Answering
-~~ URL | docs/2025_aclfindings_verify.pdf
+~~ URL | https://aclanthology.org/2025.findings-acl.1175
 ~~ Public | To rigorously evaluate language model outputs, we must identify reliable evaluation metrics for long-form question answering, which is a longstanding challenge in natural language processing. Recently, there has been growing optimism that LLMs themselves can serve as reliable evaluators. We systematically studied the reliability of these LLM-based metrics across 11 natural language generation datasets. We uncovered numerous weaknesses when these methods are deployed naively: they are mutually inconsistent, misestimate system-level performance, and are overly reliant on simple heuristics. Moreover, we propose a metric adjustment technique that reduces system-level bias of these metrics, enabling more reliable evaluation. Overall, we establish best practices for LLM-based evaluation that will enable us to conduct more reliable evaluation of our future question answering systems.
