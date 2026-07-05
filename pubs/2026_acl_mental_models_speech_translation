@@ -6,5 +6,5 @@
 ~~ Venue | Refereed Conference
 ~~ Project | TRAILS*../projects/TRAILS.html
 ~~ Public | When people see a translation from an AI, what causes them to trust (or reject) it?  We ask people to make translated question "good enough" that a QA system can answer it correctly.  In other words, they point out where they think the AI made mistakes that are important enough to cause confusion.  Humans think errors happen in translation when they see contradictions, can use their own language knowledge (e.g., cognates), and when there is a lack of fluency.
-~~ Url | src_docs/2026_acl_mental_models_speech_translation.pdf
+~~ Url | docs/2026_acl_mental_models_speech_translation.pdf
 ~~ Embed | <iframe width="300" height="160" src="https://www.youtube.com/embed/4R8zEAlsqCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
