@@ -6,6 +6,6 @@
 ~~ Year | 2026
 ~~ Category | Instance-Level Analysis
 ~~ Category | Cultural Consensus Theory
-~~ URL | docs/2026_aclfindings_cct.pdf
+~~ URL | https://aclanthology.org/2026.findings-acl.1323/
 ~~ Project | Personalization*../projects/IIS-2403436.html
 ~~ Public | Recent work in NLP has probed large language models for their understanding of cultural norms across countries. However, this work typically considers distributional patterns, ignoring group consensus or possible multicultural environments within a country. In this work, we leverage cultural consensus theory (CCT) from cultural anthropology to model such multidimensional nuance. Applying CCT to the World Values Survey (WVS) across 10 countries and 12 domains, we demonstrate that models frequently misrepresent cultural structures by either failing to form cohesive consensus or severely over-regularizing consensus. Through explicit representation of intra-group variance, CCT provides actionable diagnostics to evaluate when models reflect true human diversity versus algorithmic homogenization.
