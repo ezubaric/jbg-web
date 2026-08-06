@@ -9,6 +9,7 @@
 }
 
 \include{resume_src/structure} % Include structure.tex which contains packages and document layout definitions
+\input{resume_src/common_macros}
 
 \newcommand{\image}[2]{  \begin{center}
 \includegraphics[width=.5\linewidth]{images/#1}
@@ -22,7 +23,7 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\maintitle{Jordan Boyd-Graber}{}  % Your name and date of birth or subtitle
+\maintitle{\CVname}{}  % Your name and date of birth or subtitle
 
 \ifumd
 \vspace{.2cm}
@@ -39,16 +40,20 @@
 \roottitle{ I. Personal Information }
 
 \begin{itemize*}
-\item {\bf Legal Name}: Jordan Boyd-Graber Ying
-\item {\bf E-mail}: \href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
-  \item {\bf Webpage}:  \href{http://boydgraber.org}{\url{http://boydgraber.org}}
+\item {\bf Legal Name}: \CVlegalname
+\item {\bf E-mail}: \href{mailto:\CVemail}{\CVemail}
+\item {\bf Contact number}: \CVphone
+\item {\bf Office mailing address}: \CVaddress
+\item {\bf Webpage}: \href{\CVweb}{\url{\CVweb}}
 \end{itemize*}
 
 \else
 
-\noindent Legal Name: Jordan Boyd-Graber Ying \\
-\noindent\href{mailto:jbg@umiacs.umd.edu}{jbg@umiacs.umd.edu}
-\umdtext{\\}{\bull} \href{http://boydgraber.org}{\url{http://boydgraber.org}}\\ % Your URL
+\noindent Legal Name: \CVlegalname \\
+\noindent\href{mailto:\CVemail}{\CVemail}
+\umdtext{\\}{\bull} \CVphone
+\umdtext{\\}{\bull} \href{\CVweb}{\url{\CVweb}}\\
+\noindent \CVaddress\\
 
 \spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
 
@@ -175,27 +180,6 @@
 Colorado)
 \fi
 \fi
-
-\newcommand{\awards}[0]{
-  \begin{itemize*}
-  \item Outstanding Area Chair: ACL Rolling Review, January 2026    
-  \item Outstanding Area Chair: ACL Rolling Review, July 2025
-  \item Outstanding Paper Award: NAACL, 2025
-  \item Best Theme Paper Award: EMNLP, 2023
-  \item Best Student Paper Honorable Mention (Alison Smith): IUI, 2018
-  \item NSF CAREER Award 2017
-  \item Quora Top Writer: 2016, 2017, 2018
-  \item Best Paper Award: NAACL 2016
-  \item Best Demonstration Award: NeurIPS 2015
-  \item Karen Sp\"ark Jones Award: 2015
-  \item Best Paper Award: CoNLL 2015
-  \item Honorable Mention, Best Student Paper: NeurIPS 2009
-  \item Computing Innovation Postdoctoral Fellowship 2009 (declined)
-  \item Richter Undergraduate Research Fellowship: 2001 and 2002
-  \item Caltech Jorgensen Scholarship: 2001-2004
-  \item AAAI Research Award: International Science and Engineering Fair (ISEF) 2000
-\end{itemize*}
-}
 
 \newcommand{\talks}[0]{
 

@@ -65,6 +65,10 @@ if [ ${#CHANGES} -gt 0 ]
             pdflatex resume_src/$FILE > log.txt
             mv $FILE.pdf ~/public_html/docs
         done
+	# NRF/RGP requires 12-point true Arial, so this CV must use XeLaTeX.
+	xelatex resume_src/singapore_grant > log.txt
+	mv singapore_grant.pdf ~/public_html/docs
+
 	cp resume_src/letter.html ~/public_html/docs
         for FILE in `ls -r pubs/[01234567890]*.tex` `ls pubs/[abcdefghijklmnopqrstuvwxyz]*.tex`
         do
