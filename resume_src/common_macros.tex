@@ -1,0 +1,36 @@
+% Shared biographical details used by the CV variants.
+\newcommand{\CVname}{Jordan Boyd-Graber}
+\newcommand{\CVlegalname}{Jordan Boyd-Graber Ying}
+\newcommand{\CVtitle}{Professor}
+\newcommand{\CVaddress}{Office S3-01c-103, CCDS, Nanyang Technological University, 50 Nanyang Avenue, Singapore 639798}
+\newcommand{\CVemail}{jordan.ying@ntu.edu.sg}
+\newcommand{\CVphone}{($+$65) 9148 1138}
+\newcommand{\CVsingaporetime}{100\%, starting August 2026}
+\newcommand{\CVweb}{https://boydgraber.org}
+
+\newcommand{\fullawards}{%
+  \begin{itemize*}
+  \item Outstanding Area Chair: ACL Rolling Review, January 2026
+  \item Outstanding Area Chair: ACL Rolling Review, July 2025
+  \item Outstanding Paper Award: NAACL, 2025
+  \item Best Theme Paper Award: EMNLP, 2023
+  \item Best Student Paper Honorable Mention (Alison Smith): IUI, 2018
+  \item NSF CAREER Award, 2017
+  \item Quora Top Writer: 2016, 2017, 2018
+  \item Best Paper Award: NAACL, 2016
+  \item Best Demonstration Award: NeurIPS, 2015
+  \item Karen Sp\"ark Jones Award, 2015
+  \item Best Paper Award: CoNLL, 2015
+  \item Honorable Mention, Best Student Paper: NeurIPS, 2009
+  \item Computing Innovation Postdoctoral Fellowship, 2009 (declined)
+  \item Richter Undergraduate Research Fellowship: 2001 and 2002
+  \item Caltech Jorgensen Scholarship: 2001--2004
+  \item AAAI Research Award: International Science and Engineering Fair, 2000
+  \end{itemize*}}
+
+\newcommand{\grantawards}{Outstanding Area Chair, ACL Rolling Review (2025, 2026); Outstanding Paper Award, NAACL (2025); Best Theme Paper Award, EMNLP (2023); NSF CAREER Award (2017); Best Paper Award, NAACL (2016)}
+
+% Empty argument gives the full list; `grant' gives the compact one-page list.
+\newcommand{\awards}[1]{%
+  \def\awardmode{#1}\def\grantmode{grant}%
+  \ifx\awardmode\grantmode\grantawards\else\fullawards\fi}
