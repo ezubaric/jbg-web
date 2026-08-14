@@ -1,0 +1,53 @@
+% One-page CV for Singapore NRF/RGP applications.
+% Compile from the repository root with: xelatex resume_src/singapore_grant.tex
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mdwlist}
+
+% Use Windows Arial under WSL. Elsewhere, Arial must be installed and visible
+% to fontconfig. Deliberately do not substitute a lookalike font.
+\IfFileExists{/mnt/c/Windows/Fonts/arial.ttf}{
+  \setmainfont{Arial}[Path=/mnt/c/Windows/Fonts/,UprightFont=arial.ttf,
+    BoldFont=arialbd.ttf,ItalicFont=ariali.ttf,BoldItalicFont=arialbi.ttf]
+}{\setmainfont{Arial}}
+
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1}\selectfont
+\setlist[itemize]{leftmargin=1.35em,nosep,topsep=1pt}
+
+\input{resume_src/common_macros}
+
+\newcommand{\field}[2]{\noindent
+  \begin{minipage}[t]{0.31\linewidth}\raggedright\textbf{#1}\end{minipage}\hfill
+  \begin{minipage}[t]{0.67\linewidth}\raggedright#2\end{minipage}
+  \par\vspace{2pt}}
+
+\begin{document}
+\raggedright
+\field{Name}{\CVname\ (legal name: \CVlegalname)}
+\field{Title}{\CVtitle}
+\field{Office mailing address}{\CVaddress}
+\field{Email}{\href{mailto:\CVemail}{\CVemail}}
+\field{Contact number}{\CVphone}
+\field{Current position}{Professor, College of Computing and Data Science, Nanyang Technological University (primary appointment; 2026--present). \\ Affiliate Professor, Computer Science, University of Maryland (2026--present).}
+\field{Percentage of time spent in Singapore every year for the current position}{\CVsingaporetime}
+\field{Link to research webpage}{\href{\CVweb}{\CVweb}}
+
+\field{List of up to 5 most relevant publications}{
+  \begin{itemize}
+    \item Z. Li et al. ``PEDANTS: Use Evaluation Metrics Wisely---Efficient Evaluation Analysis and Benchmarking for Open-Domain Question Answering.'' \textit{Findings of EMNLP}, 2024.
+    \item S. Min et al. ``NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned.'' \textit{Proceedings of Machine Learning Research}, 2021.
+    \item N. Balepur et al. ``Which of These Best Describes Multiple Choice Evaluation with LLMs? A) Forced B) Flawed C) Fixable D) All of the Above.'' \textit{ACL}, 2025.
+    \item Y. Y. Sung et al. ``ADVSCORE: A Metric for the Evaluation and Creation of Adversarial Benchmarks.'' \textit{NAACL}, 2025.
+    \item P. Rodriguez et al. ``Evaluation Examples Are Not Equally Informative: How Should That Change NLP Leaderboards?'' \textit{ACL}, 2021.
+  \end{itemize}}
+
+\field{Patents held and/or Scientific Awards}{No patents held. \fullawards{}.}
+\end{document}
