@@ -1,0 +1,29 @@
+{
+    "config": {"start": "2026-08-19",
+               "end": "2026-11-11",
+               "days": ["W-WED"],
+               "hw_day": "W-FRI"},
+    "topics": {
+        "week_2": {
+            "Problems": [["Week 2 Problems", "week_2_problems.pdf"]]
+        },
+        "week_3": {
+            "Problems": [["Week 3 Problems", "week_3_problems.pdf"]]
+        }
+    },
+    "class_sequence": [
+        ["Tutorial 2", "week_2"],
+        ["Tutorial 3", "week_3"],
+        "Tutorial 4",
+        "Tutorial 5",
+        "Tutorial 6",
+        "Tutorial 7",
+        "Tutorial 8",
+        "Tutorial 9",
+        "Tutorial 10",
+        "Tutorial 11",
+        "Tutorial 12"
+    ],
+    "hw_sequence": [],
+    "specials": []
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>SC 1001</title>
+<link href="../../style/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11018515-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <a href="~~PATHPREFIX~~">~~SITETITLE~~</a> <br/>
+</div>
+
+<div id="navwrapper">
+  <div id="navigation">
+    <div class="menu">
+    ~~NAVIGATION~~
+    </div>
+   </div>
+</div>
+
+<div id="right">
+  <a href="../../">Jordan Boyd-Graber</a><br>
+  Office S3-01c-103<br>
+  <i>College of Computing and Data Science</i> <br>
+  <a href="mailto:jordan.ying@ntu.edu.sg">jordan.ying@ntu.edu.sg</a>
+</div>
+
+<div id="content">
+
+<h1 id="header">SC 1001</h1>
+
+<h2>Logistics</h2>
+
+<p>This page tracks the Wednesday tutorial schedule for SC 1001.</p>
+
+<h2>Schedule</h2>
+  <CENTER>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TH>Date</TH>   <TH>In-Class Topic</TH>  <TH>Assignment Due </TH>
+    </TR>
+
+    ~~SC_1001~~
+
+  </TABLE>
+  </CENTER>
+
+<br/>
+<br/>
+
+</div>
+
+
+<div id="footer">
+  Page by <a href="mailto:jordan.ying@ntu.edu.sg">Jordan Boyd-Graber</a>.
+</div>
+</body>
+</html>
