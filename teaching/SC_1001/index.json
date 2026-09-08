@@ -10,12 +10,20 @@
         "week_3": {
             "Problems": [["Week 3 Problems", "week_3_problems.pdf"]]
         }
+        "week_4": {
+            "Problems": [["Week 4 Problems", "week_4_problems.pdf"]]
+        }
+	"week_5": {
+	    "Problems": [["Strings and Dictionaries", "week_5_problems.pdf"]]
+	    "Extras": [["Example of ISBN Checksum", "https://www.youtube.com/watch?v=YxB1-sDvcvY"],
+		       ["ISBN Visualization", "https://phiresky.github.io/blog/2025/visualizing-all-books-in-isbn-space/"]]
+	}
     },
     "class_sequence": [
         ["Tutorial 2", "week_2"],
         ["Tutorial 3", "week_3"],
-        "Tutorial 4",
-        "Tutorial 5",
+        ["Tutorial 4", "week_4"],
+        ["Tutorial 5", "week_5"],
         "Tutorial 6",
         "Tutorial 7",
         "Tutorial 8",
