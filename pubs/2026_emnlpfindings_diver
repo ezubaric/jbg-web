@@ -8,7 +8,7 @@
 ~~ Category | Question Answering
 ~~ Category | Evaluation
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
-~~ Public | Online fact-checking tools usually wait until a complete statement is available before checking whether it is true. In many real-world situations, however, information arrives gradually—for example, while someone is speaking—and a system must decide when it has enough evidence to identify and correct an error. We introduce DIVER, a fact-checking system that continuously identifies checkable claims, searches the web for evidence, and responds as soon as an error can be reliably confirmed. Experiments on existing benchmarks and our new real-world benchmark, UmActually, show that DIVER can find errors accurately while intervening close to the earliest appropriate moment.
+~~ Public | Fact checking has often been treated as a one-and-done task: given a social media post, is it true or not? But that is not how we encounter misinformation online. We get a stream of information, and sometimes we, or an AI agent helping us, need to stop the stream and say, "that is not right!" We train an AI to do this by taking inspiration from the online game show Um, Actually, teaching it to identify checkable claims as evidence arrives, search for supporting information, and decide when it has enough evidence to intervene. If it cannot confidently act early, it waits for more context and then performs a full revision, leading to stronger fact-checking and better-timed corrections.
 ~~ URL | docs/2026_emnlpfindings_diver.pdf
 ~~ Link | OpenReview*https://openreview.net/forum?id=CHX2ckC874
 ~~ Link | Code and Dataset*https://github.com/Senyi-Zhang/DIVER

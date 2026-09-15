@@ -8,5 +8,6 @@
 ~~ Category | Evaluation
 ~~ Category | Question Answering
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
-~~ URL | https://openreview.net/pdf?id=Ecet3dv1Bq
+~~ Public | Many AI evaluations use multiple choice questions to determine how good an AI is, but they are usually scored by just counting the number right. This paper tries out other techniques from education, such as guessing until you get it right, penalties for wrong answers, abstaining when unsure, reporting confidence, and self-correcting after feedback, to see whether they produce more informative rankings of models. These alternative scoring schemes change how models are ranked, do a better job predicting which models people actually prefer, and reveal meaningful differences in behaviors like hesitation, confidence, and willingness to revise an answer.
+~~ URL | docs/2026_emnlp_scoreboard.pdf
 ~~ Link | OpenReview*https://openreview.net/forum?id=Ecet3dv1Bq

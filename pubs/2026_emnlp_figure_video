@@ -7,5 +7,6 @@
 ~~ Acceptance | 15.4
 ~~ Category | Images
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
-~~ URL | https://openreview.net/pdf?id=gOJIDW2M7m
+~~ Public | Explaining a complicated figure in a video is an art. Drawing on communications theory, we create a plan for covering the most important parts of a scientific figure in an order that helps viewers follow along, while grounding each part of the narration to the right region of the image. Our system uses both the figure and the paper itself to generate step-by-step, paper-faithful walkthroughs, and we introduce a benchmark to evaluate whether those narrated explanations are both accurate and well aligned with the visual structure of the figure.
+~~ URL | docs/2026_emnlp_figure_video.pdf
 ~~ Link | OpenReview*https://openreview.net/forum?id=gOJIDW2M7m

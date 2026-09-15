@@ -7,5 +7,6 @@
 ~~ Acceptance | 29.7
 ~~ Category | Images
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
-~~ URL | https://openreview.net/pdf?id=sgssi3An1x
+~~ Public | If you look at the credits of movies, there is someone in charge of continuity: making sure that wardrobe does not change, that when an oven is opened in the background it stays open, and that the visual world remains coherent from shot to shot. We add that same idea to AI storytelling by building a multi-agent storyboarding system that explicitly keeps track of characters, backgrounds, locations, and objects as a narrative unfolds. The result is a system that generates longer visual stories with more consistent characters, settings, and props, and we introduce a new benchmark to measure these long-range continuity challenges.
+~~ URL | docs/2026_emnlp_canvas.pdf
 ~~ Link | OpenReview*https://openreview.net/forum?id=sgssi3An1x
