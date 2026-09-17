@@ -5,27 +5,35 @@
                "hw_day": "W-FRI"},
     "topics": {
         "week_2": {
-            "Problems": [["Basics", "week_2_problems.pdf"]]
+            "Problems": [["Basics", "week_2_problems.pdf"]],
+            "Solutions": [["Week 2 solutions", "week_2_solutions.pdf"]]
         },
         "week_3": {
-            "Problems": [["Conditionals", "week_3_problems.pdf"]]
+            "Problems": [["Conditionals", "week_3_problems.pdf"]],
+            "Solutions": [["Week 3 solutions", "week_3_solutions.pdf"]]
         },
         "week_4": {
-            "Problems": [["Loops", "week_4_problems.pdf"]]
+            "Problems": [["Loops", "week_4_problems.pdf"]],
+            "Solutions": [["Week 4 solutions", "week_4_solutions.pdf"]]
         },
 	"week_5": {
 	    "Problems": [["Strings and Dictionaries", "week_5_problems.pdf"]],
+            "Solutions": [["Week 5 solutions", "week_5_solutions.pdf"]],
 	    "Extras": [["Example of ISBN Checksum", "https://www.youtube.com/watch?v=YxB1-sDvcvY"],
 		       ["ISBN Visualization", "https://phiresky.github.io/blog/2025/visualizing-all-books-in-isbn-space/"]]
-	}
+	},
+        "week_6": {
+            "Problems": [["Functions", "week_6_problems.pdf"]],
+            "Solutions": [["Week 6 solutions", "week_6_solutions.pdf"]]
+        }
     },
     "class_sequence": [
         ["Tutorial 2", "week_2"],
         ["Tutorial 3", "week_3"],
         ["Tutorial 4", "week_4"],
         ["Tutorial 5", "week_5"],
-        "Tutorial 6",
-        "Tutorial 7",
+        ["Tutorial 6", "week_6"],
+        "Week 7: No meeting",
         "Tutorial 8",
         "Tutorial 9",
         "Tutorial 10",
