@@ -4,7 +4,7 @@
 ~~ Booktitle | Empirical Methods in Natural Language Processing
 ~~ Year | 2026
 ~~ Venue | Refereed Conference
-~~ Acceptance | 15.4
+~~ Acceptance | 14
 ~~ Category | Images
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ Public | Explaining a complicated figure in a video is an art. Drawing on communications theory, we create a plan for covering the most important parts of a scientific figure in an order that helps viewers follow along, while grounding each part of the narration to the right region of the image. Our system uses both the figure and the paper itself to generate step-by-step, paper-faithful walkthroughs, and we introduce a benchmark to evaluate whether those narrated explanations are both accurate and well aligned with the visual structure of the figure.
