@@ -9,4 +9,5 @@
 ~~ Category | Empirical Human Data Collection
 ~~ Category | Large Language Models (or, more correctly, <A HREF="https://www.youtube.com/watch?v=u0DgoRVLTE8">Muppet Models</A>)
 ~~ URL | docs/2026_emnlp_discotrace.pdf
-~~ Link | OpenReview*https://openreview.net/forum?id=K5v5iaU87l
+~~ Note | This was one of two papers selected as Best Paper at EMNLP 2026
+~~ Public | We use linguistic theory to understand how LLMs and humans answer questions.  They're quite different: LLMs don't push back, humans share more personal experience.  We hope to use this to guide LLMs to create answers to questions that are more human: safer, more discursive, more engaging, and maybe even funnier.
