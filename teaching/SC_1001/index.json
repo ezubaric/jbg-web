@@ -27,10 +27,20 @@
             "Solutions": [["Week 6 solutions", "week_6_solutions.pdf"]]
         },
         "week_9": {
-            "Problems": [["Week 9 problems", "week_9_problems.pdf"]]
+            "Problems": [["Week 9 problems", "week_9_problems.pdf"]],
+            "Solutions": [["Week 9 solutions", "week_9_solutions.pdf"]]
         },
         "week_10": {
-            "Problems": [["Week 10 problems", "week_10_problems.pdf"]]
+            "Problems": [["Week 10 problems", "week_10_problems.pdf"]],
+            "Solutions": [["Week 10 solutions", "week_10_solutions.pdf"]]
+        },
+        "week_11": {
+            "Problems": [["Week 11 problems", "week_11_problems.pdf"]],
+            "Solutions": [["Week 11 solutions", "week_11_solutions.pdf"]]
+        },
+        "week_12": {
+            "Problems": [["Week 12 problems", "week_12_problems.pdf"]],
+            "Solutions": [["Week 12 solutions", "week_12_solutions.pdf"]]
         }
     },
     "class_sequence": [
@@ -43,8 +53,8 @@
         "Tutorial 8",
         ["Tutorial 9", "week_9"],
         ["Tutorial 10", "week_10"],
-        "Tutorial 11",
-        "Tutorial 12"
+        ["Tutorial 11", "week_11"],
+        ["Tutorial 12", "week_12"]
     ],
     "hw_sequence": [],
     "specials": []
